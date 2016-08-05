@@ -2,7 +2,7 @@
     "name": "nsis",
     "displayName": "NSIS",
     "description": "Language syntax and snippets for Nullsoft Scriptable Install System (NSIS)",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "idleberg",
     "license": "MIT OR Apache-2.0",
     "author": {
@@ -21,7 +21,7 @@
         "url": "git+https://github.com/idleberg/vscode-nsis.git"
     },
     "bugs": {
-      "url": "https://github.com/idleberg/vscode-nsis/issues"
+        "url": "https://github.com/idleberg/vscode-nsis/issues"
     },
     "icon": "images/logo.svg",
     "engines": {
@@ -44,6 +44,17 @@
                     ".nsh"
                 ],
                 "configuration": "./nsis.configuration.json"
+            },
+            {
+                "id": "nlf",
+                "aliases": [
+                    "NSIS Language File",
+                    "nlf"
+                ],
+                "extensions": [
+                    ".nlf"
+                ],
+                "configuration": "./nlf.configuration.json"
             }
         ],
         "grammars": [
@@ -51,6 +62,11 @@
                 "language": "nsis",
                 "scopeName": "source.nsis",
                 "path": "./syntaxes/nsis.tmLanguage"
+            },
+            {
+                "language": "nlf",
+                "scopeName": "source.nlf",
+                "path": "./syntaxes/nlf.tmLanguage"
             }
         ],
         "snippets": [
