@@ -8,6 +8,10 @@
 
 Language syntax and snippets for Nullsoft Scriptable Install System (NSIS).
 
+![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/screenshot.png)
+
+*Screenshot of NSIS in Visual Studio Code with [Hopscotch](https://marketplace.visualstudio.com/items?itemName=gerane.Theme-Hopscotch) theme*
+
 ## Features
 
 * all core NSIS commands, variables and predefines
