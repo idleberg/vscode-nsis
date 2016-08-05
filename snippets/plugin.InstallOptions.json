@@ -1,0 +1,17 @@
+{
+  "InstallOptions::initDialog": {
+    "body": "InstallOptions::initDialog \"${1:file}.ini\"$2",
+    "description": "InstallOptions.dll",
+    "prefix": "InstallOptions::initDialog"
+  },
+  "InstallOptions::initDialog /NOUNLOAD": {
+    "body": "InstallOptions::initDialog /NOUNLOAD \"${1:file}.ini\"$2",
+    "description": "InstallOptions.dll",
+    "prefix": "InstallOptions::initDialog /NOUNLOAD"
+  },
+  "InstallOptions::show": {
+    "body": "InstallOptions::show$1",
+    "description": "InstallOptions.dll",
+    "prefix": "InstallOptions::show"
+  }
+}

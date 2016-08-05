@@ -1,0 +1,7 @@
+{
+  "LangDLL::LangDialog": {
+    "body": "LangDLL::LangDialog \"${1:title}\" \"${2:text}\"$3",
+    "description": "LangDLL.dll",
+    "prefix": "LangDLL::LangDialog"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "StartMenu::Init": {
+    "body": "StartMenu::Init \"${1:text}\"$2",
+    "description": "StartMenu.dll",
+    "prefix": "StartMenu::Init"
+  },
+  "StartMenu::Select": {
+    "body": "StartMenu::Select $1$2",
+    "description": "StartMenu.dll",
+    "prefix": "StartMenu::Select"
+  }
+}

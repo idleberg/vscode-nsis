@@ -1,0 +1,7 @@
+{
+  "Splash::show": {
+    "body": "Splash::show ${1:time_in_ms} \"${2:file}.bmp\"$3",
+    "description": "Splash.dll",
+    "prefix": "Splash::show"
+  }
+}

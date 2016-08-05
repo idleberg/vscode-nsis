@@ -1,0 +1,7 @@
+{
+  "Math::Script": {
+    "body": "Math::Script \"${1:script}\"$2",
+    "description": "Math.dll",
+    "prefix": "Math::Script"
+  }
+}

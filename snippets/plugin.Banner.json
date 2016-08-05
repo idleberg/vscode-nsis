@@ -1,0 +1,17 @@
+{
+  "Banner::destroy": {
+    "body": "Banner::destroy$1",
+    "description": "Banner.dll",
+    "prefix": "Banner::destroy"
+  },
+  "Banner::getWindow": {
+    "body": "Banner::getWindow \"${1:file}\"$2",
+    "description": "Banner.dll",
+    "prefix": "Banner::getWindow"
+  },
+  "Banner::show": {
+    "body": "Banner::show \"${1:file}\"$2",
+    "description": "Banner.dll",
+    "prefix": "Banner::show"
+  }
+}

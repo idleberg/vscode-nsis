@@ -1,0 +1,217 @@
+{
+  "$ADMINTOOLS": {
+    "body": "$ADMINTOOLS$1",
+    "description": "Variable",
+    "prefix": "ADMINTOOLS"
+  },
+  "$APPDATA": {
+    "body": "$APPDATA$1",
+    "description": "Variable",
+    "prefix": "APPDATA"
+  },
+  "$CDBURN_AREA": {
+    "body": "$CDBURN_AREA$1",
+    "description": "Variable",
+    "prefix": "CDBURN_AREA"
+  },
+  "$CMDLINE": {
+    "body": "$CMDLINE$1",
+    "description": "Variable",
+    "prefix": "CMDLINE"
+  },
+  "$COMMONFILES": {
+    "body": "$COMMONFILES$1",
+    "description": "Variable",
+    "prefix": "COMMONFILES"
+  },
+  "$COMMONFILES32": {
+    "body": "$COMMONFILES32$1",
+    "description": "Variable",
+    "prefix": "COMMONFILES32"
+  },
+  "$COMMONFILES64": {
+    "body": "$COMMONFILES64$1",
+    "description": "Variable",
+    "prefix": "COMMONFILES64"
+  },
+  "$COOKIES": {
+    "body": "$COOKIES$1",
+    "description": "Variable",
+    "prefix": "COOKIES"
+  },
+  "$DESKTOP": {
+    "body": "$DESKTOP$1",
+    "description": "Variable",
+    "prefix": "DESKTOP"
+  },
+  "$DOCUMENTS": {
+    "body": "$DOCUMENTS$1",
+    "description": "Variable",
+    "prefix": "DOCUMENTS"
+  },
+  "$EXEDIR": {
+    "body": "$EXEDIR$1",
+    "description": "Variable",
+    "prefix": "EXEDIR"
+  },
+  "$EXEFILE": {
+    "body": "$EXEFILE$1",
+    "description": "Variable",
+    "prefix": "EXEFILE"
+  },
+  "$EXEPATH": {
+    "body": "$EXEPATH$1",
+    "description": "Variable",
+    "prefix": "EXEPATH"
+  },
+  "$FAVORITES": {
+    "body": "$FAVORITES$1",
+    "description": "Variable",
+    "prefix": "FAVORITES"
+  },
+  "$FONTS": {
+    "body": "$FONTS$1",
+    "description": "Variable",
+    "prefix": "FONTS"
+  },
+  "$HISTORY": {
+    "body": "$HISTORY$1",
+    "description": "Variable",
+    "prefix": "HISTORY"
+  },
+  "$HWNDPARENT": {
+    "body": "$HWNDPARENT$1",
+    "description": "Variable",
+    "prefix": "HWNDPARENT"
+  },
+  "$INSTDIR": {
+    "body": "$INSTDIR$1",
+    "description": "Variable",
+    "prefix": "INSTDIR"
+  },
+  "$INTERNET_CACHE": {
+    "body": "$INTERNET_CACHE$1",
+    "description": "Variable",
+    "prefix": "INTERNET_CACHE"
+  },
+  "$LOCALAPPDATA": {
+    "body": "$LOCALAPPDATA$1",
+    "description": "Variable",
+    "prefix": "LOCALAPPDATA"
+  },
+  "$MUSIC": {
+    "body": "$MUSIC$1",
+    "description": "Variable",
+    "prefix": "MUSIC"
+  },
+  "$NETHOOD": {
+    "body": "$NETHOOD$1",
+    "description": "Variable",
+    "prefix": "NETHOOD"
+  },
+  "$OUTDIR": {
+    "body": "$OUTDIR$1",
+    "description": "Variable",
+    "prefix": "OUTDIR"
+  },
+  "$PICTURES": {
+    "body": "$PICTURES$1",
+    "description": "Variable",
+    "prefix": "PICTURES"
+  },
+  "$PLUGINSDIR": {
+    "body": "$PLUGINSDIR$1",
+    "description": "Variable",
+    "prefix": "PLUGINSDIR"
+  },
+  "$PRINTHOOD": {
+    "body": "$PRINTHOOD$1",
+    "description": "Variable",
+    "prefix": "PRINTHOOD"
+  },
+  "$PROFILE": {
+    "body": "$PROFILE$1",
+    "description": "Variable",
+    "prefix": "PROFILE"
+  },
+  "$PROGRAMFILES": {
+    "body": "$PROGRAMFILES$1",
+    "description": "Variable",
+    "prefix": "PROGRAMFILES"
+  },
+  "$PROGRAMFILES32": {
+    "body": "$PROGRAMFILES32$1",
+    "description": "Variable",
+    "prefix": "PROGRAMFILES32"
+  },
+  "$PROGRAMFILES64": {
+    "body": "$PROGRAMFILES64$1",
+    "description": "Variable",
+    "prefix": "PROGRAMFILES64"
+  },
+  "$QUICKLAUNCH": {
+    "body": "$QUICKLAUNCH$1",
+    "description": "Variable",
+    "prefix": "QUICKLAUNCH"
+  },
+  "$RECENT": {
+    "body": "$RECENT$1",
+    "description": "Variable",
+    "prefix": "RECENT"
+  },
+  "$RESOURCES": {
+    "body": "$RESOURCES$1",
+    "description": "Variable",
+    "prefix": "RESOURCES"
+  },
+  "$RESOURCES_LOCALIZED": {
+    "body": "$RESOURCES_LOCALIZED$1",
+    "description": "Variable",
+    "prefix": "RESOURCES_LOCALIZED"
+  },
+  "$SENDTO": {
+    "body": "$SENDTO$1",
+    "description": "Variable",
+    "prefix": "SENDTO"
+  },
+  "$SMPROGRAMS": {
+    "body": "$SMPROGRAMS$1",
+    "description": "Variable",
+    "prefix": "SMPROGRAMS"
+  },
+  "$SMSTARTUP": {
+    "body": "$SMSTARTUP$1",
+    "description": "Variable",
+    "prefix": "SMSTARTUP"
+  },
+  "$STARTMENU": {
+    "body": "$STARTMENU$1",
+    "description": "Variable",
+    "prefix": "STARTMENU"
+  },
+  "$SYSDIR": {
+    "body": "$SYSDIR$1",
+    "description": "Variable",
+    "prefix": "SYSDIR"
+  },
+  "$TEMP": {
+    "body": "$TEMP$1",
+    "description": "Variable",
+    "prefix": "TEMP"
+  },
+  "$TEMPLATES": {
+    "body": "$TEMPLATES$1",
+    "description": "Variable",
+    "prefix": "TEMPLATES"
+  },
+  "$VIDEOS": {
+    "body": "$VIDEOS$1",
+    "description": "Variable",
+    "prefix": "VIDEOS"
+  },
+  "$WINDIR": {
+    "body": "$WINDIR",
+    "description": "Variable",
+    "prefix": "WINDIR"
+  }
+}

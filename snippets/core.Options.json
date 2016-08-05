@@ -1,0 +1,137 @@
+{
+  "HKCR": {
+    "body": "HKCR$1",
+    "description": "HKEY_CLASSES_ROOT",
+    "prefix": "HKCR"
+  },
+  "HKCU": {
+    "body": "HKCU$1",
+    "description": "HKEY_CURRENT_USER",
+    "prefix": "HKCU"
+  },
+  "HKCC": {
+    "body": "HKCC$1",
+    "description": "HKEY_CURRENT_CONFIG",
+    "prefix": "HKCC"
+  },
+  "HKLM": {
+    "body": "HKLM$1",
+    "description": "HKEY_LOCAL_MACHINE",
+    "prefix": "HKLM"
+  },
+  "HKPD": {
+    "body": "HKPD$1",
+    "description": "HKEY_PERFORMANCE_DATA",
+    "prefix": "HKPD"
+  },
+  "HKU": {
+    "body": "HKU$1",
+    "description": "HKEY_USERS",
+    "prefix": "HKU"
+  },
+  "IDABORT": {
+    "body": "IDABORT$1",
+    "description": "MessageBox Option",
+    "prefix": "IDABORT"
+  },
+  "IDCANCEL": {
+    "body": "IDCANCEL$1",
+    "description": "MessageBox Option",
+    "prefix": "IDCANCEL"
+  },
+  "IDIGNORE": {
+    "body": "IDIGNORE$1",
+    "description": "MessageBox Option",
+    "prefix": "IDIGNORE"
+  },
+  "IDNO": {
+    "body": "IDNO$1",
+    "description": "MessageBox Option",
+    "prefix": "IDNO"
+  },
+  "IDOK": {
+    "body": "IDOK$1",
+    "description": "MessageBox Option",
+    "prefix": "IDOK"
+  },
+  "IDRETRY": {
+    "body": "IDRETRY$1",
+    "description": "MessageBox Option",
+    "prefix": "IDRETRY"
+  },
+  "IDYES": {
+    "body": "IDYES$1",
+    "description": "MessageBox Option",
+    "prefix": "IDYES"
+  },
+  "MB_DEFBUTTON1": {
+    "body": "MB_DEFBUTTON1$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_DEFBUTTON1"
+  },
+  "MB_DEFBUTTON2": {
+    "body": "MB_DEFBUTTON2$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_DEFBUTTON2"
+  },
+  "MB_DEFBUTTON3": {
+    "body": "MB_DEFBUTTON3$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_DEFBUTTON3"
+  },
+  "MB_DEFBUTTON4": {
+    "body": "MB_DEFBUTTON4$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_DEFBUTTON4"
+  },
+  "MB_ICONEXCLAMATION": {
+    "body": "MB_ICONEXCLAMATION$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_ICONEXCLAMATION"
+  },
+  "MB_ICONINFORMATION": {
+    "body": "MB_ICONINFORMATION$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_ICONINFORMATION"
+  },
+  "MB_ICONQUESTION": {
+    "body": "MB_ICONQUESTION$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_ICONQUESTION"
+  },
+  "MB_ICONSTOP": {
+    "body": "MB_ICONSTOP$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_ICONSTOP"
+  },
+  "MB_RIGHT": {
+    "body": "MB_RIGHT$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_RIGHT"
+  },
+  "MB_RTLREADING": {
+    "body": "MB_RTLREADING$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_RTLREADING"
+  },
+  "MB_SETFOREGROUND": {
+    "body": "MB_SETFOREGROUND$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_SETFOREGROUND"
+  },
+  "MB_TOPMOST": {
+    "body": "MB_TOPMOST$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_TOPMOST"
+  },
+  "MB_USERICON": {
+    "body": "MB_USERICON$1",
+    "description": "MessageBox Option",
+    "prefix": "MB_USERICON"
+  },
+  "SHCTX": {
+    "body": "SHCTX",
+    "description": "SHELL_CONTEXT",
+    "prefix": "SHCTX"
+  }
+}

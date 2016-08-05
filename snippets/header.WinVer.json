@@ -1,0 +1,222 @@
+{
+  "${AtLeastServicePack}": {
+    "body": "${AtLeastServicePack}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastServicePack"
+  },
+  "${AtLeastWin2000}": {
+    "body": "${AtLeastWin2000}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin2000"
+  },
+  "${AtLeastWin2003}": {
+    "body": "${AtLeastWin2003}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin2003"
+  },
+  "${AtLeastWin2008R2}": {
+    "body": "${AtLeastWin2008R2}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin2008R2"
+  },
+  "${AtLeastWin2008}": {
+    "body": "${AtLeastWin2008}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin2008"
+  },
+  "${AtLeastWin2012}": {
+    "body": "${AtLeastWin2012}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin2012"
+  },
+  "${AtLeastWin7}": {
+    "body": "${AtLeastWin7}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin7"
+  },
+  "${AtLeastWin8}": {
+    "body": "${AtLeastWin8}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin8"
+  },
+  "${AtLeastWin95}": {
+    "body": "${AtLeastWin95}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin95"
+  },
+  "${AtLeastWin98}": {
+    "body": "${AtLeastWin98}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWin98"
+  },
+  "${AtLeastWinME}": {
+    "body": "${AtLeastWinME}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWinME"
+  },
+  "${AtLeastWinNT4}": {
+    "body": "${AtLeastWinNT4}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWinNT4"
+  },
+  "${AtLeastWinVista}": {
+    "body": "${AtLeastWinVista}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWinVista"
+  },
+  "${AtLeastWinXP}": {
+    "body": "${AtLeastWinXP}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtLeastWinXP"
+  },
+  "${AtMostServicePack}": {
+    "body": "${AtMostServicePack}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostServicePack"
+  },
+  "${AtMostWin2000}": {
+    "body": "${AtMostWin2000}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin2000"
+  },
+  "${AtMostWin2003}": {
+    "body": "${AtMostWin2003}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin2003"
+  },
+  "${AtMostWin2008R2}": {
+    "body": "${AtMostWin2008R2}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin2008R2"
+  },
+  "${AtMostWin2008}": {
+    "body": "${AtMostWin2008}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin2008"
+  },
+  "${AtMostWin2012}": {
+    "body": "${AtMostWin2012}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin2012"
+  },
+  "${AtMostWin7}": {
+    "body": "${AtMostWin7}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin7"
+  },
+  "${AtMostWin8}": {
+    "body": "${AtMostWin8}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin8"
+  },
+  "${AtMostWin95}": {
+    "body": "${AtMostWin95}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin95"
+  },
+  "${AtMostWin98}": {
+    "body": "${AtMostWin98}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWin98"
+  },
+  "${AtMostWinME}": {
+    "body": "${AtMostWinME}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWinME"
+  },
+  "${AtMostWinNT4}": {
+    "body": "${AtMostWinNT4}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWinNT4"
+  },
+  "${AtMostWinVista}": {
+    "body": "${AtMostWinVista}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWinVista"
+  },
+  "${AtMostWinXP}": {
+    "body": "${AtMostWinXP}$1",
+    "description": "WinVer.nsh",
+    "prefix": "AtMostWinXP"
+  },
+  "${IsNT}": {
+    "body": "${IsNT}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsNT"
+  },
+  "${IsServerOS}": {
+    "body": "${IsServerOS}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsServerOS"
+  },
+  "${IsServicePack}": {
+    "body": "${IsServicePack}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsServicePack"
+  },
+  "${IsWin2000}": {
+    "body": "${IsWin2000}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin2000"
+  },
+  "${IsWin2003}": {
+    "body": "${IsWin2003}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin2003"
+  },
+  "${IsWin2008R2}": {
+    "body": "${IsWin2008R2}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin2008R2"
+  },
+  "${IsWin2008}": {
+    "body": "${IsWin2008}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin2008"
+  },
+  "${IsWin2012}": {
+    "body": "${IsWin2012}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin2012"
+  },
+  "${IsWin7}": {
+    "body": "${IsWin7}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin7"
+  },
+  "${IsWin8}": {
+    "body": "${IsWin8}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin8"
+  },
+  "${IsWin95}": {
+    "body": "${IsWin95}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin95"
+  },
+  "${IsWin98}": {
+    "body": "${IsWin98}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWin98"
+  },
+  "${IsWinME}": {
+    "body": "${IsWinME}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWinME"
+  },
+  "${IsWinNT4}": {
+    "body": "${IsWinNT4}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWinNT4"
+  },
+  "${IsWinVista}": {
+    "body": "${IsWinVista}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWinVista"
+  },
+  "${IsWinXP}": {
+    "body": "${IsWinXP}$1",
+    "description": "WinVer.nsh",
+    "prefix": "IsWinXP"
+  }
+}

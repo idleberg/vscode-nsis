@@ -1,0 +1,682 @@
+{
+  "Align": {
+    "body": "Align=${1:LEFT|CENTER|RIGHT}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "Align"
+  },
+  "BALLOON": {
+    "body": "BALLOON$1",
+    "description": "InstallOptions.dll",
+    "prefix": "BALLOON"
+  },
+  "BOTTOM": {
+    "body": "BOTTOM$1",
+    "description": "InstallOptions.dll",
+    "prefix": "BOTTOM"
+  },
+  "BackButtonText": {
+    "body": "BackButtonText=${1:text}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "BackButtonText"
+  },
+  "BackEnabled": {
+    "body": "BackEnabled=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "BackEnabled"
+  },
+  "BackShow": {
+    "body": "BackShow=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "BackShow"
+  },
+  "BgColor": {
+    "body": "BgColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "BgColor"
+  },
+  "BufferSize": {
+    "body": "BufferSize=${1:integer}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "BufferSize"
+  },
+  "CENTER": {
+    "body": "CENTER$1",
+    "description": "InstallOptions.dll",
+    "prefix": "CENTER"
+  },
+  "CancelButtonText": {
+    "body": "CancelButtonText=${1:text}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "CancelButtonText"
+  },
+  "CancelEnabled": {
+    "body": "CancelEnabled=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "CancelEnabled"
+  },
+  "CancelShow": {
+    "body": "CancelShow=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "CancelShow"
+  },
+  "DISABLED": {
+    "body": "DISABLED$1",
+    "description": "InstallOptions.dll",
+    "prefix": "DISABLED"
+  },
+  "DisBgColor": {
+    "body": "DisBgColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "DisBgColor"
+  },
+  "DisSelBgColor": {
+    "body": "DisSelBgColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "DisSelBgColor"
+  },
+  "DisSelTxtColor": {
+    "body": "DisSelTxtColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "DisSelTxtColor"
+  },
+  "DisSelTxtShwColor": {
+    "body": "DisSelTxtShwColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "DisSelTxtShwColor"
+  },
+  "DisTxtColor": {
+    "body": "DisTxtColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "DisTxtColor"
+  },
+  "DisTxtShwColor": {
+    "body": "DisTxtShwColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "DisTxtShwColor"
+  },
+  "EXCLAMATION": {
+    "body": "EXCLAMATION$1",
+    "description": "InstallOptions.dll",
+    "prefix": "EXCLAMATION"
+  },
+  "EXTENDEDSELCT": {
+    "body": "EXTENDEDSELCT$1",
+    "description": "InstallOptions.dll",
+    "prefix": "EXTENDEDSELCT"
+  },
+  "FILE_EXPLORER": {
+    "body": "FILE_EXPLORER$1",
+    "description": "InstallOptions.dll",
+    "prefix": "FILE_EXPLORER"
+  },
+  "FILE_HIDEREADONLY": {
+    "body": "FILE_HIDEREADONLY$1",
+    "description": "InstallOptions.dll",
+    "prefix": "FILE_HIDEREADONLY"
+  },
+  "FILE_MUST_EXIST": {
+    "body": "FILE_MUST_EXIST$1",
+    "description": "InstallOptions.dll",
+    "prefix": "FILE_MUST_EXIST"
+  },
+  "FOCUS": {
+    "body": "FOCUS$1",
+    "description": "InstallOptions.dll",
+    "prefix": "FOCUS"
+  },
+  "Filter": {
+    "body": "Filter=${1:All Files|*.*}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "Filter"
+  },
+  "Flags": {
+    "body": "Flags=${1:flags}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "Flags"
+  },
+  "FontBold": {
+    "body": "FontBold=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "FontBold"
+  },
+  "FontHeight": {
+    "body": "FontHeight=${1:height_in_pt}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "FontHeight"
+  },
+  "FontItalic": {
+    "body": "FontItalic=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "FontItalic"
+  },
+  "FontName": {
+    "body": "FontName=${1:font_name}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "FontName"
+  },
+  "FontUnderline": {
+    "body": "FontUnderline=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "FontUnderline"
+  },
+  "FontWidth": {
+    "body": "FontWidth=${1:width_in_px}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "FontWidth"
+  },
+  "GROUP": {
+    "body": "GROUP$1",
+    "description": "InstallOptions.dll",
+    "prefix": "GROUP"
+  },
+  "HSCROLL": {
+    "body": "HSCROLL$1",
+    "description": "InstallOptions.dll",
+    "prefix": "HSCROLL"
+  },
+  "HWND": {
+    "body": "HWND=${1:handle}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "HWND"
+  },
+  "HWND2": {
+    "body": "HWND2=${1:handle}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "HWND2"
+  },
+  "HeaderItems": {
+    "body": "HeaderItems=${1:item1|item2}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "HeaderItems"
+  },
+  "HeaderItemsAlign": {
+    "body": "HeaderItemsAlign=${1:LEFT|RIGHT}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "HeaderItemsAlign"
+  },
+  "HeaderItemsWidth": {
+    "body": "HeaderItemsWidth=${1:width_in_px}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "HeaderItemsWidth"
+  },
+  "INFORMATION": {
+    "body": "INFORMATION$1",
+    "description": "InstallOptions.dll",
+    "prefix": "INFORMATION"
+  },
+  "JUSTIFY": {
+    "body": "JUSTIFY$1",
+    "description": "InstallOptions.dll",
+    "prefix": "JUSTIFY"
+  },
+  "LEFT": {
+    "body": "LEFT$1",
+    "description": "InstallOptions.dll",
+    "prefix": "LEFT"
+  },
+  "LargeImageList": {
+    "body": "LargeImageList=${1:images}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "LargeImageList"
+  },
+  "ListItems": {
+    "body": "ListItems=${1:item1|item2}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ListItems"
+  },
+  "ListItemsHeight": {
+    "body": "ListItemsHeight=${1:height_in_px}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ListItemsHeight"
+  },
+  "MULTILINE": {
+    "body": "MULTILINE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "MULTILINE"
+  },
+  "MULTISELECT": {
+    "body": "MULTISELECT$1",
+    "description": "InstallOptions.dll",
+    "prefix": "MULTISELECT"
+  },
+  "MUnits": {
+    "body": "MUnits=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "MUnits"
+  },
+  "MaxLen": {
+    "body": "MaxLen=${1:integer}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "MaxLen"
+  },
+  "MonthOutColor": {
+    "body": "MonthOutColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "MonthOutColor"
+  },
+  "MonthTrailingTxtColor": {
+    "body": "MonthTrailingTxtColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "MonthTrailingTxtColor"
+  },
+  "NOALWAYSTIP": {
+    "body": "NOALWAYSTIP$1",
+    "description": "InstallOptions.dll",
+    "prefix": "NOALWAYSTIP"
+  },
+  "NOANIMATE": {
+    "body": "NOANIMATE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "NOANIMATE"
+  },
+  "NOFADE": {
+    "body": "NOFADE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "NOFADE"
+  },
+  "NOPREFIX": {
+    "body": "NOPREFIX$1",
+    "description": "InstallOptions.dll",
+    "prefix": "NOPREFIX"
+  },
+  "NOTABSTOP": {
+    "body": "NOTABSTOP$1",
+    "description": "InstallOptions.dll",
+    "prefix": "NOTABSTOP"
+  },
+  "NOTIFY": {
+    "body": "NOTIFY$1",
+    "description": "InstallOptions.dll",
+    "prefix": "NOTIFY"
+  },
+  "NOWORDWRAP": {
+    "body": "NOWORDWRAP$1",
+    "description": "InstallOptions.dll",
+    "prefix": "NOWORDWRAP"
+  },
+  "NextButtonText": {
+    "body": "NextButtonText=${1:text}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "NextButtonText"
+  },
+  "NextEnabled": {
+    "body": "NextEnabled=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "NextEnabled"
+  },
+  "NextShow": {
+    "body": "NextShow=${1:0|1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "NextShow"
+  },
+  "NumFields": {
+    "body": "NumFields=${1:integer}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "NumFields"
+  },
+  "ONCLICK": {
+    "body": "ONCLICK$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONCLICK"
+  },
+  "ONDBLCLICK": {
+    "body": "ONDBLCLICK$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONDBLCLICK"
+  },
+  "ONDRBLCLICK": {
+    "body": "ONDRBLCLICK$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONDRBLCLICK"
+  },
+  "ONKILLFOCUS": {
+    "body": "ONKILLFOCUS$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONKILLFOCUS"
+  },
+  "ONLISTOPEN": {
+    "body": "ONLISTOPEN$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONLISTOPEN"
+  },
+  "ONLY_NUMBERS": {
+    "body": "ONLY_NUMBERS$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONLY_NUMBERS"
+  },
+  "ONRCLICK": {
+    "body": "ONRCLICK$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONRCLICK"
+  },
+  "ONSELCHANGE": {
+    "body": "ONSELCHANGE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONSELCHANGE"
+  },
+  "ONSETFOCUS": {
+    "body": "ONSETFOCUS$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONSETFOCUS"
+  },
+  "ONSTART": {
+    "body": "ONSTART$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONSTART"
+  },
+  "ONSTOP": {
+    "body": "ONSTOP$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONSTOP"
+  },
+  "ONTEXTCHANGE": {
+    "body": "ONTEXTCHANGE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONTEXTCHANGE"
+  },
+  "ONTEXTSELCHANGE": {
+    "body": "ONTEXTSELCHANGE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONTEXTSELCHANGE"
+  },
+  "ONTEXTTRUNCATE": {
+    "body": "ONTEXTTRUNCATE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONTEXTTRUNCATE"
+  },
+  "ONTEXTUPDATE": {
+    "body": "ONTEXTUPDATE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONTEXTUPDATE"
+  },
+  "ONTEXTVSCROLL": {
+    "body": "ONTEXTVSCROLL$1",
+    "description": "InstallOptions.dll",
+    "prefix": "ONTEXTVSCROLL"
+  },
+  "PATH_MUST_EXIST": {
+    "body": "PATH_MUST_EXIST$1",
+    "description": "InstallOptions.dll",
+    "prefix": "PATH_MUST_EXIST"
+  },
+  "PROMPT_CREATE": {
+    "body": "PROMPT_CREATE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "PROMPT_CREATE"
+  },
+  "READONLY": {
+    "body": "READONLY$1",
+    "description": "InstallOptions.dll",
+    "prefix": "READONLY"
+  },
+  "REQ_SAVE": {
+    "body": "REQ_SAVE$1",
+    "description": "InstallOptions.dll",
+    "prefix": "REQ_SAVE"
+  },
+  "RESIZETOFIT": {
+    "body": "RESIZETOFIT$1",
+    "description": "InstallOptions.dll",
+    "prefix": "RESIZETOFIT"
+  },
+  "RIGHT": {
+    "body": "RIGHT$1",
+    "description": "InstallOptions.dll",
+    "prefix": "RIGHT"
+  },
+  "RTL": {
+    "body": "RTL=${1:1}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "RTL"
+  },
+  "ReadOnlyBgColor": {
+    "body": "ReadOnlyBgColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ReadOnlyBgColor"
+  },
+  "ReadOnlyTxtColor": {
+    "body": "ReadOnlyTxtColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ReadOnlyTxtColor"
+  },
+  "RefFields": {
+    "body": "RefFields=${1:integer}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "RefFields"
+  },
+  "Root": {
+    "body": "Root=$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Root"
+  },
+  "STOP": {
+    "body": "STOP$1",
+    "description": "InstallOptions.dll",
+    "prefix": "STOP"
+  },
+  "SelBgColor": {
+    "body": "SelBgColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "SelBgColor"
+  },
+  "SelTxtColor": {
+    "body": "SelTxtColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "SelTxtColor"
+  },
+  "SelTxtShwColor": {
+    "body": "SelTxtShwColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "SelTxtShwColor"
+  },
+  "SmallImageList": {
+    "body": "SmallImageList=${1:images}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "SmallImageList"
+  },
+  "State": {
+    "body": "StateRTL=${1:state}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "State"
+  },
+  "StateImageList": {
+    "body": "StateImageList=${1:nothing}.bmp|${2:unchecked}.bmp|${3:checked}.bmp|${4:intermediate}.bmp|${5:unchecked_disabled}.bmp|${6:checked_disabled}.bmp$7",
+    "description": "InstallOptions.dll",
+    "prefix": "StateImageList"
+  },
+  "TOP": {
+    "body": "TOP$1",
+    "description": "InstallOptions.dll",
+    "prefix": "TOP"
+  },
+  "TRANSPARENT": {
+    "body": "TRANSPARENT$1",
+    "description": "InstallOptions.dll",
+    "prefix": "TRANSPARENT"
+  },
+  "Text": {
+    "body": "Text=${1:text}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "Text"
+  },
+  "TimeOut": {
+    "body": "TimeOut=${1:time_in_ms}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "TimeOut"
+  },
+  "Title": {
+    "body": "Title=${1:title}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "Title"
+  },
+  "ToolTipBgColor": {
+    "body": "ToolTipBgColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ToolTipBgColor"
+  },
+  "ToolTipFlags": {
+    "body": "ToolTipFlags=${1:BALLOON|NOALWAYSTIP|NOANIMATE|NOFADE|NOPREFIX}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ToolTipFlags"
+  },
+  "ToolTipIcon": {
+    "body": "ToolTipIcon=${1:EXCLAMATION|INFORMATION|STOP}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ToolTipIcon"
+  },
+  "ToolTipText": {
+    "body": "ToolTipText=${1:text}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ToolTipText"
+  },
+  "ToolTipTitle": {
+    "body": "ToolTipTitle=${1:title}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ToolTipTitle"
+  },
+  "ToolTipTxtColor": {
+    "body": "ToolTipTxtColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ToolTipTxtColor"
+  },
+  "ToolTipWidth": {
+    "body": "ToolTipWidth=${1:width_in_px}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ToolTipWidth"
+  },
+  "TxtAlign": {
+    "body": "TxtAlign=${1:LEFT|CENTER|RIGHT|JUSTIFY}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "TxtAlign"
+  },
+  "TxtColor": {
+    "body": "TxtColor=0x${1:RRGGBB}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "TxtColor"
+  },
+  "TxtShwColor": {
+    "body": "TxtShwColor=0x${1:BBRRGG}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "TxtShwColor"
+  },
+  "TxtVAlign": {
+    "body": "TxtVAlign=${1:TOP|CENTER|BOTTOM|JUSTIFY}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "TxtVAlign"
+  },
+  "Type": {
+    "body": "Type$2",
+    "description": "InstallOptions.dll",
+    "prefix": "Type"
+  },
+  "Type Bitmap": {
+    "body": "Type=Bitmap$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Bitmap"
+  },
+  "Type Button": {
+    "body": "Type=Button$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Button"
+  },
+  "Type CheckBox": {
+    "body": "Type=CheckBox$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type CheckBox"
+  },
+  "Type Combobox": {
+    "body": "Type=Combobox$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Combobox"
+  },
+  "Type DirRequest": {
+    "body": "Type=DirRequest$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type DirRequest"
+  },
+  "Type DropList": {
+    "body": "Type=DropList$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type DropList"
+  },
+  "Type FileRequest": {
+    "body": "Type=FileRequest$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type FileRequest"
+  },
+  "Type GroupBox": {
+    "body": "Type=GroupBox$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type GroupBox"
+  },
+  "Type HLine": {
+    "body": "Type=HLine$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type HLine"
+  },
+  "Type Icon": {
+    "body": "Type=Icon$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Icon"
+  },
+  "Type Label": {
+    "body": "Type=Label$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Label"
+  },
+  "Type Link": {
+    "body": "Type=Link$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Link"
+  },
+  "Type Listbox": {
+    "body": "Type=Listbox$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Listbox"
+  },
+  "Type Password": {
+    "body": "Type=Password$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Password"
+  },
+  "Type RadioButton": {
+    "body": "Type=RadioButton$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type RadioButton"
+  },
+  "Type Text": {
+    "body": "Type=Text$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type Text"
+  },
+  "Type VLine": {
+    "body": "Type=VLine$1",
+    "description": "InstallOptions.dll",
+    "prefix": "Type VLine"
+  },
+  "VAlign": {
+    "body": "VAlign=${1:TOP|CENTER|BOTTOM}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "VAlign"
+  },
+  "VSCROLL": {
+    "body": "VSCROLL$1",
+    "description": "InstallOptions.dll",
+    "prefix": "VSCROLL"
+  },
+  "ValidateText": {
+    "body": "ValidateText=${1:text}$2",
+    "description": "InstallOptions.dll",
+    "prefix": "ValidateText"
+  },
+  "WANTRETURN": {
+    "body": "WANTRETURN$1",
+    "description": "InstallOptions.dll",
+    "prefix": "WANTRETURN"
+  },
+  "WARN_IF_EXIST": {
+    "body": "WARN_IF_EXIST$1",
+    "description": "InstallOptions.dll",
+    "prefix": "WARN_IF_EXIST"
+  }
+}

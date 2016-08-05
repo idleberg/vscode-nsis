@@ -1,0 +1,7 @@
+{
+  "Minimal Script": {
+    "body": "; Scaffolding by https://atom.io/packages/language-nsis\n\n; Settings ---------------------------------\nOutFile \"${1:installer_name}\"\n\n; Includes ---------------------------------\n$2\n\n; Pages ------------------------------------\n$3\n\n; Sections ---------------------------------\nSection \"${4:section_name}\"\n\n\t${5:# your code here}\n\nSectionEnd\n\n; Functions --------------------------------\n$6",
+    "description": "Scaffold Script: Minimal",
+    "prefix": "scaffold-Minimal"
+  }
+}

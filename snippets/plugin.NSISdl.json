@@ -1,0 +1,12 @@
+{
+  "NSISdl::download": {
+    "body": "NSISdl::download \"${1:url}\" \"${2:local_file}\"$3",
+    "description": "NSISdl.dll",
+    "prefix": "NSISdl::download"
+  },
+  "NSISdl::download /TIMEOUT": {
+    "body": "NSISdl::download /TIMEOUT=${1:time_in_ms} \"${2:url}\" \"${3:local_file}\"$4",
+    "description": "NSISdl.dll",
+    "prefix": "NSISdl::download /TIMEOUT"
+  }
+}

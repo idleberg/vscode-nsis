@@ -1,0 +1,17 @@
+{
+  "UserInfo::GetAccountType": {
+    "body": "UserInfo::GetAccountType$1",
+    "description": "UserInfo.dll",
+    "prefix": "UserInfo::GetAccountType"
+  },
+  "UserInfo::GetName": {
+    "body": "UserInfo::GetName$1",
+    "description": "UserInfo.dll",
+    "prefix": "UserInfo::GetName"
+  },
+  "UserInfo::GetOriginalAccountType": {
+    "body": "UserInfo::GetOriginalAccountType$1",
+    "description": "UserInfo.dll",
+    "prefix": "UserInfo::GetOriginalAccountType"
+  }
+}

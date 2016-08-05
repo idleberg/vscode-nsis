@@ -1,0 +1,7 @@
+{
+  "AdvSplash::show": {
+    "body": "AdvSplash::show ${1:delay} ${2:fade_in} ${3:fade_out} ${4:key_color} \"${5:file}\"$6",
+    "description": "AdvSplash.dll",
+    "prefix": "AdvSplash::show"
+  }
+}

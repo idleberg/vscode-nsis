@@ -1,0 +1,82 @@
+{
+  "${StrFilterS}": {
+    "body": "${StrFilterS} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "StrFilterS"
+  },
+  "${StrFilter}": {
+    "body": "${StrFilter} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "StrFilter"
+  },
+  "${VersionCompare}": {
+    "body": "${VersionCompare} \"${1:version1}\" \"${2:version2}\" $${3:result}$4",
+    "description": "WordFunc.nsh",
+    "prefix": "VersionCompare"
+  },
+  "${VersionConvert}": {
+    "body": "${VersionConvert} \"${1:version}\" \"${2:charlist}\" $${3:result}$4",
+    "description": "WordFunc.nsh",
+    "prefix": "VersionConvert"
+  },
+  "${WordAddS}": {
+    "body": "${WordAddS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
+    "description": "WordFunc.nsh",
+    "prefix": "WordAddS"
+  },
+  "${WordAdd}": {
+    "body": "${WordAdd} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
+    "description": "WordFunc.nsh",
+    "prefix": "WordAdd"
+  },
+  "${WordFind2xS}": {
+    "body": "${WordFind2xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "WordFind2xS"
+  },
+  "${WordFind2x}": {
+    "body": "${WordFind2x} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "WordFind2x"
+  },
+  "${WordFind3xS}": {
+    "body": "${WordFind3xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$7",
+    "description": "WordFunc.nsh",
+    "prefix": "WordFind3xS"
+  },
+  "${WordFind3x}": {
+    "body": "${WordFind3x} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$7",
+    "description": "WordFunc.nsh",
+    "prefix": "WordFind3x"
+  },
+  "${WordFindS}": {
+    "body": "${WordFindS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
+    "description": "WordFunc.nsh",
+    "prefix": "WordFindS"
+  },
+  "${WordFind}": {
+    "body": "${WordFind} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
+    "description": "WordFunc.nsh",
+    "prefix": "WordFind"
+  },
+  "${WordInsertS}": {
+    "body": "${WordInsertS} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "WordInsertS"
+  },
+  "${WordInsert}": {
+    "body": "${WordInsert} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "WordInsert"
+  },
+  "${WordReplaceS}": {
+    "body": "${WordReplaceS} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "WordReplaceS"
+  },
+  "${WordReplace}": {
+    "body": "${WordReplace} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$6",
+    "description": "WordFunc.nsh",
+    "prefix": "WordReplace"
+  }
+}

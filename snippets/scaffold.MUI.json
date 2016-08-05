@@ -1,0 +1,7 @@
+{
+  "ModernUI": {
+    "body": "; Scaffolding by https://atom.io/packages/language-nsis\n\n; Includes ---------------------------------\n!include MUI2.nsh\n\n; Settings ---------------------------------\nName \"${1:installer_name}\"\nOutFile \"${2:${1:installer_name}}.exe\"\nRequestExecutionLevel ${3:user}\nInstallDir \"$PROGRAMFILES\\\\${4:${1:installer_name}}\"\n\n; Pages ------------------------------------\n!insertmacro MUI_PAGE_COMPONENTS \n!insertmacro MUI_PAGE_DIRECTORY\n!insertmacro MUI_PAGE_INSTFILES\n\n; Languages --------------------------------\n!insertmacro MUI_LANGUAGE \"${5:English}\"\n\n; Sections ---------------------------------\nSection \"${6:section}\" ${7:${6:section}_INDEX}\n\n  ${8:# your code here}\n\nSectionEnd\n\n; Descriptions -----------------------------\nLangString DESC_${7:${6:section}_INDEX} ${LANG_${5:ENGLISH}} \"${9:section_description}\"\n\n!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN\n  !insertmacro MUI_DESCRIPTION_TEXT ${${7:${6:section}_INDEX}} $(DESC_${7:${6:section}_INDEX})\n!insertmacro MUI_FUNCTION_DESCRIPTION_END\n\n; Functions --------------------------------\n${10:Function .onInit\n\n  ${11:# your code here}\n\nFunctionEnd}$12",
+    "description": "Scaffold Script: Modern UI",
+    "prefix": "scaffold-MUI"
+  }
+}

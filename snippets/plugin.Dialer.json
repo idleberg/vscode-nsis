@@ -1,0 +1,27 @@
+{
+  "Dialer::AttemptConnect": {
+    "body": "Dialer::AttemptConnect$1",
+    "description": "Dialer.dll",
+    "prefix": "Dialer::AttemptConnect"
+  },
+  "Dialer::AutodialHangup": {
+    "body": "Dialer::AutodialHangup$1",
+    "description": "Dialer.dll",
+    "prefix": "Dialer::AutodialHangup"
+  },
+  "Dialer::AutodialOnline": {
+    "body": "Dialer::AutodialOnline$1",
+    "description": "Dialer.dll",
+    "prefix": "Dialer::AutodialOnline"
+  },
+  "Dialer::AutodialUnattended": {
+    "body": "Dialer::AutodialUnattended$1",
+    "description": "Dialer.dll",
+    "prefix": "Dialer::AutodialUnattended"
+  },
+  "Dialer::GetConnectedState": {
+    "body": "Dialer::GetConnectedState$1",
+    "description": "Dialer.dll",
+    "prefix": "Dialer::GetConnectedState"
+  }
+}

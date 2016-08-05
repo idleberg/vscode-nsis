@@ -1,0 +1,27 @@
+{
+  "System::Alloc": {
+    "body": "System::Alloc ${1:size}$2",
+    "description": "System.dll",
+    "prefix": "System::Alloc"
+  },
+  "System::Call": {
+    "body": "System::Call \"${1:parameters}\"$2",
+    "description": "System.dll",
+    "prefix": "System::Call"
+  },
+  "System::Copy": {
+    "body": "System::Copy ${1:destination} ${2:source}$3",
+    "description": "System.dll",
+    "prefix": "System::Copy"
+  },
+  "System::Free": {
+    "body": "System::Free $${1:address}$2",
+    "description": "System.dll",
+    "prefix": "System::Free"
+  },
+  "System::Get": {
+    "body": "System::Get \"${1:parameters}\"$2",
+    "description": "System.dll",
+    "prefix": "System::Get"
+  }
+}

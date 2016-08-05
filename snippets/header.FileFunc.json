@@ -1,0 +1,102 @@
+{
+  "${BannerTrimPath}": {
+    "body": "${BannerTrimPath} \"${1:path_string}\" \"${2:option}\" $${3:var}$4",
+    "description": "FileFunc.nsh",
+    "prefix": "BannerTrimPath"
+  },
+  "${DirState}": {
+    "body": "${DirState} \"${1:path}\" $${2:var}$3",
+    "description": "FileFunc.nsh",
+    "prefix": "DirState"
+  },
+  "${DriveSpace}": {
+    "body": "${DriveSpace} \"${1:drive}\" \"${2:options}\" $${3:size}$4",
+    "description": "FileFunc.nsh",
+    "prefix": "DriveSpace"
+  },
+  "${GetBaseName}": {
+    "body": "${GetBaseName} \"${1:file_string}\" $${2:var}$3",
+    "description": "FileFunc.nsh",
+    "prefix": "GetBaseName"
+  },
+  "${GetDrives}": {
+    "body": "${GetDrives} \"${1:option}\" \"${2:function}\"$3",
+    "description": "FileFunc.nsh",
+    "prefix": "GetDrives"
+  },
+  "${GetExeName}": {
+    "body": "${GetExeName} $${1:var}$2",
+    "description": "FileFunc.nsh",
+    "prefix": "GetExeName"
+  },
+  "${GetExePath}": {
+    "body": "${GetExePath} $${1:var}$2",
+    "description": "FileFunc.nsh",
+    "prefix": "GetExePath"
+  },
+  "${GetFileAttributes}": {
+    "body": "${GetFileAttributes} \"${1:file}\" \"${2:attributes}\" $${3:var}$4",
+    "description": "FileFunc.nsh",
+    "prefix": "GetFileAttributes"
+  },
+  "${GetFileExt}": {
+    "body": "${GetFileExt} \"${1:file_string}\" $${2:var}$3",
+    "description": "FileFunc.nsh",
+    "prefix": "GetFileExt"
+  },
+  "${GetFileName}": {
+    "body": "${GetFileName} \"${1:path_string}\" $${2:var}$3",
+    "description": "FileFunc.nsh",
+    "prefix": "GetFileName"
+  },
+  "${GetFileVersion}": {
+    "body": "${GetFileVersion} \"${1:executable}\" $${2:version}$3",
+    "description": "FileFunc.nsh",
+    "prefix": "GetFileVersion"
+  },
+  "${GetOptionsS}": {
+    "body": "${GetOptionsS} \"${1:parameters}\" \"${2:option}\" $${3:var}$4",
+    "description": "FileFunc.nsh",
+    "prefix": "GetOptionsS"
+  },
+  "${GetOptions}": {
+    "body": "${GetOptions} \"${1:parameters}\" \"${2:option}\" $${3:var}$4",
+    "description": "FileFunc.nsh",
+    "prefix": "GetOptions"
+  },
+  "${GetParameters}": {
+    "body": "${GetParameters} $${1:var}$2",
+    "description": "FileFunc.nsh",
+    "prefix": "GetParameters"
+  },
+  "${GetParent}": {
+    "body": "${GetParent} \"${1:path_string}\" $${2:var}$3",
+    "description": "FileFunc.nsh",
+    "prefix": "GetParent"
+  },
+  "${GetRoot}": {
+    "body": "${GetRoot} \"${1:full_path}\" $${2:var}$3",
+    "description": "FileFunc.nsh",
+    "prefix": "GetRoot"
+  },
+  "${GetSize}": {
+    "body": "${GetSize} \"${1:path}\" \"${2:options}\" $${3:size} $${4:sum_files} $${5:sum_directories}$6",
+    "description": "FileFunc.nsh",
+    "prefix": "GetSize"
+  },
+  "${GetTime}": {
+    "body": "${GetTime} \"${1:file}\" \"${2:option}\" $${3:day} $${4:month} $${5:year} $${6:weekday} $${7:hours} $${8:minute} $${9:seconds}$10",
+    "description": "FileFunc.nsh",
+    "prefix": "GetTime"
+  },
+  "${Locate}": {
+    "body": "${Locate} \"${1:path}\" \"${2:options}\" \"${3:function}\"$4",
+    "description": "FileFunc.nsh",
+    "prefix": "Locate"
+  },
+  "${RefreshShellIcons}": {
+    "body": "${RefreshShellIcons}$1",
+    "description": "FileFunc.nsh",
+    "prefix": "RefreshShellIcons"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "${ConfigReadS}": {
+    "body": "${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
+    "description": "TextFunc.nsh",
+    "prefix": "ConfigReadS"
+  },
+  "${ConfigRead}": {
+    "body": "${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
+    "description": "TextFunc.nsh",
+    "prefix": "ConfigRead"
+  },
+  "${ConfigWriteS}": {
+    "body": "${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
+    "description": "TextFunc.nsh",
+    "prefix": "ConfigWriteS"
+  },
+  "${ConfigWrite}": {
+    "body": "${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
+    "description": "TextFunc.nsh",
+    "prefix": "ConfigWrite"
+  },
+  "${FileJoin}": {
+    "body": "${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$4",
+    "description": "TextFunc.nsh",
+    "prefix": "FileJoin"
+  },
+  "${FileReadFromEnd}": {
+    "body": "${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$3",
+    "description": "TextFunc.nsh",
+    "prefix": "FileReadFromEnd"
+  },
+  "${FileRecode}": {
+    "body": "${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$3",
+    "description": "TextFunc.nsh",
+    "prefix": "FileRecode"
+  },
+  "${LineFind}": {
+    "body": "${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$5",
+    "description": "TextFunc.nsh",
+    "prefix": "LineFind"
+  },
+  "${LineRead}": {
+    "body": "${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$4",
+    "description": "TextFunc.nsh",
+    "prefix": "LineRead"
+  },
+  "${LineSum}": {
+    "body": "${LineSum} \"${1:file}\" $${2:var}$3",
+    "description": "TextFunc.nsh",
+    "prefix": "LineSum"
+  },
+  "${TextCompareS}": {
+    "body": "${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
+    "description": "TextFunc.nsh",
+    "prefix": "TextCompareS"
+  },
+  "${TextCompare}": {
+    "body": "${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
+    "description": "TextFunc.nsh",
+    "prefix": "TextCompare"
+  },
+  "${TrimNewLines}": {
+    "body": "${TrimNewLines} \"${1:string}\" $${2:var}$3",
+    "description": "TextFunc.nsh",
+    "prefix": "TrimNewLines"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "nsExec::Exec": {
+    "body": "nsExec::Exec \"${1:command}\"$2",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::Exec"
+  },
+  "nsExec::Exec /OEM": {
+    "body": "nsExec::Exec /OEM \"${1:command}\"$2",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::Exec /OEM"
+  },
+  "nsExec::Exec /TIMEOUT": {
+    "body": "nsExec::Exec /TIMEOUT=${1:time_in_ms} \"${2:command}\"$3",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::Exec /TIMEOUT"
+  },
+  "nsExec::ExecToLog": {
+    "body": "nsExec::ExecToLog \"${1:command}\"$2",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::ExecToLog"
+  },
+  "nsExec::ExecToLog /OEM": {
+    "body": "nsExec::ExecToLog /OEM \"${1:command}\"$2",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::ExecToLog /OEM"
+  },
+  "nsExec::ExecToLog /TIMEOUT": {
+    "body": "nsExec::ExecToLog /TIMEOUT=${1:time_in_ms} \"${2:command}\"$3",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::ExecToLog /TIMEOUT"
+  },
+  "nsExec::ExecToStack": {
+    "body": "nsExec::ExecToStack \"${1:command}\"$2",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::ExecToStack"
+  },
+  "nsExec::ExecToStack /OEM": {
+    "body": "nsExec::ExecToStack /OEM\"${1:command}\"$2",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::ExecToStack /OEM"
+  },
+  "nsExec::ExecToStack /TIMEOUT": {
+    "body": "nsExec::ExecToStack /TIMEOUT=${1:time_in_ms} \"${2:command}\"$3",
+    "description": "nsExec.dll",
+    "prefix": "nsExec::ExecToStack /TIMEOUT"
+  }
+}
