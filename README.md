@@ -6,7 +6,7 @@
 [![Travis](https://img.shields.io/travis/idleberg/vscode-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/vscode-nsis)
 [![David](https://img.shields.io/david/dev/idleberg/vscode-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/vscode-nsis#info=devDependencies)
 
-Language syntax and snippets for Nullsoft Scriptable Install System (NSIS), as well as NSIS Language Files.
+Language syntax and snippets for Nullsoft Scriptable Install System (NSIS), as well as NSIS Language Files. Support for third-party plug-ins comes through an [additional extension](https://github.com/idleberg/vscode-nsis-plugins).
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/screenshot.png)
 
