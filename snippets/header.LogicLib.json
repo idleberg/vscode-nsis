@@ -1,242 +1,237 @@
 {
   "${Abort}": {
     "body": "${Abort}$1",
-    "description": "LogicLib.nsh",
     "prefix": "Abort"
   },
   "${AndIfNot}": {
-    "body": "${AndIfNot} ${1:condition}$2",
-    "description": "LogicLib.nsh",
+    "body": "${AndIfNot} ${1:expression}$2",
+    "description": "Usage: ${AndIfNot} expression",
     "prefix": "AndIfNot"
   },
   "${AndIf}": {
-    "body": "${AndIf} ${1:condition}$2",
-    "description": "LogicLib.nsh",
+    "body": "${AndIf} ${1:expression}$2",
+    "description": "Usage: ${AndIf} expression",
     "prefix": "AndIf"
   },
   "${Case}": {
     "body": "${Case} ${1:string}$2",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${Case[2|3|4|5]} value(s)",
     "prefix": "Case"
   },
   "${Cmd}": {
-    "body": "${Cmd} `${1:command}`$2",
-    "description": "LogicLib.nsh",
+    "body": "${Cmd} `${1:statement}`$2",
     "prefix": "Cmd"
   },
   "${DoUntil…LoopUntil}": {
-    "body": "${DoUntil} ${1:statement}\n\t${3:# your code here}\n${LoopUntil} ${2:statement}$4",
-    "description": "LogicLib.nsh",
+    "body": "${DoUntil} ${1:statement}\n  ${3:# your code here}\n${LoopUntil} ${2:statement}$4",
     "prefix": "DoUntil…LoopUntil"
   },
   "${DoUntil…Loop}": {
-    "body": "${Do} ${1:statement}\n\t${2:# your code here}\n${Loop}$3",
-    "description": "LogicLib.nsh",
+    "body": "${Do} ${1:statement}\n  ${2:# your code here}\n${Loop}$3",
     "prefix": "DoUntil…Loop"
   },
   "${Do…LoopUntil}": {
-    "body": "${Do}\n\t${2:# your code here}\n${LoopUntil} ${1:statement}$3",
-    "description": "LogicLib.nsh",
+    "body": "${Do}\n  ${2:# your code here}\n${LoopUntil} ${1:statement}$3",
     "prefix": "Do…LoopUntil"
   },
   "${Do…Loop}": {
-    "body": "${Do}\n\t${1:# your code here}\n${Loop}$2",
-    "description": "LogicLib.nsh",
+    "body": "${Do}\n  ${1:# your code here}\n${Loop}$2",
     "prefix": "Do…Loop"
   },
   "${ElseIfNot}": {
-    "body": "${ElseIfNot} ${1:condition}$2",
-    "description": "LogicLib.nsh",
+    "body": "${ElseIfNot} ${1:expression}$2",
+    "description": "Usage: ${ElseIfNot} expression",
     "prefix": "ElseIfNot"
   },
   "${ElseIf}": {
-    "body": "${ElseIf} ${1:condition}$2",
-    "description": "LogicLib.nsh",
+    "body": "${ElseIf} ${1:expression}$2",
+    "description": "Usage: ${ElseIf} expression",
     "prefix": "ElseIf"
   },
   "${ElseUnless}": {
-    "body": "${ElseUnless} ${1:condition}$2",
-    "description": "LogicLib.nsh",
+    "body": "${ElseUnless} ${1:expression}$2",
+    "description": "Usage: ${ElseUnless} expression",
     "prefix": "ElseUnless"
   },
   "${Else}": {
     "body": "${Else}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${Else}",
     "prefix": "Else"
   },
   "${EndIf}": {
     "body": "${EndIf}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${EndIf}",
     "prefix": "EndIf"
   },
   "${EndUnless}": {
     "body": "${EndUnless}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${EndUnless}",
     "prefix": "EndUnless"
   },
   "${EndWhile}": {
     "body": "${EndWhile}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${EndWhile}",
     "prefix": "EndWhile"
   },
   "${Errors}": {
     "body": "${Errors}$1",
-    "description": "LogicLib.nsh",
     "prefix": "Errors"
   },
   "${ExitDo}": {
     "body": "${ExitDo}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${ExitDo}",
     "prefix": "ExitDo"
   },
   "${ExitWhile}": {
     "body": "${ExitWhile}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${ExitWhile}",
     "prefix": "ExitWhile"
   },
   "${FileExists}": {
     "body": "${FileExists} \"${1:file}\"$2",
-    "description": "LogicLib.nsh",
+    "description": "Usage: logic_lib_statement ${FileExists} file_path",
     "prefix": "FileExists"
   },
   "${ForEach…Next}": {
-    "body": "${ForEach} ${1:statement}\n\t${2:# your code here}\n${Next}$3",
-    "description": "LogicLib.nsh",
+    "body": "${ForEach} ${1:statement}\n  ${2:# your code here}\n${Next}$3",
+    "description": "Usage: ${ForEach} expression",
     "prefix": "ForEach…Next"
   },
   "${For…Next}": {
-    "body": "${For} ${1:statement}\n\t${2:# your code here}\n${Next}$3",
-    "description": "LogicLib.nsh",
+    "body": "${For} ${1:statement}\n  ${2:# your code here}\n${Next}$3",
+    "description": "Usage: ${For} expression",
     "prefix": "For…Next"
   },
   "${IfCmd}": {
-    "body": "${IfCmd} ${1:command} ${|} ${2:command} ${|}$3",
-    "description": "LogicLib.nsh",
+    "body": "${IfCmd} ${1:command} ${|} ${2:statement} ${|}$3",
+    "description": "Usage: ${IfCmd} expression statement",
     "prefix": "IfCmd"
   },
   "${IfNot}": {
-    "body": "${IfNot} ${1:condition}\n\t${2:# your code here}\n${EndIf}$3",
-    "description": "LogicLib.nsh",
+    "body": "${IfNot} ${1:expression}\n  ${2:# your code here}\n${EndIf}$3",
+    "description": "Usage: ${IfNot} expression",
     "prefix": "IfNot"
   },
   "${IfNot…Else}": {
-    "body": "${IfNot} ${1:condition}\n\t${2:# your code here}\n${Else}\n\t${3:# your code here}\n${EndIf}$4",
-    "description": "LogicLib.nsh",
+    "body": "${IfNot} ${1:expression}\n  ${2:# your code here}\n${Else}\n  ${3:# your code here}\n${EndIf}$4",
+    "description": "Usage: ${IfNot} expression",
     "prefix": "IfNot…Else"
   },
   "${IfNot…FileExists}": {
     "body": "${IfNot} ${FileExists} \"${1:file}\"\n  ${2:# your code here}\n${EndIf}$3",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${IfNot} ${FileExists} file_path",
     "prefix": "IfNot…FileExists"
   },
   "${IfThenNot}": {
-    "body": "${IfThenNot} ${1:condition} ${|} ${2:command} ${|}$3",
-    "description": "LogicLib.nsh",
+    "body": "${IfThenNot} ${1:expression} ${|} ${2:statement} ${|}$3",
+    "description": "Usage: ${IfNotThen} expression statement",
     "prefix": "IfThenNot"
   },
   "${IfThen}": {
-    "body": "${IfThen} ${1:condition} ${|} ${2:command} ${|}$3",
-    "description": "LogicLib.nsh",
+    "body": "${IfThen} ${1:expression} ${|} ${2:statement} ${|}$3",
+    "description": "Usage: ${IfThen} expression statement",
     "prefix": "IfThen"
   },
   "${If}": {
-    "body": "${If} ${1:condition}\n\t${2:# your code here}\n${EndIf}$3",
-    "description": "LogicLib.nsh",
+    "body": "${If} ${1:expression}\n  ${2:# your code here}\n${EndIf}$3",
+    "description": "Usage: ${If} expression",
     "prefix": "If"
   },
   "${If…Else}": {
-    "body": "${If} ${1:condition}\n  ${2:# your code here}\n${Else}\n  ${3:# your code here}\n${EndIf}$4",
-    "description": "LogicLib.nsh",
+    "body": "${If} ${1:expression}\n  ${2:# your code here}\n${Else}\n  ${3:# your code here}\n${EndIf}$4",
+    "description": "Usage: ${If} expression",
     "prefix": "If…Else"
   },
   "${If…FileExists}": {
     "body": "${If} ${FileExists} \"${1:file}\"\n  ${2:# your code here}\n${EndIf}$3",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${If} ${FileExists} file_path",
     "prefix": "If…FileExists"
   },
   "${Loop}": {
     "body": "${Loop}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${Loop}",
     "prefix": "Loop"
   },
   "${Next}": {
     "body": "${Next}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ${Next}",
     "prefix": "Next"
   },
   "${OrIfNot}": {
-    "body": "${OrIfNot} ${1:condition}$2",
-    "description": "LogicLib.nsh",
+    "body": "${OrIfNot} ${1:expression}$2",
+    "description": "Usage: ",
     "prefix": "OrIfNot"
+  },
+  "${OrIfUnless}": {
+    "body": "${OrIfUnless} ${1:expression}$2",
+    "description": "Usage: ",
+    "prefix": "OrIfUnless"
+  },
+  "${OrIf}": {
+    "body": "${OrIf} ${1:expression}$2",
+    "description": "Usage: ${OrIf} expression",
+    "prefix": "OrIf"
   },
   "${RebootFlag}": {
     "body": "${RebootFlag}$1",
-    "description": "LogicLib.nsh",
     "prefix": "RebootFlag"
   },
   "${SectionIsBold}": {
     "body": "${SectionIsBold} ${$1}$2",
-    "description": "LogicLib.nsh",
     "prefix": "SectionIsBold"
   },
   "${SectionIsExpanded}": {
     "body": "${SectionIsExpanded} ${$1}$2",
-    "description": "LogicLib.nsh",
     "prefix": "SectionIsExpanded"
   },
   "${SectionIsPartiallySelected}": {
     "body": "${SectionIsPartiallySelected} ${$1}$2",
-    "description": "LogicLib.nsh",
     "prefix": "SectionIsPartiallySelected"
   },
   "${SectionIsReadOnly}": {
     "body": "${SectionIsReadOnly} ${$1}$2",
-    "description": "LogicLib.nsh",
     "prefix": "SectionIsReadOnly"
   },
   "${SectionIsSectionGroupEnd}": {
     "body": "${SectionIsSectionGroupEnd} ${$1}$2",
-    "description": "LogicLib.nsh",
     "prefix": "SectionIsSectionGroupEnd"
   },
   "${SectionIsSectionGroup}": {
     "body": "${SectionIsSectionGroup} ${$1}$2",
-    "description": "LogicLib.nsh",
     "prefix": "SectionIsSectionGroup"
   },
   "${SectionIsSelected}": {
     "body": "${SectionIsSelected} ${$1}$2",
-    "description": "LogicLib.nsh",
     "prefix": "SectionIsSelected"
   },
   "${Select}": {
-    "body": "${Select} $${1:var}\n\t${2:# your code here}\n${EndSelect}$3",
-    "description": "LogicLib.nsh",
+    "body": "${Select} $${1:var}\n  ${2:# your code here}\n${EndSelect}$3",
+    "description": "Usage: ${Select} expression",
     "prefix": "Select"
   },
   "${Silent}": {
     "body": "${Silent}$1",
-    "description": "LogicLib.nsh",
+    "description": "Usage: ",
     "prefix": "Silent"
   },
   "${Switch}": {
-    "body": "${Switch} $${1:var}\n\t${2:# your code here}\n${EndSwitch}$3",
-    "description": "LogicLib.nsh",
+    "body": "${Switch} $${1:var}\n  ${2:# your code here}\n${EndSwitch}$3",
+    "description": "Usage: ${Switch} expression",
     "prefix": "Switch"
   },
   "${Unless}": {
-    "${Unless…FileExists}": {
-      "body": "${Unless} ${FileExists} \"${1:file}\"\n  ${2:# your code here}\n${EndIf}$3",
-      "description": "LogicLib.nsh",
-      "prefix": "Unless…FileExists"
-    },
-    "body": "${Unless} $${1:var}\n\t${2:# your code here}\n${EndUnless}$3",
-    "description": "LogicLib.nsh",
+    "body": "${Unless} $${1:var}\n  ${2:# your code here}\n${EndUnless}$3",
+    "description": "Usage: ${Unless} expression",
     "prefix": "Unless"
   },
+  "${Unless…FileExists}": {
+    "body": "${Unless} ${FileExists} \"${1:file}\"\n  ${2:# your code here}\n${EndIf}$3",
+    "description": "Usage: ${Unless} ${FileExists} file_path",
+    "prefix": "Unless…FileExists"
+  },
   "${While}": {
-    "body": "${While} ${1:condition}\n\t${2:# your code here}\n${EndWhile}$3",
-    "description": "LogicLib.nsh",
+    "body": "${While} ${1:expression}\n  ${2:# your code here}\n${EndWhile}$3",
+    "description": "Usage: ${While} expression",
     "prefix": "While"
   }
 }

@@ -1,2462 +1,2462 @@
 {
   "!addincludedir": {
     "body": "!addincludedir \"${1:directory}\"$2",
-    "description": "Command",
+    "description": "Usage: !addincludedir dir",
     "prefix": "addincludedir"
   },
   "!addplugindir": {
     "body": "!addplugindir \"${1:directory}\"$2",
-    "description": "Command",
+    "description": "Usage: !addplugindir [/target] new_plugin_directory",
     "prefix": "addplugindir"
   },
   "!appendfile": {
     "body": "!appendfile \"${1:file}\" \"${2:text}\"$3",
-    "description": "Command",
+    "description": "Usage: !appendfile [/CHARSET=<ACP|OEM|CP#|UTF8[SIG]|UTF16<LE|BE>[BOM]>] [/RAWNL] file appended_line",
     "prefix": "appendfile"
   },
   "!appendfile /CHARSET": {
     "body": "!appendfile /CHARSET=${1:charset} \"${2:file}\" \"${3:text}\"$4",
-    "description": "Command",
+    "description": "Usage: !appendfile [/CHARSET=<ACP|OEM|CP#|UTF8[SIG]|UTF16<LE|BE>[BOM]>] [/RAWNL] file appended_line",
     "prefix": "appendfile /CHARSET"
   },
   "!appendfile /CHARSET /RawNL": {
     "body": "!appendfile /CHARSET=${1:charset} /RawNL \"${2:file}\" \"${3:text}\"$4",
-    "description": "Command",
+    "description": "Usage: !appendfile [/CHARSET=<ACP|OEM|CP#|UTF8[SIG]|UTF16<LE|BE>[BOM]>] [/RAWNL] file appended_line",
     "prefix": "appendfile /CHARSET /RawNL"
   },
   "!appendfile /RawNL": {
     "body": "!appendfile /RawNL \"${1:file}\" \"${2:text}\"$3",
-    "description": "Command",
+    "description": "Usage: !appendfile [/CHARSET=<ACP|OEM|CP#|UTF8[SIG]|UTF16<LE|BE>[BOM]>] [/RAWNL] file appended_line",
     "prefix": "appendfile"
   },
   "!cd": {
     "body": "!cd \"${1:new_path}\"$2",
-    "description": "Command",
+    "description": "Usage: !cd absolute_or_relative_new_directory",
     "prefix": "cd"
   },
   "!define": {
     "body": "!define ${1:gflag}$2",
-    "description": "Command",
+    "description": "Usage: !define [/ifndef | /redef] ([/date|/utcdate] symbol [value]) | (/file symbol filename) | (/math symbol val1 OP val2)",
     "prefix": "define"
   },
   "!delfile": {
     "body": "!delfile \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: !delfile [/nonfatal] file",
     "prefix": "delfile"
   },
   "!echo": {
     "body": "!echo \"${1:message}\"$2",
-    "description": "Command",
+    "description": "Usage: !echo message",
     "prefix": "echo"
   },
   "!else": {
     "body": "!else$1",
-    "description": "Command",
+    "description": "Usage: !else [if[macro][n][def] ...]",
     "prefix": "else"
   },
   "!endif": {
     "body": "!endif$1",
-    "description": "Command",
+    "description": "Usage: !endif",
     "prefix": "endif"
   },
   "!error": {
     "body": "!error \"${1:message}\"$2",
-    "description": "Command",
+    "description": "Usage: !error [error_message]",
     "prefix": "error"
   },
   "!execute": {
     "body": "!execute \"${1:command}\"$2",
-    "description": "Command",
+    "description": "Usage: !execute command [<OP retval> | <retvalsymbol>]",
     "prefix": "execute"
   },
   "!finalize": {
     "body": "!finalize \"${1:command}\"$2",
-    "description": "Command",
+    "description": "Usage: !finalize command_with_%1 [<OP retval>]",
     "prefix": "finalize"
   },
   "!getdllversion": {
     "body": "!getdllversion \"${1:localfilename}\" \"${1:${2:define_basename}}\"$3",
-    "description": "Command",
+    "description": "Usage: !getdllversion localfilename define_basename",
     "prefix": "getdllversion"
   },
   "!if": {
     "body": "!if ${1:value1} ${2:op} ${3:value2}\n  ${4:# your code here}\n!endif$5",
-    "description": "Command",
+    "description": "Usage: !if [!] (value [(==,!=,S==,S!=,=,<>,<=,<,>,>=,&,&&,||) value2] | /FILEEXISTS path)",
     "prefix": "if"
   },
   "!ifdef": {
     "body": "!ifdef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
-    "description": "Command",
+    "description": "Usage: !ifdef symbol [| symbol2 [& symbol3 [...]]]",
     "prefix": "ifdef"
   },
   "!ifdef…else": {
     "body": "!ifdef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
-    "description": "Command",
+    "description": "Usage: !ifdef symbol [| symbol2 [& symbol3 [...]]]",
     "prefix": "ifdef…else"
   },
   "!ifmacrodef": {
     "body": "!ifmacrodef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
-    "description": "Command",
+    "description": "Usage: !ifmacrodef macro [| macro2 [& macro3 [...]]]",
     "prefix": "ifmacrodef"
   },
   "!ifmacrodef…else": {
     "body": "!ifmacrodef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
-    "description": "Command",
+    "description": "Usage: !ifmacrodef macro [| macro2 [& macro3 [...]]]",
     "prefix": "ifmacrodef…else"
   },
   "!ifmacrondef": {
     "body": "!ifmacrondef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
-    "description": "Command",
+    "description": "Usage: !ifmacrondef macro [| macro2 [& macro3 [...]]]",
     "prefix": "ifmacrondef"
   },
   "!ifmacrondef…else": {
     "body": "!ifmacrondef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
-    "description": "Command",
+    "description": "Usage: !ifmacrondef macro [| macro2 [& macro3 [...]]]",
     "prefix": "ifmacrondef…else"
   },
   "!ifndef": {
     "body": "!ifndef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
-    "description": "Command",
+    "description": "Usage: !ifndef symbol [| symbol2 [& symbol3 [...]]]",
     "prefix": "ifndef"
   },
   "!ifndef…else": {
     "body": "!ifndef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
-    "description": "Command",
+    "description": "Usage: !ifndef symbol [| symbol2 [& symbol3 [...]]]",
     "prefix": "ifndef…else"
   },
   "!if…else": {
     "body": "!if ${1:value1} ${2:op} ${3:value2}\n  ${4:# your code here}\n!else\n  ${5:# your code here}\n!endif$6",
-    "description": "Command",
+    "description": "Usage: !if [!] (value [(==,!=,S==,S!=,=,<>,<=,<,>,>=,&,&&,||) value2] | /FILEEXISTS path)",
     "prefix": "if…else"
   },
   "!include": {
     "body": "!include \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "include"
   },
   "!include  x64.nsh": {
     "body": "!include \"x64.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "x64"
   },
   "!include Colors.nsh": {
     "body": "!include \"Colors.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "Colors"
   },
   "!include FileFunc.nsh": {
     "body": "!include \"FileFunc.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "FileFunc"
   },
   "!include InstallOptions.nsh": {
     "body": "!include \"InstallOptions.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "InstallOptions"
   },
   "!include LangFile.nsh": {
     "body": "!include \"LangFile.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "LangFile"
   },
   "!include Library.nsh": {
     "body": "!include \"Library.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "Library"
   },
   "!include LogicLib.nsh": {
     "body": "!include \"LogicLib.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "LogicLib"
   },
   "!include MUI.nsh": {
     "body": "!include \"MUI.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "MUI"
   },
   "!include MUI2.nsh": {
     "body": "!include \"MUI2.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "MUI2"
   },
   "!include Memento.nsh": {
     "body": "!include \"Memento.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "Memento"
   },
   "!include MultiUser.nsh": {
     "body": "!include \"MultiUser.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "MultiUser"
   },
   "!include Sections.nsh": {
     "body": "!include \"Sections.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "Sections"
   },
   "!include StrFunc.nsh": {
     "body": "!include \"StrFunc.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "StrFunc"
   },
   "!include TextFunc.nsh": {
     "body": "!include \"TextFunc.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "TextFunc"
   },
   "!include UpgradeDLL.nsh": {
     "body": "!include \"UpgradeDLL.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "UpgradeDLL"
   },
   "!include Util.nsh": {
     "body": "!include \"Util.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "Util"
   },
   "!include VB6RunTime.nsh": {
     "body": "!include \"VB6RunTime.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "VB6RunTime"
   },
   "!include VPatchLib.nsh": {
     "body": "!include \"VPatchLib.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "VPatchLib"
   },
   "!include WinCore.nsh": {
     "body": "!include \"WinCore.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "WinCore"
   },
   "!include WinMessages.nsh": {
     "body": "!include \"WinMessages.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "WinMessages"
   },
   "!include WinVer.nsh": {
     "body": "!include \"WinVer.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "WinVer"
   },
   "!include WordFunc.nsh": {
     "body": "!include \"WordFunc.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "WordFunc"
   },
   "!include nsDialogs.nsh": {
     "body": "!include \"nsDialogs.nsh\"$1",
-    "description": "Command",
+    "description": "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh",
     "prefix": "nsDialogs"
   },
   "!insertmacro": {
     "body": "!insertmacro \"${1:macro_name}\" \"${2:parameter}\"$3",
-    "description": "Command",
+    "description": "Usage: !insertmacro macroname [parms ...]",
     "prefix": "insertmacro"
   },
   "!macro": {
     "body": "!macro ${1:macro_name} ${2:parameter}\n  ${3:# your code here}\n!macroend$4",
-    "description": "Command",
+    "description": "Usage: !macro macroname [parms ...]",
     "prefix": "macro"
   },
   "!macroend": {
     "body": "!macroend$1",
-    "description": "Command",
+    "description": "Usage: !macroend",
     "prefix": "macroend"
   },
   "!makensis": {
     "body": "!makensis \"${1:parameters}\"$2",
-    "description": "Command",
+    "description": "Usage: !makensis parameters [<OP retval> | <retvalsymbol>]",
     "prefix": "makensis"
   },
   "!packhdr": {
     "body": "!packhdr \"${1:tempfile}\" \"${2:command}\"$3",
-    "description": "Command",
+    "description": "Usage: !packhdr temp_file_name command_line_to_compress_that_temp_file",
     "prefix": "packhdr"
   },
   "!searchparse": {
     "body": "!searchparse \"${1:source_string_or_file}\" \"${2:substring_start}\" \"${3:OUTPUTSYMBOL1}\"$4",
-    "description": "Command",
+    "description": "Usage: !searchparse [/ignorecase] [/noerrors] [/file] source_string_or_file substring OUTPUTSYM1 [substring [OUTPUTSYM2 [substring ...]]]",
     "prefix": "searchparse"
   },
   "!searchreplace": {
     "body": "!searchparse \"${1:symbol_out}\" \"${2:source_string}\" \"${3:searchfor}\" \"${4:replacewith}\"$5",
-    "description": "Command",
+    "description": "Usage: !searchreplace [/ignorecase] output_name source_string substring replacestring",
     "prefix": "searchreplace"
   },
   "!system": {
     "body": "!system \"${1:command}\"$2",
-    "description": "Command",
+    "description": "Usage: !system command [<OP retval> | <retvalsymbol>]",
     "prefix": "system"
   },
   "!tempfile": {
     "body": "!tempfile \"${1:symbol}\"$2",
-    "description": "Command",
+    "description": "Usage: !tempfile symbol",
     "prefix": "tempfile"
   },
   "!undef": {
     "body": "!undef ${1:gflag}$2",
-    "description": "Command",
+    "description": "Usage: !undef symbol",
     "prefix": "undef"
   },
   "!verbose": {
     "body": "!verbose \"${1:level}\"$2",
-    "description": "Command",
+    "description": "Usage: !verbose verbose_level | push | pop [...]",
     "prefix": "verbose"
   },
   "!warning": {
     "body": "!warning \"${1:message}\"$2",
-    "description": "Command",
+    "description": "Usage: !warning [warning_message]",
     "prefix": "warning"
   },
   "Abort": {
     "body": "Abort$1",
-    "description": "Command",
+    "description": "Usage: Abort [message]",
     "prefix": "Abort"
   },
   "Abort [message]": {
     "body": "Abort \"${1:message}\"$2",
-    "description": "Command",
+    "description": "Usage: Abort [message]",
     "prefix": "Abort [message]"
   },
   "AddBrandingImage": {
     "body": "AddBrandingImage ${1:left|right|top|bottom} ${2:width|height} ${3:[padding]}$4",
-    "description": "Command",
+    "description": "Usage: AddBrandingImage (top|left|bottom|right) (height|width) [padding]",
     "prefix": "AddBrandingImage"
   },
   "AddSize": {
     "body": "AddSize ${1:size_kb}$2",
-    "description": "Command",
+    "description": "Usage: AddSize size_to_add_to_section_in_kb",
     "prefix": "AddSize"
   },
   "AllowRootDirInstall": {
     "body": "AllowRootDirInstall ${1:false|true}$2",
-    "description": "Command",
+    "description": "Usage: AllowRootDirInstall (true|false)",
     "prefix": "AllowRootDirInstall"
   },
   "AllowRootDirInstall false (default)": {
     "body": "AllowRootDirInstall false$1",
-    "description": "Command",
+    "description": "Usage: AllowRootDirInstall (true|false)",
     "prefix": "AllowRootDirInstall false (default)"
   },
   "AllowRootDirInstall true": {
     "body": "AllowRootDirInstall true$1",
-    "description": "Command",
+    "description": "Usage: AllowRootDirInstall (true|false)",
     "prefix": "AllowRootDirInstall true"
   },
   "AllowSkipFiles": {
     "body": "AllowSkipFiles ${1:on|off}$2",
-    "description": "Command",
+    "description": "Usage: AllowSkipFiles (off|on)",
     "prefix": "AllowSkipFiles"
   },
   "AllowSkipFiles off": {
     "body": "AllowSkipFiles off$1",
-    "description": "Command",
+    "description": "Usage: AllowSkipFiles (off|on)",
     "prefix": "AllowSkipFiles off"
   },
   "AllowSkipFiles on (default)": {
     "body": "AllowSkipFiles on$1",
-    "description": "Command",
+    "description": "Usage: AllowSkipFiles (off|on)",
     "prefix": "AllowSkipFiles on (default)"
   },
   "AutoCloseWindow": {
     "body": "AutoCloseWindow ${1:false|true}$2",
-    "description": "Command",
+    "description": "Usage: AutoCloseWindow (false|true)",
     "prefix": "AutoCloseWindow"
   },
   "AutoCloseWindow false (default)": {
     "body": "AutoCloseWindow false$1",
-    "description": "Command",
+    "description": "Usage: AutoCloseWindow (false|true)",
     "prefix": "AutoCloseWindow false (default)"
   },
   "AutoCloseWindow true": {
     "body": "AutoCloseWindow true$1",
-    "description": "Command",
+    "description": "Usage: AutoCloseWindow (false|true)",
     "prefix": "AutoCloseWindow true"
   },
   "BGFont": {
     "body": "BGFont \"${1:font_face}\"$2",
-    "description": "Command",
+    "description": "Usage: BGFont [font_face [height [weight] [/ITALIC] [/UNDERLINE] [/STRIKE]]]",
     "prefix": "BGFont"
   },
   "BGGradient": {
     "body": "BGGradient ${1:top_color} ${2:bottom_color}$3",
-    "description": "Command",
+    "description": "Usage: BGGradient (off | [top_color [bottom_color [text_color]]])",
     "prefix": "BGGradient"
   },
   "BGGradient off (default)": {
     "body": "BGGradient ${1:off}$2",
-    "description": "Command",
+    "description": "Usage: BGGradient (off | [top_color [bottom_color [text_color]]])",
     "prefix": "BGGradient off (default)"
   },
   "BrandingText": {
     "body": "BrandingText \"${1:text}\"$2",
-    "description": "Command",
+    "description": "Usage: BrandingText [/TRIM(LEFT|RIGHT|CENTER)] installer_text",
     "prefix": "BrandingText"
   },
   "BringToFront": {
     "body": "BringToFront$1",
-    "description": "Command",
+    "description": "Usage: BringToFront",
     "prefix": "BringToFront"
   },
   "CRCCheck": {
     "body": "CRCCheck ${1:off|on}$2",
-    "description": "Command",
+    "description": "Usage: CRCCheck (on|force|off)",
     "prefix": "CRCCheck"
   },
   "CRCCheck off": {
     "body": "CRCCheck off$1",
-    "description": "Command",
+    "description": "Usage: CRCCheck (on|force|off)",
     "prefix": "CRCCheck off"
   },
   "CRCCheck on (default)": {
     "body": "CRCCheck on$1",
-    "description": "Command",
+    "description": "Usage: CRCCheck (on|force|off)",
     "prefix": "CRCCheck on (default)"
   },
   "Call": {
     "body": "Call ${1:function_name}$2",
-    "description": "Command",
+    "description": "Usage: Call function_name | [:label_name]",
     "prefix": "Call"
   },
   "CallInstDLL": {
     "body": "CallInstDLL \"${1:dllfile}\" ${2:function_name}$3",
-    "description": "Command",
+    "description": "Usage: CallInstDLL dll_path_on_target.dll function",
     "prefix": "CallInstDLL"
   },
   "Caption": {
     "body": "Caption \"${1:caption}\"$2",
-    "description": "Command",
+    "description": "Usage: Caption installer_caption",
     "prefix": "Caption"
   },
   "ChangeUI": {
     "body": "ChangeUI ${1:dialog} \"${2:ui_file}.exe\"$3",
-    "description": "Command",
+    "description": "Usage: ChangeUI (all|dlg_id) ui_file.exe",
     "prefix": "ChangeUI"
   },
   "ChangeUI:default.exe": {
     "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\default.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: ChangeUI (all|dlg_id) ui_file.exe",
     "prefix": "ChangeUI:default.exe"
   },
   "ChangeUI:modern.exe": {
     "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: ChangeUI (all|dlg_id) ui_file.exe",
     "prefix": "ChangeUI:modern.exe"
   },
   "ChangeUI:modern_nodesc.exe": {
     "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_nodesc.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: ChangeUI (all|dlg_id) ui_file.exe",
     "prefix": "ChangeUI:modern_nodesc.exe"
   },
   "ChangeUI:modern_smalldesc.exe": {
     "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_smalldesc.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: ChangeUI (all|dlg_id) ui_file.exe",
     "prefix": "ChangeUI:modern_smalldesc.exe"
   },
   "ChangeUI:sdbarker_tiny.exe": {
     "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\sdbarker_tiny.bmp$2",
-    "description": "Command",
+    "description": "Usage: ChangeUI (all|dlg_id) ui_file.exe",
     "prefix": "ChangeUI:sdbarker_tiny.exe"
   },
   "CheckBitmap": {
     "body": "CheckBitmap \"${1:bitmap}.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap"
   },
   "CheckBitmap:big.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\big.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:big.bmp"
   },
   "CheckBitmap:classic-cross.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic-cross.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:classic-cross.bmp"
   },
   "CheckBitmap:classic.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:classic.bmp"
   },
   "CheckBitmap:colorful.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\colorful.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:colorful.bmp"
   },
   "CheckBitmap:grey-cross.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey-cross.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:grey-cross.bmp"
   },
   "CheckBitmap:grey.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:grey.bmp"
   },
   "CheckBitmap:modern.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\modern.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:modern.bmp"
   },
   "CheckBitmap:red-round.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red-round.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:red-round.bmp"
   },
   "CheckBitmap:red.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:red.bmp"
   },
   "CheckBitmap:simple-round.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:simple-round.bmp"
   },
   "CheckBitmap:simple-round2.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round2.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:simple-round2.bmp"
   },
   "CheckBitmap:simple.bmp": {
     "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "CheckBitmap:simple.bmp"
   },
   "ClearErrors": {
     "body": "ClearErrors$1",
-    "description": "Command",
+    "description": "Usage: ClearErrors",
     "prefix": "ClearErrors"
   },
   "CompletedText": {
     "body": "CompletedText \"${1:text}\"$2",
-    "description": "Command",
+    "description": "Usage: CompletedText [completed text]",
     "prefix": "CompletedText"
   },
   "ComponentText": {
     "body": "ComponentText \"${1:text}\" \"${2:[subtext]}\" \"${3:[subtext2]}\"$4",
-    "description": "Command",
+    "description": "Usage: ComponentText [component_page_description] [component_subtext1] [component_subtext2]",
     "prefix": "ComponentText"
   },
   "CopyFiles": {
     "body": "CopyFiles \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "Command",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "CopyFiles"
   },
   "CopyFiles /FILESONLY": {
     "body": "CopyFiles /FILESONLY \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "Command",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "CopyFiles /FILESONLY"
   },
   "CopyFiles /SILENT": {
     "body": "CopyFiles /SILENT \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "Command",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "CopyFiles /SILENT"
   },
   "CopyFiles /SILENT /FILESONLY": {
     "body": "CopyFiles /SILENT /FILESONLY \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "Command",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "CopyFiles /SILENT /FILESONLY"
   },
   "CreateDirectory": {
     "body": "CreateDirectory \"${1:path_to_create}\"$2",
-    "description": "Command",
+    "description": "Usage: CreateDirectory directory_name",
     "prefix": "CreateDirectory"
   },
   "CreateFont": {
     "body": "CreateFont $${1:user_var} \"${2:face_name}\" ${3:[height] [weight]}$4",
-    "description": "Command",
+    "description": "Usage: CreateFont $(user_var: handle output) face_name [height weight /ITALIC /UNDERLINE /STRIKE]",
     "prefix": "CreateFont"
   },
   "CreateShortCut": {
     "body": "CreateShortCut \"${1:link}.lnk\" ${2:target}$3",
-    "description": "Command",
+    "description": "",
     "prefix": "CreateShortCut"
   },
   "Delete": {
     "body": "Delete \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: Delete [/REBOOTOK] filespec",
     "prefix": "Delete"
   },
   "Delete /REBOOTOK": {
     "body": "Delete /REBOOTOK \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: Delete [/REBOOTOK] filespec",
     "prefix": "Delete /REBOOTOK"
   },
   "DeleteINISec": {
     "body": "DeleteINISec \"${1:ini_filename}\" \"${2:section_name}\"$3",
-    "description": "Command",
+    "description": "Usage: DeleteINISec ini_file section_name",
     "prefix": "DeleteINISec"
   },
   "DeleteINIStr": {
     "body": "DeleteINIStr \"${1:ini_filename}\" \"${2:section_name}\" \"${3:str_name}\"$4",
-    "description": "Command",
+    "description": "Usage: DeleteINIStr ini_file section_name entry_name",
     "prefix": "DeleteINIStr"
   },
   "DeleteRegKey": {
     "body": "DeleteRegKey ${1:root_key} \"${2:subkey}\"$3",
-    "description": "Command",
+    "description": "Usage: DeleteRegKey [/ifempty] root_key subkey",
     "prefix": "DeleteRegKey"
   },
   "DeleteRegKey /ifempty": {
     "body": "DeleteRegKey /ifempty ${1:root_key} \"${2:subkey}\"$3",
-    "description": "Command",
+    "description": "Usage: DeleteRegKey [/ifempty] root_key subkey",
     "prefix": "DeleteRegKey /ifempty"
   },
   "DeleteRegValue": {
     "body": "DeleteRegValue ${1:root_key} \"${2:subkey}\" \"${3:key_name}\"$4",
-    "description": "Command",
+    "description": "Usage: DeleteRegValue root_key subkey entry_name",
     "prefix": "DeleteRegValue"
   },
   "DetailPrint": {
     "body": "DetailPrint \"${1:user_message}\"$2",
-    "description": "Command",
+    "description": "Usage: DetailPrint message",
     "prefix": "DetailPrint"
   },
   "DetailsButtonText": {
     "body": "DetailsButtonText \"${1:text}\"$2",
-    "description": "Command",
+    "description": "Usage: DetailsButtonText [details button text]",
     "prefix": "DetailsButtonText"
   },
   "DirText": {
     "body": "DirText \"${1:[text]}\" \"${2:[subtext]}\" \"${3:[browse_button_text]}\" \"${4:[browse_dlg_text]}\"$5",
-    "description": "Command",
+    "description": "Usage: DirText [directory_page_description] [directory_page_subtext] [browse_button_text] [browse_dlg_text]",
     "prefix": "DirText"
   },
   "DirVar": {
     "body": "DirVar $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: DirVar $(user_var: dir in/out))",
     "prefix": "DirVar"
   },
   "DirVerify": {
     "body": "DirVerify ${1:auto|leave}$2",
-    "description": "Command",
+    "description": "Usage: DirVerify auto|leave",
     "prefix": "DirVerify"
   },
   "DirVerify auto (default)": {
     "body": "DirVerify auto$1",
-    "description": "Command",
+    "description": "Usage: DirVerify auto|leave",
     "prefix": "DirVerify auto (default)"
   },
   "DirVerify leave": {
     "body": "DirVerify leave$1",
-    "description": "Command",
+    "description": "Usage: DirVerify auto|leave",
     "prefix": "DirVerify leave"
   },
   "EnableWindow": {
     "body": "EnableWindow $${1:hwnd} ${2:1|0}$3",
-    "description": "Command",
+    "description": "Usage: EnableWindow hwnd state(1|0)",
     "prefix": "EnableWindow"
   },
   "EnumRegKey": {
     "body": "EnumRegKey $${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
-    "description": "Command",
+    "description": "Usage: EnumRegKey $(user_var: output) rootkey subkey index",
     "prefix": "EnumRegKey"
   },
   "EnumRegValue": {
     "body": "EnumRegValue $${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
-    "description": "Command",
+    "description": "Usage: EnumRegValue $(user_var: output) rootkey subkey index",
     "prefix": "EnumRegValue"
   },
   "Exch": {
     "body": "Exch ${1:[user_var|stack_index]}$2",
-    "description": "Command",
+    "description": "Usage: Exch [$(user_var)] | [stack_item_index]",
     "prefix": "Exch"
   },
   "Exec": {
     "body": "Exec \"${1:command}\"$2",
-    "description": "Command",
+    "description": "Usage: Exec command_line",
     "prefix": "Exec"
   },
   "ExecShell": {
     "body": "ExecShell ${1:action} \"${2:command}\"$3",
-    "description": "Command",
+    "description": "Usage: ExecShell (open|print|etc) command_line [parameters [showmode]]",
     "prefix": "ExecShell"
   },
   "ExecShell open": {
     "body": "ExecShell open \"${2:command}\"$3",
-    "description": "Command",
+    "description": "Usage: ExecShell (open|print|etc) command_line [parameters [showmode]]",
     "prefix": "ExecShell open"
   },
   "ExecShell print": {
     "body": "ExecShell print \"${2:command}\"$3",
-    "description": "Command",
+    "description": "Usage: ExecShell (open|print|etc) command_line [parameters [showmode]]",
     "prefix": "ExecShell print"
   },
   "ExecWait": {
     "body": "ExecWait \"${1:command}\"$2",
-    "description": "Command",
+    "description": "Usage: ExecWait command_line [$(user_var: return value)]",
     "prefix": "ExecWait"
   },
   "ExecWait $var": {
     "body": "ExecWait \"${1:command}\" $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: ExecWait command_line [$(user_var: return value)]",
     "prefix": "ExecWait $var"
   },
   "ExpandEnvStrings": {
     "body": "ExpandEnvStrings $${1:user_var} \"${2:string}\"$3",
-    "description": "Command",
+    "description": "Usage: ExpandEnvStrings $(user_var: output) string",
     "prefix": "ExpandEnvStrings"
   },
   "File": {
     "body": "File \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: File [/nonfatal] [/a] ([/r] [/x filespec [...]] filespec [...] | /oname=outfile one_file_only)",
     "prefix": "File"
   },
   "File /nonfatal": {
     "body": "File /nonfatal \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: File [/nonfatal] [/a] ([/r] [/x filespec [...]] filespec [...] | /oname=outfile one_file_only)",
     "prefix": "File /nonfatal"
   },
   "File /nonfatal /r": {
     "body": "File /nonfatal /r \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: File [/nonfatal] [/a] ([/r] [/x filespec [...]] filespec [...] | /oname=outfile one_file_only)",
     "prefix": "File /nonfatal /r"
   },
   "File /oname": {
     "body": "File \"/oname=${1:file}\" \"${1:${2:file}}\"$3",
-    "description": "Command",
+    "description": "Usage: File [/nonfatal] [/a] ([/r] [/x filespec [...]] filespec [...] | /oname=outfile one_file_only)",
     "prefix": "File /oname"
   },
   "FileBufSize": {
     "body": "FileBufSize ${1:buffer_size_in_mb}$2",
-    "description": "Command",
+    "description": "Usage: FileBufSize buf_size_mb",
     "prefix": "FileBufSize"
   },
   "FileClose": {
     "body": "FileClose $${1:handle}$2",
-    "description": "Command",
+    "description": "Usage: FileClose $(user_var: handle input)",
     "prefix": "FileClose"
   },
   "FileErrorText": {
     "body": "FileErrorText \"${1:error_text}\"$2",
-    "description": "Command",
+    "description": "Usage: FileErrorText [text (can contain $0)] [text without ignore (can contain $0)]",
     "prefix": "FileErrorText"
   },
   "FileOpen": {
     "body": "FileOpen $${1:user_var} \"${2:filename}\" ${3:openmode}$4",
-    "description": "Command",
+    "description": "Usage: FileOpen $(user_var: handle output) filename openmode",
     "prefix": "FileOpen"
   },
   "FileRead": {
     "body": "FileRead $${1:handle} $${2:user_var} ${3:[maxlen]}$4",
-    "description": "Command",
+    "description": "Usage: FileRead $(user_var: handle input) $(user_var: text output) [maxlen]",
     "prefix": "FileRead"
   },
   "FileReadByte": {
     "body": "FileReadByte $${1:handle} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: FileReadByte $(user_var: handle input) $(user_var: bytevalue output)",
     "prefix": "FileReadByte"
   },
   "FileReadUTF16LE": {
     "body": "FileReadUTF16LE $${1:handle} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: FileReadUTF16LE $(user_var: handle input) $(user_var: text output) [maxlen]",
     "prefix": "FileReadUTF16LE"
   },
   "FileReadWord": {
     "body": "FileReadWord $${1:handle} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: FileReadWord $(user_var: handle input) $(user_var: wordvalue output)",
     "prefix": "FileReadWord"
   },
   "FileSeek": {
     "body": "FileSeek $${1:handle} ${2:offset} ${3:[mode]}$4",
-    "description": "Command",
+    "description": "Usage: FileSeek $(user_var: handle input) offset [mode] [$(user_var: new position output)]",
     "prefix": "FileSeek"
   },
   "FileWrite": {
     "body": "FileWrite $${1:handle} \"${2:string}\"$3",
-    "description": "Command",
+    "description": "Usage: FileWrite $(user_var: handle input) text",
     "prefix": "FileWrite"
   },
   "FileWriteByte": {
     "body": "FileWriteByte $${1:handle} \"${2:string}\"$3",
-    "description": "Command",
+    "description": "Usage: FileWriteByte $(user_var: handle input) bytevalue",
     "prefix": "FileWriteByte"
   },
   "FileWriteUTF16LE": {
     "body": "FileWriteUTF16LE $${1:handle} \"${2:string}\"$3",
-    "description": "Command",
+    "description": "Usage: FileWriteUTF16LE [/BOM] $(user_var: handle input) text",
     "prefix": "FileWriteUTF16LE"
   },
   "FileWriteWord": {
     "body": "FileWriteWord $${1:handle} \"${2:string}\"$3",
-    "description": "Command",
+    "description": "Usage: FileWriteWord $(user_var: handle input) wordvalue",
     "prefix": "FileWriteWord"
   },
   "FindClose": {
     "body": "FindClose $${1:handle}$2",
-    "description": "Command",
+    "description": "Usage: FindClose $(user_var: handle input)",
     "prefix": "FindClose"
   },
   "FindFirst": {
     "body": "FindFirst $${1:handle} $${2:user_var} \"${3:filespec}\"$4",
-    "description": "Command",
+    "description": "Usage: FindFirst $(user_var: handle output) $(user_var: filename output) filespec",
     "prefix": "FindFirst"
   },
   "FindNext": {
     "body": "FindNext $${1:handle} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: FindNext $(user_var: handle input) $(user_var: filename output)",
     "prefix": "FindNext"
   },
   "FindWindow": {
     "body": "FindWindow $${1:user_var} \"${2:windowclass}\"${3: \"${4:windowtitle}\"${5: ${6:windowparent}${7: ${8:childafter}}}}$9",
-    "description": "Command",
+    "description": "Usage: FindWindow $(user_var: handle output) WindowClass [WindowTitle] [Window_Parent] [Child_After]",
     "prefix": "FindWindow"
   },
   "FlushINI": {
     "body": "FlushINI \"${1:ini_filename}\"$2",
-    "description": "Command",
+    "description": "Usage: FlushINI ini_file",
     "prefix": "FlushINI"
   },
   "Function": {
     "body": "Function \"${1:function_name}\"\n  ${2:# your code here}\nFunctionEnd$3",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "Function"
   },
   "Function .onGUIEnd": {
     "body": "Function .onGUIEnd\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onGUIEnd"
   },
   "Function .onGUIInit": {
     "body": "Function .onGUIInit\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onGUIInit"
   },
   "Function .onInit": {
     "body": "Function .onInit\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onInit"
   },
   "Function .onInstFailed": {
     "body": "Function .onInstFailed\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onInstFailed"
   },
   "Function .onInstSuccess": {
     "body": "Function .onInstSuccess\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onInstSuccess"
   },
   "Function .onMouseOverSection": {
     "body": "Function .onMouseOverSection\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onMouseOverSection"
   },
   "Function .onRebootFailed": {
     "body": "Function .onRebootFailed\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onRebootFailed"
   },
   "Function .onSelChange": {
     "body": "Function .onSelChange\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onSelChange"
   },
   "Function .onUserAbort": {
     "body": "Function .onUserAbort\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onUserAbort"
   },
   "Function .onVerifyInstDir": {
     "body": "Function .onVerifyInstDir\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "onVerifyInstDir"
   },
   "Function un.*": {
     "body": "Function \"un.${1:function_name}\"\n  ${2:# your code here}\nFunctionEnd$3",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.Function"
   },
   "Function un.onGUIEnd": {
     "body": "Function un.onGUIEnd\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onGUIEnd"
   },
   "Function un.onGUIInit": {
     "body": "Function un.onGUIInit\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onGUIInit"
   },
   "Function un.onInit": {
     "body": "Function un.onInit\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onInit"
   },
   "Function un.onRebootFailed": {
     "body": "Function un.onRebootFailed\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onRebootFailed"
   },
   "Function un.onSelChange": {
     "body": "Function un.onSelChange\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onSelChange"
   },
   "Function un.onUninstFailed": {
     "body": "Function un.onUninstFailed\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onUninstFailed"
   },
   "Function un.onUninstSuccess": {
     "body": "Function un.onUninstSuccess\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onUninstSuccess"
   },
   "Function un.onUserAbort": {
     "body": "Function un.onUserAbort\n  ${1:# your code here}\nFunctionEnd$2",
-    "description": "Command",
+    "description": "Usage: Function function_name",
     "prefix": "un.onUserAbort"
   },
   "FunctionEnd": {
     "body": "FunctionEnd$1",
-    "description": "Command",
+    "description": "Usage: FunctionEnd",
     "prefix": "FunctionEnd"
   },
   "GetCurInstType": {
     "body": "GetCurInstType $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: GetCurInstType $(user_var: output inst_type_idx)",
     "prefix": "GetCurInstType"
   },
   "GetCurrentAddress": {
     "body": "GetCurrentAddress $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: GetCurrentAddress output",
     "prefix": "GetCurrentAddress"
   },
   "GetDLLVersion": {
     "body": "GetDLLVersion \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
-    "description": "Command",
+    "description": "Usage: GetDLLVersion filename $(user_var: high output) $(user_var: low output)",
     "prefix": "GetDLLVersion"
   },
   "GetDLLVersionLocal": {
     "body": "GetDLLVersionLocal \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
-    "description": "Command",
+    "description": "Usage: GetDLLVersionLocal localfilename $(user_var: high output) $(user_var: low output)",
     "prefix": "GetDLLVersionLocal"
   },
   "GetDlgItem": {
     "body": "GetDlgItem $${1:user_var} ${2:$HWNDPARENT} ${3:item_id}$4",
-    "description": "Command",
+    "description": "Usage: GetDlgItem $(user_var: handle output) dialog item_id",
     "prefix": "GetDlgItem"
   },
   "GetErrorLevel": {
     "body": "GetErrorLevel $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: GetErrorLevel $(user_var: output)",
     "prefix": "GetErrorLevel"
   },
   "GetFileTime": {
     "body": "GetFileTime \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
-    "description": "Command",
+    "description": "Usage: GetFileTime file $(user_var: high output) $(user_var: low output)",
     "prefix": "GetFileTime"
   },
   "GetFileTimeLocal": {
     "body": "GetFileTimeLocal \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
-    "description": "Command",
+    "description": "Usage: GetFileTimeLocal localfile $(user_var: high output) $(user_var: low output)",
     "prefix": "GetFileTimeLocal"
   },
   "GetFullPathName": {
     "body": "GetFullPathName $${1:user_var} \"${2:filename}\"$3",
-    "description": "Command",
+    "description": "Usage: GetFullPathName [/SHORT] $(user_var: result) path_or_file",
     "prefix": "GetFullPathName"
   },
   "GetFullPathName /SHORT": {
     "body": "GetFullPathName /SHORT $${1:user_var} \"${2:filename}\"$3",
-    "description": "Command",
+    "description": "Usage: GetFullPathName [/SHORT] $(user_var: result) path_or_file",
     "prefix": "GetFullPathName /SHORT"
   },
   "GetFunctionAddress": {
     "body": "GetFunctionAddress $${1:user_var} \"${2:function_name}\"$3",
-    "description": "Command",
+    "description": "Usage: GetFunctionAddress output function",
     "prefix": "GetFunctionAddress"
   },
   "GetInstDirError": {
     "body": "GetInstDirError $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: GetInstDirError $(user_var: error output)",
     "prefix": "GetInstDirError"
   },
   "GetLabelAddress": {
     "body": "GetLabelAddress $${1:user_var} ${2:label}$3",
-    "description": "Command",
+    "description": "Usage: GetLabelAddress output label",
     "prefix": "GetLabelAddress"
   },
   "GetTempFileName": {
     "body": "GetTempFileName $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: GetTempFileName $(user_var: name output) [base_dir]",
     "prefix": "GetTempFileName"
   },
   "Goto": {
     "body": "Goto ${1:label_to_jump_to}$2",
-    "description": "Command",
+    "description": "Usage: Goto label",
     "prefix": "Goto"
   },
   "HideWindow": {
     "body": "HideWindow$1",
-    "description": "Command",
+    "description": "Usage: HideWindow",
     "prefix": "HideWindow"
   },
   "Icon": {
     "body": "Icon \"${1:icon}.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon"
   },
   "Icon:arrow-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:arrow-install.ico"
   },
   "Icon:arrow2-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:arrow2-install.ico"
   },
   "Icon:box-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:box-install.ico"
   },
   "Icon:classic-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:classic-install.ico"
   },
   "Icon:llama-blue.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:llama-blue.ico"
   },
   "Icon:llama-grey.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:llama-grey.ico"
   },
   "Icon:modern-install-blue-full.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue-full.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:modern-install-blue-full.ico"
   },
   "Icon:modern-install-blue.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:modern-install-blue.ico"
   },
   "Icon:modern-install-colorful.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-colorful.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:modern-install-colorful.ico"
   },
   "Icon:modern-install-full.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-full.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:modern-install-full.ico"
   },
   "Icon:modern-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:modern-install.ico"
   },
   "Icon:nsis1-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:nsis1-install.ico"
   },
   "Icon:orange-install-nsis.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install-nsis.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:orange-install-nsis.ico"
   },
   "Icon:orange-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:orange-install.ico"
   },
   "Icon:pixel-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:pixel-install.ico"
   },
   "Icon:win-install.ico": {
     "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-install.ico\"$2",
-    "description": "Command",
+    "description": "Usage: Icon local_icon.ico",
     "prefix": "Icon:win-install.ico"
   },
   "IfAbort": {
     "body": "IfAbort ${1:label_to_goto_if_abort} ${2:[label_to_goto_if_no_abort]}$3",
-    "description": "Command",
+    "description": "Usage: IfAbort label_to_goto_if_abort [label_to_goto_if_no_abort]",
     "prefix": "IfAbort"
   },
   "IfErrors": {
     "body": "IfErrors ${1:jump_to_if_error} ${2:[jump_to_if_no_error]}$3",
-    "description": "Command",
+    "description": "Usage: IfErrors label_to_goto_if_errors [label_to_goto_if_no_errors]",
     "prefix": "IfErrors"
   },
   "IfFileExists": {
     "body": "IfFileExists \"${1:file_to_check_for}\" ${2:jump_if_present} ${3:[jump_otherwise]}$4",
-    "description": "Command",
+    "description": "Usage: IfFileExists filename label_to_goto_if_file_exists [label_to_goto_otherwise]",
     "prefix": "IfFileExists"
   },
   "IfRebootFlag": {
     "body": "IfRebootFlag ${1:jump_if_set} ${2:[jump_if_not_set]}$3",
-    "description": "Command",
+    "description": "Usage: IfRebootFlag jump_if_set [jump_if_not_set]",
     "prefix": "IfRebootFlag"
   },
   "IfSilent": {
     "body": "IfSilent ${1:jump_if_silent} ${2:[jump_if_not]}$3",
-    "description": "Command",
+    "description": "Usage: IfSilent jump_if_silent [jump_if_not_silent]",
     "prefix": "IfSilent"
   },
   "InitPluginsDir": {
     "body": "InitPluginsDir$1",
-    "description": "Command",
+    "description": "Usage: InitPluginsDir",
     "prefix": "InitPluginsDir"
   },
   "InstProgressFlags colored": {
     "body": "InstProgressFlags colored$1",
-    "description": "Command",
+    "description": "Usage: InstProgressFlags [flag [...]]",
     "prefix": "InstProgressFlags colored"
   },
   "InstProgressFlags smooth": {
     "body": "InstProgressFlags smooth$1",
-    "description": "Command",
+    "description": "Usage: InstProgressFlags [flag [...]]",
     "prefix": "InstProgressFlags smooth"
   },
   "InstType": {
     "body": "InstType \"${1:install_type_name}\"$2",
-    "description": "Command",
+    "description": "Usage: InstType [un.]install_type_name | /NOCUSTOM | /CUSTOMSTRING=str | /COMPONENTSONLYONCUSTOM",
     "prefix": "InstType"
   },
   "InstTypeGetText": {
     "body": "InstTypeGetText ${1:inst_type_idx} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: InstTypeGetText insttype_index $(user_var: output text)",
     "prefix": "InstTypeGetText"
   },
   "InstTypeSetText": {
     "body": "InstTypeSetText ${1:inst_type_idx} \"${2:text}\"$3",
-    "description": "Command",
+    "description": "Usage: InstTypeSetText insttype_index text",
     "prefix": "InstTypeSetText"
   },
   "InstallButtonText": {
     "body": "InstallButtonText \"${1:button_text}\"$2",
-    "description": "Command",
+    "description": "Usage: InstallButtonText [install button text]",
     "prefix": "InstallButtonText"
   },
   "InstallColors": {
     "body": "InstallColors \"${1:foreground_color}\" \"${2:background_color}\"$3",
-    "description": "Command",
+    "description": "Usage: InstallColors (/windows | (foreground_color background_color))",
     "prefix": "InstallColors"
   },
   "InstallColors /windows": {
     "body": "InstallColors /windows$1",
-    "description": "Command",
+    "description": "Usage: InstallColors (/windows | (foreground_color background_color))",
     "prefix": "InstallColors /windows"
   },
   "InstallDir": {
     "body": "InstallDir \"${1:install_directory}\"$2",
-    "description": "Command",
+    "description": "Usage: InstallDir default_install_directory",
     "prefix": "InstallDir"
   },
   "InstallDirRegKey": {
     "body": "InstallDirRegKey ${1:root_key} \"${2:subkey}\" \"${3:key_name}\"$4",
-    "description": "Command",
+    "description": "Usage: InstallDirRegKey root_key subkey entry_name",
     "prefix": "InstallDirRegKey"
   },
   "IntCmp": {
     "body": "IntCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$6",
-    "description": "Command",
+    "description": "Usage: IntCmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
     "prefix": "IntCmp"
   },
   "IntCmpU": {
     "body": "IntCmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$6",
-    "description": "Command",
+    "description": "Usage: IntCmpU val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
     "prefix": "IntCmpU"
   },
   "IntFmt": {
     "body": "IntFmt $${1:user_var} \"${2:format}\" \"${3:numberstring}\"$4",
-    "description": "Command",
+    "description": "Usage: IntFmt $(user_var: output) format_string input",
     "prefix": "IntFmt"
   },
   "IntOp": {
     "body": "IntOp $${1:user_var} ${2:value1} ${3:operator} ${4:value2}$5",
-    "description": "Command",
+    "description": "Usage: IntOp $(user_var: result) val1 OP [val2]",
     "prefix": "IntOp"
   },
   "IsWindow": {
     "body": "IsWindow $${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}$4",
-    "description": "Command",
+    "description": "Usage: IsWindow hwnd jump_if_window [jump_if_not_window]",
     "prefix": "IsWindow"
   },
   "LangString": {
     "body": "LangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:string}\"$4",
-    "description": "Command",
+    "description": "Usage: LangString [un.]name lang_id|0 string",
     "prefix": "LangString"
   },
   "LicenseBkColor": {
     "body": "LicenseBkColor \"${1:color}\"$2",
-    "description": "Command",
+    "description": "Usage: LicenseBkColor background_color",
     "prefix": "LicenseBkColor"
   },
   "LicenseBkColor /gray (default)": {
     "body": "LicenseBkColor /gray$12",
-    "description": "Command",
+    "description": "Usage: LicenseBkColor background_color",
     "prefix": "LicenseBkColor /gray (default)"
   },
   "LicenseBkColor /windows": {
     "body": "LicenseBkColor /windows$1",
-    "description": "Command",
+    "description": "Usage: LicenseBkColor background_color",
     "prefix": "LicenseBkColor /windows"
   },
   "LicenseData": {
     "body": "LicenseData \"${1:license_file}\"$2",
-    "description": "Command",
+    "description": "Usage: LicenseData local_file_that_has_license_text | license_lang_string",
     "prefix": "LicenseData"
   },
   "LicenseData rtf": {
     "body": "LicenseData \"${1:license_file}.rtf\"$2",
-    "description": "Command",
+    "description": "Usage: LicenseData local_file_that_has_license_text | license_lang_string",
     "prefix": "LicenseData rtf"
   },
   "LicenseData txt": {
     "body": "LicenseData \"${1:license_file}.txt\"$2",
-    "description": "Command",
+    "description": "Usage: LicenseData local_file_that_has_license_text | license_lang_string",
     "prefix": "LicenseData txt"
   },
   "LicenseForceSelection checkbox": {
     "body": "LicenseForceSelection checkbox \"${2:accept_text}\"$3",
-    "description": "Command",
+    "description": "Usage: LicenseForceSelection (checkbox [accept_text] | radiobuttons [accept_text] [decline_text] | off)",
     "prefix": "LicenseForceSelection checkbox"
   },
   "LicenseForceSelection off (default)": {
     "body": "LicenseForceSelection off \"${2:accept_text}\" \"${3:decline_text}\"$4",
-    "description": "Command",
+    "description": "Usage: LicenseForceSelection (checkbox [accept_text] | radiobuttons [accept_text] [decline_text] | off)",
     "prefix": "LicenseForceSelection off (default)"
   },
   "LicenseForceSelection radiobuttons": {
     "body": "LicenseForceSelection radiobuttons \"${2:accept_text}\" \"${3:decline_text}\"$4",
-    "description": "Command",
+    "description": "Usage: LicenseForceSelection (checkbox [accept_text] | radiobuttons [accept_text] [decline_text] | off)",
     "prefix": "LicenseForceSelection radiobuttons"
   },
   "LicenseLangString": {
     "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}\"$4",
-    "description": "Command",
+    "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "prefix": "LicenseLangString"
   },
   "LicenseLangString rtf": {
     "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.rtf\"$4",
-    "description": "Command",
+    "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "prefix": "LicenseLangString rtf"
   },
   "LicenseLangString txt": {
     "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$4",
-    "description": "Command",
+    "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "prefix": "LicenseLangString txt"
   },
   "LicenseText": {
     "body": "LicenseText \"${1:text}\" \"${2:button_text}\"$3",
-    "description": "Command",
+    "description": "Usage: LicenseText license_page_description [license_button_text]",
     "prefix": "LicenseText"
   },
   "LoadLanguageFile": {
     "body": "LoadLanguageFile \"${1:language_file}.nlf\"$2",
-    "description": "Command",
+    "description": "Usage: LoadLanguageFile language.nlf",
     "prefix": "LoadLanguageFile"
   },
   "LockWindow": {
     "body": "LockWindow ${1:on|off}$2",
-    "description": "Command",
+    "description": "Usage: LockWindow (on|off)",
     "prefix": "LockWindow"
   },
   "LockWindow off": {
     "body": "LockWindow off$1",
-    "description": "Command",
+    "description": "Usage: LockWindow (on|off)",
     "prefix": "LockWindow off"
   },
   "LockWindow on": {
     "body": "LockWindow on$1",
-    "description": "Command",
+    "description": "Usage: LockWindow (on|off)",
     "prefix": "LockWindow on"
   },
   "LogSet": {
     "body": "LogSet ${1:on|off}$2",
-    "description": "Command",
+    "description": "Usage: LogSet on|off",
     "prefix": "LogSet"
   },
   "LogSet off": {
     "body": "LogSet off$1",
-    "description": "Command",
+    "description": "Usage: LogSet on|off",
     "prefix": "LogSet off"
   },
   "LogSet on": {
     "body": "LogSet on$1",
-    "description": "Command",
+    "description": "Usage: LogSet on|off",
     "prefix": "LogSet on"
   },
   "LogText": {
     "body": "LogText \"${1:text}\"$2",
-    "description": "Command",
+    "description": "Usage: LogText text",
     "prefix": "LogText"
   },
   "ManifestDPIAware": {
     "body": "ManifestDPIAware ${1:notset|true|false}$2",
-    "description": "Command",
+    "description": "Usage: ManifestDPIAware notset|true|false",
     "prefix": "ManifestDPIAware"
   },
   "ManifestDPIAware false": {
     "body": "ManifestDPIAware false$1",
-    "description": "Command",
+    "description": "Usage: ManifestDPIAware notset|true|false",
     "prefix": "ManifestDPIAware false"
   },
   "ManifestDPIAware notset": {
     "body": "ManifestDPIAware notset$1",
-    "description": "Command",
+    "description": "Usage: ManifestDPIAware notset|true|false",
     "prefix": "ManifestDPIAware notset"
   },
   "ManifestDPIAware true": {
     "body": "ManifestDPIAware true$1",
-    "description": "Command",
+    "description": "Usage: ManifestDPIAware notset|true|false",
     "prefix": "ManifestDPIAware true"
   },
   "ManifestSupportedOS": {
     "body": "ManifestSupportedOS ${1:none|all|WinVista|Win7|Win8|{GUID}}$2",
-    "description": "Command",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "ManifestSupportedOS"
   },
   "ManifestSupportedOS Win10": {
     "body": "ManifestSupportedOS Win10$1",
-    "description": "Command",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "ManifestSupportedOS Win10"
   },
   "ManifestSupportedOS Win7": {
     "body": "ManifestSupportedOS Win7$1",
-    "description": "Command",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "ManifestSupportedOS Win7"
   },
   "ManifestSupportedOS Win8": {
     "body": "ManifestSupportedOS Win8$1",
-    "description": "Command",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "ManifestSupportedOS Win8"
   },
   "ManifestSupportedOS WinVista": {
     "body": "ManifestSupportedOS WinVista$1",
-    "description": "Command",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "ManifestSupportedOS WinVista"
   },
   "ManifestSupportedOS all": {
     "body": "ManifestSupportedOS all$1",
-    "description": "Command",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "ManifestSupportedOS all"
   },
   "ManifestSupportedOS none": {
     "body": "ManifestSupportedOS none$1",
-    "description": "Command",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "ManifestSupportedOS none"
   },
   "MessageBox": {
     "body": "MessageBox ${1:mb_option_list} \"${2:messagebox_text}\"$3",
-    "description": "Command",
+    "description": "Usage: MessageBox mode messagebox_text [/SD return] [return_check label_to_goto_if_equal [return_check2 label2]]",
     "prefix": "MessageBox"
   },
   "MessageBox MB_ABORTRETRYIGNORE": {
     "body": "MessageBox MB_ABORTRETRYIGNORE$1 \"${2:messagebox_text}\" $3",
-    "description": "Command",
+    "description": "Usage: MessageBox mode messagebox_text [/SD return] [return_check label_to_goto_if_equal [return_check2 label2]]",
     "prefix": "MB_ABORTRETRYIGNORE"
   },
   "MessageBox MB_OK": {
     "body": "MessageBox MB_OK$1 \"${2:messagebox_text}\" $3",
-    "description": "Command",
+    "description": "Usage: MessageBox mode messagebox_text [/SD return] [return_check label_to_goto_if_equal [return_check2 label2]]",
     "prefix": "MB_OK"
   },
   "MessageBox MB_OKCANCEL": {
     "body": "MessageBox MB_OKCANCEL$1 \"${2:messagebox_text}\" $3",
-    "description": "Command",
+    "description": "Usage: MessageBox mode messagebox_text [/SD return] [return_check label_to_goto_if_equal [return_check2 label2]]",
     "prefix": "MB_OKCANCEL"
   },
   "MessageBox MB_RETRYCANCEL": {
     "body": "MessageBox MB_RETRYCANCEL$1 \"${2:messagebox_text}\" $3",
-    "description": "Command",
+    "description": "Usage: MessageBox mode messagebox_text [/SD return] [return_check label_to_goto_if_equal [return_check2 label2]]",
     "prefix": "MB_RETRYCANCEL"
   },
   "MessageBox MB_YESNO": {
     "body": "MessageBox MB_YESNO$1 \"${2:messagebox_text}\" $3",
-    "description": "Command",
+    "description": "Usage: MessageBox mode messagebox_text [/SD return] [return_check label_to_goto_if_equal [return_check2 label2]]",
     "prefix": "MB_YESNO"
   },
   "MessageBox MB_YESNOCANCEL": {
     "body": "MessageBox MB_YESNOCANCEL$1 \"${2:messagebox_text}\" $3",
-    "description": "Command",
+    "description": "Usage: MessageBox mode messagebox_text [/SD return] [return_check label_to_goto_if_equal [return_check2 label2]]",
     "prefix": "MB_YESNOCANCEL"
   },
   "MiscButtonText": {
     "body": "MiscButtonText \"${1:back_button_text}\" \"${2:next_button_text}\" \"${3:cancel_button_text}\" \"${4:close_button_text}\"$5",
-    "description": "Command",
+    "description": "Usage: MiscButtonText [back button text] [next button text] [cancel button text] [close button text]",
     "prefix": "MiscButtonText"
   },
   "Name": {
     "body": "Name \"${1:name}\"$2",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name"
   },
   "Name &&": {
     "body": "Name \"${1:name}\" \"${2:name_doubled_ampersands}\"$3",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name &&"
   },
   "Name && +Caption": {
     "body": "Name \"${1:name}\" \"${2:name_doubled_ampersands}\"\nCaption \"${3:${1:name}}\"$4",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name && +Caption"
   },
   "Name && +Caption +OutFile": {
     "body": "Name \"${1:name}\" \"${2:name_doubled_ampersands}\"\nCaption \"${3:${1:name}}\"\nOutFile \"${4:${1:name}}.exe\"$5",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name && +Caption +OutFile"
   },
   "Name && +OutFile": {
     "body": "Name \"${1:name}\" \"${2:name_doubled_ampersands}\"\nOutFile \"${3:${1:name}}.exe\"$4",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name && +OutFile"
   },
   "Name +Caption": {
     "body": "Name \"${1:name}\"\nCaption \"${2:${1:name}}\"$3",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name +Caption"
   },
   "Name +Caption +OutFile": {
     "body": "Name \"${1:name}\"\nCaption \"${2:${1:name}}\"\nOutFile \"${3:${1:name}}.exe\"$4",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name +Caption +OutFile"
   },
   "Name +OutFile": {
     "body": "Name \"${1:name}\"\nOutFile \"${2:${1:name}}.exe\"$3",
-    "description": "Command",
+    "description": "Usage: Name installer_name installer_name_doubled_ampersands",
     "prefix": "Name +OutFile"
   },
   "Nop": {
     "body": "Nop$1",
-    "description": "Command",
+    "description": "Usage: Nop",
     "prefix": "Nop"
   },
   "OutFile": {
     "body": "OutFile \"${1:file_name}.exe\"$2",
-    "description": "Command",
+    "description": "Usage: OutFile install_output.exe",
     "prefix": "OutFile"
   },
   "Page": {
     "body": "Page ${1:internal_page_type} ${2:${3:[pre_function]} ${4:[show_function]} ${5:[leave_function]}}$6",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page"
   },
   "Page /ENABLECANCEL": {
     "body": "Page ${1:internal_page_type} ${2:${3:[pre_function]} ${4:[show_function]} ${5:[leave_function]}} /ENABLECANCEL$6",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page /ENABLECANCEL"
   },
   "Page components": {
     "body": "Page components ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}$5",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page components"
   },
   "Page custom": {
     "body": "Page custom ${1:creator_function} ${2:${3:[leave_function]} \"${4:caption}}\"$5",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page custom"
   },
   "Page custom /ENABLECANCEL": {
     "body": "Page custom ${1:creator_function} ${2:${3:[leave_function]} \"${4:caption}\"} /ENABLECANCEL$5",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page custom /ENABLECANCEL"
   },
   "Page directory": {
     "body": "Page directory ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}$5",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page directory"
   },
   "Page instfiles": {
     "body": "Page instfiles ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} ${5:/ENABLECANCEL}}$6",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page instfiles"
   },
   "Page license": {
     "body": "Page license ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}$5",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page license"
   },
   "Page uninstConfirm": {
     "body": "Page uninstConfirm ${1:${2:pre_function} ${3:[show_function]} ${4:[leave_function]} ${5:/ENABLECANCEL}}$6",
-    "description": "Command",
+    "description": "Usage: Page ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "Page uninstConfirm"
   },
   "PageCallbacks": {
     "body": "PageCallbacks ${1:[creator_function]} ${2:[leave_function]}$3",
-    "description": "Command",
+    "description": "Usage: PageCallbacks ([creator_function] [leave_function]) | ([pre_function] [show_function] [leave_function])",
     "prefix": "PageCallbacks"
   },
   "PageEx": {
     "body": "PageEx ${1:page_type}\n  ${2:# your code here}\nPageExEnd$3",
-    "description": "Command",
+    "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "prefix": "PageEx"
   },
   "PageEx components": {
     "body": "PageEx components\n  ${1:# your code here}\nPageExEnd$2",
-    "description": "Command",
+    "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "prefix": "PageEx components"
   },
   "PageEx custom": {
     "body": "PageEx custom\n  ${1:# your code here}\nPageExEnd$2",
-    "description": "Command",
+    "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "prefix": "PageEx custom"
   },
   "PageEx directory": {
     "body": "PageEx directory\n  ${1:# your code here}\nPageExEnd$2",
-    "description": "Command",
+    "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "prefix": "PageEx directory"
   },
   "PageEx instfiles": {
     "body": "PageEx instfiles\n  ${1:# your code here}\nPageExEnd$2",
-    "description": "Command",
+    "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "prefix": "PageEx instfiles"
   },
   "PageEx license": {
     "body": "PageEx license\n  ${1:# your code here}\nPageExEnd$2",
-    "description": "Command",
+    "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "prefix": "PageEx license"
   },
   "PageEx uninstConfirm": {
     "body": "PageEx uninstConfirm\n  ${1:# your code here}\nPageExEnd$2",
-    "description": "Command",
+    "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "prefix": "PageEx uninstConfirm"
   },
   "PageExEnd": {
     "body": "PageExEnd$1",
-    "description": "Command",
+    "description": "Usage: PageExEnd",
     "prefix": "PageExEnd"
   },
   "Pop": {
     "body": "Pop $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: Pop $(user_var: output)",
     "prefix": "Pop"
   },
   "Push": {
     "body": "Push \"${1:string}\"$2",
-    "description": "Command",
+    "description": "Usage: Push string",
     "prefix": "Push"
   },
   "Push $var": {
     "body": "Push $${1:user_var}$2",
-    "description": "Command",
+    "description": "Usage: Push string",
     "prefix": "Push $var"
   },
   "Quit": {
     "body": "Quit$1",
-    "description": "Command",
+    "description": "Usage: Quit",
     "prefix": "Quit"
   },
   "RMDir": {
     "body": "RMDir \"${1:directory_name}\"$2",
-    "description": "Command",
+    "description": "Usage: RMDir [/r] [/REBOOTOK] directory_name",
     "prefix": "RMDir"
   },
   "RMDir /REBOOTOK": {
     "body": "RMDir /REBOOTOK \"${1:directory_name}\"$2",
-    "description": "Command",
+    "description": "Usage: RMDir [/r] [/REBOOTOK] directory_name",
     "prefix": "RMDir /REBOOTOK"
   },
   "RMDir /r /REBOOTOK": {
     "body": "RMDir /r /REBOOTOK \"${1:directory_name}\"$2",
-    "description": "Command",
+    "description": "Usage: RMDir [/r] [/REBOOTOK] directory_name",
     "prefix": "RMDir /r /REBOOTOK"
   },
   "ReadEnvStr": {
     "body": "ReadEnvStr $${1:user_var} \"${2:name}\"$3",
-    "description": "Command",
+    "description": "Usage: ReadEnvStr $(user_var: output) name",
     "prefix": "ReadEnvStr"
   },
   "ReadINIStr": {
     "body": "ReadINIStr $${1:user_var} \"${2:ini_filename}\" \"${3:section_name}\" \"${4:entry_name}\"$5",
-    "description": "Command",
+    "description": "Usage: ReadINIStr $(user_var: output) ini_file section entry_name",
     "prefix": "ReadINIStr"
   },
   "ReadRegDWORD": {
     "body": "ReadRegDWORD $${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
-    "description": "Command",
+    "description": "Usage: ReadRegDWORD $(user_var: output) rootkey subkey entry",
     "prefix": "ReadRegDWORD"
   },
   "ReadRegStr": {
     "body": "ReadRegStr $${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
-    "description": "Command",
+    "description": "Usage: ReadRegStr $(user_var: output) rootkey subkey entry",
     "prefix": "ReadRegStr"
   },
   "Reboot": {
     "body": "Reboot$1",
-    "description": "Command",
+    "description": "Usage: Reboot",
     "prefix": "Reboot"
   },
   "RegDLL": {
     "body": "RegDLL \"${1:dllfile}\" ${2:entrypoint_name}$3",
-    "description": "Command",
+    "description": "Usage: RegDLL dll_path_on_target.dll [entrypoint_symbol]",
     "prefix": "RegDLL"
   },
   "Rename": {
     "body": "Rename \"${1:source_file}\" \"${2:dest_file}\"$3",
-    "description": "Command",
+    "description": "Usage: Rename [/REBOOTOK] source_file destination_file",
     "prefix": "Rename"
   },
   "Rename /REBOOTOK": {
     "body": "Rename /REBOOTOK \"${1:source_file}\" \"${2:dest_file}\"$3",
-    "description": "Command",
+    "description": "Usage: Rename [/REBOOTOK] source_file destination_file",
     "prefix": "Rename /REBOOTOK"
   },
   "RequestExecutionLevel": {
     "body": "RequestExecutionLevel ${1:admin|none|user|highest}$2",
-    "description": "Command",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "RequestExecutionLevel"
   },
-  "RequestExecutionLevel admin": {
+  "RequestExecutionLevel admin (default)": {
     "body": "RequestExecutionLevel admin$1",
-    "description": "Command",
-    "prefix": "RequestExecutionLevel admin"
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
+    "prefix": "RequestExecutionLevel admin (default)"
   },
   "RequestExecutionLevel highest": {
     "body": "RequestExecutionLevel highest$1",
-    "description": "Command",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "RequestExecutionLevel highest"
   },
-  "RequestExecutionLevel none (default)": {
+  "RequestExecutionLevel none": {
     "body": "RequestExecutionLevel none$1",
-    "description": "Command",
-    "prefix": "RequestExecutionLevel none (default)"
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
+    "prefix": "RequestExecutionLevel none"
   },
   "RequestExecutionLevel user": {
     "body": "RequestExecutionLevel user$1",
-    "description": "Command",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "RequestExecutionLevel user"
   },
   "ReserveFile": {
     "body": "ReserveFile \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: ReserveFile [/nonfatal] [/r] [/x filespec [...]] file [file...] | [/nonfatal] /plugin file.dll",
     "prefix": "ReserveFile"
   },
   "ReserveFile /nonfatal": {
     "body": "ReserveFile /nonfatal \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: ReserveFile [/nonfatal] [/r] [/x filespec [...]] file [file...] | [/nonfatal] /plugin file.dll",
     "prefix": "ReserveFile /nonfatal"
   },
   "ReserveFile /nonfatal /r": {
     "body": "ReserveFile nonfatal/r \"${1:file}\"$2",
-    "description": "Command",
+    "description": "Usage: ReserveFile [/nonfatal] [/r] [/x filespec [...]] file [file...] | [/nonfatal] /plugin file.dll",
     "prefix": "ReserveFile /nonfatal /r"
   },
   "Return": {
     "body": "Return$1",
-    "description": "Command",
+    "description": "Usage: Return",
     "prefix": "Return"
   },
   "SearchPath": {
     "body": "SearchPath $${1:user_var} \"${2:filename}\"$3",
-    "description": "Command",
+    "description": "Usage: SearchPath $(user_var: result) filename",
     "prefix": "SearchPath"
   },
   "Section": {
     "body": "Section \"${1:section_name}\" ${2:section_index_output}\n  ${3:# your code here}\nSectionEnd$4",
-    "description": "Command",
+    "description": "Usage: Section [/o] [-][un.][section_name] [section index output]",
     "prefix": "Section"
   },
   "Section Uninstall": {
     "body": "Section \"Uninstall\"\n  ${1:# your code here}\nSectionEnd$2",
-    "description": "Command",
+    "description": "Usage: Section [/o] [-][un.][section_name] [section index output]",
     "prefix": "un.Section"
   },
   "SectionEnd": {
     "body": "SectionEnd$1",
-    "description": "Command",
+    "description": "Usage: SectionEnd",
     "prefix": "SectionEnd"
   },
   "SectionGetFlags": {
     "body": "SectionGetFlags ${${1:section_index}} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: SectionGetFlags section_index $(user_var: output flags)",
     "prefix": "SectionGetFlags"
   },
   "SectionGetInstTypes": {
     "body": "SectionGetInstTypes ${${1:section_index}} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: SectionGetInstTypes section_index $(user_var: output inst_types)",
     "prefix": "SectionGetInstTypes"
   },
   "SectionGetSize": {
     "body": "SectionGetSize ${${1:section_index}} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: SectionGetSize section_index $(user_var: output size)",
     "prefix": "SectionGetSize"
   },
   "SectionGetText": {
     "body": "SectionGetText ${${1:section_index}} $${2:user_var}$3",
-    "description": "Command",
+    "description": "Usage: SectionGetText section_index $(user_var: output text)",
     "prefix": "SectionGetText"
   },
   "SectionGroup": {
     "body": "SectionGroup ${1:section_group_name} ${2:index_output}\n  ${3:# your code here}\nSectionGroupEnd$4",
-    "description": "Command",
+    "description": "Usage: SectionGroup [/e] [un.]section_group_name [section index output]",
     "prefix": "SectionGroup"
   },
   "SectionGroupEnd": {
     "body": "SectionGroupEnd$1",
-    "description": "Command",
+    "description": "Usage: SectionGroupEnd",
     "prefix": "SectionGroupEnd"
   },
   "SectionIn": {
     "body": "SectionIn ${1:insttype_index} ${2:insttype_index}$3",
-    "description": "Command",
+    "description": "Usage: SectionIn InstTypeIdx [InstTypeIdx [...]]",
     "prefix": "SectionIn"
   },
   "SectionSetFlags": {
     "body": "SectionSetFlags ${${1:section_index}} ${2:section_flags}$3",
-    "description": "Command",
+    "description": "Usage: SectionSetFlags section_index flags",
     "prefix": "SectionSetFlags"
   },
   "SectionSetInstTypes": {
     "body": "SectionSetInstTypes ${${1:section_index}} ${2:inst_types}$3",
-    "description": "Command",
+    "description": "Usage: SectionSetInstTypes section_index inst_types",
     "prefix": "SectionSetInstTypes"
   },
   "SectionSetSize": {
     "body": "SectionSetSize ${${1:section_index}} ${2:new_size}$3",
-    "description": "Command",
+    "description": "Usage: SectionSetSize section_index new_size",
     "prefix": "SectionSetSize"
   },
   "SectionSetText": {
     "body": "SectionSetText ${${1:section_index}} ${2:section_text}$3",
-    "description": "Command",
+    "description": "Usage: SectionSetText section_index text_string",
     "prefix": "SectionSetText"
   },
   "SendMessage": {
     "body": "SendMessage $${1:HWND} ${2:msg} ${3:wparam} ${4:lparam}$5",
-    "description": "Command",
+    "description": "Usage: SendMessage hwnd message [wparam|STR:wParam] [lparam|STR:lParam] [$(user_var: return value)] [/TIMEOUT=X]",
     "prefix": "SendMessage"
   },
   "SetAutoClose": {
     "body": "SetAutoClose ${1:true|false}$2",
-    "description": "Command",
+    "description": "Usage: SetAutoClose (false|true)",
     "prefix": "SetAutoClose"
   },
   "SetAutoClose false": {
     "body": "SetAutoClose false$1",
-    "description": "Command",
+    "description": "Usage: SetAutoClose (false|true)",
     "prefix": "SetAutoClose false"
   },
   "SetAutoClose true": {
     "body": "SetAutoClose true$1",
-    "description": "Command",
+    "description": "Usage: SetAutoClose (false|true)",
     "prefix": "SetAutoClose true"
   },
   "SetBrandingImage": {
     "body": "SetBrandingImage \"${1:path_to_bitmap_file}.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: SetBrandingImage [/IMGID=image_item_id_in_dialog] [/RESIZETOFIT] bitmap.bmp",
     "prefix": "SetBrandingImage"
   },
   "SetBrandingImage /RESIZETOFIT": {
     "body": "SetBrandingImage /RESIZETOFIT \"${1:path_to_bitmap_file}.bmp\"$2",
-    "description": "Command",
+    "description": "Usage: SetBrandingImage [/IMGID=image_item_id_in_dialog] [/RESIZETOFIT] bitmap.bmp",
     "prefix": "SetBrandingImage /RESIZETOFIT"
   },
   "SetCompress": {
     "body": "SetCompress ${1:auto|force|off}$2",
-    "description": "Command",
+    "description": "Usage: SetCompress (off|auto|force)",
     "prefix": "SetCompress"
   },
   "SetCompress auto (default)": {
     "body": "SetCompress auto$1",
-    "description": "Command",
+    "description": "Usage: SetCompress (off|auto|force)",
     "prefix": "SetCompress auto (default)"
   },
   "SetCompress force": {
     "body": "SetCompress force$1",
-    "description": "Command",
+    "description": "Usage: SetCompress (off|auto|force)",
     "prefix": "SetCompress force"
   },
   "SetCompress off": {
     "body": "SetCompress off$1",
-    "description": "Command",
+    "description": "Usage: SetCompress (off|auto|force)",
     "prefix": "SetCompress off"
   },
   "SetCompressor": {
     "body": "SetCompressor ${1:zlib|bzip2|lzma}$2",
-    "description": "Command",
+    "description": "Usage: SetCompressor [/FINAL] [/SOLID] (zlib|bzip2|lzma)",
     "prefix": "SetCompressor"
   },
   "SetCompressor /FINAL": {
     "body": "SetCompressor /FINAL ${1:zlib|bzip2|lzma}$2",
-    "description": "Command",
+    "description": "Usage: SetCompressor [/FINAL] [/SOLID] (zlib|bzip2|lzma)",
     "prefix": "SetCompressor /FINAL"
   },
   "SetCompressor /FINAL /SOLID": {
     "body": "SetCompressor /FINAL /SOLID ${1:zlib|bzip2|lzma}$2",
-    "description": "Command",
+    "description": "Usage: SetCompressor [/FINAL] [/SOLID] (zlib|bzip2|lzma)",
     "prefix": "SetCompressor /FINAL /SOLID"
   },
   "SetCompressor /SOLID": {
     "body": "SetCompressor /SOLID ${1:zlib|bzip2|lzma}$2",
-    "description": "Command",
+    "description": "Usage: SetCompressor [/FINAL] [/SOLID] (zlib|bzip2|lzma)",
     "prefix": "SetCompressor /SOLID"
   },
   "SetCompressorDictSize": {
     "body": "SetCompressorDictSize ${1:dict_size_mb}$2",
-    "description": "Command",
+    "description": "Usage: SetCompressorDictSize dict_size_mb",
     "prefix": "SetCompressorDictSize"
   },
   "SetCtlColors": {
     "body": "SetCtlColors $${1:hwnd} \"0x${2:text_color}\" \"0x${3:bg_color}\"$4",
-    "description": "Command",
+    "description": "Usage: SetCtlColors hwnd [/BRANDING] [text_color] [transparent|bg_color]",
     "prefix": "SetCtlColors"
   },
   "SetCtlColors /BRANDING": {
     "body": "SetCtlColors /BRANDING $${1:hwnd} \"0x${2:text_color}\" \"0x${3:bg_color}\"$4",
-    "description": "Command",
+    "description": "Usage: SetCtlColors hwnd [/BRANDING] [text_color] [transparent|bg_color]",
     "prefix": "SetCtlColors /BRANDING"
   },
   "SetCurInstType": {
     "body": "SetCurInstType ${1:inst_type_idx}$2",
-    "description": "Command",
+    "description": "Usage: SetCurInstType inst_type_idx",
     "prefix": "SetCurInstType"
   },
   "SetDatablockOptimize": {
     "body": "SetDatablockOptimize ${1:on|off}$2",
-    "description": "Command",
+    "description": "Usage: SetDatablockOptimize (off|on)",
     "prefix": "SetDatablockOptimize"
   },
   "SetDatablockOptimize off": {
     "body": "SetDatablockOptimize off$1",
-    "description": "Command",
+    "description": "Usage: SetDatablockOptimize (off|on)",
     "prefix": "SetDatablockOptimize off"
   },
   "SetDatablockOptimize on": {
     "body": "SetDatablockOptimize on$1",
-    "description": "Command",
+    "description": "Usage: SetDatablockOptimize (off|on)",
     "prefix": "SetDatablockOptimize on"
   },
   "SetDateSave": {
     "body": "SetDateSave ${1:on|off}$2",
-    "description": "Command",
+    "description": "Usage: SetDateSave (off|on)",
     "prefix": "SetDateSave"
   },
   "SetDateSave off": {
     "body": "SetDateSave off$1",
-    "description": "Command",
+    "description": "Usage: SetDateSave (off|on)",
     "prefix": "SetDateSave off"
   },
   "SetDateSave on (default)": {
     "body": "SetDateSave on$1",
-    "description": "Command",
+    "description": "Usage: SetDateSave (off|on)",
     "prefix": "SetDateSave on (default)"
   },
   "SetDetailsPrint": {
     "body": "SetDetailsPrint ${1:both|lastused|listonly|none|text}$2",
-    "description": "Command",
+    "description": "Usage: SetDetailsPrint (none|listonly|textonly|both)",
     "prefix": "SetDetailsPrint"
   },
   "SetDetailsPrint both": {
     "body": "SetDetailsPrint both$1",
-    "description": "Command",
+    "description": "Usage: SetDetailsPrint (none|listonly|textonly|both)",
     "prefix": "SetDetailsPrint both"
   },
   "SetDetailsPrint lastused": {
     "body": "SetDetailsPrint lastused$1",
-    "description": "Command",
+    "description": "Usage: SetDetailsPrint (none|listonly|textonly|both)",
     "prefix": "SetDetailsPrint lastused"
   },
   "SetDetailsPrint listonly": {
     "body": "SetDetailsPrint listonly$1",
-    "description": "Command",
+    "description": "Usage: SetDetailsPrint (none|listonly|textonly|both)",
     "prefix": "SetDetailsPrint listonly"
   },
   "SetDetailsPrint none": {
     "body": "SetDetailsPrint none$1",
-    "description": "Command",
+    "description": "Usage: SetDetailsPrint (none|listonly|textonly|both)",
     "prefix": "SetDetailsPrint none"
   },
   "SetDetailsPrint textonly": {
     "body": "SetDetailsPrint textonly$1",
-    "description": "Command",
+    "description": "Usage: SetDetailsPrint (none|listonly|textonly|both)",
     "prefix": "SetDetailsPrint textonly"
   },
   "SetDetailsView": {
     "body": "SetDetailsView ${1:show|hide}$2",
-    "description": "Command",
+    "description": "Usage: SetDetailsView (hide|show)",
     "prefix": "SetDetailsView"
   },
   "SetDetailsView hide": {
     "body": "SetDetailsView hide$1",
-    "description": "Command",
+    "description": "Usage: SetDetailsView (hide|show)",
     "prefix": "SetDetailsView hide"
   },
   "SetDetailsView show": {
     "body": "SetDetailsView show$1",
-    "description": "Command",
+    "description": "Usage: SetDetailsView (hide|show)",
     "prefix": "SetDetailsView show"
   },
   "SetErrorLevel": {
     "body": "SetErrorLevel ${1:error_level}$2",
-    "description": "Command",
+    "description": "Usage: SetErrorLevel error_level",
     "prefix": "SetErrorLevel"
   },
   "SetErrors": {
     "body": "SetErrors$1",
-    "description": "Command",
+    "description": "Usage: SetErrors",
     "prefix": "SetErrors"
   },
   "SetFileAttributes": {
     "body": "SetFileAttributes \"${1:filename}\" ${2:NORMAL|ARCHIVE|HIDDEN|OFFLINE|READONLY|SYSTEM|TEMPORARY}$3",
-    "description": "Command",
+    "description": "Usage: SetFileAttributes file attribute[|attribute[...]]",
     "prefix": "SetFileAttributes"
   },
   "SetFont": {
     "body": "SetFont \"${1:font_face_name}\" ${2:font_size}$3",
-    "description": "Command",
+    "description": "Usage: SetFont [/LANG=lang_id] font_face_name font_size",
     "prefix": "SetFont"
   },
   "SetFont /LANG": {
     "body": "SetFont /LANG=$\\{LANG_${1:ENGLISH}} \"${2:font_face_name}\" ${3:font_size}$4",
-    "description": "Command",
+    "description": "Usage: SetFont [/LANG=lang_id] font_face_name font_size",
     "prefix": "SetFont /LANG"
   },
   "SetOutPath": {
     "body": "SetOutPath \"${1:outpath}\"$2",
-    "description": "Command",
+    "description": "Usage: SetOutPath output_path",
     "prefix": "SetOutPath"
   },
   "SetOverwrite": {
     "body": "SetOverwrite ${1:on|off|try|ifdiff|ifnewer|lastused}$2",
-    "description": "Command",
+    "description": "Usage: SetOverwrite on|off|try|ifnewer|ifdiff",
     "prefix": "SetOverwrite"
   },
   "SetOverwrite ifdiff": {
     "body": "SetOverwrite ifdiff$1",
-    "description": "Command",
+    "description": "Usage: SetOverwrite on|off|try|ifnewer|ifdiff",
     "prefix": "SetOverwrite ifdiff"
   },
   "SetOverwrite ifnewer": {
     "body": "SetOverwrite ifnewer$1",
-    "description": "Command",
+    "description": "Usage: SetOverwrite on|off|try|ifnewer|ifdiff",
     "prefix": "SetOverwrite ifnewer"
   },
   "SetOverwrite lastused": {
     "body": "SetOverwrite lastused$1",
-    "description": "Command",
+    "description": "Usage: SetOverwrite on|off|try|ifnewer|ifdiff",
     "prefix": "SetOverwrite lastused"
   },
   "SetOverwrite off": {
     "body": "SetOverwrite off$1",
-    "description": "Command",
+    "description": "Usage: SetOverwrite on|off|try|ifnewer|ifdiff",
     "prefix": "SetOverwrite off"
   },
   "SetOverwrite on (default)": {
     "body": "SetOverwrite on$1",
-    "description": "Command",
+    "description": "Usage: SetOverwrite on|off|try|ifnewer|ifdiff",
     "prefix": "SetOverwrite on (default)"
   },
   "SetOverwrite try": {
     "body": "SetOverwrite try$1",
-    "description": "Command",
+    "description": "Usage: SetOverwrite on|off|try|ifnewer|ifdiff",
     "prefix": "SetOverwrite try"
   },
   "SetRebootFlag": {
     "body": "SetRebootFlag ${1:true|false}$2",
-    "description": "Command",
+    "description": "Usage: SetRebootFlag true|false",
     "prefix": "SetRebootFlag"
   },
   "SetRebootFlag false": {
     "body": "SetRebootFlag false$1",
-    "description": "Command",
+    "description": "Usage: SetRebootFlag true|false",
     "prefix": "SetRebootFlag false"
   },
   "SetRebootFlag true": {
     "body": "SetRebootFlag true$1",
-    "description": "Command",
+    "description": "Usage: SetRebootFlag true|false",
     "prefix": "SetRebootFlag true"
   },
   "SetRegView": {
     "body": "SetRegView ${1:32|64|lastused}$2",
-    "description": "Command",
+    "description": "Usage: SetRegView 32|64|lastused",
     "prefix": "SetRegView"
   },
   "SetRegView 32": {
     "body": "SetRegView 32$1",
-    "description": "Command",
+    "description": "Usage: SetRegView 32|64|lastused",
     "prefix": "SetRegView 32"
   },
   "SetRegView 64": {
     "body": "SetRegView 64$1",
-    "description": "Command",
+    "description": "Usage: SetRegView 32|64|lastused",
     "prefix": "SetRegView 64"
   },
   "SetRegView lastused": {
     "body": "SetRegView lastused$1",
-    "description": "Command",
+    "description": "Usage: SetRegView 32|64|lastused",
     "prefix": "SetRegView lastused"
   },
   "SetShellVarContext": {
     "body": "SetShellVarContext ${1:all|current}$2",
-    "description": "Command",
+    "description": "Usage: SetShellVarContext all|current",
     "prefix": "SetShellVarContext"
   },
   "SetShellVarContext all": {
     "body": "SetShellVarContext all$1",
-    "description": "Command",
+    "description": "Usage: SetShellVarContext all|current",
     "prefix": "SetShellVarContext all"
   },
   "SetShellVarContext current": {
     "body": "SetShellVarContext current$1",
-    "description": "Command",
+    "description": "Usage: SetShellVarContext all|current",
     "prefix": "SetShellVarContext current"
   },
   "SetSilent": {
     "body": "SetSilent ${1:normal|silent}$2",
-    "description": "Command",
+    "description": "Usage: SetSilent silent|normal",
     "prefix": "SetSilent"
   },
   "SetSilent normal": {
     "body": "SetSilent normal$1",
-    "description": "Command",
+    "description": "Usage: SetSilent silent|normal",
     "prefix": "SetSilent normal"
   },
   "SetSilent silent": {
     "body": "SetSilent silent$1",
-    "description": "Command",
+    "description": "Usage: SetSilent silent|normal",
     "prefix": "SetSilent silent"
   },
   "ShowInstDetails": {
     "body": "ShowInstDetails ${1:hide|show|nevershow}$2",
-    "description": "Command",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "ShowInstDetails"
   },
   "ShowInstDetails hide (default)": {
     "body": "ShowInstDetails hide$1",
-    "description": "Command",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "ShowInstDetails hide (default)"
   },
   "ShowInstDetails nevershow": {
     "body": "ShowInstDetails nevershow$1",
-    "description": "Command",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "ShowInstDetails nevershow"
   },
   "ShowInstDetails show": {
     "body": "ShowInstDetails show$1",
-    "description": "Command",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "ShowInstDetails show"
   },
   "ShowUninstDetails": {
     "body": "ShowUninstDetails ${1:hide|show|nevershow}$2",
-    "description": "Command",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "ShowUninstDetails"
   },
   "ShowUninstDetails hide (default)": {
     "body": "ShowUninstDetails hide$1",
-    "description": "Command",
+    "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "ShowUninstDetails hide (default)"
   },
   "ShowUninstDetails nevershow": {
     "body": "ShowUninstDetails nevershow$1",
-    "description": "Command",
+    "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "ShowUninstDetails nevershow"
   },
   "ShowUninstDetails show": {
     "body": "ShowUninstDetails show$1",
-    "description": "Command",
+    "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "ShowUninstDetails show"
   },
   "ShowWindow": {
     "body": "ShowWindow $${1:hwnd} ${2:show_state}$3",
-    "description": "Command",
+    "description": "Usage: ShowWindow hwnd show_state",
     "prefix": "ShowWindow"
   },
   "SilentInstall": {
     "body": "SilentInstall ${1:normal|silent|silentlog}$2",
-    "description": "Command",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "SilentInstall"
   },
   "SilentInstall normal (default)": {
     "body": "SilentInstall normal$1",
-    "description": "Command",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "SilentInstall normal (default)"
   },
   "SilentInstall silent": {
     "body": "SilentInstall silent$1",
-    "description": "Command",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "SilentInstall silent"
   },
   "SilentInstall silentlog": {
     "body": "SilentInstall silentlog$1",
-    "description": "Command",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "SilentInstall silentlog"
   },
   "SilentUnInstall": {
     "body": "SilentUnInstall ${1:normal|silent|silentlog}$2",
-    "description": "Command",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "SilentUnInstall"
   },
   "SilentUnInstall normal (default)": {
     "body": "SilentUnInstall normal$1",
-    "description": "Command",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "SilentUnInstall normal (default)"
   },
   "SilentUnInstall silent": {
     "body": "SilentUnInstall silent$1",
-    "description": "Command",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "SilentUnInstall silent"
   },
   "SilentUnInstall silentlog": {
     "body": "SilentUnInstall silentlog$1",
-    "description": "Command",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "SilentUnInstall silentlog"
   },
   "Sleep": {
     "body": "Sleep ${1:sleeptime_in_ms}$2",
-    "description": "Command",
+    "description": "Usage: Sleep sleep_time_in_ms",
     "prefix": "Sleep"
   },
   "SpaceTexts": {
     "body": "SpaceTexts ${1:req_text} ${2:avail_text}$3",
-    "description": "Command",
+    "description": "Usage: SpaceTexts none | ([space required text] [space available text])",
     "prefix": "SpaceTexts"
   },
   "StrCmp": {
     "body": "StrCmp ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}$5",
-    "description": "Command",
+    "description": "Usage: StrCmp str1 str2 label_to_goto_if_equal [label_to_goto_if_not]",
     "prefix": "StrCmp"
   },
   "StrCmpS": {
     "body": "StrCmpS ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}$5",
-    "description": "Command",
+    "description": "Usage: StrCmpS str1 str2 label_to_goto_if_equal [label_to_goto_if_not]",
     "prefix": "StrCmpS"
   },
   "StrCpy": {
     "body": "StrCpy $${1:user_var} \"${2:str}\" ${3:[maxlen]} ${4:[start_offset]}$5",
-    "description": "Command",
+    "description": "Usage: StrCpy $(user_var: output) str [maxlen] [startoffset]",
     "prefix": "StrCpy"
   },
   "StrLen": {
     "body": "StrLen $${1:user_var} \"${2:str}\"$3",
-    "description": "Command",
+    "description": "Usage: StrLen $(user_var: length output) str",
     "prefix": "StrLen"
   },
   "SubCaption": {
     "body": "SubCaption ${1:page_number} \"${2:subcaption}\"$3",
-    "description": "Command",
+    "description": "Usage: SubCaption page_number(0-4) new_subcaption",
     "prefix": "SubCaption"
   },
   "UnRegDLL": {
     "body": "UnRegDLL \"${1:dllfile}\"$2",
-    "description": "Command",
+    "description": "Usage: UnRegDLL dll_path_on_target.dll",
     "prefix": "UnRegDLL"
   },
   "Unicode": {
     "body": "Unicode ${1:true|false}$2",
-    "description": "Command",
+    "description": "Usage: Unicode true|false",
     "prefix": "Unicode"
   },
   "Unicode false": {
     "body": "Unicode false$1",
-    "description": "Command",
+    "description": "Usage: Unicode true|false",
     "prefix": "Unicode false"
   },
   "Unicode true": {
     "body": "Unicode true$1",
-    "description": "Command",
+    "description": "Usage: Unicode true|false",
     "prefix": "Unicode true"
   },
   "UninstPage": {
     "body": "UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}$5",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage"
   },
   "UninstPage /ENABLECANCEL": {
     "body": "UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} /ENABLECANCEL$5",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage /ENABLECANCEL"
   },
   "UninstPage components": {
     "body": "UninstPage components ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage components"
   },
   "UninstPage custom": {
     "body": "UninstPage custom ${1:creator_function} ${2:[leave_function]} \"${3:caption}\"$4",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage custom"
   },
   "UninstPage custom /ENABLECANCEL": {
     "body": "UninstPage custom ${1:creator_function} ${2:[leave_function]} \"${3:caption}\" /ENABLECANCEL$4",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage custom /ENABLECANCEL"
   },
   "UninstPage directory": {
     "body": "UninstPage directory ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage directory"
   },
   "UninstPage instfiles": {
     "body": "UninstPage instfiles ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}$5",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage instfiles"
   },
   "UninstPage license": {
     "body": "UninstPage license ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage license"
   },
   "UninstPage uninstConfirm": {
     "body": "UninstPage uninstConfirm ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}$5",
-    "description": "Command",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "UninstPage uninstConfirm"
   },
   "UninstallButtonText": {
     "body": "UninstallButtonText \"${1:text}\"$2",
-    "description": "Command",
+    "description": "Usage: UninstallButtonText [uninstall button text]",
     "prefix": "UninstallButtonText"
   },
   "UninstallCaption": {
     "body": "UninstallCaption \"${1:caption}\"$2",
-    "description": "Command",
+    "description": "Usage: UninstallCaption uninstaller_caption",
     "prefix": "UninstallCaption"
   },
   "UninstallIcon": {
     "body": "UninstallIcon \"${1:icon}.ico\"$2",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon"
   },
   "UninstallIcon:arrow-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:arrow-uninstall.ico"
   },
   "UninstallIcon:arrow2-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:arrow2-uninstall.ico"
   },
   "UninstallIcon:box-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:box-uninstall.ico"
   },
   "UninstallIcon:classic-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:classic-uninstall.ico"
   },
   "UninstallIcon:llama-blue.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:llama-blue.ico"
   },
   "UninstallIcon:llama-grey.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:llama-grey.ico"
   },
   "UninstallIcon:modern-uninstall-blue-full.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue-full.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:modern-uninstall-blue-full.ico"
   },
   "UninstallIcon:modern-uninstall-blue.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:modern-uninstall-blue.ico"
   },
   "UninstallIcon:modern-uninstall-colorful.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-colorful.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:modern-uninstall-colorful.ico"
   },
   "UninstallIcon:modern-uninstall-full.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-full.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:modern-uninstall-full.ico"
   },
   "UninstallIcon:modern-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:modern-uninstall.ico"
   },
   "UninstallIcon:nsis1-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:nsis1-uninstall.ico"
   },
   "UninstallIcon:orange-uninstall-nsis.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall-nsis.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:orange-uninstall-nsis.ico"
   },
   "UninstallIcon:orange-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:orange-uninstall.ico"
   },
   "UninstallIcon:pixel-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:pixel-uninstall.ico"
   },
   "UninstallIcon:win-uninstall.ico": {
     "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-uninstall.ico\"$1",
-    "description": "Command",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "UninstallIcon:win-uninstall.ico"
   },
   "UninstallSubCaption": {
     "body": "UninstallSubCaption ${1:page_number} \"${2:subcaption}\"$3",
-    "description": "Command",
+    "description": "Usage: UninstallSubCaption page_number(0-2) new_subcaption",
     "prefix": "UninstallSubCaption"
   },
   "UninstallText": {
     "body": "UninstallText \"${1:text}\" \"${2:[subtext}\"$3",
-    "description": "Command",
+    "description": "Usage: UninstallText Text_to_go_on_uninstall_page [subtext]",
     "prefix": "UninstallText"
   },
   "VIAddVersionKey": {
     "body": "VIAddVersionKey \"${1:keyname}\" \"${2:value}\"$3",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey"
   },
   "VIAddVersionKey /LANG Comments": {
     "body": "VIAddVersionKey /LANG=$\\{LANG_${1:ENGLISH}} \"Comments\" \"${2:value}\"$3",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey /LANG Comments"
   },
   "VIAddVersionKey /LANG CompanyName": {
     "body": "VIAddVersionKey /LANG=$\\{LANG_${1:ENGLISH}} \"CompanyName\" \"${2:value}\"$3",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey /LANG CompanyName"
   },
   "VIAddVersionKey /LANG FileVersion": {
     "body": "VIAddVersionKey /LANG=$\\{LANG_${1:ENGLISH}} \"FileVersion\" \"${2:value}\"$3",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey /LANG FileVersion"
   },
   "VIAddVersionKey /LANG LegalCopyright": {
     "body": "VIAddVersionKey /LANG=$\\{LANG_${1:ENGLISH}} \"LegalCopyright\" \"${2:value}\"$3",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey /LANG LegalCopyright"
   },
   "VIAddVersionKey /LANG LegalTrademarks": {
     "body": "VIAddVersionKey /LANG=$\\{LANG_${1:ENGLISH}} \"LegalTrademarks\" \"${2:value}\"$3",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey /LANG LegalTrademarks"
   },
   "VIAddVersionKey /LANG ProductName": {
     "body": "VIAddVersionKey /LANG=$\\{LANG_${1:ENGLISH}} \"ProductName\" \"${2:value}\"$3",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey /LANG ProductName"
   },
   "VIAddVersionKey Comments": {
     "body": "VIAddVersionKey \"Comments\" \"${1:value}\"$2",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey Comments"
   },
   "VIAddVersionKey CompanyName": {
     "body": "VIAddVersionKey \"CompanyName\" \"${1:value}\"$2",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey CompanyName"
   },
   "VIAddVersionKey FileDescription": {
     "body": "VIAddVersionKey \"FileDescription\" \"${1:value}\"$2",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey FileDescription"
   },
   "VIAddVersionKey FileVersion": {
     "body": "VIAddVersionKey \"FileVersion\" \"${1:value}\"$2",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey FileVersion"
   },
   "VIAddVersionKey LegalCopyright": {
     "body": "VIAddVersionKey \"LegalCopyright\" \"${1:value}\"$2",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey LegalCopyright"
   },
   "VIAddVersionKey LegalTrademarks": {
     "body": "VIAddVersionKey \"LegalTrademarks\" \"${1:value}\"$2",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey LegalTrademarks"
   },
   "VIAddVersionKey ProductName": {
     "body": "VIAddVersionKey \"ProductName\" \"${1:value}\"$2",
-    "description": "Command",
+    "description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
     "prefix": "VIAddVersionKey ProductName"
   },
   "VIFileVersion": {
     "body": "VIFileVersion \"${1:version_string}\"$2",
-    "description": "Command",
+    "description": "Usage: VIFileVersion [version_string_X.X.X.X]",
     "prefix": "VIFileVersion"
   },
   "VIProductVersion": {
     "body": "VIProductVersion \"${1:version_string}\"$2",
-    "description": "Command",
+    "description": "Usage: VIProductVersion [version_string_X.X.X.X]",
     "prefix": "VIProductVersion"
   },
   "Var": {
     "body": "Var ${1:var_name}$2",
-    "description": "Command",
+    "description": "Usage: Var [/GLOBAL] var_name",
     "prefix": "Var"
   },
   "Var /GLOBAL": {
     "body": "Var /GLOBAL ${1:var_name}$2",
-    "description": "Command",
+    "description": "Usage: Var [/GLOBAL] var_name",
     "prefix": "Var /GLOBAL"
   },
   "WindowIcon": {
     "body": "WindowIcon ${1:on|off}$2",
-    "description": "Command",
+    "description": "Usage: WindowIcon on|off",
     "prefix": "WindowIcon"
   },
   "WindowIcon off": {
     "body": "WindowIcon off$1",
-    "description": "Command",
+    "description": "Usage: WindowIcon on|off",
     "prefix": "WindowIcon off"
   },
   "WindowIcon on": {
     "body": "WindowIcon on$1",
-    "description": "Command",
+    "description": "Usage: WindowIcon on|off",
     "prefix": "WindowIcon on"
   },
   "WriteINIStr": {
     "body": "WriteINIStr \"${1:ini_filename}\" \"${2:section_name}\" \"${3:entry_name}\" \"${4:value}\"$5",
-    "description": "Command",
+    "description": "Usage: WriteINIStr ini_file section_name entry_name new_value",
     "prefix": "WriteINIStr"
   },
   "WriteRegBin": {
     "body": "WriteRegBin ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:valuedata}\"$5",
-    "description": "Command",
+    "description": "Usage: WriteRegBin rootkey subkey entry_name hex_string_like_12848412AB",
     "prefix": "WriteRegBin"
   },
   "WriteRegDWORD": {
     "body": "WriteRegDWORD ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5",
-    "description": "Command",
+    "description": "Usage: WriteRegDWORD rootkey subkey entry_name new_value_dword",
     "prefix": "WriteRegDWORD"
   },
   "WriteRegExpandStr": {
     "body": "WriteRegExpandStr ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5",
-    "description": "Command",
+    "description": "Usage: WriteRegExpandStr rootkey subkey entry_name new_value_string",
     "prefix": "WriteRegExpandStr"
   },
   "WriteRegStr": {
     "body": "WriteRegStr ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5",
-    "description": "Command",
+    "description": "Usage: WriteRegStr rootkey subkey entry_name new_value_string",
     "prefix": "WriteRegStr"
   },
   "WriteUninstaller": {
     "body": "WriteUninstaller \"${1:exename}.exe\"$2",
-    "description": "Command",
+    "description": "Usage: WriteUninstaller uninstall_exe_name",
     "prefix": "WriteUninstaller"
   },
   "XPStyle": {
     "body": "XPStyle ${1:off|on}$2",
-    "description": "Command",
+    "description": "Usage: XPStyle (on|off)",
     "prefix": "XPStyle"
   },
   "XPStyle off (default)": {
     "body": "XPStyle off$1",
-    "description": "Command",
+    "description": "Usage: XPStyle (on|off)",
     "prefix": "XPStyle off (default)"
   },
   "XPStyle on": {
     "body": "XPStyle on$1",
-    "description": "Command",
+    "description": "Usage: XPStyle (on|off)",
     "prefix": "XPStyle on"
   }
 }

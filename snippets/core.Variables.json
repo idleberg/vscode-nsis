@@ -1,217 +1,227 @@
 {
+  "${NSISDIR}": {
+    "body": "${NSISDIR}$1",
+    "description": "A symbol that contains the path where NSIS is installed",
+    "prefix": "NSISDIR"
+  },
   "$ADMINTOOLS": {
     "body": "$ADMINTOOLS$1",
-    "description": "Variable",
+    "description": "A directory where administrative tools are kept",
     "prefix": "ADMINTOOLS"
   },
   "$APPDATA": {
     "body": "$APPDATA$1",
-    "description": "Variable",
+    "description": "The application data directory",
     "prefix": "APPDATA"
   },
   "$CDBURN_AREA": {
     "body": "$CDBURN_AREA$1",
-    "description": "Variable",
+    "description": "A directory where files awaiting to be burned to CD are stored",
     "prefix": "CDBURN_AREA"
   },
   "$CMDLINE": {
     "body": "$CMDLINE$1",
-    "description": "Variable",
+    "description": "The command line of the installer",
     "prefix": "CMDLINE"
   },
   "$COMMONFILES": {
     "body": "$COMMONFILES$1",
-    "description": "Variable",
+    "description": "The common files directory",
     "prefix": "COMMONFILES"
   },
   "$COMMONFILES32": {
     "body": "$COMMONFILES32$1",
-    "description": "Variable",
+    "description": "The common files directory",
     "prefix": "COMMONFILES32"
   },
   "$COMMONFILES64": {
     "body": "$COMMONFILES64$1",
-    "description": "Variable",
+    "description": "The common files directory",
     "prefix": "COMMONFILES64"
   },
   "$COOKIES": {
     "body": "$COOKIES$1",
-    "description": "Variable",
+    "description": "Internet Explorer's cookies directory",
     "prefix": "COOKIES"
   },
   "$DESKTOP": {
     "body": "$DESKTOP$1",
-    "description": "Variable",
+    "description": "The Windows desktop directory",
     "prefix": "DESKTOP"
   },
   "$DOCUMENTS": {
     "body": "$DOCUMENTS$1",
-    "description": "Variable",
+    "description": "The documents directory",
     "prefix": "DOCUMENTS"
   },
   "$EXEDIR": {
     "body": "$EXEDIR$1",
-    "description": "Variable",
+    "description": "The directory containing the installer executable",
     "prefix": "EXEDIR"
   },
   "$EXEFILE": {
     "body": "$EXEFILE$1",
-    "description": "Variable",
+    "description": "The base name of the installer executable",
     "prefix": "EXEFILE"
   },
   "$EXEPATH": {
     "body": "$EXEPATH$1",
-    "description": "Variable",
+    "description": "The full path of the installer executable",
     "prefix": "EXEPATH"
   },
   "$FAVORITES": {
     "body": "$FAVORITES$1",
-    "description": "Variable",
+    "description": "The directory that contains shortcuts to the user's favorite websites, documents, etc.",
     "prefix": "FAVORITES"
   },
   "$FONTS": {
     "body": "$FONTS$1",
-    "description": "Variable",
+    "description": "The system's fonts directory",
     "prefix": "FONTS"
   },
   "$HISTORY": {
     "body": "$HISTORY$1",
-    "description": "Variable",
+    "description": "Internet Explorer's history directory",
     "prefix": "HISTORY"
   },
   "$HWNDPARENT": {
     "body": "$HWNDPARENT$1",
-    "description": "Variable",
+    "description": "HWND of the main window (in decimal)",
     "prefix": "HWNDPARENT"
   },
   "$INSTDIR": {
     "body": "$INSTDIR$1",
-    "description": "Variable",
+    "description": "The installation directory",
     "prefix": "INSTDIR"
   },
   "$INTERNET_CACHE": {
     "body": "$INTERNET_CACHE$1",
-    "description": "Variable",
+    "description": "Internet Explorer's temporary internet files directory",
     "prefix": "INTERNET_CACHE"
+  },
+  "$LANGUAGE": {
+    "body": "$LANGUAGE$1",
+    "description": "The identifier of the language that is currently used",
+    "prefix": "LANGUAGE"
   },
   "$LOCALAPPDATA": {
     "body": "$LOCALAPPDATA$1",
-    "description": "Variable",
+    "description": "The local (non-roaming) application data directory",
     "prefix": "LOCALAPPDATA"
   },
   "$MUSIC": {
     "body": "$MUSIC$1",
-    "description": "Variable",
+    "description": "The user's music files directory",
     "prefix": "MUSIC"
   },
   "$NETHOOD": {
     "body": "$NETHOOD$1",
-    "description": "Variable",
+    "description": "The directory that contains link objects that may exist in the My Network Places/Network Neighborhood folder",
     "prefix": "NETHOOD"
   },
   "$OUTDIR": {
     "body": "$OUTDIR$1",
-    "description": "Variable",
+    "description": "The current output directory",
     "prefix": "OUTDIR"
   },
   "$PICTURES": {
     "body": "$PICTURES$1",
-    "description": "Variable",
+    "description": "The user's picture files directory",
     "prefix": "PICTURES"
   },
   "$PLUGINSDIR": {
     "body": "$PLUGINSDIR$1",
-    "description": "Variable",
+    "description": "The path to a temporary folder created upon the first usage of a plug-in or a call to InitPluginsDir",
     "prefix": "PLUGINSDIR"
   },
   "$PRINTHOOD": {
     "body": "$PRINTHOOD$1",
-    "description": "Variable",
+    "description": "The directory that contains link objects that may exist in the Printers folder",
     "prefix": "PRINTHOOD"
   },
   "$PROFILE": {
     "body": "$PROFILE$1",
-    "description": "Variable",
+    "description": "The user's profile directory",
     "prefix": "PROFILE"
   },
   "$PROGRAMFILES": {
     "body": "$PROGRAMFILES$1",
-    "description": "Variable",
+    "description": "The program files directory",
     "prefix": "PROGRAMFILES"
   },
   "$PROGRAMFILES32": {
     "body": "$PROGRAMFILES32$1",
-    "description": "Variable",
+    "description": "The program files directory",
     "prefix": "PROGRAMFILES32"
   },
   "$PROGRAMFILES64": {
     "body": "$PROGRAMFILES64$1",
-    "description": "Variable",
+    "description": "The program files directory",
     "prefix": "PROGRAMFILES64"
   },
   "$QUICKLAUNCH": {
     "body": "$QUICKLAUNCH$1",
-    "description": "Variable",
+    "description": "The quick launch folder for IE4 active desktop and above",
     "prefix": "QUICKLAUNCH"
   },
   "$RECENT": {
     "body": "$RECENT$1",
-    "description": "Variable",
+    "description": "The directory that contains shortcuts to the user's recently used documents",
     "prefix": "RECENT"
   },
   "$RESOURCES": {
     "body": "$RESOURCES$1",
-    "description": "Variable",
+    "description": "The resources directory that stores themes and other Windows resources (usually $WINDIR\\Resources but detected at runtime)",
     "prefix": "RESOURCES"
   },
   "$RESOURCES_LOCALIZED": {
     "body": "$RESOURCES_LOCALIZED$1",
-    "description": "Variable",
+    "description": "The localized resources directory that stores themes and other Windows resources (usually $WINDIR\\Resources\\1033 but detected at runtime)",
     "prefix": "RESOURCES_LOCALIZED"
   },
   "$SENDTO": {
     "body": "$SENDTO$1",
-    "description": "Variable",
+    "description": "The directory that contains Send To menu shortcut items",
     "prefix": "SENDTO"
   },
   "$SMPROGRAMS": {
     "body": "$SMPROGRAMS$1",
-    "description": "Variable",
+    "description": "The start menu programs folder",
     "prefix": "SMPROGRAMS"
   },
   "$SMSTARTUP": {
     "body": "$SMSTARTUP$1",
-    "description": "Variable",
+    "description": "The start menu programs / startup folder",
     "prefix": "SMSTARTUP"
   },
   "$STARTMENU": {
     "body": "$STARTMENU$1",
-    "description": "Variable",
+    "description": "The start menu folder",
     "prefix": "STARTMENU"
   },
   "$SYSDIR": {
     "body": "$SYSDIR$1",
-    "description": "Variable",
+    "description": "The Windows system directory",
     "prefix": "SYSDIR"
   },
   "$TEMP": {
     "body": "$TEMP$1",
-    "description": "Variable",
+    "description": "The temporary directory",
     "prefix": "TEMP"
   },
   "$TEMPLATES": {
     "body": "$TEMPLATES$1",
-    "description": "Variable",
+    "description": "The document templates directory",
     "prefix": "TEMPLATES"
   },
   "$VIDEOS": {
     "body": "$VIDEOS$1",
-    "description": "Variable",
+    "description": "The user's video files directory",
     "prefix": "VIDEOS"
   },
   "$WINDIR": {
     "body": "$WINDIR",
-    "description": "Variable",
-    "prefix": "WINDIR"
+    "prefix": "WINDIR",
+    "description": "The Windows directory",
   }
 }

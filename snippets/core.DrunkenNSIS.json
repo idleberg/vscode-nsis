@@ -1,1082 +1,877 @@
 {
   "%BitmapCheck": {
     "body": "CheckBitmap \"${1:bitmap}.bmp\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CheckBitmap local_bitmap.bmp",
     "prefix": "BitmapCheck"
   },
   "%BkColorLicense": {
     "body": "LicenseBkColor \"${1:color}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseBkColor background_color",
     "prefix": "BkColorLicense"
   },
   "%BkColorLicense /gray (default)": {
     "body": "LicenseBkColor /gray$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseBkColor background_color",
     "prefix": "BkColorLicense /gray (default)"
   },
   "%BkColorLicense /windows": {
     "body": "LicenseBkColor /windows$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseBkColor background_color",
     "prefix": "BkColorLicense /windows"
   },
   "%Bring2Front": {
     "body": "BringToFront$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: BringToFront",
     "prefix": "Bring2Front"
   },
   "%BufSizeFile": {
     "body": "FileBufSize ${1:buffer_size_in_mb}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileBufSize buf_size_mb",
     "prefix": "BufSizeFile"
   },
   "%ButtonTextInstall": {
     "body": "InstallButtonText \"${1:button_text}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: InstallButtonText [install button text]",
     "prefix": "ButtonTextInstall"
   },
   "%ButtonTextMisc": {
     "body": "MiscButtonText \"${1:back_button_text}\" \"${2:next_button_text}\" \"${3:cancel_button_text}\" \"${4:close_button_text}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: MiscButtonText [back button text] [next button text] [cancel button text] [close button text]",
     "prefix": "ButtonTextMisc"
   },
   "%ButtonTextUninstall": {
     "body": "UninstallButtonText \"${1:text}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstallButtonText [uninstall button text]",
     "prefix": "ButtonTextUninstall"
   },
   "%CallbacksPage": {
     "body": "PageCallbacks ${1:[creator_function]} ${2:[leave_function]}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: PageCallbacks ([creator_function] [leave_function]) | ([pre_function] [show_function] [leave_function])",
     "prefix": "CallbacksPage"
   },
   "%CaptionUninstall": {
     "body": "UninstallCaption \"${1:caption}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstallCaption uninstaller_caption",
     "prefix": "CaptionUninstall"
   },
   "%CheckCRC": {
     "body": "CRCCheck ${1:off|on}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CRCCheck (on|force|off)",
     "prefix": "CheckCRC"
   },
   "%CheckCRC off": {
     "body": "CRCCheck off$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CRCCheck (on|force|off)",
     "prefix": "CheckCRC off"
   },
   "%CheckCRC on (default)": {
     "body": "CRCCheck on$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CRCCheck (on|force|off)",
     "prefix": "CheckCRC on (default)"
   },
   "%CloseFile": {
     "body": "FileClose $${1:handle}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileClose $(user_var: handle input)",
     "prefix": "CloseFile"
   },
   "%CloseFind": {
     "body": "FindClose $${1:handle}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FindClose $(user_var: handle input)",
     "prefix": "CloseFind"
   },
   "%CmpInt": {
     "body": "IntCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$6",
-    "description": "DrunkenNSIS",
+    "description": "Usage: IntCmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
     "prefix": "CmpInt"
   },
   "%CmpSStr": {
     "body": "StrCmpS ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: StrCmpS str1 str2 label_to_goto_if_equal [label_to_goto_if_not]",
     "prefix": "CmpSStr"
   },
   "%CmpStr": {
     "body": "StrCmp ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: StrCmp str1 str2 label_to_goto_if_equal [label_to_goto_if_not]",
     "prefix": "CmpStr"
   },
   "%CmpUInt": {
     "body": "IntCmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$6",
-    "description": "DrunkenNSIS",
+    "description": "Usage: IntCmpU val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
     "prefix": "CmpUInt"
   },
   "%CpyStr": {
     "body": "StrCpy $${1:user_var} \"${2:str}\" ${3:[maxlen]} ${4:[start_offset]}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: StrCpy $(user_var: output) str [maxlen] [startoffset]",
     "prefix": "CpyStr"
   },
   "%DLLReg": {
     "body": "RegDLL \"${1:dllfile}\" ${2:entrypoint_name}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RegDLL dll_path_on_target.dll [entrypoint_symbol]",
     "prefix": "DLLReg"
   },
   "%DPIAwareManifest": {
     "body": "ManifestDPIAware ${1:notset|true|false}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestDPIAware notset|true|false",
     "prefix": "DPIAwareManifest"
   },
   "%DPIAwareManifest false": {
     "body": "ManifestDPIAware false$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestDPIAware notset|true|false",
     "prefix": "DPIAwareManifest false"
   },
   "%DPIAwareManifest notset": {
     "body": "ManifestDPIAware notset$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestDPIAware notset|true|false",
     "prefix": "DPIAwareManifest notset"
   },
   "%DPIAwareManifest true": {
     "body": "ManifestDPIAware true$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestDPIAware notset|true|falseareManifest true",
     "prefix": "DPIAwareManifest true"
   },
   "%DataLicense": {
     "body": "LicenseData \"${1:license_file}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseData local_file_that_has_license_text | license_lang_string",
     "prefix": "DataLicense"
   },
   "%DataLicense rtf": {
     "body": "LicenseData \"${1:license_file}.rtf\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseData local_file_that_has_license_text | license_lang_string",
     "prefix": "DataLicense rtf"
   },
   "%DataLicense txt": {
     "body": "LicenseData \"${1:license_file}.txt\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseData local_file_that_has_license_text | license_lang_string",
     "prefix": "DataLicense txt"
   },
   "%DirRM": {
     "body": "RMDir \"${1:directory_name}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RMDir [/r] [/REBOOTOK] directory_name",
     "prefix": "DirRM"
   },
   "%DirRM /REBOOTOK": {
     "body": "RMDir /REBOOTOK \"${1:directory_name}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RMDir [/r] [/REBOOTOK] directory_name",
     "prefix": "DirRM /REBOOTOK"
   },
   "%DirRM /r /REBOOTOK": {
     "body": "RMDir /r /REBOOTOK \"${1:directory_name}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RMDir [/r] [/REBOOTOK] directory_name",
     "prefix": "DirRM /r /REBOOTOK"
   },
   "%DirectoryCreate": {
     "body": "CreateDirectory \"${1:path_to_create}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CreateDirectory directory_name",
     "prefix": "DirectoryCreate"
   },
   "%EnvStrRead": {
     "body": "ReadEnvStr $${1:user_var} \"${2:name}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ReadEnvStr $(user_var: output) name",
     "prefix": "EnvStrRead"
   },
   "%EnvStringsExpand": {
     "body": "ExpandEnvStrings $${1:user_var} \"${2:string}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ExpandEnvStrings $(user_var: output) string",
     "prefix": "EnvStringsExpand"
   },
   "%ErrorTextFile": {
     "body": "FileErrorText \"${1:error_text}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileErrorText [text (can contain $0)] [text without ignore (can contain $0)]",
     "prefix": "ErrorTextFile"
   },
   "%ErrorsClear": {
     "body": "ClearErrors$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ClearErrors",
     "prefix": "ErrorsClear"
   },
   "%ExecutionLevelRequest": {
     "body": "RequestExecutionLevel ${1:admin|none|user|highest}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "ExecutionLevelRequest"
   },
   "%ExecutionLevelRequest admin": {
     "body": "RequestExecutionLevel admin$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "ExecutionLevelRequest admin (default)"
   },
   "%ExecutionLevelRequest highest": {
     "body": "RequestExecutionLevel highest$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "ExecutionLevelRequest highest"
   },
   "%ExecutionLevelRequest none (default)": {
     "body": "RequestExecutionLevel none$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "ExecutionLevelRequest none"
   },
   "%ExecutionLevelRequest user": {
     "body": "RequestExecutionLevel user$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: RequestExecutionLevel none|user|highest|admin",
     "prefix": "ExecutionLevelRequest user"
   },
   "%FileCopy": {
     "body": "CopyFiles \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "FileCopy"
   },
   "%FileCopy /FILESONLY": {
     "body": "CopyFiles /FILESONLY \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "FileCopy /FILESONLY"
   },
   "%FileCopy /SILENT": {
     "body": "CopyFiles /SILENT \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "FileCopy /SILENT"
   },
   "%FileCopy /SILENT /FILESONLY": {
     "body": "CopyFiles /SILENT /FILESONLY \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CopyFiles [/SILENT] [/FILESONLY] source_path destination_path [total_size_in_kb]",
     "prefix": "FileCopy /SILENT /FILESONLY"
   },
   "%FileReserve": {
     "body": "ReserveFile \"${1:file}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ReserveFile [/nonfatal] [/r] [/x filespec [...]] file [file...] | [/nonfatal] /plugin file.dll",
     "prefix": "FileReserve"
   },
   "%FileReserve /nonfatal": {
     "body": "ReserveFile /nonfatal \"${1:file}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ReserveFile [/nonfatal] [/r] [/x filespec [...]] file [file...] | [/nonfatal] /plugin file.dll",
     "prefix": "FileReserve /nonfatal"
   },
   "%FileReserve /nonfatal /r": {
     "body": "ReserveFile nonfatal/r \"${1:file}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ReserveFile [/nonfatal] [/r] [/x filespec [...]] file [file...] | [/nonfatal] /plugin file.dll",
     "prefix": "FileReserve /nonfatal /r"
   },
   "%FirstFind": {
     "body": "FindFirst $${1:handle} $${2:user_var} \"${3:filespec}\"$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FindFirst $(user_var: handle output) $(user_var: filename output) filespec",
     "prefix": "FirstFind"
   },
   "%FmtInt": {
     "body": "IntFmt $${1:user_var} \"${2:format}\" \"${3:numberstring}\"$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: IntFmt $(user_var: output) format_string input",
     "prefix": "FmtInt"
   },
   "%FontCreate": {
     "body": "CreateFont $${1:user_var} \"${2:face_name}\" ${3:[height] [weight]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CreateFont $(user_var: handle output) face_name [height weight /ITALIC /UNDERLINE /STRIKE]",
     "prefix": "FontCreate"
   },
   "%ForceSelectionLicense checkbox": {
     "body": "LicenseForceSelection checkbox \"${2:accept_text}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseForceSelection (checkbox [accept_text] | radiobuttons [accept_text] [decline_text] | off)",
     "prefix": "ForceSelectionLicense checkbox"
   },
   "%ForceSelectionLicense off (default)": {
     "body": "LicenseForceSelection off \"${2:accept_text}\" \"${3:decline_text}\"$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseForceSelection (checkbox [accept_text] | radiobuttons [accept_text] [decline_text] | off)",
     "prefix": "ForceSelectionLicense off (default)"
   },
   "%ForceSelectionLicense radiobuttons": {
     "body": "LicenseForceSelection radiobuttons \"${2:accept_text}\" \"${3:decline_text}\"$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseForceSelection (checkbox [accept_text] | radiobuttons [accept_text] [decline_text] | off)",
     "prefix": "ForceSelectionLicense radiobuttons"
   },
   "%GetInstTypeText": {
     "body": "InstTypeGetText ${1:inst_type_idx} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: InstTypeGetText insttype_index $(user_var: output text)",
     "prefix": "GetInstTypeText"
   },
   "%GetSectionFlags": {
     "body": "SectionGetFlags ${${1:section_index}} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionGetFlags section_index $(user_var: output flags)",
     "prefix": "GetSectionFlags"
   },
   "%GetSectionInstTypes": {
     "body": "SectionGetInstTypes ${${1:section_index}} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionGetInstTypes section_index $(user_var: output inst_types)",
     "prefix": "GetSectionInstTypes"
   },
   "%GetSectionSize": {
     "body": "SectionGetSize ${${1:section_index}} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionGetSize section_index $(user_var: output size)",
     "prefix": "GetSectionSize"
   },
   "%GetSectionText": {
     "body": "SectionGetText ${${1:section_index}} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionGetText section_index $(user_var: output text)",
     "prefix": "GetSectionText"
   },
   "%Go2": {
     "body": "Goto ${1:label_to_jump_to}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: Goto label",
     "prefix": "Go2"
   },
   "%INIFlush": {
     "body": "FlushINI \"${1:ini_filename}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FlushINI ini_file",
     "prefix": "INIFlush"
   },
   "%INISecDelete": {
     "body": "DeleteINISec \"${1:ini_filename}\" \"${2:section_name}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DeleteINISec ini_file section_name",
     "prefix": "INISecDelete"
   },
   "%INIStrDelete": {
     "body": "DeleteINIStr \"${1:ini_filename}\" \"${2:section_name}\" \"${3:str_name}\"$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DeleteINIStr ini_file section_name entry_name",
     "prefix": "INIStrDelete"
   },
   "%INIStrRead": {
     "body": "ReadINIStr $${1:user_var} \"${2:ini_filename}\" \"${3:section_name}\" \"${4:entry_name}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ReadINIStr $(user_var: output) ini_file section entry_name",
     "prefix": "INIStrRead"
   },
   "%INIStrWrite": {
     "body": "WriteINIStr \"${1:ini_filename}\" \"${2:section_name}\" \"${3:entry_name}\" \"${4:value}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WriteINIStr ini_file section_name entry_name new_value",
     "prefix": "INIStrWrite"
   },
   "%IconUninstall": {
     "body": "UninstallIcon \"${1:icon}.ico\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstallIcon icon_on_local_system.ico",
     "prefix": "IconUninstall"
   },
   "%IconWindow": {
     "body": "WindowIcon ${1:on|off}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WindowIcon on|off",
     "prefix": "IconWindow"
   },
   "%IconWindow off": {
     "body": "WindowIcon off$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WindowIcon on|off",
     "prefix": "IconWindow off"
   },
   "%IconWindow on": {
     "body": "WindowIcon on$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WindowIcon on|off",
     "prefix": "IconWindow on"
   },
   "%InstDetailsShow": {
     "body": "ShowInstDetails ${1:hide|show|nevershow}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "InstDetailsShow"
   },
   "%InstDetailsShow hide (default)": {
     "body": "ShowInstDetails hide$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "InstDetailsShow hide (default)"
   },
   "%InstDetailsShow nevershow": {
     "body": "ShowInstDetails nevershow$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "InstDetailsShow nevershow"
   },
   "%InstDetailsShow show": {
     "body": "ShowInstDetails show$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowInstDetails (hide|show|nevershow)",
     "prefix": "InstDetailsShow show"
   },
   "%InstallSilent": {
     "body": "SilentInstall ${1:normal|silent|silentlog}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "InstallSilent"
   },
   "%InstallSilent normal (default)": {
     "body": "SilentInstall normal$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "InstallSilent normal (default)"
   },
   "%InstallSilent silent": {
     "body": "SilentInstall silent$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "InstallSilent silent"
   },
   "%InstallSilent silentlog": {
     "body": "SilentInstall silentlog$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "InstallSilent silentlog"
-  },
-  "%LangString License": {
-    "body": "LicenseBkColor ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}\"$4",
-    "description": "DrunkenNSIS",
-    "prefix": "LangString License"
-  },
-  "%LangString License rtf": {
-    "body": "LicenseBkColor ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.rtf\"$4",
-    "description": "DrunkenNSIS",
-    "prefix": "LangString License rtf"
-  },
-  "%LangString License txt": {
-    "body": "LicenseBkColor ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$4",
-    "description": "DrunkenNSIS",
-    "prefix": "LangString License txt"
   },
   "%LanguageFileLoad": {
     "body": "LoadLanguageFile \"${1:language_file}.nlf\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LoadLanguageFile language.nlf",
     "prefix": "LanguageFileLoad"
+  },
+  "%LangStringLicense": {
+    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}\"$4",
+    "description": "Usage: LicenseLangString name lang_id|0 license_path",
+    "prefix": "LangStringLicense"
+  },
+  "%LangStringLicense rtf": {
+    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.rtf\"$4",
+    "description": "Usage: LicenseLangString name lang_id|0 license_path",
+    "prefix": "LangStringLicense rtf"
+  },
+  "%LangStringLicense txt": {
+    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$4",
+    "description": "Usage: LicenseLangString name lang_id|0 license_path",
+    "prefix": "LangStringLicense txt"
   },
   "%LenStr": {
     "body": "StrLen $${1:user_var} \"${2:str}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: StrLen $(user_var: length output) str",
     "prefix": "LenStr"
   },
   "%MessageSend": {
     "body": "SendMessage $${1:HWND} ${2:msg} ${3:wparam} ${4:lparam}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SendMessage hwnd message [wparam|STR:wParam] [lparam|STR:lParam] [$(user_var: return value)] [/TIMEOUT=X]",
     "prefix": "MessageSend"
   },
   "%NextFind": {
     "body": "FindNext $${1:handle} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FindNext $(user_var: handle input) $(user_var: filename output)",
     "prefix": "NextFind"
   },
   "%OpInt": {
     "body": "IntOp $${1:user_var} ${2:value1} ${3:operator} ${4:value2}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: IntOp $(user_var: result) val1 OP [val2]",
     "prefix": "OpInt"
   },
   "%OpenFile": {
     "body": "FileOpen $${1:user_var} \"${2:filename}\" ${3:openmode}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileOpen $(user_var: handle output) filename openmode",
     "prefix": "OpenFile"
   },
   "%PageUninst": {
     "body": "UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst"
   },
   "%PageUninst /ENABLECANCEL": {
     "body": "UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} /ENABLECANCEL$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst /ENABLECANCEL"
   },
   "%PageUninst components": {
     "body": "UninstPage components ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst components"
   },
   "%PageUninst custom": {
     "body": "UninstPage custom ${1:creator_function} ${2:[leave_function]} \"${3:caption}\"$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst custom"
   },
   "%PageUninst custom /ENABLECANCEL": {
     "body": "UninstPage custom ${1:creator_function} ${2:[leave_function]} \"${3:caption}\" /ENABLECANCEL$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst custom /ENABLECANCEL"
   },
   "%PageUninst directory": {
     "body": "UninstPage directory ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst directory"
   },
   "%PageUninst instfiles": {
     "body": "UninstPage instfiles ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst instfiles"
   },
   "%PageUninst license": {
     "body": "UninstPage license ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst license"
   },
   "%PageUninst uninstConfirm": {
     "body": "UninstPage uninstConfirm ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstPage ((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]",
     "prefix": "PageUninst uninstConfirm"
   },
   "%PathSearch": {
     "body": "SearchPath $${1:user_var} \"${2:filename}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SearchPath $(user_var: result) filename",
     "prefix": "PathSearch"
   },
   "%PluginsDirInit": {
     "body": "InitPluginsDir$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: InitPluginsDir",
     "prefix": "PluginsDirInit"
   },
   "%PrintDetail": {
     "body": "DetailPrint \"${1:user_message}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DetailPrint message",
     "prefix": "PrintDetail"
   },
   "%ReadByteFile": {
     "body": "FileReadByte $${1:handle} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileReadByte $(user_var: handle input) $(user_var: bytevalue output)",
     "prefix": "ReadByteFile"
   },
   "%ReadFile": {
     "body": "FileRead $${1:handle} $${2:user_var} ${3:[maxlen]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileRead $(user_var: handle input) $(user_var: text output) [maxlen]",
     "prefix": "ReadFile"
   },
   "%ReadUTF16LEFile": {
     "body": "FileReadUTF16LE $${1:handle} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileReadUTF16LE $(user_var: handle input) $(user_var: text output) [maxlen]",
     "prefix": "ReadUTF16LEFile"
   },
   "%ReadWordFile": {
     "body": "FileReadWord $${1:handle} $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileReadWord $(user_var: handle input) $(user_var: wordvalue output)",
     "prefix": "ReadWordFile"
   },
   "%RegBinWrite": {
     "body": "WriteRegBin ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:valuedata}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WriteRegBin rootkey subkey entry_name hex_string_like_12848412AB",
     "prefix": "RegBinWrite"
   },
   "%RegDLLUn": {
     "body": "UnRegDLL \"${1:dllfile}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UnRegDLL dll_path_on_target.dll",
     "prefix": "RegDLLUn"
   },
   "%RegDWORDRead": {
     "body": "ReadRegDWORD $${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ReadRegDWORD $(user_var: output) rootkey subkey entry",
     "prefix": "RegDWORDRead"
   },
   "%RegDWORDWrite": {
     "body": "WriteRegDWORD ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WriteRegDWORD rootkey subkey entry_name new_value_dword",
     "prefix": "RegDWORDWrite"
   },
   "%RegExpandStrWrite": {
     "body": "WriteRegExpandStr ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WriteRegExpandStr rootkey subkey entry_name new_value_string",
     "prefix": "RegExpandStrWrite"
   },
   "%RegKeyDelete": {
     "body": "DeleteRegKey ${1:root_key} \"${2:subkey}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DeleteRegKey [/ifempty] root_key subkey",
     "prefix": "RegKeyDelete"
   },
   "%RegKeyDelete /ifempty": {
     "body": "DeleteRegKey /ifempty ${1:root_key} \"${2:subkey}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DeleteRegKey [/ifempty] root_key subkey",
     "prefix": "RegKeyDelete /ifempty"
   },
   "%RegKeyEnum": {
     "body": "EnumRegKey $${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: EnumRegKey $(user_var: output) rootkey subkey index",
     "prefix": "RegKeyEnum"
   },
   "%RegStrRead": {
     "body": "ReadRegStr $${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ReadRegStr $(user_var: output) rootkey subkey entry",
     "prefix": "RegStrRead"
   },
   "%RegStrWrite": {
     "body": "WriteRegStr ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WriteRegStr rootkey subkey entry_name new_value_string",
     "prefix": "RegStrWrite"
   },
   "%RegValueDelete": {
     "body": "DeleteRegValue ${1:root_key} \"${2:subkey}\" \"${3:key_name}\"$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DeleteRegValue root_key subkey entry_name",
     "prefix": "RegValueDelete"
   },
   "%RegValueEnum": {
     "body": "EnumRegValue $${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: EnumRegValue $(user_var: output) rootkey subkey index",
     "prefix": "RegValueEnum"
   },
   "%SeekFile": {
     "body": "FileSeek $${1:handle} ${2:offset} ${3:[mode]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileSeek $(user_var: handle input) offset [mode] [$(user_var: new position output)]",
     "prefix": "SeekFile"
   },
   "%SetInstTypeText": {
     "body": "InstTypeSetText ${1:inst_type_idx} \"${2:text}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: InstTypeSetText insttype_index text",
     "prefix": "SetInstTypeText"
   },
   "%SetLog": {
     "body": "LogSet ${1:on|off}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LogSet on|off",
     "prefix": "SetLog"
   },
   "%SetLog off": {
     "body": "LogSet off$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LogSet on|off",
     "prefix": "SetLog off"
   },
   "%SetLog on": {
     "body": "LogSet on$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LogSet on|off",
     "prefix": "SetLog on"
   },
   "%SetSectionFlags": {
     "body": "SectionSetFlags ${${1:section_index}} ${2:section_flags}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionSetFlags section_index flags",
     "prefix": "SetSectionFlags"
   },
   "%SetSectionInstTypes": {
     "body": "SectionSetInstTypes ${${1:section_index}} ${2:inst_types}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionSetInstTypes section_index inst_types",
     "prefix": "SetSectionInstTypes"
   },
   "%SetSectionSize": {
     "body": "SectionSetSize ${${1:section_index}} ${2:new_size}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionSetSize section_index new_size",
     "prefix": "SetSectionSize"
   },
   "%SetSectionText": {
     "body": "SectionSetText ${${1:section_index}} ${2:section_text}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionSetText section_index text_string",
     "prefix": "SetSectionText"
   },
   "%ShellExec": {
     "body": "ExecShell ${1:action} \"${2:command}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ExecShell (open|print|etc) command_line [parameters [showmode]]",
     "prefix": "ShellExec"
   },
   "%ShellExec open": {
     "body": "ExecShell open \"${2:command}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ExecShell (open|print|etc) command_line [parameters [showmode]]",
     "prefix": "ShellExec open"
   },
   "%ShellExec print": {
     "body": "ExecShell print \"${2:command}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ExecShell (open|print|etc) command_line [parameters [showmode]]",
     "prefix": "ShellExec print"
   },
   "%ShortCutCreate": {
     "body": "CreateShortCut \"${1:link}.lnk\" ${2:target}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: CreateShortcut [/NoWorkingDir] shortcut_name.lnk shortcut_target [parameters [icon_file [icon index [showmode [hotkey [comment]]]]]]",
     "prefix": "ShortCutCreate"
   },
   "%StyleXP": {
     "body": "XPStyle ${1:off|on}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: XPStyle (on|off)",
     "prefix": "StyleXP"
   },
   "%StyleXP off (default)": {
     "body": "XPStyle off$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: XPStyle (on|off)",
     "prefix": "StyleXP off (default)"
   },
   "%StyleXP on": {
     "body": "XPStyle on$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: XPStyle (on|off)",
     "prefix": "StyleXP on"
   },
   "%SubCaptionUninstall": {
     "body": "UninstallSubCaption ${1:page_number} \"${2:subcaption}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstallSubCaption page_number(0-2) new_subcaption",
     "prefix": "SubCaptionUninstall"
   },
   "%SubSection": {
     "body": "SectionGroup ${1:section_group_name} ${2:index_output}\n  ${3:# your code here}\nSectionGroupEnd$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionGroup [/e] [un.]section_group_name [section index output]",
     "prefix": "SubSection"
   },
   "%SubSectionEnd": {
     "body": "SectionGroupEnd$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SectionGroupEnd",
     "prefix": "SubSectionEnd"
   },
   "%SupportedOSManifest": {
     "body": "ManifestSupportedOS ${1:none|all|WinVista|Win7|Win8|{GUID}}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "SupportedOSManifest"
   },
   "%SupportedOSManifest Win7": {
     "body": "ManifestSupportedOS Win7$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "SupportedOSManifest Win7"
   },
   "%SupportedOSManifest Win8": {
     "body": "ManifestSupportedOS Win8$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "SupportedOSManifest Win8"
   },
   "%SupportedOSManifest WinVista": {
     "body": "ManifestSupportedOS WinVista$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "SupportedOSManifest WinVista"
   },
   "%SupportedOSManifest all": {
     "body": "ManifestSupportedOS all$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "SupportedOSManifest all"
   },
   "%SupportedOSManifest none": {
     "body": "ManifestSupportedOS none$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]",
     "prefix": "SupportedOSManifest none"
   },
   "%TextCompleted": {
-    "body": "ComponentText \"${1:text}\" \"${2:[subtext]}\" \"${3:[subtext2]}\"$4",
-    "description": "DrunkenNSIS",
+    "body": "CompletedText \"${1:text}\"",
+    "description": "Usage: CompletedText [completed text]",
     "prefix": "TextCompleted"
+  },
+  "%TextComponent": {
+    "body": "ComponentText \"${1:text}\" \"${2:[subtext]}\" \"${3:[subtext2]}\"$4",
+    "description": "Usage: ComponentText [component_page_description] [component_subtext1] [component_subtext2]",
+    "prefix": "TextComponent"
   },
   "%TextDetailsButton": {
     "body": "DetailsButtonText \"${1:text}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DetailsButtonText [details button text]",
     "prefix": "TextDetailsButton"
   },
   "%TextDir": {
     "body": "DirText \"${1:[text]}\" \"${2:[subtext]}\" \"${3:[browse_button_text]}\" \"${4:[browse_dlg_text]}\"$5",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DirText [directory_page_description] [directory_page_subtext] [browse_button_text] [browse_dlg_text]",
     "prefix": "TextDir"
   },
   "%TextLicense": {
     "body": "LicenseText \"${1:text}\" \"${2:button_text}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LicenseText license_page_description [license_button_text]",
     "prefix": "TextLicense"
   },
   "%TextLog": {
     "body": "LogText \"${1:text}\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LogText text",
     "prefix": "TextLog"
   },
   "%TextSpace": {
     "body": "SpaceTexts ${1:req_text} ${2:avail_text}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SpaceTexts none | ([space required text] [space available text])",
     "prefix": "TextSpace"
   },
   "%TextUninstall": {
     "body": "UninstallText \"${1:text}\" \"${2:[subtext}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: UninstallText Text_to_go_on_uninstall_page [subtext]",
     "prefix": "TextUninstall"
   },
   "%UIChange": {
     "body": "ChangeUI ${1:dialog} \"${2:ui_file}.exe\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ChangeUI (all|dlg_id) ui_file.exe",
     "prefix": "UIChange"
   },
   "%UnInstallSilent": {
     "body": "SilentUnInstall ${1:normal|silent|silentlog}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "UnInstallSilent"
   },
   "%UnInstallSilent normal (default)": {
     "body": "SilentUnInstall normal$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "UnInstallSilent normal (default)"
   },
   "%UnInstallSilent silent": {
     "body": "SilentUnInstall silent$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "UnInstallSilent silent"
   },
   "%UnInstallSilent silentlog": {
     "body": "SilentUnInstall silentlog$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: SilentUnInstall (normal|silent)",
     "prefix": "UnInstallSilent silentlog"
   },
   "%UninstDetailsShow": {
     "body": "ShowUninstDetails ${1:hide|show|nevershow}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "UninstDetailsShow"
   },
   "%UninstDetailsShow hide (default)": {
     "body": "ShowUninstDetails hide$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "UninstDetailsShow hide (default)"
   },
   "%UninstDetailsShow nevershow": {
     "body": "ShowUninstDetails nevershow$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "UninstDetailsShow nevershow"
   },
   "%UninstDetailsShow show": {
     "body": "ShowUninstDetails show$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "UninstDetailsShow show"
   },
   "%UninstallerWrite": {
     "body": "WriteUninstaller \"${1:exename}.exe\"$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: WriteUninstaller uninstall_exe_name",
     "prefix": "UninstallerWrite"
   },
   "%VarDir": {
     "body": "DirVar $${1:user_var}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DirVar $(user_var: dir in/out))",
     "prefix": "VarDir"
   },
   "%VerifyDir": {
     "body": "DirVerify ${1:auto|leave}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DirVerify auto|leave",
     "prefix": "VerifyDir"
   },
   "%VerifyDir auto (default)": {
     "body": "DirVerify auto$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DirVerify auto|leave",
     "prefix": "VerifyDir auto (default)"
   },
   "%VerifyDir leave": {
     "body": "DirVerify leave$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: DirVerify auto|leave",
     "prefix": "VerifyDir leave"
   },
   "%WaitExec": {
-    "body": "ExecShell \"${1:command}\"$2",
-    "description": "DrunkenNSIS",
+    "body": "ExecWait \"${1:command_line}\"",
+    "description": "Usage: ExecWait command_line [$(user_var: return value)]",
     "prefix": "WaitExec"
   },
   "%WaitExec $var": {
-    "body": "ExecShell \"${1:command}\" $${2:user_var}$3",
-    "description": "DrunkenNSIS",
+    "body": "ExecWait \"${1:command_line}\" $${2:user_var}$3",
+    "description": "Usage: ExecWait command_line [$(user_var: return value)]",
     "prefix": "WaitExec $var"
   },
   "%WindowEnable": {
     "body": "EnableWindow $${1:hwnd} ${2:1|0}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: EnableWindow hwnd state(1|0)",
     "prefix": "WindowEnable"
   },
   "%WindowFind": {
     "body": "FindWindow $${1:user_var} \"${2:windowclass}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FindWindow $(user_var: handle output) WindowClass [WindowTitle] [Window_Parent] [Child_After]",
     "prefix": "WindowFind"
   },
   "%WindowHide": {
     "body": "HideWindow$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: HideWindow",
     "prefix": "WindowHide"
   },
   "%WindowIs": {
     "body": "IsWindow $${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}$4",
-    "description": "DrunkenNSIS",
+    "description": "Usage: IsWindow hwnd jump_if_window [jump_if_not_window]",
     "prefix": "WindowIs"
   },
   "%WindowLock": {
     "body": "LockWindow ${1:on|off}$2",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LockWindow (on|off)",
     "prefix": "WindowLock"
   },
   "%WindowLock off": {
     "body": "LockWindow off$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LockWindow (on|off)",
     "prefix": "WindowLock off"
   },
   "%WindowLock on": {
     "body": "LockWindow on$1",
-    "description": "DrunkenNSIS",
+    "description": "Usage: LockWindow (on|off)",
     "prefix": "WindowLock on"
   },
   "%WindowShow": {
     "body": "ShowWindow $${1:hwnd} ${2:show_state}$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: ShowWindow hwnd show_state",
     "prefix": "WindowShow"
   },
   "%WriteByteFile": {
     "body": "FileWriteByte $${1:handle} \"${2:string}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileWriteByte $(user_var: handle input) bytevalue",
     "prefix": "WriteByteFile"
   },
   "%WriteFile": {
     "body": "FileWrite $${1:handle} \"${2:string}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileWrite $(user_var: handle input) text",
     "prefix": "WriteFile"
   },
   "%WriteUTF16LEFile": {
     "body": "FileWriteUTF16LE $${1:handle} \"${2:string}\"$3",
-    "description": "DrunkenNSIS",
+    "description": "Usage: FileWriteUTF16LE [/BOM] $(user_var: handle input) text",
     "prefix": "WriteUTF16LEFile"
-  },
-  "%{AddWordS}": {
-    "body": "${WordAddS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
-    "description": "DrunkenNSIS",
-    "prefix": "AddWordS"
-  },
-  "%{AddWord}": {
-    "body": "${WordAdd} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
-    "description": "DrunkenNSIS",
-    "prefix": "AddWord"
-  },
-  "%{CmdIf}": {
-    "body": "${IfCmd} ${1:command} ${|} ${2:command} ${|}$3",
-    "description": "DrunkenNSIS",
-    "prefix": "CmdIf"
-  },
-  "%{CompareSText}": {
-    "body": "${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
-    "description": "DrunkenNSIS",
-    "prefix": "CompareSText"
-  },
-  "%{CompareText}": {
-    "body": "${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
-    "description": "DrunkenNSIS",
-    "prefix": "CompareText"
-  },
-  "%{CompareVersion}": {
-    "body": "${VersionCompare} \"${1:version1}\" \"${2:version2}\" $${3:result}$4",
-    "description": "DrunkenNSIS",
-    "prefix": "CompareVersion"
-  },
-  "%{ConvertVersion}": {
-    "body": "${VersionConvert} \"${1:version}\" \"${2:charlist}\" $${3:result}$4",
-    "description": "DrunkenNSIS",
-    "prefix": "VersionConvert <WordFunc>"
-  },
-  "%{DoExit}": {
-    "body": "${ExitDo}$1",
-    "description": "DrunkenNSIS",
-    "prefix": "DoExit"
-  },
-  "%{ExistsFile}": {
-    "body": "${FileExists} \"${1:file}\"$2",
-    "description": "DrunkenNSIS",
-    "prefix": "ExistsFile"
-  },
-  "%{FilterStrS}": {
-    "body": "${StrFilterS} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "FilterStrS"
-  },
-  "%{FilterStr}": {
-    "body": "${StrFilter} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "FilterStr"
-  },
-  "%{Find2xSWord}": {
-    "body": "${WordFind2xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "Find2xSWord"
-  },
-  "%{Find2xWord}": {
-    "body": "${WordFind2x} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "Find2xWord"
-  },
-  "%{Find3xSWord}": {
-    "body": "${WordFind3xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$7",
-    "description": "DrunkenNSIS",
-    "prefix": "Find3xSWord"
-  },
-  "%{Find3xWord}": {
-    "body": "${WordFind3x} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$7",
-    "description": "DrunkenNSIS",
-    "prefix": "Find3xWord"
-  },
-  "%{FindLine}": {
-    "body": "${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$5",
-    "description": "DrunkenNSIS",
-    "prefix": "FindLine"
-  },
-  "%{FindWordS}": {
-    "body": "${WordFindS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
-    "description": "DrunkenNSIS",
-    "prefix": "FindWordS"
-  },
-  "%{FindWord}": {
-    "body": "${WordFind} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$5",
-    "description": "DrunkenNSIS",
-    "prefix": "FindWord"
-  },
-  "%{IfAnd}": {
-    "body": "${AndIf} ${1:condition}$2",
-    "description": "DrunkenNSIS",
-    "prefix": "IfAnd"
-  },
-  "%{IfElse}": {
-    "body": "${ElseIf} ${1:condition}$2",
-    "description": "DrunkenNSIS",
-    "prefix": "IfElse"
-  },
-  "%{IfNotAnd}": {
-    "body": "${AndIfNot} ${1:condition}$2",
-    "description": "DrunkenNSIS",
-    "prefix": "IfNotAnd"
-  },
-  "%{IfNotElse}": {
-    "body": "${ElseIfNot} ${1:condition}$2",
-    "description": "DrunkenNSIS",
-    "prefix": "IfNotElse"
-  },
-  "%{IfNotOr}": {
-    "body": "${OrIfNot} ${1:condition}$2",
-    "description": "DrunkenNSIS",
-    "prefix": "IfNotOr"
-  },
-  "%{InsertWordS}": {
-    "body": "${WordInsertS} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "InsertWordS"
-  },
-  "%{InsertWord}": {
-    "body": "${WordInsert} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "InsertWord"
-  },
-  "%{JoinFile}": {
-    "body": "${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$4",
-    "description": "DrunkenNSIS",
-    "prefix": "JoinFile"
-  },
-  "%{ReadConfig}": {
-    "body": "${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
-    "description": "DrunkenNSIS",
-    "prefix": "ReadConfig"
-  },
-  "%{ReadFromEnFiled}": {
-    "body": "${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$3",
-    "description": "DrunkenNSIS",
-    "prefix": "ReadFromEnFiled"
-  },
-  "%{ReadLine}": {
-    "body": "${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$4",
-    "description": "DrunkenNSIS",
-    "prefix": "ReadLine"
-  },
-  "%{ReadSConfig}": {
-    "body": "${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
-    "description": "DrunkenNSIS",
-    "prefix": "ReadSConfig"
-  },
-  "%{RecodeFile}": {
-    "body": "${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$3",
-    "description": "DrunkenNSIS",
-    "prefix": "RecodeFile"
-  },
-  "%{ReplaceWordS}": {
-    "body": "${WordReplaceS} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "ReplaceWordS"
-  },
-  "%{ReplaceWord}": {
-    "body": "${WordReplace} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$6",
-    "description": "DrunkenNSIS",
-    "prefix": "ReplaceWord"
-  },
-  "%{ShellIconsRefresh}": {
-    "body": "${RefreshShellIcons}$1",
-    "description": "DrunkenNSIS",
-    "prefix": "ShellIconsRefresh"
-  },
-  "%{SumLine}": {
-    "body": "${LineSum} \"${1:file}\" $${2:var}$3",
-    "description": "DrunkenNSIS",
-    "prefix": "SumLine"
-  },
-  "%{ThenIf}": {
-    "body": "${IfThen} ${1:condition} ${|} ${2:command} ${|}$3",
-    "description": "DrunkenNSIS",
-    "prefix": "ThenIf"
-  },
-  "%{ThenNotIf}": {
-    "body": "${IfThenNot} ${1:condition} ${|} ${2:command} ${|}$3",
-    "description": "DrunkenNSIS",
-    "prefix": "ThenNotIf"
-  },
-  "%{UnlessElse}": {
-    "body": "${ElseUnless} ${1:condition}$2",
-    "description": "DrunkenNSIS",
-    "prefix": "UnlessElse"
-  },
-  "%{WhileEnd}": {
-    "body": "${ExitWhile}$1",
-    "description": "DrunkenNSIS",
-    "prefix": "WhileEnd"
-  },
-  "%{WhileExit}": {
-    "body": "${ExitWhile}$1",
-    "description": "DrunkenNSIS",
-    "prefix": "WhileExit"
-  },
-  "%{WriteConfig}": {
-    "body": "${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
-    "description": "DrunkenNSIS",
-    "prefix": "WriteConfig"
-  },
-  "%{WriteSConfig}": {
-    "body": "${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
-    "description": "DrunkenNSIS",
-    "prefix": "WriteSConfig"
   }
 }

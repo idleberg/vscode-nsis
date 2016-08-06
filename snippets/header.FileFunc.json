@@ -1,102 +1,102 @@
 {
   "${BannerTrimPath}": {
     "body": "${BannerTrimPath} \"${1:path_string}\" \"${2:option}\" $${3:var}$4",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${BannerTrimPath} \"[PathString]\" \"[Option]\" $var",
     "prefix": "BannerTrimPath"
   },
   "${DirState}": {
     "body": "${DirState} \"${1:path}\" $${2:var}$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${DirState} \"[path]\" $var",
     "prefix": "DirState"
   },
   "${DriveSpace}": {
     "body": "${DriveSpace} \"${1:drive}\" \"${2:options}\" $${3:size}$4",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${DriveSpace} \"[Drive]\" \"[Options]\" $var",
     "prefix": "DriveSpace"
   },
   "${GetBaseName}": {
     "body": "${GetBaseName} \"${1:file_string}\" $${2:var}$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetBaseName} \"[FileString]\" $var",
     "prefix": "GetBaseName"
   },
   "${GetDrives}": {
     "body": "${GetDrives} \"${1:option}\" \"${2:function}\"$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetDrives} \"[Option]\" \"Function\"",
     "prefix": "GetDrives"
   },
   "${GetExeName}": {
     "body": "${GetExeName} $${1:var}$2",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetExeName} $var",
     "prefix": "GetExeName"
   },
   "${GetExePath}": {
     "body": "${GetExePath} $${1:var}$2",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetExePath} $var",
     "prefix": "GetExePath"
   },
   "${GetFileAttributes}": {
     "body": "${GetFileAttributes} \"${1:file}\" \"${2:attributes}\" $${3:var}$4",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetFileAttributes} \"[File]\" \"[Attributes]\" $var",
     "prefix": "GetFileAttributes"
   },
   "${GetFileExt}": {
     "body": "${GetFileExt} \"${1:file_string}\" $${2:var}$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetFileExt} \"[FileString]\" $var",
     "prefix": "GetFileExt"
   },
   "${GetFileName}": {
     "body": "${GetFileName} \"${1:path_string}\" $${2:var}$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetFileName} \"[PathString]\" $var",
     "prefix": "GetFileName"
   },
   "${GetFileVersion}": {
     "body": "${GetFileVersion} \"${1:executable}\" $${2:version}$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetFileVersion} \"[Executable]\" $var",
     "prefix": "GetFileVersion"
   },
   "${GetOptionsS}": {
     "body": "${GetOptionsS} \"${1:parameters}\" \"${2:option}\" $${3:var}$4",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetOptionsS} \"[Parameters]\" \"[Option]\" $var",
     "prefix": "GetOptionsS"
   },
   "${GetOptions}": {
     "body": "${GetOptions} \"${1:parameters}\" \"${2:option}\" $${3:var}$4",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetOptions} \"[Parameters]\" \"[Option]\" $var",
     "prefix": "GetOptions"
   },
   "${GetParameters}": {
     "body": "${GetParameters} $${1:var}$2",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetParameters} $var",
     "prefix": "GetParameters"
   },
   "${GetParent}": {
     "body": "${GetParent} \"${1:path_string}\" $${2:var}$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetParent} \"[PathString]\" $var",
     "prefix": "GetParent"
   },
   "${GetRoot}": {
     "body": "${GetRoot} \"${1:full_path}\" $${2:var}$3",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetRoot} \"[FullPath]\" $var",
     "prefix": "GetRoot"
   },
   "${GetSize}": {
     "body": "${GetSize} \"${1:path}\" \"${2:options}\" $${3:size} $${4:sum_files} $${5:sum_directories}$6",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetSize} \"[Path]\" \"[Options]\" $var1 $var2 $var3",
     "prefix": "GetSize"
   },
   "${GetTime}": {
     "body": "${GetTime} \"${1:file}\" \"${2:option}\" $${3:day} $${4:month} $${5:year} $${6:weekday} $${7:hours} $${8:minute} $${9:seconds}$10",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${GetTime} \"[File]\" \"[Option]\" $var1 $var2 $var3 $var4 $var5 $var6 $var7",
     "prefix": "GetTime"
   },
   "${Locate}": {
     "body": "${Locate} \"${1:path}\" \"${2:options}\" \"${3:function}\"$4",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${Locate} \"[Path]\" \"[Options]\" \"Function\"",
     "prefix": "Locate"
   },
   "${RefreshShellIcons}": {
     "body": "${RefreshShellIcons}$1",
-    "description": "FileFunc.nsh",
+    "description": "Usage: ${RefreshShellIcons}",
     "prefix": "RefreshShellIcons"
   }
 }
