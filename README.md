@@ -35,8 +35,10 @@ Language syntax and snippets for Nullsoft Scriptable Install System (NSIS), as w
     * FileFunc
     * LogicLib
     * Memento
+    * Modern UI
     * MultiUser
     * Sections
+    * StrFunc
     * WinMessages
     * WinVer
     * WordFunc
