@@ -1,0 +1,188 @@
+{
+  "MULTIUSER_EXECUTIONLEVEL": {
+    "body": "!define MULTIUSER_EXECUTIONLEVEL ${1:Admin|Power|Highest|Standard}$2",
+    "description": "Usage: !define MULTIUSER_EXECUTIONLEVEL level",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_EXECUTIONLEVEL"
+  },
+  "MULTIUSER_EXECUTIONLEVEL Admin": {
+    "body": "!define MULTIUSER_EXECUTIONLEVEL Admin$1",
+    "description": "Usage: !define MULTIUSER_EXECUTIONLEVEL Admin",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_EXECUTIONLEVEL Admin"
+  },
+  "MULTIUSER_EXECUTIONLEVEL Highest": {
+    "body": "!define MULTIUSER_EXECUTIONLEVEL Highest$1",
+    "description": "Usage: !define MULTIUSER_EXECUTIONLEVEL Highest",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_EXECUTIONLEVEL Highest"
+  },
+  "MULTIUSER_EXECUTIONLEVEL Power": {
+    "body": "!define MULTIUSER_EXECUTIONLEVEL Power$1",
+    "description": "Usage: !define MULTIUSER_EXECUTIONLEVEL Power",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_EXECUTIONLEVEL Power"
+  },
+  "MULTIUSER_EXECUTIONLEVEL Standard": {
+    "body": "!define MULTIUSER_EXECUTIONLEVEL Standard$1",
+    "description": "Usage: !define MULTIUSER_EXECUTIONLEVEL Standard",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_EXECUTIONLEVEL Standard"
+  },
+  "MULTIUSER_INIT_FUNCTIONQUIT": {
+    "body": "!define MULTIUSER_INIT_FUNCTIONQUIT \"${1:function}\"$2",
+    "description": "Usage: !define MULTIUSER_INIT_FUNCTIONQUIT function",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INIT_FUNCTIONQUIT"
+  },
+  "MULTIUSER_INIT_TEXT_ADMINREQUIRED": {
+    "body": "!define MULTIUSER_INIT_TEXT_ADMINREQUIRED \"${1:error_message}\"$2",
+    "description": "Usage: !define MULTIUSER_INIT_TEXT_ADMINREQUIRED error_message",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INIT_TEXT_ADMINREQUIRED"
+  },
+  "MULTIUSER_INIT_TEXT_ALLUSERSNOTPOSSIBLE": {
+    "body": "!define MULTIUSER_INIT_TEXT_ALLUSERSNOTPOSSIBLE \"${1:error_message}\"$2",
+    "description": "Usage: !define MULTIUSER_INIT_TEXT_ALLUSERSNOTPOSSIBLE error_message",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INIT_TEXT_ALLUSERSNOTPOSSIBLE"
+  },
+  "MULTIUSER_INIT_TEXT_POWERREQUIRED": {
+    "body": "!define MULTIUSER_INIT_TEXT_POWERREQUIRED \"${1:error_message}\"$2",
+    "description": "Usage: !define MULTIUSER_INIT_TEXT_POWERREQUIRED error_message",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INIT_TEXT_POWERREQUIRED"
+  },
+  "MULTIUSER_INIT_UNFUNCTIONQUIT": {
+    "body": "!define MULTIUSER_INIT_UNFUNCTIONQUIT \"${1:function}\"$2",
+    "description": "Usage: !define MULTIUSER_INIT_UNFUNCTIONQUIT function",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INIT_UNFUNCTIONQUIT"
+  },
+  "MULTIUSER_INSTALLMODEPAGE_TEXT_ALLUSERS": {
+    "body": "!define MULTIUSER_INSTALLMODEPAGE_TEXT_ALLUSERS \"${1:text}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODEPAGE_TEXT_ALLUSERS text",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODEPAGE_TEXT_ALLUSERS"
+  },
+  "MULTIUSER_INSTALLMODEPAGE_TEXT_CURRENTUSER": {
+    "body": "!define MULTIUSER_INSTALLMODEPAGE_TEXT_CURRENTUSER \"${1:text}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODEPAGE_TEXT_CURRENTUSER text",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODEPAGE_TEXT_CURRENTUSER"
+  },
+  "MULTIUSER_INSTALLMODEPAGE_TEXT_TOP": {
+    "body": "!define MULTIUSER_INSTALLMODEPAGE_TEXT_TOP \"${1:text}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODEPAGE_TEXT_TOP text",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODEPAGE_TEXT_TOP"
+  },
+  "MULTIUSER_INSTALLMODE_COMMANDLINE": {
+    "body": "!define MULTIUSER_INSTALLMODE_COMMANDLINE$1",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_COMMANDLINE",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_COMMANDLINE"
+  },
+  "MULTIUSER_INSTALLMODE_DEFAULT_CURRENTUSER": {
+    "body": "!define MULTIUSER_INSTALLMODE_DEFAULT_CURRENTUSER$1",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_DEFAULT_CURRENTUSER",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_DEFAULT_CURRENTUSER"
+  },
+  "MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_KEY": {
+    "body": "!define MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_KEY  \"${1:key}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_KEY key",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_KEY"
+  },
+  "MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_VALUENAME": {
+    "body": "!define MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_VALUENAME \"${1:value}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_VALUENAME value",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_DEFAULT_REGISTRY_VALUENAME"
+  },
+  "MULTIUSER_INSTALLMODE_FUNCTION": {
+    "body": "!define MULTIUSER_INSTALLMODE_FUNCTION \"${1:function}\"$2",
+    "description": "Usage: ",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_FUNCTION"
+  },
+  "MULTIUSER_INSTALLMODE_FUNCTION AllUsers": {
+    "body": "!define MULTIUSER_INSTALLMODE_FUNCTION \"MultiUser.InstallMode.AllUsers\"$1",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_FUNCTION MultiUser.InstallMode.AllUsers",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_FUNCTION AllUsers"
+  },
+  "MULTIUSER_INSTALLMODE_FUNCTION CurrentUser": {
+    "body": "!define MULTIUSER_INSTALLMODE_FUNCTION \"MultiUser.InstallMode.CurrentUser\"$1",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_FUNCTION MultiUser.InstallMode.CurrentUser",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_FUNCTION CurrentUser"
+  },
+  "MULTIUSER_INSTALLMODE_INSTDIR": {
+    "body": "!define MULTIUSER_INSTALLMODE_INSTDIR \"${1:directory}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_INSTDIR directory",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_INSTDIR"
+  },
+  "MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_KEY ": {
+    "body": "!define MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_KEY \"${1:key}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_KEY key",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_KEY "
+  },
+  "MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_VALUENAME": {
+    "body": "!define MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_VALUENAME \"${1:value}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_VALUENAME value",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_INSTDIR_REGISTRY_VALUENAME"
+  },
+  "MULTIUSER_INSTALLMODE_UNFUNCTION": {
+    "body": "!define MULTIUSER_INSTALLMODE_UNFUNCTION \"${1:function}\"$2",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_UNFUNCTION function",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_UNFUNCTION"
+  },
+  "MULTIUSER_INSTALLMODE_UNFUNCTION AllUsers": {
+    "body": "!define MULTIUSER_INSTALLMODE_UNFUNCTION \"un.MultiUser.InstallMode.AllUsers\"$1",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_UNFUNCTION un.MultiUser.InstallMode.AllUsers",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_UNFUNCTION AllUsers"
+  },
+  "MULTIUSER_INSTALLMODE_UNFUNCTION CurrentUser": {
+    "body": "!define MULTIUSER_INSTALLMODE_UNFUNCTION \"un.MultiUser.InstallMode.CurrentUser\"$1",
+    "description": "Usage: !define MULTIUSER_INSTALLMODE_UNFUNCTION un.MultiUser.InstallMode.CurrentUser",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INSTALLMODE_UNFUNCTION CurrentUser"
+  },
+  "MULTIUSER_MUI": {
+    "body": "!define MULTIUSER_MUI$1",
+    "description": "Usage: !define MULTIUSER_MUI",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_MUI"
+  },
+  "MULTIUSER_NOUNINSTALL": {
+    "body": "!define MULTIUSER_NOUNINSTALL$1",
+    "description": "Usage: !define MULTIUSER_NOUNINSTAL",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_NOUNINSTALL"
+  },
+  "!insertmacro:MULTIUSER_INIT": {
+    "body": "!insertmacro MULTIUSER_INIT$1",
+    "description": "Usage: !insertmacro MULTIUSER_INIT",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_INIT"
+  },
+  "!insertmacro:MULTIUSER_PAGE_INSTALLMODE": {
+    "body": "!insertmacro MULTIUSER_PAGE_INSTALLMODE$1",
+    "description": "Usage: !insertmacro:MULTIUSER_PAGE_INSTALLMODE",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_PAGE_INSTALLMODE"
+  },
+  "!insertmacro:MULTIUSER_UNINIT": {
+    "body": "!insertmacro MULTIUSER_UNINIT$1",
+    "description": "Usage: !insertmacro:MULTIUSER_UNINIT",
+    "leftLabelHTML": "<span class='support function'>MultiUser.nsh</span>",
+    "prefix": "MULTIUSER_UNINIT"
+  }
+}

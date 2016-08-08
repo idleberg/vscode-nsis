@@ -1,0 +1,1500 @@
+{
+  "MUI_ABORTWARNING": {
+    "body": "!define MUI_ABORTWARNING$1",
+    "description": "Usage: !define MUI_ABORTWARNING!define MUI_ABORTWARNING",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ABORTWARNING"
+  },
+  "MUI_ABORTWARNING_TEXT": {
+    "body": "!define MUI_ABORTWARNING_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_ABORTWARNING_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ABORTWARNING_TEXT"
+  },
+  "MUI_BGCOLOR": {
+    "body": "!define MUI_BGCOLOR \"${1:RRGGBB}\"$2",
+    "description": "Usage: !define MUI_BGCOLOR color",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_BGCOLOR"
+  },
+  "MUI_COMPONENTSPAGE_CHECKBITMAP": {
+    "body": "!define MUI_COMPONENTSPAGE_CHECKBITMAP \"${1:file}.bmp\"$2",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_CHECKBITMAP bitmap_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_CHECKBITMAP"
+  },
+  "MUI_COMPONENTSPAGE_NODESC": {
+    "body": "!define MUI_COMPONENTSPAGE_NODESC$1",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_NODESC!define MUI_COMPONENTSPAGE_NODESC",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_NODESC"
+  },
+  "MUI_COMPONENTSPAGE_SMALLDESC": {
+    "body": "!define MUI_COMPONENTSPAGE_SMALLDESC$1",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_SMALLDESC!define MUI_COMPONENTSPAGE_SMALLDESC",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_SMALLDESC"
+  },
+  "MUI_COMPONENTSPAGE_TEXT_COMPLIST": {
+    "body": "!define MUI_COMPONENTSPAGE_TEXT_COMPLIST \"${1:text}\"$2",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_TEXT_COMPLIST text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_TEXT_COMPLIST"
+  },
+  "MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO": {
+    "body": "!define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO \"${1:text}\"$2",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO"
+  },
+  "MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE": {
+    "body": "!define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE \"${1:text}\"$2",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE"
+  },
+  "MUI_COMPONENTSPAGE_TEXT_INSTTYPE": {
+    "body": "!define MUI_COMPONENTSPAGE_TEXT_INSTTYPE \"${1:text}\"$2",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_TEXT_INSTTYPE text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_TEXT_INSTTYPE"
+  },
+  "MUI_COMPONENTSPAGE_TEXT_TOP": {
+    "body": "!define MUI_COMPONENTSPAGE_TEXT_TOP \"${1:text}\"$2",
+    "description": "Usage: !define MUI_COMPONENTSPAGE_TEXT_TOP text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_COMPONENTSPAGE_TEXT_TOP"
+  },
+  "MUI_CUSTOMFUNCTION_ABORT": {
+    "body": "!define MUI_CUSTOMFUNCTION_ABORT \"${1:function}\"$2",
+    "description": "Usage: !define MUI_CUSTOMFUNCTION_ABORT function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_CUSTOMFUNCTION_ABORT"
+  },
+  "MUI_CUSTOMFUNCTION_GUIINIT": {
+    "body": "!define MUI_CUSTOMFUNCTION_GUIINIT \"${1:function}\"$2",
+    "description": "Usage: !define MUI_CUSTOMFUNCTION_GUIINIT function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_CUSTOMFUNCTION_GUIINIT"
+  },
+  "MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION": {
+    "body": "!define MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION \"${1:function}\"$2",
+    "description": "Usage: !define MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION"
+  },
+  "MUI_CUSTOMFUNCTION_UNABORT": {
+    "body": "!define MUI_CUSTOMFUNCTION_UNABORT \"${1:function}\"$2",
+    "description": "Usage: !define MUI_CUSTOMFUNCTION_UNABORT function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_CUSTOMFUNCTION_UNABORT"
+  },
+  "MUI_CUSTOMFUNCTION_UNGUIINIT": {
+    "body": "!define MUI_CUSTOMFUNCTION_UNGUIINIT \"${1:function}\"$2",
+    "description": "Usage: !define MUI_CUSTOMFUNCTION_UNGUIINIT function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_CUSTOMFUNCTION_UNGUIINIT"
+  },
+  "MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION": {
+    "body": "!define MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION \"${1:function}\"$2",
+    "description": "Usage: !define MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION"
+  },
+  "MUI_DIRECTORYPAGE_BGCOLOR": {
+    "body": "!define MUI_DIRECTORYPAGE_BGCOLOR \"${1:RRGGBB}\"$2",
+    "description": "Usage: !define MUI_DIRECTORYPAGE_BGCOLOR color",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_DIRECTORYPAGE_BGCOLOR"
+  },
+  "MUI_DIRECTORYPAGE_TEXT_DESTINATION": {
+    "body": "!define MUI_DIRECTORYPAGE_TEXT_DESTINATION \"${1:text}\"$2",
+    "description": "Usage: !define MUI_DIRECTORYPAGE_TEXT_DESTINATION text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_DIRECTORYPAGE_TEXT_DESTINATION"
+  },
+  "MUI_DIRECTORYPAGE_TEXT_TOP": {
+    "body": "!define MUI_DIRECTORYPAGE_TEXT_TOP \"${1:text}\"$2",
+    "description": "Usage: !define MUI_DIRECTORYPAGE_TEXT_TOP text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_DIRECTORYPAGE_TEXT_TOP"
+  },
+  "MUI_DIRECTORYPAGE_VARIABLE": {
+    "body": "!define MUI_DIRECTORYPAGE_VARIABLE \\$${1:var}$2",
+    "description": "Usage: !define MUI_DIRECTORYPAGE_VARIABLE variable",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_DIRECTORYPAGE_VARIABLE"
+  },
+  "MUI_DIRECTORYPAGE_VERIFYONLEAVE": {
+    "body": "!define MUI_DIRECTORYPAGE_VERIFYONLEAVE$1",
+    "description": "Usage: !define MUI_DIRECTORYPAGE_VERIFYONLEAVE!define MUI_DIRECTORYPAGE_VERIFYONLEAVE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_DIRECTORYPAGE_VERIFYONLEAVE"
+  },
+  "MUI_FINISHPAGE_BUTTON": {
+    "body": "!define MUI_FINISHPAGE_BUTTON \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_BUTTON text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_BUTTON"
+  },
+  "MUI_FINISHPAGE_CANCEL_ENABLED": {
+    "body": "!define MUI_FINISHPAGE_CANCEL_ENABLED$1",
+    "description": "Usage: !define MUI_FINISHPAGE_CANCEL_ENABLED!define MUI_FINISHPAGE_CANCEL_ENABLED",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_CANCEL_ENABLED"
+  },
+  "MUI_FINISHPAGE_LINK": {
+    "body": "!define MUI_FINISHPAGE_LINK \"${1:link_text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_LINK link_text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_LINK"
+  },
+  "MUI_FINISHPAGE_LINK_COLOR": {
+    "body": "!define MUI_FINISHPAGE_LINK_COLOR \"${1:RRGGBB}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_LINK_COLOR color",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_LINK_COLOR"
+  },
+  "MUI_FINISHPAGE_LINK_LOCATION": {
+    "body": "!define MUI_FINISHPAGE_LINK_LOCATION \"${1:file_or_url}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_LINK_LOCATION file/url",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_LINK_LOCATION"
+  },
+  "MUI_FINISHPAGE_NOAUTOCLOSE": {
+    "body": "!define MUI_FINISHPAGE_NOAUTOCLOSE$1",
+    "description": "Usage: !define MUI_FINISHPAGE_NOAUTOCLOSE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_NOAUTOCLOSE"
+  },
+  "MUI_FINISHPAGE_NOREBOOTSUPPORT": {
+    "body": "!define MUI_FINISHPAGE_NOREBOOTSUPPORT$1",
+    "description": "Usage: !define MUI_FINISHPAGE_NOREBOOTSUPPORT",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_NOREBOOTSUPPORT"
+  },
+  "MUI_FINISHPAGE_REBOOTLATER_DEFAULT": {
+    "body": "!define MUI_FINISHPAGE_REBOOTLATER_DEFAULT$1",
+    "description": "Usage: !define MUI_FINISHPAGE_REBOOTLATER_DEFAULT",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_REBOOTLATER_DEFAULT"
+  },
+  "MUI_FINISHPAGE_RUN": {
+    "body": "!define MUI_FINISHPAGE_RUN \"${1:file}.exe\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_RUN exe_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_RUN"
+  },
+  "MUI_FINISHPAGE_RUN_FUNCTION": {
+    "body": "!define MUI_FINISHPAGE_RUN_FUNCTION \"${1:function}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_RUN_FUNCTION function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_RUN_FUNCTION"
+  },
+  "MUI_FINISHPAGE_RUN_NOTCHECKED": {
+    "body": "!define MUI_FINISHPAGE_RUN_NOTCHECKED$1",
+    "description": "Usage: !define MUI_FINISHPAGE_RUN_NOTCHECKED",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_RUN_NOTCHECKED"
+  },
+  "MUI_FINISHPAGE_RUN_PARAMETERS": {
+    "body": "!define MUI_FINISHPAGE_RUN_PARAMETERS \"${1:parameters}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_RUN_PARAMETERS parameters",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_RUN_PARAMETERS"
+  },
+  "MUI_FINISHPAGE_RUN_TEXT": {
+    "body": "!define MUI_FINISHPAGE_RUN_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_RUN_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_RUN_TEXT"
+  },
+  "MUI_FINISHPAGE_SHOWREADME": {
+    "body": "!define MUI_FINISHPAGE_SHOWREADME \"${1:file_or_url}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_SHOWREADME file/url",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_SHOWREADME"
+  },
+  "MUI_FINISHPAGE_SHOWREADME_FUNCTION": {
+    "body": "!define MUI_FINISHPAGE_SHOWREADME_FUNCTION \"${1:function}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_SHOWREADME_FUNCTION function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_SHOWREADME_FUNCTION"
+  },
+  "MUI_FINISHPAGE_SHOWREADME_NOTCHECKED": {
+    "body": "!define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED$1",
+    "description": "Usage: !define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_SHOWREADME_NOTCHECKED"
+  },
+  "MUI_FINISHPAGE_SHOWREADME_TEXT": {
+    "body": "!define MUI_FINISHPAGE_SHOWREADME_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_SHOWREADME_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_SHOWREADME_TEXT"
+  },
+  "MUI_FINISHPAGE_TEXT": {
+    "body": "!define MUI_FINISHPAGE_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_TEXT"
+  },
+  "MUI_FINISHPAGE_TEXT_LARGE": {
+    "body": "!define MUI_FINISHPAGE_TEXT_LARGE$1",
+    "description": "Usage: !define MUI_FINISHPAGE_TEXT_LARGE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_TEXT_LARGE"
+  },
+  "MUI_FINISHPAGE_TEXT_REBOOT": {
+    "body": "!define MUI_FINISHPAGE_TEXT_REBOOT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_TEXT_REBOOT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_TEXT_REBOOT"
+  },
+  "MUI_FINISHPAGE_TEXT_REBOOTLATER": {
+    "body": "!define MUI_FINISHPAGE_TEXT_REBOOTLATER \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_TEXT_REBOOTLATER text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_TEXT_REBOOTLATER"
+  },
+  "MUI_FINISHPAGE_TEXT_REBOOTNOW": {
+    "body": "!define MUI_FINISHPAGE_TEXT_REBOOTNOW \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_TEXT_REBOOTNOW text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_TEXT_REBOOTNOW"
+  },
+  "MUI_FINISHPAGE_TITLE": {
+    "body": "!define MUI_FINISHPAGE_TITLE \"${1:text}\"$2",
+    "description": "Usage: !define MUI_FINISHPAGE_TITLE text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_TITLE"
+  },
+  "MUI_FINISHPAGE_TITLE_3LINES": {
+    "body": "!define MUI_FINISHPAGE_TITLE_3LINES$1",
+    "description": "Usage: !define MUI_FINISHPAGE_TITLE_3LINES",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FINISHPAGE_TITLE_3LINES"
+  },
+  "MUI_FUNCTION_DESCRIPTION_BEGIN": {
+    "body": "!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN\n  ${1:# your code here}\n!insertmacro MUI_FUNCTION_DESCRIPTION_END",
+    "description": "Usage: !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FUNCTION_DESCRIPTION_BEGIN"
+  },
+  "MUI_FUNCTION_DESCRIPTION_END": {
+    "body": "!insertmacro MUI_FUNCTION_DESCRIPTION_END$1",
+    "description": "Usage: !insertmacro MUI_FUNCTION_DESCRIPTION_END",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_FUNCTION_DESCRIPTION_END"
+  },
+  "MUI_HEADERIMAGE": {
+    "body": "!define MUI_HEADERIMAGE$1",
+    "description": "Usage: !define MUI_HEADERIMAGE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE"
+  },
+  "MUI_HEADERIMAGE_BITMAP": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"${1:file}.bmp\"$2",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP bmp_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP"
+  },
+  "MUI_HEADERIMAGE_BITMAP:nsis-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL bmp_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:nsis-r.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange-r-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange-r.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange-uninstall-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange-uninstall-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange-uninstall-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange-uninstall-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange-uninstall-r-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange-uninstall-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange-uninstall-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange-uninstall-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange-uninstall-r.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange-uninstall.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange-uninstall.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange-uninstall.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:orange.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP orange.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:orange.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP:win.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP win.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP:win.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"${1:file}.bmp\"$2",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL bmp_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:nsis-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL nsis-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:nsis-r.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange-r-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange-r.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange-uninstall-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange-uninstall-r-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange-uninstall-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange-uninstall.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:orange.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL orange.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:orange.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL:win.bmp": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL win.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL:win.bmp"
+  },
+  "MUI_HEADERIMAGE_BITMAP_RTL_STRETCH": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_RTL_STRETCH ${1:mode}$2",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_RTL_STRETCH mode",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_RTL_STRETCH"
+  },
+  "MUI_HEADERIMAGE_BITMAP_STRETCH": {
+    "body": "!define MUI_HEADERIMAGE_BITMAP_STRETCH ${1:mode}$2",
+    "description": "Usage: !define MUI_HEADERIMAGE_BITMAP_STRETCH mode",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_BITMAP_STRETCH"
+  },
+  "MUI_HEADERIMAGE_RIGHT": {
+    "body": "!define MUI_HEADERIMAGE_RIGHT$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_RIGHT",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_RIGHT"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"${1:file}.bmp\"$2",
+    "description": "Usage: !define MUI_HEADERIMAGE_UNBITMAP bmp_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:nsis-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP nsis-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:nsis-r.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange-r-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange-r.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange-uninstall-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange-uninstall-r-nsis.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange-uninstall-r.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange-uninstall.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:orange.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP orange.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:orange.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP:win.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP win.bmp",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP:win.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"${1:file}.bmp\"$2",
+    "description": "Usage: !define MUI_HEADERIMAGE_UNBITMAP_RTL bmp_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:nsis-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL nsis-r.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:nsis-r.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL nsis.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange-nsis.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange-r-nsis.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange-r.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange-uninstall-nsis.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r-nsis.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange-uninstall-r-nsis.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r-nsis.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange-uninstall-r.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange-uninstall.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:orange.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL orange.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:orange.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL:win.bmp": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"$1",
+    "description": "!define MUI_HEADERIMAGE_UNBITMAP_RTL win.bmp\"",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL:win.bmp"
+  },
+  "MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH": {
+    "body": "!define MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH$1",
+    "description": "Usage: !define MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH"
+  },
+  "MUI_HEADER_TRANSPARENT_TEXT": {
+    "body": "!define MUI_HEADER_TRANSPARENT_TEXT$1",
+    "description": "Usage: !define MUI_HEADER_TRANSPARENT_TEXT",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_HEADER_TRANSPARENT_TEXT"
+  },
+  "MUI_ICON": {
+    "body": "!define MUI_ICON \"${1:file}.ico\"$2",
+    "description": "Usage: !define MUI_ICON icon_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON"
+  },
+  "MUI_ICON:arrow-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow-install.ico\"$1",
+    "description": "!define MUI_ICON arrow-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:arrow-install.ico"
+  },
+  "MUI_ICON:arrow2-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow2-install.ico\"$1",
+    "description": "!define MUI_ICON arrow2-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:arrow2-install.ico"
+  },
+  "MUI_ICON:box-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\box-install.ico\"$1",
+    "description": "!define MUI_ICON box-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:box-install.ico"
+  },
+  "MUI_ICON:classic-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\classic-install.ico\"$1",
+    "description": "!define MUI_ICON classic-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:classic-install.ico"
+  },
+  "MUI_ICON:llama-blue.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-blue.ico\"$1",
+    "description": "!define MUI_ICON llama-blue.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:llama-blue.ico"
+  },
+  "MUI_ICON:llama-grey.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-grey.ico\"$1",
+    "description": "!define MUI_ICON llama-grey.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:llama-grey.ico"
+  },
+  "MUI_ICON:modern-install-blue-full.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-blue-full.ico\"$1",
+    "description": "!define MUI_ICON modern-install-blue-full.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:modern-install-blue-full.ico"
+  },
+  "MUI_ICON:modern-install-blue.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-blue.ico\"$1",
+    "description": "!define MUI_ICON modern-install-blue.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:modern-install-blue.ico"
+  },
+  "MUI_ICON:modern-install-colorful.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-colorful.ico\"$1",
+    "description": "!define MUI_ICON modern-install-colorful.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:modern-install-colorful.ico"
+  },
+  "MUI_ICON:modern-install-full.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-full.ico\"$1",
+    "description": "!define MUI_ICON modern-install-full.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:modern-install-full.ico"
+  },
+  "MUI_ICON:modern-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install.ico\"$1",
+    "description": "!define MUI_ICON modern-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:modern-install.ico"
+  },
+  "MUI_ICON:nsis1-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\nsis1-install.ico\"$1",
+    "description": "!define MUI_ICON nsis1-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:nsis1-install.ico"
+  },
+  "MUI_ICON:orange-install-nsis.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-install-nsis.ico\"$1",
+    "description": "!define MUI_ICON orange-install-nsis.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:orange-install-nsis.ico"
+  },
+  "MUI_ICON:orange-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-install.ico\"$1",
+    "description": "!define MUI_ICON orange-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:orange-install.ico"
+  },
+  "MUI_ICON:pixel-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\pixel-install.ico\"$1",
+    "description": "!define MUI_ICON pixel-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:pixel-install.ico"
+  },
+  "MUI_ICON:win-install.ico": {
+    "body": "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\win-install.ico\"$1",
+    "description": "!define MUI_ICON win-install.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_ICON:win-install.ico"
+  },
+  "MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT": {
+    "body": "!define MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT"
+  },
+  "MUI_INSTFILESPAGE_ABORTHEADER_TEXT": {
+    "body": "!define MUI_INSTFILESPAGE_ABORTHEADER_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_INSTFILESPAGE_ABORTHEADER_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_INSTFILESPAGE_ABORTHEADER_TEXT"
+  },
+  "MUI_INSTFILESPAGE_COLORS": {
+    "body": "!define MUI_INSTFILESPAGE_COLORS \"${1:foreground_color}\" \"${2:background_color}\"$3",
+    "description": "Usage: !define MUI_INSTFILESPAGE_COLORS (/windows | (foreground color: RRGGBB hexadecimal) (background color: RRGGBB hexadecimal))",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_INSTFILESPAGE_COLORS"
+  },
+  "MUI_INSTFILESPAGE_COLORS /windows": {
+    "body": "!define MUI_INSTFILESPAGE_COLORS /windows$1",
+    "description": "Usage: !define MUI_INSTFILESPAGE_COLORS /windows",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_INSTFILESPAGE_COLORS"
+  },
+  "MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT": {
+    "body": "!define MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT"
+  },
+  "MUI_INSTFILESPAGE_FINISHHEADER_TEXT": {
+    "body": "!define MUI_INSTFILESPAGE_FINISHHEADER_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_INSTFILESPAGE_FINISHHEADER_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_INSTFILESPAGE_FINISHHEADER_TEXT"
+  },
+  "MUI_INSTFILESPAGE_PROGRESSBAR": {
+    "body": "!define MUI_INSTFILESPAGE_PROGRESSBAR \"${1:colored|smooth}\"$2",
+    "description": "Usage: !define MUI_INSTFILESPAGE_PROGRESSBAR (\"\" | colored | smooth)",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_INSTFILESPAGE_PROGRESSBAR"
+  },
+  "MUI_LANGDLL_ALLLANGUAGES": {
+    "body": "!define MUI_LANGDLL_ALLLANGUAGES$1",
+    "description": "Usage: !define MUI_LANGDLL_ALLLANGUAGES",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LANGDLL_ALLLANGUAGES"
+  },
+  "MUI_LANGDLL_ALWAYSSHOW": {
+    "body": "!define MUI_LANGDLL_ALWAYSSHOW$1",
+    "description": "Usage: !define MUI_LANGDLL_ALWAYSSHOW",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LANGDLL_ALWAYSSHOW"
+  },
+  "MUI_LANGDLL_DISPLAY": {
+    "body": "!insertmacro MUI_LANGDLL_DISPLAY$1",
+    "description": "Usage: !insertmacro MUI_LANGDLL_DISPLAY",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LANGDLL_DISPLAY"
+  },
+  "MUI_LANGDLL_INFO": {
+    "body": "!define MUI_LANGDLL_INFO \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LANGDLL_INFO text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LANGDLL_INFO"
+  },
+  "MUI_LANGDLL_WINDOWTITLE": {
+    "body": "!define MUI_LANGDLL_WINDOWTITLE \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LANGDLL_WINDOWTITLE text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LANGDLL_WINDOWTITLE"
+  },
+  "MUI_LANGUAGE": {
+    "body": "!insertmacro MUI_LANGUAGE \"${1:language}\"$2",
+    "description": "Usage: !insertmacro MUI_LANGUAGE language",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LANGUAGE"
+  },
+  "MUI_LICENSEPAGE_BGCOLOR": {
+    "body": "!define MUI_LICENSEPAGE_BGCOLOR \"${1:RRGGBB}\"$2",
+    "description": "Usage: !define MUI_LICENSEPAGE_BGCOLOR (/windows | /grey | (color: RRGGBB hexadecimal))",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_BGCOLOR"
+  },
+  "MUI_LICENSEPAGE_BGCOLOR /grey": {
+    "body": "!define MUI_LICENSEPAGE_BGCOLOR /grey$1",
+    "description": "Usage: !define MUI_LICENSEPAGE_BGCOLOR /grey",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_BGCOLOR"
+  },
+  "MUI_LICENSEPAGE_BGCOLOR /windows": {
+    "body": "!define MUI_LICENSEPAGE_BGCOLOR /windows$1",
+    "description": "Usage: !define MUI_LICENSEPAGE_BGCOLOR /windows",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_BGCOLOR"
+  },
+  "MUI_LICENSEPAGE_BUTTON": {
+    "body": "!define MUI_LICENSEPAGE_BUTTON \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LICENSEPAGE_BUTTON text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_BUTTON"
+  },
+  "MUI_LICENSEPAGE_CHECKBOX": {
+    "body": "!define MUI_LICENSEPAGE_CHECKBOX$1",
+    "description": "Usage: !define MUI_LICENSEPAGE_CHECKBOX",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_CHECKBOX"
+  },
+  "MUI_LICENSEPAGE_CHECKBOX_TEXT": {
+    "body": "!define MUI_LICENSEPAGE_CHECKBOX_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LICENSEPAGE_CHECKBOX_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_CHECKBOX_TEXT"
+  },
+  "MUI_LICENSEPAGE_RADIOBUTTONS": {
+    "body": "!define MUI_LICENSEPAGE_RADIOBUTTONS$1",
+    "description": "Usage: !define MUI_LICENSEPAGE_RADIOBUTTONS",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_RADIOBUTTONS"
+  },
+  "MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT": {
+    "body": "!define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT"
+  },
+  "MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE": {
+    "body": "!define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE"
+  },
+  "MUI_LICENSEPAGE_TEXT_BOTTOM": {
+    "body": "!define MUI_LICENSEPAGE_TEXT_BOTTOM \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LICENSEPAGE_TEXT_BOTTOM text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_TEXT_BOTTOM"
+  },
+  "MUI_LICENSEPAGE_TEXT_TOP": {
+    "body": "!define MUI_LICENSEPAGE_TEXT_TOP \"${1:text}\"$2",
+    "description": "Usage: !define MUI_LICENSEPAGE_TEXT_TOP text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_LICENSEPAGE_TEXT_TOP"
+  },
+  "MUI_PAGE_COMPONENTS": {
+    "body": "!insertmacro MUI_PAGE_COMPONENTS$1",
+    "description": "Usage: !insertmacro MUI_PAGE_COMPONENTS",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_COMPONENTS"
+  },
+  "MUI_PAGE_CUSTOMFUNCTION_LEAVE": {
+    "body": "!define MUI_PAGE_CUSTOMFUNCTION_LEAVE \"${1:function}\"$2",
+    "description": "Usage: !define MUI_PAGE_CUSTOMFUNCTION_LEAVE function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_CUSTOMFUNCTION_LEAVE"
+  },
+  "MUI_PAGE_CUSTOMFUNCTION_PRE": {
+    "body": "!define MUI_PAGE_CUSTOMFUNCTION_PRE \"${1:function}\"$2",
+    "description": "Usage: !define MUI_PAGE_CUSTOMFUNCTION_PRE function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_CUSTOMFUNCTION_PRE"
+  },
+  "MUI_PAGE_CUSTOMFUNCTION_SHOW": {
+    "body": "!define MUI_PAGE_CUSTOMFUNCTION_SHOW \"${1:function}\"$2",
+    "description": "Usage: !define MUI_PAGE_CUSTOMFUNCTION_SHOW function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_CUSTOMFUNCTION_SHOW"
+  },
+  "MUI_PAGE_DIRECTORY": {
+    "body": "!insertmacro MUI_PAGE_DIRECTORY$1",
+    "description": "Usage: !insertmacro MUI_PAGE_DIRECTORY",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_DIRECTORY"
+  },
+  "MUI_PAGE_FINISH": {
+    "body": "!insertmacro MUI_PAGE_FINISH$1",
+    "description": "Usage: !insertmacro MUI_PAGE_FINISH",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_FINISH"
+  },
+  "MUI_PAGE_HEADER_SUBTEXT": {
+    "body": "!define MUI_PAGE_HEADER_SUBTEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_PAGE_HEADER_SUBTEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_HEADER_SUBTEXT"
+  },
+  "MUI_PAGE_HEADER_TEXT": {
+    "body": "!define MUI_PAGE_HEADER_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_PAGE_HEADER_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_HEADER_TEXT"
+  },
+  "MUI_PAGE_INSTFILES": {
+    "body": "!insertmacro MUI_PAGE_INSTFILES$1",
+    "description": "Usage: !insertmacro MUI_PAGE_INSTFILES",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_INSTFILES"
+  },
+  "MUI_PAGE_LICENSE": {
+    "body": "!insertmacro MUI_PAGE_LICENSE \"${1:text}\"$2",
+    "description": "Usage: !insertmacro MUI_PAGE_LICENSE text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_LICENSE"
+  },
+  "MUI_PAGE_STARTMENU": {
+    "body": "!insertmacro MUI_PAGE_STARTMENU ${1:page_id} \\$${2:var}$3",
+    "description": "Usage: !insertmacro MUI_PAGE_STARTMENU pageid variable",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_STARTMENU"
+  },
+  "MUI_PAGE_WELCOME": {
+    "body": "!insertmacro MUI_PAGE_WELCOME$1",
+    "description": "Usage: !insertmacro MUI_PAGE_WELCOME",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_WELCOME"
+  },
+  "MUI_RESERVEFILE_INSTALLOPTIONS": {
+    "body": "!insertmacro MUI_RESERVEFILE_INSTALLOPTIONS$1",
+    "description": "Usage: !insertmacro MUI_RESERVEFILE_INSTALLOPTIONS",
+    "descriptionMoreURL": "",
+    "leftLabelHTML": "<span class='support function'>MUI.nsh</span>",
+    "prefix": "MUI_RESERVEFILE_INSTALLOPTIONS"
+  },
+  "MUI_RESERVEFILE_LANGDLL": {
+    "body": "!insertmacro MUI_RESERVEFILE_LANGDLL$1",
+    "description": "Usage: !insertmacro MUI_RESERVEFILE_LANGDLL",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_RESERVEFILE_LANGDLL"
+  },
+  "MUI_STARTMENUPAGE_DEFAULTFOLDER": {
+    "body": "!define MUI_STARTMENUPAGE_DEFAULTFOLDER \"${1:folder}\"$2",
+    "description": "Usage: !define MUI_STARTMENUPAGE_DEFAULTFOLDER folder",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENUPAGE_DEFAULTFOLDER"
+  },
+  "MUI_STARTMENUPAGE_NODISABLE": {
+    "body": "!define MUI_STARTMENUPAGE_NODISABLE$1",
+    "description": "Usage: !define MUI_STARTMENUPAGE_NODISABLE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENUPAGE_NODISABLE"
+  },
+  "MUI_STARTMENUPAGE_REGISTRY_KEY": {
+    "body": "!define MUI_STARTMENUPAGE_REGISTRY_KEY \"${1:key_name}\"$2",
+    "description": "Usage: !define MUI_STARTMENUPAGE_REGISTRY_KEY",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENUPAGE_REGISTRY_KEY"
+  },
+  "MUI_STARTMENUPAGE_REGISTRY_ROOT": {
+    "body": "!define MUI_STARTMENUPAGE_REGISTRY_ROOT ${1:root_key}$2",
+    "description": "Usage: !define MUI_STARTMENUPAGE_REGISTRY_ROOT root_key",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENUPAGE_REGISTRY_ROOT"
+  },
+  "MUI_STARTMENUPAGE_REGISTRY_VALUENAME": {
+    "body": "!define MUI_STARTMENUPAGE_REGISTRY_VALUENAME \"${1:value_name}\"$2",
+    "description": "Usage: !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME value_name",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENUPAGE_REGISTRY_VALUENAME"
+  },
+  "MUI_STARTMENUPAGE_TEXT_CHECKBOX": {
+    "body": "!define MUI_STARTMENUPAGE_TEXT_CHECKBOX \"${1:text}\"$2",
+    "description": "Usage: !define MUI_STARTMENUPAGE_TEXT_CHECKBOX text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENUPAGE_TEXT_CHECKBOX"
+  },
+  "MUI_STARTMENUPAGE_TEXT_TOP": {
+    "body": "!define MUI_STARTMENUPAGE_TEXT_TOP \"${1:text}\"$2",
+    "description": "Usage: !define MUI_STARTMENUPAGE_TEXT_TOP text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENUPAGE_TEXT_TOP"
+  },
+  "MUI_STARTMENU_WRITE_BEGIN": {
+    "body": "!insertmacro MUI_STARTMENU_WRITE_BEGIN ${1:page_id}\n  ${2:# your code here}\n!insertmacro MUI_STARTMENU_WRITE_END$3",
+    "description": "Usage: !insertmacro MUI_STARTMENU_WRITE_BEGIN pageid",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_STARTMENU_WRITE_BEGIN"
+  },
+  "MUI_UI": {
+    "body": "!define MUI_UI \"${1:ui_file}.exe\"$2",
+    "description": "Usage: !define MUI_UI ui_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UI"
+  },
+  "MUI_UI_COMPONENTSPAGE_NODESC": {
+    "body": "!define MUI_UI_COMPONENTSPAGE_NODESC \"${1:ui_file}.exe\"$2",
+    "description": "Usage: !define MUI_UI_COMPONENTSPAGE_NODESC ui_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UI_COMPONENTSPAGE_NODESC"
+  },
+  "MUI_UI_COMPONENTSPAGE_SMALLDESC": {
+    "body": "!define MUI_UI_COMPONENTSPAGE_SMALLDESC \"${1:ui_file}.exe\"$2",
+    "description": "Usage: !define MUI_UI_COMPONENTSPAGE_SMALLDESC ui_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UI_COMPONENTSPAGE_SMALLDESC"
+  },
+  "MUI_UI_HEADERIMAGE": {
+    "body": "!define MUI_UI_HEADERIMAGE \"${1:ui_file}.exe\"$2",
+    "description": "Usage: !define MUI_UI_HEADERIMAGE ui_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UI_HEADERIMAGE"
+  },
+  "MUI_UI_HEADERIMAGE_RIGHT": {
+    "body": "!define MUI_UI_HEADERIMAGE_RIGHT \"${1:ui_file}.exe\"$2",
+    "description": "Usage: !define MUI_UI_HEADERIMAGE_RIGHT ui_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UI_HEADERIMAGE_RIGHT"
+  },
+  "MUI_UNABORTWARNING": {
+    "body": "!define MUI_UNABORTWARNING$1",
+    "description": "Usage: !define MUI_UNABORTWARNING",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNABORTWARNING"
+  },
+  "MUI_UNABORTWARNING_CANCEL_DEFAULT": {
+    "body": "!define MUI_UNABORTWARNING_CANCEL_DEFAULT$1",
+    "description": "Usage: !define MUI_UNABORTWARNING_CANCEL_DEFAULT",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNABORTWARNING_CANCEL_DEFAULT"
+  },
+  "MUI_UNABORTWARNING_TEXT": {
+    "body": "!define MUI_UNABORTWARNING_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_UNABORTWARNING_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNABORTWARNING_TEXT"
+  },
+  "MUI_UNCONFIRMPAGE_TEXT_LOCATION": {
+    "body": "!define MUI_UNCONFIRMPAGE_TEXT_LOCATION \"${1:text}\"$2",
+    "description": "Usage: !define MUI_UNCONFIRMPAGE_TEXT_LOCATION text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNCONFIRMPAGE_TEXT_LOCATION"
+  },
+  "MUI_UNCONFIRMPAGE_TEXT_TOP": {
+    "body": "!define MUI_UNCONFIRMPAGE_TEXT_TOP \"${1:text}\"$2",
+    "description": "Usage: !define MUI_UNCONFIRMPAGE_TEXT_TOP text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNCONFIRMPAGE_TEXT_TOP"
+  },
+  "MUI_UNFINISHPAGE_NOAUTOCLOSE": {
+    "body": "!define MUI_UNFINISHPAGE_NOAUTOCLOSE$1",
+    "description": "Usage: !define MUI_UNFINISHPAGE_NOAUTOCLOSE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNFINISHPAGE_NOAUTOCLOSE"
+  },
+  "MUI_UNFUNCTION_DESCRIPTION_BEGIN": {
+    "body": "!insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN\n  ${1:# your code here}\n!insertmacro MUI_UNFUNCTION_DESCRIPTION_END",
+    "description": "Usage: !insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNFUNCTION_DESCRIPTION_BEGIN"
+  },
+  "MUI_UNFUNCTION_DESCRIPTION_END": {
+    "body": "!insertmacro MUI_UNFUNCTION_DESCRIPTION_END$1",
+    "description": "Usage: !insertmacro MUI_UNFUNCTION_DESCRIPTION_END",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNFUNCTION_DESCRIPTION_END"
+  },
+  "MUI_UNGETLANGUAGE": {
+    "body": "!insertmacro MUI_UNGETLANGUAGE$1",
+    "description": "Usage: !insertmacro MUI_UNGETLANGUAGE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNGETLANGUAGE"
+  },
+  "MUI_UNICON": {
+    "body": "!define MUI_UNICON \"${1:file}.ico\"$2",
+    "description": "Usage: !define MUI_UNICON icon_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON"
+  },
+  "MUI_UNICON:arrow-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON arrow-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:arrow-uninstall.ico"
+  },
+  "MUI_UNICON:arrow2-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow2-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON arrow2-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:arrow2-uninstall.ico"
+  },
+  "MUI_UNICON:box-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\box-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON box-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:box-uninstall.ico"
+  },
+  "MUI_UNICON:classic-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\classic-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON classic-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:classic-uninstall.ico"
+  },
+  "MUI_UNICON:llama-blue.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-blue.ico\"$1",
+    "description": "!define MUI_UNICON llama-blue.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:llama-blue.ico"
+  },
+  "MUI_UNICON:llama-grey.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-grey.ico\"$1",
+    "description": "!define MUI_UNICON llama-grey.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:llama-grey.ico"
+  },
+  "MUI_UNICON:modern-uninstall-blue-full.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-blue-full.ico\"$1",
+    "description": "!define MUI_UNICON modern-uninstall-blue-full.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:modern-uninstall-blue-full.ico"
+  },
+  "MUI_UNICON:modern-uninstall-blue.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-blue.ico\"$1",
+    "description": "!define MUI_UNICON modern-uninstall-blue.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:modern-uninstall-blue.ico"
+  },
+  "MUI_UNICON:modern-uninstall-colorful.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-colorful.ico\"$1",
+    "description": "!define MUI_UNICON modern-uninstall-colorful.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:modern-uninstall-colorful.ico"
+  },
+  "MUI_UNICON:modern-uninstall-full.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-full.ico\"$1",
+    "description": "!define MUI_UNICON modern-uninstall-full.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:modern-uninstall-full.ico"
+  },
+  "MUI_UNICON:modern-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON modern-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:modern-uninstall.ico"
+  },
+  "MUI_UNICON:nsis1-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\nsis1-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON nsis1-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:nsis1-uninstall.ico"
+  },
+  "MUI_UNICON:orange-uninstall-nsis.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-uninstall-nsis.ico\"$1",
+    "description": "!define MUI_UNICON orange-uninstall-nsis.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:orange-uninstall-nsis.ico"
+  },
+  "MUI_UNICON:orange-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON orange-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:orange-uninstall.ico"
+  },
+  "MUI_UNICON:pixel-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\pixel-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON pixel-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:pixel-uninstall.ico"
+  },
+  "MUI_UNICON:win-uninstall.ico": {
+    "body": "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\win-uninstall.ico\"$1",
+    "description": "!define MUI_UNICON win-uninstall.ico",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNICON:win-uninstall.ico"
+  },
+  "MUI_UNPAGE_COMPONENTS": {
+    "body": "!insertmacro MUI_UNPAGE_COMPONENTS$1",
+    "description": "Usage: !insertmacro MUI_UNPAGE_COMPONENTS",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNPAGE_COMPONENTS"
+  },
+  "MUI_UNPAGE_CONFIRM": {
+    "body": "!insertmacro MUI_UNPAGE_CONFIRM$1",
+    "description": "Usage: !insertmacro MUI_UNPAGE_CONFIRM",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNPAGE_CONFIRM"
+  },
+  "MUI_UNPAGE_DIRECTORY": {
+    "body": "!insertmacro MUI_UNPAGE_DIRECTORY$1",
+    "description": "Usage: !insertmacro MUI_UNGETLANGUAGE",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNPAGE_DIRECTORY"
+  },
+  "MUI_UNPAGE_FINISH": {
+    "body": "!insertmacro MUI_UNPAGE_FINISH$1",
+    "description": "Usage: !insertmacro MUI_UNPAGE_FINISH",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNPAGE_FINISH"
+  },
+  "MUI_UNPAGE_INSTFILES": {
+    "body": "!insertmacro MUI_UNPAGE_INSTFILES$1",
+    "description": "Usage: !insertmacro MUI_UNPAGE_INSTFILES",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNPAGE_INSTFILES"
+  },
+  "MUI_UNPAGE_LICENSE": {
+    "body": "!insertmacro MUI_UNPAGE_LICENSE \"${1:textfile}\"$2",
+    "description": "Usage: !insertmacro MUI_UNPAGE_LICENSE textfile",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNPAGE_LICENSE"
+  },
+  "MUI_UNPAGE_WELCOME": {
+    "body": "!insertmacro MUI_UNPAGE_WELCOME$1",
+    "description": "Usage: !insertmacro MUI_UNPAGE_WELCOME",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNPAGE_WELCOME"
+  },
+  "MUI_UNWELCOMEFINISHPAGE_BITMAP": {
+    "body": "!define MUI_UNWELCOMEFINISHPAGE_BITMAP \"${1:file}.bmp\"$2",
+    "description": "Usage: !define MUI_UNWELCOMEFINISHPAGE_BITMAP bmp_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNWELCOMEFINISHPAGE_BITMAP"
+  },
+  "MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH": {
+    "body": "!define MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH$1",
+    "description": "Usage: !define MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH"
+  },
+  "MUI_UNWELCOMEFINISHPAGE_INI": {
+    "body": "!define MUI_UNWELCOMEFINISHPAGE_INI \"${1:file}.ini\"$2",
+    "description": "Usage: !define MUI_UNWELCOMEFINISHPAGE_INI ini_file",
+    "descriptionMoreURL": "",
+    "leftLabelHTML": "<span class='support function'>MUI.nsh</span>",
+    "prefix": "MUI_UNWELCOMEFINISHPAGE_INI"
+  },
+  "MUI_WELCOMEFINISHPAGE_BITMAP": {
+    "body": "!define MUI_WELCOMEFINISHPAGE_BITMAP \"${1:file}.bmp\"$2",
+    "description": "Usage: !define MUI_WELCOMEFINISHPAGE_BITMAP bmp_file",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_WELCOMEFINISHPAGE_BITMAP"
+  },
+  "MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH": {
+    "body": "!define MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH$1",
+    "description": "Usage: !define MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH"
+  },
+  "MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT": {
+    "body": "!define MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT \"${1:function}\"$2",
+    "description": "Usage: !define MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT"
+  },
+  "MUI_WELCOMEFINISHPAGE_INI": {
+    "body": "!define MUI_WELCOMEFINISHPAGE_INI \"${1:file}.ini\"$2",
+    "description": "Usage: !define MUI_WELCOMEFINISHPAGE_INI ini_file",
+    "descriptionMoreURL": "",
+    "leftLabelHTML": "<span class='support function'>MUI.nsh</span>",
+    "prefix": "MUI_WELCOMEFINISHPAGE_INI"
+  },
+  "MUI_WELCOMEPAGE_TEXT": {
+    "body": "!define MUI_WELCOMEPAGE_TEXT \"${1:text}\"$2",
+    "description": "Usage: !define MUI_WELCOMEPAGE_TEXT text",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_WELCOMEPAGE_TEXT"
+  },
+  "MUI_WELCOMEPAGE_TITLE": {
+    "body": "!define MUI_WELCOMEPAGE_TITLE \"${1:title}\"$2",
+    "description": "Usage: !define MUI_WELCOMEPAGE_TITLE title",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_WELCOMEPAGE_TITLE"
+  },
+  "MUI_WELCOMEPAGE_TITLE_3LINES": {
+    "body": "!define MUI_WELCOMEPAGE_TITLE_3LINES$1",
+    "description": "Usage: !define MUI_WELCOMEPAGE_TITLE_3LINES",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_WELCOMEPAGE_TITLE_3LINES"
+  }
+}
