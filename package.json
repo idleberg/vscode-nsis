@@ -112,7 +112,19 @@
             },
             {
                 "language": "nsis",
+                "path": "./snippets/header.ModernUI.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.MultiUser.json"
+            },
+            {
+                "language": "nsis",
                 "path": "./snippets/header.Sections.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.StrFunc.json"
             },
             {
                 "language": "nsis",
