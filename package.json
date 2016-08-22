@@ -1,7 +1,7 @@
 {
     "name": "nsis",
     "displayName": "NSIS",
-    "description": "Language syntax and snippets for Nullsoft Scriptable Install System (NSIS)",
+    "description": "Language syntax, snippets and build system for Nullsoft Scriptable Install System (NSIS)",
     "version": "0.6.0",
     "publisher": "idleberg",
     "license": "MIT OR Apache-2.0",
