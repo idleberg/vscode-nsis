@@ -40,7 +40,7 @@
     "contributes": {
         "configuration": {
             "type": "object",
-            "title": "Settings",
+            "title": "NSIS",
             "properties": {
                 "nsis.pathToMakensis": {
                     "type": "string",
