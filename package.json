@@ -263,8 +263,6 @@
     "test": "gulp lint"
   },
   "devDependencies": {
-    "babel-eslint": "^6.1.2",
-    "eslint": "^3.3.1",
     "gulp": "^3.9.1",
     "gulp-debug": "^2.1.2",
     "gulp-json-lint": "^0.1.0",
