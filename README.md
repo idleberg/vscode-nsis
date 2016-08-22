@@ -44,6 +44,7 @@ Language syntax and snippets for Nullsoft Scriptable Install System (NSIS), as w
     * WordFunc
     * x64
 * [Drunken NSIS](#drunken-nsis) (fuzzy completions)
+* [Build Tools](#building)
 
 You can further extend NSIS support with snippets for [third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
 
@@ -107,6 +108,10 @@ Interchangable word order of NSIS language and library functions
 * `LogSet` == `SetLog`
 * `FindFirst` == `FirstFind`
 * `${FindLine}` == `${LineFind}`
+
+### Building
+
+As of recently, this extension contains a rudimentary build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the keyboard shortcut.
 
 ## License
 
