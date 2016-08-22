@@ -24,13 +24,17 @@
     "bugs": {
         "url": "https://github.com/idleberg/vscode-nsis/issues"
     },
+    "main": "./lib/main",
     "icon": "images/logo.svg",
     "engines": {
-        "vscode": ">=1.0.0 <2.0.0"
+        "vscode": "^1.0.0"
     },
     "categories": [
         "Languages",
         "Snippets"
+    ],
+    "activationEvents": [
+      "onCommand:extension.nsis.compile"
     ],
     "contributes": {
         "languages": [
@@ -70,6 +74,17 @@
                 "path": "./syntaxes/nlf.tmLanguage"
             }
         ],
+        "commands": [
+          {
+            "command": "extension.nsis.compile",
+            "title": "NSIS: Compile Script"
+          }
+        ],
+        "keybindings": [{
+          "key": "cmd+alt+b",
+          "when": "editorFocus",
+          "command": "extension.nsis.compile"
+        }],
         "snippets": [
             {
                 "language": "ini",
