@@ -98,7 +98,7 @@
         ],
         "keybindings": [
             {
-                "key": "cmd+alt+b",
+                "key": "ctrl+alt+b",
                 "when": "editorFocus",
                 "command": "extension.nsis.compile"
             }

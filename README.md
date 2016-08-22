@@ -111,7 +111,7 @@ Interchangable word order of NSIS language and library functions
 
 ### Building
 
-As of recently, this extension contains a rudimentary build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the keyboard shortcut.
+As of recently, this extension contains a rudimentary build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>.
 
 ## License
 
