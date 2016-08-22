@@ -113,6 +113,15 @@ Interchangable word order of NSIS language and library functions
 
 As of recently, this extension contains a rudimentary build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>.
 
+If you prefer working with specific compiler arguments, you can specify them in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace). Optionally, you can specify the path to `makensis`.
+
+**Example:**
+
+```json
+"nsis.compilerArguments": "/WX /V3",
+"nsis.pathToMakensis": "/usr/local/bin/makensis"
+```
+
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
