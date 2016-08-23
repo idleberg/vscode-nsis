@@ -1,4 +1,4 @@
-# NSIS for Visual Studio Code
+    # NSIS for Visual Studio Code
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![Apache License](https://img.shields.io/badge/license-Apache%202.0-orange.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
@@ -111,9 +111,7 @@ Interchangable word order of NSIS language and library functions
 
 ### Building
 
-As of recently, this extension contains a rudimentary build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>.
-
-If you prefer working with specific compiler arguments, you can specify them in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace). Optionally, you can specify the path to `makensis`.
+Before you can build, make sure `makensis` is in your PATH [environmental variable](https://support.microsoft.com/en-us/kb/310519). Alternatively, you can specify the path to `makensis` in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace):
 
 **Example:**
 
@@ -121,6 +119,8 @@ If you prefer working with specific compiler arguments, you can specify them in 
 "nsis.compilerArguments": "/WX /V3",
 "nsis.pathToMakensis": "/usr/local/bin/makensis"
 ```
+
+To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 ### Task Runner
 
