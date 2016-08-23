@@ -122,6 +122,10 @@ If you prefer working with specific compiler arguments, you can specify them in 
 "nsis.pathToMakensis": "/usr/local/bin/makensis"
 ```
 
+### Task Runner
+
+If you prefer Visual Studio Code's in-built Task Runner over this extension's build system, you can use the `makensis-task-runner` snippet while working in the JSON scope. This will scaffold a `task.json` suitable for `makensis`, including support for problem matching.
+
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
