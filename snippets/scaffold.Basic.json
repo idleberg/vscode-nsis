@@ -2,6 +2,6 @@
   "Basic Script": {
     "body": "; Scaffolding by https://github.com/idleberg/vscode-nsis\n\n; Settings ---------------------------------\nName \"${1:installer_name}\"\nOutFile \"${2:${1:installer_name}}.exe\"\nRequestExecutionLevel ${3:user}\nInstallDir \"$PROGRAMFILES\\\\${4:${1:installer_name}}\"\n\n; Includes ---------------------------------\n$5\n\n; Pages ------------------------------------\nPage components\nPage directory\nPage instfiles\n\n; Sections ---------------------------------\nSection \"${6:section}\" ${7:${6:section}_index}\n\n\t${8:# your code here}\n\nSectionEnd\n\n; Functions --------------------------------\nFunction .onInit\n\n\t${9:# your code here}\n\nFunctionEnd$10",
     "description": "Creates a basic installer template",
-    "prefix": "scaffold"
+    "prefix": "scaffold:Basic"
   }
 }
