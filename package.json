@@ -259,7 +259,7 @@
             },
             {
                 "language": "nsis",
-                "path": "./snippets/scaffold.MUI.json"
+                "path": "./snippets/scaffold.ModernUI.json"
             }
         ]
     },
