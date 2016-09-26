@@ -43,8 +43,8 @@ Language syntax, snippets and build system for Nullsoft Scriptable Install Syste
     * WinVer
     * WordFunc
     * x64
-* [Drunken NSIS](#drunken-nsis) (fuzzy completions)
-* [Build Tools](#building)
+* [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis) (fuzzy completions)
+* [Build Tools](https://github.com/idleberg/vscode-nsis#building)
 
 You can further extend NSIS support with snippets for [third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
 
