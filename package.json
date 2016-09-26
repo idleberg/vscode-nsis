@@ -277,7 +277,7 @@
         "gulp-json-lint": "^0.1.0",
         "gulp-xml-validator": "^0.1.1",
         "gulp-yaml-validate": "^1.0.2",
-        "vscode": "^0.11.0"
+        "vscode": "^1.0.0"
     },
     "__metadata": {
         "id": "3050e4fb-2d2c-4d38-a9b6-8a6d9657d34f",
