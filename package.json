@@ -26,6 +26,10 @@
     },
     "main": "./lib/main",
     "icon": "images/logo.svg",
+    "galleryBanner": {
+      "color": "#3e333f",
+      "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.0.0"
     },
