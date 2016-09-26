@@ -27,7 +27,7 @@
     "main": "./lib/main",
     "icon": "images/logo.svg",
     "galleryBanner": {
-      "color": "#3e333f",
+      "color": "#9e90aa",
       "theme": "dark"
     },
     "engines": {
