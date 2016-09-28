@@ -2,7 +2,7 @@
     "name": "nsis",
     "displayName": "NSIS",
     "description": "Language syntax, snippets and build system for Nullsoft Scriptable Install System (NSIS)",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "publisher": "idleberg",
     "license": "MIT OR Apache-2.0",
     "author": {
@@ -27,8 +27,8 @@
     "main": "./lib/main",
     "icon": "images/logo.svg",
     "galleryBanner": {
-      "color": "#9e90aa",
-      "theme": "dark"
+        "color": "#9e90aa",
+        "theme": "dark"
     },
     "engines": {
         "vscode": "^1.0.0"
