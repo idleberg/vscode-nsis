@@ -1,298 +1,298 @@
 {
-  "name": "nsis",
-  "displayName": "NSIS",
-  "description": "Language syntax, snippets and build system for Nullsoft Scriptable Install System (NSIS)",
-  "version": "0.8.1",
-  "publisher": "idleberg",
-  "license": "MIT OR Apache-2.0",
-  "author": {
-    "name": "Jan T. Sott",
-    "url": "http://github.com/idleberg"
-  },
-  "keywords": [
-    "nsis",
-    "nullsoft",
-    "installer",
-    "setup",
-    "windows"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/idleberg/vscode-nsis.git"
-  },
-  "homepage": "https://github.com/idleberg/vscode-nsis",
-  "bugs": {
-    "url": "https://github.com/idleberg/vscode-nsis/issues"
-  },
-  "main": "./lib/main",
-  "icon": "images/logo.svg",
-  "galleryBanner": {
-    "color": "#9e90aa",
-    "theme": "dark"
-  },
-  "engines": {
-    "vscode": "^1.0.0"
-  },
-  "categories": [
-    "Languages",
-    "Snippets",
-    "Other"
-  ],
-  "activationEvents": [
-    "onLanguage:nsis"
-  ],
-  "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "NSIS",
-      "properties": {
-        "nsis.pathToMakensis": {
-          "type": "string",
-          "default": "makensis",
-          "description": "Specify the full path to `makensis`"
-        },
-        "nsis.compilerArguments": {
-          "type": "string",
-          "default": null,
-          "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
-        }
-      }
+    "name": "nsis",
+    "displayName": "NSIS",
+    "description": "Language syntax, snippets and build system for Nullsoft Scriptable Install System (NSIS)",
+    "version": "0.8.2",
+    "publisher": "idleberg",
+    "license": "MIT OR Apache-2.0",
+    "author": {
+        "name": "Jan T. Sott",
+        "url": "http://github.com/idleberg"
     },
-    "languages": [
-      {
-        "id": "nsis",
-        "aliases": [
-          "NSIS",
-          "nsis"
-        ],
-        "extensions": [
-          ".nsi",
-          ".nsh"
-        ],
-        "configuration": "./nsis.configuration.json"
-      },
-      {
-        "id": "nlf",
-        "aliases": [
-          "NSIS Language File",
-          "nlf"
-        ],
-        "extensions": [
-          ".nlf"
-        ],
-        "configuration": "./nlf.configuration.json"
-      }
+    "keywords": [
+        "nsis",
+        "nullsoft",
+        "installer",
+        "setup",
+        "windows"
     ],
-    "grammars": [
-      {
-        "language": "nsis",
-        "scopeName": "source.nsis",
-        "path": "./syntaxes/nsis.tmLanguage"
-      },
-      {
-        "language": "nlf",
-        "scopeName": "source.nlf",
-        "path": "./syntaxes/nlf.tmLanguage"
-      }
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/idleberg/vscode-nsis.git"
+    },
+    "homepage": "https://github.com/idleberg/vscode-nsis",
+    "bugs": {
+        "url": "https://github.com/idleberg/vscode-nsis/issues"
+    },
+    "main": "./lib/main",
+    "icon": "images/logo.svg",
+    "galleryBanner": {
+        "color": "#9e90aa",
+        "theme": "dark"
+    },
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Languages",
+        "Snippets",
+        "Other"
     ],
-    "commands": [
-      {
-        "command": "extension.nsis.compile",
-        "title": "NSIS: Save & Compile Script"
-      },
-      {
-        "command": "extension.nsis.compile-strict",
-        "title": "NSIS: Save & Compile Script (strict)"
-      }
+    "activationEvents": [
+        "onLanguage:nsis"
     ],
-    "keybindings": [
-      {
-        "key": "ctrl+shift+b",
-        "when": "editorFocus && editorLangId == nsis",
-        "command": "extension.nsis.compile"
-      },
-      {
-        "key": "ctrl+alt+shift+b",
-        "when": "editorFocus && editorLangId == nsis",
-        "command": "extension.nsis.compile-strict"
-      }
-    ],
-    "snippets": [
-      {
-        "language": "ini",
-        "path": "./snippets/core.InstallOptions.json"
-      },
-      {
-        "language": "json",
-        "path": "./snippets/vscode.MakeNSIS Task Runner.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/core.DrunkenNSIS.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/core.InstallOptions.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/core.NSIS.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/core.Options.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/core.Predefines.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/core.Variables.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.FileFunc.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.LogicLib.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.Memento.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.ModernUI.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.MultiUser.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.Sections.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.StrFunc.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.TextFunc.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.WinMessages.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.WinVer.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.WordFunc.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/header.x64.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.AdvSplash.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.Banner.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.BgImage.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.Dialer.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.InstallOptions.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.LangDLL.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.Math.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.nsDialogs.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.nsExec.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.NSISdl.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.Splash.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.StartMenu.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.System.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.UserInfo.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/plugin.VPatch.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/scaffold.Basic.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/scaffold.InstallOptions.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/scaffold.Minimal.json"
-      },
-      {
-        "language": "nsis",
-        "path": "./snippets/scaffold.ModernUI.json"
-      }
-    ]
-  },
-  "scripts": {
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "gulp lint"
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "eslint": "^3.7.0",
-    "gulp": "^3.9.1",
-    "gulp-debug": "^2.1.2",
-    "gulp-eslint": "^3.0.1",
-    "gulp-json-lint": "^0.1.0",
-    "gulp-xml-validator": "^0.1.2",
-    "vscode": "^1.0.0"
-  },
-  "__metadata": {
-    "id": "3050e4fb-2d2c-4d38-a9b6-8a6d9657d34f",
-    "publisherId": "d142cf02-af52-4395-9363-148909445cb3",
-    "publisherDisplayName": "idleberg"
-  }
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "NSIS",
+            "properties": {
+                "nsis.pathToMakensis": {
+                    "type": "string",
+                    "default": "makensis",
+                    "description": "Specify the full path to `makensis`"
+                },
+                "nsis.compilerArguments": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
+                }
+            }
+        },
+        "languages": [
+            {
+                "id": "nsis",
+                "aliases": [
+                    "NSIS",
+                    "nsis"
+                ],
+                "extensions": [
+                    ".nsi",
+                    ".nsh"
+                ],
+                "configuration": "./nsis.configuration.json"
+            },
+            {
+                "id": "nlf",
+                "aliases": [
+                    "NSIS Language File",
+                    "nlf"
+                ],
+                "extensions": [
+                    ".nlf"
+                ],
+                "configuration": "./nlf.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "nsis",
+                "scopeName": "source.nsis",
+                "path": "./syntaxes/nsis.tmLanguage"
+            },
+            {
+                "language": "nlf",
+                "scopeName": "source.nlf",
+                "path": "./syntaxes/nlf.tmLanguage"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.nsis.compile",
+                "title": "NSIS: Save & Compile Script"
+            },
+            {
+                "command": "extension.nsis.compile-strict",
+                "title": "NSIS: Save & Compile Script (strict)"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "ctrl+shift+b",
+                "when": "editorFocus && editorLangId == nsis",
+                "command": "extension.nsis.compile"
+            },
+            {
+                "key": "ctrl+alt+shift+b",
+                "when": "editorFocus && editorLangId == nsis",
+                "command": "extension.nsis.compile-strict"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "ini",
+                "path": "./snippets/core.InstallOptions.json"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/vscode.MakeNSIS Task Runner.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/core.DrunkenNSIS.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/core.InstallOptions.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/core.NSIS.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/core.Options.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/core.Predefines.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/core.Variables.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.FileFunc.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.LogicLib.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.Memento.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.ModernUI.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.MultiUser.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.Sections.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.StrFunc.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.TextFunc.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.WinMessages.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.WinVer.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.WordFunc.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/header.x64.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.AdvSplash.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.Banner.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.BgImage.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.Dialer.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.InstallOptions.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.LangDLL.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.Math.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.nsDialogs.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.nsExec.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.NSISdl.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.Splash.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.StartMenu.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.System.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.UserInfo.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/plugin.VPatch.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/scaffold.Basic.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/scaffold.InstallOptions.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/scaffold.Minimal.json"
+            },
+            {
+                "language": "nsis",
+                "path": "./snippets/scaffold.ModernUI.json"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "gulp lint"
+    },
+    "devDependencies": {
+        "babel-eslint": "^7.0.0",
+        "eslint": "^3.7.0",
+        "gulp": "^3.9.1",
+        "gulp-debug": "^2.1.2",
+        "gulp-eslint": "^3.0.1",
+        "gulp-json-lint": "^0.1.0",
+        "gulp-xml-validator": "^0.1.2",
+        "vscode": "^1.0.0"
+    },
+    "__metadata": {
+        "id": "3050e4fb-2d2c-4d38-a9b6-8a6d9657d34f",
+        "publisherId": "d142cf02-af52-4395-9363-148909445cb3",
+        "publisherDisplayName": "idleberg"
+    }
 }
