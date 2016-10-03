@@ -1094,7 +1094,7 @@
   "MUI_RESERVEFILE_INSTALLOPTIONS": {
     "body": "!insertmacro MUI_RESERVEFILE_INSTALLOPTIONS$1",
     "description": "Usage: !insertmacro MUI_RESERVEFILE_INSTALLOPTIONS",
-    "descriptionMoreURL": "",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
     "leftLabelHTML": "<span class='support function'>MUI.nsh</span>",
     "prefix": "MUI_RESERVEFILE_INSTALLOPTIONS"
   },
@@ -1444,7 +1444,7 @@
   "MUI_UNWELCOMEFINISHPAGE_INI": {
     "body": "!define MUI_UNWELCOMEFINISHPAGE_INI \"${1:file}.ini\"$2",
     "description": "Usage: !define MUI_UNWELCOMEFINISHPAGE_INI ini_file",
-    "descriptionMoreURL": "",
+    "descriptionMoreURL": "http://web.archive.org/web/20070810133510/http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
     "leftLabelHTML": "<span class='support function'>MUI.nsh</span>",
     "prefix": "MUI_UNWELCOMEFINISHPAGE_INI"
   },
@@ -1472,7 +1472,7 @@
   "MUI_WELCOMEFINISHPAGE_INI": {
     "body": "!define MUI_WELCOMEFINISHPAGE_INI \"${1:file}.ini\"$2",
     "description": "Usage: !define MUI_WELCOMEFINISHPAGE_INI ini_file",
-    "descriptionMoreURL": "",
+    "descriptionMoreURL": "http://web.archive.org/web/20070810133510/http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
     "leftLabelHTML": "<span class='support function'>MUI.nsh</span>",
     "prefix": "MUI_WELCOMEFINISHPAGE_INI"
   },
