@@ -5,6 +5,7 @@
 [![GitHub](https://img.shields.io/github/release/idleberg/vscode-nsis.svg?style=flat-square)](https://github.com/idleberg/vscode-nsis/releases)
 [![Travis](https://img.shields.io/travis/idleberg/vscode-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/vscode-nsis)
 [![David](https://img.shields.io/david/dev/idleberg/vscode-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/vscode-nsis?type=dev)
+[![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/vscode)
 
 Language syntax, snippets and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax NSIS Language Files (NLF).
 
