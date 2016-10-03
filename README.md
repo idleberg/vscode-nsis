@@ -129,7 +129,7 @@ Before you can build, make sure `makensis` is in your PATH [environmental variab
 "nsis.pathToMakensis": "/usr/local/bin/makensis"
 ```
 
-To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings and errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 
 ### Task Runner
 
