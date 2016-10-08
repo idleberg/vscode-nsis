@@ -54,7 +54,7 @@
         <dict>
             <!-- P&ress key -->
             <key>match</key>
-            <string>([\w]?&[\w]+)</string>
+            <string>([\w]?&amp;[\w]+)</string>
             <key>name</key>
             <string>constant.language.nlf</string>
         </dict>
