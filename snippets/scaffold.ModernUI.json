@@ -1,0 +1,7 @@
+{
+  "ModernUI": {
+    "body": "; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text\n\n; Includes ---------------------------------\n!include MUI2.nsh\n\n; Settings ---------------------------------\nName \"${1:installer_name}\"\nOutFile \"${2:${1}}.exe\"\nRequestExecutionLevel ${3:admin}\nInstallDir \"\\$PROGRAMFILES\\\\${4:${1}}\"\n\n; Pages ------------------------------------\n!insertmacro MUI_PAGE_COMPONENTS \n!insertmacro MUI_PAGE_DIRECTORY\n!insertmacro MUI_PAGE_INSTFILES\n\n; Languages --------------------------------\n!insertmacro MUI_LANGUAGE \"${5:English}\"\n\n; Sections ---------------------------------\nSection \"${6:section}\" ${7:${6:section}_INDEX}\n\n\t${8:# your code here}\n\nSectionEnd\n\n; Descriptions -----------------------------\nLangString DESC_${7} \\${LANG_${5:ENGLISH}} \"${9:section_description}\"\n\n!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN\n\t!insertmacro MUI_DESCRIPTION_TEXT \\${${7}} \\$(DESC_${7})\n!insertmacro MUI_FUNCTION_DESCRIPTION_END\n\n; Functions -------------------------------\n$10",
+    "description": "Creates a Modern UI installer template",
+    "prefix": "scaffold:ModernUI"
+  }
+}
