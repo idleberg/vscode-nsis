@@ -1,7 +1,7 @@
 # NSIS for Visual Studio Code
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Apache License](https://img.shields.io/badge/license-Apache%202.0-orange.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
+[![GNU General Public License](https://img.shields.io/badge/license-GPL%20v2-orange.svg?style=flat-square)](http://www.gnu.org/licenses/gpl-2.0.html)
 [![GitHub](https://img.shields.io/github/release/idleberg/vscode-nsis.svg?style=flat-square)](https://github.com/idleberg/vscode-nsis/releases)
 [![Travis](https://img.shields.io/travis/idleberg/vscode-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/vscode-nsis)
 [![David](https://img.shields.io/david/dev/idleberg/vscode-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/vscode-nsis?type=dev)
@@ -137,7 +137,9 @@ If you prefer Visual Studio Code's in-built Task Runner over this extension's bu
 
 ## License
 
-This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0), unless noted otherwise.
+
+`nsis.tmLanguage` is released under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 ## Donate
 
