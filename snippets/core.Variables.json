@@ -222,6 +222,6 @@
   "$WINDIR": {
     "body": "$WINDIR",
     "prefix": "WINDIR",
-    "description": "The Windows directory",
+    "description": "The Windows directory"
   }
 }
