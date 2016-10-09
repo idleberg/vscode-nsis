@@ -15,8 +15,8 @@ Language syntax, snippets and build system for Nullsoft Scriptable Install Syste
 
 ## Features
 
-* all core NSIS commands, variables and predefines
-* all core Plugins:
+* IntelliSense for core NSIS commands, variables and predefines
+* IntelliSense for core plug-ins:
     * AdvSplash
     * Banner
     * BgImage
@@ -32,7 +32,7 @@ Language syntax, snippets and build system for Nullsoft Scriptable Install Syste
     * System
     * UserInfo
     * VPatch
-* all core libraries (“Useful Headers”):
+* IntelliSense for core libraries (“Useful Headers”):
     * FileFunc
     * LogicLib
     * Memento
