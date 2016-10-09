@@ -85,7 +85,7 @@ $ git clone https://github.com/idleberg/vscode-nsis nsis
 
 ## Usage
 
-### Completion
+### IntelliSense
 
 With most commands, you can specify available options before completion. For instance, rather than completing `RequestExecutionLevel` and then specifying an option, you can directly choose `RequestExecutionLevel user` from the completion menu.
 
