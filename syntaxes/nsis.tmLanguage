@@ -19,6 +19,12 @@
     <array>
         <dict>
             <key>match</key>
+            <string>^\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|SectionDivider|SetPluginsUnload|SubSection(End)?)\b</string>
+            <key>name</key>
+            <string>invalid.deprecated.nsis</string>
+        </dict>
+        <dict>
+            <key>match</key>
             <string>^\s*\!(include|addincludedir|addplugindir|appendfile|cd|delfile|echo|error|execute|packhdr|finalize|getdllversion|system|tempfile|warning|verbose|define|undef|insertmacro|macro|macroend|makensis|searchparse|searchreplace)\b</string>
             <key>name</key>
             <string>keyword.compiler.nsis</string>
@@ -49,7 +55,7 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>^\s*(Function|FunctionEnd|Section|SectionEnd|SectionGroup|SectionGroupEnd|SubSection|SubSectionEnd|PageEx|PageExEnd)\b</string>
+            <string>^\s*(Function(End)?|Section(End)?|SectionGroup|SectionGroup(End)?|PageEx(End)?)\b</string>
             <key>name</key>
             <string>support.function.nsis</string>
         </dict>
@@ -91,15 +97,21 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>\${[0-9a-zA-Z-_.:]+}</string>
+            <string>\$\([\w\.:-]+\)</string>
+            <key>name</key>
+            <string>entity.name.language.nsis</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\${[\w\.:-]+}</string>
             <key>name</key>
             <string>entity.name.function.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>\$[\w]+</string>
+            <string>\$\w+</string>
             <key>name</key>
-            <string>storage.type.function.nsis</string>
+            <string>variable.nsis</string>
         </dict>
         <dict>
             <key>begin</key>
