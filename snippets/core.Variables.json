@@ -1,6 +1,6 @@
 {
   "${NSISDIR}": {
-    "body": "${NSISDIR}$1",
+    "body": "\\${NSISDIR}$1",
     "description": "A symbol that contains the path where NSIS is installed",
     "prefix": "NSISDIR"
   },

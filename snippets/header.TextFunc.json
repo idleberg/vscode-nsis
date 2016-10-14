@@ -1,66 +1,66 @@
 {
   "${ConfigReadS}": {
-    "body": "${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
+    "body": "\\${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
     "description": "Usage: ${ConfigReadS} \"[File]\" \"[Entry]\" $var",
     "prefix": "ConfigReadS"
   },
   "${ConfigRead}": {
-    "body": "${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
+    "body": "\\${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$4",
     "description": "Usage: ${ConfigRead} \"[File]\" \"[Entry]\" $var",
     "prefix": "ConfigRead"
   },
   "${ConfigWriteS}": {
-    "body": "${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
+    "body": "\\${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
     "description": "Usage: ${ConfigWriteS} \"[File]\" \"[Entry]\" \"[Value]\" $var",
     "prefix": "ConfigWriteS"
   },
   "${ConfigWrite}": {
-    "body": "${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
+    "body": "\\${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$5",
     "description": "Usage: ${ConfigWrite} \"[File]\" \"[Entry]\" \"[Value]\" $var",
     "prefix": "ConfigWrite"
   },
   "${FileJoin}": {
-    "body": "${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$4",
+    "body": "\\${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$4",
     "description": "Usage: ${FileJoin} \"[File1]\" \"[File2]\" \"[File3]\"",
     "prefix": "FileJoin"
   },
   "${FileReadFromEnd}": {
-    "body": "${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$3",
+    "body": "\\${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$3",
     "description": "Usage: ${FileReadFromEnd} \"[File]\" \"Function\"",
     "prefix": "FileReadFromEnd"
   },
   "${FileRecode}": {
-    "body": "${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$3",
+    "body": "\\${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$3",
     "description": "Usage: ${FileRecode} \"[File]\" \"[Format]\"",
     "prefix": "FileRecode"
   },
   "${LineFind}": {
-    "body": "${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$5",
+    "body": "\\${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$5",
     "description": "Usage: ${LineFind} \"[File1]\" \"[File2|/NUL]\" \"[LineNumbers]\" \"Function\"",
     "prefix": "LineFind"
   },
   "${LineRead}": {
-    "body": "${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$4",
+    "body": "\\${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$4",
     "description": "Usage: ${LineRead} \"[File]\" \"[LineNumber]\" $var",
     "prefix": "LineRead"
   },
   "${LineSum}": {
-    "body": "${LineSum} \"${1:file}\" $${2:var}$3",
+    "body": "\\${LineSum} \"${1:file}\" $${2:var}$3",
     "description": "Usage: ${LineSum} \"[File]\" $var",
     "prefix": "LineSum"
   },
   "${TextCompareS}": {
-    "body": "${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
+    "body": "\\${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
     "description": "Usage: ${TextCompareS} \"[File1]\" \"[File2]\" \"[Option]\" \"Function\"",
     "prefix": "TextCompareS"
   },
   "${TextCompare}": {
-    "body": "${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
+    "body": "\\${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$5",
     "description": "Usage: ${TextCompare} \"[File1]\" \"[File2]\" \"[Option]\" \"Function\"",
     "prefix": "TextCompare"
   },
   "${TrimNewLines}": {
-    "body": "${TrimNewLines} \"${1:string}\" $${2:var}$3",
+    "body": "\\${TrimNewLines} \"${1:string}\" $${2:var}$3",
     "description": "Usage: ${TrimNewLines} \"[string]\" $var",
     "prefix": "TrimNewLines"
   }
