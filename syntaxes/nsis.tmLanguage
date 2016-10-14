@@ -19,6 +19,12 @@
     <array>
         <dict>
             <key>match</key>
+            <string>^\s*(Abort|AddBrandingImage|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|Call|CallInstDLL|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CRCCheck|CreateDirectory|CreateFont|CreateShortCut|Delete|DeleteINISec|DeleteINIStr|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|File|FileBufSize|FileClose|FileErrorText|FileOpen|FileRead|FileReadByte|FileReadUTF16LE|FileReadWord|FileWriteUTF16LE|FileSeek|FileWrite|FileWriteByte|FileWriteWord|FindClose|FindFirst|FindNext|FindWindow|FlushINI|GetCurInstType|GetCurrentAddress|GetDlgItem|GetDLLVersion|GetDLLVersionLocal|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFullPathName|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|Goto|HideWindow|Icon|IfAbort|IfErrors|IfFileExists|IfRebootFlag|IfSilent|InitPluginsDir|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|InstProgressFlags|InstType|InstTypeGetText|InstTypeSetText|IntCmp|IntCmpU|IntFmt|IntOp|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadLanguageFile|LockWindow|LogSet|LogText|ManifestDPIAware|ManifestSupportedOS|MessageBox|MiscButtonText|Name|Nop|OutFile|Page|PageCallbacks|Pop|Push|Quit|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|Return|RMDir|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressor|SetCompressorDictSize|SetCtlColors|SetCurInstType|SetDatablockOptimize|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetPluginUnload|SetRebootFlag|SetRegView|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|SilentUnInstall|Sleep|SpaceTexts|StrCmp|StrCmpS|StrCpy|StrLen|SubCaption|Unicode|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|UninstPage|UnRegDLL|Var|VIAddVersionKey|VIFileVersion|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller|XPStyle)\b</string>
+            <key>name</key>
+            <string>keyword.nsis</string>
+        </dict>
+        <dict>
+            <key>match</key>
             <string>^\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|SectionDivider|SetPluginsUnload|SubSection(End)?)\b</string>
             <key>name</key>
             <string>invalid.deprecated.nsis</string>
@@ -27,13 +33,7 @@
             <key>match</key>
             <string>^\s*\!(include|addincludedir|addplugindir|appendfile|cd|delfile|echo|error|execute|packhdr|finalize|getdllversion|system|tempfile|warning|verbose|define|undef|insertmacro|macro|macroend|makensis|searchparse|searchreplace)\b</string>
             <key>name</key>
-            <string>keyword.compiler.nsis</string>
-        </dict>
-        <dict>
-            <key>match</key>
-            <string>^\s*(Abort|AddBrandingImage|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|Call|CallInstDLL|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CRCCheck|CreateDirectory|CreateFont|CreateShortCut|Delete|DeleteINISec|DeleteINIStr|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|File|FileBufSize|FileClose|FileErrorText|FileOpen|FileRead|FileReadByte|FileReadUTF16LE|FileReadWord|FileWriteUTF16LE|FileSeek|FileWrite|FileWriteByte|FileWriteWord|FindClose|FindFirst|FindNext|FindWindow|FlushINI|GetCurInstType|GetCurrentAddress|GetDlgItem|GetDLLVersion|GetDLLVersionLocal|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFullPathName|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|Goto|HideWindow|Icon|IfAbort|IfErrors|IfFileExists|IfRebootFlag|IfSilent|InitPluginsDir|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|InstProgressFlags|InstType|InstTypeGetText|InstTypeSetText|IntCmp|IntCmpU|IntFmt|IntOp|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadLanguageFile|LockWindow|LogSet|LogText|ManifestDPIAware|ManifestSupportedOS|MessageBox|MiscButtonText|Name|Nop|OutFile|Page|PageCallbacks|Pop|Push|Quit|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|Return|RMDir|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressor|SetCompressorDictSize|SetCtlColors|SetCurInstType|SetDatablockOptimize|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetPluginUnload|SetRebootFlag|SetRegView|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|SilentUnInstall|Sleep|SpaceTexts|StrCmp|StrCmpS|StrCpy|StrLen|SubCaption|Unicode|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|UninstPage|UnRegDLL|Var|VIAddVersionKey|VIFileVersion|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller|XPStyle)\b</string>
-            <key>name</key>
-            <string>keyword.command.nsis</string>
+            <string>keyword.other.nsis</string>
         </dict>
         <dict>
             <key>match</key>
@@ -45,7 +45,7 @@
             <key>match</key>
             <string>^\s*(?i)\w+\:\:\w+</string>
             <key>name</key>
-            <string>keyword.plugin.nsis</string>
+            <string>support.class.nsis</string>
         </dict>
         <dict>
             <key>match</key>
@@ -57,13 +57,13 @@
             <key>match</key>
             <string>^\s*(Function(End)?|Section(End)?|SectionGroup|SectionGroup(End)?|PageEx(End)?)\b</string>
             <key>name</key>
-            <string>support.function.nsis</string>
+            <string>keyword.control.nsis</string>
         </dict>
         <dict>
             <key>match</key>
             <string>\b(?i)(ARCHIVE|FILE_ATTRIBUTE_ARCHIVE|FILE_ATTRIBUTE_HIDDEN|FILE_ATTRIBUTE_NORMAL|FILE_ATTRIBUTE_OFFLINE|FILE_ATTRIBUTE_READONLY|FILE_ATTRIBUTE_SYSTEM|FILE_ATTRIBUTE_TEMPORARY|HIDDEN|HKCC|HKCR|HKCU|HKDD|HKEY_CLASSES_ROOT|HKEY_CURRENT_CONFIG|HKEY_CURRENT_USER|HKEY_DYN_DATA|HKEY_LOCAL_MACHINE|HKEY_PERFORMANCE_DATA|HKEY_USERS|HKLM|HKPD|HKU|IDABORT|IDCANCEL|IDD_DIR|IDD_INST|IDD_INSTFILES|IDD_LICENSE|IDD_SELCOM|IDD_UNINST|IDD_VERIFY|IDIGNORE|IDNO|IDOK|IDRETRY|IDYES|MB_ABORTRETRYIGNORE|MB_DEFBUTTON1|MB_DEFBUTTON2|MB_DEFBUTTON3|MB_DEFBUTTON4|MB_ICONEXCLAMATION|MB_ICONINFORMATION|MB_ICONQUESTION|MB_ICONSTOP|MB_OK|MB_OKCANCEL|MB_RETRYCANCEL|MB_RIGHT|MB_RTLREADING|MB_SETFOREGROUND|MB_TOPMOST|MB_USERICON|MB_YESNO|MB_YESNOCANCEL|NORMAL|OFFLINE|READONLY|SHCTX|SHELL_CONTEXT|SW_HIDE|SW_SHOWDEFAULT|SW_SHOWMAXIMIZED|SW_SHOWMINIMIZED|SW_SHOWNORMAL|SYSTEM|TEMPORARY)\b</string>
             <key>name</key>
-            <string>support.constant.nsis</string>
+            <string>entity.other.attribute-name.nsis</string>
         </dict>
         <dict>
             <key>match</key>
@@ -81,7 +81,7 @@
             <key>match</key>
             <string>\b(?i)((un\.)?components|(un\.)?custom|(un\.)?directory|(un\.)?instfiles|(un\.)?license|uninstConfirm|admin|all|auto|both|bottom|bzip2|current|force|hide|highest|ifdiff|ifnewer|lastused|leave|left|listonly|lzma|nevershow|none|normal|notset|right|show|silent|silentlog|textonly|top|try|user|Win10|Win7|Win8|WinVista|zlib)\b</string>
             <key>name</key>
-            <string>constant.language.option.nsis</string>
+            <string>entity.other.attribute-name.nsis</string>
         </dict>
         <dict>
             <key>match</key>
@@ -97,54 +97,33 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>\$\([\w\.:-]+\)</string>
+            <string>\${[\w\.:\^-]+}</string>
             <key>name</key>
-            <string>entity.name.language.nsis</string>
+            <string>constant.other.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>\${[\w\.:-]+}</string>
+            <string>(?:^\s*)\${(And(If(Not)?|Unless)|Break|Case(Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)|Select|Switch|Unless|While|BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons|Memento(Section(Done|End|Restore|Save)?|UnselectedSection)|Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines|(At(Least|Most)|Is)(ServicePack|Win(7|8|10|95|98|200(0|3|8(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server)|StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?)|RunningX64|(Disable|Enable)X64FSRedirection)}(?:\s+)</string>
             <key>name</key>
-            <string>entity.name.function.nsis</string>
+            <string>constant.language.nsis</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\$\([\w\.:\^-]+\)</string>
+            <key>name</key>
+            <string>constant.other.nsis</string>
         </dict>
         <dict>
             <key>match</key>
             <string>\$\w+</string>
             <key>name</key>
-            <string>variable.nsis</string>
+            <string>variable.other.nsis</string>
         </dict>
         <dict>
-            <key>begin</key>
-            <string>`</string>
-            <key>beginCaptures</key>
-            <dict>
-                <key>0</key>
-                <dict>
-                    <key>name</key>
-                    <string>punctuation.definition.string.begin.nsis</string>
-                </dict>
-            </dict>
-            <key>end</key>
-            <string>`</string>
-            <key>endCaptures</key>
-            <dict>
-                <key>0</key>
-                <dict>
-                    <key>name</key>
-                    <string>punctuation.definition.string.end.nsis</string>
-                </dict>
-            </dict>
+            <key>match</key>
+            <string>\b\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\b</string>
             <key>name</key>
-            <string>string.quoted.back.nsis</string>
-            <key>patterns</key>
-            <array>
-                <dict>
-                    <key>match</key>
-                    <string>\$\\.</string>
-                    <key>name</key>
-                    <string>constant.character.escape.nsis</string>
-                </dict>
-            </array>
+            <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>begin</key>
@@ -176,6 +155,30 @@
                     <string>\$\\.</string>
                     <key>name</key>
                     <string>constant.character.escape.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\${[\w\.:\^-]+}</string>
+                    <key>name</key>
+                    <string>constant.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\$\([\w\.:\^-]+\)</string>
+                    <key>name</key>
+                    <string>constant.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\$\w+</string>
+                    <key>name</key>
+                    <string>variable.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\b\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\b</string>
+                    <key>name</key>
+                    <string>constant.language.nsis</string>
                 </dict>
             </array>
         </dict>
@@ -209,6 +212,87 @@
                     <string>\$\\.</string>
                     <key>name</key>
                     <string>constant.character.escape.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\${[\w\.:\^-]+}</string>
+                    <key>name</key>
+                    <string>constant.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\$\([\w\.:\^-]+\)</string>
+                    <key>name</key>
+                    <string>constant.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\$\w+</string>
+                    <key>name</key>
+                    <string>variable.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\b\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\b</string>
+                    <key>name</key>
+                    <string>constant.language.nsis</string>
+                </dict>
+            </array>
+        </dict>
+        <dict>
+            <key>begin</key>
+            <string>`</string>
+            <key>beginCaptures</key>
+            <dict>
+                <key>0</key>
+                <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.string.begin.nsis</string>
+                </dict>
+            </dict>
+            <key>end</key>
+            <string>`</string>
+            <key>endCaptures</key>
+            <dict>
+                <key>0</key>
+                <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.string.end.nsis</string>
+                </dict>
+            </dict>
+            <key>name</key>
+            <string>string.quoted.back.nsis</string>
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>match</key>
+                    <string>\$\\.</string>
+                    <key>name</key>
+                    <string>constant.character.escape.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\${[\w\.:\^-]+}</string>
+                    <key>name</key>
+                    <string>constant.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\$\([\w\.:\^-]+\)</string>
+                    <key>name</key>
+                    <string>constant.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\$\w+</string>
+                    <key>name</key>
+                    <string>variable.other.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>\b\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\b</string>
+                    <key>name</key>
+                    <string>constant.language.nsis</string>
                 </dict>
             </array>
         </dict>
