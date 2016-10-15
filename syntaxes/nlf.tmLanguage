@@ -21,21 +21,21 @@
             <key>match</key>
             <string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
             <key>name</key>
-            <string>constant.numeric.nsis</string>
+            <string>constant.numeric.nlf</string>
         </dict>
         <dict>
             <!-- $_CLICK -->
             <key>match</key>
-            <string>\$_CLICK+</string>
+            <string>\$_CLICK</string>
             <key>name</key>
-            <string>variable.language.nsis</string>
+            <string>variable.language.nlf</string>
         </dict>
         <dict>
             <!-- $variable -->
             <key>match</key>
             <string>\$\w+</string>
             <key>name</key>
-            <string>variable.other.nsis</string>
+            <string>variable.other.nlf</string>
         </dict>
         <dict>
             <!-- %s -->
@@ -56,7 +56,7 @@
             <key>match</key>
             <string>\$\([\w\.:\^-]+\)</string>
             <key>name</key>
-            <string>constant.other.nsis</string>
+            <string>constant.other.nlf</string>
         </dict>
         <dict>
             <!-- \n \r \t -->
