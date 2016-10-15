@@ -26,37 +26,37 @@
         <dict>
             <!-- $_CLICK -->
             <key>match</key>
-            <string>\$_[\w]+</string>
+            <string>\$_CLICK+</string>
             <key>name</key>
-            <string>entity.name.function.nlf</string>
+            <string>variable.language.nsis</string>
         </dict>
         <dict>
             <!-- $variable -->
             <key>match</key>
-            <string>\$[\w]+</string>
+            <string>\$\w+</string>
             <key>name</key>
-            <string>variable.assignment.nlf</string>
-        </dict>
-        <dict>
-            <!-- $(^NameDA) -->
-            <key>match</key>
-            <string>\$\(\^[\w]+\)</string>
-            <key>name</key>
-            <string>string.value.nlf</string>
+            <string>variable.other.nsis</string>
         </dict>
         <dict>
             <!-- %s -->
             <key>match</key>
-            <string>\%[\w]+</string>
+            <string>\%\w+</string>
             <key>name</key>
-            <string>string.replacement.nlf</string>
+            <string>constant.language.nlf</string>
         </dict>
         <dict>
             <!-- P&ress key -->
             <key>match</key>
-            <string>([\w]?&amp;[\w]+)</string>
+            <string>(\w*?&amp;\w+)</string>
             <key>name</key>
             <string>constant.language.nlf</string>
+        </dict>
+        <dict>
+            <!-- $(^NameDA) -->
+            <key>match</key>
+            <string>\$\([\w\.:\^-]+\)</string>
+            <key>name</key>
+            <string>constant.other.nsis</string>
         </dict>
         <dict>
             <!-- \n \r \t -->
