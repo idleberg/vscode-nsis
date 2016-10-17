@@ -27,7 +27,7 @@
             <key>match</key>
             <string>^\s*(Function(End)?|Section(End)?|SectionGroup|SectionGroup(End)?|PageEx(End)?)\b</string>
             <key>name</key>
-            <string>keyword.control.nsis</string>
+            <string>entity.name.section.nsis</string>
         </dict>
         <dict>
             <key>match</key>
