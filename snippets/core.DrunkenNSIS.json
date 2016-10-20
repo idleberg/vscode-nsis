@@ -394,11 +394,6 @@
     "description": "Usage: SilentInstall (normal|silent|silentlog)",
     "prefix": "InstallSilent silentlog"
   },
-  "%LanguageFileLoad": {
-    "body": "LoadLanguageFile \"${1:language_file}.nlf\"$2",
-    "description": "Usage: LoadLanguageFile language.nlf",
-    "prefix": "LanguageFileLoad"
-  },
   "%LangStringLicense": {
     "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}\"$4",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
@@ -413,6 +408,11 @@
     "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$4",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "prefix": "LangStringLicense txt"
+  },
+  "%LanguageFileLoad": {
+    "body": "LoadLanguageFile \"${1:language_file}.nlf\"$2",
+    "description": "Usage: LoadLanguageFile language.nlf",
+    "prefix": "LanguageFileLoad"
   },
   "%LenStr": {
     "body": "StrLen $${1:user_var} \"${2:str}\"$3",
@@ -438,6 +438,11 @@
     "body": "FileOpen $${1:user_var} \"${2:filename}\" ${3:openmode}$4",
     "description": "Usage: FileOpen $(user_var: handle output) filename openmode",
     "prefix": "OpenFile"
+  },
+  "%PackEXEHeader": {
+    "body": "!packhdr \"${1:tempfile}\" \"${2:command}\"$3",
+    "description": "Usage: !packhdr temp_file_name command_line_to_compress_that_temp_file",
+    "prefix": "PackEXEHeader"
   },
   "%PageUninst": {
     "body": "UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}$5",
@@ -788,6 +793,11 @@
     "body": "ShowUninstDetails show$1",
     "description": "Usage: ShowUninstDetails (hide|show|nevershow)",
     "prefix": "UninstDetailsShow show"
+  },
+  "%UninstallExeName": {
+    "body": "WriteUninstaller \"${1:exename}.exe\"$2",
+    "description": "Usage: WriteUninstaller uninstall_exe_name",
+    "prefix": "UninstallExeName"
   },
   "%UninstallerWrite": {
     "body": "WriteUninstaller \"${1:exename}.exe\"$2",
