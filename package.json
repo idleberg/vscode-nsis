@@ -81,6 +81,17 @@
                     ".nlf"
                 ],
                 "configuration": "./nlf.configuration.json"
+            },
+            {
+                "id": "nsl",
+                "aliases": [
+                    "nsL Assembler",
+                    "nsl"
+                ],
+                "extensions": [
+                    ".nsl"
+                ],
+                "configuration": "./nsl.configuration.json"
             }
         ],
         "grammars": [
@@ -93,6 +104,11 @@
                 "language": "nlf",
                 "scopeName": "source.nlf",
                 "path": "./syntaxes/nlf.tmLanguage"
+            },
+            {
+                "language": "nsl",
+                "scopeName": "source.nsl",
+                "path": "./syntaxes/nsl_assembler.tmLanguage"
             }
         ],
         "commands": [
