@@ -40,7 +40,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:nsis"
+        "onLanguage:nsis",
+        "onLanguage:nsl"
     ],
     "contributes": {
         "configuration": {
@@ -56,6 +57,11 @@
                     "type": "string",
                     "default": null,
                     "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
+                },
+                "nsis.pathToJar": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Specify the full path to `nsL.jar`"
                 }
             }
         },
@@ -120,6 +126,10 @@
             {
                 "command": "extension.nsis.compile-strict",
                 "title": "NSIS: Save & Compile Script (strict)"
+            },
+            {
+                "command": "extension.nsis.translate-nsl",
+                "title": "NSIS: Translate nsL code"
             }
         ],
         "keybindings": [
