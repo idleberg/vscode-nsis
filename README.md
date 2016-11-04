@@ -7,7 +7,7 @@
 [![David](https://img.shields.io/david/dev/idleberg/vscode-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/vscode-nsis?type=dev)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/vscode)
 
-Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax for NSIS Language Files (NLF).
+Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS).
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/screenshot.png)
 
@@ -15,6 +15,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 
 ## Features
 
+* Language syntax for NSIS, NSIS Language Files and [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
 * IntelliSense for core NSIS commands, variables and predefines
 * IntelliSense for core plug-ins:
     * AdvSplash
@@ -44,6 +45,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * WinVer
     * WordFunc
     * x64
+* IntelliSense for nsL Assembler
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
 
