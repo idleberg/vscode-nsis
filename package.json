@@ -109,7 +109,7 @@
             {
                 "language": "nsl",
                 "scopeName": "source.nsl",
-                "path": "./syntaxes/nsl_assembler.tmLanguage"
+                "path": "./syntaxes/nsl.tmLanguage"
             }
         ],
         "commands": [
