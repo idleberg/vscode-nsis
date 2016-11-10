@@ -133,6 +133,14 @@ Before you can build, make sure `makensis` is in your PATH [environmental variab
 
 To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings as errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
+As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+
+**Example:**
+
+```json
+"nsis.pathToJar": "/full/path/to/nsL.jar"
+```
+
 ### Task Runner
 
 If you prefer Visual Studio Code's in-built Task Runner over this extension's build system, you can use the `makensis-task-runner` snippet while working in the JSON scope. This will scaffold a `task.json` suitable for `makensis`, including support for problem matching.
