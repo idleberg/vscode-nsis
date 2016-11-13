@@ -138,7 +138,8 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 **Example:**
 
 ```json
-"nsis.pathToJar": "/full/path/to/nsL.jar"
+"nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
+"nsis.nsl.customArguments": "/nomake",
 ```
 
 ### Task Runner
