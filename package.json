@@ -64,7 +64,7 @@
                 },
                 "nsis.nsl.compilerArguments": {
                     "type": "string",
-                    "default": "/nopause /nomake",
+                    "default": "/nomake",
                     "description": "Specify the default arguments for nsL Assembler"
                 }
             }
