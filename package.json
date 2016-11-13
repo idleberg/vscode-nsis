@@ -57,10 +57,15 @@
                     "default": null,
                     "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
                 },
-                "nsis.pathToJar": {
+                "nsis.nsl.pathToJar": {
                     "type": "string",
                     "default": null,
                     "description": "Specify the full path to `nsL.jar`"
+                },
+                "nsis.nsl.compilerArguments": {
+                    "type": "string",
+                    "default": "/nopause /nomake",
+                    "description": "Specify the default arguments for nsL Assembler"
                 }
             }
         },
