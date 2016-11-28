@@ -11,7 +11,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/screenshot.png)
 
-*Screenshot of NSIS in Visual Studio Code with [Hopscotch](https://marketplace.visualstudio.com/items?itemName=gerane.Theme-Hopscotch) theme*
+*Screenshot of NSIS in Visual Studio Code with [Hopscotch](https://marketplace.visualstudio.com/items?itemName=idleberg.hopscotch) theme*
 
 ## Features
 
