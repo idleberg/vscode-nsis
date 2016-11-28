@@ -2,7 +2,7 @@
     "name": "nsis",
     "displayName": "NSIS",
     "description": "Language syntax, snippets and build system for Nullsoft Scriptable Install System (NSIS)",
-    "version": "2.2.2",
+    "version": "2.2.4",
     "publisher": "idleberg",
     "license": "MIT OR GPL-2.0",
     "author": {
