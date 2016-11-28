@@ -139,7 +139,7 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 
 ```json
 "nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
-"nsis.nsl.customArguments": "/nopause /nomake",
+"nsis.nsl.customArguments": "/nomake /nopause",
 ```
 
 ### Task Runner
