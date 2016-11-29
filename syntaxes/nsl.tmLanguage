@@ -76,7 +76,14 @@
 
         <dict>
             <key>match</key>
-            <string>^\s*(?i)(break|case|default|do|else|for|if|return|switch|while)(?=\s*\()?</string>
+            <string>\s*(?i)(for|if|switch|while)(?=\s*\()</string>
+            <key>name</key>
+            <string>entity.name.section.nsl</string>
+        </dict>
+
+        <dict>
+            <key>match</key>
+            <string>\s*(?i)(break|case|default|do|else|return)\b</string>
             <key>name</key>
             <string>entity.name.section.nsl</string>
         </dict>
