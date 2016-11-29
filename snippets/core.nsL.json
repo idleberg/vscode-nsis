@@ -16,7 +16,7 @@
     "prefix": "#macro"
   },
   "#nsis": {
-    "body": "#nsis\n\t${1:// your code here}\n#nsisend",
+    "body": "#nsis\n\t${1:# your code here}\n#nsisend",
     "prefix": "#nsis"
   },
   "Abort()": {
