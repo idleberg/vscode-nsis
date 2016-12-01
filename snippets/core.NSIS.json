@@ -112,70 +112,70 @@
     "prefix": "getdllversion"
   },
   "!if": {
-    "body": "!if ${1:value1} ${2:op} ${3:value2}\n  ${4:# your code here}\n!endif$5",
+    "body": "!if ${1:value1} ${2:op} ${3:value2}\n\t${4:# your code here}\n!endif$5",
     "description": "Usage: !if [!] (value [(==,!=,S==,S!=,=,<>,<=,<,>,>=,&,&&,||) value2] | /FILEEXISTS path)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!if.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "if"
   },
   "!ifdef": {
-    "body": "!ifdef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
+    "body": "!ifdef ${1:gflag}\n\t${2:# your code here}\n!endif$3",
     "description": "Usage: !ifdef symbol [| symbol2 [& symbol3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifdef.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifdef"
   },
   "!ifdef…else": {
-    "body": "!ifdef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
+    "body": "!ifdef ${1:gflag}\n\t${2:# your code here}\n!else\n\t${3:# your code here}\n!endif$4",
     "description": "Usage: !ifdef symbol [| symbol2 [& symbol3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifdef…else.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifdef…else"
   },
   "!ifmacrodef": {
-    "body": "!ifmacrodef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
+    "body": "!ifmacrodef ${1:gflag}\n\t${2:# your code here}\n!endif$3",
     "description": "Usage: !ifmacrodef macro [| macro2 [& macro3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrodef.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifmacrodef"
   },
   "!ifmacrodef…else": {
-    "body": "!ifmacrodef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
+    "body": "!ifmacrodef ${1:gflag}\n\t${2:# your code here}\n!else\n\t${3:# your code here}\n!endif$4",
     "description": "Usage: !ifmacrodef macro [| macro2 [& macro3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrodef…else.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifmacrodef…else"
   },
   "!ifmacrondef": {
-    "body": "!ifmacrondef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
+    "body": "!ifmacrondef ${1:gflag}\n\t${2:# your code here}\n!endif$3",
     "description": "Usage: !ifmacrondef macro [| macro2 [& macro3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrondef.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifmacrondef"
   },
   "!ifmacrondef…else": {
-    "body": "!ifmacrondef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
+    "body": "!ifmacrondef ${1:gflag}\n\t${2:# your code here}\n!else\n\t${3:# your code here}\n!endif$4",
     "description": "Usage: !ifmacrondef macro [| macro2 [& macro3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrondef…else.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifmacrondef…else"
   },
   "!ifndef": {
-    "body": "!ifndef ${1:gflag}\n  ${2:# your code here}\n!endif$3",
+    "body": "!ifndef ${1:gflag}\n\t${2:# your code here}\n!endif$3",
     "description": "Usage: !ifndef symbol [| symbol2 [& symbol3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifndef.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifndef"
   },
   "!ifndef…else": {
-    "body": "!ifndef ${1:gflag}\n  ${2:# your code here}\n!else\n  ${3:# your code here}\n!endif$4",
+    "body": "!ifndef ${1:gflag}\n\t${2:# your code here}\n!else\n\t${3:# your code here}\n!endif$4",
     "description": "Usage: !ifndef symbol [| symbol2 [& symbol3 [...]]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifndef…else.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
     "prefix": "ifndef…else"
   },
   "!if…else": {
-    "body": "!if ${1:value1} ${2:op} ${3:value2}\n  ${4:# your code here}\n!else\n  ${5:# your code here}\n!endif$6",
+    "body": "!if ${1:value1} ${2:op} ${3:value2}\n\t${4:# your code here}\n!else\n\t${5:# your code here}\n!endif$6",
     "description": "Usage: !if [!] (value [(==,!=,S==,S!=,=,<>,<=,<,>,>=,&,&&,||) value2] | /FILEEXISTS path)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!if…else.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
@@ -357,7 +357,7 @@
     "prefix": "insertmacro"
   },
   "!macro": {
-    "body": "!macro ${1:macro_name} ${2:parameter}\n  ${3:# your code here}\n!macroend$4",
+    "body": "!macro ${1:macro_name} ${2:parameter}\n\t${3:# your code here}\n!macroend$4",
     "description": "Usage: !macro macroname [parms ...]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!macro.md",
     "leftLabelHTML": "<span class='keyword'>!</span>",
@@ -1134,140 +1134,140 @@
     "prefix": "FlushINI"
   },
   "Function": {
-    "body": "Function \"${1:function_name}\"\n  ${2:# your code here}\nFunctionEnd$3",
+    "body": "Function \"${1:function_name}\"\n\t${2:# your code here}\nFunctionEnd$3",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Function"
   },
   "Function .onGUIEnd": {
-    "body": "Function .onGUIEnd\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onGUIEnd\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onGUIEnd"
   },
   "Function .onGUIInit": {
-    "body": "Function .onGUIInit\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onGUIInit\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onGUIInit"
   },
   "Function .onInit": {
-    "body": "Function .onInit\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onInit\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onInit"
   },
   "Function .onInstFailed": {
-    "body": "Function .onInstFailed\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onInstFailed\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onInstFailed"
   },
   "Function .onInstSuccess": {
-    "body": "Function .onInstSuccess\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onInstSuccess\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onInstSuccess"
   },
   "Function .onMouseOverSection": {
-    "body": "Function .onMouseOverSection\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onMouseOverSection\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onMouseOverSection"
   },
   "Function .onRebootFailed": {
-    "body": "Function .onRebootFailed\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onRebootFailed\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onRebootFailed"
   },
   "Function .onSelChange": {
-    "body": "Function .onSelChange\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onSelChange\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onSelChange"
   },
   "Function .onUserAbort": {
-    "body": "Function .onUserAbort\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onUserAbort\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onUserAbort"
   },
   "Function .onVerifyInstDir": {
-    "body": "Function .onVerifyInstDir\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function .onVerifyInstDir\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onVerifyInstDir"
   },
   "Function un.*": {
-    "body": "Function \"un.${1:function_name}\"\n  ${2:# your code here}\nFunctionEnd$3",
+    "body": "Function \"un.${1:function_name}\"\n\t${2:# your code here}\nFunctionEnd$3",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.Function"
   },
   "Function un.onGUIEnd": {
-    "body": "Function un.onGUIEnd\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onGUIEnd\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.onGUIEnd"
   },
   "Function un.onGUIInit": {
-    "body": "Function un.onGUIInit\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onGUIInit\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.onGUIInit"
   },
   "Function un.onInit": {
-    "body": "Function un.onInit\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onInit\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.onInit"
   },
   "Function un.onRebootFailed": {
-    "body": "Function un.onRebootFailed\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onRebootFailed\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.onRebootFailed"
   },
   "Function un.onSelChange": {
-    "body": "Function un.onSelChange\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onSelChange\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.onSelChange"
   },
   "Function un.onUninstFailed": {
-    "body": "Function un.onUninstFailed\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onUninstFailed\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.onUninstFailed"
   },
   "Function un.onUninstSuccess": {
-    "body": "Function un.onUninstSuccess\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onUninstSuccess\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "un.onUninstSuccess"
   },
   "Function un.onUserAbort": {
-    "body": "Function un.onUserAbort\n  ${1:# your code here}\nFunctionEnd$2",
+    "body": "Function un.onUserAbort\n\t${1:# your code here}\nFunctionEnd$2",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Function.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
@@ -2086,49 +2086,49 @@
     "prefix": "PageCallbacks"
   },
   "PageEx": {
-    "body": "PageEx ${1:page_type}\n  ${2:# your code here}\nPageExEnd$3",
+    "body": "PageEx ${1:page_type}\n\t${2:# your code here}\nPageExEnd$3",
     "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PageEx.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "PageEx"
   },
   "PageEx components": {
-    "body": "PageEx components\n  ${1:# your code here}\nPageExEnd$2",
+    "body": "PageEx components\n\t${1:# your code here}\nPageExEnd$2",
     "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PageEx.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "PageEx components"
   },
   "PageEx custom": {
-    "body": "PageEx custom\n  ${1:# your code here}\nPageExEnd$2",
+    "body": "PageEx custom\n\t${1:# your code here}\nPageExEnd$2",
     "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PageEx.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "PageEx custom"
   },
   "PageEx directory": {
-    "body": "PageEx directory\n  ${1:# your code here}\nPageExEnd$2",
+    "body": "PageEx directory\n\t${1:# your code here}\nPageExEnd$2",
     "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PageEx.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "PageEx directory"
   },
   "PageEx instfiles": {
-    "body": "PageEx instfiles\n  ${1:# your code here}\nPageExEnd$2",
+    "body": "PageEx instfiles\n\t${1:# your code here}\nPageExEnd$2",
     "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PageEx.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "PageEx instfiles"
   },
   "PageEx license": {
-    "body": "PageEx license\n  ${1:# your code here}\nPageExEnd$2",
+    "body": "PageEx license\n\t${1:# your code here}\nPageExEnd$2",
     "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PageEx.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "PageEx license"
   },
   "PageEx uninstConfirm": {
-    "body": "PageEx uninstConfirm\n  ${1:# your code here}\nPageExEnd$2",
+    "body": "PageEx uninstConfirm\n\t${1:# your code here}\nPageExEnd$2",
     "description": "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PageEx.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
@@ -2317,14 +2317,14 @@
     "prefix": "SearchPath"
   },
   "Section": {
-    "body": "Section \"${1:section_name}\" ${2:section_index_output}\n  ${3:# your code here}\nSectionEnd$4",
+    "body": "Section \"${1:section_name}\" ${2:section_index_output}\n\t${3:# your code here}\nSectionEnd$4",
     "description": "Usage: Section [/o] [-][un.][section_name] [section index output]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Section.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Section"
   },
   "Section Uninstall": {
-    "body": "Section \"Uninstall\"\n  ${1:# your code here}\nSectionEnd$2",
+    "body": "Section \"Uninstall\"\n\t${1:# your code here}\nSectionEnd$2",
     "description": "Usage: Section [/o] [-][un.][section_name] [section index output]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Section.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
@@ -2366,7 +2366,7 @@
     "prefix": "SectionGetText"
   },
   "SectionGroup": {
-    "body": "SectionGroup ${1:section_group_name} ${2:index_output}\n  ${3:# your code here}\nSectionGroupEnd$4",
+    "body": "SectionGroup ${1:section_group_name} ${2:index_output}\n\t${3:# your code here}\nSectionGroupEnd$4",
     "description": "Usage: SectionGroup [/e] [un.]section_group_name [section index output]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionGroup.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",

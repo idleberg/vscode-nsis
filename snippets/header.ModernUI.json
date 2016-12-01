@@ -322,7 +322,7 @@
     "prefix": "MUI_FINISHPAGE_TITLE_3LINES"
   },
   "MUI_FUNCTION_DESCRIPTION_BEGIN": {
-    "body": "!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN\n  ${1:# your code here}\n!insertmacro MUI_FUNCTION_DESCRIPTION_END",
+    "body": "!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN\n\t${1:# your code here}\n!insertmacro MUI_FUNCTION_DESCRIPTION_END",
     "description": "Usage: !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN",
     "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
     "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
@@ -1155,7 +1155,7 @@
     "prefix": "MUI_STARTMENUPAGE_TEXT_TOP"
   },
   "MUI_STARTMENU_WRITE_BEGIN": {
-    "body": "!insertmacro MUI_STARTMENU_WRITE_BEGIN ${1:page_id}\n  ${2:# your code here}\n!insertmacro MUI_STARTMENU_WRITE_END$3",
+    "body": "!insertmacro MUI_STARTMENU_WRITE_BEGIN ${1:page_id}\n\t${2:# your code here}\n!insertmacro MUI_STARTMENU_WRITE_END$3",
     "description": "Usage: !insertmacro MUI_STARTMENU_WRITE_BEGIN pageid",
     "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
     "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
@@ -1239,7 +1239,7 @@
     "prefix": "MUI_UNFINISHPAGE_NOAUTOCLOSE"
   },
   "MUI_UNFUNCTION_DESCRIPTION_BEGIN": {
-    "body": "!insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN\n  ${1:# your code here}\n!insertmacro MUI_UNFUNCTION_DESCRIPTION_END",
+    "body": "!insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN\n\t${1:# your code here}\n!insertmacro MUI_UNFUNCTION_DESCRIPTION_END",
     "description": "Usage: !insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN",
     "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
     "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",

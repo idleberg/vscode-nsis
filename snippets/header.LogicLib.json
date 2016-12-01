@@ -23,19 +23,19 @@
     "prefix": "Cmd"
   },
   "${DoUntil…LoopUntil}": {
-    "body": "\\${DoUntil} ${1:statement}\n  ${3:# your code here}\n\\${LoopUntil} ${2:statement}$4",
+    "body": "\\${DoUntil} ${1:statement}\n\t${3:# your code here}\n\\${LoopUntil} ${2:statement}$4",
     "prefix": "DoUntil…LoopUntil"
   },
   "${DoUntil…Loop}": {
-    "body": "\\${Do} ${1:statement}\n  ${2:# your code here}\n\\${Loop}$3",
+    "body": "\\${Do} ${1:statement}\n\t${2:# your code here}\n\\${Loop}$3",
     "prefix": "DoUntil…Loop"
   },
   "${Do…LoopUntil}": {
-    "body": "\\${Do}\n  ${2:# your code here}\n\\${LoopUntil} ${1:statement}$3",
+    "body": "\\${Do}\n\t${2:# your code here}\n\\${LoopUntil} ${1:statement}$3",
     "prefix": "Do…LoopUntil"
   },
   "${Do…Loop}": {
-    "body": "\\${Do}\n  ${1:# your code here}\n\\${Loop}$2",
+    "body": "\\${Do}\n\t${1:# your code here}\n\\${Loop}$2",
     "prefix": "Do…Loop"
   },
   "${ElseIfNot}": {
@@ -93,12 +93,12 @@
     "prefix": "FileExists"
   },
   "${ForEach…Next}": {
-    "body": "\\${ForEach} ${1:statement}\n  ${2:# your code here}\n\\${Next}$3",
+    "body": "\\${ForEach} ${1:statement}\n\t${2:# your code here}\n\\${Next}$3",
     "description": "Usage: ${ForEach} expression",
     "prefix": "ForEach…Next"
   },
   "${For…Next}": {
-    "body": "\\${For} ${1:statement}\n  ${2:# your code here}\n\\${Next}$3",
+    "body": "\\${For} ${1:statement}\n\t${2:# your code here}\n\\${Next}$3",
     "description": "Usage: ${For} expression",
     "prefix": "For…Next"
   },
@@ -108,17 +108,17 @@
     "prefix": "IfCmd"
   },
   "${IfNot}": {
-    "body": "\\${IfNot} ${1:expression}\n  ${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${IfNot} expression",
     "prefix": "IfNot"
   },
   "${IfNot…Else}": {
-    "body": "\\${IfNot} ${1:expression}\n  ${2:# your code here}\n\\${Else}\n  ${3:# your code here}\n\\${EndIf}$4",
+    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n\\${Else}\n\t${3:# your code here}\n\\${EndIf}$4",
     "description": "Usage: ${IfNot} expression",
     "prefix": "IfNot…Else"
   },
   "${IfNot…FileExists}": {
-    "body": "\\${IfNot} ${FileExists} \"${1:file}\"\n  ${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${IfNot} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${IfNot} ${FileExists} file_path",
     "prefix": "IfNot…FileExists"
   },
@@ -133,17 +133,17 @@
     "prefix": "IfThen"
   },
   "${If}": {
-    "body": "\\${If} ${1:expression}\n  ${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${If} expression",
     "prefix": "If"
   },
   "${If…Else}": {
-    "body": "\\${If} ${1:expression}\n  ${2:# your code here}\n\\${Else}\n  ${3:# your code here}\n\\${EndIf}$4",
+    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n\\${Else}\n\t${3:# your code here}\n\\${EndIf}$4",
     "description": "Usage: ${If} expression",
     "prefix": "If…Else"
   },
   "${If…FileExists}": {
-    "body": "\\${If} ${FileExists} \"${1:file}\"\n  ${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${If} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${If} ${FileExists} file_path",
     "prefix": "If…FileExists"
   },
@@ -205,7 +205,7 @@
     "prefix": "SectionIsSelected"
   },
   "${Select}": {
-    "body": "\\${Select} $${1:var}\n  ${2:# your code here}\n\\${EndSelect}$3",
+    "body": "\\${Select} $${1:var}\n\t${2:# your code here}\n\\${EndSelect}$3",
     "description": "Usage: ${Select} expression",
     "prefix": "Select"
   },
@@ -215,22 +215,22 @@
     "prefix": "Silent"
   },
   "${Switch}": {
-    "body": "\\${Switch} $${1:var}\n  ${2:# your code here}\n\\${EndSwitch}$3",
+    "body": "\\${Switch} $${1:var}\n\t${2:# your code here}\n\\${EndSwitch}$3",
     "description": "Usage: ${Switch} expression",
     "prefix": "Switch"
   },
   "${Unless}": {
-    "body": "\\${Unless} $${1:var}\n  ${2:# your code here}\n\\${EndUnless}$3",
+    "body": "\\${Unless} $${1:var}\n\t${2:# your code here}\n\\${EndUnless}$3",
     "description": "Usage: ${Unless} expression",
     "prefix": "Unless"
   },
   "${Unless…FileExists}": {
-    "body": "\\${Unless} ${FileExists} \"${1:file}\"\n  ${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${Unless} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${Unless} ${FileExists} file_path",
     "prefix": "Unless…FileExists"
   },
   "${While}": {
-    "body": "\\${While} ${1:expression}\n  ${2:# your code here}\n\\${EndWhile}$3",
+    "body": "\\${While} ${1:expression}\n\t${2:# your code here}\n\\${EndWhile}$3",
     "description": "Usage: ${While} expression",
     "prefix": "While"
   }

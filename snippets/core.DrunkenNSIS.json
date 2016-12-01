@@ -670,7 +670,7 @@
     "prefix": "SubCaptionUninstall"
   },
   "%SubSection": {
-    "body": "SectionGroup ${1:section_group_name} ${2:index_output}\n  ${3:# your code here}\nSectionGroupEnd$4",
+    "body": "SectionGroup ${1:section_group_name} ${2:index_output}\n\t${3:# your code here}\nSectionGroupEnd$4",
     "description": "Usage: SectionGroup [/e] [un.]section_group_name [section index output]",
     "prefix": "SubSection"
   },
