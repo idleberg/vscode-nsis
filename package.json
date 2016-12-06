@@ -57,6 +57,11 @@
                     "default": null,
                     "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
                 },
+                "nsis.alwaysShowOutput": {
+                    "type": "bool",
+                    "default": true,
+                    "description": "If `false` the output channel will only be shown on errors"
+                },
                 "nsis.nsl.pathToJar": {
                     "type": "string",
                     "default": null,
