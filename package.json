@@ -72,7 +72,7 @@
                     "default": null,
                     "description": "Specify the full path to `nsL.jar`"
                 },
-                "nsis.nsl.compilerArguments": {
+                "nsis.nsl.customArguments": {
                     "type": "string",
                     "default": "/nomake /nopause",
                     "description": "Specify the default arguments for nsL Assembler"
