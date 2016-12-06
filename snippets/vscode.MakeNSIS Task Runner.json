@@ -1,6 +1,0 @@
-{
-  "MakeNSIS Task Runner": {
-    "prefix": "makensis-task-runner",
-    "body": "{\n  \"version\": \"0.1.0\",\n  \"command\": \"makensis\",\n  \"showOutput\": \"silent\",\n  \"args\": [\"-V2\", \"\\${file}\" ],\n  \"windows\": {\n    \"args\": [\"/V2\", \"\\${file}\" ]\n  },\n  \"problemMatcher\": {\n    \"fileLocation\": \"absolute\",\n    \"pattern\": [\n      {\n        \"regexp\": \"(Error): (.*)\",\n        \"severity\": 1,\n        \"message\": 2\n      },\n      {\n        \"regexp\": \"Error in script \\\"([^\\\"]+)\\\" on line (\\\\\\d+) -- aborting creation process\\$\",\n        \"file\": 1,\n        \"line\": 2\n      }\n    ]\n  }\n}\n$1"
-  }
-}

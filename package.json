@@ -164,10 +164,6 @@
                 "path": "./snippets/core.InstallOptions.json"
             },
             {
-                "language": "json",
-                "path": "./snippets/vscode.MakeNSIS Task Runner.json"
-            },
-            {
                 "language": "nsis",
                 "path": "./snippets/core.DrunkenNSIS.json"
             },

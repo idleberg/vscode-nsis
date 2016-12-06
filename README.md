@@ -142,10 +142,6 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 "nsis.nsl.customArguments": "/nomake /nopause",
 ```
 
-### Task Runner
-
-If you prefer Visual Studio Code's in-built Task Runner over this extension's build system, you can use the `makensis-task-runner` snippet while working in the JSON scope. This will scaffold a `task.json` suitable for `makensis`, including support for problem matching.
-
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0), unless noted otherwise.
