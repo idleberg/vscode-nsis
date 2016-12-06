@@ -57,6 +57,11 @@
                     "default": null,
                     "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
                 },
+                "nsis.showNotifications": {
+                    "type": "bool",
+                    "default": true,
+                    "description": "Show build notifications indicating success or failure"
+                },
                 "nsis.alwaysShowOutput": {
                     "type": "bool",
                     "default": true,
