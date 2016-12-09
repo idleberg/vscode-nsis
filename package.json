@@ -58,12 +58,12 @@
                     "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
                 },
                 "nsis.showNotifications": {
-                    "type": "bool",
+                    "type": "boolean",
                     "default": true,
                     "description": "Show build notifications indicating success or failure"
                 },
                 "nsis.alwaysShowOutput": {
-                    "type": "bool",
+                    "type": "boolean",
                     "default": true,
                     "description": "If `false` the output channel will only be shown on errors"
                 },
@@ -156,6 +156,11 @@
                 "key": "ctrl+alt+shift+b",
                 "when": "editorFocus && editorLangId == nsis",
                 "command": "extension.nsis.compile-strict"
+            },
+            {
+                "key": "ctrl+shift+b",
+                "when": "editorFocus && editorLangId == nsl",
+                "command": "extension.nsis.transpile-nsl"
             }
         ],
         "snippets": [
