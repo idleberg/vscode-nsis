@@ -12,9 +12,9 @@
     "keywords": [
         "nsis",
         "nsl assembler",
-        "nullsoft",
-        "installer",
-        "setup"
+        "haskell",
+        "wine",
+        "nullsoft"
     ],
     "repository": {
         "type": "git",
@@ -164,6 +164,10 @@
             }
         ],
         "snippets": [
+            {
+                "language": "haskell",
+                "path": "./snippets/core.Haskell.json"
+            },
             {
                 "language": "ini",
                 "path": "./snippets/core.InstallOptions.json"

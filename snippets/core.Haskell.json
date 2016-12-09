@@ -1,0 +1,3168 @@
+{
+  "core.NSIS.json": "Core NSIS syntax",
+
+  "abort": {
+    "body": "abort${1: \"${2:String}\"}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "abort"
+  },
+  "addPluginDir": {
+    "body": "addPluginDir \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "addPluginDir"
+  },
+  "alert": {
+    "body": "alert \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "alert"
+  },
+  "allowRootDirInstall": {
+    "body": "allowRootDirInstall ${1:Bool}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "allowRootDirInstall"
+  },
+  "allowRootDirInstall False": {
+    "body": "allowRootDirInstall False$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "allowRootDirInstall False"
+  },
+  "allowRootDirInstall True": {
+    "body": "allowRootDirInstall True$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "allowRootDirInstall True"
+  },
+  "caption": {
+    "body": "caption \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "caption"
+  },
+  "copyFiles": {
+    "body": "copyFiles [${1:Attrib}] \"${2:FilePath}\" \"${3:FilePath}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "copyFiles"
+  },
+  "createDirectory": {
+    "body": "createDirectory \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "createDirectory"
+  },
+  "createShortcut": {
+    "body": "createShortcut \"${1:FilePath}\" [${2:Attrib}]$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "createShortcut"
+  },
+  "delete": {
+    "body": "delete [${1:Attrib}] \"${2:FilePath}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "delete"
+  },
+  "deleteRegKey": {
+    "body": "deleteRegKey ${1:HKEY} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "deleteRegKey"
+  },
+  "deleteRegValue": {
+    "body": "deleteRegValue ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "deleteRegValue"
+  },
+  "detailPrint": {
+    "body": "detailPrint \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "detailPrint"
+  },
+  "envVar": {
+    "body": "envVar ${1:String}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "envVar"
+  },
+  "exec": {
+    "body": "exec \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "exec"
+  },
+  "execShell": {
+    "body": "execShell [${1:ShowWindow}] \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "execShell"
+  },
+  "execWait": {
+    "body": "execWait \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "execWait"
+  },
+  "file": {
+    "body": "file [${1:Attrib}] \"${2:FilePath}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "file"
+  },
+  "fileClose": {
+    "body": "fileClose ${1:String}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "fileClose"
+  },
+  "fileOpen NeverShow": {
+    "body": "fileOpen ${1:FileMode} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "fileOpen NeverShow"
+  },
+  "fileWrite": {
+    "body": "fileWrite ${1:FileHandle} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "fileWrite"
+  },
+  "findEach": {
+    "body": "findEach \"${1:FilePath}\" \\$ \\\\${2:Var}\n\t${4:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "findEach"
+  },
+  "findWindow": {
+    "body": "findWindow \"${1:String}\" \"${2:String}\"${3: ${4:HWND}}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "findWindow"
+  },
+  "getDlgItem": {
+    "body": "getDlgItem ${1:HWND} ${2:Int}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "getDlgItem"
+  },
+  "getFileTime": {
+    "body": "getFileTime \"${1:FilePath}\"}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "getFileTime"
+  },
+  "headerImage": {
+    "body": "headerImage \\$ Just \"${1:FilePath}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "headerImage"
+  },
+  "headerImage Nothing": {
+    "body": "headerImage Nothing$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "headerImage Nothing"
+  },
+  "iff": {
+    "body": "iff (${1:ExpBool}) (${2:ActionTrue}) (${3:ActionFalse})$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "iff"
+  },
+  "iff_": {
+    "body": "iff_ (${1:ExpBool}) \\$ ${2:do}\n\t${4:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "iff_"
+  },
+  "iff_ fileExists": {
+    "body": "iff_ (fileExists \"${1:FilePath}\") \\$ ${2:do}\n\t${4:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "iff_ fileExists"
+  },
+  "installDir": {
+    "body": "installDir \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "installDir"
+  },
+  "installDirRegKey": {
+    "body": "installDirRegKey ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "installDirRegKey"
+  },
+  "installIcon": {
+    "body": "installIcon \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "installIcon"
+  },
+  "loop": {
+    "body": "loop \\$ \\\\${2:Label} -> ${3:do}\n\t${4:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "loop"
+  },
+  "messageBox": {
+    "body": "messageBox [${1:MessageBoxType}] \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "messageBox"
+  },
+  "name": {
+    "body": "name \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "name"
+  },
+  "onError": {
+    "body": "onError (${1:Action}) (${2:ActionError})$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "onError"
+  },
+  "outFile": {
+    "body": "outFile \"${1:String}.exe\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "outFile"
+  },
+  "page": {
+    "body": "page ${1:Page}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "page"
+  },
+  "page Components": {
+    "body": "page Components$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "page Components"
+  },
+  "page Confirm": {
+    "body": "page Confirm$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "page Confirm"
+  },
+  "page Directory": {
+    "body": "page Directory$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "page Directory"
+  },
+  "page Finish": {
+    "body": "page Finish ${1:FinishOptions}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "page Finish"
+  },
+  "page InstFiles": {
+    "body": "page InstFiles$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "page InstFiles"
+  },
+  "page License": {
+    "body": "page License \"${1:FilePath}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "page License"
+  },
+  "readRegStr": {
+    "body": "readRegStr ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "readRegStr"
+  },
+  "requestExecutionLevel": {
+    "body": "requestExecutionLevel ${1:Level}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "requestExecutionLevel"
+  },
+  "requestExecutionLevel Admin": {
+    "body": "requestExecutionLevel Admin$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "requestExecutionLevel Admin"
+  },
+  "requestExecutionLevel Highest": {
+    "body": "requestExecutionLevel Highest$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "requestExecutionLevel Highest"
+  },
+  "requestExecutionLevel None": {
+    "body": "requestExecutionLevel None$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "requestExecutionLevel None"
+  },
+  "requestExecutionLevel User": {
+    "body": "requestExecutionLevel User$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "requestExecutionLevel User"
+  },
+  "rmdir": {
+    "body": "rmdir [${1:Attrib}] \"${2:FilePath}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "rmdir"
+  },
+  "section": {
+    "body": "section \"${1:String}\" [${2:Attrib}] \\$ ${3:do}\n\t${4:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "section"
+  },
+  "sectionGet": {
+    "body": "sectionGet ${1:SectionId} ${2:SectionFlag}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "sectionGet"
+  },
+  "sectionGetText": {
+    "body": "sectionGetText ${1:SectionId} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "sectionGetText"
+  },
+  "sectionGroup": {
+    "body": "sectionGroup \"${1:String}\" [${2:Attrib}] \\$ ${3:do}\n\t${4:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "sectionGroup"
+  },
+  "sectionSet": {
+    "body": "sectionSet ${1:SectionId} ${2:SectionFlag} ${3:Bool}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "sectionSet"
+  },
+  "sectionSetText": {
+    "body": "sectionSetText ${1:SectionId} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "sectionSetText"
+  },
+  "sendMessage": {
+    "body": "sendMessage [${1:Attrib}] ${2:HWND} ${3:Int} ${4:a} ${5:b}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "sendMessage"
+  },
+  "setCompressor": {
+    "body": "setCompressor ${1:Compressor}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setCompressor"
+  },
+  "setCompressor BZIP2": {
+    "body": "setCompressor BZIP2$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setCompressor BZIP2"
+  },
+  "setCompressor LZMA": {
+    "body": "setCompressor LZMA$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setCompressor LZMA"
+  },
+  "setCompressor ZLIB": {
+    "body": "setCompressor ZLIB$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setCompressor ZLIB"
+  },
+  "setDetailsPrint": {
+    "body": "setDetailsPrint \"${2:DetailsPrint}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setDetailsPrint"
+  },
+  "setDetailsPrint Both": {
+    "body": "setDetailsPrint Both$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setDetailsPrint Both"
+  },
+  "setDetailsPrint LastUsed": {
+    "body": "setDetailsPrint LastUsed$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setDetailsPrint LastUsed"
+  },
+  "setDetailsPrint ListOnly": {
+    "body": "setDetailsPrint ListOnly$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setDetailsPrint ListOnly"
+  },
+  "setDetailsPrint NoDetailsPrint": {
+    "body": "setDetailsPrint NoDetailsPrint$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setDetailsPrint NoDetailsPrint"
+  },
+  "setDetailsPrint TextOnly": {
+    "body": "setDetailsPrint TextOnly$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setDetailsPrint TextOnly"
+  },
+  "setOutPath": {
+    "body": "setOutPath \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "setOutPath"
+  },
+  "showInstDetails": {
+    "body": "showInstDetails ${1:Visibility}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showInstDetails"
+  },
+  "showInstDetails Hide": {
+    "body": "showInstDetails Hide$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showInstDetails Hide"
+  },
+  "showInstDetails NeverShow": {
+    "body": "showInstDetails NeverShow$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showInstDetails NeverShow"
+  },
+  "showInstDetails Show": {
+    "body": "showInstDetails Show$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showInstDetails Show"
+  },
+  "showUninstDetails": {
+    "body": "showUninstDetails ${1:Visibility}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showUninstDetails"
+  },
+  "showUninstDetails Hide": {
+    "body": "showUninstDetails Hide$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showUninstDetails Hide"
+  },
+  "showUninstDetails NeverShow": {
+    "body": "showUninstDetails NeverShow$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showUninstDetails NeverShow"
+  },
+  "showUninstDetails Show": {
+    "body": "showUninstDetails Show$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "showUninstDetails Show"
+  },
+  "sleep": {
+    "body": "sleep ${1:Int}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "sleep"
+  },
+  "strDrop": {
+    "body": "strDrop ${1:Int} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "strDrop"
+  },
+  "strLength": {
+    "body": "strLength \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "strLength"
+  },
+  "strRead": {
+    "body": "strRead \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "strRead"
+  },
+  "strShow": {
+    "body": "strShow ${1:Int}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "strShow"
+  },
+  "strTake": {
+    "body": "strTake ${1:Int} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "strTake"
+  },
+  "uninstall": {
+    "body": "uninstall \\$ ${1:do}\n\t${2:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "uninstall"
+  },
+  "uninstallIcon": {
+    "body": "uninstallIcon \"${1:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "uninstallIcon"
+  },
+  "unpage": {
+    "body": "unpage ${1:Page}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "unpage"
+  },
+  "unpage Components": {
+    "body": "unpage Components$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "unpage Components"
+  },
+  "unpage Confirm": {
+    "body": "unpage Confirm$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "unpage Confirm"
+  },
+  "unpage Directory": {
+    "body": "unpage Directory$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "unpage Directory"
+  },
+  "unpage Finish": {
+    "body": "unpage Finish ${1:FinishOptions}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "unpage Finish"
+  },
+  "unpage InstFiles": {
+    "body": "unpage InstFiles$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "unpage InstFiles"
+  },
+  "unpage License": {
+    "body": "unpage License \"${1:FilePath}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "unpage License"
+  },
+  "while": {
+    "body": "while (${1:ExpBool}) \\$ ${2:do}\n\t${3:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "while"
+  },
+  "writeRegDWORD": {
+    "body": "writeRegDWORD ${1:HKEY} \"${2:String}\" \"${3:String}\" \"${4:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "writeRegDWORD"
+  },
+  "writeRegExpandStr": {
+    "body": "writeRegExpandStr ${1:HKEY} \"${2:String}\" \"${3:String}\" \"${4:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "writeRegExpandStr"
+  },
+  "writeRegStr": {
+    "body": "writeRegStr ${1:HKEY} \"${2:String}\" \"${3:String}\" \"${4:String}\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "writeRegStr"
+  },
+  "writeUninstaller": {
+    "body": "writeUninstaller \"${1:String}.exe\"$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "writeUninstaller"
+  },
+
+  "core.Library.json": "Haskell String Library",
+
+  "strCheck": {
+    "body": "strCheck \"${1:String}\" \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>Library</span>",
+    "prefix": "strCheck"
+  },
+  "strIsPrefixOf": {
+    "body": "strIsPrefixOf \"${1:String}\" \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>Library</span>",
+    "prefix": "strIsPrefixOf"
+  },
+  "strIsSuffixOf": {
+    "body": "strIsSuffixOf \"${1:String}\" \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>Library</span>",
+    "prefix": "strIsSuffixOf"
+  },
+  "strReplace": {
+    "body": "strReplace \"${1:String}\" \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>Library</span>",
+    "prefix": "strReplace"
+  },
+  "strUnlines": {
+    "body": "strUnlines [${1:String}]$0",
+    "leftLabelHTML": "<span class='support function'>Library</span>",
+    "prefix": "strUnlines"
+  },
+  "writeFileLines": {
+    "body": "writeFileLines \"${1:FilePath}\"\" [${2:String}]$0",
+    "leftLabelHTML": "<span class='support function'>Library</span>",
+    "prefix": "writeFileLines"
+  },
+
+  "core.Imports.json": "Haskell Plug-in Imports",
+
+  "Base64": {
+    "body": "import Development.NSIS.Plugins.Base64$0",
+    "leftLabelHTML": "<span class='keyword'>import</span>",
+    "prefix": "Base64"
+  },
+  "EnvVarUpdate": {
+    "body": "import Development.NSIS.Plugins.EnvVarUpdate$0",
+    "leftLabelHTML": "<span class='keyword'>import</span>",
+    "prefix": "EnvVarUpdate"
+  },
+  "Sections": {
+    "body": "import Development.NSIS.Plugins.Sections$0",
+    "leftLabelHTML": "<span class='keyword'>import</span>",
+    "prefix": "Sections"
+  },
+  "TBProgress": {
+    "body": "import Development.NSIS.Plugins.Taskbar$0",
+    "leftLabelHTML": "<span class='keyword'>import</span>",
+    "prefix": "Taskbar"
+  },
+  "WinMessages": {
+    "body": "import Development.NSIS.Plugins.WinMessages$0",
+    "leftLabelHTML": "<span class='keyword'>import</span>",
+    "prefix": "WinMessages"
+  },
+
+  "plugin.Base64.json": "Base64 plug-in",
+
+  "decrypt": {
+    "body": "decrypt ${2:\"${1:String}\"}$0",
+    "leftLabelHTML": "<span class='support function'>Base64</span>",
+    "prefix": "decrypt"
+  },
+  "encrypt": {
+    "body": "encrypt ${2:\"${1:String}\"}$0",
+    "leftLabelHTML": "<span class='support function'>Base64</span>",
+    "prefix": "encrypt"
+  },
+
+  "plugin.EnvVarUpdate.json": "EnvVarUpdate plug-in",
+
+  "deleteEnvVar": {
+    "body": "deleteEnvVar ${1:HKEY} \"${2:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>EnvVarUpdate</span>",
+    "prefix": "deleteEnvVar"
+  },
+  "getEnvVar": {
+    "body": "getEnvVar ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>EnvVarUpdate</span>",
+    "prefix": "getEnvVar"
+  },
+  "setEnvVar": {
+    "body": "setEnvVar ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>EnvVarUpdate</span>",
+    "prefix": "setEnvVar"
+  },
+  "setEnvVarAppend": {
+    "body": "setEnvVarAppend ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>EnvVarUpdate</span>",
+    "prefix": "setEnvVarAppend"
+  },
+  "setEnvVarPrepend": {
+    "body": "setEnvVarPrepend ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>EnvVarUpdate</span>",
+    "prefix": "setEnvVarPrepend"
+  },
+  "setEnvVarRemove": {
+    "body": "setEnvVarRemove ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
+    "leftLabelHTML": "<span class='support function'>EnvVarUpdate</span>",
+    "prefix": "setEnvVarRemove"
+  },
+
+  "plugin.Sections.json": "Sections plug-in",
+
+  "decrypt": {
+    "body": "decrypt [${1:String}]$0",
+    "leftLabelHTML": "<span class='support function'>Sections</span>",
+    "prefix": "decrypt"
+  },
+  "encrypt": {
+    "body": "encrypt [${1:String}]$0",
+    "leftLabelHTML": "<span class='support function'>Sections</span>",
+    "prefix": "encrypt"
+  },
+
+  "plugin.Taskbar.json": "Tasbar plug-in",
+
+  "taskbar": {
+    "body": "taskbar [${1:Action}]$0",
+    "leftLabelHTML": "<span class='support function'>Taskbar</span>",
+    "prefix": "taskbar"
+  },
+
+  "constants.WinMessages.json": "WinMessages constants",
+
+  "EM_LIMITTEXT": {
+    "body": "EM_LIMITTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "EM_LIMITTEXT"
+  },
+  "WM_USER": {
+    "body": "WM_USER",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "WM_USER"
+  },
+  "WM_WININICHANGE": {
+    "body": "WM_WININICHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "WM_WININICHANGE"
+  },
+  "abm_ACTIVATE": {
+    "body": "abm_ACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_ACTIVATE"
+  },
+  "abm_GETAUTOHIDEBAR": {
+    "body": "abm_GETAUTOHIDEBAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_GETAUTOHIDEBAR"
+  },
+  "abm_GETSTATE": {
+    "body": "abm_GETSTATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_GETSTATE"
+  },
+  "abm_GETTASKBARPOS": {
+    "body": "abm_GETTASKBARPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_GETTASKBARPOS"
+  },
+  "abm_NEW": {
+    "body": "abm_NEW",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_NEW"
+  },
+  "abm_QUERYPOS": {
+    "body": "abm_QUERYPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_QUERYPOS"
+  },
+  "abm_REMOVE": {
+    "body": "abm_REMOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_REMOVE"
+  },
+  "abm_SETAUTOHIDEBAR": {
+    "body": "abm_SETAUTOHIDEBAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_SETAUTOHIDEBAR"
+  },
+  "abm_SETPOS": {
+    "body": "abm_SETPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_SETPOS"
+  },
+  "abm_WINDOWPOSCHANGED": {
+    "body": "abm_WINDOWPOSCHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "abm_WINDOWPOSCHANGED"
+  },
+  "bm_ACTIVATE": {
+    "body": "bm_ACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_ACTIVATE"
+  },
+  "bm_CLICK": {
+    "body": "bm_CLICK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_CLICK"
+  },
+  "bm_DELTAPOS": {
+    "body": "bm_DELTAPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_DELTAPOS"
+  },
+  "bm_ENABLE_ARROWS": {
+    "body": "bm_ENABLE_ARROWS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_ENABLE_ARROWS"
+  },
+  "bm_GETAUTOHIDEBAR": {
+    "body": "bm_GETAUTOHIDEBAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETAUTOHIDEBAR"
+  },
+  "bm_GETCHECK": {
+    "body": "bm_GETCHECK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETCHECK"
+  },
+  "bm_GETIMAGE": {
+    "body": "bm_GETIMAGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETIMAGE"
+  },
+  "bm_GETPOS": {
+    "body": "bm_GETPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETPOS"
+  },
+  "bm_GETRANGE": {
+    "body": "bm_GETRANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETRANGE"
+  },
+  "bm_GETSCROLLINFO": {
+    "body": "bm_GETSCROLLINFO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETSCROLLINFO"
+  },
+  "bm_GETSTATE": {
+    "body": "bm_GETSTATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETSTATE"
+  },
+  "bm_GETTASKBARPOS": {
+    "body": "bm_GETTASKBARPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_GETTASKBARPOS"
+  },
+  "bm_NEW": {
+    "body": "bm_NEW",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_NEW"
+  },
+  "bm_QUERYPOS": {
+    "body": "bm_QUERYPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_QUERYPOS"
+  },
+  "bm_REMOVE": {
+    "body": "bm_REMOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_REMOVE"
+  },
+  "bm_SETAUTOHIDEBAR": {
+    "body": "bm_SETAUTOHIDEBAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETAUTOHIDEBAR"
+  },
+  "bm_SETCHECK": {
+    "body": "bm_SETCHECK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETCHECK"
+  },
+  "bm_SETIMAGE": {
+    "body": "bm_SETIMAGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETIMAGE"
+  },
+  "bm_SETMARQUEE": {
+    "body": "bm_SETMARQUEE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETMARQUEE"
+  },
+  "bm_SETPOS": {
+    "body": "bm_SETPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETPOS"
+  },
+  "bm_SETRANGE": {
+    "body": "bm_SETRANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETRANGE"
+  },
+  "bm_SETRANGEREDRAW": {
+    "body": "bm_SETRANGEREDRAW",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETRANGEREDRAW"
+  },
+  "bm_SETSCROLLINFO": {
+    "body": "bm_SETSCROLLINFO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETSCROLLINFO"
+  },
+  "bm_SETSTATE": {
+    "body": "bm_SETSTATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETSTATE"
+  },
+  "bm_SETSTEP": {
+    "body": "bm_SETSTEP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETSTEP"
+  },
+  "bm_SETSTYLE": {
+    "body": "bm_SETSTYLE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_SETSTYLE"
+  },
+  "bm_STEPIT": {
+    "body": "bm_STEPIT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_STEPIT"
+  },
+  "bm_WINDOWPOSCHANGED": {
+    "body": "bm_WINDOWPOSCHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bm_WINDOWPOSCHANGED"
+  },
+  "bst_CHECKED": {
+    "body": "bst_CHECKED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bst_CHECKED"
+  },
+  "bst_FOCUS": {
+    "body": "bst_FOCUS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bst_FOCUS"
+  },
+  "bst_INDETERMINATE": {
+    "body": "bst_INDETERMINATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bst_INDETERMINATE"
+  },
+  "bst_PUSHED": {
+    "body": "bst_PUSHED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bst_PUSHED"
+  },
+  "bst_UNCHECKED": {
+    "body": "bst_UNCHECKED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "bst_UNCHECKED"
+  },
+  "cb_ADDSTRING": {
+    "body": "cb_ADDSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_ADDSTRING"
+  },
+  "cb_DELETESTRING": {
+    "body": "cb_DELETESTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_DELETESTRING"
+  },
+  "cb_DIR": {
+    "body": "cb_DIR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_DIR"
+  },
+  "cb_ERR": {
+    "body": "cb_ERR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_ERR"
+  },
+  "cb_FINDSTRING": {
+    "body": "cb_FINDSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_FINDSTRING"
+  },
+  "cb_FINDSTRINGEXACT": {
+    "body": "cb_FINDSTRINGEXACT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_FINDSTRINGEXACT"
+  },
+  "cb_GETCOUNT": {
+    "body": "cb_GETCOUNT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETCOUNT"
+  },
+  "cb_GETCURSEL": {
+    "body": "cb_GETCURSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETCURSEL"
+  },
+  "cb_GETDROPPEDCONTROLRECT": {
+    "body": "cb_GETDROPPEDCONTROLRECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETDROPPEDCONTROLRECT"
+  },
+  "cb_GETDROPPEDSTATE": {
+    "body": "cb_GETDROPPEDSTATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETDROPPEDSTATE"
+  },
+  "cb_GETDROPPEDWIDTH": {
+    "body": "cb_GETDROPPEDWIDTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETDROPPEDWIDTH"
+  },
+  "cb_GETEDITSEL": {
+    "body": "cb_GETEDITSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETEDITSEL"
+  },
+  "cb_GETEXTENDEDUI": {
+    "body": "cb_GETEXTENDEDUI",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETEXTENDEDUI"
+  },
+  "cb_GETHORIZONTALEXTENT": {
+    "body": "cb_GETHORIZONTALEXTENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETHORIZONTALEXTENT"
+  },
+  "cb_GETITEMDATA": {
+    "body": "cb_GETITEMDATA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETITEMDATA"
+  },
+  "cb_GETITEMHEIGHT": {
+    "body": "cb_GETITEMHEIGHT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETITEMHEIGHT"
+  },
+  "cb_GETLBTEXT": {
+    "body": "cb_GETLBTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETLBTEXT"
+  },
+  "cb_GETLBTEXTLEN": {
+    "body": "cb_GETLBTEXTLEN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETLBTEXTLEN"
+  },
+  "cb_GETLOCALE": {
+    "body": "cb_GETLOCALE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETLOCALE"
+  },
+  "cb_GETTOPINDEX": {
+    "body": "cb_GETTOPINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_GETTOPINDEX"
+  },
+  "cb_INITSTORAGE": {
+    "body": "cb_INITSTORAGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_INITSTORAGE"
+  },
+  "cb_INSERTSTRING": {
+    "body": "cb_INSERTSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_INSERTSTRING"
+  },
+  "cb_LIMITTEXT": {
+    "body": "cb_LIMITTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_LIMITTEXT"
+  },
+  "cb_MSGMAX": {
+    "body": "cb_MSGMAX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_MSGMAX"
+  },
+  "cb_MULTIPLEADDSTRING": {
+    "body": "cb_MULTIPLEADDSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_MULTIPLEADDSTRING"
+  },
+  "cb_RESETCONTENT": {
+    "body": "cb_RESETCONTENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_RESETCONTENT"
+  },
+  "cb_SELECTSTRING": {
+    "body": "cb_SELECTSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SELECTSTRING"
+  },
+  "cb_SETCURSEL": {
+    "body": "cb_SETCURSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETCURSEL"
+  },
+  "cb_SETDROPPEDWIDTH": {
+    "body": "cb_SETDROPPEDWIDTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETDROPPEDWIDTH"
+  },
+  "cb_SETEDITSEL": {
+    "body": "cb_SETEDITSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETEDITSEL"
+  },
+  "cb_SETEXTENDEDUI": {
+    "body": "cb_SETEXTENDEDUI",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETEXTENDEDUI"
+  },
+  "cb_SETHORIZONTALEXTENT": {
+    "body": "cb_SETHORIZONTALEXTENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETHORIZONTALEXTENT"
+  },
+  "cb_SETITEMDATA": {
+    "body": "cb_SETITEMDATA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETITEMDATA"
+  },
+  "cb_SETITEMHEIGHT": {
+    "body": "cb_SETITEMHEIGHT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETITEMHEIGHT"
+  },
+  "cb_SETLOCALE": {
+    "body": "cb_SETLOCALE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETLOCALE"
+  },
+  "cb_SETTOPINDEX": {
+    "body": "cb_SETTOPINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SETTOPINDEX"
+  },
+  "cb_SHOWDROPDOWN": {
+    "body": "cb_SHOWDROPDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "cb_SHOWDROPDOWN"
+  },
+  "dbt_APPYBEGIN": {
+    "body": "dbt_APPYBEGIN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_APPYBEGIN"
+  },
+  "dbt_APPYEND": {
+    "body": "dbt_APPYEND",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_APPYEND"
+  },
+  "dbt_CONFIGCHANGECANCELED": {
+    "body": "dbt_CONFIGCHANGECANCELED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_CONFIGCHANGECANCELED"
+  },
+  "dbt_CONFIGCHANGED": {
+    "body": "dbt_CONFIGCHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_CONFIGCHANGED"
+  },
+  "dbt_CONFIGMGAPI32": {
+    "body": "dbt_CONFIGMGAPI32",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_CONFIGMGAPI32"
+  },
+  "dbt_CONFIGMGPRIVATE": {
+    "body": "dbt_CONFIGMGPRIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_CONFIGMGPRIVATE"
+  },
+  "dbt_CUSTOMEVENT": {
+    "body": "dbt_CUSTOMEVENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_CUSTOMEVENT"
+  },
+  "dbt_DEVICEARRIVAL": {
+    "body": "dbt_DEVICEARRIVAL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVICEARRIVAL"
+  },
+  "dbt_DEVICEQUERYREMOVE": {
+    "body": "dbt_DEVICEQUERYREMOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVICEQUERYREMOVE"
+  },
+  "dbt_DEVICEQUERYREMOVEFAILED": {
+    "body": "dbt_DEVICEQUERYREMOVEFAILED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVICEQUERYREMOVEFAILED"
+  },
+  "dbt_DEVICEREMOVECOMPLETE": {
+    "body": "dbt_DEVICEREMOVECOMPLETE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVICEREMOVECOMPLETE"
+  },
+  "dbt_DEVICEREMOVEPENDING": {
+    "body": "dbt_DEVICEREMOVEPENDING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVICEREMOVEPENDING"
+  },
+  "dbt_DEVICETYPESPECIFIC": {
+    "body": "dbt_DEVICETYPESPECIFIC",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVICETYPESPECIFIC"
+  },
+  "dbt_DEVNODES_CHANGED": {
+    "body": "dbt_DEVNODES_CHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVNODES_CHANGED"
+  },
+  "dbt_DEVTYP_DEVICEINTERFACE": {
+    "body": "dbt_DEVTYP_DEVICEINTERFACE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVTYP_DEVICEINTERFACE"
+  },
+  "dbt_DEVTYP_DEVNODE": {
+    "body": "dbt_DEVTYP_DEVNODE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVTYP_DEVNODE"
+  },
+  "dbt_DEVTYP_HANDLE": {
+    "body": "dbt_DEVTYP_HANDLE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVTYP_HANDLE"
+  },
+  "dbt_DEVTYP_NET": {
+    "body": "dbt_DEVTYP_NET",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVTYP_NET"
+  },
+  "dbt_DEVTYP_OEM": {
+    "body": "dbt_DEVTYP_OEM",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVTYP_OEM"
+  },
+  "dbt_DEVTYP_PORT": {
+    "body": "dbt_DEVTYP_PORT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVTYP_PORT"
+  },
+  "dbt_DEVTYP_VOLUME": {
+    "body": "dbt_DEVTYP_VOLUME",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_DEVTYP_VOLUME"
+  },
+  "dbt_LOW_DISK_SPACE": {
+    "body": "dbt_LOW_DISK_SPACE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_LOW_DISK_SPACE"
+  },
+  "dbt_MONITORCHANGE": {
+    "body": "dbt_MONITORCHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_MONITORCHANGE"
+  },
+  "dbt_NO_DISK_SPACE": {
+    "body": "dbt_NO_DISK_SPACE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_NO_DISK_SPACE"
+  },
+  "dbt_QUERYCHANGECONFIG": {
+    "body": "dbt_QUERYCHANGECONFIG",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_QUERYCHANGECONFIG"
+  },
+  "dbt_SHELLLOGGEDON": {
+    "body": "dbt_SHELLLOGGEDON",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_SHELLLOGGEDON"
+  },
+  "dbt_USERDEFINED": {
+    "body": "dbt_USERDEFINED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_USERDEFINED"
+  },
+  "dbt_VOLLOCKLOCKFAILED": {
+    "body": "dbt_VOLLOCKLOCKFAILED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VOLLOCKLOCKFAILED"
+  },
+  "dbt_VOLLOCKLOCKRELEASED": {
+    "body": "dbt_VOLLOCKLOCKRELEASED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VOLLOCKLOCKRELEASED"
+  },
+  "dbt_VOLLOCKLOCKTAKEN": {
+    "body": "dbt_VOLLOCKLOCKTAKEN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VOLLOCKLOCKTAKEN"
+  },
+  "dbt_VOLLOCKQUERYLOCK": {
+    "body": "dbt_VOLLOCKQUERYLOCK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VOLLOCKQUERYLOCK"
+  },
+  "dbt_VOLLOCKQUERYUNLOCK": {
+    "body": "dbt_VOLLOCKQUERYUNLOCK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VOLLOCKQUERYUNLOCK"
+  },
+  "dbt_VOLLOCKUNLOCKFAILED": {
+    "body": "dbt_VOLLOCKUNLOCKFAILED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VOLLOCKUNLOCKFAILED"
+  },
+  "dbt_VPOWERDAPI": {
+    "body": "dbt_VPOWERDAPI",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VPOWERDAPI"
+  },
+  "dbt_VXDINITCOMPLETE": {
+    "body": "dbt_VXDINITCOMPLETE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dbt_VXDINITCOMPLETE"
+  },
+  "dm_BITSPERPEL": {
+    "body": "dm_BITSPERPEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_BITSPERPEL"
+  },
+  "dm_COLLATE": {
+    "body": "dm_COLLATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_COLLATE"
+  },
+  "dm_COLOR": {
+    "body": "dm_COLOR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_COLOR"
+  },
+  "dm_COPIES": {
+    "body": "dm_COPIES",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_COPIES"
+  },
+  "dm_DEFAULTSOURCE": {
+    "body": "dm_DEFAULTSOURCE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_DEFAULTSOURCE"
+  },
+  "dm_DISPLAYFLAGS": {
+    "body": "dm_DISPLAYFLAGS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_DISPLAYFLAGS"
+  },
+  "dm_DISPLAYFREQUENCY": {
+    "body": "dm_DISPLAYFREQUENCY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_DISPLAYFREQUENCY"
+  },
+  "dm_DITHERTYPE": {
+    "body": "dm_DITHERTYPE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_DITHERTYPE"
+  },
+  "dm_DUPLEX": {
+    "body": "dm_DUPLEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_DUPLEX"
+  },
+  "dm_FIRST": {
+    "body": "dm_FIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_FIRST"
+  },
+  "dm_FORMNAME": {
+    "body": "dm_FORMNAME",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_FORMNAME"
+  },
+  "dm_GRAYSCALE": {
+    "body": "dm_GRAYSCALE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_GRAYSCALE"
+  },
+  "dm_ICMINTENT": {
+    "body": "dm_ICMINTENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_ICMINTENT"
+  },
+  "dm_ICMMETHOD": {
+    "body": "dm_ICMMETHOD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_ICMMETHOD"
+  },
+  "dm_INTERLACED": {
+    "body": "dm_INTERLACED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_INTERLACED"
+  },
+  "dm_LOGPIXELS": {
+    "body": "dm_LOGPIXELS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_LOGPIXELS"
+  },
+  "dm_MEDIATYPE": {
+    "body": "dm_MEDIATYPE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_MEDIATYPE"
+  },
+  "dm_NUP": {
+    "body": "dm_NUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_NUP"
+  },
+  "dm_ORIENTATION": {
+    "body": "dm_ORIENTATION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_ORIENTATION"
+  },
+  "dm_PANNINGHEIGHT": {
+    "body": "dm_PANNINGHEIGHT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PANNINGHEIGHT"
+  },
+  "dm_PANNINGWIDTH": {
+    "body": "dm_PANNINGWIDTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PANNINGWIDTH"
+  },
+  "dm_PAPERLENGTH": {
+    "body": "dm_PAPERLENGTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PAPERLENGTH"
+  },
+  "dm_PAPERSIZE": {
+    "body": "dm_PAPERSIZE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PAPERSIZE"
+  },
+  "dm_PAPERWIDTH": {
+    "body": "dm_PAPERWIDTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PAPERWIDTH"
+  },
+  "dm_PELSHEIGHT": {
+    "body": "dm_PELSHEIGHT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PELSHEIGHT"
+  },
+  "dm_PELSWIDTH": {
+    "body": "dm_PELSWIDTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PELSWIDTH"
+  },
+  "dm_POSITION": {
+    "body": "dm_POSITION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_POSITION"
+  },
+  "dm_PRINTQUALITY": {
+    "body": "dm_PRINTQUALITY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_PRINTQUALITY"
+  },
+  "dm_SCALE": {
+    "body": "dm_SCALE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_SCALE"
+  },
+  "dm_SPECVERSION": {
+    "body": "dm_SPECVERSION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_SPECVERSION"
+  },
+  "dm_TTOPTION": {
+    "body": "dm_TTOPTION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_TTOPTION"
+  },
+  "dm_YRESOLUTION": {
+    "body": "dm_YRESOLUTION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "dm_YRESOLUTION"
+  },
+  "em_CANUNDO": {
+    "body": "em_CANUNDO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_CANUNDO"
+  },
+  "em_CHARFROMPOS": {
+    "body": "em_CHARFROMPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_CHARFROMPOS"
+  },
+  "em_EMPTYUNDOBUFFER": {
+    "body": "em_EMPTYUNDOBUFFER",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_EMPTYUNDOBUFFER"
+  },
+  "em_EXLIMITTEXT": {
+    "body": "em_EXLIMITTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_EXLIMITTEXT"
+  },
+  "em_FMTLINES": {
+    "body": "em_FMTLINES",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_FMTLINES"
+  },
+  "em_GETFIRSTVISIBLELINE": {
+    "body": "em_GETFIRSTVISIBLELINE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETFIRSTVISIBLELINE"
+  },
+  "em_GETHANDLE": {
+    "body": "em_GETHANDLE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETHANDLE"
+  },
+  "em_GETIMESTATUS": {
+    "body": "em_GETIMESTATUS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETIMESTATUS"
+  },
+  "em_GETLIMITTEXT": {
+    "body": "em_GETLIMITTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETLIMITTEXT"
+  },
+  "em_GETLINE": {
+    "body": "em_GETLINE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETLINE"
+  },
+  "em_GETLINECOUNT": {
+    "body": "em_GETLINECOUNT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETLINECOUNT"
+  },
+  "em_GETMARGINS": {
+    "body": "em_GETMARGINS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETMARGINS"
+  },
+  "em_GETMODIFY": {
+    "body": "em_GETMODIFY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETMODIFY"
+  },
+  "em_GETPASSWORDCHAR": {
+    "body": "em_GETPASSWORDCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETPASSWORDCHAR"
+  },
+  "em_GETRECT": {
+    "body": "em_GETRECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETRECT"
+  },
+  "em_GETSEL": {
+    "body": "em_GETSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETSEL"
+  },
+  "em_GETTHUMB": {
+    "body": "em_GETTHUMB",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETTHUMB"
+  },
+  "em_GETWORDBREAKPROC": {
+    "body": "em_GETWORDBREAKPROC",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_GETWORDBREAKPROC"
+  },
+  "em_LIMITTEXT": {
+    "body": "em_LIMITTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_LIMITTEXT"
+  },
+  "em_LINEFROMCHAR": {
+    "body": "em_LINEFROMCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_LINEFROMCHAR"
+  },
+  "em_LINEINDEX": {
+    "body": "em_LINEINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_LINEINDEX"
+  },
+  "em_LINELENGTH": {
+    "body": "em_LINELENGTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_LINELENGTH"
+  },
+  "em_LINESCROLL": {
+    "body": "em_LINESCROLL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_LINESCROLL"
+  },
+  "em_POSFROMCHAR": {
+    "body": "em_POSFROMCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_POSFROMCHAR"
+  },
+  "em_REPLACESEL": {
+    "body": "em_REPLACESEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_REPLACESEL"
+  },
+  "em_SCROLL": {
+    "body": "em_SCROLL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SCROLL"
+  },
+  "em_SCROLLCARET": {
+    "body": "em_SCROLLCARET",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SCROLLCARET"
+  },
+  "em_SETHANDLE": {
+    "body": "em_SETHANDLE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETHANDLE"
+  },
+  "em_SETIMESTATUS": {
+    "body": "em_SETIMESTATUS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETIMESTATUS"
+  },
+  "em_SETLIMITTEXT": {
+    "body": "em_SETLIMITTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETLIMITTEXT"
+  },
+  "em_SETMARGINS": {
+    "body": "em_SETMARGINS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETMARGINS"
+  },
+  "em_SETMODIFY": {
+    "body": "em_SETMODIFY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETMODIFY"
+  },
+  "em_SETPASSWORDCHAR": {
+    "body": "em_SETPASSWORDCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETPASSWORDCHAR"
+  },
+  "em_SETREADONLY": {
+    "body": "em_SETREADONLY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETREADONLY"
+  },
+  "em_SETRECT": {
+    "body": "em_SETRECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETRECT"
+  },
+  "em_SETRECTNP": {
+    "body": "em_SETRECTNP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETRECTNP"
+  },
+  "em_SETSEL": {
+    "body": "em_SETSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETSEL"
+  },
+  "em_SETTABSTOPS": {
+    "body": "em_SETTABSTOPS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETTABSTOPS"
+  },
+  "em_SETWORDBREAKPROC": {
+    "body": "em_SETWORDBREAKPROC",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_SETWORDBREAKPROC"
+  },
+  "em_UNDO": {
+    "body": "em_UNDO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "em_UNDO"
+  },
+  "hwnd_BROADCAST": {
+    "body": "hwnd_BROADCAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "hwnd_BROADCAST"
+  },
+  "lb_ADDFILE": {
+    "body": "lb_ADDFILE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_ADDFILE"
+  },
+  "lb_ADDSTRING": {
+    "body": "lb_ADDSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_ADDSTRING"
+  },
+  "lb_DELETESTRING": {
+    "body": "lb_DELETESTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_DELETESTRING"
+  },
+  "lb_DIR": {
+    "body": "lb_DIR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_DIR"
+  },
+  "lb_ERR": {
+    "body": "lb_ERR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_ERR"
+  },
+  "lb_FINDSTRING": {
+    "body": "lb_FINDSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_FINDSTRING"
+  },
+  "lb_FINDSTRINGEXACT": {
+    "body": "lb_FINDSTRINGEXACT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_FINDSTRINGEXACT"
+  },
+  "lb_GETANCHORINDEX": {
+    "body": "lb_GETANCHORINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETANCHORINDEX"
+  },
+  "lb_GETCARETINDEX": {
+    "body": "lb_GETCARETINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETCARETINDEX"
+  },
+  "lb_GETCOUNT": {
+    "body": "lb_GETCOUNT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETCOUNT"
+  },
+  "lb_GETCURSEL": {
+    "body": "lb_GETCURSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETCURSEL"
+  },
+  "lb_GETHORIZONTALEXTENT": {
+    "body": "lb_GETHORIZONTALEXTENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETHORIZONTALEXTENT"
+  },
+  "lb_GETITEMDATA": {
+    "body": "lb_GETITEMDATA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETITEMDATA"
+  },
+  "lb_GETITEMHEIGHT": {
+    "body": "lb_GETITEMHEIGHT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETITEMHEIGHT"
+  },
+  "lb_GETITEMRECT": {
+    "body": "lb_GETITEMRECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETITEMRECT"
+  },
+  "lb_GETLOCALE": {
+    "body": "lb_GETLOCALE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETLOCALE"
+  },
+  "lb_GETSEL": {
+    "body": "lb_GETSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETSEL"
+  },
+  "lb_GETSELCOUNT": {
+    "body": "lb_GETSELCOUNT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETSELCOUNT"
+  },
+  "lb_GETSELITEMS": {
+    "body": "lb_GETSELITEMS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETSELITEMS"
+  },
+  "lb_GETTEXT": {
+    "body": "lb_GETTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETTEXT"
+  },
+  "lb_GETTEXTLEN": {
+    "body": "lb_GETTEXTLEN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETTEXTLEN"
+  },
+  "lb_GETTOPINDEX": {
+    "body": "lb_GETTOPINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_GETTOPINDEX"
+  },
+  "lb_INITSTORAGE": {
+    "body": "lb_INITSTORAGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_INITSTORAGE"
+  },
+  "lb_INSERTSTRING": {
+    "body": "lb_INSERTSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_INSERTSTRING"
+  },
+  "lb_ITEMFROMPOINT": {
+    "body": "lb_ITEMFROMPOINT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_ITEMFROMPOINT"
+  },
+  "lb_MSGMAX": {
+    "body": "lb_MSGMAX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_MSGMAX"
+  },
+  "lb_MULTIPLEADDSTRING": {
+    "body": "lb_MULTIPLEADDSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_MULTIPLEADDSTRING"
+  },
+  "lb_RESETCONTENT": {
+    "body": "lb_RESETCONTENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_RESETCONTENT"
+  },
+  "lb_SELECTSTRING": {
+    "body": "lb_SELECTSTRING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SELECTSTRING"
+  },
+  "lb_SELITEMRANGE": {
+    "body": "lb_SELITEMRANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SELITEMRANGE"
+  },
+  "lb_SELITEMRANGEEX": {
+    "body": "lb_SELITEMRANGEEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SELITEMRANGEEX"
+  },
+  "lb_SETANCHORINDEX": {
+    "body": "lb_SETANCHORINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETANCHORINDEX"
+  },
+  "lb_SETCARETINDEX": {
+    "body": "lb_SETCARETINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETCARETINDEX"
+  },
+  "lb_SETCOLUMNWIDTH": {
+    "body": "lb_SETCOLUMNWIDTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETCOLUMNWIDTH"
+  },
+  "lb_SETCOUNT": {
+    "body": "lb_SETCOUNT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETCOUNT"
+  },
+  "lb_SETCURSEL": {
+    "body": "lb_SETCURSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETCURSEL"
+  },
+  "lb_SETHORIZONTALEXTENT": {
+    "body": "lb_SETHORIZONTALEXTENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETHORIZONTALEXTENT"
+  },
+  "lb_SETITEMDATA": {
+    "body": "lb_SETITEMDATA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETITEMDATA"
+  },
+  "lb_SETITEMHEIGHT": {
+    "body": "lb_SETITEMHEIGHT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETITEMHEIGHT"
+  },
+  "lb_SETLOCALE": {
+    "body": "lb_SETLOCALE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETLOCALE"
+  },
+  "lb_SETSEL": {
+    "body": "lb_SETSEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETSEL"
+  },
+  "lb_SETTABSTOPS": {
+    "body": "lb_SETTABSTOPS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETTABSTOPS"
+  },
+  "lb_SETTOPINDEX": {
+    "body": "lb_SETTOPINDEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lb_SETTOPINDEX"
+  },
+  "lvm_FIRST": {
+    "body": "lvm_FIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "lvm_FIRST"
+  },
+  "pbm_DELTAPOS": {
+    "body": "pbm_DELTAPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "pbm_DELTAPOS"
+  },
+  "pbm_GETPOS": {
+    "body": "pbm_GETPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "pbm_GETPOS"
+  },
+  "pbm_SETMARQUEE": {
+    "body": "pbm_SETMARQUEE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "pbm_SETMARQUEE"
+  },
+  "pbm_SETPOS": {
+    "body": "pbm_SETPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "pbm_SETPOS"
+  },
+  "pbm_SETRANGE": {
+    "body": "pbm_SETRANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "pbm_SETRANGE"
+  },
+  "pbm_SETSTEP": {
+    "body": "pbm_SETSTEP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "pbm_SETSTEP"
+  },
+  "pbm_STEPIT": {
+    "body": "pbm_STEPIT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "pbm_STEPIT"
+  },
+  "sb_CONST_ALPHA": {
+    "body": "sb_CONST_ALPHA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sb_CONST_ALPHA"
+  },
+  "sb_GRAD_RECT": {
+    "body": "sb_GRAD_RECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sb_GRAD_RECT"
+  },
+  "sb_GRAD_TRI": {
+    "body": "sb_GRAD_TRI",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sb_GRAD_TRI"
+  },
+  "sb_NONE": {
+    "body": "sb_NONE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sb_NONE"
+  },
+  "sb_PIXEL_ALPHA": {
+    "body": "sb_PIXEL_ALPHA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sb_PIXEL_ALPHA"
+  },
+  "sb_PREMULT_ALPHA": {
+    "body": "sb_PREMULT_ALPHA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sb_PREMULT_ALPHA"
+  },
+  "sb_SIMPLEID": {
+    "body": "sb_SIMPLEID",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sb_SIMPLEID"
+  },
+  "sbm_ENABLE_ARROWS": {
+    "body": "sbm_ENABLE_ARROWS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_ENABLE_ARROWS"
+  },
+  "sbm_GETPOS": {
+    "body": "sbm_GETPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_GETPOS"
+  },
+  "sbm_GETRANGE": {
+    "body": "sbm_GETRANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_GETRANGE"
+  },
+  "sbm_GETSCROLLINFO": {
+    "body": "sbm_GETSCROLLINFO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_GETSCROLLINFO"
+  },
+  "sbm_SETPOS": {
+    "body": "sbm_SETPOS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_SETPOS"
+  },
+  "sbm_SETRANGE": {
+    "body": "sbm_SETRANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_SETRANGE"
+  },
+  "sbm_SETRANGEREDRAW": {
+    "body": "sbm_SETRANGEREDRAW",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_SETRANGEREDRAW"
+  },
+  "sbm_SETSCROLLINFO": {
+    "body": "sbm_SETSCROLLINFO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sbm_SETSCROLLINFO"
+  },
+  "stm_GETICON": {
+    "body": "stm_GETICON",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_GETICON"
+  },
+  "stm_GETIMAGE": {
+    "body": "stm_GETIMAGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_GETIMAGE"
+  },
+  "stm_MSGMAX": {
+    "body": "stm_MSGMAX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_MSGMAX"
+  },
+  "stm_ONLY_THIS_INTERFACE": {
+    "body": "stm_ONLY_THIS_INTERFACE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_ONLY_THIS_INTERFACE"
+  },
+  "stm_ONLY_THIS_NAME": {
+    "body": "stm_ONLY_THIS_NAME",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_ONLY_THIS_NAME"
+  },
+  "stm_ONLY_THIS_PROTOCOL": {
+    "body": "stm_ONLY_THIS_PROTOCOL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_ONLY_THIS_PROTOCOL"
+  },
+  "stm_ONLY_THIS_TYPE": {
+    "body": "stm_ONLY_THIS_TYPE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_ONLY_THIS_TYPE"
+  },
+  "stm_SETICON": {
+    "body": "stm_SETICON",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_SETICON"
+  },
+  "stm_SETIMAGE": {
+    "body": "stm_SETIMAGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "stm_SETIMAGE"
+  },
+  "sw_FORCEMINIMIZE": {
+    "body": "sw_FORCEMINIMIZE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_FORCEMINIMIZE"
+  },
+  "sw_HIDE": {
+    "body": "sw_HIDE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_HIDE"
+  },
+  "sw_MAX": {
+    "body": "sw_MAX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_MAX"
+  },
+  "sw_MAXIMIZE": {
+    "body": "sw_MAXIMIZE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_MAXIMIZE"
+  },
+  "sw_MINIMIZE": {
+    "body": "sw_MINIMIZE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_MINIMIZE"
+  },
+  "sw_NORMAL": {
+    "body": "sw_NORMAL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_NORMAL"
+  },
+  "sw_RESTORE": {
+    "body": "sw_RESTORE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_RESTORE"
+  },
+  "sw_SHOW": {
+    "body": "sw_SHOW",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOW"
+  },
+  "sw_SHOWDEFAULT": {
+    "body": "sw_SHOWDEFAULT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOWDEFAULT"
+  },
+  "sw_SHOWMAXIMIZED": {
+    "body": "sw_SHOWMAXIMIZED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOWMAXIMIZED"
+  },
+  "sw_SHOWMINIMIZED": {
+    "body": "sw_SHOWMINIMIZED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOWMINIMIZED"
+  },
+  "sw_SHOWMINNOACTIVE": {
+    "body": "sw_SHOWMINNOACTIVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOWMINNOACTIVE"
+  },
+  "sw_SHOWNA": {
+    "body": "sw_SHOWNA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOWNA"
+  },
+  "sw_SHOWNOACTIVATE": {
+    "body": "sw_SHOWNOACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOWNOACTIVATE"
+  },
+  "sw_SHOWNORMAL": {
+    "body": "sw_SHOWNORMAL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "sw_SHOWNORMAL"
+  },
+  "tcm_FIRST": {
+    "body": "tcm_FIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "tcm_FIRST"
+  },
+  "wm_ACTIVATE": {
+    "body": "wm_ACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ACTIVATE"
+  },
+  "wm_ACTIVATEAPP": {
+    "body": "wm_ACTIVATEAPP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ACTIVATEAPP"
+  },
+  "wm_AFXFIRST": {
+    "body": "wm_AFXFIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_AFXFIRST"
+  },
+  "wm_AFXLAST": {
+    "body": "wm_AFXLAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_AFXLAST"
+  },
+  "wm_APP": {
+    "body": "wm_APP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_APP"
+  },
+  "wm_APPCOMMAND": {
+    "body": "wm_APPCOMMAND",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_APPCOMMAND"
+  },
+  "wm_ASKCBFORMATNAME": {
+    "body": "wm_ASKCBFORMATNAME",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ASKCBFORMATNAME"
+  },
+  "wm_CANCELJOURNAL": {
+    "body": "wm_CANCELJOURNAL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CANCELJOURNAL"
+  },
+  "wm_CANCELMODE": {
+    "body": "wm_CANCELMODE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CANCELMODE"
+  },
+  "wm_CAPTURECHANGED": {
+    "body": "wm_CAPTURECHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CAPTURECHANGED"
+  },
+  "wm_CHANGECBCHAIN": {
+    "body": "wm_CHANGECBCHAIN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CHANGECBCHAIN"
+  },
+  "wm_CHANGEUISTATE": {
+    "body": "wm_CHANGEUISTATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CHANGEUISTATE"
+  },
+  "wm_CHAR": {
+    "body": "wm_CHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CHAR"
+  },
+  "wm_CHARTOITEM": {
+    "body": "wm_CHARTOITEM",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CHARTOITEM"
+  },
+  "wm_CHILDACTIVATE": {
+    "body": "wm_CHILDACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CHILDACTIVATE"
+  },
+  "wm_CLEAR": {
+    "body": "wm_CLEAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CLEAR"
+  },
+  "wm_CLOSE": {
+    "body": "wm_CLOSE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CLOSE"
+  },
+  "wm_COMMAND": {
+    "body": "wm_COMMAND",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_COMMAND"
+  },
+  "wm_COMMNOTIFY": {
+    "body": "wm_COMMNOTIFY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_COMMNOTIFY"
+  },
+  "wm_COMPACTING": {
+    "body": "wm_COMPACTING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_COMPACTING"
+  },
+  "wm_COMPAREITEM": {
+    "body": "wm_COMPAREITEM",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_COMPAREITEM"
+  },
+  "wm_CONTEXTMENU": {
+    "body": "wm_CONTEXTMENU",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CONTEXTMENU"
+  },
+  "wm_CONVERTREQUESTEX": {
+    "body": "wm_CONVERTREQUESTEX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CONVERTREQUESTEX"
+  },
+  "wm_COPY": {
+    "body": "wm_COPY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_COPY"
+  },
+  "wm_COPYDATA": {
+    "body": "wm_COPYDATA",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_COPYDATA"
+  },
+  "wm_CREATE": {
+    "body": "wm_CREATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CREATE"
+  },
+  "wm_CTLCOLOR": {
+    "body": "wm_CTLCOLOR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLOR"
+  },
+  "wm_CTLCOLORBTN": {
+    "body": "wm_CTLCOLORBTN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLORBTN"
+  },
+  "wm_CTLCOLORDLG": {
+    "body": "wm_CTLCOLORDLG",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLORDLG"
+  },
+  "wm_CTLCOLOREDIT": {
+    "body": "wm_CTLCOLOREDIT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLOREDIT"
+  },
+  "wm_CTLCOLORLISTBOX": {
+    "body": "wm_CTLCOLORLISTBOX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLORLISTBOX"
+  },
+  "wm_CTLCOLORMSGBOX": {
+    "body": "wm_CTLCOLORMSGBOX",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLORMSGBOX"
+  },
+  "wm_CTLCOLORSCROLLBAR": {
+    "body": "wm_CTLCOLORSCROLLBAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLORSCROLLBAR"
+  },
+  "wm_CTLCOLORSTATIC": {
+    "body": "wm_CTLCOLORSTATIC",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CTLCOLORSTATIC"
+  },
+  "wm_CUT": {
+    "body": "wm_CUT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_CUT"
+  },
+  "wm_DDE_FIRST": {
+    "body": "wm_DDE_FIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DDE_FIRST"
+  },
+  "wm_DEADCHAR": {
+    "body": "wm_DEADCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DEADCHAR"
+  },
+  "wm_DELETEITEM": {
+    "body": "wm_DELETEITEM",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DELETEITEM"
+  },
+  "wm_DESTROY": {
+    "body": "wm_DESTROY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DESTROY"
+  },
+  "wm_DESTROYCLIPBOARD": {
+    "body": "wm_DESTROYCLIPBOARD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DESTROYCLIPBOARD"
+  },
+  "wm_DEVICECHANGE": {
+    "body": "wm_DEVICECHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DEVICECHANGE"
+  },
+  "wm_DEVMODECHANGE": {
+    "body": "wm_DEVMODECHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DEVMODECHANGE"
+  },
+  "wm_DISPLAYCHANGE": {
+    "body": "wm_DISPLAYCHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DISPLAYCHANGE"
+  },
+  "wm_DRAWCLIPBOARD": {
+    "body": "wm_DRAWCLIPBOARD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DRAWCLIPBOARD"
+  },
+  "wm_DRAWITEM": {
+    "body": "wm_DRAWITEM",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DRAWITEM"
+  },
+  "wm_DROPFILES": {
+    "body": "wm_DROPFILES",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_DROPFILES"
+  },
+  "wm_ENABLE": {
+    "body": "wm_ENABLE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ENABLE"
+  },
+  "wm_ENDSESSION": {
+    "body": "wm_ENDSESSION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ENDSESSION"
+  },
+  "wm_ENTERIDLE": {
+    "body": "wm_ENTERIDLE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ENTERIDLE"
+  },
+  "wm_ENTERMENULOOP": {
+    "body": "wm_ENTERMENULOOP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ENTERMENULOOP"
+  },
+  "wm_ENTERSIZEMOVE": {
+    "body": "wm_ENTERSIZEMOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ENTERSIZEMOVE"
+  },
+  "wm_ERASEBKGND": {
+    "body": "wm_ERASEBKGND",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ERASEBKGND"
+  },
+  "wm_EXITMENULOOP": {
+    "body": "wm_EXITMENULOOP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_EXITMENULOOP"
+  },
+  "wm_EXITSIZEMOVE": {
+    "body": "wm_EXITSIZEMOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_EXITSIZEMOVE"
+  },
+  "wm_FONTCHANGE": {
+    "body": "wm_FONTCHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_FONTCHANGE"
+  },
+  "wm_GETDLGCODE": {
+    "body": "wm_GETDLGCODE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETDLGCODE"
+  },
+  "wm_GETFONT": {
+    "body": "wm_GETFONT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETFONT"
+  },
+  "wm_GETHOTKEY": {
+    "body": "wm_GETHOTKEY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETHOTKEY"
+  },
+  "wm_GETICON": {
+    "body": "wm_GETICON",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETICON"
+  },
+  "wm_GETMINMAXINFO": {
+    "body": "wm_GETMINMAXINFO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETMINMAXINFO"
+  },
+  "wm_GETOBJECT": {
+    "body": "wm_GETOBJECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETOBJECT"
+  },
+  "wm_GETTEXT": {
+    "body": "wm_GETTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETTEXT"
+  },
+  "wm_GETTEXTLENGTH": {
+    "body": "wm_GETTEXTLENGTH",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_GETTEXTLENGTH"
+  },
+  "wm_HANDHELDFIRST": {
+    "body": "wm_HANDHELDFIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_HANDHELDFIRST"
+  },
+  "wm_HANDHELDLAST": {
+    "body": "wm_HANDHELDLAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_HANDHELDLAST"
+  },
+  "wm_HELP": {
+    "body": "wm_HELP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_HELP"
+  },
+  "wm_HOTKEY": {
+    "body": "wm_HOTKEY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_HOTKEY"
+  },
+  "wm_HSCROLL": {
+    "body": "wm_HSCROLL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_HSCROLL"
+  },
+  "wm_HSCROLLCLIPBOARD": {
+    "body": "wm_HSCROLLCLIPBOARD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_HSCROLLCLIPBOARD"
+  },
+  "wm_ICONERASEBKGND": {
+    "body": "wm_ICONERASEBKGND",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_ICONERASEBKGND"
+  },
+  "wm_IME_CHAR": {
+    "body": "wm_IME_CHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_CHAR"
+  },
+  "wm_IME_COMPOSITION": {
+    "body": "wm_IME_COMPOSITION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_COMPOSITION"
+  },
+  "wm_IME_COMPOSITIONFULL": {
+    "body": "wm_IME_COMPOSITIONFULL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_COMPOSITIONFULL"
+  },
+  "wm_IME_CONTROL": {
+    "body": "wm_IME_CONTROL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_CONTROL"
+  },
+  "wm_IME_ENDCOMPOSITION": {
+    "body": "wm_IME_ENDCOMPOSITION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_ENDCOMPOSITION"
+  },
+  "wm_IME_KEYDOWN": {
+    "body": "wm_IME_KEYDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_KEYDOWN"
+  },
+  "wm_IME_KEYLAST": {
+    "body": "wm_IME_KEYLAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_KEYLAST"
+  },
+  "wm_IME_KEYUP": {
+    "body": "wm_IME_KEYUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_KEYUP"
+  },
+  "wm_IME_NOTIFY": {
+    "body": "wm_IME_NOTIFY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_NOTIFY"
+  },
+  "wm_IME_REQUEST": {
+    "body": "wm_IME_REQUEST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_REQUEST"
+  },
+  "wm_IME_SELECT": {
+    "body": "wm_IME_SELECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_SELECT"
+  },
+  "wm_IME_SETCONTEXT": {
+    "body": "wm_IME_SETCONTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_SETCONTEXT"
+  },
+  "wm_IME_STARTCOMPOSITION": {
+    "body": "wm_IME_STARTCOMPOSITION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_IME_STARTCOMPOSITION"
+  },
+  "wm_INITDIALOG": {
+    "body": "wm_INITDIALOG",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_INITDIALOG"
+  },
+  "wm_INITMENU": {
+    "body": "wm_INITMENU",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_INITMENU"
+  },
+  "wm_INITMENUPOPUP": {
+    "body": "wm_INITMENUPOPUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_INITMENUPOPUP"
+  },
+  "wm_INPUT": {
+    "body": "wm_INPUT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_INPUT"
+  },
+  "wm_INPUTLANGCHANGE": {
+    "body": "wm_INPUTLANGCHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_INPUTLANGCHANGE"
+  },
+  "wm_INPUTLANGCHANGEREQUEST": {
+    "body": "wm_INPUTLANGCHANGEREQUEST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_INPUTLANGCHANGEREQUEST"
+  },
+  "wm_KEYDOWN": {
+    "body": "wm_KEYDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_KEYDOWN"
+  },
+  "wm_KEYFIRST": {
+    "body": "wm_KEYFIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_KEYFIRST"
+  },
+  "wm_KEYLAST": {
+    "body": "wm_KEYLAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_KEYLAST"
+  },
+  "wm_KEYUP": {
+    "body": "wm_KEYUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_KEYUP"
+  },
+  "wm_KILLFOCUS": {
+    "body": "wm_KILLFOCUS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_KILLFOCUS"
+  },
+  "wm_LBUTTONDBLCLK": {
+    "body": "wm_LBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_LBUTTONDBLCLK"
+  },
+  "wm_LBUTTONDOWN": {
+    "body": "wm_LBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_LBUTTONDOWN"
+  },
+  "wm_LBUTTONUP": {
+    "body": "wm_LBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_LBUTTONUP"
+  },
+  "wm_MBUTTONDBLCLK": {
+    "body": "wm_MBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MBUTTONDBLCLK"
+  },
+  "wm_MBUTTONDOWN": {
+    "body": "wm_MBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MBUTTONDOWN"
+  },
+  "wm_MBUTTONUP": {
+    "body": "wm_MBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MBUTTONUP"
+  },
+  "wm_MDIACTIVATE": {
+    "body": "wm_MDIACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDIACTIVATE"
+  },
+  "wm_MDICASCADE": {
+    "body": "wm_MDICASCADE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDICASCADE"
+  },
+  "wm_MDICREATE": {
+    "body": "wm_MDICREATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDICREATE"
+  },
+  "wm_MDIDESTROY": {
+    "body": "wm_MDIDESTROY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDIDESTROY"
+  },
+  "wm_MDIGETACTIVE": {
+    "body": "wm_MDIGETACTIVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDIGETACTIVE"
+  },
+  "wm_MDIICONARRANGE": {
+    "body": "wm_MDIICONARRANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDIICONARRANGE"
+  },
+  "wm_MDIMAXIMIZE": {
+    "body": "wm_MDIMAXIMIZE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDIMAXIMIZE"
+  },
+  "wm_MDINEXT": {
+    "body": "wm_MDINEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDINEXT"
+  },
+  "wm_MDIREFRESHMENU": {
+    "body": "wm_MDIREFRESHMENU",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDIREFRESHMENU"
+  },
+  "wm_MDIRESTORE": {
+    "body": "wm_MDIRESTORE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDIRESTORE"
+  },
+  "wm_MDISETMENU": {
+    "body": "wm_MDISETMENU",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDISETMENU"
+  },
+  "wm_MDITILE": {
+    "body": "wm_MDITILE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MDITILE"
+  },
+  "wm_MEASUREITEM": {
+    "body": "wm_MEASUREITEM",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MEASUREITEM"
+  },
+  "wm_MENUCHAR": {
+    "body": "wm_MENUCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MENUCHAR"
+  },
+  "wm_MENUCOMMAND": {
+    "body": "wm_MENUCOMMAND",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MENUCOMMAND"
+  },
+  "wm_MENUDRAG": {
+    "body": "wm_MENUDRAG",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MENUDRAG"
+  },
+  "wm_MENUGETOBJECT": {
+    "body": "wm_MENUGETOBJECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MENUGETOBJECT"
+  },
+  "wm_MENURBUTTONUP": {
+    "body": "wm_MENURBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MENURBUTTONUP"
+  },
+  "wm_MENUSELECT": {
+    "body": "wm_MENUSELECT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MENUSELECT"
+  },
+  "wm_MOUSEACTIVATE": {
+    "body": "wm_MOUSEACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOUSEACTIVATE"
+  },
+  "wm_MOUSEFIRST": {
+    "body": "wm_MOUSEFIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOUSEFIRST"
+  },
+  "wm_MOUSEHOVER": {
+    "body": "wm_MOUSEHOVER",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOUSEHOVER"
+  },
+  "wm_MOUSELAST": {
+    "body": "wm_MOUSELAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOUSELAST"
+  },
+  "wm_MOUSELEAVE": {
+    "body": "wm_MOUSELEAVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOUSELEAVE"
+  },
+  "wm_MOUSEMOVE": {
+    "body": "wm_MOUSEMOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOUSEMOVE"
+  },
+  "wm_MOUSEWHEEL": {
+    "body": "wm_MOUSEWHEEL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOUSEWHEEL"
+  },
+  "wm_MOVE": {
+    "body": "wm_MOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOVE"
+  },
+  "wm_MOVING": {
+    "body": "wm_MOVING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_MOVING"
+  },
+  "wm_NCACTIVATE": {
+    "body": "wm_NCACTIVATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCACTIVATE"
+  },
+  "wm_NCCALCSIZE": {
+    "body": "wm_NCCALCSIZE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCCALCSIZE"
+  },
+  "wm_NCCREATE": {
+    "body": "wm_NCCREATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCCREATE"
+  },
+  "wm_NCDESTROY": {
+    "body": "wm_NCDESTROY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCDESTROY"
+  },
+  "wm_NCHITTEST": {
+    "body": "wm_NCHITTEST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCHITTEST"
+  },
+  "wm_NCLBUTTONDBLCLK": {
+    "body": "wm_NCLBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCLBUTTONDBLCLK"
+  },
+  "wm_NCLBUTTONDOWN": {
+    "body": "wm_NCLBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCLBUTTONDOWN"
+  },
+  "wm_NCLBUTTONUP": {
+    "body": "wm_NCLBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCLBUTTONUP"
+  },
+  "wm_NCMBUTTONDBLCLK": {
+    "body": "wm_NCMBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCMBUTTONDBLCLK"
+  },
+  "wm_NCMBUTTONDOWN": {
+    "body": "wm_NCMBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCMBUTTONDOWN"
+  },
+  "wm_NCMBUTTONUP": {
+    "body": "wm_NCMBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCMBUTTONUP"
+  },
+  "wm_NCMOUSEHOVER": {
+    "body": "wm_NCMOUSEHOVER",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCMOUSEHOVER"
+  },
+  "wm_NCMOUSELEAVE": {
+    "body": "wm_NCMOUSELEAVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCMOUSELEAVE"
+  },
+  "wm_NCMOUSEMOVE": {
+    "body": "wm_NCMOUSEMOVE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCMOUSEMOVE"
+  },
+  "wm_NCPAINT": {
+    "body": "wm_NCPAINT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCPAINT"
+  },
+  "wm_NCRBUTTONDBLCLK": {
+    "body": "wm_NCRBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCRBUTTONDBLCLK"
+  },
+  "wm_NCRBUTTONDOWN": {
+    "body": "wm_NCRBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCRBUTTONDOWN"
+  },
+  "wm_NCRBUTTONUP": {
+    "body": "wm_NCRBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCRBUTTONUP"
+  },
+  "wm_NCXBUTTONDBLCLK": {
+    "body": "wm_NCXBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCXBUTTONDBLCLK"
+  },
+  "wm_NCXBUTTONDOWN": {
+    "body": "wm_NCXBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCXBUTTONDOWN"
+  },
+  "wm_NCXBUTTONUP": {
+    "body": "wm_NCXBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NCXBUTTONUP"
+  },
+  "wm_NEXTDLGCTL": {
+    "body": "wm_NEXTDLGCTL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NEXTDLGCTL"
+  },
+  "wm_NEXTMENU": {
+    "body": "wm_NEXTMENU",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NEXTMENU"
+  },
+  "wm_NOTIFY": {
+    "body": "wm_NOTIFY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NOTIFY"
+  },
+  "wm_NOTIFYFORMAT": {
+    "body": "wm_NOTIFYFORMAT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NOTIFYFORMAT"
+  },
+  "wm_NULL": {
+    "body": "wm_NULL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_NULL"
+  },
+  "wm_PAINT": {
+    "body": "wm_PAINT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PAINT"
+  },
+  "wm_PAINTCLIPBOARD": {
+    "body": "wm_PAINTCLIPBOARD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PAINTCLIPBOARD"
+  },
+  "wm_PAINTICON": {
+    "body": "wm_PAINTICON",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PAINTICON"
+  },
+  "wm_PALETTECHANGED": {
+    "body": "wm_PALETTECHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PALETTECHANGED"
+  },
+  "wm_PALETTEISCHANGING": {
+    "body": "wm_PALETTEISCHANGING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PALETTEISCHANGING"
+  },
+  "wm_PARENTNOTIFY": {
+    "body": "wm_PARENTNOTIFY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PARENTNOTIFY"
+  },
+  "wm_PASTE": {
+    "body": "wm_PASTE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PASTE"
+  },
+  "wm_PENWINFIRST": {
+    "body": "wm_PENWINFIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PENWINFIRST"
+  },
+  "wm_PENWINLAST": {
+    "body": "wm_PENWINLAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PENWINLAST"
+  },
+  "wm_POWER": {
+    "body": "wm_POWER",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_POWER"
+  },
+  "wm_POWERBROADCAST": {
+    "body": "wm_POWERBROADCAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_POWERBROADCAST"
+  },
+  "wm_PRINT": {
+    "body": "wm_PRINT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PRINT"
+  },
+  "wm_PRINTCLIENT": {
+    "body": "wm_PRINTCLIENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_PRINTCLIENT"
+  },
+  "wm_QUERYDRAGICON": {
+    "body": "wm_QUERYDRAGICON",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_QUERYDRAGICON"
+  },
+  "wm_QUERYENDSESSION": {
+    "body": "wm_QUERYENDSESSION",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_QUERYENDSESSION"
+  },
+  "wm_QUERYNEWPALETTE": {
+    "body": "wm_QUERYNEWPALETTE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_QUERYNEWPALETTE"
+  },
+  "wm_QUERYOPEN": {
+    "body": "wm_QUERYOPEN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_QUERYOPEN"
+  },
+  "wm_QUERYUISTATE": {
+    "body": "wm_QUERYUISTATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_QUERYUISTATE"
+  },
+  "wm_QUEUESYNC": {
+    "body": "wm_QUEUESYNC",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_QUEUESYNC"
+  },
+  "wm_QUIT": {
+    "body": "wm_QUIT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_QUIT"
+  },
+  "wm_RASDIALEVENT": {
+    "body": "wm_RASDIALEVENT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_RASDIALEVENT"
+  },
+  "wm_RBUTTONDBLCLK": {
+    "body": "wm_RBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_RBUTTONDBLCLK"
+  },
+  "wm_RBUTTONDOWN": {
+    "body": "wm_RBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_RBUTTONDOWN"
+  },
+  "wm_RBUTTONUP": {
+    "body": "wm_RBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_RBUTTONUP"
+  },
+  "wm_RENDERALLFORMATS": {
+    "body": "wm_RENDERALLFORMATS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_RENDERALLFORMATS"
+  },
+  "wm_RENDERFORMAT": {
+    "body": "wm_RENDERFORMAT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_RENDERFORMAT"
+  },
+  "wm_SETCURSOR": {
+    "body": "wm_SETCURSOR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETCURSOR"
+  },
+  "wm_SETFOCUS": {
+    "body": "wm_SETFOCUS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETFOCUS"
+  },
+  "wm_SETFONT": {
+    "body": "wm_SETFONT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETFONT"
+  },
+  "wm_SETHOTKEY": {
+    "body": "wm_SETHOTKEY",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETHOTKEY"
+  },
+  "wm_SETICON": {
+    "body": "wm_SETICON",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETICON"
+  },
+  "wm_SETREDRAW": {
+    "body": "wm_SETREDRAW",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETREDRAW"
+  },
+  "wm_SETTEXT": {
+    "body": "wm_SETTEXT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETTEXT"
+  },
+  "wm_SETTINGCHANGE": {
+    "body": "wm_SETTINGCHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SETTINGCHANGE"
+  },
+  "wm_SHOWWINDOW": {
+    "body": "wm_SHOWWINDOW",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SHOWWINDOW"
+  },
+  "wm_SIZE": {
+    "body": "wm_SIZE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SIZE"
+  },
+  "wm_SIZECLIPBOARD": {
+    "body": "wm_SIZECLIPBOARD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SIZECLIPBOARD"
+  },
+  "wm_SIZING": {
+    "body": "wm_SIZING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SIZING"
+  },
+  "wm_SPOOLERSTATUS": {
+    "body": "wm_SPOOLERSTATUS",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SPOOLERSTATUS"
+  },
+  "wm_STYLECHANGED": {
+    "body": "wm_STYLECHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_STYLECHANGED"
+  },
+  "wm_STYLECHANGING": {
+    "body": "wm_STYLECHANGING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_STYLECHANGING"
+  },
+  "wm_SYNCPAINT": {
+    "body": "wm_SYNCPAINT",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SYNCPAINT"
+  },
+  "wm_SYSCHAR": {
+    "body": "wm_SYSCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SYSCHAR"
+  },
+  "wm_SYSCOLORCHANGE": {
+    "body": "wm_SYSCOLORCHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SYSCOLORCHANGE"
+  },
+  "wm_SYSCOMMAND": {
+    "body": "wm_SYSCOMMAND",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SYSCOMMAND"
+  },
+  "wm_SYSDEADCHAR": {
+    "body": "wm_SYSDEADCHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SYSDEADCHAR"
+  },
+  "wm_SYSKEYDOWN": {
+    "body": "wm_SYSKEYDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SYSKEYDOWN"
+  },
+  "wm_SYSKEYUP": {
+    "body": "wm_SYSKEYUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_SYSKEYUP"
+  },
+  "wm_TABLET_FIRST": {
+    "body": "wm_TABLET_FIRST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_TABLET_FIRST"
+  },
+  "wm_TABLET_LAST": {
+    "body": "wm_TABLET_LAST",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_TABLET_LAST"
+  },
+  "wm_TCARD": {
+    "body": "wm_TCARD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_TCARD"
+  },
+  "wm_THEMECHANGED": {
+    "body": "wm_THEMECHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_THEMECHANGED"
+  },
+  "wm_TIMECHANGE": {
+    "body": "wm_TIMECHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_TIMECHANGE"
+  },
+  "wm_TIMER": {
+    "body": "wm_TIMER",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_TIMER"
+  },
+  "wm_UNDO": {
+    "body": "wm_UNDO",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_UNDO"
+  },
+  "wm_UNICHAR": {
+    "body": "wm_UNICHAR",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_UNICHAR"
+  },
+  "wm_UNINITMENUPOPUP": {
+    "body": "wm_UNINITMENUPOPUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_UNINITMENUPOPUP"
+  },
+  "wm_UPDATEUISTATE": {
+    "body": "wm_UPDATEUISTATE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_UPDATEUISTATE"
+  },
+  "wm_USER": {
+    "body": "wm_USER",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_USER"
+  },
+  "wm_USERCHANGED": {
+    "body": "wm_USERCHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_USERCHANGED"
+  },
+  "wm_VKEYTOITEM": {
+    "body": "wm_VKEYTOITEM",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_VKEYTOITEM"
+  },
+  "wm_VSCROLL": {
+    "body": "wm_VSCROLL",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_VSCROLL"
+  },
+  "wm_VSCROLLCLIPBOARD": {
+    "body": "wm_VSCROLLCLIPBOARD",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_VSCROLLCLIPBOARD"
+  },
+  "wm_WINDOWPOSCHANGED": {
+    "body": "wm_WINDOWPOSCHANGED",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_WINDOWPOSCHANGED"
+  },
+  "wm_WINDOWPOSCHANGING": {
+    "body": "wm_WINDOWPOSCHANGING",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_WINDOWPOSCHANGING"
+  },
+  "wm_WININICHANGE": {
+    "body": "wm_WININICHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_WININICHANGE"
+  },
+  "wm_WTSSESSION_CHANGE": {
+    "body": "wm_WTSSESSION_CHANGE",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_WTSSESSION_CHANGE"
+  },
+  "wm_XBUTTONDBLCLK": {
+    "body": "wm_XBUTTONDBLCLK",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_XBUTTONDBLCLK"
+  },
+  "wm_XBUTTONDOWN": {
+    "body": "wm_XBUTTONDOWN",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_XBUTTONDOWN"
+  },
+  "wm_XBUTTONUP": {
+    "body": "wm_XBUTTONUP",
+    "leftLabelHTML": "<span class='support function'>WinMessages</span>",
+    "prefix": "wm_XBUTTONUP"
+  },
+
+  "scaffold.Basic.json": "Scaffolding snippet",
+
+  "Basic Script": {
+    "body": "${1:variable} = do\n\tname \"${2:installer_name}\"\n\toutFile \"${3:${2:installer_name}}.exe\"\n\trequestExecutionLevel ${4:Admin}\n\tinstallDir \"$PROGRAMFILES/${5:${2:installer_name}}\"\n\n\tpage Components\n\tpage Directory\n\tpage InstFiles\n\n \tsection \"${6:section_name}\" [$7] $ do\n \t\t${8:-- your code here}",
+    "description": "Creates a basic installer template",
+    "prefix": "scaffold"
+  }
+}
