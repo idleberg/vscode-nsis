@@ -151,9 +151,9 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 
 Action                  |  Syntax       | Shortcut
 ------------------------|---------------|------------------------------------------------------------
-Compile NSIS            | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd><kbd>B</kbd>
-Compile NSIS (strict)   | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd><kbd>B</kbd>
-Transpile nsL Assembler | `source.nsl`  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd><kbd>B</kbd>
+Compile NSIS            | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Compile NSIS (strict)   | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Transpile nsL Assembler | `source.nsl`  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 
 ## License
 
