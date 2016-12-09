@@ -45,7 +45,8 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * WinVer
     * WordFunc
     * x64
-* IntelliSense for nsL Assembler
+* IntelliSense for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
+* IntelliSense for [Haskell](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
 
@@ -124,6 +125,8 @@ Interchangable word order of NSIS language and library functions
 
 Before you can build, make sure `makensis` is in your PATH [environmental variable](https://support.microsoft.com/en-us/kb/310519). Alternatively, you can specify the path to `makensis` in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
+#### makensis
+
 **Example:**
 
 ```json
@@ -133,6 +136,8 @@ Before you can build, make sure `makensis` is in your PATH [environmental variab
 
 To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings as errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
+#### nsL Transpiler
+
 As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 **Example:**
@@ -141,6 +146,14 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 "nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
 "nsis.nsl.customArguments": "/nomake /nopause",
 ```
+
+#### Shortcuts
+
+Action                  |  Syntax       | Shortcut
+------------------------|---------------|------------------------------------------------------------
+Compile NSIS            | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd><kbd>B</kbd>
+Compile NSIS (strict)   | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd><kbd>B</kbd>
+Transpile nsL Assembler | `source.nsl`  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd><kbd>B</kbd>
 
 ## License
 
