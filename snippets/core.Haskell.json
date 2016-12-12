@@ -256,6 +256,11 @@
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "page License"
   },
+  "plugin": {
+    "body": "plugin \"${1:String}\" \"${2:String}\" [${3:Exp}]$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "plugin"
+  },
   "readRegStr": {
     "body": "readRegStr ${1:HKEY} \"${2:String}\" \"${3:String}\"$0",
     "leftLabelHTML": "<span class='keyword'>K</span>",
