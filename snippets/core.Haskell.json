@@ -76,6 +76,11 @@
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "envVar"
   },
+  "event": {
+    "body": "event \"${1:String}\" \\$ do\n\t${3:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "event"
+  },
   "exec": {
     "body": "exec \"${1:String}\"$0",
     "leftLabelHTML": "<span class='keyword'>K</span>",
@@ -190,6 +195,26 @@
     "body": "onError (${1:Action}) (${2:ActionError})$0",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "onError"
+  },
+  "onPagePost": {
+    "body": "onPagePost \\$ do\n\t${2:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "onPagePost"
+  },
+  "onPagePre": {
+    "body": "onPagePre \\$ do\n\t${2:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "onPagePre"
+  },
+  "onPageShow": {
+    "body": "onPageShow \\$ do\n\t${2:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "onPageShow"
+  },
+  "onSelChange": {
+    "body": "onSelChange \\$ do\n\t${2:-- your code here}$0",
+    "leftLabelHTML": "<span class='keyword'>K</span>",
+    "prefix": "onSelChange"
   },
   "outFile": {
     "body": "outFile \"${1:String}.exe\"$0",
