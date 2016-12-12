@@ -155,6 +155,10 @@ Compile NSIS            | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>
 Compile NSIS (strict)   | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 Transpile nsL Assembler | `source.nsl`  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 
+### Task Runner
+
+If you prefer Visual Studio Code's in-built Task Runner to build scripts, you can create `tasks.json` in the project root using the *NSIS: Create Build Task* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
+
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0), unless noted otherwise.
