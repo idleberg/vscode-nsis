@@ -144,6 +144,10 @@
             {
                 "command": "extension.nsis.transpile-nsl",
                 "title": "NSIS: Transpile nsL code"
+            },
+            {
+                "command": "extension.nsis.create-build-task",
+                "title": "NSIS: Create Build Task"
             }
         ],
         "keybindings": [
