@@ -67,6 +67,11 @@
                     "default": true,
                     "description": "If `false` the output channel will only be shown on errors"
                 },
+                "nsis.alwaysOpenBuildTask": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Specify whether to open the newly created build task"
+                },
                 "nsis.nsl.pathToJar": {
                     "type": "string",
                     "default": null,
