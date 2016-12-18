@@ -637,14 +637,14 @@
   "plugin.Sections.json": "Sections plug-in",
 
   "decrypt": {
-    "body": "decrypt [${1:String}]$0",
+    "body": "atMostOneSection [${1:SectionId}]$0",
     "leftLabelHTML": "<span class='support function'>Sections</span>",
-    "prefix": "decrypt"
+    "prefix": "atMostOneSection"
   },
   "encrypt": {
-    "body": "encrypt [${1:String}]$0",
+    "body": "exactlyOneSection [${1:SectionId}]$0",
     "leftLabelHTML": "<span class='support function'>Sections</span>",
-    "prefix": "encrypt"
+    "prefix": "exactlyOneSection"
   },
 
   "plugin.Taskbar.json": "Tasbar plug-in",
