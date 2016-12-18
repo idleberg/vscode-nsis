@@ -3191,7 +3191,7 @@
   "scaffold.Basic.json": "Scaffolding snippet",
 
   "Basic Script": {
-    "body": "${1:variable} = do\n\tname \"${2:installer_name}\"\n\toutFile \"${3:${2:installer_name}}.exe\"\n\trequestExecutionLevel ${4:Admin}\n\tinstallDir \"$PROGRAMFILES/${5:${2:installer_name}}\"\n\n\tpage Components\n\tpage Directory\n\tpage InstFiles\n\n \tsection \"${6:section_name}\" [$7] $ do\n \t\t${8:-- your code here}",
+    "body": "${1:variable} = do\n\tname \"${2:installer_name}\"\n\toutFile \"${3:${2:installer_name}}.exe\"\n\trequestExecutionLevel ${4:Admin}\n\tinstallDir \"\\$PROGRAMFILES/${5:${2:installer_name}}\"\n\n\tpage Components\n\tpage Directory\n\tpage InstFiles\n\n \tsection \"${6:section_name}\" [$7] $ do\n \t\t${8:-- your code here}",
     "description": "Creates a basic installer template",
     "prefix": "scaffold"
   }
