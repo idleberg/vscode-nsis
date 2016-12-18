@@ -395,17 +395,17 @@
     "prefix": "InstallSilent silentlog"
   },
   "%LangStringLicense": {
-    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}\"$4",
+    "body": "LicenseLangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:license_path}\"$4",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "prefix": "LangStringLicense"
   },
   "%LangStringLicense rtf": {
-    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.rtf\"$4",
+    "body": "LicenseLangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:license_path}.rtf\"$4",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "prefix": "LangStringLicense rtf"
   },
   "%LangStringLicense txt": {
-    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$4",
+    "body": "LicenseLangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$4",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "prefix": "LangStringLicense txt"
   },
