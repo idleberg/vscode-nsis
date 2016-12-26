@@ -189,30 +189,6 @@
                     <key>name</key>
                     <string>constant.character.escape.nsl</string>
                 </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\${[\w\.:\^-]+}</string>
-                    <key>name</key>
-                    <string>constant.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\$\([\w\.:\^-]+\)</string>
-                    <key>name</key>
-                    <string>constant.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\$\w+</string>
-                    <key>name</key>
-                    <string>variable.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\b\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\b</string>
-                    <key>name</key>
-                    <string>variable.language.nsl</string>
-                </dict>
             </array>
         </dict>
 
@@ -247,30 +223,6 @@
                     <key>name</key>
                     <string>constant.character.escape.nsl</string>
                 </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\${[\w\.:\^-]+}</string>
-                    <key>name</key>
-                    <string>constant.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\$\([\w\.:\^-]+\)</string>
-                    <key>name</key>
-                    <string>constant.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\$\w+</string>
-                    <key>name</key>
-                    <string>variable.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\b\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\b</string>
-                    <key>name</key>
-                    <string>variable.language.nsl</string>
-                </dict>
             </array>
         </dict>
 
@@ -304,30 +256,6 @@
                     <string>\$\\.</string>
                     <key>name</key>
                     <string>constant.character.escape.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\${[\w\.:\^-]+}</string>
-                    <key>name</key>
-                    <string>constant.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\$\([\w\.:\^-]+\)</string>
-                    <key>name</key>
-                    <string>constant.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\$\w+</string>
-                    <key>name</key>
-                    <string>variable.other.nsl</string>
-                </dict>
-                <dict>
-                    <key>match</key>
-                    <string>\b\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\b</string>
-                    <key>name</key>
-                    <string>variable.language.nsl</string>
                 </dict>
             </array>
         </dict>
