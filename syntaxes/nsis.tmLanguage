@@ -188,6 +188,12 @@
             <array>
                 <dict>
                     <key>match</key>
+                    <string>\${2}\w*</string>
+                    <key>name</key>
+                    <string>constant.character.escape.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
                     <string>\$\\.</string>
                     <key>name</key>
                     <string>constant.character.escape.nsis</string>
@@ -245,6 +251,12 @@
             <array>
                 <dict>
                     <key>match</key>
+                    <string>\${2}\w*</string>
+                    <key>name</key>
+                    <string>constant.character.escape.nsis</string>
+                </dict>
+                <dict>
+                    <key>match</key>
                     <string>\$\\.</string>
                     <key>name</key>
                     <string>constant.character.escape.nsis</string>
@@ -300,6 +312,12 @@
             <string>string.quoted.back.nsis</string>
             <key>patterns</key>
             <array>
+                <dict>
+                    <key>match</key>
+                    <string>\${2}\w*</string>
+                    <key>name</key>
+                    <string>constant.character.escape.nsis</string>
+                </dict>
                 <dict>
                     <key>match</key>
                     <string>\$\\.</string>
