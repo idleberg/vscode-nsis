@@ -147,6 +147,20 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 "nsis.nsl.customArguments": "/nomake /nopause",
 ```
 
+#### Options
+
+You can tweak your default settings by editing your [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
+
+Setting               | Description
+----------------------|-----------------------------------------------------------
+`pathToMakensis`      | Specify the full path to `makensis`
+`compilerArguments`   | Specify the default arguments for `makensis`
+`showNotifications`   | Show build notifications indicating success or failure
+`alwaysShowOutput`    | If `false` the output channel will only be shown on errors
+`alwaysOpenBuildTask` | Specify whether to open the newly created build task
+`nsl.pathToJar`       | Specify the full path to `nsL.jar`
+`nsl.customArguments` | Specify the default arguments for nsL Assembler
+
 #### Shortcuts
 
 Action                  |  Syntax       | Shortcut
