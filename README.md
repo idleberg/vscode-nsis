@@ -159,6 +159,8 @@ Transpile nsL Assembler | `source.nsl`  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>
 
 If you prefer Visual Studio Code's in-built Task Runner to build scripts, you can create `tasks.json` in the project root using the *NSIS: Create Build Task* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
 
+**Note:** The created Task Runner follow the [User Settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
+
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0), unless noted otherwise.
