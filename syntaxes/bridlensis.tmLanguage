@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>fileTypes</key>
+    <array>
+        <string>bnsi</string>
+        <string>bnsh</string>
+        <string>bridle-nsi</string>
+        <string>bridle-nsis</string>
+        <string>bridle-nsh</string>
+    </array>
+
+    <key>name</key>
+    <string>BridleNSIS</string>
+    <key>patterns</key>
+    <array>
+        <!-- BridleNSIS - https://github.com/henrikor2/bridlensis -->
+        <dict>
+            <key>match</key>
+            <string>(\b|^\s*)(?i)(Abort|BringToFront|Call|CallInstDLL|ClearErrors|Copy|CreateDirectory|CreateFont|CreateShortCut|Delete|DeleteINISec|DeleteINIStr|DeleteRegKey|DeleteRegValue|DetailPrint|Do|Do|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|File|FileClose|FileCopy|FileDelete|FileOpen|FileRead|FileReadByte|FileReadUTF16LE|FileReadWord|FileRename|FileSeek|FileWrite|FileWriteByte|FileWriteUTF16LE|FileWriteWord|FindClose|FindNext|FindWindow|FlushINI|Function|GetCurInstType|GetCurrentAddress|GetDlgItem|GetErrorLevel|GetFullPathName|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|Goto|HideWindow|If|If|If|If|If|If|InitPluginsDir|InstTypeGetText|InstTypeSetText|IntCmp|IntFmt|IntOp|LangString|LicenseLangString|LoadLanguageFile|LockWindow|LockWindow|LockWindow|LogSet|LogSet|LogSet|LogText|MsgBox|MsgBox|MsgBox|MsgBox|MsgBox|MsgBox|MsgBox|Pop|Push|Quit|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|ReserveFile|RMDir|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetAutoClose|SetAutoClose|SetCtlColors|SetCurInstType|SetDetailsPrint|SetDetailsPrint|SetDetailsPrint|SetDetailsPrint|SetDetailsPrint|SetDetailsPrint|SetDetailsView|SetDetailsView|SetDetailsView|SetErrorLevel|SetErrorLevel|SetErrorLevel|SetErrorLevel|SetErrors|SetFileAttributes|SetOutPath|SetRebootFlag|SetRebootFlag|SetRebootFlag|SetRegView|SetRegView|SetRegView|SetRegView|SetShellVarContext|SetShellVarContext|SetShellVarContext|SetSilent|SetSilent|SetSilent|ShowWindow|Sleep|StrCmp|StrCpy|StrLen|UnRegDLL|Var|WordFind|WordFindS|WordReplace|WordReplaceS|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller)*(?=\s*\()</string>
+            <key>name</key>
+            <string>keyword.nsis.bridle</string>
+        </dict>
+        
+        <dict>
+            <key>match</key>
+            <string>[\\A-Za-z_.][\\A-Za-z_0-9]*(?=\s*\()</string>
+            <key>name</key>
+            <string>entity.name.function.nsis.bridle</string>
+        </dict>
+
+        <dict>
+            <key>match</key>
+            <string>(\-|\+|\*|/|%)</string>
+            <key>name</key>
+            <string>keyword.operator.arithmetic.nsis.bridle</string>
+        </dict>
+
+        <dict>
+            <key>match</key>
+            <string>(===|==|!==|!=|&lt;=|&gt;=|&lt;&gt;|&lt;|&gt;)</string>
+            <key>name</key>
+            <string>keyword.operator.comparison.nsis.bridle</string>
+        </dict>
+
+        <!-- Vanilla NSIS -->
+        <dict>
+            <key>include</key>
+            <string>source.nsis</string>
+        </dict>
+    </array>
+
+    <key>scopeName</key>
+    <string>source.nsis.bridle</string>
+    <key>uuid</key>
+    <string>D3C4E6DA-6B1C-11D9-8CC2-000D93589AF6</string>
+</dict>
+</plist>

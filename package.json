@@ -12,9 +12,9 @@
     "keywords": [
         "nsis",
         "nsl assembler",
-        "haskell",
+        "bridlensis",
         "wine",
-        "nullsoft"
+        "haskell"
     ],
     "repository": {
         "type": "git",
@@ -39,6 +39,7 @@
         "Other"
     ],
     "activationEvents": [
+        "onLanguage:bridlensis",
         "onLanguage:nsis",
         "onLanguage:nsl"
     ],
@@ -81,6 +82,16 @@
                     "type": "string",
                     "default": "/nomake /nopause",
                     "description": "Specify the default arguments for nsL Assembler"
+                },
+                "nsis.bridlensis.pathToJar": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Specify the full path to `BridleNSIS.jar`"
+                },
+                "nsis.bridlensis.customArguments": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Specify the default arguments for BridleNSIS"
                 }
             }
         },
@@ -93,7 +104,9 @@
                 ],
                 "extensions": [
                     ".nsi",
-                    ".nsh"
+                    ".nsh",
+                    ".bbnsi",
+                    ".bbnsh"
                 ],
                 "configuration": "./nsis.configuration.json"
             },
@@ -118,6 +131,20 @@
                     ".nsl"
                 ],
                 "configuration": "./nsl.configuration.json"
+            },
+            {
+                "id": "bridlensis",
+                "aliases": [
+                    "BridleNSIS"
+                ],
+                "extensions": [
+                    ".bnsi",
+                    ".bnsh",
+                    ".bridle-nsi",
+                    ".bridle-nsis",
+                    ".bridle-nsh"
+                ],
+                "configuration": "./bridlensis.configuration.json"
             }
         ],
         "grammars": [
@@ -135,6 +162,11 @@
                 "language": "nsl",
                 "scopeName": "source.nsl",
                 "path": "./syntaxes/nsl.tmLanguage"
+            },
+            {
+                "language": "bridlensis",
+                "scopeName": "source.nsis.bridle",
+                "path": "./syntaxes/bridlensis.tmLanguage"
             }
         ],
         "commands": [
@@ -149,6 +181,10 @@
             {
                 "command": "extension.nsis.transpile-nsl",
                 "title": "NSIS: Transpile nsL code"
+            },
+            {
+                "command": "extension.nsis.transpile-bridlensis",
+                "title": "NSIS: Transpile BridleNSIS"
             },
             {
                 "command": "extension.nsis.create-build-task",
@@ -170,9 +206,18 @@
                 "key": "ctrl+shift+b",
                 "when": "editorFocus && editorLangId == nsl",
                 "command": "extension.nsis.transpile-nsl"
+            },
+            {
+                "key": "ctrl+shift+b",
+                "when": "editorFocus && editorLangId == bridlensis",
+                "command": "extension.nsis.transpile-bridlensis"
             }
         ],
         "snippets": [
+            {
+                "language": "bridlensis",
+                "path": "./snippets/core.BridleNSIS.json"
+            },
             {
                 "language": "haskell",
                 "path": "./snippets/core.Haskell.json"

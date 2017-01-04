@@ -1,0 +1,686 @@
+{
+  "${BRIDLE_NULL}": {
+    "body": "\\${BRIDLE_NULL}$0",
+    "prefix": "${BRIDLE_NULL}"
+  },
+  "DEFBUTTON1": {
+    "body": "DEFBUTTON1$0",
+    "prefix": "DEFBUTTON1"
+  },
+  "DEFBUTTON2": {
+    "body": "DEFBUTTON2$0",
+    "prefix": "DEFBUTTON2"
+  },
+  "DEFBUTTON3": {
+    "body": "DEFBUTTON3$0",
+    "prefix": "DEFBUTTON3"
+  },
+  "DEFBUTTON4": {
+    "body": "DEFBUTTON4$0",
+    "prefix": "DEFBUTTON4"
+  },
+  "ICONEXCLAMATION": {
+    "body": "ICONEXCLAMATION$0",
+    "prefix": "ICONEXCLAMATION"
+  },
+  "ICONINFORMATION": {
+    "body": "ICONINFORMATION$0",
+    "prefix": "ICONINFORMATION"
+  },
+  "ICONQUESTION": {
+    "body": "ICONQUESTION$0",
+    "prefix": "ICONQUESTION"
+  },
+  "ICONSTOP": {
+    "body": "ICONSTOP$0",
+    "prefix": "ICONSTOP"
+  },
+  "RIGHT": {
+    "body": "RIGHT$0",
+    "prefix": "RIGHT"
+  },
+  "RTLREADING": {
+    "body": "RTLREADING$0",
+    "prefix": "RTLREADING"
+  },
+  "SETFOREGROUND": {
+    "body": "SETFOREGROUND$0",
+    "prefix": "SETFOREGROUND"
+  },
+  "TOPMOST": {
+    "body": "TOPMOST$0",
+    "prefix": "TOPMOST"
+  },
+  "USERICON": {
+    "body": "USERICON$0",
+    "prefix": "USERICON"
+  },
+  "b:Abort()": {
+    "body": "Abort(\"${1:user_message}\")$0",
+    "prefix": "b:Abort()"
+  },
+  "b:BringToFront()": {
+    "body": "BringToFront()$0",
+    "prefix": "b:BringToFront()"
+  },
+  "b:Call()": {
+    "body": "Call(\"${1:name}\")$0",
+    "prefix": "b:Call()"
+  },
+  "b:CallInstDLL()": {
+    "body": "CallInstDLL(\"${1:dll_file}\", \"${2:function_name}\"$0",
+    "prefix": "b:CallInstDLL()"
+  },
+  "b:ClearErrors()": {
+    "body": "ClearErrors()$0",
+    "prefix": "b:ClearErrors()"
+  },
+  "b:Copy()": {
+    "body": "Copy(\"${1:file}\", \"${2:target}\")$0",
+    "prefix": "b:Copy()"
+  },
+  "b:CreateDirectory()": {
+    "body": "CreateDirectory(\"${1:path_to_create}\")$0",
+    "prefix": "b:CreateDirectory()"
+  },
+  "b:CreateFont()": {
+    "body": "CreateFont(\"${1:face_name}\",${2: \"${3:height}\"${4:, \"${5:weight}\"${6:, ${7:/ITALIC}${8:, ${9:/UNDERLINE}${10:, ${11:/STRIKE}}}}}})$0",
+    "prefix": "b:CreateFont()"
+  },
+  "b:CreateShortCut()": {
+    "body": "CreateShortCut(\"${1:link}.lnk\", \"${2:target_file}\"${3:, \"${4:parameters}\"${5:, \"${6:icon_file}\"${7:, ${8:icon_index_number}${9:, ${10:start_options}${11:, ${12:keyboard_shortcut}${13:, \"${14:description}\"}}}}}}})$0",
+    "prefix": "b:CreateShortCut()"
+  },
+  "b:Delete()": {
+    "body": "Delete(\"${1:source}\"${2:, \"${3:rebootok}\"})$0",
+    "prefix": "b:Delete()"
+  },
+  "b:DeleteINISec()": {
+    "body": "DeleteINISec(\"${1:ini_filename}\", \"${2:section_name}\")$0",
+    "prefix": "b:DeleteINISec()"
+  },
+  "b:DeleteINIStr()": {
+    "body": "DeleteINIStr(\"${1:ini_filename}\", \"${2:section_name}\", \"${3:str_name}\")$0",
+    "prefix": "b:DeleteINIStr()"
+  },
+  "b:DeleteRegKey()": {
+    "body": "DeleteRegKey(\"${1:rootkey}\", \"${2:subkey}\"}${3:, \"${4:options}\"})$0",
+    "prefix": "b:DeleteRegKey()"
+  },
+  "b:DeleteRegValue()": {
+    "body": "DeleteRegValue(\"${1:root_key}\", \"${2:subkey}\", \"${3:key_name}\")$0",
+    "prefix": "b:DeleteRegValue()"
+  },
+  "b:DetailPrint()": {
+    "body": "DetailPrint(\"${1:user_message}\")$0",
+    "prefix": "b:DetailPrint()"
+  },
+  "b:Do Until..Loop": {
+    "body": "Do Until ${1:condition}\n\t${4:# your code here}\nLoop$0",
+    "prefix": "b:Do Until..Loop"
+  },
+  "b:Do While..Loop": {
+    "body": "Do While ${1:condition}\n\t${4:# your code here}\nLoop$0",
+    "prefix": "b:Do While..Loop"
+  },
+  "b:EnableWindow()": {
+    "body": "EnableWindow(${1:hwnd}, ${2:value})$0",
+    "prefix": "b:EnableWindow()"
+  },
+  "b:EnumRegKey()": {
+    "body": "EnumRegKey(\"${1:root_key}\", \"${2:subkey}\", \"${3:index}\")$0",
+    "prefix": "b:EnumRegKey()"
+  },
+  "b:EnumRegValue()": {
+    "body": "EnumRegValue(\"${1:root_key}\", \"${2:subkey}\", \"${3:index}\")$0",
+    "prefix": "b:EnumRegValue()"
+  },
+  "b:Exch()": {
+    "body": "Exch(${1:user_var})$0",
+    "prefix": "b:Exch()"
+  },
+  "b:Exec()": {
+    "body": "Exec(\"${1:command}\")$0",
+    "prefix": "b:Exec()"
+  },
+  "b:ExecShell()": {
+    "body": "ExecShell(\"${1:action}\", \"${2:command}\"${3:, ${4:parameter}})$0",
+    "prefix": "b:ExecShell()"
+  },
+  "b:ExecWait()": {
+    "body": "ExecWait(\"${1:command}\")$0",
+    "prefix": "b:ExecWait()"
+  },
+  "b:ExpandEnvStrings()": {
+    "body": "ExpandEnvStrings(\"${1:string}\")$0",
+    "prefix": "b:ExpandEnvStrings()"
+  },
+  "b:File()": {
+    "body": "File(\"${1:file}\"${2:, \"${3:options}\"${4:, \"${5:outpath}\"}})$0",
+    "prefix": "b:File()"
+  },
+  "b:FileClose()": {
+    "body": "FileClose(${1:handle})$0",
+    "prefix": "b:FileClose()"
+  },
+  "b:FileCopy()": {
+    "body": "FileCopy(\"${1:file}\", \"${2:target}\")$0",
+    "prefix": "b:FileCopy()"
+  },
+  "b:FileDelete()": {
+    "body": "FileDelete(\"${1:source}\"${2:, \"${3:rebootok}\"})$0",
+    "prefix": "b:FileDelete()"
+  },
+  "b:FileOpen()": {
+    "body": "FileOpen(\"${1:filename}\", ${2:open_mode})$0",
+    "prefix": "b:FileOpen()"
+  },
+  "b:FileRead()": {
+    "body": "FileRead(${1:handle}, ${2:maxlen})$0",
+    "prefix": "b:FileRead()"
+  },
+  "b:FileReadByte()": {
+    "body": "FileReadByte(${1:handle}, ${2:maxlen})$0",
+    "prefix": "b:FileReadByte()"
+  },
+  "b:FileReadUTF16LE()": {
+    "body": "FileReadUTF16LE(${1:handle}, ${2:maxlen})$0",
+    "prefix": "b:FileReadUTF16LE()"
+  },
+  "b:FileReadWord()": {
+    "body": "FileReadWord(${1:handle}, ${2:maxlen})$0",
+    "prefix": "b:FileReadWord()"
+  },
+  "b:FileRename()": {
+    "body": "FileRename(\"${1:source}\", \"${2:target}\"${3:, \"${4:options}\"})$0",
+    "prefix": "b:FileRename()"
+  },
+  "b:FileSeek()": {
+    "body": "FileSeek(${1:handle}, ${2:offset}${3:, ${4:mode}${5:, ${6:user_var}}})$0",
+    "prefix": "b:FileSeek()"
+  },
+  "b:FileWrite()": {
+    "body": "FileWrite(${1:handle})$0",
+    "prefix": "b:FileWrite()"
+  },
+  "b:FileWriteByte()": {
+    "body": "FileWriteByte(${1:handle}, \"${2:string}\")$0",
+    "prefix": "b:FileWriteByte()"
+  },
+  "b:FileWriteUTF16LE()": {
+    "body": "FileWriteUTF16LE(${1:handle}, \"${2:string}\")$0",
+    "prefix": "b:FileWriteUTF16LE()"
+  },
+  "b:FileWriteWord()": {
+    "body": "FileWriteWord(${1:handle}, \"${2:string}\")$0",
+    "prefix": "b:FileWriteWord()"
+  },
+  "b:FindClose()": {
+    "body": "FindClose(${1:handle})$0",
+    "prefix": "b:FindClose()"
+  },
+  "b:FindNext()": {
+    "body": "FindNext(${1:handle})$0",
+    "prefix": "b:FindNext()"
+  },
+  "b:FindWindow()": {
+    "body": "FindWindow(\"${1:windowclass}\", \"${2:windowtitle}\"${3:, ${4:windowparent}${5:, ${6:childafter}}})$0",
+    "prefix": "b:FindWindow()"
+  },
+  "b:FlushINI()": {
+    "body": "FlushINI(\"${1:ini_filename}\")$0",
+    "prefix": "b:FlushINI()"
+  },
+  "b:Function()": {
+    "body": "Function ${1:function_name}(${2:parameters})\n\t${5:# your code here}\nFunctionEnd$0",
+    "prefix": "b:Function()"
+  },
+  "b:GetCurInstType()": {
+    "body": "GetCurInstType()$0",
+    "prefix": "b:GetCurInstType()"
+  },
+  "b:GetCurrentAddress()": {
+    "body": "GetCurrentAddress()$0",
+    "prefix": "b:GetCurrentAddress()"
+  },
+  "b:GetDlgItem()": {
+    "body": "GetDlgItem(${1:dialog}, ${2:item_id})$0",
+    "prefix": "b:GetDlgItem()"
+  },
+  "b:GetErrorLevel()": {
+    "body": "GetErrorLevel()$0",
+    "prefix": "b:GetErrorLevel()"
+  },
+  "b:GetFullPathName()": {
+    "body": "GetFullPathName(\"${1:path}\"${2:, \"${3:options}\"})$0",
+    "prefix": "b:GetFullPathName()"
+  },
+  "b:GetFunctionAddress()": {
+    "body": "GetCurrentAddress(\"${1:function_name}\")$0",
+    "prefix": "b:GetFunctionAddress()"
+  },
+  "b:GetInstDirError()": {
+    "body": "GetInstDirError()$0",
+    "prefix": "b:GetInstDirError()"
+  },
+  "b:GetLabelAddress()": {
+    "body": "GetLabelAddress(\"${1:label}\")$0",
+    "prefix": "b:GetLabelAddress()"
+  },
+  "b:GetTempFileName()": {
+    "body": "GetTempFileName(${1:\\$${2:base_dir}})$0",
+    "prefix": "b:GetTempFileName()"
+  },
+  "b:Goto()": {
+    "body": "Goto(${1:name})$0",
+    "prefix": "b:Goto()"
+  },
+  "b:HideWindow()": {
+    "body": "HideWindow()$0",
+    "prefix": "b:HideWindow()"
+  },
+  "b:If": {
+    "body": "If ${1:condition}\n\t${4:# your code here}\nEndIf$0",
+    "prefix": "b:If"
+  },
+  "b:If Not": {
+    "body": "If Not ${1:condition}\n\t${4:# your code here}\nEndIf$0",
+    "prefix": "b:If Not"
+  },
+  "b:If Not..Else": {
+    "body": "If Not ${1:condition}\n\t${4:# your code here}\nElse\n\t${5:# your code here}\nEndIf$0",
+    "prefix": "b:If Not..Else"
+  },
+  "b:If Not..ElseIf": {
+    "body": "If Not ${1:condition}\n\t${4:# your code here}\nElseIf\n\t${5:# your code here}\nEndIf$0",
+    "prefix": "b:If Not..ElseIf"
+  },
+  "b:If..Else": {
+    "body": "If ${1:condition}\n\t${4:# your code here}\nElse\n\t${5:# your code here}\nEndIf$0",
+    "prefix": "b:If..Else"
+  },
+  "b:If..ElseIf": {
+    "body": "If ${1:condition}\n\t${4:# your code here}\nElseIf\n\t${5:# your code here}\nEndIf$0",
+    "prefix": "b:If..ElseIf"
+  },
+  "b:InitPluginsDir()": {
+    "body": "InitPluginsDir()$0",
+    "prefix": "b:InitPluginsDir()"
+  },
+  "b:InstTypeGetText()": {
+    "body": "InstTypeGetText(${1:inst_type_idx})$0",
+    "prefix": "b:InstTypeGetText()"
+  },
+  "b:InstTypeSetText()": {
+    "body": "InstTypeSetText(${1:inst_type_idx}, \"${2:text}\")$0",
+    "prefix": "b:InstTypeSetText()"
+  },
+  "b:IntCmp()": {
+    "body": "IntCmp(${1:val1}, ${2:val2}, ${3:jump_if_equal}${4:, ${5:jump_if_val1_less}${6:, ${7:jump_if_val1_more}}})$0",
+    "prefix": "b:IntCmp()"
+  },
+  "b:IntFmt()": {
+    "body": "IntFmt(${1:format}, ${2:numberstring})$0",
+    "prefix": "b:IntFmt()"
+  },
+  "b:IntOp()": {
+    "body": "IntOp(${1:value1}, ${2:op}, ${3:value2})$0",
+    "prefix": "b:IntOp()"
+  },
+  "b:LangString()": {
+    "body": "LangString(${1:name}, \\$\\{LANG_${2:language_id}\\}, \"${3:string}\")$0",
+    "prefix": "b:LangString()"
+  },
+  "b:LicenseLangString()": {
+    "body": "LicenseLangString(${1:name}, \\$\\{LANG_${2:language_id}\\}, \"${3:license_path}\")$0",
+    "prefix": "b:LicenseLangString()"
+  },
+  "b:LoadLanguageFile()": {
+    "body": "LoadLanguageFile(\"${1:language_file_nlf}\")$0",
+    "prefix": "b:LoadLanguageFile()"
+  },
+  "b:LockWindow()": {
+    "body": "LockWindow(${1:value})$0",
+    "prefix": "b:LockWindow()"
+  },
+  "b:LockWindow(off)": {
+    "body": "LockWindow(off)$0",
+    "prefix": "b:LockWindow(off)"
+  },
+  "b:LockWindow(on)": {
+    "body": "LockWindow(on)$0",
+    "prefix": "b:LockWindow(on)"
+  },
+  "b:LogSet()": {
+    "body": "LogSet(${1:value})$0",
+    "prefix": "b:LogSet()"
+  },
+  "b:LogSet(off)": {
+    "body": "LogSet(off)$0",
+    "prefix": "b:LogSet(off)"
+  },
+  "b:LogSet(on)": {
+    "body": "LogSet(on)$0",
+    "prefix": "b:LogSet(on)"
+  },
+  "b:LogText()": {
+    "body": "LogText(\"${1:text}\")$0",
+    "prefix": "b:LogText()"
+  },
+  "b:MsgBox()": {
+    "body": "MsgBox(\"${1:buttons}\", \"${2:message}\"${3:, ${4:options}${5:, ${6:sd}}})$0",
+    "prefix": "b:MsgBox()"
+  },
+  "b:MsgBox(ABORTRETRYIGNORE)": {
+    "body": "MsgBox(\"ABORTRETRYIGNORE\", \"${1:message}\"${2:, ${3:options}${4:, ${5:sd}}})$0",
+    "prefix": "b:MsgBox(ABORTRETRYIGNORE)"
+  },
+  "b:MsgBox(OK)": {
+    "body": "MsgBox(\"OK\", \"${1:message}\"${2:, ${3:options}${4:, ${5:sd}}})$0",
+    "prefix": "b:MsgBox(OK)"
+  },
+  "b:MsgBox(OKCANCEL)": {
+    "body": "MsgBox(\"OKCANCEL\", \"${1:message}\"${2:, ${3:options}${4:, ${5:sd}}})$0",
+    "prefix": "b:MsgBox(OKCANCEL)"
+  },
+  "b:MsgBox(RETRYCANCEL)": {
+    "body": "MsgBox(\"RETRYCANCEL\", \"${1:message}\"${2:, ${3:options}${4:, ${5:sd}}})$0",
+    "prefix": "b:MsgBox(RETRYCANCEL)"
+  },
+  "b:MsgBox(YESNO)": {
+    "body": "MsgBox(\"YESNO\", \"${1:message}\"${2:, ${3:options}${4:, ${5:sd}}})$0",
+    "prefix": "b:MsgBox(YESNO)"
+  },
+  "b:MsgBox(YESNOCANCEL)": {
+    "body": "MsgBox(\"YESNOCANCEL\", \"${1:message}\"${2:, ${3:options}${4:, ${5:sd}}})$0",
+    "prefix": "b:MsgBox(YESNOCANCEL)"
+  },
+  "b:Pop()": {
+    "body": "${1:user_var} = Pop()$0",
+    "prefix": "b:Pop()"
+  },
+  "b:Push()": {
+    "body": "Push(${1:string})$0",
+    "prefix": "b:Push()"
+  },
+  "b:Quit()": {
+    "body": "Quit()$0",
+    "prefix": "b:Quit()"
+  },
+  "b:RMDir()": {
+    "body": "RMDir(\"${1:directory}\"${2:, \"${3:options}\"})$0",
+    "prefix": "b:RMDir()"
+  },
+  "b:ReadEnvStr()": {
+    "body": "ReadEnvStr(${1:name})$0",
+    "prefix": "b:ReadEnvStr()"
+  },
+  "b:ReadINIStr()": {
+    "body": "ReadINIStr(\"${1:ini_filename}\", \"${2:section_name}\", \"${3:entry_name}\")$0",
+    "prefix": "b:ReadINIStr()"
+  },
+  "b:ReadRegDWORD()": {
+    "body": "ReadRegDWORD(\"${1:root_key}\", \"${2:sub_key}\", \"${3:name}\")$0",
+    "prefix": "b:ReadRegDWORD()"
+  },
+  "b:ReadRegStr()": {
+    "body": "ReadRegStr(\"${1:root_key}\", \"${2:sub_key}\", \"${3:name}\")$0",
+    "prefix": "b:ReadRegStr()"
+  },
+  "b:Reboot()": {
+    "body": "Reboot()$0",
+    "prefix": "b:Reboot()"
+  },
+  "b:RegDLL()": {
+    "body": "RegDLL(\"${1:file}\"${2:, ${3:options}})$0",
+    "prefix": "b:RegDLL()"
+  },
+  "b:Rename()": {
+    "body": "Rename(\"${1:source}\", \"${2:target}\"${3:, \"${4:options}\"})$0",
+    "prefix": "b:Rename()"
+  },
+  "b:ReserveFile()": {
+    "body": "ReserveFile(\"${1:file}\"${2:, \"${3:options}\"})$0",
+    "prefix": "b:ReserveFile()"
+  },
+  "b:SearchPath()": {
+    "body": "SearchPath(\"${1:filename}\")$0",
+    "prefix": "b:SearchPath()"
+  },
+  "b:SectionGetFlags()": {
+    "body": "SectionGetFlags(${1:section_index})$0",
+    "prefix": "b:SectionGetFlags()"
+  },
+  "b:SectionGetInstTypes()": {
+    "body": "SectionGetInstTypes(${1:section_index})$0",
+    "prefix": "b:SectionGetInstTypes()"
+  },
+  "b:SectionGetSize()": {
+    "body": "SectionGetSize(${1:section_index})$0",
+    "prefix": "b:SectionGetSize()"
+  },
+  "b:SectionSetFlags()": {
+    "body": "SectionSetFlags(${1:section_index}, ${2:inst_types})$0",
+    "prefix": "b:SectionSetFlags()"
+  },
+  "b:SectionSetInstTypes()": {
+    "body": "SectionSetInstTypes(${1:section_index}, ${2:section_flags})$0",
+    "prefix": "b:SectionSetInstTypes()"
+  },
+  "b:SectionSetSize()": {
+    "body": "SectionSetSize(${1:handle}, ${2:maxlen})$0",
+    "prefix": "b:SectionSetSize()"
+  },
+  "b:SectionSetText()": {
+    "body": "SectionSetText(${1:section_index}, \"${2:section_text}\")$0",
+    "prefix": "b:SectionSetText()"
+  },
+  "b:SendMessage()": {
+    "body": "SendMessage(${1:hwnd}, ${2:msg}, ${3:wparam}, ${4:lparam}${5:, ${6:timeout_in_ms}})$0",
+    "prefix": "b:SendMessage()"
+  },
+  "b:SetAutoClose()": {
+    "body": "SetAutoClose(${1:value})$0",
+    "prefix": "b:SetAutoClose()"
+  },
+  "b:SetAutoClose(false)": {
+    "body": "SetAutoClose(false)$0",
+    "prefix": "b:SetAutoClose(false)"
+  },
+  "b:SetAutoClose(true)": {
+    "body": "SetAutoClose(true)$0",
+    "prefix": "b:SetAutoClose(true)"
+  },
+  "b:SetCtlColors()": {
+    "body": "SetCtlColors(${1:hwnd}${2:, ${3:branding}}, ${4:text_color}, ${5:bg_color})$0",
+    "prefix": "b:SetCtlColors()"
+  },
+  "b:SetCurInstType()": {
+    "body": "SetCurInstType(${1:inst_type_idx})$0",
+    "prefix": "b:SetCurInstType()"
+  },
+  "b:SetDetailsPrint()": {
+    "body": "SetDetailsPrint(${1:value})$0",
+    "prefix": "b:SetDetailsPrint()"
+  },
+  "b:SetDetailsPrint(both)": {
+    "body": "SetDetailsPrint(both)$0",
+    "prefix": "b:SetDetailsPrint(both)"
+  },
+  "b:SetDetailsPrint(lastused)": {
+    "body": "SetDetailsPrint(lastused)$0",
+    "prefix": "b:SetDetailsPrint(lastused)"
+  },
+  "b:SetDetailsPrint(listonly)": {
+    "body": "SetDetailsPrint(listonly)$0",
+    "prefix": "b:SetDetailsPrint(listonly)"
+  },
+  "b:SetDetailsPrint(none)": {
+    "body": "SetDetailsPrint(none)$0",
+    "prefix": "b:SetDetailsPrint(none)"
+  },
+  "b:SetDetailsPrint(textonly)": {
+    "body": "SetDetailsPrint(textonly)$0",
+    "prefix": "b:SetDetailsPrint(textonly)"
+  },
+  "b:SetDetailsView()": {
+    "body": "SetDetailsView(${1:value})$0",
+    "prefix": "b:SetDetailsView()"
+  },
+  "b:SetDetailsView(hide)": {
+    "body": "SetDetailsView(hide)$0",
+    "prefix": "b:SetDetailsView(hide)"
+  },
+  "b:SetDetailsView(show)": {
+    "body": "SetDetailsView(show)$0",
+    "prefix": "b:SetDetailsView(show)"
+  },
+  "b:SetErrorLevel()": {
+    "body": "SetErrorLevel(${1:error_level})$0",
+    "prefix": "b:SetErrorLevel()"
+  },
+  "b:SetErrorLevel(0)": {
+    "body": "SetErrorLevel(0)$0",
+    "prefix": "b:SetErrorLevel(0)"
+  },
+  "b:SetErrorLevel(1)": {
+    "body": "SetErrorLevel(1)$0",
+    "prefix": "b:SetErrorLevel(1)"
+  },
+  "b:SetErrorLevel(2)": {
+    "body": "SetErrorLevel(2)$0",
+    "prefix": "b:SetErrorLevel(2)"
+  },
+  "b:SetErrors()": {
+    "body": "SetErrors()$0",
+    "prefix": "b:SetErrors()"
+  },
+  "b:SetFileAttributes()": {
+    "body": "SetFileAttributes(\"${1:filename}\", ${2:attributes})$0",
+    "prefix": "b:SetFileAttributes()"
+  },
+  "b:SetOutPath()": {
+    "body": "SetOutPath(\"${1:path}\")$0",
+    "prefix": "b:SetOutPath()"
+  },
+  "b:SetRebootFlag()": {
+    "body": "SetRebootFlag(${1:value})$0",
+    "prefix": "b:SetRebootFlag()"
+  },
+  "b:SetRebootFlag(false)": {
+    "body": "SetRebootFlag(false)$0",
+    "prefix": "b:SetRebootFlag(false)"
+  },
+  "b:SetRebootFlag(true)": {
+    "body": "SetRebootFlag(true)$0",
+    "prefix": "b:SetRebootFlag(true)"
+  },
+  "b:SetRegView()": {
+    "body": "SetRegView(${1:value})$0",
+    "prefix": "b:SetRegView()"
+  },
+  "b:SetRegView(32)": {
+    "body": "SetRegView(32)$0",
+    "prefix": "b:SetRegView(32)"
+  },
+  "b:SetRegView(64)": {
+    "body": "SetRegView(64)$0",
+    "prefix": "b:SetRegView(64)"
+  },
+  "b:SetRegView(lastused)": {
+    "body": "SetRegView(lastused)$0",
+    "prefix": "b:SetRegView(lastused)"
+  },
+  "b:SetShellVarContext()": {
+    "body": "SetShellVarContext(${1:value})$0",
+    "prefix": "b:SetShellVarContext()"
+  },
+  "b:SetShellVarContext(all)": {
+    "body": "SetShellVarContext(all)$0",
+    "prefix": "b:SetShellVarContext(all)"
+  },
+  "b:SetShellVarContext(current)": {
+    "body": "SetShellVarContext(current)$0",
+    "prefix": "b:SetShellVarContext(current)"
+  },
+  "b:SetSilent()": {
+    "body": "SetSilent(${1:value})$0",
+    "prefix": "b:SetSilent()"
+  },
+  "b:SetSilent(normal)": {
+    "body": "SetSilent(normal)$0",
+    "prefix": "b:SetSilent(normal)"
+  },
+  "b:SetSilent(silent)": {
+    "body": "SetSilent(silent)$0",
+    "prefix": "b:SetSilent(silent)"
+  },
+  "b:ShowWindow()": {
+    "body": "ShowWindow(${1:hwnd}, ${2:value})$0",
+    "prefix": "b:ShowWindow()"
+  },
+  "b:Sleep()": {
+    "body": "Sleep(${1:sleeptime_in_ms})$0",
+    "prefix": "b:Sleep()"
+  },
+  "b:StrCmp()": {
+    "body": "StrCmp(${1:str1}, ${2:str2}, ${3:jump_if_equal}${4:, ${5:jump_if_val1_less}})$0",
+    "prefix": "b:StrCmp()"
+  },
+  "b:StrCpy()": {
+    "body": "StrCpy(${1:str}${2:, ${3:maxlen}${4:, ${5:start_offset}}})$0",
+    "prefix": "b:StrCpy()"
+  },
+  "b:StrLen()": {
+    "body": "StrLen(${1:str})$0",
+    "prefix": "b:StrLen()"
+  },
+  "b:UnRegDLL()": {
+    "body": "UnRegDLL(\"${1:dllfile}\")$0",
+    "prefix": "b:UnRegDLL()"
+  },
+  "b:Var": {
+    "body": "Var ${1:user_vars}$0",
+    "prefix": "b:Var"
+  },
+  "b:WordFind()": {
+    "body": "WordFind(\"${1:string}\", \"${2:options}\", \"${3:delimiter1}\"${4:, \"${5:delimiter2}\"${6:, \"${7:center}\"}})$0",
+    "prefix": "b:WordFind()"
+  },
+  "b:WordFindS()": {
+    "body": "WordFindS(\"${1:string}\", \"${2:options}\", \"${3:delimiter1}\"${4:, \"${5:delimiter2}\"${6:, \"${7:center}\"}})$0",
+    "prefix": "b:WordFindS()"
+  },
+  "b:WordReplace()": {
+    "body": "WordReplace(\"${1:string}\", \"${2:word1}\", \"${3:word2}\", \"${4:options}\")$0",
+    "prefix": "b:WordReplace()"
+  },
+  "b:WordReplaceS()": {
+    "body": "WordReplaceS(\"${1:string}\", \"${2:word1}\", \"${3:word2}\", \"${4:options}\")$0",
+    "prefix": "b:WordReplaceS()"
+  },
+  "b:WriteINIStr()": {
+    "body": "WriteINIStr(\"${1:ini_filename}\", \"${2:section_name}\", \"${3:entry_name}\", \"${4:value}\")$0",
+    "prefix": "b:WriteINIStr()"
+  },
+  "b:WriteRegBin()": {
+    "body": "WriteRegBin(\"${1:root_key}\", \"${2:subkey}\", \"${3:key_name}\", \"${4:value_data}\")$0",
+    "prefix": "b:WriteRegBin()"
+  },
+  "b:WriteRegDWORD()": {
+    "body": "WriteRegDWORD(\"${1:root_key}\", \"${2:subkey}\", \"${3:key_name}\", \"${4:value}\")$0",
+    "prefix": "b:WriteRegDWORD()"
+  },
+  "b:WriteRegExpandStr()": {
+    "body": "WriteRegExpandStr(\"${1:root_key}\", \"${2:subkey}\", \"${3:key_name}\", \"${4:value}\")$0",
+    "prefix": "b:WriteRegExpandStr()"
+  },
+  "b:WriteRegStr()": {
+    "body": "WriteRegStr(\"${1:root_key}\", \"${2:subkey}\", \"${3:key_name}\", \"${4:value}\")$0",
+    "prefix": "b:WriteRegStr()"
+  },
+  "b:WriteUninstaller()": {
+    "body": "WriteUninstaller(\"${1:path}.exe\")$0",
+    "prefix": "b:WriteUninstaller()"
+  }
+}
