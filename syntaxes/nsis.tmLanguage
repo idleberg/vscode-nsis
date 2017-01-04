@@ -11,6 +11,8 @@
     <array>
         <string>nsi</string>
         <string>nsh</string>
+        <string>bbnsi</string>
+        <string>bbnsh</string>
     </array>
 
     <key>name</key>
