@@ -180,7 +180,7 @@
             },
             {
                 "command": "extension.nsis.transpile-nsl",
-                "title": "NSIS: Transpile nsL code"
+                "title": "NSIS: Transpile nsL Assembler"
             },
             {
                 "command": "extension.nsis.transpile-bridlensis",
