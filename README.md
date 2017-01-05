@@ -15,7 +15,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 
 ## Features
 
-* Language syntax for NSIS, NSIS Language Files and [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
+* Language syntax for NSIS, NSIS Language Files, [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler), and [BridleNSIS](https://github.com/henrikor2/bridlensis)
 * IntelliSense for core NSIS commands, variables and predefines
 * IntelliSense for core plug-ins:
     * AdvSplash
@@ -46,6 +46,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * WordFunc
     * x64
 * IntelliSense for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
+* IntelliSense for [BridleNSIS](https://github.com/henrikor2/bridlensis)
 * IntelliSense for [Haskell](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
@@ -138,13 +139,23 @@ To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](
 
 #### nsL Transpiler
 
-As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL Assembler* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 **Example:**
 
 ```json
 "nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
 "nsis.nsl.customArguments": "/nomake /nopause",
+```
+#### BridleNSIS Transpiler
+
+As of version 2.6, you can transpile [BridleNSIS](https://github.com/henrikor2/bridlensis) using the *NSIS: Transpile BridleNSIS* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `BridleNSIS.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+
+**Example:**
+
+```json
+"nsis.bridlensis.pathToJar": "/full/path/to/BridleNSIS.jar",
+"nsis.bridlensis.customArguments": "-n /usr/local/bin/",
 ```
 
 #### Options
