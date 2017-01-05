@@ -139,7 +139,7 @@ To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](
 
 #### nsL Transpiler
 
-As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL Assembler* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 **Example:**
 
@@ -149,7 +149,7 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 ```
 #### BridleNSIS Transpiler
 
-As of version 2.6, you can transpile [BridleNSIS](https://github.com/henrikor2/bridlensis) using the *NSIS: Transpile BridleNSIS* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `BridleNSIS.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+As of version 2.6, you can transpile [BridleNSIS](https://github.com/henrikor2/bridlensis) using the *NSIS: Transpile BridleNSIS code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `BridleNSIS.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 **Example:**
 
@@ -162,23 +162,26 @@ As of version 2.6, you can transpile [BridleNSIS](https://github.com/henrikor2/b
 
 You can tweak your default settings by editing your [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
 
-Setting               | Description
-----------------------|-----------------------------------------------------------
-`pathToMakensis`      | Specify the full path to `makensis`
-`compilerArguments`   | Specify the default arguments for `makensis`
-`showNotifications`   | Show build notifications indicating success or failure
-`alwaysShowOutput`    | If `false` the output channel will only be shown on errors
-`alwaysOpenBuildTask` | Specify whether to open the newly created build task
-`nsl.pathToJar`       | Specify the full path to `nsL.jar`
-`nsl.customArguments` | Specify the default arguments for nsL Assembler
+Setting                      | Description
+-----------------------------|-----------------------------------------------------------
+`pathToMakensis`             | Specify the full path to `makensis`
+`compilerArguments`          | Specify the default arguments for `makensis`
+`showNotifications`          | Show build notifications indicating success or failure
+`alwaysShowOutput`           | If `false` the output channel will only be shown on errors
+`alwaysOpenBuildTask`        | Specify whether to open the newly created build task
+`nsl.pathToJar`              | Specify the full path to `nsL.jar`
+`nsl.customArguments`        | Specify the default arguments for nsL Assembler
+`bridlensis.pathToJar`       | Specify the full path to `BridleNSIS.jar`
+`bridlensis.customArguments` | Specify the default arguments for BridleNSIS
 
 #### Shortcuts
 
-Action                  |  Syntax       | Shortcut
-------------------------|---------------|------------------------------------------------------------
-Compile NSIS            | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Compile NSIS (strict)   | `source.nsis` | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Transpile nsL Assembler | `source.nsl`  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Action                  |  Syntax              | Shortcut
+------------------------|----------------------|-------------------------------------------------------------
+Compile NSIS            | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Compile NSIS (strict)   | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Transpile nsL Assembler | `source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Transpile BridleNSIS    | `source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 
 ### Task Runner
 
