@@ -92,6 +92,11 @@
                     "type": "string",
                     "default": "",
                     "description": "Specify the default arguments for BridleNSIS"
+                },
+                "nsis.bridlensis.nsisHome": {
+                    "type": "string",
+                    "default": "",
+                    "description": "NSIS home directory (tried to detect automatically if not specified)"
                 }
             }
         },
