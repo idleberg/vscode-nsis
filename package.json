@@ -96,7 +96,7 @@
                 "nsis.bridlensis.nsisHome": {
                     "type": "string",
                     "default": "",
-                    "description": "NSIS home directory (tried to detect automatically if not specified)"
+                    "description": "Specify the NSIS home directory (tried to detect automatically if not specified)"
                 }
             }
         },

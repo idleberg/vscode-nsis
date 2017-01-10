@@ -173,7 +173,7 @@ Setting                      | Description
 `nsl.customArguments`        | Specify the default arguments for nsL Assembler
 `bridlensis.pathToJar`       | Specify the full path to `BridleNSIS.jar`
 `bridlensis.customArguments` | Specify the default arguments for BridleNSIS
-`bridlensis.nsisHome`        | NSIS home directory
+`bridlensis.nsisHome`        | Specify the NSIS home directory
 
 #### Shortcuts
 
