@@ -26,7 +26,7 @@
         <dict>
             <!-- $_CLICK -->
             <key>match</key>
-            <string>\$_CLICK</string>
+            <string>(?i)\$_CLICK</string>
             <key>name</key>
             <string>variable.language.nlf</string>
         </dict>
