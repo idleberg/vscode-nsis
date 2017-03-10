@@ -1,3 +1,7 @@
+# v2.8.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.8.1)
+
+- include `CHANGELOG.md`
+
 # v2.8.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.8.0)
 
 - allow case-insensitive syntax
@@ -334,3 +338,4 @@
 # v0.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/0.1.0)
 
 - first release
+
