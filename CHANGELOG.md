@@ -1,3 +1,7 @@
+# v2.9.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.1)
+
+* update `CHANGELOG.md`
+
 # v2.9.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.0)
 
 * refactored code
