@@ -386,15 +386,16 @@
         ]
     },
     "scripts": {
+        "vscode:prepublish": "tsc -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "gulp lint"
     },
     "devDependencies": {
-        "babel-eslint": "^7.2.0",
-        "eslint": "^3.18.0",
+        "babel-eslint": "^7.2.3",
+        "eslint": "^4.1.0",
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-debug": "^3.1.0",
-        "gulp-eslint": "^3.0.1",
+        "gulp-eslint": "^4.0.0",
         "gulp-jsonlint": "^1.2.0",
         "gulp-xml-validator": "^0.1.2",
         "vscode": "^1.1.0"
