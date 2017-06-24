@@ -1,3 +1,7 @@
+# v2.9.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.2)
+
+* update devDependencies
+
 # v2.9.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.1)
 
 * update `CHANGELOG.md`
