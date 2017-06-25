@@ -8,14 +8,13 @@
  // Dependencies
 const gulp = require('gulp');
 const debug = require('gulp-debug');
-const eslint = require('gulp-eslint');
+const tslint = require('gulp-tslint');
 const jsonlint = require('gulp-jsonlint');
 const xmlVal = require('gulp-xml-validator');
 
 // Supported files
-const jsFiles = [
-  'lib/*.js',
-  'src/*.js',
+const tsFiles = [
+  'src/*.ts',
 ];
 
 const jsonFiles = [
@@ -28,12 +27,13 @@ const xmlFiles = [
 ];
 
 // Lint JavaScript
-gulp.task('lint:js', gulp.series(function(done) {
-  gulp.src(jsFiles)
-    .pipe(debug({title: 'eslint'}))
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+gulp.task('lint:ts', gulp.series(function(done) {
+  gulp.src(tsFiles)
+    .pipe(debug({title: 'tslint'}))
+    .pipe(tslint({
+        formatter: "prose"
+    }))
+    .pipe(tslint.report())
   done();
 }));
 
@@ -56,6 +56,6 @@ gulp.task('lint:xml', gulp.series(function(done) {
 }));
 
 // Available tasks
-gulp.task('lint', gulp.parallel('lint:js', 'lint:json', 'lint:xml', function(done) {
+gulp.task('lint', gulp.parallel('lint:ts', 'lint:json', 'lint:xml', function(done) {
   done();
 }));
