@@ -2,7 +2,7 @@
     "name": "nsis",
     "displayName": "NSIS",
     "description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
-    "version": "2.9.2",
+    "version": "2.9.5",
     "publisher": "idleberg",
     "license": "MIT OR GPL-2.0",
     "author": {
@@ -194,6 +194,14 @@
             {
                 "command": "extension.nsis.create-build-task",
                 "title": "NSIS: Create Build Task"
+            },
+            {
+                "command": "extension.nsis.show-version",
+                "title": "NSIS: Show Version"
+            },
+            {
+                "command": "extension.nsis.show-compiler-flags",
+                "title": "NSIS: Show Compiler Flags"
             }
         ],
         "keybindings": [
@@ -386,19 +394,20 @@
         ]
     },
     "scripts": {
-        "compile": "tsc -watch -p ./",
+        "compile": "tsc -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "gulp lint",
         "vscode:prepublish": "tsc -p ./"
     },
     "devDependencies": {
+        "@types/node": "^8.0.2",
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-debug": "^3.1.0",
         "gulp-jsonlint": "^1.2.0",
         "gulp-tslint": "^8.1.1",
         "gulp-xml-validator": "^0.1.2",
         "tslint": "^5.4.3",
-        "vscode": "^1.1.0",
-        "typescript": "^2.3.4"
+        "typescript": "^2.3.4",
+        "vscode": "^1.1.0"
     }
 }
