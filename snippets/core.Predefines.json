@@ -1,86 +1,86 @@
 {
   "${NSIS_CHAR_SIZE}": {
-    "body": "\\${NSIS_CHAR_SIZE}$1",
+    "body": "\\${NSIS_CHAR_SIZE}$0",
     "prefix": "NSIS_CHAR_SIZE"
   },
   "${NSIS_MAX_STRLEN}": {
-    "body": "\\${NSIS_MAX_STRLEN}$1",
+    "body": "\\${NSIS_MAX_STRLEN}$0",
     "prefix": "NSIS_MAX_STRLEN"
   },
   "${NSIS_PACKEDVERSION}": {
-    "body": "\\${NSIS_PACKEDVERSION}$1",
+    "body": "\\${NSIS_PACKEDVERSION}$0",
     "prefix": "NSIS_PACKEDVERSION"
   },
   "${NSIS_PTR_SIZE}": {
-    "body": "\\${NSIS_PTR_SIZE}$1",
+    "body": "\\${NSIS_PTR_SIZE}$0",
     "prefix": "NSIS_PTR_SIZE"
   },
   "${NSIS_UNICODE}": {
-    "body": "\\${NSIS_UNICODE}$1",
+    "body": "\\${NSIS_UNICODE}$0",
     "prefix": "NSIS_UNICODE"
   },
   "${NSIS_VERSION}": {
-    "body": "\\${NSIS_VERSION}",
+    "body": "\\${NSIS_VERSION}$0",
     "prefix": "NSIS_VERSION"
   },
   "${_NSIS_DEFAW}": {
-    "body": "\\${_NSIS_DEFAW}$1",
+    "body": "\\${_NSIS_DEFAW}$0",
     "prefix": "_NSIS_DEFAW"
   },
   "${__COUNTER__}": {
-    "body": "\\${__COUNTER__}$1",
+    "body": "\\${__COUNTER__}$0",
     "prefix": "__COUNTER__"
   },
   "${__DATE__}": {
-    "body": "\\${__DATE__}$1",
+    "body": "\\${__DATE__}$0",
     "prefix": "__DATE__"
   },
   "${__FILEDIR__}": {
-    "body": "\\${__FILEDIR__}$1",
+    "body": "\\${__FILEDIR__}$0",
     "prefix": "__FILEDIR__"
   },
   "${__FILE__}": {
-    "body": "\\${__FILE__}$1",
+    "body": "\\${__FILE__}$0",
     "prefix": "__FILE__"
   },
   "${__FUNCTION__}": {
-    "body": "\\${__FUNCTION__}$1",
+    "body": "\\${__FUNCTION__}$0",
     "prefix": "__FUNCTION__"
   },
   "${__GLOBAL__}": {
-    "body": "\\${__GLOBAL__}$1",
+    "body": "\\${__GLOBAL__}$0",
     "prefix": "__GLOBAL__"
   },
   "${__LINE__}": {
-    "body": "\\${__LINE__}$1",
+    "body": "\\${__LINE__}$0",
     "prefix": "__LINE__"
   },
   "${__MACRO__}": {
-    "body": "\\${__MACRO__}$1",
+    "body": "\\${__MACRO__}$0",
     "prefix": "__MACRO__"
   },
   "${__PAGEEX__}": {
-    "body": "\\${__PAGEEX__}$1",
+    "body": "\\${__PAGEEX__}$0",
     "prefix": "__PAGEEX__"
   },
   "${__SECTION__}": {
-    "body": "\\${__SECTION__}$1",
+    "body": "\\${__SECTION__}$0",
     "prefix": "__SECTION__"
   },
   "${__TIMESTAMP__}": {
-    "body": "\\${__TIMESTAMP__}$1",
+    "body": "\\${__TIMESTAMP__}$0",
     "prefix": "__TIMESTAMP__"
   },
   "${__TIME__}": {
-    "body": "\\${__TIME__}$1",
+    "body": "\\${__TIME__}$0",
     "prefix": "__TIME__"
   },
   "${__UNINSTALL__}": {
-    "body": "\\${__UNINSTALL__}$1",
+    "body": "\\${__UNINSTALL__}$0",
     "prefix": "__UNINSTALL__"
   },
   "${envVarName}": {
-    "body": "$%envVarName%$1",
+    "body": "$%envVarName%$0",
     "prefix": "envVarName"
   }
 }

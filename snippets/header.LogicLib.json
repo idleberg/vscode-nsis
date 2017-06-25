@@ -103,7 +103,7 @@
     "prefix": "For…Next"
   },
   "${IfCmd}": {
-    "body": "\\${IfCmd} ${1:command} ${|} ${2:statement} ${|}$3",
+    "body": "\\${IfCmd} ${1:command} \\${|} ${2:statement} \\${|}$3",
     "description": "Usage: ${IfCmd} expression statement",
     "prefix": "IfCmd"
   },
@@ -118,17 +118,17 @@
     "prefix": "IfNot…Else"
   },
   "${IfNot…FileExists}": {
-    "body": "\\${IfNot} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${IfNot} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${IfNot} ${FileExists} file_path",
     "prefix": "IfNot…FileExists"
   },
   "${IfThenNot}": {
-    "body": "\\${IfThenNot} ${1:expression} ${|} ${2:statement} ${|}$3",
+    "body": "\\${IfThenNot} ${1:expression} \\${|} ${2:statement} \\${|}$3",
     "description": "Usage: ${IfNotThen} expression statement",
     "prefix": "IfThenNot"
   },
   "${IfThen}": {
-    "body": "\\${IfThen} ${1:expression} ${|} ${2:statement} ${|}$3",
+    "body": "\\${IfThen} ${1:expression} \\${|} ${2:statement} \\${|}$3",
     "description": "Usage: ${IfThen} expression statement",
     "prefix": "IfThen"
   },
@@ -143,7 +143,7 @@
     "prefix": "If…Else"
   },
   "${If…FileExists}": {
-    "body": "\\${If} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${If} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${If} ${FileExists} file_path",
     "prefix": "If…FileExists"
   },
@@ -177,35 +177,35 @@
     "prefix": "RebootFlag"
   },
   "${SectionIsBold}": {
-    "body": "\\${SectionIsBold} ${$1}$2",
+    "body": "\\${SectionIsBold} \\$${1:var}$2",
     "prefix": "SectionIsBold"
   },
   "${SectionIsExpanded}": {
-    "body": "\\${SectionIsExpanded} ${$1}$2",
+    "body": "\\${SectionIsExpanded} \\$${1:var}$2",
     "prefix": "SectionIsExpanded"
   },
   "${SectionIsPartiallySelected}": {
-    "body": "\\${SectionIsPartiallySelected} ${$1}$2",
+    "body": "\\${SectionIsPartiallySelected} \\$${1:var}$2",
     "prefix": "SectionIsPartiallySelected"
   },
   "${SectionIsReadOnly}": {
-    "body": "\\${SectionIsReadOnly} ${$1}$2",
+    "body": "\\${SectionIsReadOnly} \\$${1:var}$2",
     "prefix": "SectionIsReadOnly"
   },
   "${SectionIsSectionGroupEnd}": {
-    "body": "\\${SectionIsSectionGroupEnd} ${$1}$2",
+    "body": "\\${SectionIsSectionGroupEnd} \\$${1:var}$2",
     "prefix": "SectionIsSectionGroupEnd"
   },
   "${SectionIsSectionGroup}": {
-    "body": "\\${SectionIsSectionGroup} ${$1}$2",
+    "body": "\\${SectionIsSectionGroup} \\$${1:var}$2",
     "prefix": "SectionIsSectionGroup"
   },
   "${SectionIsSelected}": {
-    "body": "\\${SectionIsSelected} ${$1}$2",
+    "body": "\\${SectionIsSelected} \\$${1:var}$2",
     "prefix": "SectionIsSelected"
   },
   "${Select}": {
-    "body": "\\${Select} $${1:var}\n\t${2:# your code here}\n\\${EndSelect}$3",
+    "body": "\\${Select} \\$${1:var}\n\t${2:# your code here}\n\\${EndSelect}$3",
     "description": "Usage: ${Select} expression",
     "prefix": "Select"
   },
@@ -215,17 +215,17 @@
     "prefix": "Silent"
   },
   "${Switch}": {
-    "body": "\\${Switch} $${1:var}\n\t${2:# your code here}\n\\${EndSwitch}$3",
+    "body": "\\${Switch} \\$${1:var}\n\t${2:# your code here}\n\\${EndSwitch}$3",
     "description": "Usage: ${Switch} expression",
     "prefix": "Switch"
   },
   "${Unless}": {
-    "body": "\\${Unless} $${1:var}\n\t${2:# your code here}\n\\${EndUnless}$3",
+    "body": "\\${Unless} \\$${1:var}\n\t${2:# your code here}\n\\${EndUnless}$3",
     "description": "Usage: ${Unless} expression",
     "prefix": "Unless"
   },
   "${Unless…FileExists}": {
-    "body": "\\${Unless} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${Unless} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${Unless} ${FileExists} file_path",
     "prefix": "Unless…FileExists"
   },
