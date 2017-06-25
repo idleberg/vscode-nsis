@@ -1,3 +1,10 @@
+# v3.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.0)
+
+* move to TypeScript
+* add `NSIS: Show Version` command
+* add `NSIS: Show Compiler Flags` command
+* fix escaped constant in some snippets
+
 # v2.9.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.2)
 
 * update devDependencies
