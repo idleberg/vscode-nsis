@@ -609,35 +609,35 @@
     "prefix": "ChangeUI"
   },
   "ChangeUI:default.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\default.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\default.bmp\"$2",
     "description": "Usage: ChangeUI default.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "ChangeUI:default.exe"
   },
   "ChangeUI:modern.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern.bmp\"$2",
     "description": "Usage: ChangeUI modern.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "ChangeUI:modern.exe"
   },
   "ChangeUI:modern_nodesc.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_nodesc.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_nodesc.bmp\"$2",
     "description": "Usage: ChangeUI modern_nodesc.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "ChangeUI:modern_nodesc.exe"
   },
   "ChangeUI:modern_smalldesc.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_smalldesc.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_smalldesc.bmp\"$2",
     "description": "Usage: ChangeUI modern_smalldesc.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "ChangeUI:modern_smalldesc.exe"
   },
   "ChangeUI:sdbarker_tiny.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\sdbarker_tiny.bmp$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\sdbarker_tiny.bmp$2",
     "description": "Usage: ChangeUI sdbarker_tiny.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
@@ -651,84 +651,84 @@
     "prefix": "CheckBitmap"
   },
   "CheckBitmap:big.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\big.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\big.bmp\"$2",
     "description": "Usage: CheckBitmap big.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:big.bmp"
   },
   "CheckBitmap:classic-cross.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic-cross.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic-cross.bmp\"$2",
     "description": "Usage: CheckBitmap classic.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:classic-cross.bmp"
   },
   "CheckBitmap:classic.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic.bmp\"$2",
     "description": "Usage: CheckBitmap classic.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:classic.bmp"
   },
   "CheckBitmap:colorful.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\colorful.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\colorful.bmp\"$2",
     "description": "Usage: CheckBitmap colorful.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:colorful.bmp"
   },
   "CheckBitmap:grey-cross.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey-cross.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey-cross.bmp\"$2",
     "description": "Usage: CheckBitmap grey-cross.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:grey-cross.bmp"
   },
   "CheckBitmap:grey.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey.bmp\"$2",
     "description": "Usage: CheckBitmap grey.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:grey.bmp"
   },
   "CheckBitmap:modern.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\modern.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\modern.bmp\"$2",
     "description": "Usage: CheckBitmap modern.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:modern.bmp"
   },
   "CheckBitmap:red-round.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red-round.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red-round.bmp\"$2",
     "description": "Usage: CheckBitmap red.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:red-round.bmp"
   },
   "CheckBitmap:red.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red.bmp\"$2",
     "description": "Usage: CheckBitmap red-roun.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:red.bmp"
   },
   "CheckBitmap:simple-round.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round.bmp\"$2",
     "description": "Usage: CheckBitmap simple-round.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:simple-round.bmp"
   },
   "CheckBitmap:simple-round2.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round2.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round2.bmp\"$2",
     "description": "Usage: CheckBitmap simple-round.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "CheckBitmap:simple-round2.bmp"
   },
   "CheckBitmap:simple.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple.bmp\"$2",
     "description": "Usage: CheckBitmap simple-round2.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
@@ -1400,112 +1400,112 @@
     "prefix": "Icon"
   },
   "Icon:arrow-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-install.ico\"$2",
     "description": "Usage: Icon arrow-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:arrow-install.ico"
   },
   "Icon:arrow2-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-install.ico\"$2",
     "description": "Usage: Icon arrow2-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:arrow2-install.ico"
   },
   "Icon:box-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-install.ico\"$2",
     "description": "Usage: Icon box-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:box-install.ico"
   },
   "Icon:classic-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-install.ico\"$2",
     "description": "Usage: Icon classic-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:classic-install.ico"
   },
   "Icon:llama-blue.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$2",
     "description": "Usage: Icon llama-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:llama-blue.ico"
   },
   "Icon:llama-grey.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$2",
     "description": "Usage: Icon llama-grey.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:llama-grey.ico"
   },
   "Icon:modern-install-blue-full.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue-full.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue-full.ico\"$2",
     "description": "Usage: Icon modern-install-blue-ful.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:modern-install-blue-full.ico"
   },
   "Icon:modern-install-blue.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue.ico\"$2",
     "description": "Usage: Icon modern-install-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:modern-install-blue.ico"
   },
   "Icon:modern-install-colorful.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-colorful.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-colorful.ico\"$2",
     "description": "Usage: Icon modern-install-colorfu.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:modern-install-colorful.ico"
   },
   "Icon:modern-install-full.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-full.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-full.ico\"$2",
     "description": "Usage: Icon modern-install-ful.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:modern-install-full.ico"
   },
   "Icon:modern-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install.ico\"$2",
     "description": "Usage: Icon modern-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:modern-install.ico"
   },
   "Icon:nsis1-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-install.ico\"$2",
     "description": "Usage: Icon nsis1-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:nsis1-install.ico"
   },
   "Icon:orange-install-nsis.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install-nsis.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install-nsis.ico\"$2",
     "description": "Usage: Icon orange-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:orange-install-nsis.ico"
   },
   "Icon:orange-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install.ico\"$2",
     "description": "Usage: Icon orange-install-nsis.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:orange-install.ico"
   },
   "Icon:pixel-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-install.ico\"$2",
     "description": "Usage: Icon pixel-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "Icon:pixel-install.ico"
   },
   "Icon:win-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-install.ico\"$2",
     "description": "Usage: Icon win-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
@@ -3108,112 +3108,112 @@
     "prefix": "UninstallIcon"
   },
   "UninstallIcon:arrow-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon arrow-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:arrow-uninstall.ico"
   },
   "UninstallIcon:arrow2-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon arrow2-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:arrow2-uninstall.ico"
   },
   "UninstallIcon:box-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon box-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:box-uninstall.ico"
   },
   "UninstallIcon:classic-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon classic-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:classic-uninstall.ico"
   },
   "UninstallIcon:llama-blue.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$1",
     "description": "Usage: UninstallIcon llama-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:llama-blue.ico"
   },
   "UninstallIcon:llama-grey.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$1",
     "description": "Usage: UninstallIcon llama-grey.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:llama-grey.ico"
   },
   "UninstallIcon:modern-uninstall-blue-full.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue-full.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue-full.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-blue-full.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-blue-full.ico"
   },
   "UninstallIcon:modern-uninstall-blue.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-blue.ico"
   },
   "UninstallIcon:modern-uninstall-colorful.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-colorful.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-colorful.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-colorful.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-colorful.ico"
   },
   "UninstallIcon:modern-uninstall-full.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-full.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-full.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-full.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-full.ico"
   },
   "UninstallIcon:modern-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall.ico"
   },
   "UninstallIcon:nsis1-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon nsis1-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:nsis1-uninstall.ico"
   },
   "UninstallIcon:orange-uninstall-nsis.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall-nsis.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall-nsis.ico\"$1",
     "description": "Usage: UninstallIcon orange-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:orange-uninstall-nsis.ico"
   },
   "UninstallIcon:orange-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon orange-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:orange-uninstall.ico"
   },
   "UninstallIcon:pixel-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon pixel-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
     "prefix": "UninstallIcon:pixel-uninstall.ico"
   },
   "UninstallIcon:win-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon win-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='keyword'>K</span>",
