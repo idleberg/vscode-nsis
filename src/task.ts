@@ -14,7 +14,7 @@ export function createTask() {
   let args, argsStrict, buildFile, command, config, dotFolder, jsonString, prefix, taskFile;
 
   prefix = getPrefix();
-  config = getConfig()
+  config = getConfig();
   command = config.pathToMakensis || 'makensis';
 
   if (typeof config.compilerArguments !== 'undefined' && config.compilerArguments !== null) {
