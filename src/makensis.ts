@@ -9,13 +9,13 @@ const outputChannel = window.createOutputChannel('NSIS');
 
 export function compile(textEditor: any, strictMode: boolean) {
   let config: any = getConfig();
-
   let doc = textEditor.document;
-  doc.save().then(function () {
-    let pathToMakensis = config.pathToMakensis;
-    let prefix = getPrefix();
 
-    let compilerArguments;
+  doc.save().then( () => {
+    let pathToMakensis: string = config.pathToMakensis;
+    let prefix: string = getPrefix();
+
+    let compilerArguments: Array<string>;
     if (typeof config.compilerArguments !== 'undefined' && config.compilerArguments !== null) {
       compilerArguments = config.compilerArguments.trim().split(' ');
     } else {
@@ -40,17 +40,16 @@ export function compile(textEditor: any, strictMode: boolean) {
     let stdErr: string = '';
     let hasWarning: boolean = false;
 
-    makensis.stdout.on('data', (data: Array<string> ) => {
-      console.log(typeof data);
-      if (data.indexOf('warning: ') !== -1) {
+    makensis.stdout.on('data', (line: Array<string> ) => {
+      if (line.indexOf('warning: ') !== -1) {
         hasWarning = true;
       }
-      outputChannel.appendLine(data.toString());
+      outputChannel.appendLine(line.toString());
     });
 
-    makensis.stderr.on('data', (data: Array<any>) => {
-      stdErr += '\n' + data;
-      outputChannel.appendLine(data.toString());
+    makensis.stderr.on('data', (line: Array<any>) => {
+      stdErr += '\n' + line;
+      outputChannel.appendLine(line.toString());
     });
 
     makensis.on('close', (code) => {
@@ -67,5 +66,40 @@ export function compile(textEditor: any, strictMode: boolean) {
         console.error(stdErr);
       }
     });
+  });
+}
+
+export function showVersion() {
+  let config: any = getConfig();
+  let pathToMakensis: string = config.pathToMakensis;
+  let prefix: string = getPrefix();
+
+  const makensis = spawn(pathToMakensis, [ `${prefix}VERSION` ]);
+
+  makensis.stdout.on('data', (version: Array<string> ) => {
+    window.showInformationMessage(`makensis ${version} (${pathToMakensis})`);
+  });
+}
+
+export function showCompilerFlags() {
+  let config: any = getConfig();
+  let pathToMakensis: string = config.pathToMakensis;
+  let prefix: string = getPrefix();
+
+  outputChannel.clear();
+  if (config.alwaysShowOutput === true) {
+    outputChannel.show();
+  }
+
+  const makensis = spawn(pathToMakensis, [ `${prefix}HDRINFO` ]);
+
+  makensis.stdout.on('data', (flags: Array<string> ) => {
+    outputChannel.appendLine(flags.toString());
+  });
+
+  makensis.on('close', (code) => {
+    if (code === 0) {
+      outputChannel.show(true);
+    }
   });
 }

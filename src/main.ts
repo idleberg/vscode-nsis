@@ -3,10 +3,9 @@
 import { commands } from 'vscode';
 
 // Load package components
-import { compile } from './compile-nsis';
+import { compile, showCompilerFlags, showVersion } from './makensis';
 import { createTask } from './task';
-import { transpileBridle } from './transpile-bridlensis';
-import { transpileNsl } from './transpile-nsl';
+import { bridleNsis, nslAssembler} from './transpiler';
 
 export function activate(context) {
     context.subscriptions.push(
@@ -20,13 +19,23 @@ export function activate(context) {
       })
     );
     context.subscriptions.push(
+      commands.registerTextEditorCommand('extension.nsis.show-version', (editor) => {
+        return showVersion();
+      })
+    );
+    context.subscriptions.push(
+      commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', (editor) => {
+        return showCompilerFlags();
+      })
+    );
+    context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.transpile-bridlensis', (editor) => {
-        return transpileBridle(editor);
+        return bridleNsis(editor);
       })
     );
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.transpile-nsl', (editor) => {
-        return transpileNsl(editor);
+        return nslAssembler(editor);
       })
     );
     context.subscriptions.push(
