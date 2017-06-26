@@ -1,6 +1,6 @@
 # v3.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.1)
 
-* fix unescaped constants in some snippets
+* fix unescaped characters in some snippets
 
 # v3.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.0)
 
