@@ -6,7 +6,7 @@ import { mkdir, writeFile } from 'fs';
 import { getConfig, getPrefix } from './util';
 import { join } from 'path';
 
-export function createTask() {
+let createTask = () => {
   if (typeof workspace.rootPath === 'undefined' || workspace.rootPath === null) {
     return window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
@@ -73,3 +73,5 @@ export function createTask() {
     });
   });
 }
+
+export { createTask };

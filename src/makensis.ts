@@ -7,7 +7,7 @@ import { spawn } from 'child_process';
 
 const outputChannel = window.createOutputChannel('NSIS');
 
-export function compile(textEditor: any, strictMode: boolean) {
+let compile = (textEditor: any, strictMode: boolean) => {
   let config: any = getConfig();
   let doc = textEditor.document;
 
@@ -69,7 +69,7 @@ export function compile(textEditor: any, strictMode: boolean) {
   });
 }
 
-export function showVersion() {
+let showVersion = () => {
   let config: any = getConfig();
   let pathToMakensis: string = config.pathToMakensis;
   let prefix: string = getPrefix();
@@ -81,7 +81,7 @@ export function showVersion() {
   });
 }
 
-export function showCompilerFlags() {
+let showCompilerFlags = () => {
   let config: any = getConfig();
   let pathToMakensis: string = config.pathToMakensis;
   let prefix: string = getPrefix();
@@ -103,3 +103,5 @@ export function showCompilerFlags() {
     }
   });
 }
+
+export { compile, showVersion, showCompilerFlags };

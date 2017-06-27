@@ -7,7 +7,7 @@ import { compile, showCompilerFlags, showVersion } from './makensis';
 import { createTask } from './task';
 import { bridleNsis, nslAssembler} from './transpiler';
 
-export function activate(context) {
+let activate = (context) => {
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.compile', (editor) => {
         return compile(editor, false);
@@ -44,3 +44,5 @@ export function activate(context) {
       })
     );
 }
+
+export { activate };

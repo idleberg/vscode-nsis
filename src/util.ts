@@ -5,11 +5,11 @@ import { window, workspace } from 'vscode';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
-export function getConfig() {
+let getConfig = () => {
   return workspace.getConfiguration('nsis');
 }
 
-// export function getPath (callback) {
+// let getPath =  (callback) => {
 //   let pathToMakensis = getConfig().pathToMakensis;
 
 //   if (pathToMakensis !== 'undefined' && pathToMakensis.length > 0) {
@@ -32,7 +32,7 @@ export function getConfig() {
 //   });
 // }
 
-export function getPrefix() {
+let getPrefix = () => {
   if (platform() === 'win32') {
     return '/';
   }
@@ -40,9 +40,11 @@ export function getPrefix() {
   return '-';
 }
 
-export function which() {
+let which = () => {
   if (platform() === 'win32') {
     return 'where';
   }
   return 'which';
 }
+
+export { getConfig, getPrefix, which };

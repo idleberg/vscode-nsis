@@ -12,7 +12,7 @@ const outputChannel = window.createOutputChannel('nsL Assembler');
  *  https://sourceforge.net/projects/nslassembler/
  *  https://github.com/NSIS-Dev/nsl-assembler
  */
-export function nslAssembler(textEditor: any) {
+let nslAssembler = (textEditor: any) => {
   let config: any = getConfig();
   let doc = textEditor.document;
 
@@ -69,7 +69,7 @@ export function nslAssembler(textEditor: any) {
  *  Requires BridleNSIS
  *  https://github.com/henrikor2/bridlensis
  */
-export function bridleNsis(textEditor: any) {
+let bridleNsis = (textEditor: any) => {
   let config: any = getConfig();
   let doc = textEditor.document;
 
@@ -129,3 +129,5 @@ export function bridleNsis(textEditor: any) {
     });
   });
 }
+
+export {nslAssembler, bridleNsis };
