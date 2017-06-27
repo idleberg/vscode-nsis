@@ -7,7 +7,7 @@ import { spawn } from 'child_process';
 
 let getConfig = () => {
   return workspace.getConfiguration('nsis');
-}
+};
 
 // let getPath =  (callback) => {
 //   let pathToMakensis = getConfig().pathToMakensis;
@@ -38,13 +38,13 @@ let getPrefix = () => {
   }
 
   return '-';
-}
+};
 
 let which = () => {
   if (platform() === 'win32') {
     return 'where';
   }
   return 'which';
-}
+};
 
 export { getConfig, getPrefix, which };

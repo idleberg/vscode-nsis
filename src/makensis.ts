@@ -67,7 +67,7 @@ let compile = (textEditor: any, strictMode: boolean) => {
       }
     });
   });
-}
+};
 
 let showVersion = () => {
   let config: any = getConfig();
@@ -79,7 +79,7 @@ let showVersion = () => {
   makensis.stdout.on('data', (version: Array<string> ) => {
     window.showInformationMessage(`makensis ${version} (${pathToMakensis})`);
   });
-}
+};
 
 let showCompilerFlags = () => {
   let config: any = getConfig();
@@ -102,6 +102,6 @@ let showCompilerFlags = () => {
       outputChannel.show(true);
     }
   });
-}
+};
 
 export { compile, showVersion, showCompilerFlags };

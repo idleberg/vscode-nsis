@@ -63,7 +63,7 @@ let nslAssembler = (textEditor: any) => {
       }
     });
   });
-}
+};
 
 /*
  *  Requires BridleNSIS
@@ -128,6 +128,6 @@ let bridleNsis = (textEditor: any) => {
       }
     });
   });
-}
+};
 
 export {nslAssembler, bridleNsis };

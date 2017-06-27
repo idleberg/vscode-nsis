@@ -43,6 +43,6 @@ let activate = (context) => {
         return createTask();
       })
     );
-}
+};
 
 export { activate };

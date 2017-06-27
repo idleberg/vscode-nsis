@@ -72,6 +72,6 @@ let createTask = () => {
       });
     });
   });
-}
+};
 
 export { createTask };
