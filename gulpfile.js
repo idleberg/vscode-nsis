@@ -29,7 +29,7 @@ const xmlFiles = [
 ];
 
 // Lint JavaScript
-gulp.task('lint:ts', gulp.series(function(done) {
+gulp.task('lint:ts', gulp.series( (done) => {
   gulp.src(tsFiles)
     .pipe(debug({title: 'tslint'}))
     .pipe(tslint({
@@ -40,7 +40,7 @@ gulp.task('lint:ts', gulp.series(function(done) {
 }));
 
 // Lint JSON
-gulp.task('lint:json', gulp.series(function(done) { 
+gulp.task('lint:json', gulp.series( (done) => { 
   gulp.src(jsonFiles)
     .pipe(debug({title: 'json-lint'}))
     .pipe(jsonlint())
@@ -50,7 +50,7 @@ gulp.task('lint:json', gulp.series(function(done) {
 }));
 
 // Validate XML
-gulp.task('lint:xml', gulp.series(function(done) { 
+gulp.task('lint:xml', gulp.series( (done) => { 
   gulp.src(xmlFiles)
     .pipe(debug({title: 'xml-validator'}))
     .pipe(xmlVal());
@@ -58,6 +58,6 @@ gulp.task('lint:xml', gulp.series(function(done) {
 }));
 
 // Available tasks
-gulp.task('lint', gulp.parallel('lint:ts', 'lint:json', 'lint:xml', function(done) {
+gulp.task('lint', gulp.parallel('lint:ts', 'lint:json', 'lint:xml',  (done) => {
   done();
 }));
