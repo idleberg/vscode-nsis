@@ -1,3 +1,7 @@
+# v3.0.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.2)
+
+* use “fat arrow” functions everywhere
+
 # v3.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.1)
 
 * fix unescaped characters in some snippets
