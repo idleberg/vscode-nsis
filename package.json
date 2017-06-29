@@ -395,9 +395,9 @@
     },
     "scripts": {
         "compile": "tsc -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install && gulp build",
+        "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "gulp lint",
-        "vscode:prepublish": "tsc -p ./ && gulp build"
+        "vscode:prepublish": "tsc -p ./"
     },
     "devDependencies": {
         "@types/node": "^8.0.2",
