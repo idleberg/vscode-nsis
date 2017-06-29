@@ -10,6 +10,7 @@ const gulp = require('gulp');
 const debug = require('gulp-debug');
 const tslint = require('gulp-tslint');
 const jsonlint = require('gulp-jsonlint');
+const rename = require('gulp-rename');
 const svg2png = require('gulp-svg2png');
 const xmlVal = require('gulp-xml-validator');
 
@@ -30,7 +31,7 @@ const xmlFiles = [
 ];
 
 const svgFiles = [
-  'src/*.svg'
+  'node_modules/nsis-logo-v3/src/Logo/outlines-light.svg'
 ];
 
 // Lint JavaScript
@@ -66,6 +67,7 @@ gulp.task('lint:xml', gulp.series( (done) => {
 gulp.task('convert:svg', gulp.series( (done) => { 
   gulp.src(svgFiles)
     .pipe(svg2png({width: 128, height: 128}))
+    .pipe(rename("logo.png"))
     .pipe(gulp.dest('./images'));
   done();
 }));
