@@ -1,3 +1,7 @@
+# v3.0.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.3)
+
+* use PNG logo (as required by upcoming versions of Code)
+
 # v3.0.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.2)
 
 * use “fat arrow” functions everywhere
