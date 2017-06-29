@@ -25,7 +25,7 @@
         "url": "https://github.com/idleberg/vscode-nsis/issues"
     },
     "main": "./lib/main",
-    "icon": "images/logo.svg",
+    "icon": "images/logo.png",
     "galleryBanner": {
         "color": "#9e90aa",
         "theme": "dark"
@@ -395,15 +395,16 @@
     },
     "scripts": {
         "compile": "tsc -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
+        "postinstall": "node ./node_modules/vscode/bin/install && gulp build",
         "test": "gulp lint",
-        "vscode:prepublish": "tsc -p ./"
+        "vscode:prepublish": "tsc -p ./ && gulp build"
     },
     "devDependencies": {
         "@types/node": "^8.0.2",
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-debug": "^3.1.0",
         "gulp-jsonlint": "^1.2.0",
+        "gulp-svg2png": "^2.0.2",
         "gulp-tslint": "^8.1.1",
         "gulp-xml-validator": "^0.1.2",
         "tslint": "^5.4.3",
