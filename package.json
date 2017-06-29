@@ -404,9 +404,11 @@
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-debug": "^3.1.0",
         "gulp-jsonlint": "^1.2.0",
+        "gulp-rename": "^1.2.2",
         "gulp-svg2png": "^2.0.2",
         "gulp-tslint": "^8.1.1",
         "gulp-xml-validator": "^0.1.2",
+        "nsis-logo-v3": "github:idleberg/nsis-logo-v3",
         "tslint": "^5.4.3",
         "typescript": "^2.3.4",
         "vscode": "^1.1.0"
