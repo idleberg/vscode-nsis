@@ -50,7 +50,7 @@
             "properties": {
                 "nsis.pathToMakensis": {
                     "type": "string",
-                    "default": "makensis",
+                    "default": null,
                     "description": "Specify the full path to `makensis`"
                 },
                 "nsis.compilerArguments": {
@@ -409,6 +409,7 @@
         "gulp-tslint": "^8.1.1",
         "gulp-xml-validator": "^0.1.2",
         "nsis-logo-v3": "github:idleberg/nsis-logo-v3",
+        "opn": "^5.1.0",
         "tslint": "^5.4.3",
         "typescript": "^2.3.4",
         "vscode": "^1.1.0"
