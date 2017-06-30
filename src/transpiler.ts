@@ -2,8 +2,9 @@
 
 import { window } from 'vscode';
 
-import { clearOutput, getConfig, makeNsis } from './util';
+import { clearOutput, getConfig, makeNsis, successBridleNsis, successNslAssembler } from './util';
 import { spawn } from 'child_process';
+
 
 const nslChannel = window.createOutputChannel('nsL Assembler');
 const bridleChannel = window.createOutputChannel('BridleNSIS');
@@ -13,7 +14,7 @@ const bridleChannel = window.createOutputChannel('BridleNSIS');
  *  https://sourceforge.net/projects/nslassembler/
  *  https://github.com/NSIS-Dev/nsl-assembler
  */
-const nslAssembler = (textEditor: any) => {
+const nslAssembler = () => {
   clearOutput(nslChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsl') {
@@ -22,7 +23,7 @@ const nslAssembler = (textEditor: any) => {
   }
 
   let config: any = getConfig();
-  let doc = textEditor.document;
+  let doc = window.activeTextEditor.document;
 
   doc.save().then( () => {
     let nslJar = config.nsl.pathToJar;
@@ -57,7 +58,10 @@ const nslAssembler = (textEditor: any) => {
 
     nslCmd.on('close', (code) => {
       if (stdErr.length === 0) {
-        if (config.showNotifications) window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`);
+        if (config.showNotifications) {
+          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`, "Open")
+          .then(successNslAssembler);
+        }
       } else {
         nslChannel.show(true);
         if (config.showNotifications) window.showErrorMessage('Transpile failed, see output for details');
@@ -71,7 +75,7 @@ const nslAssembler = (textEditor: any) => {
  *  Requires BridleNSIS
  *  https://github.com/henrikor2/bridlensis
  */
-const bridleNsis = (textEditor: any) => {
+const bridleNsis = () => {
   clearOutput(bridleChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'bridlensis') {
@@ -80,7 +84,7 @@ const bridleNsis = (textEditor: any) => {
   }
 
   let config: any = getConfig();
-  let doc = textEditor.document;
+  let doc = window.activeTextEditor.document;
 
   doc.save().then( () => {
     let bridleJar = config.bridlensis.pathToJar;
@@ -124,7 +128,10 @@ const bridleNsis = (textEditor: any) => {
 
     bridleCmd.on('close', (code) => {
       if (code === 0 && stdErr.length === 0) {
-        if (config.showNotifications) window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`);
+        if (config.showNotifications) {
+          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`)
+          .then(successBridleNsis);
+        }
       } else {
         bridleChannel.show(true);
         if (config.showNotifications) window.showErrorMessage('Transpile failed, see output for details');

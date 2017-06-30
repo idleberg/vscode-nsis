@@ -3,6 +3,7 @@
 import { window, workspace } from 'vscode';
 
 import * as opn from 'opn';
+import { basename, dirname, extname, join } from 'path';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
@@ -31,14 +32,14 @@ const makeNsis = () => {
   return new Promise((resolve, reject) => {
     let pathToMakensis = getConfig().pathToMakensis;
     if (typeof pathToMakensis !== 'undefined' && pathToMakensis !== null) {
-      console.log('Using makensis path found in user settings (' + pathToMakensis + ')');
+      console.log('Using makensis path found in user settings:' + pathToMakensis);
       return resolve(pathToMakensis);
     }
 
     let which = spawn(this.which(), ['makensis']);
 
     which.stdout.on('data', (data) => {
-      console.log('Using makensis path detected on file system (' + data + ')');
+      console.log('Using makensis path detected on file system: ' + data);
       return resolve(data);
     });
 
@@ -63,7 +64,41 @@ const pathWarning = () => {
 };
 
 const sanitize = (response: Object) => {
-  return  response.toString().trim();
+  return response.toString().trim();
+};
+
+const successBridleNsis = (choice) => {
+  let doc = window.activeTextEditor.document;
+            
+  if (choice === 'Open') {
+    let dirName = dirname(doc.fileName);
+    let extName = extname(doc.fileName);
+    let baseName = basename(doc.fileName, extName);
+    let outName = baseName + '.b' + extName.substr(1);
+    let nsisFile = join(dirName, outName);
+
+    workspace.openTextDocument(nsisFile)
+    .then( (doc) => {
+      window.showTextDocument(doc);
+    });
+  };
+};
+
+const successNslAssembler = (choice) => {
+  let doc = window.activeTextEditor.document;
+            
+  if (choice === 'Open') {
+    let dirName = dirname(doc.fileName);
+    let extName = extname(doc.fileName);
+    let baseName = basename(doc.fileName, extName);
+    let outName = baseName + '.nsi'
+    let nsisFile = join(dirName, outName);
+
+    workspace.openTextDocument(nsisFile)
+    .then( (doc) => {
+      window.showTextDocument(doc);
+    });
+  };
 };
 
 const which = () => {
@@ -73,4 +108,4 @@ const which = () => {
   return 'which';
 };
 
-export { clearOutput, getConfig, getPrefix, makeNsis, pathWarning, sanitize, which };
+export { clearOutput, getConfig, getPrefix, makeNsis, pathWarning, sanitize, successBridleNsis, successNslAssembler, which };
