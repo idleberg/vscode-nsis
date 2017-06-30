@@ -2,17 +2,25 @@
 
 import { window } from 'vscode';
 
-import { getConfig } from './util';
+import { clearChannel, getConfig, makeNsis } from './util';
 import { spawn } from 'child_process';
 
-const outputChannel = window.createOutputChannel('nsL Assembler');
+const nslChannel = window.createOutputChannel("nsL Assembler");
+const bridleChannel = window.createOutputChannel("BridleNSIS");
 
 /*
  *  Requires nsL Assembler
  *  https://sourceforge.net/projects/nslassembler/
  *  https://github.com/NSIS-Dev/nsl-assembler
  */
-let nslAssembler = (textEditor: any) => {
+const nslAssembler = (textEditor: any) => {
+  clearChannel(nslChannel);
+
+  if (window.activeTextEditor["_documentData"]["_languageId"] !== 'nsl') {
+    nslChannel.appendLine("This command is only available for nsL Assembler files");
+    return;
+  }
+
   let config: any = getConfig();
   let doc = textEditor.document;
 
@@ -22,7 +30,6 @@ let nslAssembler = (textEditor: any) => {
     if (typeof nslJar === 'undefined' || nslJar === null) {
       return window.showErrorMessage('No valid `nsL.jar` was specified in your config');
     }
-
 
     let customArguments: Array<string>;
     const defaultArguments: Array<string> = ['-jar', nslJar];
@@ -34,32 +41,27 @@ let nslAssembler = (textEditor: any) => {
     customArguments.push(doc.fileName);
     const compilerArguments = defaultArguments.concat(customArguments);
 
-    outputChannel.clear();
-    if (config.alwaysShowOutput === true) {
-      outputChannel.show(true);
-    }
-
     // Let's build
     const nslCmd = spawn('java', compilerArguments);
 
     let stdErr: string = '';
 
     nslCmd.stdout.on('data', (line: Array<any>) => {
-      outputChannel.appendLine(line.toString());
+      nslChannel.appendLine(line.toString());
     });
 
     nslCmd.stderr.on('data', (line: Array<any>) => {
       stdErr += '\n' + line;
-      outputChannel.appendLine(line.toString());
+      nslChannel.appendLine(line.toString());
     });
 
     nslCmd.on('close', (code) => {
       if (stdErr.length === 0) {
         if (config.showNotifications) window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`);
       } else {
-        outputChannel.show(true);
+        nslChannel.show(true);
         if (config.showNotifications) window.showErrorMessage('Transpile failed, see output for details');
-        console.error(stdErr);
+        if (stdErr.length > 0) console.error(stdErr);
       }
     });
   });
@@ -69,7 +71,14 @@ let nslAssembler = (textEditor: any) => {
  *  Requires BridleNSIS
  *  https://github.com/henrikor2/bridlensis
  */
-let bridleNsis = (textEditor: any) => {
+const bridleNsis = (textEditor: any) => {
+  clearChannel(bridleChannel);
+
+  if (window.activeTextEditor['_documentData']['_languageId'] !== 'bridlensis') {
+    bridleChannel.appendLine('This command is only available for BridleNSIS files');
+    return;
+  }
+
   let config: any = getConfig();
   let doc = textEditor.document;
 
@@ -96,11 +105,6 @@ let bridleNsis = (textEditor: any) => {
     customArguments.push(doc.fileName);
     const compilerArguments = defaultArguments.concat(customArguments);
 
-    outputChannel.clear();
-    if (config.alwaysShowOutput === true) {
-      outputChannel.show(true);
-    }
-
     // Let's build
     const bridleCmd = spawn('java', compilerArguments);
 
@@ -110,21 +114,21 @@ let bridleNsis = (textEditor: any) => {
       if (line.indexOf('Cannot run program') !== -1) {
         stdErr += '\n' + line;
       }
-      outputChannel.appendLine(line.toString());
+      bridleChannel.appendLine(line.toString());
     });
 
     bridleCmd.stderr.on('data', (line: Array<any>) => {
       stdErr += '\n' + line;
-      outputChannel.appendLine(line.toString());
+      bridleChannel.appendLine(line.toString());
     });
 
     bridleCmd.on('close', (code) => {
       if (code === 0 && stdErr.length === 0) {
         if (config.showNotifications) window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`);
       } else {
-        outputChannel.show(true);
+        bridleChannel.show(true);
         if (config.showNotifications) window.showErrorMessage('Transpile failed, see output for details');
-        console.error(stdErr);
+        if (stdErr.length > 0) console.error(stdErr);
       }
     });
   });
