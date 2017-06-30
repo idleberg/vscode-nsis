@@ -55,8 +55,8 @@ const clearChannel = (channel) => {
   }
 }
 
-const sanitizeString = (response: Object) => {
+const sanitize = (response: Object) => {
   return response.toString().trim();
 }
 
-export { clearChannel, getConfig, getPrefix, makeNsis, sanitizeString, which };
+export { clearChannel, getConfig, getPrefix, makeNsis, sanitize, which };

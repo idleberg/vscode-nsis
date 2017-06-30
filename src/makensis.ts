@@ -2,7 +2,7 @@
 
 import { window } from 'vscode';
 
-import { clearChannel, getConfig, getPrefix, makeNsis, sanitizeString } from './util';
+import { clearChannel, getConfig, getPrefix, makeNsis, sanitize } from './util';
 import { spawn } from 'child_process';
 
 const nsisChannel = window.createOutputChannel("NSIS");
@@ -20,7 +20,7 @@ const compile = (textEditor: any, strictMode: boolean) => {
 
   doc.save().then( () => {
     makeNsis()
-    .then(sanitizeString)
+    .then(sanitize)
     .then( (pathToMakensis: string) => {
       let prefix: string = getPrefix();
 
@@ -82,7 +82,7 @@ const showVersion = () => {
   let prefix: string = getPrefix();
 
   makeNsis()
-  .then(sanitizeString)
+  .then(sanitize)
   .then( (pathToMakensis: string) => {
     const makensis = spawn(pathToMakensis, [ `${prefix}VERSION` ]);
 
@@ -99,7 +99,7 @@ const showCompilerFlags = () => {
   clearChannel(nsisChannel);
 
   makeNsis()
-  .then(sanitizeString)
+  .then(sanitize)
   .then( (pathToMakensis: string) => {
     let config: any = getConfig();
     let prefix: string = getPrefix();
