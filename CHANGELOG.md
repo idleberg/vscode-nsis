@@ -2,6 +2,7 @@
 
 * add `makensis` detection
 * add helper utilities
+* declare all functions as constants
 * fix: add missing output channel
 
 # v3.0.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.3)
