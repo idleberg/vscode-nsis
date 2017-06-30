@@ -7,7 +7,7 @@ import { spawn } from 'child_process';
 
 const nsisChannel = window.createOutputChannel('NSIS');
 
-const compile = (textEditor: any, strictMode: boolean) => {
+const compile = (strictMode: boolean) => {
   clearOutput(nsisChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsis') {
@@ -15,14 +15,14 @@ const compile = (textEditor: any, strictMode: boolean) => {
     return;
   }
 
-  let config: any = getConfig();
-  let doc = textEditor.document;
+  let doc = window.activeTextEditor.document;
 
   doc.save().then( () => {
     makeNsis()
     .then(sanitize)
     .then( (pathToMakensis: string) => {
       let prefix: string = getPrefix();
+      let config: any = getConfig();
 
       let compilerArguments: Array<string>;
       if (typeof config.compilerArguments !== 'undefined' && config.compilerArguments !== null) {
