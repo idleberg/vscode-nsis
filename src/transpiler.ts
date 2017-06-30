@@ -5,8 +5,8 @@ import { window } from 'vscode';
 import { clearOutput, getConfig, makeNsis } from './util';
 import { spawn } from 'child_process';
 
-const nslChannel = window.createOutputChannel("nsL Assembler");
-const bridleChannel = window.createOutputChannel("BridleNSIS");
+const nslChannel = window.createOutputChannel('nsL Assembler');
+const bridleChannel = window.createOutputChannel('BridleNSIS');
 
 /*
  *  Requires nsL Assembler
@@ -16,8 +16,8 @@ const bridleChannel = window.createOutputChannel("BridleNSIS");
 const nslAssembler = (textEditor: any) => {
   clearOutput(nslChannel);
 
-  if (window.activeTextEditor["_documentData"]["_languageId"] !== 'nsl') {
-    nslChannel.appendLine("This command is only available for nsL Assembler files");
+  if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsl') {
+    nslChannel.appendLine('This command is only available for nsL Assembler files');
     return;
   }
 
