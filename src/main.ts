@@ -10,12 +10,12 @@ import { bridleNsis, nslAssembler} from './transpiler';
 const activate = (context) => {
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.compile', (editor) => {
-        return compile(editor, false);
+        return compile(false);
       })
     );
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.compile-strict', (editor) => {
-        return compile(editor, true);
+        return compile(true);
       })
     );
     context.subscriptions.push(
@@ -30,12 +30,12 @@ const activate = (context) => {
     );
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.transpile-bridlensis', (editor) => {
-        return bridleNsis(editor);
+        return bridleNsis();
       })
     );
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.transpile-nsl', (editor) => {
-        return nslAssembler(editor);
+        return nslAssembler();
       })
     );
     context.subscriptions.push(
