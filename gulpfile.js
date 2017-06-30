@@ -34,7 +34,7 @@ const svgFiles = [
   'node_modules/nsis-logo-v3/src/Logo/outlines-light.svg'
 ];
 
-// Lint JavaScript
+// Lint TypeScript
 gulp.task('lint:ts', gulp.series( (done) => {
   gulp.src(tsFiles)
     .pipe(debug({title: 'tslint'}))
