@@ -2,10 +2,10 @@
 
 import { window } from 'vscode';
 
-import { clearOutput, getConfig, getPrefix, makeNsis, sanitize } from './util';
+import { clearOutput, getConfig, getPrefix, makeNsis, pathWarning, sanitize } from './util';
 import { spawn } from 'child_process';
 
-const nsisChannel = window.createOutputChannel("NSIS");
+const nsisChannel = window.createOutputChannel('NSIS');
 
 const compile = (textEditor: any, strictMode: boolean) => {
   clearOutput(nsisChannel);
@@ -71,9 +71,7 @@ const compile = (textEditor: any, strictMode: boolean) => {
         }
       });
     })
-    .catch( () => {
-        window.showWarningMessage('makensis is not in your PATH environmental variable – http://superuser.com/a/284351/195953');
-    });
+    .catch(pathWarning);
   });
 };
 
@@ -90,9 +88,7 @@ const showVersion = () => {
       window.showInformationMessage(`makensis ${version} (${pathToMakensis})`);
     });
   })
-  .catch( () => {
-      window.showWarningMessage('makensis is not in your PATH environmental variable – http://superuser.com/a/284351/195953');
-  });
+  .catch(pathWarning);
 };
 
 const showCompilerFlags = () => {
@@ -116,9 +112,7 @@ const showCompilerFlags = () => {
       }
     });
   })
-  .catch( () => {
-      window.showWarningMessage('makensis is not in your PATH environmental variable – http://superuser.com/a/284351/195953');
-  });  
+  .catch(pathWarning);
 };
 
 export { compile, showVersion, showCompilerFlags };
