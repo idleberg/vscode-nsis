@@ -1,3 +1,9 @@
+# v3.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.1.0)
+
+* add `makensis` detection
+* add helper utilities
+* fix: add missing output channel
+
 # v3.0.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.3)
 
 * use PNG logo (as required by upcoming versions of Code)
