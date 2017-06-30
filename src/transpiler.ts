@@ -2,7 +2,7 @@
 
 import { window } from 'vscode';
 
-import { clearChannel, getConfig, makeNsis } from './util';
+import { clearOutput, getConfig, makeNsis } from './util';
 import { spawn } from 'child_process';
 
 const nslChannel = window.createOutputChannel("nsL Assembler");
@@ -14,7 +14,7 @@ const bridleChannel = window.createOutputChannel("BridleNSIS");
  *  https://github.com/NSIS-Dev/nsl-assembler
  */
 const nslAssembler = (textEditor: any) => {
-  clearChannel(nslChannel);
+  clearOutput(nslChannel);
 
   if (window.activeTextEditor["_documentData"]["_languageId"] !== 'nsl') {
     nslChannel.appendLine("This command is only available for nsL Assembler files");
@@ -72,7 +72,7 @@ const nslAssembler = (textEditor: any) => {
  *  https://github.com/henrikor2/bridlensis
  */
 const bridleNsis = (textEditor: any) => {
-  clearChannel(bridleChannel);
+  clearOutput(bridleChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'bridlensis') {
     bridleChannel.appendLine('This command is only available for BridleNSIS files');

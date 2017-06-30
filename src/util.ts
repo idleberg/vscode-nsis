@@ -46,7 +46,7 @@ const which = () => {
   return 'which';
 };
 
-const clearChannel = (channel) => {
+const clearOutput = (channel) => {
   let config: any = getConfig();
 
   channel.clear();
@@ -59,4 +59,4 @@ const sanitize = (response: Object) => {
   return response.toString().trim();
 }
 
-export { clearChannel, getConfig, getPrefix, makeNsis, sanitize, which };
+export { clearOutput, getConfig, getPrefix, makeNsis, sanitize, which };

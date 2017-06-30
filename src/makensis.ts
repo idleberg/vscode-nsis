@@ -2,13 +2,13 @@
 
 import { window } from 'vscode';
 
-import { clearChannel, getConfig, getPrefix, makeNsis, sanitize } from './util';
+import { clearOutput, getConfig, getPrefix, makeNsis, sanitize } from './util';
 import { spawn } from 'child_process';
 
 const nsisChannel = window.createOutputChannel("NSIS");
 
 const compile = (textEditor: any, strictMode: boolean) => {
-  clearChannel(nsisChannel);
+  clearOutput(nsisChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsis') {
     nsisChannel.appendLine('This command is only available for NSIS files');
@@ -96,7 +96,7 @@ const showVersion = () => {
 };
 
 const showCompilerFlags = () => {
-  clearChannel(nsisChannel);
+  clearOutput(nsisChannel);
 
   makeNsis()
   .then(sanitize)
