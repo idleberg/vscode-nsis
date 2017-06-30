@@ -5,34 +5,33 @@ import { window, workspace } from 'vscode';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
-let getConfig = () => {
+const getConfig = () => {
   return workspace.getConfiguration('nsis');
 };
 
-// let getPath =  (callback) => {
-//   let pathToMakensis = getConfig().pathToMakensis;
+const makeNsis = () => {
+  return new Promise((resolve, reject) => {
 
-//   if (pathToMakensis !== 'undefined' && pathToMakensis.length > 0) {
-//     return callback(pathToMakensis);
-//   }
+    let pathToMakensis = getConfig().pathToMakensis;
+    if (typeof pathToMakensis !== 'undefined' && pathToMakensis !== null) {
+      return resolve(pathToMakensis);
+    }
 
-//   let which;
-//   which = spawn(which(), ['makensis']);
+    let which = spawn(this.which(), ['makensis']);
 
-//   which.stdout.on('data', (data) => {
-//     let path;
-//     path = data.toString().trim();
-//     return callback(path);
-//   });
+    which.stdout.on('data', (data) => {
+      return resolve(data);
+    });
 
-//   return which.on('close', (errorCode) => {
-//     if (errorCode > 0) {
-//       return window.showWarningMessage('makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)');
-//     }
-//   });
-// }
+    which.on('close', (code) => {
+      if (code !== 0) {
+        return reject(code);
+      }
+    });
+  });
+};
 
-let getPrefix = () => {
+const getPrefix = () => {
   if (platform() === 'win32') {
     return '/';
   }
@@ -40,11 +39,24 @@ let getPrefix = () => {
   return '-';
 };
 
-let which = () => {
+const which = () => {
   if (platform() === 'win32') {
     return 'where';
   }
   return 'which';
 };
 
-export { getConfig, getPrefix, which };
+const clearChannel = (channel) => {
+  let config: any = getConfig();
+
+  channel.clear();
+  if (config.alwaysShowOutput === true) {
+    channel.show(true);
+  }
+}
+
+const sanitizeString = (response: Object) => {
+  return response.toString().trim();
+}
+
+export { clearChannel, getConfig, getPrefix, makeNsis, sanitizeString, which };
