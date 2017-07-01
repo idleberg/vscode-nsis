@@ -2,8 +2,9 @@
 
 import { window } from 'vscode';
 
-import { clearOutput, getConfig, getPrefix, makeNsis, pathWarning, sanitize } from './util';
-import { spawn } from 'child_process';
+import { clearOutput, detectOutfile, execInstaller, getConfig, getPrefix, makeNsis, pathWarning, sanitize } from './util';
+import { execSync, spawn } from 'child_process';
+import { platform } from 'os';
 
 const nsisChannel = window.createOutputChannel('NSIS');
 
@@ -42,12 +43,18 @@ const compile = (strictMode: boolean) => {
       const makensis = spawn(pathToMakensis, compilerArguments);
 
       let stdErr: string = '';
+      let outFile: string = '';
       let hasWarning: boolean = false;
 
       makensis.stdout.on('data', (line: Array<string> ) => {
+        // Detect warnings
         if (line.indexOf('warning: ') !== -1) {
           hasWarning = true;
         }
+        if (platform() === 'win32' && outFile === '') {
+          outFile = detectOutfile(line);
+        }
+
         nsisChannel.appendLine(line.toString());
       });
 
@@ -57,12 +64,27 @@ const compile = (strictMode: boolean) => {
       });
 
       makensis.on('close', (code) => {
+        let openButton = (platform() === 'win32' && outFile !== '') ? 'Run' : null;
         if (code === 0) {
           if (hasWarning === true) {
-            if (config.showNotifications) window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`);
+            if (config.showNotifications) {
+              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton)
+              .then((choice) => {
+                if (choice === 'Run') {
+                  execSync(outFile);
+                }
+              });
+            }
             if (stdErr.length > 0) console.warn(stdErr);
           } else {
-            if (config.showNotifications) window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`);
+            if (config.showNotifications) {
+              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton)
+              .then((choice) => {
+                if (choice === 'Run') {
+                  execSync(outFile);
+                }
+              });
+            }
           }
         } else {
           nsisChannel.show(true);

@@ -4,6 +4,7 @@ import { window, workspace } from 'vscode';
 
 import * as opn from 'opn';
 import { basename, dirname, extname, join } from 'path';
+import { existsSync } from 'fs';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
@@ -14,6 +15,22 @@ const clearOutput = (channel) => {
   if (config.alwaysShowOutput === true) {
     channel.show(true);
   }
+};
+
+const detectOutfile = (line) => {
+  if (line.indexOf('Output: "')) {
+    let regex = /Output: \"(.*)\"\r?\n/g;
+    let result = regex.exec(line.toString());
+    if (typeof result === 'object') {
+      try {
+        return (existsSync(result['1']) === true) ? result['1'] : '';
+      } catch (e) {
+        return '';
+      }
+    }
+  }
+
+  return '';
 };
 
 const getConfig = () => {
@@ -74,7 +91,8 @@ const successBridleNsis = (choice) => {
     let dirName = dirname(doc.fileName);
     let extName = extname(doc.fileName);
     let baseName = basename(doc.fileName, extName);
-    let outName = baseName + '.b' + extName.substr(1);
+    let outExt = (extName === '.nsh') ? '.bnsh' : '.nsi';
+    let outName = baseName + outExt;
     let nsisFile = join(dirName, outName);
 
     workspace.openTextDocument(nsisFile)
@@ -108,4 +126,4 @@ const which = () => {
   return 'which';
 };
 
-export { clearOutput, getConfig, getPrefix, makeNsis, pathWarning, sanitize, successBridleNsis, successNslAssembler, which };
+export { clearOutput, detectOutfile, getConfig, getPrefix, makeNsis, pathWarning, sanitize, successBridleNsis, successNslAssembler, which };
