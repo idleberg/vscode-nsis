@@ -33,9 +33,11 @@ const createTask = () => {
   }
   args.push('${file}');
 
+  const { version } = require('../package.json');
+
   taskFile = {
       'command': command,
-      'version': '3.0.0',
+      'version': version,
       'args': [],
       'isShellCommand': false,
       'showOutput': 'always',
