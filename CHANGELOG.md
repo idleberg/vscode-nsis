@@ -2,11 +2,13 @@
 
 * add `makensis` detection
 * add buttons to PATH warning
+* add button to compiler success message
 * add buttons to transpiler success message
 * add helper utilities
 * declare all functions as constants
 * use package version in build task
 * fix: add missing output channel
+* fix: modify BrideNSIS file extensions
 
 # v3.0.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.3)
 
