@@ -69,7 +69,7 @@ const sanitize = (response: Object) => {
 
 const successBridleNsis = (choice) => {
   let doc = window.activeTextEditor.document;
-            
+
   if (choice === 'Open') {
     let dirName = dirname(doc.fileName);
     let extName = extname(doc.fileName);
@@ -81,24 +81,24 @@ const successBridleNsis = (choice) => {
     .then( (doc) => {
       window.showTextDocument(doc);
     });
-  };
+  }
 };
 
 const successNslAssembler = (choice) => {
   let doc = window.activeTextEditor.document;
-            
+
   if (choice === 'Open') {
     let dirName = dirname(doc.fileName);
     let extName = extname(doc.fileName);
     let baseName = basename(doc.fileName, extName);
-    let outName = baseName + '.nsi'
+    let outName = baseName + '.nsi';
     let nsisFile = join(dirName, outName);
 
     workspace.openTextDocument(nsisFile)
     .then( (doc) => {
       window.showTextDocument(doc);
     });
-  };
+  }
 };
 
 const which = () => {

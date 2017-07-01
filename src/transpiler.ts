@@ -59,7 +59,7 @@ const nslAssembler = () => {
     nslCmd.on('close', (code) => {
       if (stdErr.length === 0) {
         if (config.showNotifications) {
-          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`, "Open")
+          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`, 'Open')
           .then(successNslAssembler);
         }
       } else {
