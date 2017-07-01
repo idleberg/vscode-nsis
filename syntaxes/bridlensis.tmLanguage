@@ -4,8 +4,6 @@
 <dict>
     <key>fileTypes</key>
     <array>
-        <string>bnsi</string>
-        <string>bnsh</string>
         <string>bridle-nsi</string>
         <string>bridle-nsis</string>
         <string>bridle-nsh</string>
