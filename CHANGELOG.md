@@ -1,6 +1,8 @@
 # v3.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.1.0)
 
 * add `makensis` detection
+* add buttons to PATH warning
+* add buttons to transpiler success message
 * add helper utilities
 * declare all functions as constants
 * fix: add missing output channel
