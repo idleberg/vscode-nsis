@@ -109,7 +109,7 @@ const successBridleNsis = (choice) => {
     let dirName = dirname(doc.fileName);
     let extName = extname(doc.fileName);
     let baseName = basename(doc.fileName, extName);
-    let outExt = (extName === '.nsh') ? '.bnsh' : '.nsi';
+    let outExt = (extName === '.nsh') ? '.bnsh' : '.bnsi';
     let outName = baseName + outExt;
     let nsisFile = join(dirName, outName);
 
