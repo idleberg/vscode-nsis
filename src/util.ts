@@ -6,7 +6,7 @@ import * as opn from 'opn';
 import { basename, dirname, extname, join } from 'path';
 import { existsSync } from 'fs';
 import { platform } from 'os';
-import { spawn } from 'child_process';
+import { spawn, spawnSync } from 'child_process';
 
 const clearOutput = (channel) => {
   let config: any = getConfig();
@@ -45,6 +45,16 @@ const getPrefix = () => {
   return '-';
 };
 
+const isWindowsCompatible = () => {
+  let config: any = getConfig();
+
+  if (platform() === 'win32' || config.useWineToRun === true) {
+    return true;
+  }
+
+  return false;
+};
+
 const makeNsis = () => {
   return new Promise((resolve, reject) => {
     let pathToMakensis = getConfig().pathToMakensis;
@@ -78,6 +88,14 @@ const pathWarning = () => {
         return opn('http://superuser.com/a/284351/195953');
     }
   });
+};
+
+const runInstaller = (outFile) => {
+  if (platform() === 'win32') {
+    return spawnSync(outFile);
+  }
+
+  return spawnSync('wine', [ outFile ]);
 };
 
 const sanitize = (response: Object) => {
@@ -126,4 +144,17 @@ const which = () => {
   return 'which';
 };
 
-export { clearOutput, detectOutfile, getConfig, getPrefix, makeNsis, pathWarning, sanitize, successBridleNsis, successNslAssembler, which };
+export {
+  clearOutput,
+  detectOutfile,
+  getConfig,
+  getPrefix,
+  isWindowsCompatible,
+  makeNsis,
+  pathWarning,
+  runInstaller,
+  sanitize,
+  successBridleNsis,
+  successNslAssembler,
+  which
+};

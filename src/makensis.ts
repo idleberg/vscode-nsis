@@ -2,9 +2,9 @@
 
 import { window } from 'vscode';
 
-import { clearOutput, detectOutfile, getConfig, getPrefix, makeNsis, pathWarning, sanitize } from './util';
-import { execSync, spawn } from 'child_process';
+import { clearOutput, detectOutfile, getConfig, getPrefix, isWindowsCompatible, makeNsis, pathWarning, runInstaller, sanitize } from './util';
 import { platform } from 'os';
+import { spawn } from 'child_process';
 
 const nsisChannel = window.createOutputChannel('NSIS');
 
@@ -51,7 +51,7 @@ const compile = (strictMode: boolean) => {
         if (line.indexOf('warning: ') !== -1) {
           hasWarning = true;
         }
-        if (platform() === 'win32' && outFile === '') {
+        if (isWindowsCompatible() === true && outFile === '') {
           outFile = detectOutfile(line);
         }
 
@@ -64,14 +64,14 @@ const compile = (strictMode: boolean) => {
       });
 
       makensis.on('close', (code) => {
-        let openButton = (platform() === 'win32' && outFile !== '') ? 'Run' : null;
+        let openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
         if (code === 0) {
           if (hasWarning === true) {
             if (config.showNotifications) {
               window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton)
               .then((choice) => {
                 if (choice === 'Run') {
-                  execSync(outFile);
+                  runInstaller(outFile);
                 }
               });
             }
@@ -81,7 +81,7 @@ const compile = (strictMode: boolean) => {
               window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton)
               .then((choice) => {
                 if (choice === 'Run') {
-                  execSync(outFile);
+                  runInstaller(outFile);
                 }
               });
             }
