@@ -129,7 +129,7 @@ const bridleNsis = () => {
     bridleCmd.on('close', (code) => {
       if (code === 0 && stdErr.length === 0) {
         if (config.showNotifications) {
-          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`)
+          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`, 'Open')
           .then(successBridleNsis);
         }
       } else {
