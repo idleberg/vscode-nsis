@@ -2,7 +2,7 @@
 
 import { window } from 'vscode';
 
-import { clearOutput, detectOutfile, execInstaller, getConfig, getPrefix, makeNsis, pathWarning, sanitize } from './util';
+import { clearOutput, detectOutfile, getConfig, getPrefix, makeNsis, pathWarning, sanitize } from './util';
 import { execSync, spawn } from 'child_process';
 import { platform } from 'os';
 
