@@ -1,3 +1,9 @@
+# v3.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.0)
+
+- add support for running compiled installer using [Wine](https://www.winehq.org/)
+- fix: add missing button to open scripts transpiled by BridleNSIS
+- fix: modify BrideNSIS file extensions
+
 # v3.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.1.0)
 
 - add `makensis` detection
