@@ -110,8 +110,8 @@
                 "extensions": [
                     ".nsi",
                     ".nsh",
-                    ".bbnsi",
-                    ".bbnsh"
+                    ".bnsi",
+                    ".bnsh"
                 ],
                 "configuration": "./config/nsis.json"
             },
@@ -143,8 +143,6 @@
                     "BridleNSIS"
                 ],
                 "extensions": [
-                    ".bnsi",
-                    ".bnsh",
                     ".bridle-nsi",
                     ".bridle-nsis",
                     ".bridle-nsh"
