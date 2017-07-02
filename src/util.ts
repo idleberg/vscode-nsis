@@ -18,7 +18,7 @@ const clearOutput = (channel) => {
 };
 
 const detectOutfile = (line) => {
-  if (line.indexOf('Output: "')) {
+  if (line.indexOf('Output: "') === 1) {
     let regex = /Output: \"(.*)\"\r?\n/g;
     let result = regex.exec(line.toString());
     if (typeof result === 'object') {
