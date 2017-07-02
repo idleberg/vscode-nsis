@@ -1,46 +1,46 @@
 # v3.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.1.0)
 
-* add `makensis` detection
-* add buttons to PATH warning
-* add button to compiler success message
-* add buttons to transpiler success message
-* add helper utilities
-* declare all functions as constants
-* use package version in build task
-* fix: add missing output channel
-* fix: modify BrideNSIS file extensions
+- add `makensis` detection
+- add buttons to PATH warning
+- add button to compiler success message
+- add buttons to transpiler success message
+- add helper utilities
+- declare all functions as constants
+- use package version in build task
+- fix: add missing output channel
+- fix: modify BrideNSIS file extensions
 
 # v3.0.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.3)
 
-* use PNG logo (as required by upcoming versions of Code)
+- use PNG logo (as required by upcoming versions of Code)
 
 # v3.0.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.2)
 
-* use “fat arrow” functions everywhere
+- use “fat arrow” functions everywhere
 
 # v3.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.1)
 
-* fix unescaped characters in some snippets
+- fix unescaped characters in some snippets
 
 # v3.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.0)
 
-* move to TypeScript
-* add `NSIS: Show Version` command
-* add `NSIS: Show Compiler Flags` command
-* fix unescaped constants in some snippets
+- move to TypeScript
+- add `NSIS: Show Version` command
+- add `NSIS: Show Compiler Flags` command
+- fix unescaped constants in some snippets
 
 # v2.9.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.2)
 
-* update devDependencies
+- update devDependencies
 
 # v2.9.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.1)
 
-* update `CHANGELOG.md`
+- update `CHANGELOG.md`
 
 # v2.9.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.9.0)
 
-* refactored code
-* update `devDependencies`
+- refactored code
+- update `devDependencies`
 
 # v2.8.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.8.1)
 
@@ -382,4 +382,3 @@
 # v0.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/0.1.0)
 
 - first release
-
