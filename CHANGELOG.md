@@ -1,3 +1,7 @@
+# v3.2.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.1)
+
+- improve Regex pattern in `detectOutfile()`
+
 # v3.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.0)
 
 - add support for running compiled installer using [Wine](https://www.winehq.org/)
