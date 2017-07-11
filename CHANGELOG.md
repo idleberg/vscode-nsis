@@ -1,3 +1,8 @@
+# v3.2.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.2)
+
+- fix outfile detection
+- update `devDependencies`
+
 # v3.2.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.1)
 
 - improve Regex pattern in `detectOutfile()`
