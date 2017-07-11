@@ -406,7 +406,7 @@
         "opn": "^5.1.0"
     },
     "devDependencies": {
-        "@types/node": "^8.0.2",
+        "@types/node": "^8.0.10",
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-debug": "^3.1.0",
         "gulp-jsonlint": "^1.2.0",
@@ -415,8 +415,8 @@
         "gulp-tslint": "^8.1.1",
         "gulp-xml-validator": "^0.1.2",
         "nsis-logo-v3": "github:idleberg/nsis-logo-v3",
-        "tslint": "^5.4.3",
+        "tslint": "^5.5.0",
         "typescript": "^2.3.4",
-        "vscode": "^1.1.0"
+        "vscode": "^1.1.2"
     }
 }
