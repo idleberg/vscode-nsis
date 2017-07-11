@@ -59,7 +59,7 @@ const makeNsis = () => {
   return new Promise((resolve, reject) => {
     let pathToMakensis = getConfig().pathToMakensis;
     if (typeof pathToMakensis !== 'undefined' && pathToMakensis !== null) {
-      console.log('Using makensis path found in user settings:' + pathToMakensis);
+      console.log('Using makensis path found in user settings: ' + pathToMakensis);
       return resolve(pathToMakensis);
     }
 
