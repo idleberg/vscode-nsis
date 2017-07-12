@@ -6,7 +6,7 @@ import * as opn from 'opn';
 import { basename, dirname, extname, join } from 'path';
 import { existsSync } from 'fs';
 import { platform } from 'os';
-import { spawn, spawnSync } from 'child_process';
+import { spawn } from 'child_process';
 
 const clearOutput = (channel) => {
   let config: any = getConfig();
@@ -92,10 +92,10 @@ const pathWarning = () => {
 
 const runInstaller = (outFile) => {
   if (platform() === 'win32') {
-    return spawnSync(outFile);
+    return spawn(outFile);
   }
 
-  return spawnSync('wine', [ outFile ]);
+  return spawn('wine', [ outFile ]);
 };
 
 const sanitize = (response: Object) => {
