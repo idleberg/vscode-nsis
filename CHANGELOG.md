@@ -1,3 +1,8 @@
+# v3.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.3)
+
+- use `spawn` in `runInstaller()`
+- update documentation
+
 # v3.2.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.2)
 
 - fix outfile detection
