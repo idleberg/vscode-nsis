@@ -170,6 +170,7 @@ Setting                      | Description
 `showNotifications`          | Show build notifications indicating success or failure
 `alwaysShowOutput`           | If `false` the output channel will only be shown on errors
 `alwaysOpenBuildTask`        | Specify whether to open the newly created build task
+`useWineToRun`               | Run compiled installers using [Wine](https://winehq.org)
 `nsl.pathToJar`              | Specify the full path to `nsL.jar`
 `nsl.customArguments`        | Specify the default arguments for nsL Assembler
 `bridlensis.pathToJar`       | Specify the full path to `BridleNSIS.jar`
