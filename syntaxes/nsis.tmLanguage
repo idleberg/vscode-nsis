@@ -13,6 +13,7 @@
         <string>nsh</string>
         <string>bnsi</string>
         <string>bnsh</string>
+        <string>nsdinc</string>
     </array>
 
     <key>name</key>
