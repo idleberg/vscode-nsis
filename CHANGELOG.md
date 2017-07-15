@@ -1,5 +1,9 @@
 # v3.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.3)
 
+- fix BridleNSIS output name
+
+# v3.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.3)
+
 - use `spawn` in `runInstaller()`
 - update documentation
 
