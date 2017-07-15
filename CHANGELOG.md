@@ -1,4 +1,8 @@
-# v3.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.3)
+# v3.2.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.5)
+
+- improve BridleNSIS error detection
+
+# v3.2.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.4)
 
 - fix BridleNSIS output name
 
