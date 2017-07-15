@@ -113,10 +113,11 @@ const bridleNsis = () => {
     const bridleCmd = spawn('java', compilerArguments);
 
     let stdErr: string = '';
+    let hasError: boolean = false;
 
     bridleCmd.stdout.on('data', (line: Array<any>) => {
-      if (line.indexOf('Cannot run program') !== -1) {
-        stdErr += '\n' + line;
+      if (line.indexOf('Exit Code:') !== -1) {
+        hasError = true;
       }
       bridleChannel.appendLine(line.toString());
     });
@@ -127,7 +128,7 @@ const bridleNsis = () => {
     });
 
     bridleCmd.on('close', (code) => {
-      if (code === 0 && stdErr.length === 0) {
+      if (code === 0 && stdErr.length === 0 && hasError === false) {
         if (config.showNotifications) {
           window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`, 'Open')
           .then(successBridleNsis);
