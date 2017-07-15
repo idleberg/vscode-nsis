@@ -109,7 +109,18 @@ const successBridleNsis = (choice) => {
     let dirName = dirname(doc.fileName);
     let extName = extname(doc.fileName);
     let baseName = basename(doc.fileName, extName);
-    let outExt = (extName === '.nsh') ? '.bnsh' : '.bnsi';
+
+    // because BridleNSIS is kinda buggy
+    let outExt = 'b' + extName.substr(1);
+
+    // if BridleNSIS wasn't buggy
+    // let outExt;
+    // if (extName == '.nsh') {
+    //   outExt = '.bnsh';
+    // } else {
+    //   outExt = '.bnsi';
+    // }
+
     let outName = baseName + outExt;
     let nsisFile = join(dirName, outName);
 
