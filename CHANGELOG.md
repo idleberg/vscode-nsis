@@ -1,3 +1,7 @@
+# v3.2.6 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.6)
+
+- improve `runInstaller()` function
+
 # v3.2.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.5)
 
 - improve BridleNSIS error detection
