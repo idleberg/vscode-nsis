@@ -1,3 +1,7 @@
+# v3.3.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.0)
+
+- add support for NSIS 3.02
+
 # v3.2.6 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.6)
 
 - improve `runInstaller()` function
