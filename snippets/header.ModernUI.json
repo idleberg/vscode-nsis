@@ -1014,6 +1014,13 @@
     "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
     "prefix": "MUI_PAGE_COMPONENTS"
   },
+  "MUI_PAGE_CUSTOMFUNCTION_DESTROY": {
+    "body": "!define MUI_PAGE_CUSTOMFUNCTION_DESTROY \"${1:function}\"$2",
+    "description": "Usage: !define MUI_PAGE_CUSTOMFUNCTION_DESTROY function",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_PAGE_CUSTOMFUNCTION_DESTROY"
+  },
   "MUI_PAGE_CUSTOMFUNCTION_LEAVE": {
     "body": "!define MUI_PAGE_CUSTOMFUNCTION_LEAVE \"${1:function}\"$2",
     "description": "Usage: !define MUI_PAGE_CUSTOMFUNCTION_LEAVE function",
@@ -1230,6 +1237,13 @@
     "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
     "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
     "prefix": "MUI_UNCONFIRMPAGE_TEXT_TOP"
+  },
+  "MUI_UNCONFIRMPAGE_VARIABLE": {
+    "body": "!define MUI_UNCONFIRMPAGE_VARIABLE \\$${1:var}$2",
+    "description": "Usage: !define MUI_UNCONFIRMPAGE_VARIABLE variable",
+    "descriptionMoreURL": "http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html",
+    "leftLabelHTML": "<span class='support function'>MUI2.nsh</span>",
+    "prefix": "MUI_UNCONFIRMPAGE_VARIABLE"
   },
   "MUI_UNFINISHPAGE_NOAUTOCLOSE": {
     "body": "!define MUI_UNFINISHPAGE_NOAUTOCLOSE$1",
