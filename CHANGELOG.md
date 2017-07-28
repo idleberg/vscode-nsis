@@ -1,3 +1,7 @@
+# v3.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.1)
+
+- fix unescaped characters in snippets
+
 # v3.3.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.0)
 
 - add support for NSIS 3.02
