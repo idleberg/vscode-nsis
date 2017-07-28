@@ -967,17 +967,38 @@
   },
   "ExecShellWait": {
     "body": "ExecShellWait ${1:action} \"${2:command}\"$3",
-    "description": "Usage: ExecShellWait [/INVOKEIDLIST] action command [parameters] [SW_SHOWDEFAULT | SW_SHOWNORMAL | SW_SHOWMAXIMIZED | SW_SHOWMINIMIZED | SW_HIDE]",
+    "description": "Usage: ExecShellWait [/INVOKEIDLIST] (open|print|etc) command_line [parameters [showmode]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecShellWait.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ExecShellWait"
   },
-  "ExecShellWait  /INVOKEIDLIST": {
-    "body": "ExecShellWait /INVOKEIDLIST ${1:action} \"${2:command}\"$3",
-    "description": "Usage: ExecShellWait [/INVOKEIDLIST] action command [parameters] [SW_SHOWDEFAULT | SW_SHOWNORMAL | SW_SHOWMAXIMIZED | SW_SHOWMINIMIZED | SW_HIDE]",
+  "ExecShellWait /INVOKEIDLIST open": {
+    "body": "ExecShellWait /INVOKEIDLIST open \"${2:command}\"$3",
+    "description": "Usage: ExecShellWait [/INVOKEIDLIST] (open|print|etc) command_line [parameters [showmode]]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecShellWait.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-    "prefix": "ExecShellWait /INVOKEIDLIST"
+    "prefix": "ExecShellWait /INVOKEIDLIST open"
+  },
+  "ExecShellWait open": {
+    "body": "ExecShellWait open \"${2:command}\"$3",
+    "description": "Usage: ExecShellWait [/INVOKEIDLIST] (open|print|etc) command_line [parameters [showmode]]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecShellWait.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "ExecShellWait open"
+  },
+  "ExecShellWait /INVOKEIDLIST print": {
+    "body": "ExecShellWait /INVOKEIDLIST print \"${2:command}\"$3",
+    "description": "Usage: ExecShellWait [/INVOKEIDLIST] (open|print|etc) command_line [parameters [showmode]]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecShellWait.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "ExecShellWait /INVOKEIDLIST print"
+  },
+  "ExecShellWait print": {
+    "body": "ExecShellWait print \"${2:command}\"$3",
+    "description": "Usage: ExecShellWait [/INVOKEIDLIST] (open|print|etc) command_line [parameters [showmode]]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecShellWait.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "ExecShellWait print"
   },
   "ExecWait": {
     "body": "ExecWait \"${1:command}\"$2",
