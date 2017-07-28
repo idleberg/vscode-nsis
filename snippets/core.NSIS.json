@@ -616,35 +616,35 @@
     "prefix": "ChangeUI"
   },
   "ChangeUI:default.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\default.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\default.bmp\"$2",
     "description": "Usage: ChangeUI default.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ChangeUI:default.exe"
   },
   "ChangeUI:modern.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern.bmp\"$2",
     "description": "Usage: ChangeUI modern.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ChangeUI:modern.exe"
   },
   "ChangeUI:modern_nodesc.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_nodesc.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_nodesc.bmp\"$2",
     "description": "Usage: ChangeUI modern_nodesc.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ChangeUI:modern_nodesc.exe"
   },
   "ChangeUI:modern_smalldesc.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_smalldesc.bmp\"$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_smalldesc.bmp\"$2",
     "description": "Usage: ChangeUI modern_smalldesc.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ChangeUI:modern_smalldesc.exe"
   },
   "ChangeUI:sdbarker_tiny.exe": {
-    "body": "ChangeUI ${1:dialog} \"${NSISDIR}\\\\Contrib\\\\UIs\\\\sdbarker_tiny.bmp$2",
+    "body": "ChangeUI ${1:dialog} \"\\${NSISDIR}\\\\Contrib\\\\UIs\\\\sdbarker_tiny.bmp$2",
     "description": "Usage: ChangeUI sdbarker_tiny.exe",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ChangeUI.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -658,84 +658,84 @@
     "prefix": "CheckBitmap"
   },
   "CheckBitmap:big.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\big.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\big.bmp\"$2",
     "description": "Usage: CheckBitmap big.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:big.bmp"
   },
   "CheckBitmap:classic-cross.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic-cross.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic-cross.bmp\"$2",
     "description": "Usage: CheckBitmap classic.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:classic-cross.bmp"
   },
   "CheckBitmap:classic.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic.bmp\"$2",
     "description": "Usage: CheckBitmap classic.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:classic.bmp"
   },
   "CheckBitmap:colorful.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\colorful.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\colorful.bmp\"$2",
     "description": "Usage: CheckBitmap colorful.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:colorful.bmp"
   },
   "CheckBitmap:grey-cross.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey-cross.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey-cross.bmp\"$2",
     "description": "Usage: CheckBitmap grey-cross.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:grey-cross.bmp"
   },
   "CheckBitmap:grey.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey.bmp\"$2",
     "description": "Usage: CheckBitmap grey.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:grey.bmp"
   },
   "CheckBitmap:modern.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\modern.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\modern.bmp\"$2",
     "description": "Usage: CheckBitmap modern.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:modern.bmp"
   },
   "CheckBitmap:red-round.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red-round.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red-round.bmp\"$2",
     "description": "Usage: CheckBitmap red.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:red-round.bmp"
   },
   "CheckBitmap:red.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red.bmp\"$2",
     "description": "Usage: CheckBitmap red-roun.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:red.bmp"
   },
   "CheckBitmap:simple-round.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round.bmp\"$2",
     "description": "Usage: CheckBitmap simple-round.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:simple-round.bmp"
   },
   "CheckBitmap:simple-round2.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round2.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round2.bmp\"$2",
     "description": "Usage: CheckBitmap simple-round.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "CheckBitmap:simple-round2.bmp"
   },
   "CheckBitmap:simple.bmp": {
-    "body": "CheckBitmap \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple.bmp\"$2",
+    "body": "CheckBitmap \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple.bmp\"$2",
     "description": "Usage: CheckBitmap simple-round2.bmp",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CheckBitmap.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -798,7 +798,7 @@
     "prefix": "CreateDirectory"
   },
   "CreateFont": {
-    "body": "CreateFont $${1:user_var} \"${2:face_name}\" ${3:[height] [weight]}$4",
+    "body": "CreateFont \\$${1:user_var} \"${2:face_name}\" ${3:[height] [weight]}$4",
     "description": "Usage: CreateFont $(user_var: handle output) face_name [height weight /ITALIC /UNDERLINE /STRIKE]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/CreateFont.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -882,7 +882,7 @@
     "prefix": "DirText"
   },
   "DirVar": {
-    "body": "DirVar $${1:user_var}$2",
+    "body": "DirVar \\$${1:user_var}$2",
     "description": "Usage: DirVar $(user_var: dir in/out))",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/DirVar.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -910,21 +910,21 @@
     "prefix": "DirVerify leave"
   },
   "EnableWindow": {
-    "body": "EnableWindow $${1:hwnd} ${2:1|0}$3",
+    "body": "EnableWindow \\$${1:hwnd} ${2:1|0}$3",
     "description": "Usage: EnableWindow hwnd state(1|0)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/EnableWindow.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "EnableWindow"
   },
   "EnumRegKey": {
-    "body": "EnumRegKey $${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
+    "body": "EnumRegKey \\$${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
     "description": "Usage: EnumRegKey $(user_var: output) rootkey subkey index",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/EnumRegKey.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "EnumRegKey"
   },
   "EnumRegValue": {
-    "body": "EnumRegValue $${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
+    "body": "EnumRegValue \\$${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$5",
     "description": "Usage: EnumRegValue $(user_var: output) rootkey subkey index",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/EnumRegValue.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1008,14 +1008,14 @@
     "prefix": "ExecWait"
   },
   "ExecWait $var": {
-    "body": "ExecWait \"${1:command}\" $${2:user_var}$3",
+    "body": "ExecWait \"${1:command}\" \\$${2:user_var}$3",
     "description": "Usage: ExecWait command_line [$(user_var: return value)]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecWait.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ExecWait $var"
   },
   "ExpandEnvStrings": {
-    "body": "ExpandEnvStrings $${1:user_var} \"${2:string}\"$3",
+    "body": "ExpandEnvStrings \\$${1:user_var} \"${2:string}\"$3",
     "description": "Usage: ExpandEnvStrings $(user_var: output) string",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExpandEnvStrings.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1057,7 +1057,7 @@
     "prefix": "FileBufSize"
   },
   "FileClose": {
-    "body": "FileClose $${1:handle}$2",
+    "body": "FileClose \\$${1:handle}$2",
     "description": "Usage: FileClose $(user_var: handle input)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileClose.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1071,98 +1071,98 @@
     "prefix": "FileErrorText"
   },
   "FileOpen": {
-    "body": "FileOpen $${1:user_var} \"${2:filename}\" ${3:openmode}$4",
+    "body": "FileOpen \\$${1:user_var} \"${2:filename}\" ${3:openmode}$4",
     "description": "Usage: FileOpen $(user_var: handle output) filename openmode",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileOpen.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileOpen"
   },
   "FileRead": {
-    "body": "FileRead $${1:handle} $${2:user_var} ${3:[maxlen]}$4",
+    "body": "FileRead \\$${1:handle} \\$${2:user_var} ${3:[maxlen]}$4",
     "description": "Usage: FileRead $(user_var: handle input) $(user_var: text output) [maxlen]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileRead.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileRead"
   },
   "FileReadByte": {
-    "body": "FileReadByte $${1:handle} $${2:user_var}$3",
+    "body": "FileReadByte \\$${1:handle} \\$${2:user_var}$3",
     "description": "Usage: FileReadByte $(user_var: handle input) $(user_var: bytevalue output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileReadByte.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileReadByte"
   },
   "FileReadUTF16LE": {
-    "body": "FileReadUTF16LE $${1:handle} $${2:user_var}$3",
+    "body": "FileReadUTF16LE \\$${1:handle} \\$${2:user_var}$3",
     "description": "Usage: FileReadUTF16LE $(user_var: handle input) $(user_var: text output) [maxlen]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileReadUTF16LE.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileReadUTF16LE"
   },
   "FileReadWord": {
-    "body": "FileReadWord $${1:handle} $${2:user_var}$3",
+    "body": "FileReadWord \\$${1:handle} \\$${2:user_var}$3",
     "description": "Usage: FileReadWord $(user_var: handle input) $(user_var: wordvalue output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileReadWord.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileReadWord"
   },
   "FileSeek": {
-    "body": "FileSeek $${1:handle} ${2:offset} ${3:[mode]}$4",
+    "body": "FileSeek \\$${1:handle} ${2:offset} ${3:[mode]}$4",
     "description": "Usage: FileSeek $(user_var: handle input) offset [mode] [$(user_var: new position output)]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileSeek.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileSeek"
   },
   "FileWrite": {
-    "body": "FileWrite $${1:handle} \"${2:string}\"$3",
+    "body": "FileWrite \\$${1:handle} \"${2:string}\"$3",
     "description": "Usage: FileWrite $(user_var: handle input) text",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileWrite.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileWrite"
   },
   "FileWriteByte": {
-    "body": "FileWriteByte $${1:handle} \"${2:string}\"$3",
+    "body": "FileWriteByte \\$${1:handle} \"${2:string}\"$3",
     "description": "Usage: FileWriteByte $(user_var: handle input) bytevalue",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileWriteByte.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileWriteByte"
   },
   "FileWriteUTF16LE": {
-    "body": "FileWriteUTF16LE $${1:handle} \"${2:string}\"$3",
+    "body": "FileWriteUTF16LE \\$${1:handle} \"${2:string}\"$3",
     "description": "Usage: FileWriteUTF16LE [/BOM] $(user_var: handle input) text",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileWriteUTF16LE.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileWriteUTF16LE"
   },
   "FileWriteWord": {
-    "body": "FileWriteWord $${1:handle} \"${2:string}\"$3",
+    "body": "FileWriteWord \\$${1:handle} \"${2:string}\"$3",
     "description": "Usage: FileWriteWord $(user_var: handle input) wordvalue",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FileWriteWord.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FileWriteWord"
   },
   "FindClose": {
-    "body": "FindClose $${1:handle}$2",
+    "body": "FindClose \\$${1:handle}$2",
     "description": "Usage: FindClose $(user_var: handle input)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FindClose.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FindClose"
   },
   "FindFirst": {
-    "body": "FindFirst $${1:handle} $${2:user_var} \"${3:filespec}\"$4",
+    "body": "FindFirst \\$${1:handle} \\$${2:user_var} \"${3:filespec}\"$4",
     "description": "Usage: FindFirst $(user_var: handle output) $(user_var: filename output) filespec",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FindFirst.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FindFirst"
   },
   "FindNext": {
-    "body": "FindNext $${1:handle} $${2:user_var}$3",
+    "body": "FindNext \\$${1:handle} \\$${2:user_var}$3",
     "description": "Usage: FindNext $(user_var: handle input) $(user_var: filename output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FindNext.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "FindNext"
   },
   "FindWindow": {
-    "body": "FindWindow $${1:user_var} \"${2:windowclass}\"${3: \"${4:windowtitle}\"${5: ${6:windowparent}${7: ${8:childafter}}}}$9",
+    "body": "FindWindow \\$${1:user_var} \"${2:windowclass}\"${3: \"${4:windowtitle}\"${5: ${6:windowparent}${7: ${8:childafter}}}}$9",
     "description": "Usage: FindWindow $(user_var: handle output) WindowClass [WindowTitle] [Window_Parent] [Child_After]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/FindWindow.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1323,98 +1323,98 @@
     "prefix": "FunctionEnd"
   },
   "GetCurInstType": {
-    "body": "GetCurInstType $${1:user_var}$2",
+    "body": "GetCurInstType \\$${1:user_var}$2",
     "description": "Usage: GetCurInstType $(user_var: output inst_type_idx)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetCurInstType.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetCurInstType"
   },
   "GetCurrentAddress": {
-    "body": "GetCurrentAddress $${1:user_var}$2",
+    "body": "GetCurrentAddress \\$${1:user_var}$2",
     "description": "Usage: GetCurrentAddress output",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetCurrentAddress.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetCurrentAddress"
   },
   "GetDLLVersion": {
-    "body": "GetDLLVersion \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
+    "body": "GetDLLVersion \"${1:filename}\" \\$${2:user_var_high} \\$${3:user_var_low}$4",
     "description": "Usage: GetDLLVersion filename $(user_var: high output) $(user_var: low output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetDLLVersion.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetDLLVersion"
   },
   "GetDLLVersionLocal": {
-    "body": "GetDLLVersionLocal \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
+    "body": "GetDLLVersionLocal \"${1:filename}\" \\$${2:user_var_high} \\$${3:user_var_low}$4",
     "description": "Usage: GetDLLVersionLocal localfilename $(user_var: high output) $(user_var: low output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetDLLVersionLocal.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetDLLVersionLocal"
   },
   "GetDlgItem": {
-    "body": "GetDlgItem $${1:user_var} ${2:$HWNDPARENT} ${3:item_id}$4",
+    "body": "GetDlgItem \\$${1:user_var} ${2:\\$HWNDPARENT} ${3:item_id}$4",
     "description": "Usage: GetDlgItem $(user_var: handle output) dialog item_id",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetDlgItem.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetDlgItem"
   },
   "GetErrorLevel": {
-    "body": "GetErrorLevel $${1:user_var}$2",
+    "body": "GetErrorLevel \\$${1:user_var}$2",
     "description": "Usage: GetErrorLevel $(user_var: output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetErrorLevel.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetErrorLevel"
   },
   "GetFileTime": {
-    "body": "GetFileTime \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
+    "body": "GetFileTime \"${1:filename}\" \\$${2:user_var_high} \\$${3:user_var_low}$4",
     "description": "Usage: GetFileTime file $(user_var: high output) $(user_var: low output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetFileTime.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetFileTime"
   },
   "GetFileTimeLocal": {
-    "body": "GetFileTimeLocal \"${1:filename}\" $${2:user_var_high} $${3:user_var_low}$4",
+    "body": "GetFileTimeLocal \"${1:filename}\" \\$${2:user_var_high} \\$${3:user_var_low}$4",
     "description": "Usage: GetFileTimeLocal localfile $(user_var: high output) $(user_var: low output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetFileTimeLocal.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetFileTimeLocal"
   },
   "GetFullPathName": {
-    "body": "GetFullPathName $${1:user_var} \"${2:filename}\"$3",
+    "body": "GetFullPathName \\$${1:user_var} \"${2:filename}\"$3",
     "description": "Usage: GetFullPathName [/SHORT] $(user_var: result) path_or_file",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetFullPathName.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetFullPathName"
   },
   "GetFullPathName /SHORT": {
-    "body": "GetFullPathName /SHORT $${1:user_var} \"${2:filename}\"$3",
+    "body": "GetFullPathName /SHORT \\$${1:user_var} \"${2:filename}\"$3",
     "description": "Usage: GetFullPathName [/SHORT] $(user_var: result) path_or_file",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetFullPathName.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetFullPathName /SHORT"
   },
   "GetFunctionAddress": {
-    "body": "GetFunctionAddress $${1:user_var} \"${2:function_name}\"$3",
+    "body": "GetFunctionAddress \\$${1:user_var} \"${2:function_name}\"$3",
     "description": "Usage: GetFunctionAddress output function",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetFunctionAddress.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetFunctionAddress"
   },
   "GetInstDirError": {
-    "body": "GetInstDirError $${1:user_var}$2",
+    "body": "GetInstDirError \\$${1:user_var}$2",
     "description": "Usage: GetInstDirError $(user_var: error output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetInstDirError.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetInstDirError"
   },
   "GetLabelAddress": {
-    "body": "GetLabelAddress $${1:user_var} ${2:label}$3",
+    "body": "GetLabelAddress \\$${1:user_var} ${2:label}$3",
     "description": "Usage: GetLabelAddress output label",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetLabelAddress.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetLabelAddress"
   },
   "GetTempFileName": {
-    "body": "GetTempFileName $${1:user_var}$2",
+    "body": "GetTempFileName \\$${1:user_var}$2",
     "description": "Usage: GetTempFileName $(user_var: name output) [base_dir]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/GetTempFileName.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1442,112 +1442,112 @@
     "prefix": "Icon"
   },
   "Icon:arrow-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-install.ico\"$2",
     "description": "Usage: Icon arrow-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:arrow-install.ico"
   },
   "Icon:arrow2-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-install.ico\"$2",
     "description": "Usage: Icon arrow2-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:arrow2-install.ico"
   },
   "Icon:box-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-install.ico\"$2",
     "description": "Usage: Icon box-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:box-install.ico"
   },
   "Icon:classic-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-install.ico\"$2",
     "description": "Usage: Icon classic-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:classic-install.ico"
   },
   "Icon:llama-blue.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$2",
     "description": "Usage: Icon llama-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:llama-blue.ico"
   },
   "Icon:llama-grey.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$2",
     "description": "Usage: Icon llama-grey.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:llama-grey.ico"
   },
   "Icon:modern-install-blue-full.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue-full.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue-full.ico\"$2",
     "description": "Usage: Icon modern-install-blue-ful.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:modern-install-blue-full.ico"
   },
   "Icon:modern-install-blue.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue.ico\"$2",
     "description": "Usage: Icon modern-install-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:modern-install-blue.ico"
   },
   "Icon:modern-install-colorful.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-colorful.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-colorful.ico\"$2",
     "description": "Usage: Icon modern-install-colorfu.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:modern-install-colorful.ico"
   },
   "Icon:modern-install-full.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-full.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-full.ico\"$2",
     "description": "Usage: Icon modern-install-ful.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:modern-install-full.ico"
   },
   "Icon:modern-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install.ico\"$2",
     "description": "Usage: Icon modern-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:modern-install.ico"
   },
   "Icon:nsis1-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-install.ico\"$2",
     "description": "Usage: Icon nsis1-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:nsis1-install.ico"
   },
   "Icon:orange-install-nsis.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install-nsis.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install-nsis.ico\"$2",
     "description": "Usage: Icon orange-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:orange-install-nsis.ico"
   },
   "Icon:orange-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install.ico\"$2",
     "description": "Usage: Icon orange-install-nsis.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:orange-install.ico"
   },
   "Icon:pixel-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-install.ico\"$2",
     "description": "Usage: Icon pixel-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Icon:pixel-install.ico"
   },
   "Icon:win-install.ico": {
-    "body": "Icon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-install.ico\"$2",
+    "body": "Icon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-install.ico\"$2",
     "description": "Usage: Icon win-install.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Icon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1617,7 +1617,7 @@
     "prefix": "InstType"
   },
   "InstTypeGetText": {
-    "body": "InstTypeGetText ${1:inst_type_idx} $${2:user_var}$3",
+    "body": "InstTypeGetText ${1:inst_type_idx} \\$${2:user_var}$3",
     "description": "Usage: InstTypeGetText insttype_index $(user_var: output text)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/InstTypeGetText.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1680,21 +1680,21 @@
     "prefix": "IntCmpU"
   },
   "IntFmt": {
-    "body": "IntFmt $${1:user_var} \"${2:format}\" \"${3:numberstring}\"$4",
+    "body": "IntFmt \\$${1:user_var} \"${2:format}\" \"${3:numberstring}\"$4",
     "description": "Usage: IntFmt $(user_var: output) format_string input",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/IntFmt.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "IntFmt"
   },
   "IntOp": {
-    "body": "IntOp $${1:user_var} ${2:value1} ${3:operator} ${4:value2}$5",
+    "body": "IntOp \\$${1:user_var} ${2:value1} ${3:operator} ${4:value2}$5",
     "description": "Usage: IntOp $(user_var: result) val1 OP [val2]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/IntOp.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "IntOp"
   },
   "IsWindow": {
-    "body": "IsWindow $${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}$4",
+    "body": "IsWindow \\$${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}$4",
     "description": "Usage: IsWindow hwnd jump_if_window [jump_if_not_window]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/IsWindow.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2184,7 +2184,7 @@
     "prefix": "PageExEnd"
   },
   "Pop": {
-    "body": "Pop $${1:user_var}$2",
+    "body": "Pop \\$${1:user_var}$2",
     "description": "Usage: Pop $(user_var: output)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Pop.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2198,7 +2198,7 @@
     "prefix": "Push"
   },
   "Push $var": {
-    "body": "Push $${1:user_var}$2",
+    "body": "Push \\$${1:user_var}$2",
     "description": "Usage: Push string",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Push.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2233,28 +2233,28 @@
     "prefix": "RMDir /r /REBOOTOK"
   },
   "ReadEnvStr": {
-    "body": "ReadEnvStr $${1:user_var} \"${2:name}\"$3",
+    "body": "ReadEnvStr \\$${1:user_var} \"${2:name}\"$3",
     "description": "Usage: ReadEnvStr $(user_var: output) name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ReadEnvStr.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ReadEnvStr"
   },
   "ReadINIStr": {
-    "body": "ReadINIStr $${1:user_var} \"${2:ini_filename}\" \"${3:section_name}\" \"${4:entry_name}\"$5",
+    "body": "ReadINIStr \\$${1:user_var} \"${2:ini_filename}\" \"${3:section_name}\" \"${4:entry_name}\"$5",
     "description": "Usage: ReadINIStr $(user_var: output) ini_file section entry_name",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ReadINIStr.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ReadINIStr"
   },
   "ReadRegDWORD": {
-    "body": "ReadRegDWORD $${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
+    "body": "ReadRegDWORD \\$${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
     "description": "Usage: ReadRegDWORD $(user_var: output) rootkey subkey entry",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ReadRegDWORD.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "ReadRegDWORD"
   },
   "ReadRegStr": {
-    "body": "ReadRegStr $${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
+    "body": "ReadRegStr \\$${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$5",
     "description": "Usage: ReadRegStr $(user_var: output) rootkey subkey entry",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ReadRegStr.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2352,7 +2352,7 @@
     "prefix": "Return"
   },
   "SearchPath": {
-    "body": "SearchPath $${1:user_var} \"${2:filename}\"$3",
+    "body": "SearchPath \\$${1:user_var} \"${2:filename}\"$3",
     "description": "Usage: SearchPath $(user_var: result) filename",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SearchPath.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2380,28 +2380,28 @@
     "prefix": "SectionEnd"
   },
   "SectionGetFlags": {
-    "body": "SectionGetFlags ${${1:section_index}} $${2:user_var}$3",
+    "body": "SectionGetFlags \\${${1:section_index}} \\$${2:user_var}$3",
     "description": "Usage: SectionGetFlags section_index $(user_var: output flags)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionGetFlags.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SectionGetFlags"
   },
   "SectionGetInstTypes": {
-    "body": "SectionGetInstTypes ${${1:section_index}} $${2:user_var}$3",
+    "body": "SectionGetInstTypes \\${${1:section_index}} \\$${2:user_var}$3",
     "description": "Usage: SectionGetInstTypes section_index $(user_var: output inst_types)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionGetInstTypes.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SectionGetInstTypes"
   },
   "SectionGetSize": {
-    "body": "SectionGetSize ${${1:section_index}} $${2:user_var}$3",
+    "body": "SectionGetSize \\${${1:section_index}} \\$${2:user_var}$3",
     "description": "Usage: SectionGetSize section_index $(user_var: output size)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionGetSize.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SectionGetSize"
   },
   "SectionGetText": {
-    "body": "SectionGetText ${${1:section_index}} $${2:user_var}$3",
+    "body": "SectionGetText \\${${1:section_index}} \\$${2:user_var}$3",
     "description": "Usage: SectionGetText section_index $(user_var: output text)",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionGetText.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2429,35 +2429,35 @@
     "prefix": "SectionIn"
   },
   "SectionSetFlags": {
-    "body": "SectionSetFlags ${${1:section_index}} ${2:section_flags}$3",
+    "body": "SectionSetFlags \\${${1:section_index}} ${2:section_flags}$3",
     "description": "Usage: SectionSetFlags section_index flags",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionSetFlags.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SectionSetFlags"
   },
   "SectionSetInstTypes": {
-    "body": "SectionSetInstTypes ${${1:section_index}} ${2:inst_types}$3",
+    "body": "SectionSetInstTypes \\${${1:section_index}} ${2:inst_types}$3",
     "description": "Usage: SectionSetInstTypes section_index inst_types",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionSetInstTypes.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SectionSetInstTypes"
   },
   "SectionSetSize": {
-    "body": "SectionSetSize ${${1:section_index}} ${2:new_size}$3",
+    "body": "SectionSetSize \\${${1:section_index}} ${2:new_size}$3",
     "description": "Usage: SectionSetSize section_index new_size",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionSetSize.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SectionSetSize"
   },
   "SectionSetText": {
-    "body": "SectionSetText ${${1:section_index}} ${2:section_text}$3",
+    "body": "SectionSetText \\${${1:section_index}} ${2:section_text}$3",
     "description": "Usage: SectionSetText section_index text_string",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SectionSetText.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SectionSetText"
   },
   "SendMessage": {
-    "body": "SendMessage $${1:HWND} ${2:msg} ${3:wparam} ${4:lparam}$5",
+    "body": "SendMessage \\$${1:HWND} ${2:msg} ${3:wparam} ${4:lparam}$5",
     "description": "Usage: SendMessage hwnd message [wparam|STR:wParam] [lparam|STR:lParam] [$(user_var: return value)] [/TIMEOUT=X]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SendMessage.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2562,14 +2562,14 @@
     "prefix": "SetCompressorDictSize"
   },
   "SetCtlColors": {
-    "body": "SetCtlColors $${1:hwnd} \"0x${2:text_color}\" \"0x${3:bg_color}\"$4",
+    "body": "SetCtlColors \\$${1:hwnd} \"0x${2:text_color}\" \"0x${3:bg_color}\"$4",
     "description": "Usage: SetCtlColors hwnd [/BRANDING] [text_color] [transparent|bg_color]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SetCtlColors.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "SetCtlColors"
   },
   "SetCtlColors /BRANDING": {
-    "body": "SetCtlColors /BRANDING $${1:hwnd} \"0x${2:text_color}\" \"0x${3:bg_color}\"$4",
+    "body": "SetCtlColors /BRANDING \\$${1:hwnd} \"0x${2:text_color}\" \"0x${3:bg_color}\"$4",
     "description": "Usage: SetCtlColors hwnd [/BRANDING] [text_color] [transparent|bg_color]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SetCtlColors.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -2926,7 +2926,7 @@
     "prefix": "ShowUninstDetails show"
   },
   "ShowWindow": {
-    "body": "ShowWindow $${1:hwnd} ${2:show_state}$3",
+    "body": "ShowWindow \\$${1:hwnd} ${2:show_state}$3",
     "description": "Usage: ShowWindow hwnd show_state",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ShowWindow.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -3017,14 +3017,14 @@
     "prefix": "StrCmpS"
   },
   "StrCpy": {
-    "body": "StrCpy $${1:user_var} \"${2:str}\" ${3:[maxlen]} ${4:[start_offset]}$5",
+    "body": "StrCpy \\$${1:user_var} \"${2:str}\" ${3:[maxlen]} ${4:[start_offset]}$5",
     "description": "Usage: StrCpy $(user_var: output) str [maxlen] [startoffset]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/StrCpy.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "StrCpy"
   },
   "StrLen": {
-    "body": "StrLen $${1:user_var} \"${2:str}\"$3",
+    "body": "StrLen \\$${1:user_var} \"${2:str}\"$3",
     "description": "Usage: StrLen $(user_var: length output) str",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/StrLen.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -3150,112 +3150,112 @@
     "prefix": "UninstallIcon"
   },
   "UninstallIcon:arrow-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon arrow-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:arrow-uninstall.ico"
   },
   "UninstallIcon:arrow2-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon arrow2-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:arrow2-uninstall.ico"
   },
   "UninstallIcon:box-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon box-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:box-uninstall.ico"
   },
   "UninstallIcon:classic-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon classic-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:classic-uninstall.ico"
   },
   "UninstallIcon:llama-blue.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico\"$1",
     "description": "Usage: UninstallIcon llama-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:llama-blue.ico"
   },
   "UninstallIcon:llama-grey.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico\"$1",
     "description": "Usage: UninstallIcon llama-grey.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:llama-grey.ico"
   },
   "UninstallIcon:modern-uninstall-blue-full.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue-full.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue-full.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-blue-full.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-blue-full.ico"
   },
   "UninstallIcon:modern-uninstall-blue.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-blue.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-blue.ico"
   },
   "UninstallIcon:modern-uninstall-colorful.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-colorful.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-colorful.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-colorful.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-colorful.ico"
   },
   "UninstallIcon:modern-uninstall-full.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-full.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-full.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall-full.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall-full.ico"
   },
   "UninstallIcon:modern-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon modern-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:modern-uninstall.ico"
   },
   "UninstallIcon:nsis1-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon nsis1-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:nsis1-uninstall.ico"
   },
   "UninstallIcon:orange-uninstall-nsis.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall-nsis.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall-nsis.ico\"$1",
     "description": "Usage: UninstallIcon orange-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:orange-uninstall-nsis.ico"
   },
   "UninstallIcon:orange-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon orange-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:orange-uninstall.ico"
   },
   "UninstallIcon:pixel-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon pixel-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "UninstallIcon:pixel-uninstall.ico"
   },
   "UninstallIcon:win-uninstall.ico": {
-    "body": "UninstallIcon \"${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-uninstall.ico\"$1",
+    "body": "UninstallIcon \"\\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-uninstall.ico\"$1",
     "description": "Usage: UninstallIcon win-uninstall.ico",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/UninstallIcon.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
