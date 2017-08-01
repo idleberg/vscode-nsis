@@ -1,3 +1,7 @@
+# v3.3.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.2)
+
+- add snippet for new `WriteRegNone` command
+
 # v3.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.1)
 
 - fix unescaped characters in snippets
