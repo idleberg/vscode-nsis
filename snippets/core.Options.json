@@ -1,180 +1,180 @@
 {
   "HKCC": {
-    "body": "HKCC$1",
+    "body": "HKCC$0",
     "description": "Short for HKEY_CURRENT_CONFIG",
     "descriptionMoreURL": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKCC"
   },
   "HKCR": {
-    "body": "HKCR$1",
+    "body": "HKCR$0",
     "description": "Short for HKEY_CLASSES_ROOT",
     "descriptionMoreURL": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKCR"
   },
   "HKCR32": {
-    "body": "HKCR32$1",
+    "body": "HKCR32$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKCR32"
   },
   "HKCR64": {
-    "body": "HKCR64$1",
+    "body": "HKCR64$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKCR64"
   },
   "HKCU": {
-    "body": "HKCU$1",
+    "body": "HKCU$0",
     "description": "Short for HKEY_CURRENT_USER",
     "descriptionMoreURL": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKCU"
   },
   "HKCU32": {
-    "body": "HKCU32$1",
+    "body": "HKCU32$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKCU32"
   },
   "HKCU64": {
-    "body": "HKCU64$1",
+    "body": "HKCU64$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKCU64"
   },
   "HKDD": {
-    "body": "HKDD$1",
+    "body": "HKDD$0",
     "description": "Short for HKEY_DYN_DATA",
     "descriptionMoreURL": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKDD"
   },
   "HKLM": {
-    "body": "HKLM$1",
+    "body": "HKLM$0",
     "description": "Short for HKEY_LOCAL_MACHINE",
     "descriptionMoreURL": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKLM"
   },
   "HKLM32": {
-    "body": "HKLM32$1",
+    "body": "HKLM32$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKLM32"
   },
   "HKLM64": {
-    "body": "HKLM64$1",
+    "body": "HKLM64$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKLM64"
   },
   "HKPD": {
-    "body": "HKPD$1",
+    "body": "HKPD$0",
     "description": "Short for HKEY_PERFORMANCE_DATA",
     "descriptionMoreURL": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKPD"
   },
   "HKU": {
-    "body": "HKU$1",
+    "body": "HKU$0",
     "description": "Short for HKEY_USERS",
     "descriptionMoreURL": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "HKU"
   },
   "IDABORT": {
-    "body": "IDABORT$1",
+    "body": "IDABORT$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "IDABORT"
   },
   "IDCANCEL": {
-    "body": "IDCANCEL$1",
+    "body": "IDCANCEL$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "IDCANCEL"
   },
   "IDIGNORE": {
-    "body": "IDIGNORE$1",
+    "body": "IDIGNORE$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "IDIGNORE"
   },
   "IDNO": {
-    "body": "IDNO$1",
+    "body": "IDNO$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "IDNO"
   },
   "IDOK": {
-    "body": "IDOK$1",
+    "body": "IDOK$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "IDOK"
   },
   "IDRETRY": {
-    "body": "IDRETRY$1",
+    "body": "IDRETRY$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "IDRETRY"
   },
   "IDYES": {
-    "body": "IDYES$1",
+    "body": "IDYES$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "IDYES"
   },
   "MB_DEFBUTTON1": {
-    "body": "MB_DEFBUTTON1$1",
+    "body": "MB_DEFBUTTON1$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_DEFBUTTON1"
   },
   "MB_DEFBUTTON2": {
-    "body": "MB_DEFBUTTON2$1",
+    "body": "MB_DEFBUTTON2$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_DEFBUTTON2"
   },
   "MB_DEFBUTTON3": {
-    "body": "MB_DEFBUTTON3$1",
+    "body": "MB_DEFBUTTON3$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_DEFBUTTON3"
   },
   "MB_DEFBUTTON4": {
-    "body": "MB_DEFBUTTON4$1",
+    "body": "MB_DEFBUTTON4$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_DEFBUTTON4"
   },
   "MB_ICONEXCLAMATION": {
-    "body": "MB_ICONEXCLAMATION$1",
+    "body": "MB_ICONEXCLAMATION$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_ICONEXCLAMATION"
   },
   "MB_ICONINFORMATION": {
-    "body": "MB_ICONINFORMATION$1",
+    "body": "MB_ICONINFORMATION$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_ICONINFORMATION"
   },
   "MB_ICONQUESTION": {
-    "body": "MB_ICONQUESTION$1",
+    "body": "MB_ICONQUESTION$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_ICONQUESTION"
   },
   "MB_ICONSTOP": {
-    "body": "MB_ICONSTOP$1",
+    "body": "MB_ICONSTOP$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_ICONSTOP"
   },
   "MB_RIGHT": {
-    "body": "MB_RIGHT$1",
+    "body": "MB_RIGHT$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_RIGHT"
   },
   "MB_RTLREADING": {
-    "body": "MB_RTLREADING$1",
+    "body": "MB_RTLREADING$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_RTLREADING"
   },
   "MB_SETFOREGROUND": {
-    "body": "MB_SETFOREGROUND$1",
+    "body": "MB_SETFOREGROUND$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_SETFOREGROUND"
   },
   "MB_TOPMOST": {
-    "body": "MB_TOPMOST$1",
+    "body": "MB_TOPMOST$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_TOPMOST"
   },
   "MB_USERICON": {
-    "body": "MB_USERICON$1",
+    "body": "MB_USERICON$0",
     "leftLabelHTML": "<span class='syntax--entity other attribute-name'>P</span>",
     "prefix": "MB_USERICON"
   },

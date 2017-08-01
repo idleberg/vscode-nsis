@@ -1,21 +1,21 @@
 {
   "${DisableX64FSRedirection}": {
-    "body": "\\${DisableX64FSRedirection}$1",
+    "body": "\\${DisableX64FSRedirection}$0",
     "description": "Usage: ${DisableX64FSRedirection}",
     "prefix": "DisableX64FSRedirection"
   },
   "${IsWow64}": {
-    "body": "\\${IsWow64}$1",
+    "body": "\\${IsWow64}$0",
     "description": "Usage: logic_lib_statement ${IsWow64}",
     "prefix": "IsWow64"
   },
   "${EnableX64FSRedirection}": {
-    "body": "\\${EnableX64FSRedirection}$1",
+    "body": "\\${EnableX64FSRedirection}$0",
     "description": "Usage: ${EnableX64FSRedirection}",
     "prefix": "EnableX64FSRedirection"
   },
   "${RunningX64}": {
-    "body": "\\${RunningX64}$1",
+    "body": "\\${RunningX64}$0",
     "description": "Usage: logic_lib_statement ${RunningX64}",
     "prefix": "RunningX64"
   }

@@ -1,41 +1,41 @@
 {
   "BgImage::AddImage": {
-    "body": "BgImage::AddImage \"${1:file}.bmp\" ${2:x} ${3:y}$4",
+    "body": "BgImage::AddImage \"${1:file}.bmp\" ${2:x} ${3:y}$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::AddImage"
   },
   "BgImage::AddText": {
-    "body": "BgImage::AddText \"${1:text}\" \"${2:font}\" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}$8",
+    "body": "BgImage::AddText \"${1:text}\" \"${2:font}\" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::AddText"
   },
   "BgImage::Clear": {
-    "body": "BgImage::Clear$1",
+    "body": "BgImage::Clear$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::Clear"
   },
   "BgImage::Destroy": {
-    "body": "BgImage::Destroy$1",
+    "body": "BgImage::Destroy$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::Destroy"
   },
   "BgImage::Redraw": {
-    "body": "BgImage::Redraw$1",
+    "body": "BgImage::Redraw$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::Redraw"
   },
   "BgImage::SetBg": {
-    "body": "BgImage::SetBg \"${1:file}.bmp\"$2",
+    "body": "BgImage::SetBg \"${1:file}.bmp\"$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::SetBg"
   },
   "BgImage::SetReturn": {
-    "body": "BgImage::SetReturn \"${1:on|off}\"$2",
+    "body": "BgImage::SetReturn \"${1:on|off}\"$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::SetReturn"
   },
   "BgImage::Sound": {
-    "body": "BgImage::Sound \"${1:file}.wav\"$2",
+    "body": "BgImage::Sound \"${1:file}.wav\"$0",
     "description": "BgImage.dll",
     "prefix": "BgImage::Sound"
   }

@@ -1,216 +1,216 @@
 {
   "${AtLeastServicePack}": {
-    "body": "\\${AtLeastServicePack}$1",
+    "body": "\\${AtLeastServicePack}$0",
     "description": "Usage: logic_lib_statement ${AtLeastServicePack} service_pack_version",
     "prefix": "AtLeastServicePack"
   },
   "${AtLeastWin10}": {
-    "body": "\\${AtLeastWin10}$1",
+    "body": "\\${AtLeastWin10}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin10}",
     "prefix": "AtLeastWin10"
   },
   "${AtLeastWin2000}": {
-    "body": "\\${AtLeastWin2000}$1",
+    "body": "\\${AtLeastWin2000}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2000}",
     "prefix": "AtLeastWin2000"
   },
   "${AtLeastWin2003}": {
-    "body": "\\${AtLeastWin2003}$1",
+    "body": "\\${AtLeastWin2003}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2003}",
     "prefix": "AtLeastWin2003"
   },
   "${AtLeastWin2008R2}": {
-    "body": "\\${AtLeastWin2008R2}$1",
+    "body": "\\${AtLeastWin2008R2}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2008R2}",
     "prefix": "AtLeastWin2008R2"
   },
   "${AtLeastWin2008}": {
-    "body": "\\${AtLeastWin2008}$1",
+    "body": "\\${AtLeastWin2008}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2008}",
     "prefix": "AtLeastWin2008"
   },
   "${AtLeastWin2012}": {
-    "body": "\\${AtLeastWin2012}$1",
+    "body": "\\${AtLeastWin2012}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2012}",
     "prefix": "AtLeastWin2012"
   },
   "${AtLeastWin7}": {
-    "body": "\\${AtLeastWin7}$1",
+    "body": "\\${AtLeastWin7}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin7}",
     "prefix": "AtLeastWin7"
   },
   "${AtLeastWin8.1}": {
-    "body": "\\${AtLeastWin8.1}$1",
+    "body": "\\${AtLeastWin8.1}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin8.1}",
     "prefix": "AtLeastWin8.1"
   },
   "${AtLeastWin8}": {
-    "body": "\\${AtLeastWin8}$1",
+    "body": "\\${AtLeastWin8}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin8}",
     "prefix": "AtLeastWin8"
   },
   "${AtLeastWin95}": {
-    "body": "\\${AtLeastWin95}$1",
+    "body": "\\${AtLeastWin95}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin95}",
     "prefix": "AtLeastWin95"
   },
   "${AtLeastWin98}": {
-    "body": "\\${AtLeastWin98}$1",
+    "body": "\\${AtLeastWin98}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin98}",
     "prefix": "AtLeastWin98"
   },
   "${AtLeastWinME}": {
-    "body": "\\${AtLeastWinME}$1",
+    "body": "\\${AtLeastWinME}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinME}",
     "prefix": "AtLeastWinME"
   },
   "${AtLeastWinNT4}": {
-    "body": "\\${AtLeastWinNT4}$1",
+    "body": "\\${AtLeastWinNT4}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinNT4}",
     "prefix": "AtLeastWinNT4"
   },
   "${AtLeastWinVista}": {
-    "body": "\\${AtLeastWinVista}$1",
+    "body": "\\${AtLeastWinVista}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinVista}",
     "prefix": "AtLeastWinVista"
   },
   "${AtLeastWinXP}": {
-    "body": "\\${AtLeastWinXP}$1",
+    "body": "\\${AtLeastWinXP}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinXP}",
     "prefix": "AtLeastWinXP"
   },
   "${AtMostServicePack}": {
-    "body": "\\${AtMostServicePack}$1",
+    "body": "\\${AtMostServicePack}$0",
     "description": "Usage: logic_lib_statement ${AtMostServicePack} service_pack_version",
     "prefix": "AtMostServicePack"
   },
   "${AtMostWin10}": {
-    "body": "\\${AtMostWin10}$1",
+    "body": "\\${AtMostWin10}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin10}",
     "prefix": "AtMostWin10"
   },
   "${AtMostWin2000}": {
-    "body": "\\${AtMostWin2000}$1",
+    "body": "\\${AtMostWin2000}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2000}",
     "prefix": "AtMostWin2000"
   },
   "${AtMostWin2003}": {
-    "body": "\\${AtMostWin2003}$1",
+    "body": "\\${AtMostWin2003}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2003}",
     "prefix": "AtMostWin2003"
   },
   "${AtMostWin2008R2}": {
-    "body": "\\${AtMostWin2008R2}$1",
+    "body": "\\${AtMostWin2008R2}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2008R2}",
     "prefix": "AtMostWin2008R2"
   },
   "${AtMostWin2008}": {
-    "body": "\\${AtMostWin2008}$1",
+    "body": "\\${AtMostWin2008}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2008}",
     "prefix": "AtMostWin2008"
   },
   "${AtMostWin2012}": {
-    "body": "\\${AtMostWin2012}$1",
+    "body": "\\${AtMostWin2012}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2012}",
     "prefix": "AtMostWin2012"
   },
   "${AtMostWin7}": {
-    "body": "\\${AtMostWin7}$1",
+    "body": "\\${AtMostWin7}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin7}",
     "prefix": "AtMostWin7"
   },
   "${AtMostWin8.1}": {
-    "body": "\\${AtMostWin8.1}$1",
+    "body": "\\${AtMostWin8.1}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin8.1}",
     "prefix": "AtMostWin8.1"
   },
   "${AtMostWin8}": {
-    "body": "\\${AtMostWin8}$1",
+    "body": "\\${AtMostWin8}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin8}",
     "prefix": "AtMostWin8"
   },
   "${AtMostWin95}": {
-    "body": "\\${AtMostWin95}$1",
+    "body": "\\${AtMostWin95}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin95}",
     "prefix": "AtMostWin95"
   },
   "${AtMostWin98}": {
-    "body": "\\${AtMostWin98}$1",
+    "body": "\\${AtMostWin98}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin98}",
     "prefix": "AtMostWin98"
   },
   "${AtMostWinME}": {
-    "body": "\\${AtMostWinME}$1",
+    "body": "\\${AtMostWinME}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinME}",
     "prefix": "AtMostWinME"
   },
   "${AtMostWinNT4}": {
-    "body": "\\${AtMostWinNT4}$1",
+    "body": "\\${AtMostWinNT4}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinNT4}",
     "prefix": "AtMostWinNT4"
   },
   "${AtMostWinVista}": {
-    "body": "\\${AtMostWinVista}$1",
+    "body": "\\${AtMostWinVista}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinVista}",
     "prefix": "AtMostWinVista"
   },
   "${AtMostWinXP}": {
-    "body": "\\${AtMostWinXP}$1",
+    "body": "\\${AtMostWinXP}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinXP}",
     "prefix": "AtMostWinXP"
   },
   "${IsNT}": {
-    "body": "\\${IsNT}$1",
+    "body": "\\${IsNT}$0",
     "description": "Usage: logic_lib_statement ${IsNT}",
     "prefix": "IsNT"
   },
   "${IsServerOS}": {
-    "body": "\\${IsServerOS}$1",
+    "body": "\\${IsServerOS}$0",
     "description": "Usage: logic_lib_statement ${IsServerOS}",
     "prefix": "IsServerOS"
   },
   "${IsServicePack}": {
-    "body": "\\${IsServicePack}$1",
+    "body": "\\${IsServicePack}$0",
     "description": "Usage: logic_lib_statement ${IsServicePack} service_pack_version",
     "prefix": "IsServicePack"
   },
   "${IsWin10}": {
-    "body": "\\${IsWin10}$1",
+    "body": "\\${IsWin10}$0",
     "description": "Usage: logic_lib_statement ${IsWin10}",
     "prefix": "IsWin10"
   },
   "${IsWin2000}": {
-    "body": "\\${IsWin2000}$1",
+    "body": "\\${IsWin2000}$0",
     "description": "Usage: logic_lib_statement ${IsWin2000}",
     "prefix": "IsWin2000"
   },
   "${IsWin2003}": {
-    "body": "\\${IsWin2003}$1",
+    "body": "\\${IsWin2003}$0",
     "description": "Usage: logic_lib_statement ${IsWin2003}",
     "prefix": "IsWin2003"
   },
   "${IsWin2008R2}": {
-    "body": "\\${IsWin2008R2}$1",
+    "body": "\\${IsWin2008R2}$0",
     "description": "Usage: logic_lib_statement ${IsWin2008R2}",
     "prefix": "IsWin2008R2"
   },
   "${IsWin2008}": {
-    "body": "\\${IsWin2008}$1",
+    "body": "\\${IsWin2008}$0",
     "description": "Usage: logic_lib_statement ${IsWin2008}",
     "prefix": "IsWin2008"
   },
   "${IsWin2012}": {
-    "body": "\\${IsWin2012}$1",
+    "body": "\\${IsWin2012}$0",
     "description": "Usage: logic_lib_statement ${IsWin2012}",
     "prefix": "IsWin2012"
   },
   "${IsWin7}": {
-    "body": "\\${IsWin7}$1",
+    "body": "\\${IsWin7}$0",
     "description": "Usage: logic_lib_statement ${IsWin7}",
     "prefix": "IsWin7"
   },
   "${IsWin8.1}": {
-    "body": "\\${IsWin8.1}$1",
+    "body": "\\${IsWin8.1}$0",
     "description": "Usage: logic_lib_statement ${IsWin8.1}",
     "prefix": "IsWin8.1"
   },
@@ -219,32 +219,32 @@
     "prefix": "IsWin8"
   },
   "${IsWin95}": {
-    "body": "\\${IsWin95}$1",
+    "body": "\\${IsWin95}$0",
     "description": "Usage: logic_lib_statement ${IsWin95}",
     "prefix": "IsWin95"
   },
   "${IsWin98}": {
-    "body": "\\${IsWin98}$1",
+    "body": "\\${IsWin98}$0",
     "description": "Usage: logic_lib_statement ${IsWin98}",
     "prefix": "IsWin98"
   },
   "${IsWinME}": {
-    "body": "\\${IsWinME}$1",
+    "body": "\\${IsWinME}$0",
     "description": "Usage: logic_lib_statement ${IsWinME}",
     "prefix": "IsWinME"
   },
   "${IsWinNT4}": {
-    "body": "\\${IsWinNT4}$1",
+    "body": "\\${IsWinNT4}$0",
     "description": "Usage: logic_lib_statement ${IsWinNT4}",
     "prefix": "IsWinNT4"
   },
   "${IsWinVista}": {
-    "body": "\\${IsWinVista}$1",
+    "body": "\\${IsWinVista}$0",
     "description": "Usage: logic_lib_statement ${IsWinVista}",
     "prefix": "IsWinVista"
   },
   "${IsWinXP}": {
-    "body": "\\${IsWinXP}$1",
+    "body": "\\${IsWinXP}$0",
     "description": "Usage: logic_lib_statement ${IsWinXP}",
     "prefix": "IsWinXP"
   }

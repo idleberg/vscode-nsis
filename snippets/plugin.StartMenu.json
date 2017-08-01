@@ -1,11 +1,11 @@
 {
   "StartMenu::Init": {
-    "body": "StartMenu::Init \"${1:text}\"$2",
+    "body": "StartMenu::Init \"${1:text}\"$0",
     "description": "StartMenu.dll",
     "prefix": "StartMenu::Init"
   },
   "StartMenu::Select": {
-    "body": "StartMenu::Select $1$2",
+    "body": "StartMenu::Select $1$0",
     "description": "StartMenu.dll",
     "prefix": "StartMenu::Select"
   }

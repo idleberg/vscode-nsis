@@ -1,2906 +1,2906 @@
 {
   "${ABM_ACTIVATE}": {
-    "body": "\\${ABM_ACTIVATE}$1",
+    "body": "\\${ABM_ACTIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_ACTIVATE"
   },
   "${ABM_GETAUTOHIDEBAR}": {
-    "body": "\\${ABM_GETAUTOHIDEBAR}$1",
+    "body": "\\${ABM_GETAUTOHIDEBAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_GETAUTOHIDEBAR"
   },
   "${ABM_GETSTATE}": {
-    "body": "\\${ABM_GETSTATE}$1",
+    "body": "\\${ABM_GETSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_GETSTATE"
   },
   "${ABM_GETTASKBARPOS}": {
-    "body": "\\${ABM_GETTASKBARPOS}$1",
+    "body": "\\${ABM_GETTASKBARPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_GETTASKBARPOS"
   },
   "${ABM_NEW}": {
-    "body": "\\${ABM_NEW}$1",
+    "body": "\\${ABM_NEW}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_NEW"
   },
   "${ABM_QUERYPOS}": {
-    "body": "\\${ABM_QUERYPOS}$1",
+    "body": "\\${ABM_QUERYPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_QUERYPOS"
   },
   "${ABM_REMOVE}": {
-    "body": "\\${ABM_REMOVE}$1",
+    "body": "\\${ABM_REMOVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_REMOVE"
   },
   "${ABM_SETAUTOHIDEBAR}": {
-    "body": "\\${ABM_SETAUTOHIDEBAR}$1",
+    "body": "\\${ABM_SETAUTOHIDEBAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_SETAUTOHIDEBAR"
   },
   "${ABM_SETPOS}": {
-    "body": "\\${ABM_SETPOS}$1",
+    "body": "\\${ABM_SETPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_SETPOS"
   },
   "${ABM_WINDOWPOSCHANGED}": {
-    "body": "\\${ABM_WINDOWPOSCHANGED}$1",
+    "body": "\\${ABM_WINDOWPOSCHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "ABM_WINDOWPOSCHANGED"
   },
   "${BCM_SETSHIELD}": {
-    "body": "\\${BCM_SETSHIELD}$1",
+    "body": "\\${BCM_SETSHIELD}$0",
     "description": "WinMessages.nsh",
     "prefix": "BCM_SETSHIELD"
   },
   "${BM_CLICK}": {
-    "body": "\\${BM_CLICK}$1",
+    "body": "\\${BM_CLICK}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_CLICK"
   },
   "${BM_GETCHECK}": {
-    "body": "\\${BM_GETCHECK}$1",
+    "body": "\\${BM_GETCHECK}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_GETCHECK"
   },
   "${BM_GETIMAGE}": {
-    "body": "\\${BM_GETIMAGE}$1",
+    "body": "\\${BM_GETIMAGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_GETIMAGE"
   },
   "${BM_GETSTATE}": {
-    "body": "\\${BM_GETSTATE}$1",
+    "body": "\\${BM_GETSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_GETSTATE"
   },
   "${BM_SETCHECK}": {
-    "body": "\\${BM_SETCHECK}$1",
+    "body": "\\${BM_SETCHECK}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_SETCHECK"
   },
   "${BM_SETIMAGE}": {
-    "body": "\\${BM_SETIMAGE}$1",
+    "body": "\\${BM_SETIMAGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_SETIMAGE"
   },
   "${BM_SETSTATE}": {
-    "body": "\\${BM_SETSTATE}$1",
+    "body": "\\${BM_SETSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_SETSTATE"
   },
   "${BM_SETSTYLE}": {
-    "body": "\\${BM_SETSTYLE}$1",
+    "body": "\\${BM_SETSTYLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "BM_SETSTYLE"
   },
   "${BST_CHECKED}": {
-    "body": "\\${BST_CHECKED}$1",
+    "body": "\\${BST_CHECKED}$0",
     "description": "WinMessages.nsh",
     "prefix": "BST_CHECKED"
   },
   "${BST_FOCUS}": {
-    "body": "\\${BST_FOCUS}$1",
+    "body": "\\${BST_FOCUS}$0",
     "description": "WinMessages.nsh",
     "prefix": "BST_FOCUS"
   },
   "${BST_INDETERMINATE}": {
-    "body": "\\${BST_INDETERMINATE}$1",
+    "body": "\\${BST_INDETERMINATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "BST_INDETERMINATE"
   },
   "${BST_PUSHED}": {
-    "body": "\\${BST_PUSHED}$1",
+    "body": "\\${BST_PUSHED}$0",
     "description": "WinMessages.nsh",
     "prefix": "BST_PUSHED"
   },
   "${BST_UNCHECKED}": {
-    "body": "\\${BST_UNCHECKED}$1",
+    "body": "\\${BST_UNCHECKED}$0",
     "description": "WinMessages.nsh",
     "prefix": "BST_UNCHECKED"
   },
   "${CB_ADDSTRING}": {
-    "body": "\\${CB_ADDSTRING}$1",
+    "body": "\\${CB_ADDSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_ADDSTRING"
   },
   "${CB_DELETESTRING}": {
-    "body": "\\${CB_DELETESTRING}$1",
+    "body": "\\${CB_DELETESTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_DELETESTRING"
   },
   "${CB_DIR}": {
-    "body": "\\${CB_DIR}$1",
+    "body": "\\${CB_DIR}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_DIR"
   },
   "${CB_ERR}": {
-    "body": "\\${CB_ERR}$1",
+    "body": "\\${CB_ERR}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_ERR"
   },
   "${CB_FINDSTRINGEXACT}": {
-    "body": "\\${CB_FINDSTRINGEXACT}$1",
+    "body": "\\${CB_FINDSTRINGEXACT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_FINDSTRINGEXACT"
   },
   "${CB_FINDSTRING}": {
-    "body": "\\${CB_FINDSTRING}$1",
+    "body": "\\${CB_FINDSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_FINDSTRING"
   },
   "${CB_GETCOUNT}": {
-    "body": "\\${CB_GETCOUNT}$1",
+    "body": "\\${CB_GETCOUNT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETCOUNT"
   },
   "${CB_GETCURSEL}": {
-    "body": "\\${CB_GETCURSEL}$1",
+    "body": "\\${CB_GETCURSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETCURSEL"
   },
   "${CB_GETDROPPEDCONTROLRECT}": {
-    "body": "\\${CB_GETDROPPEDCONTROLRECT}$1",
+    "body": "\\${CB_GETDROPPEDCONTROLRECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETDROPPEDCONTROLRECT"
   },
   "${CB_GETDROPPEDSTATE}": {
-    "body": "\\${CB_GETDROPPEDSTATE}$1",
+    "body": "\\${CB_GETDROPPEDSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETDROPPEDSTATE"
   },
   "${CB_GETDROPPEDWIDTH}": {
-    "body": "\\${CB_GETDROPPEDWIDTH}$1",
+    "body": "\\${CB_GETDROPPEDWIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETDROPPEDWIDTH"
   },
   "${CB_GETEDITSEL}": {
-    "body": "\\${CB_GETEDITSEL}$1",
+    "body": "\\${CB_GETEDITSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETEDITSEL"
   },
   "${CB_GETEXTENDEDUI}": {
-    "body": "\\${CB_GETEXTENDEDUI}$1",
+    "body": "\\${CB_GETEXTENDEDUI}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETEXTENDEDUI"
   },
   "${CB_GETHORIZONTALEXTENT}": {
-    "body": "\\${CB_GETHORIZONTALEXTENT}$1",
+    "body": "\\${CB_GETHORIZONTALEXTENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETHORIZONTALEXTENT"
   },
   "${CB_GETITEMDATA}": {
-    "body": "\\${CB_GETITEMDATA}$1",
+    "body": "\\${CB_GETITEMDATA}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETITEMDATA"
   },
   "${CB_GETITEMHEIGHT}": {
-    "body": "\\${CB_GETITEMHEIGHT}$1",
+    "body": "\\${CB_GETITEMHEIGHT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETITEMHEIGHT"
   },
   "${CB_GETLBTEXTLEN}": {
-    "body": "\\${CB_GETLBTEXTLEN}$1",
+    "body": "\\${CB_GETLBTEXTLEN}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETLBTEXTLEN"
   },
   "${CB_GETLBTEXT}": {
-    "body": "\\${CB_GETLBTEXT}$1",
+    "body": "\\${CB_GETLBTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETLBTEXT"
   },
   "${CB_GETLOCALE}": {
-    "body": "\\${CB_GETLOCALE}$1",
+    "body": "\\${CB_GETLOCALE}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETLOCALE"
   },
   "${CB_GETTOPINDEX}": {
-    "body": "\\${CB_GETTOPINDEX}$1",
+    "body": "\\${CB_GETTOPINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_GETTOPINDEX"
   },
   "${CB_INITSTORAGE}": {
-    "body": "\\${CB_INITSTORAGE}$1",
+    "body": "\\${CB_INITSTORAGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_INITSTORAGE"
   },
   "${CB_INSERTSTRING}": {
-    "body": "\\${CB_INSERTSTRING}$1",
+    "body": "\\${CB_INSERTSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_INSERTSTRING"
   },
   "${CB_LIMITTEXT}": {
-    "body": "\\${CB_LIMITTEXT}$1",
+    "body": "\\${CB_LIMITTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_LIMITTEXT"
   },
   "${CB_MSGMAX}": {
-    "body": "\\${CB_MSGMAX}$1",
+    "body": "\\${CB_MSGMAX}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_MSGMAX"
   },
   "${CB_MULTIPLEADDSTRING}": {
-    "body": "\\${CB_MULTIPLEADDSTRING}$1",
+    "body": "\\${CB_MULTIPLEADDSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_MULTIPLEADDSTRING"
   },
   "${CB_RESETCONTENT}": {
-    "body": "\\${CB_RESETCONTENT}$1",
+    "body": "\\${CB_RESETCONTENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_RESETCONTENT"
   },
   "${CB_SELECTSTRING}": {
-    "body": "\\${CB_SELECTSTRING}$1",
+    "body": "\\${CB_SELECTSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SELECTSTRING"
   },
   "${CB_SETCURSEL}": {
-    "body": "\\${CB_SETCURSEL}$1",
+    "body": "\\${CB_SETCURSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETCURSEL"
   },
   "${CB_SETDROPPEDWIDTH}": {
-    "body": "\\${CB_SETDROPPEDWIDTH}$1",
+    "body": "\\${CB_SETDROPPEDWIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETDROPPEDWIDTH"
   },
   "${CB_SETEDITSEL}": {
-    "body": "\\${CB_SETEDITSEL}$1",
+    "body": "\\${CB_SETEDITSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETEDITSEL"
   },
   "${CB_SETEXTENDEDUI}": {
-    "body": "\\${CB_SETEXTENDEDUI}$1",
+    "body": "\\${CB_SETEXTENDEDUI}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETEXTENDEDUI"
   },
   "${CB_SETHORIZONTALEXTENT}": {
-    "body": "\\${CB_SETHORIZONTALEXTENT}$1",
+    "body": "\\${CB_SETHORIZONTALEXTENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETHORIZONTALEXTENT"
   },
   "${CB_SETITEMDATA}": {
-    "body": "\\${CB_SETITEMDATA}$1",
+    "body": "\\${CB_SETITEMDATA}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETITEMDATA"
   },
   "${CB_SETITEMHEIGHT}": {
-    "body": "\\${CB_SETITEMHEIGHT}$1",
+    "body": "\\${CB_SETITEMHEIGHT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETITEMHEIGHT"
   },
   "${CB_SETLOCALE}": {
-    "body": "\\${CB_SETLOCALE}$1",
+    "body": "\\${CB_SETLOCALE}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETLOCALE"
   },
   "${CB_SETTOPINDEX}": {
-    "body": "\\${CB_SETTOPINDEX}$1",
+    "body": "\\${CB_SETTOPINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SETTOPINDEX"
   },
   "${CB_SHOWDROPDOWN}": {
-    "body": "\\${CB_SHOWDROPDOWN}$1",
+    "body": "\\${CB_SHOWDROPDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "CB_SHOWDROPDOWN"
   },
   "${CCM_DPISCALE}": {
-    "body": "\\${CCM_DPISCALE}$1",
+    "body": "\\${CCM_DPISCALE}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_DPISCALE"
   },
   "${CCM_FIRST}": {
-    "body": "\\${CCM_FIRST}$1",
+    "body": "\\${CCM_FIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_FIRST"
   },
   "${CCM_GETUNICODEFORMAT}": {
-    "body": "\\${CCM_GETUNICODEFORMAT}$1",
+    "body": "\\${CCM_GETUNICODEFORMAT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_GETUNICODEFORMAT"
   },
   "${CCM_GETVERSION}": {
-    "body": "\\${CCM_GETVERSION}$1",
+    "body": "\\${CCM_GETVERSION}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_GETVERSION"
   },
   "${CCM_SETBKCOLOR}": {
-    "body": "\\${CCM_SETBKCOLOR}$1",
+    "body": "\\${CCM_SETBKCOLOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_SETBKCOLOR"
   },
   "${CCM_SETUNICODEFORMAT}": {
-    "body": "\\${CCM_SETUNICODEFORMAT}$1",
+    "body": "\\${CCM_SETUNICODEFORMAT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_SETUNICODEFORMAT"
   },
   "${CCM_SETVERSION}": {
-    "body": "\\${CCM_SETVERSION}$1",
+    "body": "\\${CCM_SETVERSION}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_SETVERSION"
   },
   "${CCM_SETWINDOWTHEME}": {
-    "body": "\\${CCM_SETWINDOWTHEME}$1",
+    "body": "\\${CCM_SETWINDOWTHEME}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCM_SETWINDOWTHEME"
   },
   "${CCS_BOTTOM}": {
-    "body": "\\${CCS_BOTTOM}$1",
+    "body": "\\${CCS_BOTTOM}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCS_BOTTOM"
   },
   "${CCS_LEFT}": {
-    "body": "\\${CCS_LEFT}$1",
+    "body": "\\${CCS_LEFT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCS_LEFT"
   },
   "${CCS_NODIVIDER}": {
-    "body": "\\${CCS_NODIVIDER}$1",
+    "body": "\\${CCS_NODIVIDER}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCS_NODIVIDER"
   },
   "${CCS_RIGHT}": {
-    "body": "\\${CCS_RIGHT}$1",
+    "body": "\\${CCS_RIGHT}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCS_RIGHT"
   },
   "${CCS_TOP}": {
-    "body": "\\${CCS_TOP}$1",
+    "body": "\\${CCS_TOP}$0",
     "description": "WinMessages.nsh",
     "prefix": "CCS_TOP"
   },
   "${DBT_APPYBEGIN}": {
-    "body": "\\${DBT_APPYBEGIN}$1",
+    "body": "\\${DBT_APPYBEGIN}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_APPYBEGIN"
   },
   "${DBT_APPYEND}": {
-    "body": "\\${DBT_APPYEND}$1",
+    "body": "\\${DBT_APPYEND}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_APPYEND"
   },
   "${DBT_CONFIGCHANGECANCELED}": {
-    "body": "\\${DBT_CONFIGCHANGECANCELED}$1",
+    "body": "\\${DBT_CONFIGCHANGECANCELED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_CONFIGCHANGECANCELED"
   },
   "${DBT_CONFIGCHANGED}": {
-    "body": "\\${DBT_CONFIGCHANGED}$1",
+    "body": "\\${DBT_CONFIGCHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_CONFIGCHANGED"
   },
   "${DBT_CONFIGMGAPI32}": {
-    "body": "\\${DBT_CONFIGMGAPI32}$1",
+    "body": "\\${DBT_CONFIGMGAPI32}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_CONFIGMGAPI32"
   },
   "${DBT_CONFIGMGPRIVATE}": {
-    "body": "\\${DBT_CONFIGMGPRIVATE}$1",
+    "body": "\\${DBT_CONFIGMGPRIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_CONFIGMGPRIVATE"
   },
   "${DBT_CUSTOMEVENT}": {
-    "body": "\\${DBT_CUSTOMEVENT}$1",
+    "body": "\\${DBT_CUSTOMEVENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_CUSTOMEVENT"
   },
   "${DBT_DEVICEARRIVAL}": {
-    "body": "\\${DBT_DEVICEARRIVAL}$1",
+    "body": "\\${DBT_DEVICEARRIVAL}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVICEARRIVAL"
   },
   "${DBT_DEVICEQUERYREMOVEFAILED}": {
-    "body": "\\${DBT_DEVICEQUERYREMOVEFAILED}$1",
+    "body": "\\${DBT_DEVICEQUERYREMOVEFAILED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVICEQUERYREMOVEFAILED"
   },
   "${DBT_DEVICEQUERYREMOVE}": {
-    "body": "\\${DBT_DEVICEQUERYREMOVE}$1",
+    "body": "\\${DBT_DEVICEQUERYREMOVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVICEQUERYREMOVE"
   },
   "${DBT_DEVICEREMOVECOMPLETE}": {
-    "body": "\\${DBT_DEVICEREMOVECOMPLETE}$1",
+    "body": "\\${DBT_DEVICEREMOVECOMPLETE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVICEREMOVECOMPLETE"
   },
   "${DBT_DEVICEREMOVEPENDING}": {
-    "body": "\\${DBT_DEVICEREMOVEPENDING}$1",
+    "body": "\\${DBT_DEVICEREMOVEPENDING}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVICEREMOVEPENDING"
   },
   "${DBT_DEVICETYPESPECIFIC}": {
-    "body": "\\${DBT_DEVICETYPESPECIFIC}$1",
+    "body": "\\${DBT_DEVICETYPESPECIFIC}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVICETYPESPECIFIC"
   },
   "${DBT_DEVNODES_CHANGED}": {
-    "body": "\\${DBT_DEVNODES_CHANGED}$1",
+    "body": "\\${DBT_DEVNODES_CHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVNODES_CHANGED"
   },
   "${DBT_DEVTYP_DEVICEINTERFACE}": {
-    "body": "\\${DBT_DEVTYP_DEVICEINTERFACE}$1",
+    "body": "\\${DBT_DEVTYP_DEVICEINTERFACE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVTYP_DEVICEINTERFACE"
   },
   "${DBT_DEVTYP_DEVNODE}": {
-    "body": "\\${DBT_DEVTYP_DEVNODE}$1",
+    "body": "\\${DBT_DEVTYP_DEVNODE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVTYP_DEVNODE"
   },
   "${DBT_DEVTYP_HANDLE}": {
-    "body": "\\${DBT_DEVTYP_HANDLE}$1",
+    "body": "\\${DBT_DEVTYP_HANDLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVTYP_HANDLE"
   },
   "${DBT_DEVTYP_NET}": {
-    "body": "\\${DBT_DEVTYP_NET}$1",
+    "body": "\\${DBT_DEVTYP_NET}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVTYP_NET"
   },
   "${DBT_DEVTYP_OEM}": {
-    "body": "\\${DBT_DEVTYP_OEM}$1",
+    "body": "\\${DBT_DEVTYP_OEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVTYP_OEM"
   },
   "${DBT_DEVTYP_PORT}": {
-    "body": "\\${DBT_DEVTYP_PORT}$1",
+    "body": "\\${DBT_DEVTYP_PORT}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVTYP_PORT"
   },
   "${DBT_DEVTYP_VOLUME}": {
-    "body": "\\${DBT_DEVTYP_VOLUME}$1",
+    "body": "\\${DBT_DEVTYP_VOLUME}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_DEVTYP_VOLUME"
   },
   "${DBT_LOW_DISK_SPACE}": {
-    "body": "\\${DBT_LOW_DISK_SPACE}$1",
+    "body": "\\${DBT_LOW_DISK_SPACE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_LOW_DISK_SPACE"
   },
   "${DBT_MONITORCHANGE}": {
-    "body": "\\${DBT_MONITORCHANGE}$1",
+    "body": "\\${DBT_MONITORCHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_MONITORCHANGE"
   },
   "${DBT_NO_DISK_SPACE}": {
-    "body": "\\${DBT_NO_DISK_SPACE}$1",
+    "body": "\\${DBT_NO_DISK_SPACE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_NO_DISK_SPACE"
   },
   "${DBT_QUERYCHANGECONFIG}": {
-    "body": "\\${DBT_QUERYCHANGECONFIG}$1",
+    "body": "\\${DBT_QUERYCHANGECONFIG}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_QUERYCHANGECONFIG"
   },
   "${DBT_SHELLLOGGEDON}": {
-    "body": "\\${DBT_SHELLLOGGEDON}$1",
+    "body": "\\${DBT_SHELLLOGGEDON}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_SHELLLOGGEDON"
   },
   "${DBT_USERDEFINED}": {
-    "body": "\\${DBT_USERDEFINED}$1",
+    "body": "\\${DBT_USERDEFINED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_USERDEFINED"
   },
   "${DBT_VOLLOCKLOCKFAILED}": {
-    "body": "\\${DBT_VOLLOCKLOCKFAILED}$1",
+    "body": "\\${DBT_VOLLOCKLOCKFAILED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VOLLOCKLOCKFAILED"
   },
   "${DBT_VOLLOCKLOCKRELEASED}": {
-    "body": "\\${DBT_VOLLOCKLOCKRELEASED}$1",
+    "body": "\\${DBT_VOLLOCKLOCKRELEASED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VOLLOCKLOCKRELEASED"
   },
   "${DBT_VOLLOCKLOCKTAKEN}": {
-    "body": "\\${DBT_VOLLOCKLOCKTAKEN}$1",
+    "body": "\\${DBT_VOLLOCKLOCKTAKEN}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VOLLOCKLOCKTAKEN"
   },
   "${DBT_VOLLOCKQUERYLOCK}": {
-    "body": "\\${DBT_VOLLOCKQUERYLOCK}$1",
+    "body": "\\${DBT_VOLLOCKQUERYLOCK}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VOLLOCKQUERYLOCK"
   },
   "${DBT_VOLLOCKQUERYUNLOCK}": {
-    "body": "\\${DBT_VOLLOCKQUERYUNLOCK}$1",
+    "body": "\\${DBT_VOLLOCKQUERYUNLOCK}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VOLLOCKQUERYUNLOCK"
   },
   "${DBT_VOLLOCKUNLOCKFAILED}": {
-    "body": "\\${DBT_VOLLOCKUNLOCKFAILED}$1",
+    "body": "\\${DBT_VOLLOCKUNLOCKFAILED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VOLLOCKUNLOCKFAILED"
   },
   "${DBT_VPOWERDAPI}": {
-    "body": "\\${DBT_VPOWERDAPI}$1",
+    "body": "\\${DBT_VPOWERDAPI}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VPOWERDAPI"
   },
   "${DBT_VXDINITCOMPLETE}": {
-    "body": "\\${DBT_VXDINITCOMPLETE}$1",
+    "body": "\\${DBT_VXDINITCOMPLETE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DBT_VXDINITCOMPLETE"
   },
   "${DM_BITSPERPEL}": {
-    "body": "\\${DM_BITSPERPEL}$1",
+    "body": "\\${DM_BITSPERPEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_BITSPERPEL"
   },
   "${DM_COLLATE}": {
-    "body": "\\${DM_COLLATE}$1",
+    "body": "\\${DM_COLLATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_COLLATE"
   },
   "${DM_COLOR}": {
-    "body": "\\${DM_COLOR}$1",
+    "body": "\\${DM_COLOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_COLOR"
   },
   "${DM_COPIES}": {
-    "body": "\\${DM_COPIES}$1",
+    "body": "\\${DM_COPIES}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_COPIES"
   },
   "${DM_DEFAULTSOURCE}": {
-    "body": "\\${DM_DEFAULTSOURCE}$1",
+    "body": "\\${DM_DEFAULTSOURCE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_DEFAULTSOURCE"
   },
   "${DM_DISPLAYFLAGS}": {
-    "body": "\\${DM_DISPLAYFLAGS}$1",
+    "body": "\\${DM_DISPLAYFLAGS}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_DISPLAYFLAGS"
   },
   "${DM_DISPLAYFREQUENCY}": {
-    "body": "\\${DM_DISPLAYFREQUENCY}$1",
+    "body": "\\${DM_DISPLAYFREQUENCY}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_DISPLAYFREQUENCY"
   },
   "${DM_DITHERTYPE}": {
-    "body": "\\${DM_DITHERTYPE}$1",
+    "body": "\\${DM_DITHERTYPE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_DITHERTYPE"
   },
   "${DM_DUPLEX}": {
-    "body": "\\${DM_DUPLEX}$1",
+    "body": "\\${DM_DUPLEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_DUPLEX"
   },
   "${DM_FORMNAME}": {
-    "body": "\\${DM_FORMNAME}$1",
+    "body": "\\${DM_FORMNAME}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_FORMNAME"
   },
   "${DM_GRAYSCALE}": {
-    "body": "\\${DM_GRAYSCALE}$1",
+    "body": "\\${DM_GRAYSCALE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_GRAYSCALE"
   },
   "${DM_ICMINTENT}": {
-    "body": "\\${DM_ICMINTENT}$1",
+    "body": "\\${DM_ICMINTENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_ICMINTENT"
   },
   "${DM_ICMMETHOD}": {
-    "body": "\\${DM_ICMMETHOD}$1",
+    "body": "\\${DM_ICMMETHOD}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_ICMMETHOD"
   },
   "${DM_INTERLACED}": {
-    "body": "\\${DM_INTERLACED}$1",
+    "body": "\\${DM_INTERLACED}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_INTERLACED"
   },
   "${DM_LOGPIXELS}": {
-    "body": "\\${DM_LOGPIXELS}$1",
+    "body": "\\${DM_LOGPIXELS}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_LOGPIXELS"
   },
   "${DM_MEDIATYPE}": {
-    "body": "\\${DM_MEDIATYPE}$1",
+    "body": "\\${DM_MEDIATYPE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_MEDIATYPE"
   },
   "${DM_NUP}": {
-    "body": "\\${DM_NUP}$1",
+    "body": "\\${DM_NUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_NUP"
   },
   "${DM_ORIENTATION}": {
-    "body": "\\${DM_ORIENTATION}$1",
+    "body": "\\${DM_ORIENTATION}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_ORIENTATION"
   },
   "${DM_PANNINGHEIGHT}": {
-    "body": "\\${DM_PANNINGHEIGHT}$1",
+    "body": "\\${DM_PANNINGHEIGHT}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PANNINGHEIGHT"
   },
   "${DM_PANNINGWIDTH}": {
-    "body": "\\${DM_PANNINGWIDTH}$1",
+    "body": "\\${DM_PANNINGWIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PANNINGWIDTH"
   },
   "${DM_PAPERLENGTH}": {
-    "body": "\\${DM_PAPERLENGTH}$1",
+    "body": "\\${DM_PAPERLENGTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PAPERLENGTH"
   },
   "${DM_PAPERSIZE}": {
-    "body": "\\${DM_PAPERSIZE}$1",
+    "body": "\\${DM_PAPERSIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PAPERSIZE"
   },
   "${DM_PAPERWIDTH}": {
-    "body": "\\${DM_PAPERWIDTH}$1",
+    "body": "\\${DM_PAPERWIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PAPERWIDTH"
   },
   "${DM_PELSHEIGHT}": {
-    "body": "\\${DM_PELSHEIGHT}$1",
+    "body": "\\${DM_PELSHEIGHT}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PELSHEIGHT"
   },
   "${DM_PELSWIDTH}": {
-    "body": "\\${DM_PELSWIDTH}$1",
+    "body": "\\${DM_PELSWIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PELSWIDTH"
   },
   "${DM_POSITION}": {
-    "body": "\\${DM_POSITION}$1",
+    "body": "\\${DM_POSITION}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_POSITION"
   },
   "${DM_PRINTQUALITY}": {
-    "body": "\\${DM_PRINTQUALITY}$1",
+    "body": "\\${DM_PRINTQUALITY}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_PRINTQUALITY"
   },
   "${DM_SCALE}": {
-    "body": "\\${DM_SCALE}$1",
+    "body": "\\${DM_SCALE}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_SCALE"
   },
   "${DM_SPECVERSION}": {
-    "body": "\\${DM_SPECVERSION}$1",
+    "body": "\\${DM_SPECVERSION}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_SPECVERSION"
   },
   "${DM_TTOPTION}": {
-    "body": "\\${DM_TTOPTION}$1",
+    "body": "\\${DM_TTOPTION}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_TTOPTION"
   },
   "${DM_YRESOLUTION}": {
-    "body": "\\${DM_YRESOLUTION}$1",
+    "body": "\\${DM_YRESOLUTION}$0",
     "description": "WinMessages.nsh",
     "prefix": "DM_YRESOLUTION"
   },
   "${EM_CANUNDO}": {
-    "body": "\\${EM_CANUNDO}$1",
+    "body": "\\${EM_CANUNDO}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_CANUNDO"
   },
   "${EM_CHARFROMPOS}": {
-    "body": "\\${EM_CHARFROMPOS}$1",
+    "body": "\\${EM_CHARFROMPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_CHARFROMPOS"
   },
   "${EM_EMPTYUNDOBUFFER}": {
-    "body": "\\${EM_EMPTYUNDOBUFFER}$1",
+    "body": "\\${EM_EMPTYUNDOBUFFER}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_EMPTYUNDOBUFFER"
   },
   "${EM_EXLIMITTEXT}": {
-    "body": "\\${EM_EXLIMITTEXT}$1",
+    "body": "\\${EM_EXLIMITTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_EXLIMITTEXT"
   },
   "${EM_FMTLINES}": {
-    "body": "\\${EM_FMTLINES}$1",
+    "body": "\\${EM_FMTLINES}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_FMTLINES"
   },
   "${EM_GETFIRSTVISIBLELINE}": {
-    "body": "\\${EM_GETFIRSTVISIBLELINE}$1",
+    "body": "\\${EM_GETFIRSTVISIBLELINE}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETFIRSTVISIBLELINE"
   },
   "${EM_GETHANDLE}": {
-    "body": "\\${EM_GETHANDLE}$1",
+    "body": "\\${EM_GETHANDLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETHANDLE"
   },
   "${EM_GETIMESTATUS}": {
-    "body": "\\${EM_GETIMESTATUS}$1",
+    "body": "\\${EM_GETIMESTATUS}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETIMESTATUS"
   },
   "${EM_GETLIMITTEXT}": {
-    "body": "\\${EM_GETLIMITTEXT}$1",
+    "body": "\\${EM_GETLIMITTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETLIMITTEXT"
   },
   "${EM_GETLINECOUNT}": {
-    "body": "\\${EM_GETLINECOUNT}$1",
+    "body": "\\${EM_GETLINECOUNT}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETLINECOUNT"
   },
   "${EM_GETLINE}": {
-    "body": "\\${EM_GETLINE}$1",
+    "body": "\\${EM_GETLINE}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETLINE"
   },
   "${EM_GETMARGINS}": {
-    "body": "\\${EM_GETMARGINS}$1",
+    "body": "\\${EM_GETMARGINS}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETMARGINS"
   },
   "${EM_GETMODIFY}": {
-    "body": "\\${EM_GETMODIFY}$1",
+    "body": "\\${EM_GETMODIFY}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETMODIFY"
   },
   "${EM_GETPASSWORDCHAR}": {
-    "body": "\\${EM_GETPASSWORDCHAR}$1",
+    "body": "\\${EM_GETPASSWORDCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETPASSWORDCHAR"
   },
   "${EM_GETRECT}": {
-    "body": "\\${EM_GETRECT}$1",
+    "body": "\\${EM_GETRECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETRECT"
   },
   "${EM_GETSEL}": {
-    "body": "\\${EM_GETSEL}$1",
+    "body": "\\${EM_GETSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETSEL"
   },
   "${EM_GETTHUMB}": {
-    "body": "\\${EM_GETTHUMB}$1",
+    "body": "\\${EM_GETTHUMB}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETTHUMB"
   },
   "${EM_GETWORDBREAKPROC}": {
-    "body": "\\${EM_GETWORDBREAKPROC}$1",
+    "body": "\\${EM_GETWORDBREAKPROC}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_GETWORDBREAKPROC"
   },
   "${EM_LIMITTEXT}": {
-    "body": "\\${EM_LIMITTEXT}$1",
+    "body": "\\${EM_LIMITTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_LIMITTEXT"
   },
   "${EM_LINEFROMCHAR}": {
-    "body": "\\${EM_LINEFROMCHAR}$1",
+    "body": "\\${EM_LINEFROMCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_LINEFROMCHAR"
   },
   "${EM_LINEINDEX}": {
-    "body": "\\${EM_LINEINDEX}$1",
+    "body": "\\${EM_LINEINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_LINEINDEX"
   },
   "${EM_LINELENGTH}": {
-    "body": "\\${EM_LINELENGTH}$1",
+    "body": "\\${EM_LINELENGTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_LINELENGTH"
   },
   "${EM_LINESCROLL}": {
-    "body": "\\${EM_LINESCROLL}$1",
+    "body": "\\${EM_LINESCROLL}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_LINESCROLL"
   },
   "${EM_POSFROMCHAR}": {
-    "body": "\\${EM_POSFROMCHAR}$1",
+    "body": "\\${EM_POSFROMCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_POSFROMCHAR"
   },
   "${EM_REPLACESEL}": {
-    "body": "\\${EM_REPLACESEL}$1",
+    "body": "\\${EM_REPLACESEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_REPLACESEL"
   },
   "${EM_SCROLLCARET}": {
-    "body": "\\${EM_SCROLLCARET}$1",
+    "body": "\\${EM_SCROLLCARET}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SCROLLCARET"
   },
   "${EM_SCROLL}": {
-    "body": "\\${EM_SCROLL}$1",
+    "body": "\\${EM_SCROLL}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SCROLL"
   },
   "${EM_SETHANDLE}": {
-    "body": "\\${EM_SETHANDLE}$1",
+    "body": "\\${EM_SETHANDLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETHANDLE"
   },
   "${EM_SETIMESTATUS}": {
-    "body": "\\${EM_SETIMESTATUS}$1",
+    "body": "\\${EM_SETIMESTATUS}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETIMESTATUS"
   },
   "${EM_SETLIMITTEXT}": {
-    "body": "\\${EM_SETLIMITTEXT}$1",
+    "body": "\\${EM_SETLIMITTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETLIMITTEXT"
   },
   "${EM_SETMARGINS}": {
-    "body": "\\${EM_SETMARGINS}$1",
+    "body": "\\${EM_SETMARGINS}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETMARGINS"
   },
   "${EM_SETMODIFY}": {
-    "body": "\\${EM_SETMODIFY}$1",
+    "body": "\\${EM_SETMODIFY}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETMODIFY"
   },
   "${EM_SETPASSWORDCHAR}": {
-    "body": "\\${EM_SETPASSWORDCHAR}$1",
+    "body": "\\${EM_SETPASSWORDCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETPASSWORDCHAR"
   },
   "${EM_SETREADONLY}": {
-    "body": "\\${EM_SETREADONLY}$1",
+    "body": "\\${EM_SETREADONLY}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETREADONLY"
   },
   "${EM_SETRECTNP}": {
-    "body": "\\${EM_SETRECTNP}$1",
+    "body": "\\${EM_SETRECTNP}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETRECTNP"
   },
   "${EM_SETRECT}": {
-    "body": "\\${EM_SETRECT}$1",
+    "body": "\\${EM_SETRECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETRECT"
   },
   "${EM_SETSEL}": {
-    "body": "\\${EM_SETSEL}$1",
+    "body": "\\${EM_SETSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETSEL"
   },
   "${EM_SETTABSTOPS}": {
-    "body": "\\${EM_SETTABSTOPS}$1",
+    "body": "\\${EM_SETTABSTOPS}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETTABSTOPS"
   },
   "${EM_SETWORDBREAKPROC}": {
-    "body": "\\${EM_SETWORDBREAKPROC}$1",
+    "body": "\\${EM_SETWORDBREAKPROC}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_SETWORDBREAKPROC"
   },
   "${EM_UNDO}": {
-    "body": "\\${EM_UNDO}$1",
+    "body": "\\${EM_UNDO}$0",
     "description": "WinMessages.nsh",
     "prefix": "EM_UNDO"
   },
   "${HDM_FIRST}": {
-    "body": "\\${HDM_FIRST}$1",
+    "body": "\\${HDM_FIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "HDM_FIRST"
   },
   "${HWND_BROADCAST}": {
-    "body": "\\${HWND_BROADCAST}$1",
+    "body": "\\${HWND_BROADCAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "HWND_BROADCAST"
   },
   "${I_IMAGENONE}": {
-    "body": "\\${I_IMAGENONE}$1",
+    "body": "\\${I_IMAGENONE}$0",
     "description": "WinMessages.nsh",
     "prefix": "I_IMAGENONE"
   },
   "${LB_ADDFILE}": {
-    "body": "\\${LB_ADDFILE}$1",
+    "body": "\\${LB_ADDFILE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_ADDFILE"
   },
   "${LB_ADDSTRING}": {
-    "body": "\\${LB_ADDSTRING}$1",
+    "body": "\\${LB_ADDSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_ADDSTRING"
   },
   "${LB_DELETESTRING}": {
-    "body": "\\${LB_DELETESTRING}$1",
+    "body": "\\${LB_DELETESTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_DELETESTRING"
   },
   "${LB_DIR}": {
-    "body": "\\${LB_DIR}$1",
+    "body": "\\${LB_DIR}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_DIR"
   },
   "${LB_ERR}": {
-    "body": "\\${LB_ERR}$1",
+    "body": "\\${LB_ERR}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_ERR"
   },
   "${LB_FINDSTRINGEXACT}": {
-    "body": "\\${LB_FINDSTRINGEXACT}$1",
+    "body": "\\${LB_FINDSTRINGEXACT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_FINDSTRINGEXACT"
   },
   "${LB_FINDSTRING}": {
-    "body": "\\${LB_FINDSTRING}$1",
+    "body": "\\${LB_FINDSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_FINDSTRING"
   },
   "${LB_GETANCHORINDEX}": {
-    "body": "\\${LB_GETANCHORINDEX}$1",
+    "body": "\\${LB_GETANCHORINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETANCHORINDEX"
   },
   "${LB_GETCARETINDEX}": {
-    "body": "\\${LB_GETCARETINDEX}$1",
+    "body": "\\${LB_GETCARETINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETCARETINDEX"
   },
   "${LB_GETCOUNT}": {
-    "body": "\\${LB_GETCOUNT}$1",
+    "body": "\\${LB_GETCOUNT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETCOUNT"
   },
   "${LB_GETCURSEL}": {
-    "body": "\\${LB_GETCURSEL}$1",
+    "body": "\\${LB_GETCURSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETCURSEL"
   },
   "${LB_GETHORIZONTALEXTENT}": {
-    "body": "\\${LB_GETHORIZONTALEXTENT}$1",
+    "body": "\\${LB_GETHORIZONTALEXTENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETHORIZONTALEXTENT"
   },
   "${LB_GETITEMDATA}": {
-    "body": "\\${LB_GETITEMDATA}$1",
+    "body": "\\${LB_GETITEMDATA}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETITEMDATA"
   },
   "${LB_GETITEMHEIGHT}": {
-    "body": "\\${LB_GETITEMHEIGHT}$1",
+    "body": "\\${LB_GETITEMHEIGHT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETITEMHEIGHT"
   },
   "${LB_GETITEMRECT}": {
-    "body": "\\${LB_GETITEMRECT}$1",
+    "body": "\\${LB_GETITEMRECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETITEMRECT"
   },
   "${LB_GETLOCALE}": {
-    "body": "\\${LB_GETLOCALE}$1",
+    "body": "\\${LB_GETLOCALE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETLOCALE"
   },
   "${LB_GETSELCOUNT}": {
-    "body": "\\${LB_GETSELCOUNT}$1",
+    "body": "\\${LB_GETSELCOUNT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETSELCOUNT"
   },
   "${LB_GETSELITEMS}": {
-    "body": "\\${LB_GETSELITEMS}$1",
+    "body": "\\${LB_GETSELITEMS}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETSELITEMS"
   },
   "${LB_GETSEL}": {
-    "body": "\\${LB_GETSEL}$1",
+    "body": "\\${LB_GETSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETSEL"
   },
   "${LB_GETTEXTLEN}": {
-    "body": "\\${LB_GETTEXTLEN}$1",
+    "body": "\\${LB_GETTEXTLEN}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETTEXTLEN"
   },
   "${LB_GETTEXT}": {
-    "body": "\\${LB_GETTEXT}$1",
+    "body": "\\${LB_GETTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETTEXT"
   },
   "${LB_GETTOPINDEX}": {
-    "body": "\\${LB_GETTOPINDEX}$1",
+    "body": "\\${LB_GETTOPINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_GETTOPINDEX"
   },
   "${LB_INITSTORAGE}": {
-    "body": "\\${LB_INITSTORAGE}$1",
+    "body": "\\${LB_INITSTORAGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_INITSTORAGE"
   },
   "${LB_INSERTSTRING}": {
-    "body": "\\${LB_INSERTSTRING}$1",
+    "body": "\\${LB_INSERTSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_INSERTSTRING"
   },
   "${LB_ITEMFROMPOINT}": {
-    "body": "\\${LB_ITEMFROMPOINT}$1",
+    "body": "\\${LB_ITEMFROMPOINT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_ITEMFROMPOINT"
   },
   "${LB_MSGMAX}": {
-    "body": "\\${LB_MSGMAX}$1",
+    "body": "\\${LB_MSGMAX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_MSGMAX"
   },
   "${LB_MULTIPLEADDSTRING}": {
-    "body": "\\${LB_MULTIPLEADDSTRING}$1",
+    "body": "\\${LB_MULTIPLEADDSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_MULTIPLEADDSTRING"
   },
   "${LB_RESETCONTENT}": {
-    "body": "\\${LB_RESETCONTENT}$1",
+    "body": "\\${LB_RESETCONTENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_RESETCONTENT"
   },
   "${LB_SELECTSTRING}": {
-    "body": "\\${LB_SELECTSTRING}$1",
+    "body": "\\${LB_SELECTSTRING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SELECTSTRING"
   },
   "${LB_SELITEMRANGEEX}": {
-    "body": "\\${LB_SELITEMRANGEEX}$1",
+    "body": "\\${LB_SELITEMRANGEEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SELITEMRANGEEX"
   },
   "${LB_SELITEMRANGE}": {
-    "body": "\\${LB_SELITEMRANGE}$1",
+    "body": "\\${LB_SELITEMRANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SELITEMRANGE"
   },
   "${LB_SETANCHORINDEX}": {
-    "body": "\\${LB_SETANCHORINDEX}$1",
+    "body": "\\${LB_SETANCHORINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETANCHORINDEX"
   },
   "${LB_SETCARETINDEX}": {
-    "body": "\\${LB_SETCARETINDEX}$1",
+    "body": "\\${LB_SETCARETINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETCARETINDEX"
   },
   "${LB_SETCOLUMNWIDTH}": {
-    "body": "\\${LB_SETCOLUMNWIDTH}$1",
+    "body": "\\${LB_SETCOLUMNWIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETCOLUMNWIDTH"
   },
   "${LB_SETCOUNT}": {
-    "body": "\\${LB_SETCOUNT}$1",
+    "body": "\\${LB_SETCOUNT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETCOUNT"
   },
   "${LB_SETCURSEL}": {
-    "body": "\\${LB_SETCURSEL}$1",
+    "body": "\\${LB_SETCURSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETCURSEL"
   },
   "${LB_SETHORIZONTALEXTENT}": {
-    "body": "\\${LB_SETHORIZONTALEXTENT}$1",
+    "body": "\\${LB_SETHORIZONTALEXTENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETHORIZONTALEXTENT"
   },
   "${LB_SETITEMDATA}": {
-    "body": "\\${LB_SETITEMDATA}$1",
+    "body": "\\${LB_SETITEMDATA}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETITEMDATA"
   },
   "${LB_SETITEMHEIGHT}": {
-    "body": "\\${LB_SETITEMHEIGHT}$1",
+    "body": "\\${LB_SETITEMHEIGHT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETITEMHEIGHT"
   },
   "${LB_SETLOCALE}": {
-    "body": "\\${LB_SETLOCALE}$1",
+    "body": "\\${LB_SETLOCALE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETLOCALE"
   },
   "${LB_SETSEL}": {
-    "body": "\\${LB_SETSEL}$1",
+    "body": "\\${LB_SETSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETSEL"
   },
   "${LB_SETTABSTOPS}": {
-    "body": "\\${LB_SETTABSTOPS}$1",
+    "body": "\\${LB_SETTABSTOPS}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETTABSTOPS"
   },
   "${LB_SETTOPINDEX}": {
-    "body": "\\${LB_SETTOPINDEX}$1",
+    "body": "\\${LB_SETTOPINDEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "LB_SETTOPINDEX"
   },
   "${LVCF_FMT}": {
-    "body": "\\${LVCF_FMT}$1",
+    "body": "\\${LVCF_FMT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVCF_FMT"
   },
   "${LVCF_SUBITEM}": {
-    "body": "\\${LVCF_SUBITEM}$1",
+    "body": "\\${LVCF_SUBITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVCF_SUBITEM"
   },
   "${LVCF_TEXT}": {
-    "body": "\\${LVCF_TEXT}$1",
+    "body": "\\${LVCF_TEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVCF_TEXT"
   },
   "${LVCF_WIDTH}": {
-    "body": "\\${LVCF_WIDTH}$1",
+    "body": "\\${LVCF_WIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVCF_WIDTH"
   },
   "${LVIF_IMAGE}": {
-    "body": "\\${LVIF_IMAGE}$1",
+    "body": "\\${LVIF_IMAGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVIF_IMAGE"
   },
   "${LVIF_PARAM}": {
-    "body": "\\${LVIF_PARAM}$1",
+    "body": "\\${LVIF_PARAM}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVIF_PARAM"
   },
   "${LVIF_STATE}": {
-    "body": "\\${LVIF_STATE}$1",
+    "body": "\\${LVIF_STATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVIF_STATE"
   },
   "${LVIF_TEXT}": {
-    "body": "\\${LVIF_TEXT}$1",
+    "body": "\\${LVIF_TEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVIF_TEXT"
   },
   "${LVIS_STATEIMAGEMASK}": {
-    "body": "\\${LVIS_STATEIMAGEMASK}$1",
+    "body": "\\${LVIS_STATEIMAGEMASK}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVIS_STATEIMAGEMASK"
   },
   "${LVM_DELETEALLITEMS}": {
-    "body": "\\${LVM_DELETEALLITEMS}$1",
+    "body": "\\${LVM_DELETEALLITEMS}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_DELETEALLITEMS"
   },
   "${LVM_DELETEITEM}": {
-    "body": "\\${LVM_DELETEITEM}$1",
+    "body": "\\${LVM_DELETEITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_DELETEITEM"
   },
   "${LVM_FIRST}": {
-    "body": "\\${LVM_FIRST}$1",
+    "body": "\\${LVM_FIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_FIRST"
   },
   "${LVM_GETEXTENDEDLISTVIEWSTYLE}": {
-    "body": "\\${LVM_GETEXTENDEDLISTVIEWSTYLE}$1",
+    "body": "\\${LVM_GETEXTENDEDLISTVIEWSTYLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_GETEXTENDEDLISTVIEWSTYLE"
   },
   "${LVM_GETIMAGELIST}": {
-    "body": "\\${LVM_GETIMAGELIST}$1",
+    "body": "\\${LVM_GETIMAGELIST}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_GETIMAGELIST"
   },
   "${LVM_GETITEMA}": {
-    "body": "\\${LVM_GETITEMA}$1",
+    "body": "\\${LVM_GETITEMA}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_GETITEMA"
   },
   "${LVM_GETITEMCOUNT}": {
-    "body": "\\${LVM_GETITEMCOUNT}$1",
+    "body": "\\${LVM_GETITEMCOUNT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_GETITEMCOUNT"
   },
   "${LVM_GETITEMSTATE}": {
-    "body": "\\${LVM_GETITEMSTATE}$1",
+    "body": "\\${LVM_GETITEMSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_GETITEMSTATE"
   },
   "${LVM_GETITEMW}": {
-    "body": "\\${LVM_GETITEMW}$1",
+    "body": "\\${LVM_GETITEMW}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_GETITEMW"
   },
   "${LVM_GETITEM}": {
-    "body": "\\${LVM_GETITEM}$1",
+    "body": "\\${LVM_GETITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_GETITEM"
   },
   "${LVM_INSERTCOLUMNA}": {
-    "body": "\\${LVM_INSERTCOLUMNA}$1",
+    "body": "\\${LVM_INSERTCOLUMNA}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_INSERTCOLUMNA"
   },
   "${LVM_INSERTCOLUMNW}": {
-    "body": "\\${LVM_INSERTCOLUMNW}$1",
+    "body": "\\${LVM_INSERTCOLUMNW}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_INSERTCOLUMNW"
   },
   "${LVM_INSERTCOLUMN}": {
-    "body": "\\${LVM_INSERTCOLUMN}$1",
+    "body": "\\${LVM_INSERTCOLUMN}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_INSERTCOLUMN"
   },
   "${LVM_INSERTITEMA}": {
-    "body": "\\${LVM_INSERTITEMA}$1",
+    "body": "\\${LVM_INSERTITEMA}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_INSERTITEMA"
   },
   "${LVM_INSERTITEMW}": {
-    "body": "\\${LVM_INSERTITEMW}$1",
+    "body": "\\${LVM_INSERTITEMW}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_INSERTITEMW"
   },
   "${LVM_INSERTITEM}": {
-    "body": "\\${LVM_INSERTITEM}$1",
+    "body": "\\${LVM_INSERTITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_INSERTITEM"
   },
   "${LVM_SETCOLUMNWIDTH}": {
-    "body": "\\${LVM_SETCOLUMNWIDTH}$1",
+    "body": "\\${LVM_SETCOLUMNWIDTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETCOLUMNWIDTH"
   },
   "${LVM_SETEXTENDEDLISTVIEWSTYLE}": {
-    "body": "\\${LVM_SETEXTENDEDLISTVIEWSTYLE}$1",
+    "body": "\\${LVM_SETEXTENDEDLISTVIEWSTYLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETEXTENDEDLISTVIEWSTYLE"
   },
   "${LVM_SETIMAGELIST}": {
-    "body": "\\${LVM_SETIMAGELIST}$1",
+    "body": "\\${LVM_SETIMAGELIST}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETIMAGELIST"
   },
   "${LVM_SETITEMA}": {
-    "body": "\\${LVM_SETITEMA}$1",
+    "body": "\\${LVM_SETITEMA}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEMA"
   },
   "${LVM_SETITEMCOUNT}": {
-    "body": "\\${LVM_SETITEMCOUNT}$1",
+    "body": "\\${LVM_SETITEMCOUNT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEMCOUNT"
   },
   "${LVM_SETITEMSTATE}": {
-    "body": "\\${LVM_SETITEMSTATE}$1",
+    "body": "\\${LVM_SETITEMSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEMSTATE"
   },
   "${LVM_SETITEMTEXTA}": {
-    "body": "\\${LVM_SETITEMTEXTA}$1",
+    "body": "\\${LVM_SETITEMTEXTA}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEMTEXTA"
   },
   "${LVM_SETITEMTEXTW}": {
-    "body": "\\${LVM_SETITEMTEXTW}$1",
+    "body": "\\${LVM_SETITEMTEXTW}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEMTEXTW"
   },
   "${LVM_SETITEMTEXT}": {
-    "body": "\\${LVM_SETITEMTEXT}$1",
+    "body": "\\${LVM_SETITEMTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEMTEXT"
   },
   "${LVM_SETITEMW}": {
-    "body": "\\${LVM_SETITEMW}$1",
+    "body": "\\${LVM_SETITEMW}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEMW"
   },
   "${LVM_SETITEM}": {
-    "body": "\\${LVM_SETITEM}$1",
+    "body": "\\${LVM_SETITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETITEM"
   },
   "${LVM_SETSELECTEDCOLUMN}": {
-    "body": "\\${LVM_SETSELECTEDCOLUMN}$1",
+    "body": "\\${LVM_SETSELECTEDCOLUMN}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SETSELECTEDCOLUMN"
   },
   "${LVM_SORTITEMS}": {
-    "body": "\\${LVM_SORTITEMS}$1",
+    "body": "\\${LVM_SORTITEMS}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVM_SORTITEMS"
   },
   "${LVSCW_AUTOSIZE_USEHEADER}": {
-    "body": "\\${LVSCW_AUTOSIZE_USEHEADER}$1",
+    "body": "\\${LVSCW_AUTOSIZE_USEHEADER}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVSCW_AUTOSIZE_USEHEADER"
   },
   "${LVSCW_AUTOSIZE}": {
-    "body": "\\${LVSCW_AUTOSIZE}$1",
+    "body": "\\${LVSCW_AUTOSIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVSCW_AUTOSIZE"
   },
   "${LVS_EDITLABELS}": {
-    "body": "\\${LVS_EDITLABELS}$1",
+    "body": "\\${LVS_EDITLABELS}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_EDITLABELS"
   },
   "${LVS_EX_CHECKBOXES}": {
-    "body": "\\${LVS_EX_CHECKBOXES}$1",
+    "body": "\\${LVS_EX_CHECKBOXES}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_EX_CHECKBOXES"
   },
   "${LVS_EX_DOUBLEBUFFER}": {
-    "body": "\\${LVS_EX_DOUBLEBUFFER}$1",
+    "body": "\\${LVS_EX_DOUBLEBUFFER}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_EX_DOUBLEBUFFER"
   },
   "${LVS_EX_FULLROWSELECT}": {
-    "body": "\\${LVS_EX_FULLROWSELECT}$1",
+    "body": "\\${LVS_EX_FULLROWSELECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_EX_FULLROWSELECT"
   },
   "${LVS_EX_INFOTIP}": {
-    "body": "\\${LVS_EX_INFOTIP}$1",
+    "body": "\\${LVS_EX_INFOTIP}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_EX_INFOTIP"
   },
   "${LVS_EX_LABELTIP}": {
-    "body": "\\${LVS_EX_LABELTIP}$1",
+    "body": "\\${LVS_EX_LABELTIP}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_EX_LABELTIP"
   },
   "${LVS_ICON}": {
-    "body": "\\${LVS_ICON}$1",
+    "body": "\\${LVS_ICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_ICON"
   },
   "${LVS_LIST}": {
-    "body": "\\${LVS_LIST}$1",
+    "body": "\\${LVS_LIST}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_LIST"
   },
   "${LVS_NOCOLUMNHEADER}": {
-    "body": "\\${LVS_NOCOLUMNHEADER}$1",
+    "body": "\\${LVS_NOCOLUMNHEADER}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_NOCOLUMNHEADER"
   },
   "${LVS_NOSCROLL}": {
-    "body": "\\${LVS_NOSCROLL}$1",
+    "body": "\\${LVS_NOSCROLL}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_NOSCROLL"
   },
   "${LVS_NOSORTHEADER}": {
-    "body": "\\${LVS_NOSORTHEADER}$1",
+    "body": "\\${LVS_NOSORTHEADER}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_NOSORTHEADER"
   },
   "${LVS_REPORT}": {
-    "body": "\\${LVS_REPORT}$1",
+    "body": "\\${LVS_REPORT}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_REPORT"
   },
   "${LVS_SHAREIMAGELISTS}": {
-    "body": "\\${LVS_SHAREIMAGELISTS}$1",
+    "body": "\\${LVS_SHAREIMAGELISTS}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_SHAREIMAGELISTS"
   },
   "${LVS_SHOWSELALWAYS}": {
-    "body": "\\${LVS_SHOWSELALWAYS}$1",
+    "body": "\\${LVS_SHOWSELALWAYS}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_SHOWSELALWAYS"
   },
   "${LVS_SINGLESEL}": {
-    "body": "\\${LVS_SINGLESEL}$1",
+    "body": "\\${LVS_SINGLESEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_SINGLESEL"
   },
   "${LVS_SMALLICON}": {
-    "body": "\\${LVS_SMALLICON}$1",
+    "body": "\\${LVS_SMALLICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_SMALLICON"
   },
   "${LVS_SORTASCENDING}": {
-    "body": "\\${LVS_SORTASCENDING}$1",
+    "body": "\\${LVS_SORTASCENDING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_SORTASCENDING"
   },
   "${LVS_SORTDESCENDING}": {
-    "body": "\\${LVS_SORTDESCENDING}$1",
+    "body": "\\${LVS_SORTDESCENDING}$0",
     "description": "WinMessages.nsh",
     "prefix": "LVS_SORTDESCENDING"
   },
   "${PBM_DELTAPOS}": {
-    "body": "\\${PBM_DELTAPOS}$1",
+    "body": "\\${PBM_DELTAPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_DELTAPOS"
   },
   "${PBM_GETBARCOLOR}": {
-    "body": "\\${PBM_GETBARCOLOR}$1",
+    "body": "\\${PBM_GETBARCOLOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_GETBARCOLOR"
   },
   "${PBM_GETBKCOLOR}": {
-    "body": "\\${PBM_GETBKCOLOR}$1",
+    "body": "\\${PBM_GETBKCOLOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_GETBKCOLOR"
   },
   "${PBM_GETPOS}": {
-    "body": "\\${PBM_GETPOS}$1",
+    "body": "\\${PBM_GETPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_GETPOS"
   },
   "${PBM_GETRANGE}": {
-    "body": "\\${PBM_GETRANGE}$1",
+    "body": "\\${PBM_GETRANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_GETRANGE"
   },
   "${PBM_GETSTATE}": {
-    "body": "\\${PBM_GETSTATE}$1",
+    "body": "\\${PBM_GETSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_GETSTATE"
   },
   "${PBM_GETSTEP}": {
-    "body": "\\${PBM_GETSTEP}$1",
+    "body": "\\${PBM_GETSTEP}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_GETSTEP"
   },
   "${PBM_SETBARCOLOR}": {
-    "body": "\\${PBM_SETBARCOLOR}$1",
+    "body": "\\${PBM_SETBARCOLOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETBARCOLOR"
   },
   "${PBM_SETBKCOLOR}": {
-    "body": "\\${PBM_SETBKCOLOR}$1",
+    "body": "\\${PBM_SETBKCOLOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETBKCOLOR"
   },
   "${PBM_SETMARQUEE}": {
-    "body": "\\${PBM_SETMARQUEE}$1",
+    "body": "\\${PBM_SETMARQUEE}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETMARQUEE"
   },
   "${PBM_SETPOS}": {
-    "body": "\\${PBM_SETPOS}$1",
+    "body": "\\${PBM_SETPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETPOS"
   },
   "${PBM_SETRANGE32}": {
-    "body": "\\${PBM_SETRANGE32}$1",
+    "body": "\\${PBM_SETRANGE32}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETRANGE32"
   },
   "${PBM_SETRANGE}": {
-    "body": "\\${PBM_SETRANGE}$1",
+    "body": "\\${PBM_SETRANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETRANGE"
   },
   "${PBM_SETSTATE}": {
-    "body": "\\${PBM_SETSTATE}$1",
+    "body": "\\${PBM_SETSTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETSTATE"
   },
   "${PBM_SETSTEP}": {
-    "body": "\\${PBM_SETSTEP}$1",
+    "body": "\\${PBM_SETSTEP}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_SETSTEP"
   },
   "${PBM_STEPIT}": {
-    "body": "\\${PBM_STEPIT}$1",
+    "body": "\\${PBM_STEPIT}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBM_STEPIT"
   },
   "${PBST_ERROR}": {
-    "body": "\\${PBST_ERROR}$1",
+    "body": "\\${PBST_ERROR}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBST_ERROR"
   },
   "${PBST_NORMAL}": {
-    "body": "\\${PBST_NORMAL}$1",
+    "body": "\\${PBST_NORMAL}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBST_NORMAL"
   },
   "${PBST_PAUSED}": {
-    "body": "\\${PBST_PAUSED}$1",
+    "body": "\\${PBST_PAUSED}$0",
     "description": "WinMessages.nsh",
     "prefix": "PBST_PAUSED"
   },
   "${SBM_ENABLE_ARROWS}": {
-    "body": "\\${SBM_ENABLE_ARROWS}$1",
+    "body": "\\${SBM_ENABLE_ARROWS}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_ENABLE_ARROWS"
   },
   "${SBM_GETPOS}": {
-    "body": "\\${SBM_GETPOS}$1",
+    "body": "\\${SBM_GETPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_GETPOS"
   },
   "${SBM_GETRANGE}": {
-    "body": "\\${SBM_GETRANGE}$1",
+    "body": "\\${SBM_GETRANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_GETRANGE"
   },
   "${SBM_GETSCROLLINFO}": {
-    "body": "\\${SBM_GETSCROLLINFO}$1",
+    "body": "\\${SBM_GETSCROLLINFO}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_GETSCROLLINFO"
   },
   "${SBM_SETPOS}": {
-    "body": "\\${SBM_SETPOS}$1",
+    "body": "\\${SBM_SETPOS}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_SETPOS"
   },
   "${SBM_SETRANGEREDRAW}": {
-    "body": "\\${SBM_SETRANGEREDRAW}$1",
+    "body": "\\${SBM_SETRANGEREDRAW}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_SETRANGEREDRAW"
   },
   "${SBM_SETRANGE}": {
-    "body": "\\${SBM_SETRANGE}$1",
+    "body": "\\${SBM_SETRANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_SETRANGE"
   },
   "${SBM_SETSCROLLINFO}": {
-    "body": "\\${SBM_SETSCROLLINFO}$1",
+    "body": "\\${SBM_SETSCROLLINFO}$0",
     "description": "WinMessages.nsh",
     "prefix": "SBM_SETSCROLLINFO"
   },
   "${SB_CONST_ALPHA}": {
-    "body": "\\${SB_CONST_ALPHA}$1",
+    "body": "\\${SB_CONST_ALPHA}$0",
     "description": "WinMessages.nsh",
     "prefix": "SB_CONST_ALPHA"
   },
   "${SB_GRAD_RECT}": {
-    "body": "\\${SB_GRAD_RECT}$1",
+    "body": "\\${SB_GRAD_RECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "SB_GRAD_RECT"
   },
   "${SB_GRAD_TRI}": {
-    "body": "\\${SB_GRAD_TRI}$1",
+    "body": "\\${SB_GRAD_TRI}$0",
     "description": "WinMessages.nsh",
     "prefix": "SB_GRAD_TRI"
   },
   "${SB_NONE}": {
-    "body": "\\${SB_NONE}$1",
+    "body": "\\${SB_NONE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SB_NONE"
   },
   "${SB_PIXEL_ALPHA}": {
-    "body": "\\${SB_PIXEL_ALPHA}$1",
+    "body": "\\${SB_PIXEL_ALPHA}$0",
     "description": "WinMessages.nsh",
     "prefix": "SB_PIXEL_ALPHA"
   },
   "${SB_PREMULT_ALPHA}": {
-    "body": "\\${SB_PREMULT_ALPHA}$1",
+    "body": "\\${SB_PREMULT_ALPHA}$0",
     "description": "WinMessages.nsh",
     "prefix": "SB_PREMULT_ALPHA"
   },
   "${SB_SIMPLEID}": {
-    "body": "\\${SB_SIMPLEID}$1",
+    "body": "\\${SB_SIMPLEID}$0",
     "description": "WinMessages.nsh",
     "prefix": "SB_SIMPLEID"
   },
   "${STM_GETICON}": {
-    "body": "\\${STM_GETICON}$1",
+    "body": "\\${STM_GETICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_GETICON"
   },
   "${STM_GETIMAGE}": {
-    "body": "\\${STM_GETIMAGE}$1",
+    "body": "\\${STM_GETIMAGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_GETIMAGE"
   },
   "${STM_MSGMAX}": {
-    "body": "\\${STM_MSGMAX}$1",
+    "body": "\\${STM_MSGMAX}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_MSGMAX"
   },
   "${STM_ONLY_THIS_INTERFACE}": {
-    "body": "\\${STM_ONLY_THIS_INTERFACE}$1",
+    "body": "\\${STM_ONLY_THIS_INTERFACE}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_ONLY_THIS_INTERFACE"
   },
   "${STM_ONLY_THIS_NAME}": {
-    "body": "\\${STM_ONLY_THIS_NAME}$1",
+    "body": "\\${STM_ONLY_THIS_NAME}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_ONLY_THIS_NAME"
   },
   "${STM_ONLY_THIS_PROTOCOL}": {
-    "body": "\\${STM_ONLY_THIS_PROTOCOL}$1",
+    "body": "\\${STM_ONLY_THIS_PROTOCOL}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_ONLY_THIS_PROTOCOL"
   },
   "${STM_ONLY_THIS_TYPE}": {
-    "body": "\\${STM_ONLY_THIS_TYPE}$1",
+    "body": "\\${STM_ONLY_THIS_TYPE}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_ONLY_THIS_TYPE"
   },
   "${STM_SETICON}": {
-    "body": "\\${STM_SETICON}$1",
+    "body": "\\${STM_SETICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_SETICON"
   },
   "${STM_SETIMAGE}": {
-    "body": "\\${STM_SETIMAGE}$1",
+    "body": "\\${STM_SETIMAGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "STM_SETIMAGE"
   },
   "${SW_FORCEMINIMIZE}": {
-    "body": "\\${SW_FORCEMINIMIZE}$1",
+    "body": "\\${SW_FORCEMINIMIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_FORCEMINIMIZE"
   },
   "${SW_HIDE}": {
-    "body": "\\${SW_HIDE}$1",
+    "body": "\\${SW_HIDE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_HIDE"
   },
   "${SW_MAXIMIZE}": {
-    "body": "\\${SW_MAXIMIZE}$1",
+    "body": "\\${SW_MAXIMIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_MAXIMIZE"
   },
   "${SW_MAX}": {
-    "body": "\\${SW_MAX}$1",
+    "body": "\\${SW_MAX}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_MAX"
   },
   "${SW_MINIMIZE}": {
-    "body": "\\${SW_MINIMIZE}$1",
+    "body": "\\${SW_MINIMIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_MINIMIZE"
   },
   "${SW_NORMAL}": {
-    "body": "\\${SW_NORMAL}$1",
+    "body": "\\${SW_NORMAL}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_NORMAL"
   },
   "${SW_RESTORE}": {
-    "body": "\\${SW_RESTORE}$1",
+    "body": "\\${SW_RESTORE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_RESTORE"
   },
   "${SW_SHOWMAXIMIZED}": {
-    "body": "\\${SW_SHOWMAXIMIZED}$1",
+    "body": "\\${SW_SHOWMAXIMIZED}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_SHOWMAXIMIZED"
   },
   "${SW_SHOWMINIMIZED}": {
-    "body": "\\${SW_SHOWMINIMIZED}$1",
+    "body": "\\${SW_SHOWMINIMIZED}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_SHOWMINIMIZED"
   },
   "${SW_SHOWMINNOACTIVE}": {
-    "body": "\\${SW_SHOWMINNOACTIVE}$1",
+    "body": "\\${SW_SHOWMINNOACTIVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_SHOWMINNOACTIVE"
   },
   "${SW_SHOWNA}": {
-    "body": "\\${SW_SHOWNA}$1",
+    "body": "\\${SW_SHOWNA}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_SHOWNA"
   },
   "${SW_SHOWNOACTIVATE}": {
-    "body": "\\${SW_SHOWNOACTIVATE}$1",
+    "body": "\\${SW_SHOWNOACTIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_SHOWNOACTIVATE"
   },
   "${SW_SHOWNORMAL}": {
-    "body": "\\${SW_SHOWNORMAL}$1",
+    "body": "\\${SW_SHOWNORMAL}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_SHOWNORMAL"
   },
   "${SW_SHOW}": {
-    "body": "\\${SW_SHOW}$1",
+    "body": "\\${SW_SHOW}$0",
     "description": "WinMessages.nsh",
     "prefix": "SW_SHOW"
   },
   "${SYSSTRUCT_LVITEM_V1}": {
-    "body": "\\${SYSSTRUCT_LVITEM_V1}$1",
+    "body": "\\${SYSSTRUCT_LVITEM_V1}$0",
     "description": "WinMessages.nsh",
     "prefix": "SYSSTRUCT_LVITEM_V1"
   },
   "${SYSSTRUCT_LVITEM_V2}": {
-    "body": "\\${SYSSTRUCT_LVITEM_V2}$1",
+    "body": "\\${SYSSTRUCT_LVITEM_V2}$0",
     "description": "WinMessages.nsh",
     "prefix": "SYSSTRUCT_LVITEM_V2"
   },
   "${SYSSTRUCT_LVITEM_V3}": {
-    "body": "\\${SYSSTRUCT_LVITEM_V3}$1",
+    "body": "\\${SYSSTRUCT_LVITEM_V3}$0",
     "description": "WinMessages.nsh",
     "prefix": "SYSSTRUCT_LVITEM_V3"
   },
   "${SYSSTRUCT_LVITEM_V4}": {
-    "body": "\\${SYSSTRUCT_LVITEM_V4}$1",
+    "body": "\\${SYSSTRUCT_LVITEM_V4}$0",
     "description": "WinMessages.nsh",
     "prefix": "SYSSTRUCT_LVITEM_V4"
   },
   "${SYSSTRUCT_TCITEM}": {
-    "body": "\\${SYSSTRUCT_TCITEM}$1",
+    "body": "\\${SYSSTRUCT_TCITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "SYSSTRUCT_TCITEM"
   },
   "${TCIF_PARAM}": {
-    "body": "\\${TCIF_PARAM}$1",
+    "body": "\\${TCIF_PARAM}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCIF_PARAM"
   },
   "${TCIF_TEXT}": {
-    "body": "\\${TCIF_TEXT}$1",
+    "body": "\\${TCIF_TEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCIF_TEXT"
   },
   "${TCM_ADJUSTRECT}": {
-    "body": "\\${TCM_ADJUSTRECT}$1",
+    "body": "\\${TCM_ADJUSTRECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCM_ADJUSTRECT"
   },
   "${TCM_FIRST}": {
-    "body": "\\${TCM_FIRST}$1",
+    "body": "\\${TCM_FIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCM_FIRST"
   },
   "${TCM_GETCURSEL}": {
-    "body": "\\${TCM_GETCURSEL}$1",
+    "body": "\\${TCM_GETCURSEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCM_GETCURSEL"
   },
   "${TCM_INSERTITEMA}": {
-    "body": "\\${TCM_INSERTITEMA}$1",
+    "body": "\\${TCM_INSERTITEMA}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCM_INSERTITEMA"
   },
   "${TCM_INSERTITEMW}": {
-    "body": "\\${TCM_INSERTITEMW}$1",
+    "body": "\\${TCM_INSERTITEMW}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCM_INSERTITEMW"
   },
   "${TCM_INSERTITEM}": {
-    "body": "\\${TCM_INSERTITEM}$1",
+    "body": "\\${TCM_INSERTITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCM_INSERTITEM"
   },
   "${TCN_SELCHANGE}": {
-    "body": "\\${TCN_SELCHANGE}$1",
+    "body": "\\${TCN_SELCHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCN_SELCHANGE"
   },
   "${TCN_SELCHANGING}": {
-    "body": "\\${TCN_SELCHANGING}$1",
+    "body": "\\${TCN_SELCHANGING}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCN_SELCHANGING"
   },
   "${TCS_SCROLLOPPOSITE}": {
-    "body": "\\${TCS_SCROLLOPPOSITE}$1",
+    "body": "\\${TCS_SCROLLOPPOSITE}$0",
     "description": "WinMessages.nsh",
     "prefix": "TCS_SCROLLOPPOSITE"
   },
   "${WM_ACTIVATEAPP}": {
-    "body": "\\${WM_ACTIVATEAPP}$1",
+    "body": "\\${WM_ACTIVATEAPP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ACTIVATEAPP"
   },
   "${WM_ACTIVATE}": {
-    "body": "\\${WM_ACTIVATE}$1",
+    "body": "\\${WM_ACTIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ACTIVATE"
   },
   "${WM_AFXFIRST}": {
-    "body": "\\${WM_AFXFIRST}$1",
+    "body": "\\${WM_AFXFIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_AFXFIRST"
   },
   "${WM_AFXLAST}": {
-    "body": "\\${WM_AFXLAST}$1",
+    "body": "\\${WM_AFXLAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_AFXLAST"
   },
   "${WM_APPCOMMAND}": {
-    "body": "\\${WM_APPCOMMAND}$1",
+    "body": "\\${WM_APPCOMMAND}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_APPCOMMAND"
   },
   "${WM_APP}": {
-    "body": "\\${WM_APP}$1",
+    "body": "\\${WM_APP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_APP"
   },
   "${WM_ASKCBFORMATNAME}": {
-    "body": "\\${WM_ASKCBFORMATNAME}$1",
+    "body": "\\${WM_ASKCBFORMATNAME}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ASKCBFORMATNAME"
   },
   "${WM_CANCELJOURNAL}": {
-    "body": "\\${WM_CANCELJOURNAL}$1",
+    "body": "\\${WM_CANCELJOURNAL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CANCELJOURNAL"
   },
   "${WM_CANCELMODE}": {
-    "body": "\\${WM_CANCELMODE}$1",
+    "body": "\\${WM_CANCELMODE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CANCELMODE"
   },
   "${WM_CAPTURECHANGED}": {
-    "body": "\\${WM_CAPTURECHANGED}$1",
+    "body": "\\${WM_CAPTURECHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CAPTURECHANGED"
   },
   "${WM_CHANGECBCHAIN}": {
-    "body": "\\${WM_CHANGECBCHAIN}$1",
+    "body": "\\${WM_CHANGECBCHAIN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CHANGECBCHAIN"
   },
   "${WM_CHANGEUISTATE}": {
-    "body": "\\${WM_CHANGEUISTATE}$1",
+    "body": "\\${WM_CHANGEUISTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CHANGEUISTATE"
   },
   "${WM_CHARTOITEM}": {
-    "body": "\\${WM_CHARTOITEM}$1",
+    "body": "\\${WM_CHARTOITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CHARTOITEM"
   },
   "${WM_CHAR}": {
-    "body": "\\${WM_CHAR}$1",
+    "body": "\\${WM_CHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CHAR"
   },
   "${WM_CHILDACTIVATE}": {
-    "body": "\\${WM_CHILDACTIVATE}$1",
+    "body": "\\${WM_CHILDACTIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CHILDACTIVATE"
   },
   "${WM_CLEAR}": {
-    "body": "\\${WM_CLEAR}$1",
+    "body": "\\${WM_CLEAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CLEAR"
   },
   "${WM_CLOSE}": {
-    "body": "\\${WM_CLOSE}$1",
+    "body": "\\${WM_CLOSE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CLOSE"
   },
   "${WM_COMMAND}": {
-    "body": "\\${WM_COMMAND}$1",
+    "body": "\\${WM_COMMAND}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_COMMAND"
   },
   "${WM_COMMNOTIFY}": {
-    "body": "\\${WM_COMMNOTIFY}$1",
+    "body": "\\${WM_COMMNOTIFY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_COMMNOTIFY"
   },
   "${WM_COMPACTING}": {
-    "body": "\\${WM_COMPACTING}$1",
+    "body": "\\${WM_COMPACTING}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_COMPACTING"
   },
   "${WM_COMPAREITEM}": {
-    "body": "\\${WM_COMPAREITEM}$1",
+    "body": "\\${WM_COMPAREITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_COMPAREITEM"
   },
   "${WM_CONTEXTMENU}": {
-    "body": "\\${WM_CONTEXTMENU}$1",
+    "body": "\\${WM_CONTEXTMENU}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CONTEXTMENU"
   },
   "${WM_CONVERTREQUESTEX}": {
-    "body": "\\${WM_CONVERTREQUESTEX}$1",
+    "body": "\\${WM_CONVERTREQUESTEX}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CONVERTREQUESTEX"
   },
   "${WM_COPYDATA}": {
-    "body": "\\${WM_COPYDATA}$1",
+    "body": "\\${WM_COPYDATA}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_COPYDATA"
   },
   "${WM_COPY}": {
-    "body": "\\${WM_COPY}$1",
+    "body": "\\${WM_COPY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_COPY"
   },
   "${WM_CREATE}": {
-    "body": "\\${WM_CREATE}$1",
+    "body": "\\${WM_CREATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CREATE"
   },
   "${WM_CTLCOLORBTN}": {
-    "body": "\\${WM_CTLCOLORBTN}$1",
+    "body": "\\${WM_CTLCOLORBTN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLORBTN"
   },
   "${WM_CTLCOLORDLG}": {
-    "body": "\\${WM_CTLCOLORDLG}$1",
+    "body": "\\${WM_CTLCOLORDLG}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLORDLG"
   },
   "${WM_CTLCOLOREDIT}": {
-    "body": "\\${WM_CTLCOLOREDIT}$1",
+    "body": "\\${WM_CTLCOLOREDIT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLOREDIT"
   },
   "${WM_CTLCOLORLISTBOX}": {
-    "body": "\\${WM_CTLCOLORLISTBOX}$1",
+    "body": "\\${WM_CTLCOLORLISTBOX}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLORLISTBOX"
   },
   "${WM_CTLCOLORMSGBOX}": {
-    "body": "\\${WM_CTLCOLORMSGBOX}$1",
+    "body": "\\${WM_CTLCOLORMSGBOX}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLORMSGBOX"
   },
   "${WM_CTLCOLORSCROLLBAR}": {
-    "body": "\\${WM_CTLCOLORSCROLLBAR}$1",
+    "body": "\\${WM_CTLCOLORSCROLLBAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLORSCROLLBAR"
   },
   "${WM_CTLCOLORSTATIC}": {
-    "body": "\\${WM_CTLCOLORSTATIC}$1",
+    "body": "\\${WM_CTLCOLORSTATIC}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLORSTATIC"
   },
   "${WM_CTLCOLOR}": {
-    "body": "\\${WM_CTLCOLOR}$1",
+    "body": "\\${WM_CTLCOLOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CTLCOLOR"
   },
   "${WM_CUT}": {
-    "body": "\\${WM_CUT}$1",
+    "body": "\\${WM_CUT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_CUT"
   },
   "${WM_DDE_FIRST}": {
-    "body": "\\${WM_DDE_FIRST}$1",
+    "body": "\\${WM_DDE_FIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DDE_FIRST"
   },
   "${WM_DEADCHAR}": {
-    "body": "\\${WM_DEADCHAR}$1",
+    "body": "\\${WM_DEADCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DEADCHAR"
   },
   "${WM_DELETEITEM}": {
-    "body": "\\${WM_DELETEITEM}$1",
+    "body": "\\${WM_DELETEITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DELETEITEM"
   },
   "${WM_DESTROYCLIPBOARD}": {
-    "body": "\\${WM_DESTROYCLIPBOARD}$1",
+    "body": "\\${WM_DESTROYCLIPBOARD}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DESTROYCLIPBOARD"
   },
   "${WM_DESTROY}": {
-    "body": "\\${WM_DESTROY}$1",
+    "body": "\\${WM_DESTROY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DESTROY"
   },
   "${WM_DEVICECHANGE}": {
-    "body": "\\${WM_DEVICECHANGE}$1",
+    "body": "\\${WM_DEVICECHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DEVICECHANGE"
   },
   "${WM_DEVMODECHANGE}": {
-    "body": "\\${WM_DEVMODECHANGE}$1",
+    "body": "\\${WM_DEVMODECHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DEVMODECHANGE"
   },
   "${WM_DISPLAYCHANGE}": {
-    "body": "\\${WM_DISPLAYCHANGE}$1",
+    "body": "\\${WM_DISPLAYCHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DISPLAYCHANGE"
   },
   "${WM_DRAWCLIPBOARD}": {
-    "body": "\\${WM_DRAWCLIPBOARD}$1",
+    "body": "\\${WM_DRAWCLIPBOARD}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DRAWCLIPBOARD"
   },
   "${WM_DRAWITEM}": {
-    "body": "\\${WM_DRAWITEM}$1",
+    "body": "\\${WM_DRAWITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DRAWITEM"
   },
   "${WM_DROPFILES}": {
-    "body": "\\${WM_DROPFILES}$1",
+    "body": "\\${WM_DROPFILES}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_DROPFILES"
   },
   "${WM_ENABLE}": {
-    "body": "\\${WM_ENABLE}$1",
+    "body": "\\${WM_ENABLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ENABLE"
   },
   "${WM_ENDSESSION}": {
-    "body": "\\${WM_ENDSESSION}$1",
+    "body": "\\${WM_ENDSESSION}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ENDSESSION"
   },
   "${WM_ENTERIDLE}": {
-    "body": "\\${WM_ENTERIDLE}$1",
+    "body": "\\${WM_ENTERIDLE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ENTERIDLE"
   },
   "${WM_ENTERMENULOOP}": {
-    "body": "\\${WM_ENTERMENULOOP}$1",
+    "body": "\\${WM_ENTERMENULOOP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ENTERMENULOOP"
   },
   "${WM_ENTERSIZEMOVE}": {
-    "body": "\\${WM_ENTERSIZEMOVE}$1",
+    "body": "\\${WM_ENTERSIZEMOVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ENTERSIZEMOVE"
   },
   "${WM_ERASEBKGND}": {
-    "body": "\\${WM_ERASEBKGND}$1",
+    "body": "\\${WM_ERASEBKGND}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ERASEBKGND"
   },
   "${WM_EXITMENULOOP}": {
-    "body": "\\${WM_EXITMENULOOP}$1",
+    "body": "\\${WM_EXITMENULOOP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_EXITMENULOOP"
   },
   "${WM_EXITSIZEMOVE}": {
-    "body": "\\${WM_EXITSIZEMOVE}$1",
+    "body": "\\${WM_EXITSIZEMOVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_EXITSIZEMOVE"
   },
   "${WM_FONTCHANGE}": {
-    "body": "\\${WM_FONTCHANGE}$1",
+    "body": "\\${WM_FONTCHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_FONTCHANGE"
   },
   "${WM_GETDLGCODE}": {
-    "body": "\\${WM_GETDLGCODE}$1",
+    "body": "\\${WM_GETDLGCODE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETDLGCODE"
   },
   "${WM_GETFONT}": {
-    "body": "\\${WM_GETFONT}$1",
+    "body": "\\${WM_GETFONT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETFONT"
   },
   "${WM_GETHOTKEY}": {
-    "body": "\\${WM_GETHOTKEY}$1",
+    "body": "\\${WM_GETHOTKEY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETHOTKEY"
   },
   "${WM_GETICON}": {
-    "body": "\\${WM_GETICON}$1",
+    "body": "\\${WM_GETICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETICON"
   },
   "${WM_GETMINMAXINFO}": {
-    "body": "\\${WM_GETMINMAXINFO}$1",
+    "body": "\\${WM_GETMINMAXINFO}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETMINMAXINFO"
   },
   "${WM_GETOBJECT}": {
-    "body": "\\${WM_GETOBJECT}$1",
+    "body": "\\${WM_GETOBJECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETOBJECT"
   },
   "${WM_GETTEXTLENGTH}": {
-    "body": "\\${WM_GETTEXTLENGTH}$1",
+    "body": "\\${WM_GETTEXTLENGTH}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETTEXTLENGTH"
   },
   "${WM_GETTEXT}": {
-    "body": "\\${WM_GETTEXT}$1",
+    "body": "\\${WM_GETTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_GETTEXT"
   },
   "${WM_HANDHELDFIRST}": {
-    "body": "\\${WM_HANDHELDFIRST}$1",
+    "body": "\\${WM_HANDHELDFIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_HANDHELDFIRST"
   },
   "${WM_HANDHELDLAST}": {
-    "body": "\\${WM_HANDHELDLAST}$1",
+    "body": "\\${WM_HANDHELDLAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_HANDHELDLAST"
   },
   "${WM_HELP}": {
-    "body": "\\${WM_HELP}$1",
+    "body": "\\${WM_HELP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_HELP"
   },
   "${WM_HOTKEY}": {
-    "body": "\\${WM_HOTKEY}$1",
+    "body": "\\${WM_HOTKEY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_HOTKEY"
   },
   "${WM_HSCROLLCLIPBOARD}": {
-    "body": "\\${WM_HSCROLLCLIPBOARD}$1",
+    "body": "\\${WM_HSCROLLCLIPBOARD}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_HSCROLLCLIPBOARD"
   },
   "${WM_HSCROLL}": {
-    "body": "\\${WM_HSCROLL}$1",
+    "body": "\\${WM_HSCROLL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_HSCROLL"
   },
   "${WM_ICONERASEBKGND}": {
-    "body": "\\${WM_ICONERASEBKGND}$1",
+    "body": "\\${WM_ICONERASEBKGND}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_ICONERASEBKGND"
   },
   "${WM_IME_CHAR}": {
-    "body": "\\${WM_IME_CHAR}$1",
+    "body": "\\${WM_IME_CHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_CHAR"
   },
   "${WM_IME_COMPOSITIONFULL}": {
-    "body": "\\${WM_IME_COMPOSITIONFULL}$1",
+    "body": "\\${WM_IME_COMPOSITIONFULL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_COMPOSITIONFULL"
   },
   "${WM_IME_COMPOSITION}": {
-    "body": "\\${WM_IME_COMPOSITION}$1",
+    "body": "\\${WM_IME_COMPOSITION}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_COMPOSITION"
   },
   "${WM_IME_CONTROL}": {
-    "body": "\\${WM_IME_CONTROL}$1",
+    "body": "\\${WM_IME_CONTROL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_CONTROL"
   },
   "${WM_IME_ENDCOMPOSITION}": {
-    "body": "\\${WM_IME_ENDCOMPOSITION}$1",
+    "body": "\\${WM_IME_ENDCOMPOSITION}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_ENDCOMPOSITION"
   },
   "${WM_IME_KEYDOWN}": {
-    "body": "\\${WM_IME_KEYDOWN}$1",
+    "body": "\\${WM_IME_KEYDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_KEYDOWN"
   },
   "${WM_IME_KEYLAST}": {
-    "body": "\\${WM_IME_KEYLAST}$1",
+    "body": "\\${WM_IME_KEYLAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_KEYLAST"
   },
   "${WM_IME_KEYUP}": {
-    "body": "\\${WM_IME_KEYUP}$1",
+    "body": "\\${WM_IME_KEYUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_KEYUP"
   },
   "${WM_IME_NOTIFY}": {
-    "body": "\\${WM_IME_NOTIFY}$1",
+    "body": "\\${WM_IME_NOTIFY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_NOTIFY"
   },
   "${WM_IME_REQUEST}": {
-    "body": "\\${WM_IME_REQUEST}$1",
+    "body": "\\${WM_IME_REQUEST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_REQUEST"
   },
   "${WM_IME_SELECT}": {
-    "body": "\\${WM_IME_SELECT}$1",
+    "body": "\\${WM_IME_SELECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_SELECT"
   },
   "${WM_IME_SETCONTEXT}": {
-    "body": "\\${WM_IME_SETCONTEXT}$1",
+    "body": "\\${WM_IME_SETCONTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_SETCONTEXT"
   },
   "${WM_IME_STARTCOMPOSITION}": {
-    "body": "\\${WM_IME_STARTCOMPOSITION}$1",
+    "body": "\\${WM_IME_STARTCOMPOSITION}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_IME_STARTCOMPOSITION"
   },
   "${WM_INITDIALOG}": {
-    "body": "\\${WM_INITDIALOG}$1",
+    "body": "\\${WM_INITDIALOG}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_INITDIALOG"
   },
   "${WM_INITMENUPOPUP}": {
-    "body": "\\${WM_INITMENUPOPUP}$1",
+    "body": "\\${WM_INITMENUPOPUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_INITMENUPOPUP"
   },
   "${WM_INITMENU}": {
-    "body": "\\${WM_INITMENU}$1",
+    "body": "\\${WM_INITMENU}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_INITMENU"
   },
   "${WM_INPUTLANGCHANGEREQUEST}": {
-    "body": "\\${WM_INPUTLANGCHANGEREQUEST}$1",
+    "body": "\\${WM_INPUTLANGCHANGEREQUEST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_INPUTLANGCHANGEREQUEST"
   },
   "${WM_INPUTLANGCHANGE}": {
-    "body": "\\${WM_INPUTLANGCHANGE}$1",
+    "body": "\\${WM_INPUTLANGCHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_INPUTLANGCHANGE"
   },
   "${WM_INPUT}": {
-    "body": "\\${WM_INPUT}$1",
+    "body": "\\${WM_INPUT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_INPUT"
   },
   "${WM_KEYDOWN}": {
-    "body": "\\${WM_KEYDOWN}$1",
+    "body": "\\${WM_KEYDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_KEYDOWN"
   },
   "${WM_KEYFIRST}": {
-    "body": "\\${WM_KEYFIRST}$1",
+    "body": "\\${WM_KEYFIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_KEYFIRST"
   },
   "${WM_KEYLAST}": {
-    "body": "\\${WM_KEYLAST}$1",
+    "body": "\\${WM_KEYLAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_KEYLAST"
   },
   "${WM_KEYUP}": {
-    "body": "\\${WM_KEYUP}$1",
+    "body": "\\${WM_KEYUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_KEYUP"
   },
   "${WM_KILLFOCUS}": {
-    "body": "\\${WM_KILLFOCUS}$1",
+    "body": "\\${WM_KILLFOCUS}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_KILLFOCUS"
   },
   "${WM_LBUTTONDBLCLK}": {
-    "body": "\\${WM_LBUTTONDBLCLK}$1",
+    "body": "\\${WM_LBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_LBUTTONDBLCLK"
   },
   "${WM_LBUTTONDOWN}": {
-    "body": "\\${WM_LBUTTONDOWN}$1",
+    "body": "\\${WM_LBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_LBUTTONDOWN"
   },
   "${WM_LBUTTONUP}": {
-    "body": "\\${WM_LBUTTONUP}$1",
+    "body": "\\${WM_LBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_LBUTTONUP"
   },
   "${WM_MBUTTONDBLCLK}": {
-    "body": "\\${WM_MBUTTONDBLCLK}$1",
+    "body": "\\${WM_MBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MBUTTONDBLCLK"
   },
   "${WM_MBUTTONDOWN}": {
-    "body": "\\${WM_MBUTTONDOWN}$1",
+    "body": "\\${WM_MBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MBUTTONDOWN"
   },
   "${WM_MBUTTONUP}": {
-    "body": "\\${WM_MBUTTONUP}$1",
+    "body": "\\${WM_MBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MBUTTONUP"
   },
   "${WM_MDIACTIVATE}": {
-    "body": "\\${WM_MDIACTIVATE}$1",
+    "body": "\\${WM_MDIACTIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDIACTIVATE"
   },
   "${WM_MDICASCADE}": {
-    "body": "\\${WM_MDICASCADE}$1",
+    "body": "\\${WM_MDICASCADE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDICASCADE"
   },
   "${WM_MDICREATE}": {
-    "body": "\\${WM_MDICREATE}$1",
+    "body": "\\${WM_MDICREATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDICREATE"
   },
   "${WM_MDIDESTROY}": {
-    "body": "\\${WM_MDIDESTROY}$1",
+    "body": "\\${WM_MDIDESTROY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDIDESTROY"
   },
   "${WM_MDIGETACTIVE}": {
-    "body": "\\${WM_MDIGETACTIVE}$1",
+    "body": "\\${WM_MDIGETACTIVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDIGETACTIVE"
   },
   "${WM_MDIICONARRANGE}": {
-    "body": "\\${WM_MDIICONARRANGE}$1",
+    "body": "\\${WM_MDIICONARRANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDIICONARRANGE"
   },
   "${WM_MDIMAXIMIZE}": {
-    "body": "\\${WM_MDIMAXIMIZE}$1",
+    "body": "\\${WM_MDIMAXIMIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDIMAXIMIZE"
   },
   "${WM_MDINEXT}": {
-    "body": "\\${WM_MDINEXT}$1",
+    "body": "\\${WM_MDINEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDINEXT"
   },
   "${WM_MDIREFRESHMENU}": {
-    "body": "\\${WM_MDIREFRESHMENU}$1",
+    "body": "\\${WM_MDIREFRESHMENU}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDIREFRESHMENU"
   },
   "${WM_MDIRESTORE}": {
-    "body": "\\${WM_MDIRESTORE}$1",
+    "body": "\\${WM_MDIRESTORE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDIRESTORE"
   },
   "${WM_MDISETMENU}": {
-    "body": "\\${WM_MDISETMENU}$1",
+    "body": "\\${WM_MDISETMENU}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDISETMENU"
   },
   "${WM_MDITILE}": {
-    "body": "\\${WM_MDITILE}$1",
+    "body": "\\${WM_MDITILE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MDITILE"
   },
   "${WM_MEASUREITEM}": {
-    "body": "\\${WM_MEASUREITEM}$1",
+    "body": "\\${WM_MEASUREITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MEASUREITEM"
   },
   "${WM_MENUCHAR}": {
-    "body": "\\${WM_MENUCHAR}$1",
+    "body": "\\${WM_MENUCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MENUCHAR"
   },
   "${WM_MENUCOMMAND}": {
-    "body": "\\${WM_MENUCOMMAND}$1",
+    "body": "\\${WM_MENUCOMMAND}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MENUCOMMAND"
   },
   "${WM_MENUDRAG}": {
-    "body": "\\${WM_MENUDRAG}$1",
+    "body": "\\${WM_MENUDRAG}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MENUDRAG"
   },
   "${WM_MENUGETOBJECT}": {
-    "body": "\\${WM_MENUGETOBJECT}$1",
+    "body": "\\${WM_MENUGETOBJECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MENUGETOBJECT"
   },
   "${WM_MENURBUTTONUP}": {
-    "body": "\\${WM_MENURBUTTONUP}$1",
+    "body": "\\${WM_MENURBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MENURBUTTONUP"
   },
   "${WM_MENUSELECT}": {
-    "body": "\\${WM_MENUSELECT}$1",
+    "body": "\\${WM_MENUSELECT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MENUSELECT"
   },
   "${WM_MOUSEACTIVATE}": {
-    "body": "\\${WM_MOUSEACTIVATE}$1",
+    "body": "\\${WM_MOUSEACTIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOUSEACTIVATE"
   },
   "${WM_MOUSEFIRST}": {
-    "body": "\\${WM_MOUSEFIRST}$1",
+    "body": "\\${WM_MOUSEFIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOUSEFIRST"
   },
   "${WM_MOUSEHOVER}": {
-    "body": "\\${WM_MOUSEHOVER}$1",
+    "body": "\\${WM_MOUSEHOVER}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOUSEHOVER"
   },
   "${WM_MOUSELAST}": {
-    "body": "\\${WM_MOUSELAST}$1",
+    "body": "\\${WM_MOUSELAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOUSELAST"
   },
   "${WM_MOUSELEAVE}": {
-    "body": "\\${WM_MOUSELEAVE}$1",
+    "body": "\\${WM_MOUSELEAVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOUSELEAVE"
   },
   "${WM_MOUSEMOVE}": {
-    "body": "\\${WM_MOUSEMOVE}$1",
+    "body": "\\${WM_MOUSEMOVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOUSEMOVE"
   },
   "${WM_MOUSEWHEEL}": {
-    "body": "\\${WM_MOUSEWHEEL}$1",
+    "body": "\\${WM_MOUSEWHEEL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOUSEWHEEL"
   },
   "${WM_MOVE}": {
-    "body": "\\${WM_MOVE}$1",
+    "body": "\\${WM_MOVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOVE"
   },
   "${WM_MOVING}": {
-    "body": "\\${WM_MOVING}$1",
+    "body": "\\${WM_MOVING}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_MOVING"
   },
   "${WM_NCACTIVATE}": {
-    "body": "\\${WM_NCACTIVATE}$1",
+    "body": "\\${WM_NCACTIVATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCACTIVATE"
   },
   "${WM_NCCALCSIZE}": {
-    "body": "\\${WM_NCCALCSIZE}$1",
+    "body": "\\${WM_NCCALCSIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCCALCSIZE"
   },
   "${WM_NCCREATE}": {
-    "body": "\\${WM_NCCREATE}$1",
+    "body": "\\${WM_NCCREATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCCREATE"
   },
   "${WM_NCDESTROY}": {
-    "body": "\\${WM_NCDESTROY}$1",
+    "body": "\\${WM_NCDESTROY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCDESTROY"
   },
   "${WM_NCHITTEST}": {
-    "body": "\\${WM_NCHITTEST}$1",
+    "body": "\\${WM_NCHITTEST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCHITTEST"
   },
   "${WM_NCLBUTTONDBLCLK}": {
-    "body": "\\${WM_NCLBUTTONDBLCLK}$1",
+    "body": "\\${WM_NCLBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCLBUTTONDBLCLK"
   },
   "${WM_NCLBUTTONDOWN}": {
-    "body": "\\${WM_NCLBUTTONDOWN}$1",
+    "body": "\\${WM_NCLBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCLBUTTONDOWN"
   },
   "${WM_NCLBUTTONUP}": {
-    "body": "\\${WM_NCLBUTTONUP}$1",
+    "body": "\\${WM_NCLBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCLBUTTONUP"
   },
   "${WM_NCMBUTTONDBLCLK}": {
-    "body": "\\${WM_NCMBUTTONDBLCLK}$1",
+    "body": "\\${WM_NCMBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCMBUTTONDBLCLK"
   },
   "${WM_NCMBUTTONDOWN}": {
-    "body": "\\${WM_NCMBUTTONDOWN}$1",
+    "body": "\\${WM_NCMBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCMBUTTONDOWN"
   },
   "${WM_NCMBUTTONUP}": {
-    "body": "\\${WM_NCMBUTTONUP}$1",
+    "body": "\\${WM_NCMBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCMBUTTONUP"
   },
   "${WM_NCMOUSEHOVER}": {
-    "body": "\\${WM_NCMOUSEHOVER}$1",
+    "body": "\\${WM_NCMOUSEHOVER}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCMOUSEHOVER"
   },
   "${WM_NCMOUSELEAVE}": {
-    "body": "\\${WM_NCMOUSELEAVE}$1",
+    "body": "\\${WM_NCMOUSELEAVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCMOUSELEAVE"
   },
   "${WM_NCMOUSEMOVE}": {
-    "body": "\\${WM_NCMOUSEMOVE}$1",
+    "body": "\\${WM_NCMOUSEMOVE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCMOUSEMOVE"
   },
   "${WM_NCPAINT}": {
-    "body": "\\${WM_NCPAINT}$1",
+    "body": "\\${WM_NCPAINT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCPAINT"
   },
   "${WM_NCRBUTTONDBLCLK}": {
-    "body": "\\${WM_NCRBUTTONDBLCLK}$1",
+    "body": "\\${WM_NCRBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCRBUTTONDBLCLK"
   },
   "${WM_NCRBUTTONDOWN}": {
-    "body": "\\${WM_NCRBUTTONDOWN}$1",
+    "body": "\\${WM_NCRBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCRBUTTONDOWN"
   },
   "${WM_NCRBUTTONUP}": {
-    "body": "\\${WM_NCRBUTTONUP}$1",
+    "body": "\\${WM_NCRBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCRBUTTONUP"
   },
   "${WM_NCXBUTTONDBLCLK}": {
-    "body": "\\${WM_NCXBUTTONDBLCLK}$1",
+    "body": "\\${WM_NCXBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCXBUTTONDBLCLK"
   },
   "${WM_NCXBUTTONDOWN}": {
-    "body": "\\${WM_NCXBUTTONDOWN}$1",
+    "body": "\\${WM_NCXBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCXBUTTONDOWN"
   },
   "${WM_NCXBUTTONUP}": {
-    "body": "\\${WM_NCXBUTTONUP}$1",
+    "body": "\\${WM_NCXBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NCXBUTTONUP"
   },
   "${WM_NEXTDLGCTL}": {
-    "body": "\\${WM_NEXTDLGCTL}$1",
+    "body": "\\${WM_NEXTDLGCTL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NEXTDLGCTL"
   },
   "${WM_NEXTMENU}": {
-    "body": "\\${WM_NEXTMENU}$1",
+    "body": "\\${WM_NEXTMENU}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NEXTMENU"
   },
   "${WM_NOTIFYFORMAT}": {
-    "body": "\\${WM_NOTIFYFORMAT}$1",
+    "body": "\\${WM_NOTIFYFORMAT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NOTIFYFORMAT"
   },
   "${WM_NOTIFY}": {
-    "body": "\\${WM_NOTIFY}$1",
+    "body": "\\${WM_NOTIFY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NOTIFY"
   },
   "${WM_NULL}": {
-    "body": "\\${WM_NULL}$1",
+    "body": "\\${WM_NULL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_NULL"
   },
   "${WM_PAINTCLIPBOARD}": {
-    "body": "\\${WM_PAINTCLIPBOARD}$1",
+    "body": "\\${WM_PAINTCLIPBOARD}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PAINTCLIPBOARD"
   },
   "${WM_PAINTICON}": {
-    "body": "\\${WM_PAINTICON}$1",
+    "body": "\\${WM_PAINTICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PAINTICON"
   },
   "${WM_PAINT}": {
-    "body": "\\${WM_PAINT}$1",
+    "body": "\\${WM_PAINT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PAINT"
   },
   "${WM_PALETTECHANGED}": {
-    "body": "\\${WM_PALETTECHANGED}$1",
+    "body": "\\${WM_PALETTECHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PALETTECHANGED"
   },
   "${WM_PALETTEISCHANGING}": {
-    "body": "\\${WM_PALETTEISCHANGING}$1",
+    "body": "\\${WM_PALETTEISCHANGING}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PALETTEISCHANGING"
   },
   "${WM_PARENTNOTIFY}": {
-    "body": "\\${WM_PARENTNOTIFY}$1",
+    "body": "\\${WM_PARENTNOTIFY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PARENTNOTIFY"
   },
   "${WM_PASTE}": {
-    "body": "\\${WM_PASTE}$1",
+    "body": "\\${WM_PASTE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PASTE"
   },
   "${WM_PENWINFIRST}": {
-    "body": "\\${WM_PENWINFIRST}$1",
+    "body": "\\${WM_PENWINFIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PENWINFIRST"
   },
   "${WM_PENWINLAST}": {
-    "body": "\\${WM_PENWINLAST}$1",
+    "body": "\\${WM_PENWINLAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PENWINLAST"
   },
   "${WM_POWERBROADCAST}": {
-    "body": "\\${WM_POWERBROADCAST}$1",
+    "body": "\\${WM_POWERBROADCAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_POWERBROADCAST"
   },
   "${WM_POWER}": {
-    "body": "\\${WM_POWER}$1",
+    "body": "\\${WM_POWER}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_POWER"
   },
   "${WM_PRINTCLIENT}": {
-    "body": "\\${WM_PRINTCLIENT}$1",
+    "body": "\\${WM_PRINTCLIENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PRINTCLIENT"
   },
   "${WM_PRINT}": {
-    "body": "\\${WM_PRINT}$1",
+    "body": "\\${WM_PRINT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_PRINT"
   },
   "${WM_QUERYDRAGICON}": {
-    "body": "\\${WM_QUERYDRAGICON}$1",
+    "body": "\\${WM_QUERYDRAGICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_QUERYDRAGICON"
   },
   "${WM_QUERYENDSESSION}": {
-    "body": "\\${WM_QUERYENDSESSION}$1",
+    "body": "\\${WM_QUERYENDSESSION}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_QUERYENDSESSION"
   },
   "${WM_QUERYNEWPALETTE}": {
-    "body": "\\${WM_QUERYNEWPALETTE}$1",
+    "body": "\\${WM_QUERYNEWPALETTE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_QUERYNEWPALETTE"
   },
   "${WM_QUERYOPEN}": {
-    "body": "\\${WM_QUERYOPEN}$1",
+    "body": "\\${WM_QUERYOPEN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_QUERYOPEN"
   },
   "${WM_QUERYUISTATE}": {
-    "body": "\\${WM_QUERYUISTATE}$1",
+    "body": "\\${WM_QUERYUISTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_QUERYUISTATE"
   },
   "${WM_QUEUESYNC}": {
-    "body": "\\${WM_QUEUESYNC}$1",
+    "body": "\\${WM_QUEUESYNC}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_QUEUESYNC"
   },
   "${WM_QUIT}": {
-    "body": "\\${WM_QUIT}$1",
+    "body": "\\${WM_QUIT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_QUIT"
   },
   "${WM_RASDIALEVENT}": {
-    "body": "\\${WM_RASDIALEVENT}$1",
+    "body": "\\${WM_RASDIALEVENT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_RASDIALEVENT"
   },
   "${WM_RBUTTONDBLCLK}": {
-    "body": "\\${WM_RBUTTONDBLCLK}$1",
+    "body": "\\${WM_RBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_RBUTTONDBLCLK"
   },
   "${WM_RBUTTONDOWN}": {
-    "body": "\\${WM_RBUTTONDOWN}$1",
+    "body": "\\${WM_RBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_RBUTTONDOWN"
   },
   "${WM_RBUTTONUP}": {
-    "body": "\\${WM_RBUTTONUP}$1",
+    "body": "\\${WM_RBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_RBUTTONUP"
   },
   "${WM_RENDERALLFORMATS}": {
-    "body": "\\${WM_RENDERALLFORMATS}$1",
+    "body": "\\${WM_RENDERALLFORMATS}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_RENDERALLFORMATS"
   },
   "${WM_RENDERFORMAT}": {
-    "body": "\\${WM_RENDERFORMAT}$1",
+    "body": "\\${WM_RENDERFORMAT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_RENDERFORMAT"
   },
   "${WM_SETCURSOR}": {
-    "body": "\\${WM_SETCURSOR}$1",
+    "body": "\\${WM_SETCURSOR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETCURSOR"
   },
   "${WM_SETFOCUS}": {
-    "body": "\\${WM_SETFOCUS}$1",
+    "body": "\\${WM_SETFOCUS}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETFOCUS"
   },
   "${WM_SETFONT}": {
-    "body": "\\${WM_SETFONT}$1",
+    "body": "\\${WM_SETFONT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETFONT"
   },
   "${WM_SETHOTKEY}": {
-    "body": "\\${WM_SETHOTKEY}$1",
+    "body": "\\${WM_SETHOTKEY}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETHOTKEY"
   },
   "${WM_SETICON}": {
-    "body": "\\${WM_SETICON}$1",
+    "body": "\\${WM_SETICON}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETICON"
   },
   "${WM_SETREDRAW}": {
-    "body": "\\${WM_SETREDRAW}$1",
+    "body": "\\${WM_SETREDRAW}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETREDRAW"
   },
   "${WM_SETTEXT}": {
-    "body": "\\${WM_SETTEXT}$1",
+    "body": "\\${WM_SETTEXT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETTEXT"
   },
   "${WM_SETTINGCHANGE}": {
-    "body": "\\${WM_SETTINGCHANGE}$1",
+    "body": "\\${WM_SETTINGCHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SETTINGCHANGE"
   },
   "${WM_SHOWWINDOW}": {
-    "body": "\\${WM_SHOWWINDOW}$1",
+    "body": "\\${WM_SHOWWINDOW}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SHOWWINDOW"
   },
   "${WM_SIZECLIPBOARD}": {
-    "body": "\\${WM_SIZECLIPBOARD}$1",
+    "body": "\\${WM_SIZECLIPBOARD}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SIZECLIPBOARD"
   },
   "${WM_SIZE}": {
-    "body": "\\${WM_SIZE}$1",
+    "body": "\\${WM_SIZE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SIZE"
   },
   "${WM_SIZING}": {
-    "body": "\\${WM_SIZING}$1",
+    "body": "\\${WM_SIZING}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SIZING"
   },
   "${WM_SPOOLERSTATUS}": {
-    "body": "\\${WM_SPOOLERSTATUS}$1",
+    "body": "\\${WM_SPOOLERSTATUS}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SPOOLERSTATUS"
   },
   "${WM_STYLECHANGED}": {
-    "body": "\\${WM_STYLECHANGED}$1",
+    "body": "\\${WM_STYLECHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_STYLECHANGED"
   },
   "${WM_STYLECHANGING}": {
-    "body": "\\${WM_STYLECHANGING}$1",
+    "body": "\\${WM_STYLECHANGING}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_STYLECHANGING"
   },
   "${WM_SYNCPAINT}": {
-    "body": "\\${WM_SYNCPAINT}$1",
+    "body": "\\${WM_SYNCPAINT}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SYNCPAINT"
   },
   "${WM_SYSCHAR}": {
-    "body": "\\${WM_SYSCHAR}$1",
+    "body": "\\${WM_SYSCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SYSCHAR"
   },
   "${WM_SYSCOLORCHANGE}": {
-    "body": "\\${WM_SYSCOLORCHANGE}$1",
+    "body": "\\${WM_SYSCOLORCHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SYSCOLORCHANGE"
   },
   "${WM_SYSCOMMAND}": {
-    "body": "\\${WM_SYSCOMMAND}$1",
+    "body": "\\${WM_SYSCOMMAND}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SYSCOMMAND"
   },
   "${WM_SYSDEADCHAR}": {
-    "body": "\\${WM_SYSDEADCHAR}$1",
+    "body": "\\${WM_SYSDEADCHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SYSDEADCHAR"
   },
   "${WM_SYSKEYDOWN}": {
-    "body": "\\${WM_SYSKEYDOWN}$1",
+    "body": "\\${WM_SYSKEYDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SYSKEYDOWN"
   },
   "${WM_SYSKEYUP}": {
-    "body": "\\${WM_SYSKEYUP}$1",
+    "body": "\\${WM_SYSKEYUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_SYSKEYUP"
   },
   "${WM_TABLET_FIRST}": {
-    "body": "\\${WM_TABLET_FIRST}$1",
+    "body": "\\${WM_TABLET_FIRST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_TABLET_FIRST"
   },
   "${WM_TABLET_LAST}": {
-    "body": "\\${WM_TABLET_LAST}$1",
+    "body": "\\${WM_TABLET_LAST}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_TABLET_LAST"
   },
   "${WM_TCARD}": {
-    "body": "\\${WM_TCARD}$1",
+    "body": "\\${WM_TCARD}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_TCARD"
   },
   "${WM_THEMECHANGED}": {
-    "body": "\\${WM_THEMECHANGED}$1",
+    "body": "\\${WM_THEMECHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_THEMECHANGED"
   },
   "${WM_TIMECHANGE}": {
-    "body": "\\${WM_TIMECHANGE}$1",
+    "body": "\\${WM_TIMECHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_TIMECHANGE"
   },
   "${WM_TIMER}": {
-    "body": "\\${WM_TIMER}$1",
+    "body": "\\${WM_TIMER}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_TIMER"
   },
   "${WM_UNDO}": {
-    "body": "\\${WM_UNDO}$1",
+    "body": "\\${WM_UNDO}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_UNDO"
   },
   "${WM_UNICHAR}": {
-    "body": "\\${WM_UNICHAR}$1",
+    "body": "\\${WM_UNICHAR}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_UNICHAR"
   },
   "${WM_UNINITMENUPOPUP}": {
-    "body": "\\${WM_UNINITMENUPOPUP}$1",
+    "body": "\\${WM_UNINITMENUPOPUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_UNINITMENUPOPUP"
   },
   "${WM_UPDATEUISTATE}": {
-    "body": "\\${WM_UPDATEUISTATE}$1",
+    "body": "\\${WM_UPDATEUISTATE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_UPDATEUISTATE"
   },
   "${WM_USERCHANGED}": {
-    "body": "\\${WM_USERCHANGED}$1",
+    "body": "\\${WM_USERCHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_USERCHANGED"
   },
   "${WM_USER}": {
-    "body": "\\${WM_USER}$1",
+    "body": "\\${WM_USER}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_USER"
   },
   "${WM_VKEYTOITEM}": {
-    "body": "\\${WM_VKEYTOITEM}$1",
+    "body": "\\${WM_VKEYTOITEM}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_VKEYTOITEM"
   },
   "${WM_VSCROLLCLIPBOARD}": {
-    "body": "\\${WM_VSCROLLCLIPBOARD}$1",
+    "body": "\\${WM_VSCROLLCLIPBOARD}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_VSCROLLCLIPBOARD"
   },
   "${WM_VSCROLL}": {
-    "body": "\\${WM_VSCROLL}$1",
+    "body": "\\${WM_VSCROLL}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_VSCROLL"
   },
   "${WM_WINDOWPOSCHANGED}": {
-    "body": "\\${WM_WINDOWPOSCHANGED}$1",
+    "body": "\\${WM_WINDOWPOSCHANGED}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_WINDOWPOSCHANGED"
   },
   "${WM_WINDOWPOSCHANGING}": {
-    "body": "\\${WM_WINDOWPOSCHANGING}$1",
+    "body": "\\${WM_WINDOWPOSCHANGING}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_WINDOWPOSCHANGING"
   },
   "${WM_WININICHANGE}": {
-    "body": "\\${WM_WININICHANGE}$1",
+    "body": "\\${WM_WININICHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_WININICHANGE"
   },
   "${WM_WTSSESSION_CHANGE}": {
-    "body": "\\${WM_WTSSESSION_CHANGE}$1",
+    "body": "\\${WM_WTSSESSION_CHANGE}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_WTSSESSION_CHANGE"
   },
   "${WM_XBUTTONDBLCLK}": {
-    "body": "\\${WM_XBUTTONDBLCLK}$1",
+    "body": "\\${WM_XBUTTONDBLCLK}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_XBUTTONDBLCLK"
   },
   "${WM_XBUTTONDOWN}": {
-    "body": "\\${WM_XBUTTONDOWN}$1",
+    "body": "\\${WM_XBUTTONDOWN}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_XBUTTONDOWN"
   },
   "${WM_XBUTTONUP}": {
-    "body": "\\${WM_XBUTTONUP}$1",
+    "body": "\\${WM_XBUTTONUP}$0",
     "description": "WinMessages.nsh",
     "prefix": "WM_XBUTTONUP"
   }

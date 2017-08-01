@@ -1,31 +1,31 @@
 {
   "${MementoSectionDone}": {
-    "body": "\\${MementoSectionDone}$1",
+    "body": "\\${MementoSectionDone}$0",
     "description": "Usage: ${MementoSectionDone}",
     "prefix": "MementoSectionDone"
   },
   "${MementoSectionEnd}": {
-    "body": "\\${MementoSectionEnd}$1",
+    "body": "\\${MementoSectionEnd}$0",
     "description": "Usage: ${MementoSectionEnd}",
     "prefix": "MementoSectionEnd"
   },
   "${MementoSectionRestore}": {
-    "body": "\\${MementoSectionRestore}$1",
+    "body": "\\${MementoSectionRestore}$0",
     "description": "Usage: ${MementoSectionRestore}",
     "prefix": "MementoSectionRestore"
   },
   "${MementoSectionSave}": {
-    "body": "\\${MementoSectionSave}$1",
+    "body": "\\${MementoSectionSave}$0",
     "description": "Usage: ${MementoSectionSave}",
     "prefix": "MementoSectionSave"
   },
   "${MementoSection}": {
-    "body": "\\${MementoSection} \"${1:section_name}\" ${2:section_index}\n\t${3:# your code here}\n\\${MementoSectionEnd}$4",
+    "body": "\\${MementoSection} \"${1:section_name}\" ${2:section_index}\n\t${3:# your code here}\n\\${MementoSectionEnd}$0",
     "description": "Usage: ${MementoSection} [section_name] [section_index_output]",
     "prefix": "MementoSection"
   },
   "${MementoUnselectedSection}": {
-    "body": "\\${MementoUnselectedSection} ${1:section_name} ${2:section_index}$3",
+    "body": "\\${MementoUnselectedSection} ${1:section_name} ${2:section_index}$0",
     "description": "Usage: ${MementoUnselectedSection} [section_name] [section_index_output]",
     "prefix": "MementoUnselectedSection"
   }
