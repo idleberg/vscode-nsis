@@ -1,3 +1,8 @@
+# v3.3.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.3)
+
+- fix tab-stop order in `WriteRegNone` snippets
+- modify all trailing tab-stops
+
 # v3.3.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.2)
 
 - add snippet for new `WriteRegNone` command
