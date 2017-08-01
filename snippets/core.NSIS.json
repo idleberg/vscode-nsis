@@ -3457,6 +3457,13 @@
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "WriteRegMultiStr"
   },
+  "WriteRegNone": {
+    "body": "WriteRegNone ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:entry_name}\"${6: ${7:hex_data}}$5",
+    "description": "Usage: WriteRegNone root_key subkey key_name entry_name [hex_data]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/WriteRegNone.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "WriteRegNone"
+  },
   "WriteRegStr": {
     "body": "WriteRegStr ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5",
     "description": "Usage: WriteRegStr rootkey subkey entry_name new_value_string",
