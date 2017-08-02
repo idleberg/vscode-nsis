@@ -2,7 +2,7 @@
     "name": "nsis",
     "displayName": "NSIS",
     "description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
-    "version": "3.3.3",
+    "version": "3.4.0",
     "publisher": "idleberg",
     "license": "MIT OR GPL-2.0",
     "author": {
@@ -221,7 +221,6 @@
                     "dark": "./images/icon--info.svg",
                     "light": "./images/icon--info.svg"
                 }
-
             },
             {
                 "command": "extension.nsis.show-compiler-flags",
