@@ -182,32 +182,32 @@
                 "command": "extension.nsis.compile",
                 "title": "NSIS: Save & Compile Script",
                 "icon": {
-                    "dark": "./images/build.svg",
-                    "light": "./images/build.svg"
+                    "dark": "./images/icon--build.svg",
+                    "light": "./images/icon--build.svg"
                 }
             },
             {
                 "command": "extension.nsis.compile-strict",
                 "title": "NSIS: Save & Compile Script (strict)",
                 "icon": {
-                    "dark": "./images/build-strict.svg",
-                    "light": "./images/build-strict.svg"
+                    "dark": "./images/icon--build-strict.svg",
+                    "light": "./images/icon--build-strict.svg"
                 }
             },
             {
                 "command": "extension.nsis.transpile-nsl",
                 "title": "NSIS: Transpile nsL code",
                 "icon": {
-                    "dark": "./images/transpile.svg",
-                    "light": "./images/transpile.svg"
+                    "dark": "./images/icon--build.svg",
+                    "light": "./images/icon--build.svg"
                 }
             },
             {
                 "command": "extension.nsis.transpile-bridlensis",
                 "title": "NSIS: Transpile BridleNSIS code",
                 "icon": {
-                    "dark": "./images/transpile.svg",
-                    "light": "./images/transpile.svg"
+                    "dark": "./images/icon--build.svg",
+                    "light": "./images/icon--build.svg"
                 }
             },
             {
@@ -218,38 +218,38 @@
                 "command": "extension.nsis.show-version",
                 "title": "NSIS: Show Version",
                 "icon": {
-                    "dark": "./images/info.svg",
-                    "light": "./images/info.svg"
+                    "dark": "./images/icon--info.svg",
+                    "light": "./images/icon--info.svg"
                 }
 
             },
             {
                 "command": "extension.nsis.show-compiler-flags",
-                "title": "NSIS: Show Compiler Flags",
-                "icon": {
-                    "dark": "./images/flag.svg",
-                    "light": "./images/flag.svg"
-                }
+                "title": "NSIS: Show Compiler Flags"
             }
         ],
         "keybindings": [
             {
                 "key": "ctrl+shift+b",
+                "mac": "cmd+alt+b",
                 "when": "editorFocus && editorLangId == nsis",
                 "command": "extension.nsis.compile"
             },
             {
                 "key": "ctrl+alt+shift+b",
+                "mac": "cmd+alt+shift+b",
                 "when": "editorFocus && editorLangId == nsis",
                 "command": "extension.nsis.compile-strict"
             },
             {
                 "key": "ctrl+shift+b",
+                "mac": "cmd+alt+b",
                 "when": "editorFocus && editorLangId == nsl",
                 "command": "extension.nsis.transpile-nsl"
             },
             {
                 "key": "ctrl+shift+b",
+                "mac": "cmd+alt+b",
                 "when": "editorFocus && editorLangId == bridlensis",
                 "command": "extension.nsis.transpile-bridlensis"
             }
