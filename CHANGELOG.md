@@ -1,3 +1,8 @@
+# v3.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.4.0)
+
+- add menu icons
+- modify macOS keybindings
+
 # v3.3.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.3.3)
 
 - fix tab-stop order in `WriteRegNone` snippets
