@@ -211,20 +211,28 @@
                 }
             },
             {
-                "command": "extension.nsis.create-build-task",
-                "title": "NSIS: Create Build Task"
-            },
-            {
                 "command": "extension.nsis.show-version",
                 "title": "NSIS: Show Version",
                 "icon": {
-                    "dark": "./images/icon--info.svg",
-                    "light": "./images/icon--info.svg"
+                    "dark": "./images/icon--info-dark.svg",
+                    "light": "./images/icon--info-light.svg"
                 }
             },
             {
                 "command": "extension.nsis.show-compiler-flags",
-                "title": "NSIS: Show Compiler Flags"
+                "title": "NSIS: Show Compiler Flags",
+                "icon": {
+                    "dark": "./images/icon--flag-dark.svg",
+                    "light": "./images/icon--flag-light.svg"
+                }
+            },
+            {
+                "command": "extension.nsis.create-build-task",
+                "title": "NSIS: Create Build Task",
+                "icon": {
+                    "dark": "./images/icon--task-dark.svg",
+                    "light": "./images/icon--task-light.svg"
+                }
             }
         ],
         "keybindings": [
@@ -266,11 +274,6 @@
                     "group": "navigation"
                 },
                 {
-                    "when": "resourceLangId == nsis",
-                    "command": "extension.nsis.show-version",
-                    "group": "navigation"
-                },
-                {
                     "when": "resourceLangId == nsl",
                     "command": "extension.nsis.transpile-nsl",
                     "group": "navigation"
@@ -278,6 +281,21 @@
                 {
                     "when": "resourceLangId == bridlensis",
                     "command": "extension.nsis.transpile-bridlensis",
+                    "group": "navigation"
+                },
+                {
+                    "when": "resourceLangId == nsis",
+                    "command": "extension.nsis.show-version",
+                    "group": "navigation"
+                },
+                {
+                    "when": "resourceLangId == nsis",
+                    "command": "extension.nsis.show-compiler-flags",
+                    "group": "navigation"
+                },
+                {
+                    "when": "resourceLangId == nsis",
+                    "command": "extension.nsis.create-build-task",
                     "group": "navigation"
                 }
             ]
@@ -459,17 +477,17 @@
         "opn": "^5.1.0"
     },
     "devDependencies": {
-        "@types/node": "^8.0.10",
+        "@types/node": "^8.0.25",
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-debug": "^3.1.0",
         "gulp-jsonlint": "^1.2.0",
         "gulp-rename": "^1.2.2",
         "gulp-svg2png": "^2.0.2",
-        "gulp-tslint": "^8.1.1",
+        "gulp-tslint": "^8.1.2",
         "gulp-xml-validator": "^0.1.2",
         "nsis-logo-v3": "github:idleberg/nsis-logo-v3",
-        "tslint": "^5.5.0",
-        "typescript": "^2.3.4",
-        "vscode": "^1.1.2"
+        "tslint": "^5.6.0",
+        "typescript": "^2.5.1",
+        "vscode": "^1.1.5"
     }
 }
