@@ -1,3 +1,8 @@
+# v3.5.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.5.0)
+
+- add more menu icons
+- replace existing menu icons
+
 # v3.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.4.0)
 
 - add menu icons
