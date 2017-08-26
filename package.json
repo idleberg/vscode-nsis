@@ -182,32 +182,32 @@
                 "command": "extension.nsis.compile",
                 "title": "NSIS: Save & Compile Script",
                 "icon": {
-                    "dark": "./images/icon--build.svg",
-                    "light": "./images/icon--build.svg"
+                    "dark": "./images/icon--build-dark.svg",
+                    "light": "./images/icon--build-light.svg"
                 }
             },
             {
                 "command": "extension.nsis.compile-strict",
                 "title": "NSIS: Save & Compile Script (strict)",
                 "icon": {
-                    "dark": "./images/icon--build-strict.svg",
-                    "light": "./images/icon--build-strict.svg"
+                    "dark": "./images/icon--build-strict-dark.svg",
+                    "light": "./images/icon--build-strict-light.svg"
                 }
             },
             {
                 "command": "extension.nsis.transpile-nsl",
                 "title": "NSIS: Transpile nsL code",
                 "icon": {
-                    "dark": "./images/icon--build.svg",
-                    "light": "./images/icon--build.svg"
+                    "dark": "./images/icon--build-dark.svg",
+                    "light": "./images/icon--build-light.svg"
                 }
             },
             {
                 "command": "extension.nsis.transpile-bridlensis",
                 "title": "NSIS: Transpile BridleNSIS code",
                 "icon": {
-                    "dark": "./images/icon--build.svg",
-                    "light": "./images/icon--build.svg"
+                    "dark": "./images/icon--build-dark.svg",
+                    "light": "./images/icon--build-light.svg"
                 }
             },
             {
