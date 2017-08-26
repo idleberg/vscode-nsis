@@ -1,3 +1,7 @@
+# v3.5.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.5.1)
+
+- adjust icon colors & fills
+
 # v3.5.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.5.0)
 
 - add more menu icons
