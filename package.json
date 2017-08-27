@@ -266,37 +266,37 @@
                 {
                     "when": "resourceLangId == nsis",
                     "command": "extension.nsis.compile",
-                    "group": "navigation"
+                    "group": "navigation@1"
                 },
                 {
                     "when": "resourceLangId == nsis",
                     "command": "extension.nsis.compile-strict",
-                    "group": "navigation"
-                },
-                {
-                    "when": "resourceLangId == nsl",
-                    "command": "extension.nsis.transpile-nsl",
-                    "group": "navigation"
-                },
-                {
-                    "when": "resourceLangId == bridlensis",
-                    "command": "extension.nsis.transpile-bridlensis",
-                    "group": "navigation"
-                },
-                {
-                    "when": "resourceLangId == nsis",
-                    "command": "extension.nsis.show-version",
-                    "group": "navigation"
-                },
-                {
-                    "when": "resourceLangId == nsis",
-                    "command": "extension.nsis.show-compiler-flags",
-                    "group": "navigation"
+                    "group": "navigation@2"
                 },
                 {
                     "when": "resourceLangId == nsis",
                     "command": "extension.nsis.create-build-task",
-                    "group": "navigation"
+                    "group": "navigation@3"
+                },
+                {
+                    "when": "resourceLangId == nsis",
+                    "command": "extension.nsis.show-version",
+                    "group": "navigation@4"
+                },
+                {
+                    "when": "resourceLangId == nsis",
+                    "command": "extension.nsis.show-compiler-flags",
+                    "group": "navigation@5"
+                },
+                {
+                    "when": "resourceLangId == nsl",
+                    "command": "extension.nsis.transpile-nsl",
+                    "group": "navigation@1"
+                },
+                {
+                    "when": "resourceLangId == bridlensis",
+                    "command": "extension.nsis.transpile-bridlensis",
+                    "group": "navigation@1"
                 }
             ]
         },
