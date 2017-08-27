@@ -1,3 +1,8 @@
+# v3.5.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.5.2)
+
+- specify menu order
+- icon refinements
+
 # v3.5.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.5.1)
 
 - adjust icon colors & fills
