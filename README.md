@@ -48,7 +48,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * x64
 * IntelliSense for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
 * IntelliSense for [BridleNSIS](https://github.com/henrikor2/bridlensis)
-* IntelliSense for [Haskell](https://hackage.haskell.org/package/nsis)
+* IntelliSense for [Haskell NSIS](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
 
