@@ -1,3 +1,7 @@
+# v3.6.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.0)
+
+- add highlighting support for URLs
+
 # v3.5.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.5.2)
 
 - specify menu order
@@ -317,7 +321,7 @@
 
 # v1.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/1.2.0)
 
-- `nsis.tmLanguage`: split up core library patterns for better maintainability 
+- `nsis.tmLanguage`: split up core library patterns for better maintainability
 - `nlf.tmLanguage`: update patterns and scopes (merge from Sublime Text package)
 
 # v1.1.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/1.1.1)
