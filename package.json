@@ -477,17 +477,17 @@
         "opn": "^5.1.0"
     },
     "devDependencies": {
-        "@types/node": "^8.0.25",
+        "@types/node": "^8.0.28",
         "gulp": "github:gulpjs/gulp#4.0",
         "gulp-debug": "^3.1.0",
         "gulp-jsonlint": "^1.2.0",
         "gulp-rename": "^1.2.2",
         "gulp-svg2png": "^2.0.2",
         "gulp-tslint": "^8.1.2",
-        "gulp-xml-validator": "^0.1.2",
+        "gulp-xml-validator": "^0.1.3",
         "nsis-logo-v3": "github:idleberg/nsis-logo-v3",
-        "tslint": "^5.6.0",
-        "typescript": "^2.5.1",
+        "tslint": "^5.7.0",
+        "typescript": "^2.5.2",
         "vscode": "^1.1.5"
     }
 }

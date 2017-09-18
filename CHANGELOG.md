@@ -1,6 +1,7 @@
 # v3.6.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.0)
 
 - add highlighting support for URLs
+- update `devDependencies`
 
 # v3.5.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.5.2)
 
