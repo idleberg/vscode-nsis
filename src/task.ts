@@ -51,7 +51,8 @@ const createTask = () => {
         },
         {
           'taskName': 'Build (strict)',
-          'args': argsStrict
+          'args': argsStrict,
+          'isBuildCommand': true
         }
       ]
   };

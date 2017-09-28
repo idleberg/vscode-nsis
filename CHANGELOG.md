@@ -1,3 +1,7 @@
+# v3.6.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.1)
+
+- fix strict build task
+
 # v3.6.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.0)
 
 - add highlighting support for URLs
