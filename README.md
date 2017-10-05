@@ -188,7 +188,7 @@ Transpile BridleNSIS    | `source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd
 
 ### Task Runner
 
-If you prefer Visual Studio Code's in-built Task Runner to build scripts, you can create `tasks.json` in the project root using the *NSIS: Create Build Task* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
+If you prefer Visual Studio Code's built-in Task Runner to build scripts, you can create `tasks.json` in the project root using the *NSIS: Create Build Task* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
 
 **Note:** The created Task Runner will adapt to the [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
 
