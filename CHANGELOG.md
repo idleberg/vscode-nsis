@@ -1,3 +1,8 @@
+# v3.6.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.2)
+
+- update development toolchain
+- update Travis CI configuration
+
 # v3.6.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.1)
 
 - fix strict build task
