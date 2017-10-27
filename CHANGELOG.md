@@ -1,3 +1,8 @@
+# v3.6.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.3)
+
+- minor code improvements
+- update `README.md`
+
 # v3.6.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.2)
 
 - update development toolchain
