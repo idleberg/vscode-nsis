@@ -8,7 +8,7 @@ import { spawn } from 'child_process';
 
 const nsisChannel = window.createOutputChannel('NSIS');
 
-const compile = (strictMode: boolean) => {
+const compile = (strictMode: boolean): void => {
   clearOutput(nsisChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsis') {
@@ -97,7 +97,7 @@ const compile = (strictMode: boolean) => {
   });
 };
 
-const showVersion = () => {
+const showVersion = (): void => {
   let config: any = getConfig();
   let prefix: string = getPrefix();
 
@@ -113,7 +113,7 @@ const showVersion = () => {
   .catch(pathWarning);
 };
 
-const showCompilerFlags = () => {
+const showCompilerFlags = (): void => {
   clearOutput(nsisChannel);
 
   makeNsis()

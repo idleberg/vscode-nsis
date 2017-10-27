@@ -14,7 +14,7 @@ const bridleChannel = window.createOutputChannel('BridleNSIS');
  *  https://sourceforge.net/projects/nslassembler/
  *  https://github.com/NSIS-Dev/nsl-assembler
  */
-const nslAssembler = () => {
+const nslAssembler = (): void => {
   clearOutput(nslChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsl') {
@@ -75,7 +75,7 @@ const nslAssembler = () => {
  *  Requires BridleNSIS
  *  https://github.com/henrikor2/bridlensis
  */
-const bridleNsis = () => {
+const bridleNsis = (): void => {
   clearOutput(bridleChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'bridlensis') {

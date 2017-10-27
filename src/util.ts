@@ -8,7 +8,7 @@ import { existsSync } from 'fs';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
-const clearOutput = (channel) => {
+const clearOutput = (channel): void => {
   let config: any = getConfig();
 
   channel.clear();
@@ -17,7 +17,7 @@ const clearOutput = (channel) => {
   }
 };
 
-const detectOutfile = (line) => {
+const detectOutfile = (line): string => {
   if (line.indexOf('Output: "') !== -1) {
     let regex = /Output: \"(.*\.exe)\"\r?\n/g;
     let result = regex.exec(line.toString());
@@ -33,11 +33,11 @@ const detectOutfile = (line) => {
   return '';
 };
 
-const getConfig = () => {
+const getConfig = (): any => {
   return workspace.getConfiguration('nsis');
 };
 
-const getPrefix = () => {
+const getPrefix = (): string => {
   if (platform() === 'win32') {
     return '/';
   }
@@ -45,7 +45,7 @@ const getPrefix = () => {
   return '-';
 };
 
-const isWindowsCompatible = () => {
+const isWindowsCompatible = (): boolean => {
   let config: any = getConfig();
 
   if (platform() === 'win32' || config.useWineToRun === true) {
@@ -55,7 +55,7 @@ const isWindowsCompatible = () => {
   return false;
 };
 
-const makeNsis = () => {
+const makeNsis = (): any => {
   return new Promise((resolve, reject) => {
     let pathToMakensis = getConfig().pathToMakensis;
     if (typeof pathToMakensis !== 'undefined' && pathToMakensis !== null) {
@@ -78,7 +78,7 @@ const makeNsis = () => {
   });
 };
 
-const pathWarning = () => {
+const pathWarning = (): any => {
   window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
   .then((choice) => {
     switch (choice) {
@@ -90,21 +90,21 @@ const pathWarning = () => {
   });
 };
 
-const runInstaller = (outFile) => {
+const runInstaller = (outFile): void => {
   let config: any = getConfig();
 
   if (platform() === 'win32') {
-    return spawn(outFile);
+    spawn(outFile);
   } else if (config.useWineToRun === true) {
-    return spawn('wine', [ outFile ]);
+    spawn('wine', [ outFile ]);
   }
 };
 
-const sanitize = (response: Object) => {
+const sanitize = (response: Object): string => {
   return response.toString().trim();
 };
 
-const successBridleNsis = (choice) => {
+const successBridleNsis = (choice): void => {
   let doc = window.activeTextEditor.document;
 
   if (choice === 'Open') {
@@ -133,7 +133,7 @@ const successBridleNsis = (choice) => {
   }
 };
 
-const successNslAssembler = (choice) => {
+const successNslAssembler = (choice): void => {
   let doc = window.activeTextEditor.document;
 
   if (choice === 'Open') {
@@ -150,7 +150,7 @@ const successNslAssembler = (choice) => {
   }
 };
 
-const which = () => {
+const which = (): string => {
   if (platform() === 'win32') {
     return 'where';
   }
