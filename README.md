@@ -140,7 +140,7 @@ To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](
 
 #### nsL Transpiler
 
-As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+As of version 2.0 of this package, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 **Example:**
 
@@ -150,7 +150,7 @@ As of version 2.0, you can transpile [nsL Assembler](https://github.com/NSIS-Dev
 ```
 #### BridleNSIS Transpiler
 
-As of version 2.6, you can transpile [BridleNSIS](https://github.com/henrikor2/bridlensis) using the *NSIS: Transpile BridleNSIS code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `BridleNSIS.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+As of version 2.6 of this package, you can transpile [BridleNSIS](https://github.com/henrikor2/bridlensis) using the *NSIS: Transpile BridleNSIS code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `BridleNSIS.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 **Example:**
 
@@ -191,6 +191,10 @@ Transpile BridleNSIS    | `source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd
 If you prefer Visual Studio Code's built-in Task Runner to build scripts, you can create `tasks.json` in the project root using the *NSIS: Create Build Task* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
 
 **Note:** The created Task Runner will adapt to the [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
+
+## Menu Icons
+
+As of version 3.4 of this package, several icons in the title menu give quick access to build commands (lightning bolt icons), build task creation, and compiler infos. Hovering each icon will reveal its exact purpose.
 
 ## License
 
