@@ -1,3 +1,7 @@
+# v3.6.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.4)
+
+- improve types
+
 # v3.6.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.3)
 
 - minor code improvements
