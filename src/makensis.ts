@@ -1,6 +1,6 @@
 'use strict';
 
-import { window } from 'vscode';
+import { window, WorkspaceConfiguration } from 'vscode';
 
 import { clearOutput, detectOutfile, getConfig, getPrefix, isWindowsCompatible, makeNsis, pathWarning, runInstaller, sanitize } from './util';
 import { platform } from 'os';
@@ -23,7 +23,7 @@ const compile = (strictMode: boolean): void => {
     .then(sanitize)
     .then( (pathToMakensis: string) => {
       let prefix: string = getPrefix();
-      let config: any = getConfig();
+      let config: WorkspaceConfiguration = getConfig();
 
       let compilerArguments: Array<string>;
       if (typeof config.compilerArguments !== 'undefined' && config.compilerArguments !== null) {
@@ -98,7 +98,7 @@ const compile = (strictMode: boolean): void => {
 };
 
 const showVersion = (): void => {
-  let config: any = getConfig();
+  let config: WorkspaceConfiguration = getConfig();
   let prefix: string = getPrefix();
 
   makeNsis()
@@ -119,7 +119,7 @@ const showCompilerFlags = (): void => {
   makeNsis()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    let config: any = getConfig();
+    let config: WorkspaceConfiguration = getConfig();
     let prefix: string = getPrefix();
 
     const makensis = spawn(pathToMakensis, [ `${prefix}HDRINFO` ]);

@@ -1,6 +1,6 @@
 'use strict';
 
-import { window } from 'vscode';
+import { window, WorkspaceConfiguration } from 'vscode';
 
 import { clearOutput, getConfig, makeNsis, successBridleNsis, successNslAssembler } from './util';
 import { spawn } from 'child_process';
@@ -22,7 +22,7 @@ const nslAssembler = (): void => {
     return;
   }
 
-  let config: any = getConfig();
+  let config: WorkspaceConfiguration = getConfig();
   let doc = window.activeTextEditor.document;
 
   doc.save().then( () => {
@@ -83,7 +83,7 @@ const bridleNsis = (): void => {
     return;
   }
 
-  let config: any = getConfig();
+  let config: WorkspaceConfiguration = getConfig();
   let doc = window.activeTextEditor.document;
 
   doc.save().then( () => {

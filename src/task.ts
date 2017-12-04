@@ -1,6 +1,6 @@
 'use strict';
 
-import { window, workspace} from 'vscode';
+import { window, workspace, WorkspaceConfiguration } from 'vscode';
 
 import { mkdir, writeFile } from 'fs';
 import { getConfig, getPrefix } from './util';
@@ -11,11 +11,11 @@ const createTask = () => {
     return window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
 
-  let args, argsStrict, buildFile, command, config, dotFolder, jsonString, prefix, taskFile;
+  let args, argsStrict;
 
-  prefix = getPrefix();
-  config = getConfig();
-  command = config.pathToMakensis || 'makensis';
+  let prefix: string = getPrefix();
+  let config: WorkspaceConfiguration = getConfig();
+  let command = config.pathToMakensis || 'makensis';
 
   if (typeof config.compilerArguments !== 'undefined' && config.compilerArguments !== null) {
     args = config.compilerArguments.trim().split(' ');
@@ -35,7 +35,7 @@ const createTask = () => {
 
   const { version } = require('../package.json');
 
-  taskFile = {
+  let taskFile = {
       'command': command,
       'version': version,
       'args': [],
@@ -57,9 +57,9 @@ const createTask = () => {
       ]
   };
 
-  jsonString = JSON.stringify(taskFile, null, 2);
-  dotFolder = join(workspace.rootPath, '/.vscode');
-  buildFile = join(dotFolder, 'tasks.json');
+  let jsonString = JSON.stringify(taskFile, null, 2);
+  let dotFolder = join(workspace.rootPath, '/.vscode');
+  let buildFile = join(dotFolder, 'tasks.json');
 
   mkdir(dotFolder, (error) => {
     // ignore errors for now

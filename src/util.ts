@@ -1,6 +1,6 @@
 'use strict';
 
-import { window, workspace } from 'vscode';
+import { window, workspace, WorkspaceConfiguration } from 'vscode';
 
 import * as opn from 'opn';
 import { basename, dirname, extname, join } from 'path';
@@ -9,7 +9,7 @@ import { platform } from 'os';
 import { spawn } from 'child_process';
 
 const clearOutput = (channel): void => {
-  let config: any = getConfig();
+  let config: WorkspaceConfiguration = getConfig();
 
   channel.clear();
   if (config.alwaysShowOutput === true) {
@@ -33,7 +33,7 @@ const detectOutfile = (line): string => {
   return '';
 };
 
-const getConfig = (): any => {
+const getConfig = (): WorkspaceConfiguration => {
   return workspace.getConfiguration('nsis');
 };
 
@@ -46,7 +46,7 @@ const getPrefix = (): string => {
 };
 
 const isWindowsCompatible = (): boolean => {
-  let config: any = getConfig();
+  let config: WorkspaceConfiguration = getConfig();
 
   if (platform() === 'win32' || config.useWineToRun === true) {
     return true;
@@ -55,9 +55,10 @@ const isWindowsCompatible = (): boolean => {
   return false;
 };
 
-const makeNsis = (): any => {
+const makeNsis = (): Promise<any> => {
   return new Promise((resolve, reject) => {
-    let pathToMakensis = getConfig().pathToMakensis;
+    let pathToMakensis: string = getConfig().pathToMakensis;
+
     if (typeof pathToMakensis !== 'undefined' && pathToMakensis !== null) {
       console.log('Using makensis path found in user settings: ' + pathToMakensis);
       return resolve(pathToMakensis);
@@ -91,7 +92,7 @@ const pathWarning = (): any => {
 };
 
 const runInstaller = (outFile): void => {
-  let config: any = getConfig();
+  let config: WorkspaceConfiguration = getConfig();
 
   if (platform() === 'win32') {
     spawn(outFile);
