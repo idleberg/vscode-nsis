@@ -1,3 +1,8 @@
+# v3.6.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.5)
+
+- fix typo in scaffolding snippet
+- update `devDependencies`
+
 # v3.6.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.4)
 
 - improve types
