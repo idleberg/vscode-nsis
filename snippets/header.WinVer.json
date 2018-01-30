@@ -169,6 +169,11 @@
     "description": "Usage: logic_lib_statement ${IsServerOS}",
     "prefix": "IsServerOS"
   },
+  "${IsController}": {
+    "body": "\\${IsController}$0",
+    "description": "Usage: logic_lib_statement ${IsController}",
+    "prefix": "IsController"
+  },
   "${IsServicePack}": {
     "body": "\\${IsServicePack}$0",
     "description": "Usage: logic_lib_statement ${IsServicePack} service_pack_version",

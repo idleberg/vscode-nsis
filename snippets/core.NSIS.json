@@ -105,11 +105,18 @@
     "prefix": "finalize"
   },
   "!getdllversion": {
-    "body": "!getdllversion \"${1:localfilename}\" \"${1:${2:define_basename}}\"$0",
+    "body": "!getdllversion \"${1:localfilename}\" \"${2:define_basename}\"$0",
     "description": "Usage: !getdllversion localfilename define_basename",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!getdllversion.md",
     "leftLabelHTML": "<span class='syntax--keyword'>!</span>",
     "prefix": "getdllversion"
+  },
+  "!gettlbversion": {
+    "body": "!gettlbversion ${1:options} \"${2:localfilename}\" \"${3:define_basename}\"$0",
+    "description": "Usage: !gettlbversion [/noerrors] [/packed] localfilename define_basename",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!gettlbversion.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>!</span>",
+    "prefix": "gettlbversion"
   },
   "!if": {
     "body": "!if ${1:value1} ${2:op} ${3:value2}\n\t${4:# your code here}\n!endif$0",
@@ -1665,6 +1672,27 @@
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "InstallDirRegKey"
   },
+  "Int64Cmp": {
+    "body": "Int64Cmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: Int64Cmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Int64Cmp.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "Int64Cmp"
+  },
+  "Int64CmpU": {
+    "body": "Int64CmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: Int64CmpU val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Int64CmpU.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "Int64CmpU"
+  },
+  "Int64Fmt": {
+    "body": "Int64Fmt \\$${1:user_var} \"${2:format}\" \"${3:numberstring}\"$0",
+    "description": "Usage: Int64Fmt $(user_var: output) format_string input",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Int64Fmt.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "Int64Fmt"
+  },
   "IntCmp": {
     "body": "IntCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
     "description": "Usage: IntCmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
@@ -1692,6 +1720,27 @@
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/IntOp.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "IntOp"
+  },
+  "IntPtrCmp": {
+    "body": "IntPtrCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: IntPtrCmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/IntPtrCmp.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IntPtrCmp"
+  },
+  "IntPtrCmpU": {
+    "body": "IntPtrCmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: IntPtrCmpU val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/IntPtrCmpU.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IntPtrCmpU"
+  },
+  "IntPtrOp": {
+    "body": "IntPtrOp \\$${1:user_var} ${2:value1} ${3:operator} ${4:value2}$0",
+    "description": "Usage: IntPtrOp $(user_var: result) val1 OP [val2]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/IntPtrOp.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IntPtrOp"
   },
   "IsWindow": {
     "body": "IsWindow \\$${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}$0",

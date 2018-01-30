@@ -189,6 +189,11 @@
     "description": "nsDialogs.dll",
     "prefix": "NSD_LB_GetSelection"
   },
+  "${NSD_LB_InsertString}": {
+    "body": "\\${NSD_LB_InsertString} $${1:dialog} \"${2:string}\"$0",
+    "description": "nsDialogs.dll",
+    "prefix": "NSD_LB_InsertString"
+  },
   "${NSD_LB_SelectString}": {
     "body": "\\${NSD_LB_SelectString} $${1:dialog} \"${2:string}\"$0",
     "description": "nsDialogs.dll",
