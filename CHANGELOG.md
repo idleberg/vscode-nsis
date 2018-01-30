@@ -1,3 +1,7 @@
+# v3.7.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.7.0)
+
+- add support for NSIS 3.03
+
 # v3.6.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.6.5)
 
 - fix typo in scaffolding snippet
