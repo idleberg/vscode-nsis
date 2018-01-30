@@ -1,4 +1,2 @@
 .travis.yml
 gulpfile.js
-package-lock.json
-yarn.lock
