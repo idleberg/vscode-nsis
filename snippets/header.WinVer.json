@@ -169,10 +169,10 @@
     "description": "Usage: logic_lib_statement ${IsServerOS}",
     "prefix": "IsServerOS"
   },
-  "${IsController}": {
-    "body": "\\${IsController}$0",
-    "description": "Usage: logic_lib_statement ${IsController}",
-    "prefix": "IsController"
+  "${IsDomainController}": {
+    "body": "\\${IsDomainController}$0",
+    "description": "Usage: logic_lib_statement ${IsDomainController}",
+    "prefix": "IsDomainController"
   },
   "${IsServicePack}": {
     "body": "\\${IsServicePack}$0",
