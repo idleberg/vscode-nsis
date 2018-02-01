@@ -125,6 +125,7 @@ const showCompilerFlags = (): void => {
       nsisChannel.appendLine(JSON.stringify(output.stdout, null, 2));
       nsisChannel.show(true);
     }).catch(output => {
+      // fallback for legacy NSIS
       nsisChannel.appendLine(JSON.stringify(output.stdout, null, 2));
       nsisChannel.show(true);
     });
