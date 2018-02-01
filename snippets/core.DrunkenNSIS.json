@@ -334,6 +334,27 @@
     "description": "Usage: WriteINIStr ini_file section_name entry_name new_value",
     "prefix": "INIStrWrite"
   },
+  "%IntCmp64": {
+    "body": "Int64Cmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: Int64Cmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Int64Cmp.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IntCmp64"
+  },
+  "%IntCmpU64": {
+    "body": "Int64CmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: Int64CmpU val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Int64CmpU.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IntCmpU64"
+  },
+  "%IntFmt64": {
+    "body": "Int64Fmt \\$${1:user_var} \"${2:format}\" \"${3:numberstring}\"$0",
+    "description": "Usage: Int64Fmt $(user_var: output) format_string input",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Int64Fmt.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IntFmt64"
+  },
   "%IconUninstall": {
     "body": "UninstallIcon \"${1:icon}.ico\"$0",
     "description": "Usage: UninstallIcon icon_on_local_system.ico",
@@ -563,6 +584,20 @@
     "body": "EnumRegKey \\$${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}$0",
     "description": "Usage: EnumRegKey $(user_var: output) rootkey subkey index",
     "prefix": "RegKeyEnum"
+  },
+  "%RegMultiStrWrite": {
+    "body": "WriteRegMultiStr /REGEDIT5 ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$0",
+    "description": "Usage: WriteRegMultiStr /REGEDIT5 root_key subkey key_name value",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/WriteRegMultiStr.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "RegMultiStrWrite"
+  },
+  "%RegNoneWrite": {
+    "body": "WriteRegNone ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:entry_name}\"${5: ${6:hex_data}}$0",
+    "description": "Usage: WriteRegNone root_key subkey key_name entry_name [hex_data]",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/WriteRegNone.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "RegNoneWrite"
   },
   "%RegStrRead": {
     "body": "ReadRegStr \\$${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$0",
