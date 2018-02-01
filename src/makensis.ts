@@ -2,7 +2,8 @@
 
 import { window, WorkspaceConfiguration } from 'vscode';
 
-import { clearOutput, detectOutfile, getConfig, getPrefix, isWindowsCompatible, makeNsis, pathWarning, runInstaller, sanitize } from './util';
+import * as makensis from 'makensis';
+import { clearOutput, detectOutfile, getConfig, getMakensis, getPrefix, isWindowsCompatible, pathWarning, runInstaller, sanitize } from './util';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
@@ -19,7 +20,7 @@ const compile = (strictMode: boolean): void => {
   let doc = window.activeTextEditor.document;
 
   doc.save().then( () => {
-    makeNsis()
+    getMakensis()
     .then(sanitize)
     .then( (pathToMakensis: string) => {
       let prefix: string = getPrefix();
@@ -40,13 +41,13 @@ const compile = (strictMode: boolean): void => {
       compilerArguments.push(doc.fileName);
 
       // Let's build
-      const makensis = spawn(pathToMakensis, compilerArguments);
+      const child = spawn(pathToMakensis, compilerArguments);
 
       let stdErr: string = '';
       let outFile: string = '';
       let hasWarning: boolean = false;
 
-      makensis.stdout.on('data', (line: Array<string> ) => {
+      child.stdout.on('data', (line: Array<string> ) => {
         // Detect warnings
         if (line.indexOf('warning: ') !== -1) {
           hasWarning = true;
@@ -58,12 +59,12 @@ const compile = (strictMode: boolean): void => {
         nsisChannel.appendLine(line.toString());
       });
 
-      makensis.stderr.on('data', (line: Array<any>) => {
+      child.stderr.on('data', (line: Array<any>) => {
         stdErr += '\n' + line;
         nsisChannel.appendLine(line.toString());
       });
 
-      makensis.on('close', (code) => {
+      child.on('close', (code) => {
         let openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
         if (code === 0) {
           if (hasWarning === true) {
@@ -99,15 +100,15 @@ const compile = (strictMode: boolean): void => {
 
 const showVersion = (): void => {
   let config: WorkspaceConfiguration = getConfig();
-  let prefix: string = getPrefix();
 
-  makeNsis()
+  getMakensis()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    const makensis = spawn(pathToMakensis, [ `${prefix}VERSION` ]);
-
-    makensis.stdout.on('data', (version: Array<string> ) => {
-      window.showInformationMessage(`makensis ${version} (${pathToMakensis})`);
+    makensis.version({pathToMakensis: pathToMakensis})
+    .then(output => {
+      window.showInformationMessage(`makensis ${output.stdout} (${pathToMakensis})`);
+    }).catch(error => {
+      console.error(error);
     });
   })
   .catch(pathWarning);
@@ -116,22 +117,16 @@ const showVersion = (): void => {
 const showCompilerFlags = (): void => {
   clearOutput(nsisChannel);
 
-  makeNsis()
+  getMakensis()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    let config: WorkspaceConfiguration = getConfig();
-    let prefix: string = getPrefix();
-
-    const makensis = spawn(pathToMakensis, [ `${prefix}HDRINFO` ]);
-
-    makensis.stdout.on('data', (flags: Array<string> ) => {
-      nsisChannel.appendLine(flags.toString());
-    });
-
-    makensis.on('close', (code) => {
-      if (code === 0) {
-        nsisChannel.show(true);
-      }
+    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: true})
+    .then(output => {
+      nsisChannel.appendLine(JSON.stringify(output.stdout, null, 2));
+      nsisChannel.show(true);
+    }).catch(output => {
+      nsisChannel.appendLine(JSON.stringify(output.stdout, null, 2));
+      nsisChannel.show(true);
     });
   })
   .catch(pathWarning);
