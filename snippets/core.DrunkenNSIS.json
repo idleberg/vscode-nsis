@@ -84,6 +84,16 @@
     "description": "Usage: IntCmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
     "prefix": "CmpInt"
   },
+  "%CmpInt64": {
+    "body": "Int64Cmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: Int64Cmp val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "prefix": "CmpInt64"
+  },
+  "%CmpIntU64": {
+    "body": "Int64CmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$0",
+    "description": "Usage: Int64CmpU val1 val2 jump_if_equal [jump_if_val1_less] [jump_if_val1_more]",
+    "prefix": "CmpIntU64"
+  },
   "%CmpSStr": {
     "body": "StrCmpS ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}$0",
     "description": "Usage: StrCmpS str1 str2 label_to_goto_if_equal [label_to_goto_if_not]",
@@ -253,6 +263,11 @@
     "body": "IntFmt \\$${1:user_var} \"${2:format}\" \"${3:numberstring}\"$0",
     "description": "Usage: IntFmt $(user_var: output) format_string input",
     "prefix": "FmtInt"
+  },
+  "%FmtInt64": {
+    "body": "IntFmt64 \\$${1:user_var} \"${2:format}\" \"${3:numberstring}\"$0",
+    "description": "Usage: IntFmt64 $(user_var: output) format_string input",
+    "prefix": "FmtInt64"
   },
   "%FontCreate": {
     "body": "CreateFont \\$${1:user_var} \"${2:face_name}\" ${3:[height] [weight]}$0",
