@@ -55,7 +55,7 @@ const isWindowsCompatible = (): boolean => {
   return false;
 };
 
-const makeNsis = (): Promise<any> => {
+const getMakensis = (): Promise<any> => {
   return new Promise((resolve, reject) => {
     let pathToMakensis: string = getConfig().pathToMakensis;
 
@@ -162,9 +162,9 @@ export {
   clearOutput,
   detectOutfile,
   getConfig,
+  getMakensis,
   getPrefix,
   isWindowsCompatible,
-  makeNsis,
   pathWarning,
   runInstaller,
   sanitize,
