@@ -3,7 +3,7 @@
 import { window, WorkspaceConfiguration } from 'vscode';
 
 import * as makensis from 'makensis';
-import { clearOutput, detectOutfile, getConfig, getMakensis, getPrefix, isWindowsCompatible, pathWarning, runInstaller, sanitize } from './util';
+import { clearOutput, detectOutfile, getConfig, getMakensisPath, getPrefix, isWindowsCompatible, pathWarning, runInstaller, sanitize } from './util';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
@@ -20,7 +20,7 @@ const compile = (strictMode: boolean): void => {
   let doc = window.activeTextEditor.document;
 
   doc.save().then( () => {
-    getMakensis()
+    getMakensisPath()
     .then(sanitize)
     .then( (pathToMakensis: string) => {
       let prefix: string = getPrefix();
@@ -101,7 +101,7 @@ const compile = (strictMode: boolean): void => {
 const showVersion = (): void => {
   let config: WorkspaceConfiguration = getConfig();
 
-  getMakensis()
+  getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
     makensis.version({pathToMakensis: pathToMakensis})
@@ -117,7 +117,7 @@ const showVersion = (): void => {
 const showCompilerFlags = (): void => {
   clearOutput(nsisChannel);
 
-  getMakensis()
+  getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
     makensis.hdrInfo({pathToMakensis: pathToMakensis, json: true})
