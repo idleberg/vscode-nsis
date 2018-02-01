@@ -2,7 +2,7 @@
 
 import { window, WorkspaceConfiguration } from 'vscode';
 
-import { clearOutput, getConfig, makeNsis, successBridleNsis, successNslAssembler } from './util';
+import { clearOutput, getConfig, successBridleNsis, successNslAssembler } from './util';
 import { spawn } from 'child_process';
 
 
