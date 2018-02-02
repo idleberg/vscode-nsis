@@ -474,7 +474,7 @@
         "vscode:prepublish": "tsc -p ./ && gulp build"
     },
     "dependencies": {
-        "makensis": "^0.11.0",
+        "makensis": "^0.12.0",
         "opn": "^5.1.0"
     },
     "devDependencies": {
