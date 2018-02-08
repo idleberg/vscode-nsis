@@ -2,6 +2,7 @@
 
 - make use of `makensis` module
 - Drunken NSIS: add support for NSIS 3.03
+- add `.editorconfig`
 - replace linter
 
 # v3.7.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.7.1)
