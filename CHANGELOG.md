@@ -1,3 +1,9 @@
+# v3.8.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.8.0)
+
+- make use of `makensis` module
+- Drunken NSIS: add support for NSIS 3.03
+- replace linter
+
 # v3.7.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.7.1)
 
 - fix typo in snippet
