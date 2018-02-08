@@ -1099,9 +1099,9 @@
     "body": "function un.onUninstSuccess(${1}) {\n\t${2:// your code here}\n}",
     "prefix": "un.onUninstSuccess()"
   },
-  "un.onUserAbort\u00a1()": {
+  "un.onUserAbort()": {
     "body": "function un.onUserAbort(${1}) {\n\t${2:// your code here}\n}",
-    "prefix": "un.onUserAbort\u00a1()"
+    "prefix": "un.onUserAbort()"
   },
   "uninstall page Components()": {
     "body": "uninstall page Components(${1:function}) {\n\t${2:// your code here}\n}",
