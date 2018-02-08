@@ -2,6 +2,7 @@
 
 - make use of `makensis` module
 - Drunken NSIS: add support for NSIS 3.03
+- nsL Assembler: fix snippet
 - add `.editorconfig`
 - replace linter
 
