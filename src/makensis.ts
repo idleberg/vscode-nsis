@@ -98,15 +98,29 @@ const compile = (strictMode: boolean): void => {
   });
 };
 
+const printFlags = (output: string, showFlagsAsObject: boolean = true): void => {
+  if (showFlagsAsObject === true) {
+    nsisChannel.append(JSON.stringify(output, null, 2));
+  } else {
+    nsisChannel.append(output);
+  }
+};
+
 const showVersion = (): void => {
   let config: WorkspaceConfiguration = getConfig();
+
+  clearOutput(nsisChannel);
 
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
     makensis.version({pathToMakensis: pathToMakensis})
     .then(output => {
-      window.showInformationMessage(`makensis ${output.stdout} (${pathToMakensis})`);
+      if (config.showVersionAsInfoMessage === true) {
+        window.showInformationMessage(`makensis ${output.stdout} (${pathToMakensis})`);
+      } else {
+        nsisChannel.append(`makensis ${output.stdout} (${pathToMakensis})`);
+      }
     }).catch(error => {
       console.error(error);
     });
@@ -115,19 +129,19 @@ const showVersion = (): void => {
 };
 
 const showCompilerFlags = (): void => {
+  let config: WorkspaceConfiguration = getConfig();
+
   clearOutput(nsisChannel);
 
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: true})
+    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: config.showFlagsAsObject})
     .then(output => {
-      nsisChannel.appendLine(JSON.stringify(output.stdout, null, 2));
-      nsisChannel.show(true);
+      printFlags(output.stdout, config.showFlagsAsObject);
     }).catch(output => {
       // fallback for legacy NSIS
-      nsisChannel.appendLine(JSON.stringify(output.stdout, null, 2));
-      nsisChannel.show(true);
+      printFlags(output.stdout, config.showFlagsAsObject);
     });
   })
   .catch(pathWarning);

@@ -73,6 +73,16 @@
                     "default": true,
                     "description": "Specify whether to open the newly created build task"
                 },
+                "nsis.showVersionAsInfoMessage": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Specify whether to show version as message"
+                },
+                "nsis.showFlagsAsObject": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Specify whether to format compiler flags as JSON"
+                },
                 "nsis.useWineToRun": {
                     "type": "boolean",
                     "default": false,
