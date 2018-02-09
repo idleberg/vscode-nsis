@@ -2,6 +2,7 @@
 
 - add `showVersionAsInfoMessage` option
 - add `showFlagsAsObject` option
+- update `.vscodeignore`
 
 # v3.8.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.8.0)
 
