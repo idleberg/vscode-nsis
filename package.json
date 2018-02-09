@@ -20,7 +20,7 @@
         "type": "git",
         "url": "https://github.com/idleberg/vscode-nsis"
     },
-    "homepage": "https://github.com/idleberg/vscode-nsis",
+    "homepage": "https://github.com/idleberg/vscode-nsis#readme",
     "bugs": {
         "url": "https://github.com/idleberg/vscode-nsis/issues"
     },
