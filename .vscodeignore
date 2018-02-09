@@ -1,3 +1,5 @@
 .editorconfig
+.gitignore
 .travis.yml
 gulpfile.js
+tslint.json
