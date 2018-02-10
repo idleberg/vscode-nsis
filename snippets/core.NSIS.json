@@ -2232,6 +2232,20 @@
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "PageExEnd"
   },
+  "PEDllCharacteristics": {
+    "body": "PEDllCharacteristics ${1:addbits} ${2:removebits}$0",
+    "description": "Usage: PEDllCharacteristics addbits removebits",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PEDllCharacteristics.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "PEDllCharacteristics"
+  },
+  "PESubsysVer": {
+    "body": "PESubsysVer ${1:major}.${2:minor}$0",
+    "description": "Usage: PESubsysVer major.minor",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/PESubsysVer.md",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "PESubsysVer"
+  },
   "Pop": {
     "body": "Pop \\$${1:user_var}$0",
     "description": "Usage: Pop $(user_var: output)",
