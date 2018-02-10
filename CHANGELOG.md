@@ -1,6 +1,7 @@
 # v3.9.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.9.1)
 
-- modify default comment delimiter 
+- modify default comment delimiter
+- update scaffolding snippets
 
 # v3.9.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.9.0)
 
