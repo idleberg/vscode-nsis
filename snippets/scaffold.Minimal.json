@@ -1,6 +1,6 @@
 {
   "Minimal Script": {
-    "body": "; Scaffolding by https://github.com/idleberg/vscode-nsis\n\n; Settings ---------------------------------\nOutFile \"${1:installer_name}.exe\"\n\n; Includes ---------------------------------\n$2\n\n; Pages ------------------------------------\n$3\n\n; Sections ---------------------------------\nSection \"${4:section_name}\"\n\n\t${5:# your code here}\n\nSectionEnd\n\n; Functions --------------------------------\n$0",
+    "body": "# Scaffolding by https://github.com/idleberg/vscode-nsis\n\n# Settings ---------------------------------\nOutFile \"${1:installer_name}.exe\"\n\n# Includes ---------------------------------\n$2\n\n# Pages ------------------------------------\n$3\n\n# Sections ---------------------------------\nSection \"${4:section_name}\"\n\n\t${5:# your code here}\n\nSectionEnd\n\n# Functions --------------------------------\n$0",
     "description": "Creates a minimal installer template",
     "prefix": "scaffold:Minimal"
   }
