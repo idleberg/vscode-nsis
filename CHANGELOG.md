@@ -1,3 +1,8 @@
+# v3.10.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.10.0)
+
+- add `PEDllCharacteristics`
+- add `PESubsysVer`
+
 # v3.9.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.9.1)
 
 - modify default comment delimiter
