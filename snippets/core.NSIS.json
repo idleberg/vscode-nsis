@@ -2422,7 +2422,7 @@
     "prefix": "SearchPath"
   },
   "Section": {
-    "body": "Section \"${1:section_name}\" ${2:section_index_output}\n\t${3:# your code here}\nSectionEnd$0",
+    "body": "Section $1\"${2:section_name}\" ${3:section_index_output}\n\t${4:# your code here}\nSectionEnd$0",
     "description": "Usage: Section [/o] [-][un.][section_name] [section index output]",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/Section.md",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
