@@ -3,7 +3,7 @@
 import { commands } from 'vscode';
 
 // Load package components
-import { compile, showCompilerFlags, showVersion } from './makensis';
+import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { createTask } from './task';
 import { bridleNsis, nslAssembler} from './transpiler';
 
@@ -26,6 +26,11 @@ const activate = (context) => {
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', (editor) => {
         return showCompilerFlags();
+      })
+    );
+    context.subscriptions.push(
+      commands.registerTextEditorCommand('extension.nsis.look-up-command-online', (editor) => {
+        return showHelp();
       })
     );
     context.subscriptions.push(

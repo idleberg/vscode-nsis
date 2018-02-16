@@ -79,6 +79,10 @@ const getMakensisPath = (): Promise<any> => {
   });
 };
 
+const openURL = (cmd: string): void => {
+  opn(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html`);
+}
+
 const pathWarning = (): any => {
   window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
   .then((choice) => {
@@ -165,6 +169,7 @@ export {
   getMakensisPath,
   getPrefix,
   isWindowsCompatible,
+  openURL,
   pathWarning,
   runInstaller,
   sanitize,

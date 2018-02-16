@@ -221,6 +221,14 @@
                 }
             },
             {
+              "command": "extension.nsis.look-up-command-online",
+              "title": "NSIS: Look Up Command Online",
+              "icon": {
+                "dark": "./images/icon--lookup-dark.svg",
+                "light": "./images/icon--lookup-light.svg"
+              }
+            },
+            {
                 "command": "extension.nsis.show-version",
                 "title": "NSIS: Show Version",
                 "icon": {
@@ -289,14 +297,19 @@
                     "group": "navigation@3"
                 },
                 {
-                    "when": "resourceLangId == nsis",
-                    "command": "extension.nsis.show-version",
-                    "group": "navigation@4"
+                  "when": "resourceLangId == nsis",
+                  "command": "extension.nsis.look-up-command-online",
+                  "group": "navigation@4"
                 },
                 {
-                    "when": "resourceLangId == nsis",
-                    "command": "extension.nsis.show-compiler-flags",
-                    "group": "navigation@5"
+                  "when": "resourceLangId == nsis",
+                  "command": "extension.nsis.show-version",
+                  "group": "navigation@5"
+                },
+                {
+                  "when": "resourceLangId == nsis",
+                  "command": "extension.nsis.show-compiler-flags",
+                  "group": "navigation@6"
                 },
                 {
                     "when": "resourceLangId == nsl",
