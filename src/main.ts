@@ -29,7 +29,7 @@ const activate = (context) => {
       })
     );
     context.subscriptions.push(
-      commands.registerTextEditorCommand('extension.nsis.look-up-command-online', (editor) => {
+      commands.registerTextEditorCommand('extension.nsis.command-reference', (editor) => {
         return showHelp();
       })
     );
