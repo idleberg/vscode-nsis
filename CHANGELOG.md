@@ -1,3 +1,7 @@
+# v3.12.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.12.0)
+
+- overhaul snippets
+
 # v3.11.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.11.1)
 
 - modify command name & icon
