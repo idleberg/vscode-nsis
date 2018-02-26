@@ -1,316 +1,316 @@
 {
   "$ADMINTOOLS": {
-    "body": "\\$ADMINTOOLS$0",
+    "body": "$ADMINTOOLS$0",
     "description": "A directory where administrative tools are kept",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/ADMINTOOLS.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/ADMINTOOLS.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "ADMINTOOLS"
   },
   "$APPDATA": {
-    "body": "\\$APPDATA$0",
+    "body": "$APPDATA$0",
     "description": "The application data directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/APPDATA.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/APPDATA.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "APPDATA"
   },
   "$CDBURN_AREA": {
-    "body": "\\$CDBURN_AREA$0",
+    "body": "$CDBURN_AREA$0",
     "description": "A directory where files awaiting to be burned to CD are stored",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/CDBURN_AREA.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/CDBURN_AREA.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "CDBURN_AREA"
   },
   "$CMDLINE": {
-    "body": "\\$CMDLINE$0",
+    "body": "$CMDLINE$0",
     "description": "The command line of the installer",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/CMDLINE.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/CMDLINE.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "CMDLINE"
   },
   "$COMMONFILES": {
-    "body": "\\$COMMONFILES$0",
+    "body": "$COMMONFILES$0",
     "description": "The common files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COMMONFILES.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COMMONFILES.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "COMMONFILES"
   },
   "$COMMONFILES32": {
-    "body": "\\$COMMONFILES32$0",
+    "body": "$COMMONFILES32$0",
     "description": "The common files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COMMONFILES32.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COMMONFILES32.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "COMMONFILES32"
   },
   "$COMMONFILES64": {
-    "body": "\\$COMMONFILES64$0",
+    "body": "$COMMONFILES64$0",
     "description": "The common files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COMMONFILES64.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COMMONFILES64.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "COMMONFILES64"
   },
   "$COOKIES": {
-    "body": "\\$COOKIES$0",
+    "body": "$COOKIES$0",
     "description": "Internet Explorer's cookies directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COOKIES.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/COOKIES.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "COOKIES"
   },
   "$DESKTOP": {
-    "body": "\\$DESKTOP$0",
+    "body": "$DESKTOP$0",
     "description": "The Windows desktop directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/DESKTOP.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/DESKTOP.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "DESKTOP"
   },
   "$DOCUMENTS": {
-    "body": "\\$DOCUMENTS$0",
+    "body": "$DOCUMENTS$0",
     "description": "The documents directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/DOCUMENTS.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/DOCUMENTS.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "DOCUMENTS"
   },
   "$EXEDIR": {
-    "body": "\\$EXEDIR$0",
+    "body": "$EXEDIR$0",
     "description": "The directory containing the installer executable",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/EXEDIR.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/EXEDIR.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "EXEDIR"
   },
   "$EXEFILE": {
-    "body": "\\$EXEFILE$0",
+    "body": "$EXEFILE$0",
     "description": "The base name of the installer executable",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/EXEFILE.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/EXEFILE.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "EXEFILE"
   },
   "$EXEPATH": {
-    "body": "\\$EXEPATH$0",
+    "body": "$EXEPATH$0",
     "description": "The full path of the installer executable",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/EXEPATH.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/EXEPATH.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "EXEPATH"
   },
   "$FAVORITES": {
-    "body": "\\$FAVORITES$0",
+    "body": "$FAVORITES$0",
     "description": "The directory that contains shortcuts to the user's favorite websites, documents, etc.",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/FAVORITES.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/FAVORITES.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "FAVORITES"
   },
   "$FONTS": {
-    "body": "\\$FONTS$0",
+    "body": "$FONTS$0",
     "description": "The system's fonts directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/FONTS.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/FONTS.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "FONTS"
   },
   "$HISTORY": {
-    "body": "\\$HISTORY$0",
+    "body": "$HISTORY$0",
     "description": "Internet Explorer's history directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/HISTORY.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/HISTORY.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "HISTORY"
   },
   "$HWNDPARENT": {
-    "body": "\\$HWNDPARENT$0",
+    "body": "$HWNDPARENT$0",
     "description": "HWND of the main window (in decimal)",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/HWNDPARENT.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/HWNDPARENT.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "HWNDPARENT"
   },
   "$INSTDIR": {
-    "body": "\\$INSTDIR$0",
+    "body": "$INSTDIR$0",
     "description": "The installation directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/INSTDIR.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/INSTDIR.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "INSTDIR"
   },
   "$INTERNET_CACHE": {
-    "body": "\\$INTERNET_CACHE$0",
+    "body": "$INTERNET_CACHE$0",
     "description": "Internet Explorer's temporary internet files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/INTERNET_CACHE.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/INTERNET_CACHE.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "INTERNET_CACHE"
   },
   "$LANGUAGE": {
-    "body": "\\$LANGUAGE$0",
+    "body": "$LANGUAGE$0",
     "description": "The identifier of the language that is currently used",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/LANGUAGE.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/LANGUAGE.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "LANGUAGE"
   },
   "$LOCALAPPDATA": {
-    "body": "\\$LOCALAPPDATA$0",
+    "body": "$LOCALAPPDATA$0",
     "description": "The local (non-roaming) application data directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/LOCALAPPDATA.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/LOCALAPPDATA.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "LOCALAPPDATA"
   },
   "$MUSIC": {
-    "body": "\\$MUSIC$0",
+    "body": "$MUSIC$0",
     "description": "The user's music files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/MUSIC.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/MUSIC.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "MUSIC"
   },
   "$NETHOOD": {
-    "body": "\\$NETHOOD$0",
+    "body": "$NETHOOD$0",
     "description": "The directory that contains link objects that may exist in the My Network Places/Network Neighborhood folder",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/NETHOOD.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/NETHOOD.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "NETHOOD"
   },
   "$OUTDIR": {
-    "body": "\\$OUTDIR$0",
+    "body": "$OUTDIR$0",
     "description": "The current output directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/OUTDIR.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/OUTDIR.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "OUTDIR"
   },
   "$PICTURES": {
-    "body": "\\$PICTURES$0",
+    "body": "$PICTURES$0",
     "description": "The user's picture files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PICTURES.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PICTURES.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "PICTURES"
   },
   "$PLUGINSDIR": {
-    "body": "\\$PLUGINSDIR$0",
+    "body": "$PLUGINSDIR$0",
     "description": "The path to a temporary folder created upon the first usage of a plug-in or a call to InitPluginsDir",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PLUGINSDIR.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PLUGINSDIR.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "PLUGINSDIR"
   },
   "$PRINTHOOD": {
-    "body": "\\$PRINTHOOD$0",
+    "body": "$PRINTHOOD$0",
     "description": "The directory that contains link objects that may exist in the Printers folder",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PRINTHOOD.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PRINTHOOD.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "PRINTHOOD"
   },
   "$PROFILE": {
-    "body": "\\$PROFILE$0",
+    "body": "$PROFILE$0",
     "description": "The user's profile directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROFILE.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROFILE.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "PROFILE"
   },
   "$PROGRAMFILES": {
-    "body": "\\$PROGRAMFILES$0",
+    "body": "$PROGRAMFILES$0",
     "description": "The program files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROGRAMFILES.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROGRAMFILES.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "PROGRAMFILES"
   },
   "$PROGRAMFILES32": {
-    "body": "\\$PROGRAMFILES32$0",
+    "body": "$PROGRAMFILES32$0",
     "description": "The program files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROGRAMFILES32.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROGRAMFILES32.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "PROGRAMFILES32"
   },
   "$PROGRAMFILES64": {
-    "body": "\\$PROGRAMFILES64$0",
+    "body": "$PROGRAMFILES64$0",
     "description": "The program files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROGRAMFILES64.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/PROGRAMFILES64.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "PROGRAMFILES64"
   },
   "$QUICKLAUNCH": {
-    "body": "\\$QUICKLAUNCH$0",
+    "body": "$QUICKLAUNCH$0",
     "description": "The quick launch folder for IE4 active desktop and above",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/QUICKLAUNCH.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/QUICKLAUNCH.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "QUICKLAUNCH"
   },
   "$RECENT": {
-    "body": "\\$RECENT$0",
+    "body": "$RECENT$0",
     "description": "The directory that contains shortcuts to the user's recently used documents",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/RECENT.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/RECENT.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "RECENT"
   },
   "$RESOURCES": {
-    "body": "\\$RESOURCES$0",
+    "body": "$RESOURCES$0",
     "description": "The resources directory that stores themes and other Windows resources (usually $WINDIR\\Resources but detected at runtime)",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/RESOURCES.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/RESOURCES.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "RESOURCES"
   },
   "$RESOURCES_LOCALIZED": {
-    "body": "\\$RESOURCES_LOCALIZED$0",
+    "body": "$RESOURCES_LOCALIZED$0",
     "description": "The localized resources directory that stores themes and other Windows resources (usually $WINDIR\\Resources\\1033 but detected at runtime)",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/RESOURCES_LOCALIZED.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/RESOURCES_LOCALIZED.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "RESOURCES_LOCALIZED"
   },
   "$SENDTO": {
-    "body": "\\$SENDTO$0",
+    "body": "$SENDTO$0",
     "description": "The directory that contains Send To menu shortcut items",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SENDTO.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SENDTO.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "SENDTO"
   },
   "$SMPROGRAMS": {
-    "body": "\\$SMPROGRAMS$0",
+    "body": "$SMPROGRAMS$0",
     "description": "The start menu programs folder",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SMPROGRAMS.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SMPROGRAMS.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "SMPROGRAMS"
   },
   "$SMSTARTUP": {
-    "body": "\\$SMSTARTUP$0",
+    "body": "$SMSTARTUP$0",
     "description": "The start menu programs / startup folder",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SMSTARTUP.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SMSTARTUP.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "SMSTARTUP"
   },
   "$STARTMENU": {
-    "body": "\\$STARTMENU$0",
+    "body": "$STARTMENU$0",
     "description": "The start menu folder",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/STARTMENU.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/STARTMENU.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "STARTMENU"
   },
   "$SYSDIR": {
-    "body": "\\$SYSDIR$0",
+    "body": "$SYSDIR$0",
     "description": "The Windows system directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SYSDIR.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/SYSDIR.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "SYSDIR"
   },
   "$TEMP": {
-    "body": "\\$TEMP$0",
+    "body": "$TEMP$0",
     "description": "The temporary directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/TEMP.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/TEMP.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "TEMP"
   },
   "$TEMPLATES": {
-    "body": "\\$TEMPLATES$0",
+    "body": "$TEMPLATES$0",
     "description": "The document templates directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/TEMPLATES.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/TEMPLATES.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "TEMPLATES"
   },
   "$VIDEOS": {
-    "body": "\\$VIDEOS$0",
+    "body": "$VIDEOS$0",
     "description": "The user's video files directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/VIDEOS.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/VIDEOS.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "VIDEOS"
   },
   "$WINDIR": {
-    "body": "\\$WINDIR",
+    "body": "$WINDIR",
     "description": "The Windows directory",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/WINDIR.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/WINDIR.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--variable'>$</span>",
     "prefix": "WINDIR"
   },
   "${NSISDIR}": {
-    "body": "\\${NSISDIR}$0",
+    "body": "${NSISDIR}$0",
     "description": "A symbol that contains the path where NSIS is installed",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/NSISDIR.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/NSISDIR.html?utm_source=atom",
     "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "NSISDIR"
   }

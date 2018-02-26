@@ -1,42 +1,58 @@
 {
   "BgImage::AddImage": {
     "body": "BgImage::AddImage \"${1:file}.bmp\" ${2:x} ${3:y}$0",
-    "description": "BgImage.dll",
+    "description": "Usage: BgImage::AddImage file x y",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::AddImage"
   },
   "BgImage::AddText": {
-    "body": "BgImage::AddText \"${1:text}\" \"${2:font}\" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}$0",
-    "description": "BgImage.dll",
+    "body": "BgImage::AddText \"${1:text}\" \"${2:font}\" ${3:R} ${4:G} ${5:B} ${6:x} ${7:y}$0",
+    "description": "Usage: BgImage::AddText text font R G B x y",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::AddText"
   },
   "BgImage::Clear": {
     "body": "BgImage::Clear$0",
-    "description": "BgImage.dll",
+    "description": "Usage: BgImage::Clear",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::Clear"
   },
   "BgImage::Destroy": {
     "body": "BgImage::Destroy$0",
-    "description": "BgImage.dll",
+    "description": "Usage: BgImage::Destroy",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::Destroy"
   },
   "BgImage::Redraw": {
     "body": "BgImage::Redraw$0",
-    "description": "BgImage.dll",
+    "description": "Usage: BgImage::Redraw",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::Redraw"
   },
   "BgImage::SetBg": {
     "body": "BgImage::SetBg \"${1:file}.bmp\"$0",
-    "description": "BgImage.dll",
+    "description": "Usage: BgImage::SetBg file",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::SetBg"
   },
   "BgImage::SetReturn": {
     "body": "BgImage::SetReturn \"${1:on|off}\"$0",
-    "description": "BgImage.dll",
+    "description": "Usage: BgImage::SetReturn on|off",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::SetReturn"
   },
   "BgImage::Sound": {
     "body": "BgImage::Sound \"${1:file}.wav\"$0",
-    "description": "BgImage.dll",
+    "description": "Usage: BgImage::Sound file",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/BgImage.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>BgImage.dll</span>",
     "prefix": "BgImage::Sound"
   }
 }

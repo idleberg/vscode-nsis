@@ -1,7 +1,9 @@
 {
   "AdvSplash::show": {
     "body": "AdvSplash::show ${1:delay} ${2:fade_in} ${3:fade_out} ${4:key_color} \"${5:file}\"$0",
-    "description": "AdvSplash.dll",
+    "description": "Usage: AdvSplash::show delay fade_in fade_out key_color file",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>AdvSplash.dll</span>",
     "prefix": "AdvSplash::show"
   }
 }

@@ -1,67 +1,93 @@
 {
   "${ConfigReadS}": {
-    "body": "\\${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
+    "body": "${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
     "description": "Usage: ${ConfigReadS} \"[File]\" \"[Entry]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/ConfigReadS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "ConfigReadS"
   },
   "${ConfigRead}": {
-    "body": "\\${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
+    "body": "${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
     "description": "Usage: ${ConfigRead} \"[File]\" \"[Entry]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/ConfigRead.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "ConfigRead"
   },
   "${ConfigWriteS}": {
-    "body": "\\${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
+    "body": "${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
     "description": "Usage: ${ConfigWriteS} \"[File]\" \"[Entry]\" \"[Value]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/ConfigWriteS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "ConfigWriteS"
   },
   "${ConfigWrite}": {
-    "body": "\\${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
+    "body": "${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
     "description": "Usage: ${ConfigWrite} \"[File]\" \"[Entry]\" \"[Value]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/ConfigWrite.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "ConfigWrite"
   },
   "${FileJoin}": {
-    "body": "\\${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$0",
+    "body": "${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$0",
     "description": "Usage: ${FileJoin} \"[File1]\" \"[File2]\" \"[File3]\"",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/FileJoin.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "FileJoin"
   },
   "${FileReadFromEnd}": {
-    "body": "\\${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$0",
+    "body": "${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$0",
     "description": "Usage: ${FileReadFromEnd} \"[File]\" \"Function\"",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/FileReadFromEnd.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "FileReadFromEnd"
   },
   "${FileRecode}": {
-    "body": "\\${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$0",
+    "body": "${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$0",
     "description": "Usage: ${FileRecode} \"[File]\" \"[Format]\"",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/FileRecode.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "FileRecode"
   },
   "${LineFind}": {
-    "body": "\\${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$0",
+    "body": "${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$0",
     "description": "Usage: ${LineFind} \"[File1]\" \"[File2|/NUL]\" \"[LineNumbers]\" \"Function\"",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/LineFind.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "LineFind"
   },
   "${LineRead}": {
-    "body": "\\${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$0",
+    "body": "${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$0",
     "description": "Usage: ${LineRead} \"[File]\" \"[LineNumber]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/LineRead.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "LineRead"
   },
   "${LineSum}": {
-    "body": "\\${LineSum} \"${1:file}\" $${2:var}$0",
+    "body": "${LineSum} \"${1:file}\" $${2:var}$0",
     "description": "Usage: ${LineSum} \"[File]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/LineSum.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "LineSum"
   },
   "${TextCompareS}": {
-    "body": "\\${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
+    "body": "${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
     "description": "Usage: ${TextCompareS} \"[File1]\" \"[File2]\" \"[Option]\" \"Function\"",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/TextCompareS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "TextCompareS"
   },
   "${TextCompare}": {
-    "body": "\\${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
+    "body": "${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
     "description": "Usage: ${TextCompare} \"[File1]\" \"[File2]\" \"[Option]\" \"Function\"",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/TextCompare.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "TextCompare"
   },
   "${TrimNewLines}": {
-    "body": "\\${TrimNewLines} \"${1:string}\" $${2:var}$0",
+    "body": "${TrimNewLines} \"${1:string}\" $${2:var}$0",
     "description": "Usage: ${TrimNewLines} \"[string]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/TextFunc/TrimNewLines.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>TextFunc.nsh</span>",
     "prefix": "TrimNewLines"
   }
 }

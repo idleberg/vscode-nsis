@@ -1,7 +1,7 @@
 {
   "Math::Script": {
     "body": "Math::Script \"${1:script}\"$0",
-    "description": "Math.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>Math.dll</span>",
     "prefix": "Math::Script"
   }
 }

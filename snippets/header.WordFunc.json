@@ -1,82 +1,114 @@
 {
   "${StrFilterS}": {
-    "body": "\\${StrFilterS} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
+    "body": "${StrFilterS} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
     "description": "Usage: ${StrFilterS} \"[string]\" \"[options]\" \"[symbols1]\" \"[symbols2]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/StrFilterS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "StrFilterS"
   },
   "${StrFilter}": {
-    "body": "\\${StrFilter} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
+    "body": "${StrFilter} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
     "description": "Usage: ${StrFilter} \"[string]\" \"[options]\" \"[symbols1]\" \"[symbols2]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/StrFilter.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "StrFilter"
   },
   "${VersionCompare}": {
-    "body": "\\${VersionCompare} \"${1:version1}\" \"${2:version2}\" $${3:result}$0",
+    "body": "${VersionCompare} \"${1:version1}\" \"${2:version2}\" $${3:result}$0",
     "description": "Usage: ${VersionCompare} \"[Version1]\" \"[Version2]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/VersionCompare.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "VersionCompare"
   },
   "${VersionConvert}": {
-    "body": "\\${VersionConvert} \"${1:version}\" \"${2:charlist}\" $${3:result}$0",
+    "body": "${VersionConvert} \"${1:version}\" \"${2:charlist}\" $${3:result}$0",
     "description": "Usage: ${VersionConvert} \"[Version]\" \"[CharList]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/VersionConvert.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "VersionConvert"
   },
   "${WordAddS}": {
-    "body": "\\${WordAddS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "${WordAddS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordAddS} \"[string1]\" \"[delimiter]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordAddS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordAddS"
   },
   "${WordAdd}": {
-    "body": "\\${WordAdd} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "${WordAdd} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordAdd} \"[string1]\" \"[delimiter]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordAdd.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordAdd"
   },
   "${WordFind2xS}": {
-    "body": "\\${WordFind2xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
+    "body": "${WordFind2xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordFind2XS} \"[string]\" \"[delimiter1]\" \"[delimiter2]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordFind2xS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordFind2xS"
   },
   "${WordFind2x}": {
-    "body": "\\${WordFind2x} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
+    "body": "${WordFind2x} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordFind2X} \"[string]\" \"[delimiter1]\" \"[delimiter2]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordFind2x.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordFind2x"
   },
   "${WordFind3xS}": {
-    "body": "\\${WordFind3xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
+    "body": "${WordFind3xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
     "description": "Usage: ${WordFind3XS} \"[string]\" \"[delimiter1]\" \"[center]\" \"[delimiter2]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordFind3xS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordFind3xS"
   },
   "${WordFind3x}": {
-    "body": "\\${WordFind3x} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
+    "body": "${WordFind3x} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
     "description": "Usage: ${WordFind3X} \"[string]\" \"[delimiter1]\" \"[center]\" \"[delimiter2]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordFind3x.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordFind3x"
   },
   "${WordFindS}": {
-    "body": "\\${WordFindS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "${WordFindS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordFindS} \"[string]\" \"[delimiter]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordFindS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordFindS"
   },
   "${WordFind}": {
-    "body": "\\${WordFind} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "${WordFind} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordFind} \"[string]\" \"[delimiter]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordFind.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordFind"
   },
   "${WordInsertS}": {
-    "body": "\\${WordInsertS} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
+    "body": "${WordInsertS} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordInsertS} \"[string]\" \"[delimiter]\" \"[word]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordInsertS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordInsertS"
   },
   "${WordInsert}": {
-    "body": "\\${WordInsert} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
+    "body": "${WordInsert} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordInsert} \"[string]\" \"[delimiter]\" \"[word]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordInsert.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordInsert"
   },
   "${WordReplaceS}": {
-    "body": "\\${WordReplaceS} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
+    "body": "${WordReplaceS} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordReplaceS} \"[string]\" \"[word1]\" \"[word2]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordReplaceS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordReplaceS"
   },
   "${WordReplace}": {
-    "body": "\\${WordReplace} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
+    "body": "${WordReplace} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordReplace} \"[string]\" \"[word1]\" \"[word2]\" \"[E][options]\" $var",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/WordFunc/WordReplace.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>WordFunc.nsh</span>",
     "prefix": "WordReplace"
   }
 }

@@ -1,86 +1,107 @@
 {
   "${NSIS_CHAR_SIZE}": {
-    "body": "\\${NSIS_CHAR_SIZE}$0",
+    "body": "${NSIS_CHAR_SIZE}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "NSIS_CHAR_SIZE"
   },
   "${NSIS_MAX_STRLEN}": {
-    "body": "\\${NSIS_MAX_STRLEN}$0",
+    "body": "${NSIS_MAX_STRLEN}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "NSIS_MAX_STRLEN"
   },
   "${NSIS_PACKEDVERSION}": {
-    "body": "\\${NSIS_PACKEDVERSION}$0",
+    "body": "${NSIS_PACKEDVERSION}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "NSIS_PACKEDVERSION"
   },
   "${NSIS_PTR_SIZE}": {
-    "body": "\\${NSIS_PTR_SIZE}$0",
+    "body": "${NSIS_PTR_SIZE}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "NSIS_PTR_SIZE"
   },
   "${NSIS_UNICODE}": {
-    "body": "\\${NSIS_UNICODE}$0",
+    "body": "${NSIS_UNICODE}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "NSIS_UNICODE"
   },
   "${NSIS_VERSION}": {
-    "body": "\\${NSIS_VERSION}$0",
+    "body": "${NSIS_VERSION}",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "NSIS_VERSION"
   },
   "${_NSIS_DEFAW}": {
-    "body": "\\${_NSIS_DEFAW}$0",
+    "body": "${_NSIS_DEFAW}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "_NSIS_DEFAW"
   },
   "${__COUNTER__}": {
-    "body": "\\${__COUNTER__}$0",
+    "body": "${__COUNTER__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__COUNTER__"
   },
   "${__DATE__}": {
-    "body": "\\${__DATE__}$0",
+    "body": "${__DATE__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__DATE__"
   },
   "${__FILEDIR__}": {
-    "body": "\\${__FILEDIR__}$0",
+    "body": "${__FILEDIR__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__FILEDIR__"
   },
   "${__FILE__}": {
-    "body": "\\${__FILE__}$0",
+    "body": "${__FILE__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__FILE__"
   },
   "${__FUNCTION__}": {
-    "body": "\\${__FUNCTION__}$0",
+    "body": "${__FUNCTION__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__FUNCTION__"
   },
   "${__GLOBAL__}": {
-    "body": "\\${__GLOBAL__}$0",
+    "body": "${__GLOBAL__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__GLOBAL__"
   },
   "${__LINE__}": {
-    "body": "\\${__LINE__}$0",
+    "body": "${__LINE__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__LINE__"
   },
   "${__MACRO__}": {
-    "body": "\\${__MACRO__}$0",
+    "body": "${__MACRO__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__MACRO__"
   },
   "${__PAGEEX__}": {
-    "body": "\\${__PAGEEX__}$0",
+    "body": "${__PAGEEX__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__PAGEEX__"
   },
   "${__SECTION__}": {
-    "body": "\\${__SECTION__}$0",
+    "body": "${__SECTION__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__SECTION__"
   },
   "${__TIMESTAMP__}": {
-    "body": "\\${__TIMESTAMP__}$0",
+    "body": "${__TIMESTAMP__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__TIMESTAMP__"
   },
   "${__TIME__}": {
-    "body": "\\${__TIME__}$0",
+    "body": "${__TIME__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__TIME__"
   },
   "${__UNINSTALL__}": {
-    "body": "\\${__UNINSTALL__}$0",
+    "body": "${__UNINSTALL__}$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__UNINSTALL__"
   },
   "${envVarName}": {
     "body": "$%envVarName%$0",
+    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "envVarName"
   }
 }

@@ -1,17 +1,23 @@
 {
   "Banner::destroy": {
     "body": "Banner::destroy$0",
-    "description": "Banner.dll",
+    "description": "Usage: Banner::destroy",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>Banner.dll</span>",
     "prefix": "Banner::destroy"
   },
   "Banner::getWindow": {
     "body": "Banner::getWindow \"${1:file}\"$0",
-    "description": "Banner.dll",
+    "description": "Usage: Banner::getWindow file",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>Banner.dll</span>",
     "prefix": "Banner::getWindow"
   },
   "Banner::show": {
     "body": "Banner::show \"${1:file}\"$0",
-    "description": "Banner.dll",
+    "description": "Usage: Banner::show file",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>Banner.dll</span>",
     "prefix": "Banner::show"
   }
 }

@@ -1,7 +1,9 @@
 {
   "Splash::show": {
     "body": "Splash::show ${1:time_in_ms} \"${2:file}.bmp\"$0",
-    "description": "Splash.dll",
+    "description": "Usage: Splash::show time_in_ms file",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Splash.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>Splash.dll</span>",
     "prefix": "Splash::show"
   }
 }

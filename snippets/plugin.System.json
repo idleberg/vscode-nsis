@@ -1,27 +1,27 @@
 {
   "System::Alloc": {
     "body": "System::Alloc ${1:size}$0",
-    "description": "System.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
     "prefix": "System::Alloc"
   },
   "System::Call": {
     "body": "System::Call \"${1:parameters}\"$0",
-    "description": "System.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
     "prefix": "System::Call"
   },
   "System::Copy": {
     "body": "System::Copy ${1:destination} ${2:source}$0",
-    "description": "System.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
     "prefix": "System::Copy"
   },
   "System::Free": {
     "body": "System::Free $${1:address}$0",
-    "description": "System.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
     "prefix": "System::Free"
   },
   "System::Get": {
     "body": "System::Get \"${1:parameters}\"$0",
-    "description": "System.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
     "prefix": "System::Get"
   }
 }

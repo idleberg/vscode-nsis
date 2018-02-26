@@ -1,12 +1,12 @@
 {
   "StartMenu::Init": {
     "body": "StartMenu::Init \"${1:text}\"$0",
-    "description": "StartMenu.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>StartMenu.dll</span>",
     "prefix": "StartMenu::Init"
   },
   "StartMenu::Select": {
     "body": "StartMenu::Select $1$0",
-    "description": "StartMenu.dll",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>StartMenu.dll</span>",
     "prefix": "StartMenu::Select"
   }
 }

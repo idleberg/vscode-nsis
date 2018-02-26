@@ -1,237 +1,321 @@
 {
   "${Abort}": {
-    "body": "\\${Abort}$0",
+    "body": "${Abort}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Abort"
   },
   "${AndIfNot}": {
-    "body": "\\${AndIfNot} ${1:expression}$0",
+    "body": "${AndIfNot} ${1:expression}$0",
     "description": "Usage: ${AndIfNot} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIfNot.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "AndIfNot"
   },
   "${AndIf}": {
-    "body": "\\${AndIf} ${1:expression}$0",
+    "body": "${AndIf} ${1:expression}$0",
     "description": "Usage: ${AndIf} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIf.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "AndIf"
   },
   "${Case}": {
-    "body": "\\${Case} ${1:string}$0",
+    "body": "${Case} ${1:string}$0",
     "description": "Usage: ${Case[2|3|4|5]} value(s)",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Case.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Case"
   },
   "${Cmd}": {
-    "body": "\\${Cmd} `${1:statement}`$0",
+    "body": "${Cmd} `${1:statement}`$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Cmd"
   },
-  "${DoUntil…LoopUntil}": {
-    "body": "\\${DoUntil} ${1:statement}\n\t${3:# your code here}\n\\${LoopUntil} ${2:statement}$0",
-    "prefix": "DoUntil…LoopUntil"
+  "${DoUntil\u2026LoopUntil}": {
+    "body": "${DoUntil} ${1:statement}\n\t${3:# your code here}\n${LoopUntil} ${2:statement}$4",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "DoUntil\u2026LoopUntil"
   },
-  "${DoUntil…Loop}": {
-    "body": "\\${Do} ${1:statement}\n\t${2:# your code here}\n\\${Loop}$0",
-    "prefix": "DoUntil…Loop"
+  "${DoUntil\u2026Loop}": {
+    "body": "${Do} ${1:statement}\n\t${2:# your code here}\n${Loop}$3",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "DoUntil\u2026Loop"
   },
-  "${Do…LoopUntil}": {
-    "body": "\\${Do}\n\t${2:# your code here}\n\\${LoopUntil} ${1:statement}$0",
-    "prefix": "Do…LoopUntil"
+  "${Do\u2026LoopUntil}": {
+    "body": "${Do}\n\t${2:# your code here}\n${LoopUntil} ${1:statement}$3",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "Do\u2026LoopUntil"
   },
-  "${Do…Loop}": {
-    "body": "\\${Do}\n\t${1:# your code here}\n\\${Loop}$0",
-    "prefix": "Do…Loop"
+  "${Do\u2026Loop}": {
+    "body": "${Do}\n\t${1:# your code here}\n${Loop}$2",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "Do\u2026Loop"
   },
   "${ElseIfNot}": {
-    "body": "\\${ElseIfNot} ${1:expression}$0",
+    "body": "${ElseIfNot} ${1:expression}$0",
     "description": "Usage: ${ElseIfNot} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIfNot.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "ElseIfNot"
   },
   "${ElseIf}": {
-    "body": "\\${ElseIf} ${1:expression}$0",
+    "body": "${ElseIf} ${1:expression}$0",
     "description": "Usage: ${ElseIf} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIf.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "ElseIf"
   },
   "${ElseUnless}": {
-    "body": "\\${ElseUnless} ${1:expression}$0",
+    "body": "${ElseUnless} ${1:expression}$0",
     "description": "Usage: ${ElseUnless} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseUnless.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "ElseUnless"
   },
   "${Else}": {
-    "body": "\\${Else}$0",
+    "body": "${Else}$0",
     "description": "Usage: ${Else}",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Else.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Else"
   },
   "${EndIf}": {
-    "body": "\\${EndIf}$0",
+    "body": "${EndIf}$0",
     "description": "Usage: ${EndIf}",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/EndIf.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "EndIf"
   },
   "${EndUnless}": {
-    "body": "\\${EndUnless}$0",
+    "body": "${EndUnless}$0",
     "description": "Usage: ${EndUnless}",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/EndUnless.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "EndUnless"
   },
   "${EndWhile}": {
-    "body": "\\${EndWhile}$0",
+    "body": "${EndWhile}$0",
     "description": "Usage: ${EndWhile}",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/EndWhile.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "EndWhile"
   },
   "${Errors}": {
-    "body": "\\${Errors}$0",
+    "body": "${Errors}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Errors"
   },
   "${ExitDo}": {
-    "body": "\\${ExitDo}$0",
+    "body": "${ExitDo}$0",
     "description": "Usage: ${ExitDo}",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitDo.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "ExitDo"
   },
   "${ExitWhile}": {
-    "body": "\\${ExitWhile}$0",
+    "body": "${ExitWhile}$0",
     "description": "Usage: ${ExitWhile}",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitWhile.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "ExitWhile"
   },
   "${FileExists}": {
-    "body": "\\${FileExists} \"${1:file}\"$0",
+    "body": "${FileExists} \"${1:file}\"$0",
     "description": "Usage: logic_lib_statement ${FileExists} file_path",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/FileExists.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "FileExists"
   },
-  "${ForEach…Next}": {
-    "body": "\\${ForEach} ${1:statement}\n\t${2:# your code here}\n\\${Next}$0",
+  "${ForEach\u2026Next}": {
+    "body": "${ForEach} ${1:statement}\n\t${2:# your code here}\n${Next}$3",
     "description": "Usage: ${ForEach} expression",
-    "prefix": "ForEach…Next"
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ForEach.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "ForEach\u2026Next"
   },
-  "${For…Next}": {
-    "body": "\\${For} ${1:statement}\n\t${2:# your code here}\n\\${Next}$0",
+  "${For\u2026Next}": {
+    "body": "${For} ${1:statement}\n\t${2:# your code here}\n${Next}$3",
     "description": "Usage: ${For} expression",
-    "prefix": "For…Next"
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/For.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "For\u2026Next"
   },
   "${IfCmd}": {
-    "body": "\\${IfCmd} ${1:command} \\${|} ${2:statement} \\${|}$0",
+    "body": "${IfCmd} ${1:command} ${|} ${2:statement} ${|}$0",
     "description": "Usage: ${IfCmd} expression statement",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfCmd.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfCmd"
   },
   "${IfNot}": {
-    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n\\${EndIf}$0",
+    "body": "${IfNot} ${1:expression}\n\t${2:# your code here}\n${EndIf}$3",
     "description": "Usage: ${IfNot} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfNot.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfNot"
   },
-  "${IfNot…Else}": {
-    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n\\${Else}\n\t${3:# your code here}\n\\${EndIf}$0",
+  "${IfNot\u2026Else}": {
+    "body": "${IfNot} ${1:expression}\n\t${2:# your code here}\n${Else}\n\t${3:# your code here}\n${EndIf}$4",
     "description": "Usage: ${IfNot} expression",
-    "prefix": "IfNot…Else"
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfNot.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "IfNot\u2026Else"
   },
-  "${IfNot…FileExists}": {
-    "body": "\\${IfNot} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$0",
+  "${IfNot\u2026FileExists}": {
+    "body": "${IfNot} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n${EndIf}$3",
     "description": "Usage: ${IfNot} ${FileExists} file_path",
-    "prefix": "IfNot…FileExists"
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfNot.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "IfNot\u2026FileExists"
   },
   "${IfThenNot}": {
-    "body": "\\${IfThenNot} ${1:expression} \\${|} ${2:statement} \\${|}$0",
+    "body": "${IfThenNot} ${1:expression} ${|} ${2:statement} ${|}$0",
     "description": "Usage: ${IfNotThen} expression statement",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThenNot.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfThenNot"
   },
   "${IfThen}": {
-    "body": "\\${IfThen} ${1:expression} \\${|} ${2:statement} \\${|}$0",
+    "body": "${IfThen} ${1:expression} ${|} ${2:statement} ${|}$0",
     "description": "Usage: ${IfThen} expression statement",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThen.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfThen"
   },
   "${If}": {
-    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n\\${EndIf}$0",
+    "body": "${If} ${1:expression}\n\t${2:# your code here}\n${EndIf}$3",
     "description": "Usage: ${If} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/If.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "If"
   },
-  "${If…Else}": {
-    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n\\${Else}\n\t${3:# your code here}\n\\${EndIf}$0",
+  "${If\u2026Else}": {
+    "body": "${If} ${1:expression}\n\t${2:# your code here}\n${Else}\n\t${3:# your code here}\n${EndIf}$4",
     "description": "Usage: ${If} expression",
-    "prefix": "If…Else"
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/If.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "If\u2026Else"
   },
-  "${If…FileExists}": {
-    "body": "\\${If} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$0",
+  "${If\u2026FileExists}": {
+    "body": "${If} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n${EndIf}$3",
     "description": "Usage: ${If} ${FileExists} file_path",
-    "prefix": "If…FileExists"
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/If.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "If\u2026FileExists"
   },
   "${Loop}": {
-    "body": "\\${Loop}$0",
+    "body": "${Loop}$0",
     "description": "Usage: ${Loop}",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Loop.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Loop"
   },
   "${Next}": {
-    "body": "\\${Next}$0",
+    "body": "${Next}$0",
     "description": "Usage: ${Next}",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Next"
   },
   "${OrIfNot}": {
-    "body": "\\${OrIfNot} ${1:expression}$0",
+    "body": "${OrIfNot} ${1:expression}$0",
     "description": "Usage: ",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/OrIfNot.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "OrIfNot"
   },
   "${OrIfUnless}": {
-    "body": "\\${OrIfUnless} ${1:expression}$0",
+    "body": "${OrIfUnless} ${1:expression}$0",
     "description": "Usage: ",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/OrIfUnless.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "OrIfUnless"
   },
   "${OrIf}": {
-    "body": "\\${OrIf} ${1:expression}$0",
+    "body": "${OrIf} ${1:expression}$0",
     "description": "Usage: ${OrIf} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/OrIf.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "OrIf"
   },
   "${RebootFlag}": {
-    "body": "\\${RebootFlag}$0",
+    "body": "${RebootFlag}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "RebootFlag"
   },
   "${SectionIsBold}": {
-    "body": "\\${SectionIsBold} \\$${1:var}$0",
+    "body": "${SectionIsBold} ${$1}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "SectionIsBold"
   },
   "${SectionIsExpanded}": {
-    "body": "\\${SectionIsExpanded} \\$${1:var}$0",
+    "body": "${SectionIsExpanded} ${$1}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "SectionIsExpanded"
   },
   "${SectionIsPartiallySelected}": {
-    "body": "\\${SectionIsPartiallySelected} \\$${1:var}$0",
+    "body": "${SectionIsPartiallySelected} ${$1}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "SectionIsPartiallySelected"
   },
   "${SectionIsReadOnly}": {
-    "body": "\\${SectionIsReadOnly} \\$${1:var}$0",
+    "body": "${SectionIsReadOnly} ${$1}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "SectionIsReadOnly"
   },
   "${SectionIsSectionGroupEnd}": {
-    "body": "\\${SectionIsSectionGroupEnd} \\$${1:var}$0",
+    "body": "${SectionIsSectionGroupEnd} ${$1}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "SectionIsSectionGroupEnd"
   },
   "${SectionIsSectionGroup}": {
-    "body": "\\${SectionIsSectionGroup} \\$${1:var}$0",
+    "body": "${SectionIsSectionGroup} ${$1}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "SectionIsSectionGroup"
   },
   "${SectionIsSelected}": {
-    "body": "\\${SectionIsSelected} \\$${1:var}$0",
+    "body": "${SectionIsSelected} ${$1}$0",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "SectionIsSelected"
   },
   "${Select}": {
-    "body": "\\${Select} \\$${1:var}\n\t${2:# your code here}\n\\${EndSelect}$0",
+    "body": "${Select} $${1:var}\n\t${2:# your code here}\n${EndSelect}$3",
     "description": "Usage: ${Select} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Select.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Select"
   },
   "${Silent}": {
-    "body": "\\${Silent}$0",
+    "body": "${Silent}$0",
     "description": "Usage: ",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Silent.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Silent"
   },
   "${Switch}": {
-    "body": "\\${Switch} \\$${1:var}\n\t${2:# your code here}\n\\${EndSwitch}$0",
+    "body": "${Switch} $${1:var}\n\t${2:# your code here}\n${EndSwitch}$3",
     "description": "Usage: ${Switch} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Switch.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Switch"
   },
   "${Unless}": {
-    "body": "\\${Unless} \\$${1:var}\n\t${2:# your code here}\n\\${EndUnless}$0",
+    "body": "${Unless} $${1:var}\n\t${2:# your code here}\n${EndUnless}$3",
     "description": "Usage: ${Unless} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Unless.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Unless"
   },
-  "${Unless…FileExists}": {
-    "body": "\\${Unless} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$0",
+  "${Unless\u2026FileExists}": {
+    "body": "${Unless} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n${EndIf}$3",
     "description": "Usage: ${Unless} ${FileExists} file_path",
-    "prefix": "Unless…FileExists"
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Unless.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "Unless\u2026FileExists"
   },
   "${While}": {
-    "body": "\\${While} ${1:expression}\n\t${2:# your code here}\n\\${EndWhile}$0",
+    "body": "${While} ${1:expression}\n\t${2:# your code here}\n${EndWhile}$3",
     "description": "Usage: ${While} expression",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/While.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "While"
   }
 }

@@ -1,7 +1,9 @@
 {
   "VPatch::vpatchfile": {
     "body": "VPatch::vpatchfile \"${1:patch}.pat\" \"${2:old_file}\" \"${3:new_file}$4\"",
-    "description": "VPatch.dll",
+    "description": "Usage: VPatch::vpatchfile patch.pat old_file new_file",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/VPatch.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>VPatch.dll</span>",
     "prefix": "VPatch::vpatchfile"
   }
 }

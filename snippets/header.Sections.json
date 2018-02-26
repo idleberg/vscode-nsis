@@ -1,62 +1,62 @@
 {
   "${SECTION_OFF}": {
-    "body": "\\${SECTION_OFF}$0",
-    "description": "Sections.nsh",
+    "body": "${SECTION_OFF}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SECTION_OFF"
   },
   "${SF_BOLD}": {
-    "body": "\\${SF_BOLD}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_BOLD}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_BOLD"
   },
   "${SF_EXPAND}": {
-    "body": "\\${SF_EXPAND}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_EXPAND}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_EXPAND"
   },
   "${SF_NAMECHG}": {
-    "body": "\\${SF_NAMECHG}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_NAMECHG}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_NAMECHG"
   },
   "${SF_PSELECTED}": {
-    "body": "\\${SF_PSELECTED}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_PSELECTED}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_PSELECTED"
   },
   "${SF_RO}": {
-    "body": "\\${SF_RO}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_RO}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_RO"
   },
   "${SF_SECGRPEND}": {
-    "body": "\\${SF_SECGRPEND}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_SECGRPEND}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_SECGRPEND"
   },
   "${SF_SECGRP}": {
-    "body": "\\${SF_SECGRP}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_SECGRP}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_SECGRP"
   },
   "${SF_SELECTED}": {
-    "body": "\\${SF_SELECTED}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_SELECTED}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_SELECTED"
   },
   "${SF_SUBSECEND}": {
-    "body": "\\${SF_SUBSECEND}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_SUBSECEND}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_SUBSECEND"
   },
   "${SF_SUBSEC}": {
-    "body": "\\${SF_SUBSEC}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_SUBSEC}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_SUBSEC"
   },
   "${SF_TOGGLED}": {
-    "body": "\\${SF_TOGGLED}$0",
-    "description": "Sections.nsh",
+    "body": "${SF_TOGGLED}$0",
+    "leftLabelHTML": "<span class='syntax--support function'>Sections.nsh</span>",
     "prefix": "SF_TOGGLED"
   }
 }

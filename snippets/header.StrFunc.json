@@ -1,79 +1,79 @@
 {
   "${StrCase}": {
-    "body": "\\${StrCase} $${1:ResultVar} \"${2:String}\" \"${3:Type(|L|U|T|S|<>)}\"$0",
+    "body": "${StrCase} $${1:ResultVar} \"${2:String}\" \"${3:Type(|L|U|T|S|<>)}\"$0",
     "description": "Usage: ${StrCase} ResultVar String Type(|L|U|T|S|<>)",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrCase.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrCase.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrCase"
   },
   "${StrClb}": {
-    "body": "\\${StrClb} $${1:ResultVar} \"${2:String}\" \"${3:Action(|>|<|<>)}\"$0",
+    "body": "${StrClb} $${1:ResultVar} \"${2:String}\" \"${3:Action(|>|<|<>)}\"$0",
     "description": "Usage: ${StrClb} ResultVar String Action(|>|<|<>)",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrClb.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrClb.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrClb"
   },
   "${StrIOToNSIS}": {
-    "body": "\\${StrIOToNSIS} $${1:ResultVar} \"${2:String}\"$0",
+    "body": "${StrIOToNSIS} $${1:ResultVar} \"${2:String}\"$0",
     "description": "Usage: ${StrIOToNSIS} ResultVar String",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrIOToNSIS.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrIOToNSIS.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrIOToNSIS"
   },
   "${StrLoc}": {
-    "body": "\\${StrLoc} $${1:ResultVar} \"${2:String}\" \"${3:StrToSearchFor}\" \"${4:CounterDirection(>|<)}\"$0",
+    "body": "${StrLoc} $${1:ResultVar} \"${2:String}\" \"${3:StrToSearchFor}\" \"${4:CounterDirection(>|<)}\"$0",
     "description": "Usage: ${StrLoc} ResultVar String StrToSearchFor CounterDirection(>|<)",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrLoc.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrLoc.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrLoc"
   },
   "${StrNSISToIO}": {
-    "body": "\\${StrNSISToIO} $${1:ResultVar} \"${2:String}\"$0",
+    "body": "${StrNSISToIO} $${1:ResultVar} \"${2:String}\"$0",
     "description": "Usage: ${StrNSISToIO} ResultVar String",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrNSISToIO.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrNSISToIO.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrNSISToIO"
   },
   "${StrRep}": {
-    "body": "\\${StrRep} $${1:ResultVar} \"${2:String}\" \"${3:StrToReplace}\" \"${4:ReplacementString}\"$0",
+    "body": "${StrRep} $${1:ResultVar} \"${2:String}\" \"${3:StrToReplace}\" \"${4:ReplacementString}\"$0",
     "description": "Usage: ${StrRep} ResultVar String StrToReplace ReplacementString",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrRep.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrRep.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrRep"
   },
   "${StrSort}": {
-    "body": "\\${StrSort} $${1:ResultVar} \"${2:String}\" \"${3:LeftStr}\" \"${4:CenterStr}\" \"${5:RightStr}\" \"${6:IncludeLeftStr(1|0)}\" \"${7:IncludeCenterStr(1|0)}\" \"${8:IncludeRightStr(1|0)}\"$0",
+    "body": "${StrSort} $${1:ResultVar} \"${2:String}\" \"${3:LeftStr}\" \"${4:CenterStr}\" \"${5:RightStr}\" \"${6:IncludeLeftStr(1|0)}\" \"${7:IncludeCenterStr(1|0)}\" \"${8:IncludeRightStr(1|0)}\"$0",
     "description": "Usage: ${StrSort} ResultVar String LeftStr CenterStr RightStr IncludeLeftStr(1|0) IncludeCenterStr(1|0) IncludeRightStr(1|0)",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrSort.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrSort.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrSort"
   },
   "${StrStrAdv}": {
-    "body": "\\${StrStrAdv} $${1:ResultVar} \"${2:String}\" \"${3:StrToSearchFor}\" \"${3:SearchDirection(>|<)}\" \"${4:ResultStrDirection(>|<)}\" \"${5:DisplayStrToSearch(1|0)}\" \"${6:Loops}\" \"${7:CaseSensitive(0|1)}\"$0",
+    "body": "${StrStrAdv} $${1:ResultVar} \"${2:String}\" \"${3:StrToSearchFor}\" \"${3:SearchDirection(>|<)}\" \"${4:ResultStrDirection(>|<)}\" \"${5:DisplayStrToSearch(1|0)}\" \"${6:Loops}\" \"${7:CaseSensitive(0|1)}\"$0",
     "description": "Usage: ${StrStrAdv} ResultVar String StrToSearchFor SearchDirection(>|<) ResultStrDirection(>|<) DisplayStrToSearch(1|0) Loops CaseSensitive(0|1)",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrStrAdv.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrStrAdv.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrStrAdv"
   },
   "${StrStr}": {
-    "body": "\\${StrStr} $${1:ResultVar} \"${2:String}\" \"${3:StrToSearchFor}\"$0",
+    "body": "${StrStr} $${1:ResultVar} \"${2:String}\" \"${3:StrToSearchFor}\"$0",
     "description": "Usage: ${StrStr} ResultVar String StrToSearchFor",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrStr.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrStr.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrStr"
   },
   "${StrTok}": {
-    "body": "\\${StrTok} $${1:ResultVar} \"${2:String}\" \"${3:Separators}\" \"${4:ResultPart[L]}\" \"${5:SkipEmptyParts(1|0)}\"$0",
+    "body": "${StrTok} $${1:ResultVar} \"${2:String}\" \"${3:Separators}\" \"${4:ResultPart[L]}\" \"${5:SkipEmptyParts(1|0)}\"$0",
     "description": "Usage: ${StrTok} ResultVar String Separators ResultPart[L] SkipEmptyParts(1|0)",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrTok.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrTok.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrTok"
   },
   "${StrTrimNewLines}": {
-    "body": "\\${StrTrimNewLines} $${1:ResultVar} \"${2:String}\"$0",
+    "body": "${StrTrimNewLines} $${1:ResultVar} \"${2:String}\"$0",
     "description": "Usage: ${StrTrimNewLines} ResultVar String",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/StrFunc/StrTrimNewLines.md",
-    "leftLabelHTML": "<span class='support function'>StrFunc.nsh</span>",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/StrFunc/StrTrimNewLines.html?utm_source=atom",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>StrFunc.nsh</span>",
     "prefix": "StrTrimNewLines"
   }
 }
