@@ -2,356 +2,356 @@
   "${AtLeastServicePack}": {
     "body": "\\${AtLeastServicePack}$0",
     "description": "Usage: logic_lib_statement ${AtLeastServicePack} service_pack_version",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastServicePack.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastServicePack.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastServicePack"
   },
   "${AtLeastWin10}": {
     "body": "\\${AtLeastWin10}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin10}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin10.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin10.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin10"
   },
   "${AtLeastWin2000}": {
     "body": "\\${AtLeastWin2000}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2000}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2000.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2000.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin2000"
   },
   "${AtLeastWin2003}": {
     "body": "\\${AtLeastWin2003}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2003}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2003.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2003.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin2003"
   },
   "${AtLeastWin2008R2}": {
     "body": "\\${AtLeastWin2008R2}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2008R2}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2008R2.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2008R2.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin2008R2"
   },
   "${AtLeastWin2008}": {
     "body": "\\${AtLeastWin2008}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2008}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2008.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2008.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin2008"
   },
   "${AtLeastWin2012}": {
     "body": "\\${AtLeastWin2012}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin2012}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2012.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin2012.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin2012"
   },
   "${AtLeastWin7}": {
     "body": "\\${AtLeastWin7}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin7}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin7.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin7.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin7"
   },
   "${AtLeastWin8.1}": {
     "body": "\\${AtLeastWin8.1}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin8.1}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin8.html?utm_source=atom.1",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin8.html?utm_source=vscode.1",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin8.1"
   },
   "${AtLeastWin8}": {
     "body": "\\${AtLeastWin8}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin8}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin8.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin8.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin8"
   },
   "${AtLeastWin95}": {
     "body": "\\${AtLeastWin95}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin95}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin95.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin95.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin95"
   },
   "${AtLeastWin98}": {
     "body": "\\${AtLeastWin98}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWin98}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin98.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWin98.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWin98"
   },
   "${AtLeastWinME}": {
     "body": "\\${AtLeastWinME}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinME}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinME.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinME.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWinME"
   },
   "${AtLeastWinNT4}": {
     "body": "\\${AtLeastWinNT4}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinNT4}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinNT4.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinNT4.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWinNT4"
   },
   "${AtLeastWinVista}": {
     "body": "\\${AtLeastWinVista}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinVista}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinVista.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinVista.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWinVista"
   },
   "${AtLeastWinXP}": {
     "body": "\\${AtLeastWinXP}$0",
     "description": "Usage: logic_lib_statement ${AtLeastWinXP}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinXP.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtLeastWinXP.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtLeastWinXP"
   },
   "${AtMostServicePack}": {
     "body": "\\${AtMostServicePack}$0",
     "description": "Usage: logic_lib_statement ${AtMostServicePack} service_pack_version",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostServicePack.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostServicePack.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostServicePack"
   },
   "${AtMostWin10}": {
     "body": "\\${AtMostWin10}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin10}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin10.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin10.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin10"
   },
   "${AtMostWin2000}": {
     "body": "\\${AtMostWin2000}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2000}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2000.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2000.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin2000"
   },
   "${AtMostWin2003}": {
     "body": "\\${AtMostWin2003}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2003}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2003.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2003.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin2003"
   },
   "${AtMostWin2008R2}": {
     "body": "\\${AtMostWin2008R2}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2008R2}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2008R2.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2008R2.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin2008R2"
   },
   "${AtMostWin2008}": {
     "body": "\\${AtMostWin2008}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2008}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2008.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2008.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin2008"
   },
   "${AtMostWin2012}": {
     "body": "\\${AtMostWin2012}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin2012}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2012.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin2012.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin2012"
   },
   "${AtMostWin7}": {
     "body": "\\${AtMostWin7}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin7}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin7.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin7.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin7"
   },
   "${AtMostWin8.1}": {
     "body": "\\${AtMostWin8.1}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin8.1}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin8.html?utm_source=atom.1",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin8.html?utm_source=vscode.1",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin8.1"
   },
   "${AtMostWin8}": {
     "body": "\\${AtMostWin8}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin8}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin8.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin8.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin8"
   },
   "${AtMostWin95}": {
     "body": "\\${AtMostWin95}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin95}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin95.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin95.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin95"
   },
   "${AtMostWin98}": {
     "body": "\\${AtMostWin98}$0",
     "description": "Usage: logic_lib_statement ${AtMostWin98}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin98.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWin98.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWin98"
   },
   "${AtMostWinME}": {
     "body": "\\${AtMostWinME}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinME}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinME.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinME.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWinME"
   },
   "${AtMostWinNT4}": {
     "body": "\\${AtMostWinNT4}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinNT4}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinNT4.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinNT4.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWinNT4"
   },
   "${AtMostWinVista}": {
     "body": "\\${AtMostWinVista}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinVista}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinVista.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinVista.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWinVista"
   },
   "${AtMostWinXP}": {
     "body": "\\${AtMostWinXP}$0",
     "description": "Usage: logic_lib_statement ${AtMostWinXP}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinXP.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/AtMostWinXP.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "AtMostWinXP"
   },
   "${IsDomainController}": {
     "body": "\\${IsDomainController}$0",
     "description": "Usage: logic_lib_statement ${IsDomainController}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsDomainController.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsDomainController.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsDomainController"
   },
   "${IsNT}": {
     "body": "\\${IsNT}$0",
     "description": "Usage: logic_lib_statement ${IsNT}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsNT.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsNT.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsNT"
   },
   "${IsServerOS}": {
     "body": "\\${IsServerOS}$0",
     "description": "Usage: logic_lib_statement ${IsServerOS}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsServerOS.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsServerOS.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsServerOS"
   },
   "${IsServicePack}": {
     "body": "\\${IsServicePack}$0",
     "description": "Usage: logic_lib_statement ${IsServicePack} service_pack_version",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsServicePack.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsServicePack.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsServicePack"
   },
   "${IsWin10}": {
     "body": "\\${IsWin10}$0",
     "description": "Usage: logic_lib_statement ${IsWin10}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin10.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin10.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin10"
   },
   "${IsWin2000}": {
     "body": "\\${IsWin2000}$0",
     "description": "Usage: logic_lib_statement ${IsWin2000}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2000.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2000.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin2000"
   },
   "${IsWin2003}": {
     "body": "\\${IsWin2003}$0",
     "description": "Usage: logic_lib_statement ${IsWin2003}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2003.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2003.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin2003"
   },
   "${IsWin2008R2}": {
     "body": "\\${IsWin2008R2}$0",
     "description": "Usage: logic_lib_statement ${IsWin2008R2}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2008R2.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2008R2.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin2008R2"
   },
   "${IsWin2008}": {
     "body": "\\${IsWin2008}$0",
     "description": "Usage: logic_lib_statement ${IsWin2008}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2008.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2008.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin2008"
   },
   "${IsWin2012}": {
     "body": "\\${IsWin2012}$0",
     "description": "Usage: logic_lib_statement ${IsWin2012}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2012.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin2012.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin2012"
   },
   "${IsWin7}": {
     "body": "\\${IsWin7}$0",
     "description": "Usage: logic_lib_statement ${IsWin7}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin7.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin7.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin7"
   },
   "${IsWin8.1}": {
     "body": "\\${IsWin8.1}$0",
     "description": "Usage: logic_lib_statement ${IsWin8.1}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin8.html?utm_source=atom.1",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin8.html?utm_source=vscode.1",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin8.1"
   },
   "${IsWin8}": {
     "description": "Usage: logic_lib_statement ${IsWin8}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin8.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin8.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin8"
   },
   "${IsWin95}": {
     "body": "\\${IsWin95}$0",
     "description": "Usage: logic_lib_statement ${IsWin95}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin95.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin95.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin95"
   },
   "${IsWin98}": {
     "body": "\\${IsWin98}$0",
     "description": "Usage: logic_lib_statement ${IsWin98}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin98.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWin98.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWin98"
   },
   "${IsWinME}": {
     "body": "\\${IsWinME}$0",
     "description": "Usage: logic_lib_statement ${IsWinME}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinME.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinME.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWinME"
   },
   "${IsWinNT4}": {
     "body": "\\${IsWinNT4}$0",
     "description": "Usage: logic_lib_statement ${IsWinNT4}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinNT4.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinNT4.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWinNT4"
   },
   "${IsWinVista}": {
     "body": "\\${IsWinVista}$0",
     "description": "Usage: logic_lib_statement ${IsWinVista}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinVista.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinVista.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWinVista"
   },
   "${IsWinXP}": {
     "body": "\\${IsWinXP}$0",
     "description": "Usage: logic_lib_statement ${IsWinXP}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinXP.html?utm_source=atom",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WinVer/IsWinXP.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "IsWinXP"
   }

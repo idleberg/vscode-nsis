@@ -2,63 +2,63 @@
   "nsExec::Exec": {
     "body": "nsExec::Exec \"${1:command}\"$0",
     "description": "Usage: nsExec::Exec command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::Exec"
   },
   "nsExec::Exec /OEM": {
     "body": "nsExec::Exec /OEM \"${1:command}\"$0",
     "description": "Usage: nsExec::Exec /OEM command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::Exec /OEM"
   },
   "nsExec::Exec /TIMEOUT": {
     "body": "nsExec::Exec /TIMEOUT=${1:time_in_ms} \"${2:command}\"$0",
     "description": "Usage: nsExec::Exec /TIMEOUT=time_in_ms command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::Exec /TIMEOUT"
   },
   "nsExec::ExecToLog": {
     "body": "nsExec::ExecToLog \"${1:command}\"$0",
     "description": "Usage: nsExec::ExecToLog command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::ExecToLog"
   },
   "nsExec::ExecToLog /OEM": {
     "body": "nsExec::ExecToLog /OEM \"${1:command}\"$0",
     "description": "Usage: nsExec::ExecToLog /OEM command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::ExecToLog /OEM"
   },
   "nsExec::ExecToLog /TIMEOUT": {
     "body": "nsExec::ExecToLog /TIMEOUT=${1:time_in_ms} \"${2:command}\"$0",
     "description": "Usage: nsExec::ExecToLog /TIMEOUT=time_in_ms command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::ExecToLog /TIMEOUT"
   },
   "nsExec::ExecToStack": {
     "body": "nsExec::ExecToStack \"${1:command}\"$0",
     "description": "Usage: nsExec::ExecToStack command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::ExecToStack"
   },
   "nsExec::ExecToStack /OEM": {
     "body": "nsExec::ExecToStack /OEM \"${1:command}\"$0",
     "description": "Usage: nsExec::ExecToStack /OEM command",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::ExecToStack /OEM"
   },
   "nsExec::ExecToStack /TIMEOUT": {
     "body": "nsExec::ExecToStack /TIMEOUT=${1:time_in_ms} \"${2:command}\"$0",
     "description": "Usage: nsExec::ExecToStack /TIMEOUT=time_in_ms command}",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=atom",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/nsExec.html?utm_source=vscode",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>nsExec.dll</span>",
     "prefix": "nsExec::ExecToStack /TIMEOUT"
   }
