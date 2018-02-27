@@ -198,8 +198,6 @@ If you prefer Visual Studio Code's built-in Task Runner to build scripts, you ca
 
 **Note:** The created Task Runner will adapt to the [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
 
-Icon | Action
-
 ## License
 
 If not otherwise specified (see below), files in this repository fall under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0).
