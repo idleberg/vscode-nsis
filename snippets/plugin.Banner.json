@@ -2,21 +2,21 @@
   "Banner::destroy": {
     "body": "Banner::destroy$0",
     "description": "Usage: Banner::destroy",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Banner.dll</span>",
     "prefix": "Banner::destroy"
   },
   "Banner::getWindow": {
     "body": "Banner::getWindow \"${1:file}\"$0",
     "description": "Usage: Banner::getWindow file",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Banner.dll</span>",
     "prefix": "Banner::getWindow"
   },
   "Banner::show": {
     "body": "Banner::show \"${1:file}\"$0",
     "description": "Usage: Banner::show file",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/AdvSplash.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Banner.dll</span>",
     "prefix": "Banner::show"
   }

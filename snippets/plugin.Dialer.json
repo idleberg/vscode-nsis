@@ -2,35 +2,35 @@
   "Dialer::AttemptConnect": {
     "body": "Dialer::AttemptConnect$0",
     "description": "Usage: Dialer::AttemptConnect",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Dialer.dll</span>",
     "prefix": "Dialer::AttemptConnect"
   },
   "Dialer::AutodialHangup": {
     "body": "Dialer::AutodialHangup$0",
     "description": "Usage: Dialer::AutodialHangup",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Dialer.dll</span>",
     "prefix": "Dialer::AutodialHangup"
   },
   "Dialer::AutodialOnline": {
     "body": "Dialer::AutodialOnline$0",
     "description": "Usage: Dialer::AutodialOnline",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Dialer.dll</span>",
     "prefix": "Dialer::AutodialOnline"
   },
   "Dialer::AutodialUnattended": {
     "body": "Dialer::AutodialUnattended$0",
     "description": "Usage: Dialer::AutodialUnattended",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Dialer.dll</span>",
     "prefix": "Dialer::AutodialUnattended"
   },
   "Dialer::GetConnectedState": {
     "body": "Dialer::GetConnectedState$0",
     "description": "Usage: Dialer::GetConnectedState",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Plugins/Dialer.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>Dialer.dll</span>",
     "prefix": "Dialer::GetConnectedState"
   }

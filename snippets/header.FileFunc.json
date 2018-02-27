@@ -2,140 +2,140 @@
   "${BannerTrimPath}": {
     "body": "${BannerTrimPath} \"${1:path_string}\" \"${2:option}\" $${3:var}$0",
     "description": "Usage: ${BannerTrimPath} \"[PathString]\" \"[Option]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/BannerTrimPath.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/BannerTrimPath.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "BannerTrimPath"
   },
   "${DirState}": {
     "body": "${DirState} \"${1:path}\" $${2:var}$0",
     "description": "Usage: ${DirState} \"[path]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/DirState.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/DirState.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "DirState"
   },
   "${DriveSpace}": {
     "body": "${DriveSpace} \"${1:drive}\" \"${2:options}\" $${3:size}$0",
     "description": "Usage: ${DriveSpace} \"[Drive]\" \"[Options]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/DriveSpace.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/DriveSpace.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "DriveSpace"
   },
   "${GetBaseName}": {
     "body": "${GetBaseName} \"${1:file_string}\" $${2:var}$0",
     "description": "Usage: ${GetBaseName} \"[FileString]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetBaseName.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetBaseName.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetBaseName"
   },
   "${GetDrives}": {
     "body": "${GetDrives} \"${1:option}\" \"${2:function}\"$0",
     "description": "Usage: ${GetDrives} \"[Option]\" \"Function\"",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetDrives.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetDrives.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetDrives"
   },
   "${GetExeName}": {
     "body": "${GetExeName} $${1:var}$0",
     "description": "Usage: ${GetExeName} $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetExeName.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetExeName.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetExeName"
   },
   "${GetExePath}": {
     "body": "${GetExePath} $${1:var}$0",
     "description": "Usage: ${GetExePath} $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetExePath.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetExePath.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetExePath"
   },
   "${GetFileAttributes}": {
     "body": "${GetFileAttributes} \"${1:file}\" \"${2:attributes}\" $${3:var}$0",
     "description": "Usage: ${GetFileAttributes} \"[File]\" \"[Attributes]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileAttributes.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileAttributes.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetFileAttributes"
   },
   "${GetFileExt}": {
     "body": "${GetFileExt} \"${1:file_string}\" $${2:var}$0",
     "description": "Usage: ${GetFileExt} \"[FileString]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileExt.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileExt.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetFileExt"
   },
   "${GetFileName}": {
     "body": "${GetFileName} \"${1:path_string}\" $${2:var}$0",
     "description": "Usage: ${GetFileName} \"[PathString]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileName.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileName.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetFileName"
   },
   "${GetFileVersion}": {
     "body": "${GetFileVersion} \"${1:executable}\" $${2:version}$0",
     "description": "Usage: ${GetFileVersion} \"[Executable]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileVersion.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetFileVersion.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetFileVersion"
   },
   "${GetOptionsS}": {
     "body": "${GetOptionsS} \"${1:parameters}\" \"${2:option}\" $${3:var}$0",
     "description": "Usage: ${GetOptionsS} \"[Parameters]\" \"[Option]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetOptionsS.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetOptionsS.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetOptionsS"
   },
   "${GetOptions}": {
     "body": "${GetOptions} \"${1:parameters}\" \"${2:option}\" $${3:var}$0",
     "description": "Usage: ${GetOptions} \"[Parameters]\" \"[Option]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetOptions.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetOptions.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetOptions"
   },
   "${GetParameters}": {
     "body": "${GetParameters} $${1:var}$0",
     "description": "Usage: ${GetParameters} $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetParameters.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetParameters.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetParameters"
   },
   "${GetParent}": {
     "body": "${GetParent} \"${1:path_string}\" $${2:var}$0",
     "description": "Usage: ${GetParent} \"[PathString]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetParent.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetParent.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetParent"
   },
   "${GetRoot}": {
     "body": "${GetRoot} \"${1:full_path}\" $${2:var}$0",
     "description": "Usage: ${GetRoot} \"[FullPath]\" $var",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetRoot.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetRoot.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetRoot"
   },
   "${GetSize}": {
     "body": "${GetSize} \"${1:path}\" \"${2:options}\" $${3:size} $${4:sum_files} $${5:sum_directories}$0",
     "description": "Usage: ${GetSize} \"[Path]\" \"[Options]\" $var1 $var2 $var3",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetSize.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetSize.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetSize"
   },
   "${GetTime}": {
     "body": "${GetTime} \"${1:file}\" \"${2:option}\" $${3:day} $${4:month} $${5:year} $${6:weekday} $${7:hours} $${8:minute} $${9:seconds}$0",
     "description": "Usage: ${GetTime} \"[File]\" \"[Option]\" $var1 $var2 $var3 $var4 $var5 $var6 $var7",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetTime.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/GetTime.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "GetTime"
   },
   "${Locate}": {
     "body": "${Locate} \"${1:path}\" \"${2:options}\" \"${3:function}\"$0",
     "description": "Usage: ${Locate} \"[Path]\" \"[Options]\" \"Function\"",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/Locate.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/Locate.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "Locate"
   },
   "${RefreshShellIcons}": {
     "body": "${RefreshShellIcons}$0",
     "description": "Usage: ${RefreshShellIcons}",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/RefreshShellIcons.html?utm_source=vscode",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/FileFunc/RefreshShellIcons.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>FileFunc.nsh</span>",
     "prefix": "RefreshShellIcons"
   }
