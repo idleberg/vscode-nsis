@@ -185,12 +185,12 @@ Icon                    | Action                   |  Syntax             | Short
 ------------------------|--------------------------|---------------------|----------
 ![compile][compile]     | Compile NSIS             | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 ![compile][strict]      | Compile NSIS (strict)    | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-![compile][compile]      | Transpile nsL Assembler | `source.nsl`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-![compile][compile]     | Transpile BridleNSIS     |`source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 ![task][task]           | Create Build Task        |`source.nsis`        | –
 ![command][command]     | Command Reference        |`source.nsis`        | –
 ![info][info]           | Show Version             |`source.nsis`        | –
 ![flag][flag]           | Show Compiler Flags      |`source.nsis`        | –
+![compile][compile]     | Transpile nsL Assembler | `source.nsl`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+![compile][compile]     | Transpile BridleNSIS     |`source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 
 ### Task Runner
 
