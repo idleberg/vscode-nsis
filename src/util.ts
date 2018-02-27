@@ -80,7 +80,7 @@ const getMakensisPath = (): Promise<any> => {
 };
 
 const openURL = (cmd: string): void => {
-  opn(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html`);
+  opn(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
 };
 
 const pathWarning = (): any => {
