@@ -1,3 +1,7 @@
+# v3.12.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.12.2)
+
+- adjust URL parameters
+
 # v3.12.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.12.1)
 
 - fix typo
