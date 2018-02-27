@@ -179,14 +179,18 @@ Setting                      | Description
 `bridlensis.customArguments` | Specify the default arguments for BridleNSIS
 `bridlensis.nsisHome`        | Specify the NSIS home directory
 
-#### Shortcuts
+#### Commands
 
-Action                  |  Syntax              | Shortcut
-------------------------|----------------------|-------------------------------------------------------------
-Compile NSIS            | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Compile NSIS (strict)   | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Transpile nsL Assembler | `source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Transpile BridleNSIS    | `source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Icon                    | Action                   |  Syntax             | Shortcut
+------------------------|--------------------------|---------------------|----------
+![compile][compile]     | Compile NSIS             | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+![compile][strict]      | Compile NSIS (strict)    | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+![compile][compile]      | Transpile nsL Assembler | `source.nsl`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+![compile][compile]     | Transpile BridleNSIS     |`source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+![task][task]           | Create Build Task        |`source.nsis`        | –
+![command][command]     | Command Reference        |`source.nsis`        | –
+![info][info]           | Show Version             |`source.nsis`        | –
+![flag][flag]           | Show Compiler Flags      |`source.nsis`        | –
 
 ### Task Runner
 
@@ -194,9 +198,7 @@ If you prefer Visual Studio Code's built-in Task Runner to build scripts, you ca
 
 **Note:** The created Task Runner will adapt to the [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
 
-## Menu Icons
-
-As of version 3.4 of this package, several icons in the title menu give quick access to build commands (lightning bolt icons), build task creation, and compiler infos. Hovering each icon will reveal its exact purpose.
+Icon | Action
 
 ## License
 
@@ -207,3 +209,11 @@ An exception is made for files in readable text which contain their own license 
 ## Donate
 
 You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/vscode-nsis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
+
+[compile]: images/icon--build-light.svg
+[strict]: images/icon--build-strict-light.svg
+[task]: images/icon--task-light.svg
+[command]: images/icon--command-light.svg
+[info]: images/icon--info-light.svg
+[flag]: images/icon--flag-light.svg
+[info]: images/icon--info-light.svg
