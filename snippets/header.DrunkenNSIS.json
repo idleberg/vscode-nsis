@@ -1,293 +1,293 @@
 {
   "%{AddWordS}": {
-    "body": "${WordAddS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "\\${WordAddS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordAddS} \"[string1]\" \"[delimiter]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordAddS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "AddWordS"
   },
   "%{AddWord}": {
-    "body": "${WordAdd} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "\\${WordAdd} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordAdd} \"[string1]\" \"[delimiter]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordAdd.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "AddWord"
   },
   "%{CmdIf}": {
-    "body": "${IfCmd} ${1:command} ${|} ${2:command} ${|}$0",
+    "body": "\\${IfCmd} ${1:command} ${|} ${2:command} ${|}$0",
     "description": "Usage: ${IfCmd} expression statement",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfCmd.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "CmdIf"
   },
   "%{CompareSText}": {
-    "body": "${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
+    "body": "\\${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
     "description": "Usage: ${TextCompareS} \"[File1]\" \"[File2]\" \"[Option]\" \"Function\"",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/TextCompareS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "CompareSText"
   },
   "%{CompareText}": {
-    "body": "${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
+    "body": "\\${TextCompare} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"$0",
     "description": "Usage: ${TextCompare} \"[File1]\" \"[File2]\" \"[Option]\" \"Function\"",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/TextCompare.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "CompareText"
   },
   "%{CompareVersion}": {
-    "body": "${VersionCompare} \"${1:version1}\" \"${2:version2}\" $${3:result}$0",
+    "body": "\\${VersionCompare} \"${1:version1}\" \"${2:version2}\" $${3:result}$0",
     "description": "Usage: ${VersionCompare} \"[Version1]\" \"[Version2]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/VersionCompare.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "CompareVersion"
   },
   "%{ConvertVersion}": {
-    "body": "${VersionConvert} \"${1:version}\" \"${2:charlist}\" $${3:result}$0",
+    "body": "\\${VersionConvert} \"${1:version}\" \"${2:charlist}\" $${3:result}$0",
     "description": "Usage: ${VersionConvert} \"[Version]\" \"[CharList]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/VersionConvert.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "VersionConvert <WordFunc>"
   },
   "%{DoExit}": {
-    "body": "${ExitDo}$0",
+    "body": "\\${ExitDo}$0",
     "description": "Usage: ${ExitDo}",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitDo.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "DoExit"
   },
   "%{ExistsFile}": {
-    "body": "${FileExists} \"${1:file}\"$0",
+    "body": "\\${FileExists} \"${1:file}\"$0",
     "description": "Usage: logic_lib_statement ${FileExists} file_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/FileExists.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "ExistsFile"
   },
   "%{FilterStrS}": {
-    "body": "${StrFilterS} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
+    "body": "\\${StrFilterS} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
     "description": "Usage: ${StrFilterS} \"[string]\" \"[options]\" \"[symbols1]\" \"[symbols2]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/StrFilterS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "FilterStrS"
   },
   "%{FilterStr}": {
-    "body": "${StrFilter} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
+    "body": "\\${StrFilter} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" $${5:output}$0",
     "description": "Usage: ${StrFilter} \"[string]\" \"[options]\" \"[symbols1]\" \"[symbols2]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/StrFilter.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "FilterStr"
   },
   "%{Find2xSWord}": {
-    "body": "${WordFind2xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
+    "body": "\\${WordFind2xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordFind2XS} \"[string]\" \"[delimiter1]\" \"[delimiter2]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordFind2xS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "Find2xSWord"
   },
   "%{Find2xWord}": {
-    "body": "${WordFind2x} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
+    "body": "\\${WordFind2x} \"${1:input}\" \"${2:delimiter1}\" \"${3:delimiter2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordFind2X} \"[string]\" \"[delimiter1]\" \"[delimiter2]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordFind2x.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "Find2xWord"
   },
   "%{Find3xSWord}": {
-    "body": "${WordFind3xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
+    "body": "\\${WordFind3xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
     "description": "Usage: ${WordFind3XS} \"[string]\" \"[delimiter1]\" \"[center]\" \"[delimiter2]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordFind3xS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "Find3xSWord"
   },
   "%{Find3xWord}": {
-    "body": "${WordFind3x} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
+    "body": "\\${WordFind3x} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" $${6:output}$0",
     "description": "Usage: ${WordFind3X} \"[string]\" \"[delimiter1]\" \"[center]\" \"[delimiter2]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordFind3x.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "Find3xWord"
   },
   "%{FindLine}": {
-    "body": "${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$0",
+    "body": "\\${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"$0",
     "description": "Usage: ${LineFind} \"[File1]\" \"[File2|/NUL]\" \"[LineNumbers]\" \"Function\"",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/LineFind.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "FindLine"
   },
   "%{FindWordS}": {
-    "body": "${WordFindS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "\\${WordFindS} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordFindS} \"[string]\" \"[delimiter]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordFindS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "FindWordS"
   },
   "%{FindWord}": {
-    "body": "${WordFind} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
+    "body": "\\${WordFind} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" $${4:output}$0",
     "description": "Usage: ${WordFind} \"[string]\" \"[delimiter]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordFind.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "FindWord"
   },
   "%{IfAnd}": {
-    "body": "${AndIf} ${1:condition}$0",
+    "body": "\\${AndIf} ${1:condition}$0",
     "description": "Usage: ${AndIfNot} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIfNot.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "IfAnd"
   },
   "%{IfElse}": {
-    "body": "${ElseIf} ${1:condition}$0",
+    "body": "\\${ElseIf} ${1:condition}$0",
     "description": "Usage: ${ElseIf} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIf.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "IfElse"
   },
   "%{IfNotAnd}": {
-    "body": "${AndIfNot} ${1:condition}$0",
+    "body": "\\${AndIfNot} ${1:condition}$0",
     "description": "Usage: ${AndIfNot} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIfNot.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "IfNotAnd"
   },
   "%{IfNotElse}": {
-    "body": "${ElseIfNot} ${1:condition}$0",
+    "body": "\\${ElseIfNot} ${1:condition}$0",
     "description": "Usage: ${ElseIfNot} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIfNot.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "IfNotElse"
   },
   "%{IfNotOr}": {
-    "body": "${OrIfNot} ${1:condition}$0",
+    "body": "\\${OrIfNot} ${1:condition}$0",
     "description": "Usage: ",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/OrIfNot.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "IfNotOr"
   },
   "%{InsertWordS}": {
-    "body": "${WordInsertS} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
+    "body": "\\${WordInsertS} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordInsertS} \"[string]\" \"[delimiter]\" \"[word]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordInsertS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "InsertWordS"
   },
   "%{InsertWord}": {
-    "body": "${WordInsert} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
+    "body": "\\${WordInsert} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordInsert} \"[string]\" \"[delimiter]\" \"[word]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordInsert.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "InsertWord"
   },
   "%{JoinFile}": {
-    "body": "${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$0",
+    "body": "\\${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"$0",
     "description": "Usage: ${FileJoin} \"[File1]\" \"[File2]\" \"[File3]\"",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/FileJoin.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "JoinFile"
   },
   "%{ReadConfig}": {
-    "body": "${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
+    "body": "\\${ConfigRead} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
     "description": "Usage: ${ConfigReadS} \"[File]\" \"[Entry]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/ConfigReadS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "ReadConfig"
   },
   "%{ReadFromEnFiled}": {
-    "body": "${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$0",
+    "body": "\\${FileReadFromEnd} \"${1:file}\" \"${2:function}\"$0",
     "description": "Usage: ${FileReadFromEnd} \"[File]\" \"Function\"",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/FileReadFromEnd.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "ReadFromEnFiled"
   },
   "%{ReadLine}": {
-    "body": "${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$0",
+    "body": "\\${LineRead} \"${1:file}\" \"${2:line_number}\" $${3:var}$0",
     "description": "Usage: ${LineRead} \"[File]\" \"[LineNumber]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/LineRead.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "ReadLine"
   },
   "%{ReadSConfig}": {
-    "body": "${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
+    "body": "\\${ConfigReadS} \"${1:file}\" \"${2:entry}\" $${3:var}$0",
     "description": "Usage: ${ConfigReadS} \"[File]\" \"[Entry]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/ConfigReadS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "ReadSConfig"
   },
   "%{RecodeFile}": {
-    "body": "${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$0",
+    "body": "\\${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"$0",
     "description": "Usage: ${FileRecode} \"[File]\" \"[Format]\"",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/FileRecode.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "RecodeFile"
   },
   "%{ReplaceWordS}": {
-    "body": "${WordReplaceS} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
+    "body": "\\${WordReplaceS} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordReplaceS} \"[string]\" \"[word1]\" \"[word2]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordReplaceS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "ReplaceWordS"
   },
   "%{ReplaceWord}": {
-    "body": "${WordReplace} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
+    "body": "\\${WordReplace} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" $${5:output}$0",
     "description": "Usage: ${WordReplace} \"[string]\" \"[word1]\" \"[word2]\" \"[E][options]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/WordFunc/WordReplace.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>WordFunc.nsh",
     "prefix": "ReplaceWord"
   },
   "%{ShellIconsRefresh}": {
-    "body": "${RefreshShellIcons}$0",
+    "body": "\\${RefreshShellIcons}$0",
     "description": "Usage: ${RefreshShellIcons}",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/FileFunc/RefreshShellIcons.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>FileFunc.nsh",
     "prefix": "ShellIconsRefresh"
   },
   "%{SumLine}": {
-    "body": "${LineSum} \"${1:file}\" $${2:var}$0",
+    "body": "\\${LineSum} \"${1:file}\" $${2:var}$0",
     "description": "Usage: ${LineSum} \"[File]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/LineSum.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "SumLine"
   },
   "%{ThenIf}": {
-    "body": "${IfThen} ${1:condition} ${|} ${2:command} ${|}$0",
+    "body": "\\${IfThen} ${1:condition} ${|} ${2:command} ${|}$0",
     "description": "Usage: ${IfThen} expression statement",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThen.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "ThenIf"
   },
   "%{ThenNotIf}": {
-    "body": "${IfThenNot} ${1:condition} ${|} ${2:command} ${|}$0",
+    "body": "\\${IfThenNot} ${1:condition} ${|} ${2:command} ${|}$0",
     "description": "Usage: ${IfNotThen} expression statement",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThenNot.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "ThenNotIf"
   },
   "%{UnlessElse}": {
-    "body": "${ElseUnless} ${1:condition}$0",
+    "body": "\\${ElseUnless} ${1:condition}$0",
     "description": "Usage: ${ElseUnless} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseUnless.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "UnlessElse"
   },
   "%{WhileEnd}": {
-    "body": "${EndWhile}$0",
+    "body": "\\${EndWhile}$0",
     "description": "Usage: ${EndWhile}",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/EndWhile.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "WhileEnd"
   },
   "%{WhileExit}": {
-    "body": "${ExitWhile}$0",
+    "body": "\\${ExitWhile}$0",
     "description": "Usage: ${ExitWhile}",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitWhile.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>LogicLib.nsh",
     "prefix": "WhileExit"
   },
   "%{WriteConfig}": {
-    "body": "${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
+    "body": "\\${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
     "description": "Usage: ${ConfigWrite} \"[File]\" \"[Entry]\" \"[Value]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/ConfigWrite.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",
     "prefix": "WriteConfig"
   },
   "%{WriteSConfig}": {
-    "body": "${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
+    "body": "\\${ConfigWriteS} \"${1:file}\" \"${2:entry}\" \"${3:value}\" $${4:var}$0",
     "description": "Usage: ${ConfigWriteS} \"[File]\" \"[Entry]\" \"[Value]\" $var",
     "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/TextFunc/ConfigWriteS.md",
     "leftLabelHTML": "<span class='syntax--variable syntax-other'>%</span>TextFunc.nsh",

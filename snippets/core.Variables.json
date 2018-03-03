@@ -308,7 +308,7 @@
     "prefix": "WINDIR"
   },
   "${NSISDIR}": {
-    "body": "${NSISDIR}$0",
+    "body": "\\${NSISDIR}$0",
     "description": "A symbol that contains the path where NSIS is installed",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Variables/NSISDIR.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
