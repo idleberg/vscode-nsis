@@ -208,10 +208,10 @@ An exception is made for files in readable text which contain their own license 
 
 You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/vscode-nsis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
 
-[compile]: images/icon--build-light.svg
-[strict]: images/icon--build-strict-light.svg
-[task]: images/icon--task-light.svg
-[command]: images/icon--command-light.svg
-[info]: images/icon--info-light.svg
-[flag]: images/icon--flag-light.svg
-[info]: images/icon--info-light.svg
+[compile]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--build-light.svg
+[strict]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--build-strict-light.svg
+[task]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--task-light.svg
+[command]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--command-light.svg
+[info]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--info-light.svg
+[flag]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--flag-light.svg
+[info]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--info-light.svg
