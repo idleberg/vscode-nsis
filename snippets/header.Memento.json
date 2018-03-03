@@ -28,7 +28,7 @@
     "prefix": "MementoSectionSave"
   },
   "${MementoSection}": {
-    "body": "\\${MementoSection} \"${1:section_name}\" ${2:section_index}\n\t${3:# your code here}\n${MementoSectionEnd}$4",
+    "body": "\\${MementoSection} \"${1:section_name}\" ${2:section_index}\n\t${3:# your code here}\n\\${MementoSectionEnd}$4",
     "description": "Usage: ${MementoSection} [section_name] [section_index_output]",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/Memento/MementoSection.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>Memento.nsh</span>",

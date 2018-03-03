@@ -31,22 +31,22 @@
     "prefix": "Cmd"
   },
   "${DoUntil\u2026LoopUntil}": {
-    "body": "\\${DoUntil} ${1:statement}\n\t${3:# your code here}\n${LoopUntil} ${2:statement}$4",
+    "body": "\\${DoUntil} ${1:statement}\n\t${3:# your code here}\n\\${LoopUntil} ${2:statement}$4",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "DoUntil\u2026LoopUntil"
   },
   "${DoUntil\u2026Loop}": {
-    "body": "\\${Do} ${1:statement}\n\t${2:# your code here}\n${Loop}$3",
+    "body": "\\${Do} ${1:statement}\n\t${2:# your code here}\n\\${Loop}$3",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "DoUntil\u2026Loop"
   },
   "${Do\u2026LoopUntil}": {
-    "body": "\\${Do}\n\t${2:# your code here}\n${LoopUntil} ${1:statement}$3",
+    "body": "\\${Do}\n\t${2:# your code here}\n\\${LoopUntil} ${1:statement}$3",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Do\u2026LoopUntil"
   },
   "${Do\u2026Loop}": {
-    "body": "\\${Do}\n\t${1:# your code here}\n${Loop}$2",
+    "body": "\\${Do}\n\t${1:# your code here}\n\\${Loop}$2",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Do\u2026Loop"
   },
@@ -126,77 +126,77 @@
     "prefix": "FileExists"
   },
   "${ForEach\u2026Next}": {
-    "body": "\\${ForEach} ${1:statement}\n\t${2:# your code here}\n${Next}$3",
+    "body": "\\${ForEach} ${1:statement}\n\t${2:# your code here}\n\\${Next}$3",
     "description": "Usage: ${ForEach} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ForEach.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "ForEach\u2026Next"
   },
   "${For\u2026Next}": {
-    "body": "\\${For} ${1:statement}\n\t${2:# your code here}\n${Next}$3",
+    "body": "\\${For} ${1:statement}\n\t${2:# your code here}\n\\${Next}$3",
     "description": "Usage: ${For} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/For.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "For\u2026Next"
   },
   "${IfCmd}": {
-    "body": "\\${IfCmd} ${1:command} ${|} ${2:statement} ${|}$0",
+    "body": "\\${IfCmd} ${1:command} \\${|} ${2:statement} \\${|}$0",
     "description": "Usage: ${IfCmd} expression statement",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfCmd.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfCmd"
   },
   "${IfNot}": {
-    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n${EndIf}$3",
+    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${IfNot} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfNot.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfNot"
   },
   "${IfNot\u2026Else}": {
-    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n${Else}\n\t${3:# your code here}\n${EndIf}$4",
+    "body": "\\${IfNot} ${1:expression}\n\t${2:# your code here}\n\\${Else}\n\t${3:# your code here}\n\\${EndIf}$4",
     "description": "Usage: ${IfNot} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfNot.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfNot\u2026Else"
   },
   "${IfNot\u2026FileExists}": {
-    "body": "\\${IfNot} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n${EndIf}$3",
+    "body": "\\${IfNot} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${IfNot} ${FileExists} file_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfNot.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfNot\u2026FileExists"
   },
   "${IfThenNot}": {
-    "body": "\\${IfThenNot} ${1:expression} ${|} ${2:statement} ${|}$0",
+    "body": "\\${IfThenNot} ${1:expression} \\${|} ${2:statement} \\${|}$0",
     "description": "Usage: ${IfNotThen} expression statement",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThenNot.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfThenNot"
   },
   "${IfThen}": {
-    "body": "\\${IfThen} ${1:expression} ${|} ${2:statement} ${|}$0",
+    "body": "\\${IfThen} ${1:expression} \\${|} ${2:statement} \\${|}$0",
     "description": "Usage: ${IfThen} expression statement",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThen.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "IfThen"
   },
   "${If}": {
-    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n${EndIf}$3",
+    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${If} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/If.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "If"
   },
   "${If\u2026Else}": {
-    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n${Else}\n\t${3:# your code here}\n${EndIf}$4",
+    "body": "\\${If} ${1:expression}\n\t${2:# your code here}\n\\${Else}\n\t${3:# your code here}\n\\${EndIf}$4",
     "description": "Usage: ${If} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/If.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "If\u2026Else"
   },
   "${If\u2026FileExists}": {
-    "body": "\\${If} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n${EndIf}$3",
+    "body": "\\${If} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${If} ${FileExists} file_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/If.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
@@ -277,7 +277,7 @@
     "prefix": "SectionIsSelected"
   },
   "${Select}": {
-    "body": "\\${Select} $${1:var}\n\t${2:# your code here}\n${EndSelect}$3",
+    "body": "\\${Select} $${1:var}\n\t${2:# your code here}\n\\${EndSelect}$3",
     "description": "Usage: ${Select} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Select.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
@@ -291,28 +291,28 @@
     "prefix": "Silent"
   },
   "${Switch}": {
-    "body": "\\${Switch} $${1:var}\n\t${2:# your code here}\n${EndSwitch}$3",
+    "body": "\\${Switch} $${1:var}\n\t${2:# your code here}\n\\${EndSwitch}$3",
     "description": "Usage: ${Switch} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Switch.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Switch"
   },
   "${Unless}": {
-    "body": "\\${Unless} $${1:var}\n\t${2:# your code here}\n${EndUnless}$3",
+    "body": "\\${Unless} $${1:var}\n\t${2:# your code here}\n\\${EndUnless}$3",
     "description": "Usage: ${Unless} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Unless.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Unless"
   },
   "${Unless\u2026FileExists}": {
-    "body": "\\${Unless} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n${EndIf}$3",
+    "body": "\\${Unless} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${Unless} ${FileExists} file_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Unless.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Unless\u2026FileExists"
   },
   "${While}": {
-    "body": "\\${While} ${1:expression}\n\t${2:# your code here}\n${EndWhile}$3",
+    "body": "\\${While} ${1:expression}\n\t${2:# your code here}\n\\${EndWhile}$3",
     "description": "Usage: ${While} expression",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/While.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
