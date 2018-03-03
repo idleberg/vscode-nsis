@@ -98,10 +98,5 @@
     "body": "\\${__UNINSTALL__\\}$0",
     "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
     "prefix": "__UNINSTALL__"
-  },
-  "${envVarName}": {
-    "body": "\\${envVarName}$0",
-    "leftLabelHTML": "<span class='syntax--constant'>${}</span>",
-    "prefix": "envVarName"
   }
 }
