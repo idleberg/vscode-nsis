@@ -1,5 +1,7 @@
 # v3.12.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.12.5)
 
+- fix (even more) unescaped dollar-symbols
+
 # v3.12.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.12.4)
 
 - fix (more) unescaped dollar-symbols
