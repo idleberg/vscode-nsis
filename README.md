@@ -181,16 +181,16 @@ Setting                      | Description
 
 #### Commands
 
-Icon                    | Action                   |  Syntax             | Shortcut
-------------------------|--------------------------|---------------------|----------
-![compile][compile]     | Compile NSIS             | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-![compile][strict]      | Compile NSIS (strict)    | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-![task][task]           | Create Build Task        |`source.nsis`        | –
-![command][command]     | Command Reference        |`source.nsis`        | –
-![info][info]           | Show Version             |`source.nsis`        | –
-![flag][flag]           | Show Compiler Flags      |`source.nsis`        | –
-![compile][compile]     | Transpile nsL Assembler | `source.nsl`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-![compile][compile]     | Transpile BridleNSIS     |`source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Action                   |  Syntax             | Shortcut
+-------------------------|---------------------|----------
+Compile NSIS             | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Compile NSIS (strict)    | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Create Build Task        |`source.nsis`        | –
+Command Reference        |`source.nsis`        | –
+Show Version             |`source.nsis`        | –
+Show Compiler Flags      |`source.nsis`        | –
+Transpile nsL Assembler | `source.nsl`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Transpile BridleNSIS     |`source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 
 ### Task Runner
 
@@ -207,11 +207,3 @@ An exception is made for files in readable text which contain their own license 
 ## Donate
 
 You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/vscode-nsis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
-
-[compile]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--build-light.svg
-[strict]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--build-strict-light.svg
-[task]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--task-light.svg
-[command]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--command-light.svg
-[info]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--info-light.svg
-[flag]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--flag-light.svg
-[info]: https://raw.githubusercontent.com/idleberg/vscode-nsis/master/images/icon--info-light.svg
