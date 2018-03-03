@@ -189,7 +189,7 @@ Create Build Task        |`source.nsis`        | –
 Command Reference        |`source.nsis`        | –
 Show Version             |`source.nsis`        | –
 Show Compiler Flags      |`source.nsis`        | –
-Transpile nsL Assembler | `source.nsl`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Transpile nsL Assembler  | `source.nsl`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 Transpile BridleNSIS     |`source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 
 ### Task Runner
