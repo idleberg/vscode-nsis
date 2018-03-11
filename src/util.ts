@@ -109,7 +109,7 @@ const revealInstaller = (outFile) => {
 
       switch (platform()) {
         case 'win32':
-          open = spawn('open', [`/select,${outFile}`]);
+          open = spawn('explorer', [`/select,${outFile}`]);
           break;
         case 'darwin':
           open = spawn('open', ['-R', outFile]);
