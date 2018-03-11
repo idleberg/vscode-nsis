@@ -4,7 +4,7 @@ import { window, workspace, WorkspaceConfiguration } from 'vscode';
 
 import * as opn from 'opn';
 import { basename, dirname, extname, join } from 'path';
-import { existsSync } from 'fs';
+import { access, existsSync } from 'fs';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
@@ -88,12 +88,38 @@ const pathWarning = (): any => {
   .then((choice) => {
     switch (choice) {
       case 'Download':
-        return opn('https://sourceforge.net/projects/nsis/');
+        opn('https://sourceforge.net/projects/nsis/');
+        break;
       case 'Help':
-        return opn('http://superuser.com/a/284351/195953');
+        opn('http://superuser.com/a/284351/195953');
+        break;
+      default:
+        break;
     }
   });
 };
+
+const revealInstaller = (outFile) => {
+  console.log(outFile)
+    return access(outFile, 0, (error) => {
+      if (error) {
+        return console.log(error);
+      }
+
+      let open;
+
+      switch (platform()) {
+        case 'win32':
+          open = spawn('open', [`/select,${outFile}`])
+          break;
+        case 'darwin':
+          open = spawn('open', ['-R', outFile]);
+          break;
+        default:
+          break;
+      }
+    });
+  }
 
 const runInstaller = (outFile): void => {
   let config: WorkspaceConfiguration = getConfig();
@@ -138,6 +164,19 @@ const successBridleNsis = (choice): void => {
   }
 };
 
+const successNsis = (choice, outFile) => {
+  switch (choice) {
+    case 'Run':
+      runInstaller(outFile);
+      break;
+    case 'Reveal':
+      revealInstaller(outFile);
+      break;
+    default:
+      break;
+  }
+}
+
 const successNslAssembler = (choice): void => {
   let doc = window.activeTextEditor.document;
 
@@ -171,9 +210,11 @@ export {
   isWindowsCompatible,
   openURL,
   pathWarning,
+  revealInstaller,
   runInstaller,
   sanitize,
   successBridleNsis,
   successNslAssembler,
+  successNsis,
   which
 };

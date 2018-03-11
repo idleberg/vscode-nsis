@@ -1,3 +1,8 @@
+# v3.13.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.13.0)
+
+- add Reveal button
+- minor bug-fixes
+
 # v3.12.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.12.5)
 
 - fix (even more) unescaped dollar-symbols

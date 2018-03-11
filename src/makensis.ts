@@ -3,9 +3,23 @@
 import { window, WorkspaceConfiguration } from 'vscode';
 
 import * as makensis from 'makensis';
-import { clearOutput, detectOutfile, getConfig, getMakensisPath, getPrefix, isWindowsCompatible, openURL, pathWarning, runInstaller, sanitize } from './util';
 import { platform } from 'os';
 import { spawn } from 'child_process';
+
+import {
+  clearOutput,
+  detectOutfile,
+  getConfig,
+  getMakensisPath,
+  getPrefix,
+  isWindowsCompatible,
+  openURL,
+  pathWarning,
+  revealInstaller,
+  runInstaller,
+  sanitize,
+  successNsis
+} from './util';
 
 const nsisChannel = window.createOutputChannel('NSIS');
 
@@ -52,7 +66,7 @@ const compile = (strictMode: boolean): void => {
         if (line.indexOf('warning: ') !== -1) {
           hasWarning = true;
         }
-        if (isWindowsCompatible() === true && outFile === '') {
+        if (outFile === '') {
           outFile = detectOutfile(line);
         }
 
@@ -66,24 +80,41 @@ const compile = (strictMode: boolean): void => {
 
       child.on('close', (code) => {
         let openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
+
         if (code === 0) {
           if (hasWarning === true) {
             if (config.showNotifications) {
-              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton)
+              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton, "Reveal")
               .then((choice) => {
-                if (choice === 'Run') {
-                  runInstaller(outFile);
-                }
+                successNsis(choice, outFile);
+                // switch (choice) {
+                //   case 'Run':
+                //     runInstaller(outFile);
+                //     break;
+                //   case 'Reveal':
+                //     revealInstaller(outFile);
+                //     break;
+                //   default:
+                //     break;
+                // }
               });
             }
             if (stdErr.length > 0) console.warn(stdErr);
           } else {
             if (config.showNotifications) {
-              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton)
+              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton, "Reveal")
               .then((choice) => {
-                if (choice === 'Run') {
-                  runInstaller(outFile);
-                }
+                successNsis(choice, outFile);
+                // switch (choice) {
+                //   case 'Run':
+                //     runInstaller(outFile);
+                //     break;
+                //   case 'Reveal':
+                //     revealInstaller(outFile);
+                //     break;
+                //   default:
+                //     break;
+                // }
               });
             }
           }
