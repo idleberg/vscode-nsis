@@ -93,8 +93,6 @@ const pathWarning = (): any => {
       case 'Help':
         opn('http://superuser.com/a/284351/195953');
         break;
-      default:
-        break;
     }
   });
 };
@@ -109,12 +107,17 @@ const revealInstaller = (outFile) => {
 
       switch (platform()) {
         case 'win32':
-          open = spawn('explorer', [`/select,${outFile}`]);
+          spawn('explorer', [`/select,${outFile}`]);
           break;
         case 'darwin':
-          open = spawn('open', ['-R', outFile]);
+          spawn('open', ['-R', outFile]);
           break;
-        default:
+        case 'linux':
+          try {
+            spawn('nautilus', [outFile])
+          } catch (error) {
+            console.error(error);
+          }
           break;
       }
     });
@@ -170,8 +173,6 @@ const successNsis = (choice, outFile) => {
       break;
     case 'Reveal':
       revealInstaller(outFile);
-      break;
-    default:
       break;
   }
 };

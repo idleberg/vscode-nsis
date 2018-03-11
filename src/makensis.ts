@@ -80,7 +80,7 @@ const compile = (strictMode: boolean): void => {
 
       child.on('close', (code) => {
         const openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
-        const revealButton = (platform() === 'darwin' || platform() === 'win32') ? 'Reveal' : null;
+        const revealButton = (platform() === 'win32' || platform() === 'darwin' || platform() === 'linux') ? 'Reveal' : null;
 
         if (code === 0) {
           if (hasWarning === true) {
