@@ -79,12 +79,13 @@ const compile = (strictMode: boolean): void => {
       });
 
       child.on('close', (code) => {
-        let openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
+        const openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
+        const revealButton = (platform() === 'darwin' || platform() === 'win32') ? 'Reveal' : null;
 
         if (code === 0) {
           if (hasWarning === true) {
             if (config.showNotifications) {
-              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton, 'Reveal')
+              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton, revealButton)
               .then((choice) => {
                 successNsis(choice, outFile);
               });
@@ -92,7 +93,7 @@ const compile = (strictMode: boolean): void => {
             if (stdErr.length > 0) console.warn(stdErr);
           } else {
             if (config.showNotifications) {
-              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton, 'Reveal')
+              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton, revealButton)
               .then((choice) => {
                 successNsis(choice, outFile);
               });
