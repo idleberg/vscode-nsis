@@ -103,8 +103,6 @@ const revealInstaller = (outFile) => {
         return console.log(error);
       }
 
-      let open;
-
       switch (platform()) {
         case 'win32':
           spawn('explorer', [`/select,${outFile}`]);
