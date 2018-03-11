@@ -114,7 +114,7 @@ const revealInstaller = (outFile) => {
           break;
         case 'linux':
           try {
-            spawn('nautilus', [outFile])
+            spawn('nautilus', [outFile]);
           } catch (error) {
             console.error(error);
           }
