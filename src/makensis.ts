@@ -84,37 +84,17 @@ const compile = (strictMode: boolean): void => {
         if (code === 0) {
           if (hasWarning === true) {
             if (config.showNotifications) {
-              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton, "Reveal")
+              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton, 'Reveal')
               .then((choice) => {
                 successNsis(choice, outFile);
-                // switch (choice) {
-                //   case 'Run':
-                //     runInstaller(outFile);
-                //     break;
-                //   case 'Reveal':
-                //     revealInstaller(outFile);
-                //     break;
-                //   default:
-                //     break;
-                // }
               });
             }
             if (stdErr.length > 0) console.warn(stdErr);
           } else {
             if (config.showNotifications) {
-              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton, "Reveal")
+              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton, 'Reveal')
               .then((choice) => {
                 successNsis(choice, outFile);
-                // switch (choice) {
-                //   case 'Run':
-                //     runInstaller(outFile);
-                //     break;
-                //   case 'Reveal':
-                //     revealInstaller(outFile);
-                //     break;
-                //   default:
-                //     break;
-                // }
               });
             }
           }

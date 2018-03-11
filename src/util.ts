@@ -100,7 +100,6 @@ const pathWarning = (): any => {
 };
 
 const revealInstaller = (outFile) => {
-  console.log(outFile)
     return access(outFile, 0, (error) => {
       if (error) {
         return console.log(error);
@@ -110,7 +109,7 @@ const revealInstaller = (outFile) => {
 
       switch (platform()) {
         case 'win32':
-          open = spawn('open', [`/select,${outFile}`])
+          open = spawn('open', [`/select,${outFile}`]);
           break;
         case 'darwin':
           open = spawn('open', ['-R', outFile]);
@@ -119,7 +118,7 @@ const revealInstaller = (outFile) => {
           break;
       }
     });
-  }
+  };
 
 const runInstaller = (outFile): void => {
   let config: WorkspaceConfiguration = getConfig();
@@ -175,7 +174,7 @@ const successNsis = (choice, outFile) => {
     default:
       break;
   }
-}
+};
 
 const successNslAssembler = (choice): void => {
   let doc = window.activeTextEditor.document;
