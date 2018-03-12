@@ -100,7 +100,7 @@ const pathWarning = (): any => {
 const revealInstaller = (outFile) => {
     return access(outFile, 0, (error) => {
       if (error) {
-        return console.log(error);
+        return console.error(error);
       }
 
       switch (platform()) {
