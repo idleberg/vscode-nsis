@@ -1,3 +1,8 @@
+# v3.13.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.13.1)
+
+- print `fs.access` error to `console.error`
+- catch empty output file
+
 # v3.13.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.13.0)
 
 - add Reveal button
