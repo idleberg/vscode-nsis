@@ -36,11 +36,8 @@
         "opn": "^5.2.0"
     },
     "devDependencies": {
-        "@babel/register": "^7.0.0-beta.41",
         "@nsis/logo": "*",
         "@types/node": "^9.4.6",
-        "babel-core": "^6.26.0",
-        "babel-preset-es2015": "^6.24.1",
         "gulp": "^4.0.0",
         "gulp-raster": "^0.2.0",
         "gulp-rename": "^1.2.2",
