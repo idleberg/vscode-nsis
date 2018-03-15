@@ -1,3 +1,9 @@
+# v3.13.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.13.2)
+
+- fix check for outfile path
+- use NSIS logo from npm
+- use ES6 imports in `gulpfile.js`
+
 # v3.13.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.13.1)
 
 - print `fs.access` error to `console.error`
