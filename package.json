@@ -32,18 +32,18 @@
         "vscode:prepublish": "tsc -p ./ && gulp"
     },
     "dependencies": {
-        "makensis": "^0.12.5",
-        "opn": "^5.2.0"
+        "makensis": "^0.12.6",
+        "opn": "^5.3.0"
     },
     "devDependencies": {
         "@nsis/logo": "*",
-        "@types/node": "^9.4.6",
+        "@types/node": "^10.1.0",
         "gulp": "^4.0.0",
         "gulp-raster": "^0.2.0",
-        "gulp-rename": "^1.2.2",
-        "tslint": "^5.9.1",
-        "typescript": "^2.7.2",
-        "vscode": "^1.1.10",
+        "gulp-rename": "^1.2.3",
+        "tslint": "^5.10.0",
+        "typescript": "^2.8.3",
+        "vscode": "^1.1.17",
         "vscode-linter": "^0.1.0"
     },
     "icon": "images/logo.png",
