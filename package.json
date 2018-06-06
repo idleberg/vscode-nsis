@@ -9,6 +9,12 @@
         "name": "Jan T. Sott",
         "url": "http://github.com/idleberg"
     },
+    "scripts": {
+        "build": "tsc -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "vscode-linter",
+        "vscode:prepublish": "tsc -p ./ && gulp"
+    },
     "keywords": [
         "nsis",
         "nsl assembler",
@@ -25,12 +31,6 @@
         "url": "https://github.com/idleberg/vscode-nsis/issues"
     },
     "main": "./lib/main",
-    "scripts": {
-        "build": "tsc -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "vscode-linter",
-        "vscode:prepublish": "tsc -p ./ && gulp"
-    },
     "dependencies": {
         "makensis": "^0.12.5",
         "opn": "^5.2.0"
@@ -41,10 +41,11 @@
         "gulp": "^4.0.0",
         "gulp-raster": "^0.2.0",
         "gulp-rename": "^1.2.2",
+        "husky": "^0.14.3",
         "tslint": "^5.9.1",
         "typescript": "^2.7.2",
         "vscode": "^1.1.10",
-        "vscode-linter": "^0.1.0"
+        "vscode-linter": "^0.2.1"
     },
     "icon": "images/logo.png",
     "galleryBanner": {
