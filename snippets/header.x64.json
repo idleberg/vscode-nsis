@@ -13,26 +13,26 @@
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
     "prefix": "EnableX64FSRedirection"
   },
-  "${IsNativeProcessorArchitectureAMD64}": {
-    "body": "\\${IsNativeProcessorArchitectureAMD64}$0",
-    "description": "Usage: logic_lib_statement ${IsNativeProcessorArchitectureAMD64}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeProcessorArchitectureAMD64.html?utm_source=vscode&utm_content=snippet",
+  "${IsNativeAMD64}": {
+    "body": "\\${IsNativeAMD64}$0",
+    "description": "Usage: logic_lib_statement ${IsNativeAMD64}",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeAMD64.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "IsNativeProcessorArchitectureAMD64"
+    "prefix": "IsNativeAMD64"
   },
-  "${IsNativeProcessorArchitectureARM64}": {
-    "body": "\\${IsNativeProcessorArchitectureARM64}$0",
-    "description": "Usage: logic_lib_statement ${IsNativeProcessorArchitectureARM64}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeProcessorArchitectureARM64.html?utm_source=vscode&utm_content=snippet",
+  "${IsNativeARM64}": {
+    "body": "\\${IsNativeARM64}$0",
+    "description": "Usage: logic_lib_statement ${IsNativeARM64}",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeARM64.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "IsNativeProcessorArchitectureARM64"
+    "prefix": "IsNativeARM64"
   },
-  "${IsNativeProcessorArchitectureIA32}": {
-    "body": "\\${IsNativeProcessorArchitectureIA32}$0",
-    "description": "Usage: logic_lib_statement ${IsNativeProcessorArchitectureIA32}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeProcessorArchitectureIA32.html?utm_source=vscode&utm_content=snippet",
+  "${IsNativeIA32}": {
+    "body": "\\${IsNativeIA32}$0",
+    "description": "Usage: logic_lib_statement ${IsNativeIA32}",
+    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeIA32.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "IsNativeProcessorArchitectureIA32"
+    "prefix": "IsNativeIA32"
   },
   "${IsWow64}": {
     "body": "\\${IsWow64}$0",
