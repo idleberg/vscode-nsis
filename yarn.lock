@@ -10,9 +10,9 @@
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@types/fancy-log/-/fancy-log-1.3.0.tgz#a61ab476e5e628cd07a846330df53b85e05c8ce0"
 
-"@types/node@^10.3.6":
-  version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.0.tgz#f5b61395c09b47ac46aaa1452750c9a72b3d3673"
+"@types/node@^10.5.2":
+  version "10.5.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.2.tgz#f19f05314d5421fe37e74153254201a7bf00a707"
 
 abbrev@1:
   version "1.1.1"
@@ -2225,9 +2225,9 @@ make-iterator@^1.0.0:
   dependencies:
     kind-of "^6.0.2"
 
-makensis@^0.12.6:
-  version "0.12.6"
-  resolved "https://registry.yarnpkg.com/makensis/-/makensis-0.12.6.tgz#fc8efc284c43a1b43e8dd5f3ac9c4063b93665a3"
+makensis@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/makensis/-/makensis-0.13.0.tgz#b6132689f90be7b2856b8d002f3ab95153cfb2a6"
 
 map-cache@^0.2.0, map-cache@^0.2.2:
   version "0.2.2"
