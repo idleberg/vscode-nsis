@@ -33,7 +33,7 @@
     },
     "main": "./lib/main",
     "dependencies": {
-        "makensis": "^0.13.0",
+        "makensis": "^0.14.0",
         "opn": "^5.3.0"
     },
     "devDependencies": {
