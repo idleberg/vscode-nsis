@@ -88,6 +88,12 @@ Clone repository as `nsis`:
 $ git clone https://github.com/idleberg/vscode-nsis nsis
 ```
 
+Install dependencies:
+
+```bash
+cd nsis && npm install
+```
+
 ## Usage
 
 ### IntelliSense
