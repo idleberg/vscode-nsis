@@ -1,7 +1,7 @@
 # NSIS for Visual Studio Code
 
 [![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT)
-[![GNU General Public License](https://flat.badgen.net/badge/license-GPL%20v2-orange)](http://www.gnu.org/licenses/gpl-2.0.html)
+[![GNU General Public License](https://flat.badgen.net/badge/license/GPL%20v2/orange)](http://www.gnu.org/licenses/gpl-2.0.html)
 [![GitHub](https://flat.badgen.net/github/release/idleberg/vscode-nsis)](https://github.com/idleberg/vscode-nsis/releases)
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/idleberg.nsis.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/vscode-nsis)](https://circleci.com/gh/idleberg/vscode-nsis)
