@@ -1,3 +1,9 @@
+# v3.14.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.14.0)
+
+- add `IsNative*` macros (from NSIS v3.04)
+- add *NSIS: Convert Language File* command
+- update dependencies
+
 # v3.13.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.13.2)
 
 - fix check for outfile path
