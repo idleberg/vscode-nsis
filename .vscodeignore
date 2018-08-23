@@ -1,5 +1,8 @@
+.circleci/
 .editorconfig
 .gitignore
 .travis.yml
 gulpfile.js
+package-lock.json
 tslint.json
+yarn.lock
