@@ -33,6 +33,7 @@
     },
     "main": "./lib/main",
     "dependencies": {
+        "@nsis/nlf": "^0.4.2",
         "makensis": "^0.15.0",
         "opn": "^5.3.0"
     },
@@ -63,6 +64,7 @@
     ],
     "activationEvents": [
         "onLanguage:bridlensis",
+        "onLanguage:nlf",
         "onLanguage:nsis",
         "onLanguage:nsl"
     ],
@@ -274,6 +276,10 @@
                     "dark": "./images/icon--task-dark.svg",
                     "light": "./images/icon--task-light.svg"
                 }
+            },
+            {
+                "command": "extension.nsis.convert-language-file",
+                "title": "NSIS: Convert Language File"
             }
         ],
         "keybindings": [

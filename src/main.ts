@@ -5,6 +5,7 @@ import { commands } from 'vscode';
 // Load package components
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { createTask } from './task';
+import { convert } from './nlf';
 import { bridleNsis, nslAssembler} from './transpiler';
 
 const activate = (context) => {
@@ -46,6 +47,11 @@ const activate = (context) => {
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.create-build-task', (editor) => {
         return createTask();
+      })
+    );
+    context.subscriptions.push(
+      commands.registerTextEditorCommand('extension.nsis.convert-language-file', (editor) => {
+        return convert();
       })
     );
 };
