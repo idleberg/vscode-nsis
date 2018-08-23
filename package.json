@@ -39,7 +39,7 @@
     },
     "devDependencies": {
         "@nsis/logo": "*",
-        "@types/node": "^10.7.1",
+        "@types/node": "^10.9.0",
         "gulp": "^4.0.0",
         "gulp-raster": "^0.2.0",
         "gulp-rename": "^1.4.0",
