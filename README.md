@@ -5,7 +5,7 @@
 [![GitHub](https://flat.badgen.net/github/release/idleberg/vscode-nsis)](https://github.com/idleberg/vscode-nsis/releases)
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/idleberg.nsis.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/vscode-nsis)](https://circleci.com/gh/idleberg/vscode-nsis)
-[![David](https://flat.badgen.net/david/dev/idleberg/vscode-nsis)](https://david-dm.org/idleberg/vscode-nsis?type=dev)
+[![David](https://flat.badgen.net/david/dep/idleberg/vscode-nsis)](https://david-dm.org/idleberg/vscode-nsis)
 [![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/vscode)
 
 Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS).
