@@ -19,7 +19,7 @@ const convertNLF = (doc) => {
 
   try {
     input = doc.getText();
-    output = NLF.parse(input, true);
+    output = NLF.parse(input, { stringify: true });
   } catch (err) {
     console.error(err);
     return window.showErrorMessage('Conversion failed, see output for details');
