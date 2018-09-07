@@ -1,3 +1,7 @@
+# v3.14.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.14.1)
+
+- add support for `@nsis/nlf@0.5`
+
 # v3.14.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.14.0)
 
 - add `IsNative*` macros (from NSIS v3.04)
