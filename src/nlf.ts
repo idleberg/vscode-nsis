@@ -11,6 +11,8 @@ const convert = () => {
 
   if (doc.languageId === 'nlf') {
     convertNLF(doc);
+  } else if (doc.languageId === 'json') {
+    convertJSON(doc);
   }
 };
 
@@ -28,17 +30,17 @@ const convertNLF = (doc) => {
   openNewFile(doc, output, 'json');
 };
 
-// const convertJSON = (doc) => {
-//   let input, output;
+const convertJSON = (doc) => {
+  let input, output;
 
-//   try {
-//     input = doc.getText();
-//     output = NLF.stringify(input);
-//   } catch (err) {
-//   }
+  try {
+    input = doc.getText();
+    output = NLF.stringify(input);
+  } catch (err) {
+  }
 
-//   openNewFile(doc, output, "nlf");
-// };
+  openNewFile(doc, output, 'nlf');
+};
 
 const openNewFile = (doc, input, targetExt) => {
   const newFileName = basename(doc.fileName, extname(doc.fileName));
