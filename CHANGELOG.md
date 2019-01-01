@@ -1,6 +1,7 @@
 # v3.16.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.0)
 
 - add support for NSIS v3.04
+- update dependencies
 
 # v3.15.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.15.0)
 
