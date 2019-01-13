@@ -1,3 +1,7 @@
+# v3.16.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.1)
+
+- fix command reference on NSIS v3.04
+
 # v3.16.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.0)
 
 - add support for NSIS v3.04

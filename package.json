@@ -34,7 +34,7 @@
     "main": "./lib/main",
     "dependencies": {
         "@nsis/nlf": "^0.5.0",
-        "makensis": "^0.16.3",
+        "makensis": "^0.17.0",
         "opn": "^5.4.0"
     },
     "devDependencies": {
