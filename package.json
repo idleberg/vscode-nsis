@@ -36,7 +36,8 @@
     "dependencies": {
         "@nsis/nlf": "^0.6.1",
         "makensis": "^0.17.0",
-        "open": "^6.0.0"
+        "open": "^6.3.0",
+        "vscode-linter": "^0.2.2"
     },
     "devDependencies": {
         "@nsis/logo": "*",
@@ -47,8 +48,7 @@
         "husky": "^2.3.0",
         "tslint": "^5.17.0",
         "typescript": "^3.5.1",
-        "vscode": "^1.1.34",
-        "vscode-linter": "^0.2.2"
+        "vscode": "^1.1.34"
     },
     "icon": "images/logo.png",
     "galleryBanner": {

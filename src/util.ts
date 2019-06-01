@@ -2,7 +2,7 @@
 
 import { window, workspace, WorkspaceConfiguration } from 'vscode';
 
-import * as opn from 'opn';
+import * as open from 'open';
 import { basename, dirname, extname, join } from 'path';
 import { access } from 'fs';
 import { platform } from 'os';
@@ -80,7 +80,7 @@ const getMakensisPath = (): Promise<any> => {
 };
 
 const openURL = (cmd: string): void => {
-  opn(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
+  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
 };
 
 const pathWarning = (): any => {
@@ -88,10 +88,10 @@ const pathWarning = (): any => {
   .then((choice) => {
     switch (choice) {
       case 'Download':
-        opn('https://sourceforge.net/projects/nsis/');
+        open('https://sourceforge.net/projects/nsis/');
         break;
       case 'Help':
-        opn('http://superuser.com/a/284351/195953');
+        open('http://superuser.com/a/284351/195953');
         break;
     }
   });
