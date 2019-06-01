@@ -6,3 +6,17 @@ gulpfile.js
 package-lock.json
 tslint.json
 yarn.lock
+
+# Package managers
+bower_components/
+node_modules/
+npm-debug.log*
+package-lock.json
+vendor/
+
+# Project specific
+*.vsix
+images/logo.svg
+lib/
+todo.md
+tsconfig.tsbuildinfo

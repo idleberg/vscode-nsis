@@ -1,9 +1,13 @@
-*.vsix
+# Package managers
 bower_components/
-images/logo.svg
-lib/
 node_modules/
 npm-debug.log*
 package-lock.json
-todo.md
 vendor/
+
+# Project specific
+*.vsix
+images/logo.svg
+lib/
+todo.md
+tsconfig.tsbuildinfo
