@@ -2,7 +2,7 @@
     "name": "nsis",
     "displayName": "NSIS",
     "description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
-    "version": "3.16.4",
+    "version": "3.16.3",
     "publisher": "idleberg",
     "license": "MIT OR GPL-2.0",
     "author": {
@@ -14,7 +14,7 @@
         "dev": "tsc --watch --pretty --project ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "vscode-linter",
-        "vscode:prepublish": "npm run build && gulp"
+        "vscode:prepublish": "npm run compile && gulp"
     },
     "keywords": [
         "nsis",
