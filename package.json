@@ -12,7 +12,7 @@
     "scripts": {
         "build": "tsc --pretty --project ./",
         "dev": "tsc --watch --pretty --project ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
+        "postinstall": "node ./node_modules/vscode/bin/install && npm run build",
         "precommit": "npm run test",
         "test": "vscode-linter",
         "vscode:prepublish": "npm run build && gulp"

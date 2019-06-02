@@ -1,4 +1,8 @@
-# v3.16.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.26.2)
+# v3.16.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.3)
+
+- fix `postinstall` script
+
+# v3.16.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.2)
 
 - modify TypeScript config
 - update dependencies
