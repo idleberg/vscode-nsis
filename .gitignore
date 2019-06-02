@@ -1,3 +1,8 @@
+# Development
+*.map
+lib/
+tsconfig.tsbuildinfo
+
 # Package managers
 bower_components/
 node_modules/
@@ -8,6 +13,4 @@ vendor/
 # Project specific
 *.vsix
 images/logo.svg
-lib/
 todo.md
-tsconfig.tsbuildinfo
