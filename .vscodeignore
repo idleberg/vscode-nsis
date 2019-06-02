@@ -8,8 +8,6 @@ tslint.json
 yarn.lock
 
 # Package managers
-bower_components/
-node_modules/
 npm-debug.log*
 package-lock.json
 vendor/

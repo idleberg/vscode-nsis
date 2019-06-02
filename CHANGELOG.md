@@ -1,3 +1,7 @@
+# v3.16.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.5)
+
+- fix `.vscodeignore`
+
 # v3.16.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.4)
 
 - update scripts
