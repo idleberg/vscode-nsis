@@ -10,10 +10,9 @@
         "url": "http://github.com/idleberg"
     },
     "scripts": {
-        "build": "tsc --pretty --project ./",
+        "compile": "tsc --pretty --project ./",
         "dev": "tsc --watch --pretty --project ./",
-        "postinstall": "npm run build",
-        "precommit": "npm run test",
+        "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "vscode-linter",
         "vscode:prepublish": "npm run build && gulp"
     },
@@ -49,6 +48,11 @@
         "tslint": "^5.17.0",
         "typescript": "^3.5.1",
         "vscode": "^1.1.34"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run test"
+      }
     },
     "icon": "images/logo.png",
     "galleryBanner": {

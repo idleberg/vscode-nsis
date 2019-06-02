@@ -1,3 +1,8 @@
+# v3.16.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.4)
+
+- update scripts
+- update ignore-files
+
 # v3.16.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.3)
 
 - fix `postinstall` script

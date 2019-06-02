@@ -17,6 +17,6 @@ vendor/
 # Project specific
 *.vsix
 images/logo.svg
-lib/
+src/
 todo.md
 tsconfig.tsbuildinfo
