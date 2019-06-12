@@ -1,3 +1,8 @@
+# v3.17.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.17.0)
+
+- compile with Webpack
+- update dependencies
+
 # v3.16.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.16.5)
 
 - fix `.vscodeignore`
