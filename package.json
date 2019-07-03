@@ -10,7 +10,7 @@
         "url": "http://github.com/idleberg"
     },
     "scripts": {
-        "compile": "webpack --mode none",
+        "build": "webpack --mode production",
         "dev": "webpack --mode none --watch",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "vscode-linter",
