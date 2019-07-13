@@ -34,6 +34,7 @@
     "main": "./lib/extension",
     "dependencies": {
         "@nsis/nlf": "^0.6.1",
+        "@types/vscode": "^1.36.0",
         "makensis": "^0.18.1",
         "open": "^6.3.0"
     },
