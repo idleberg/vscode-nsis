@@ -18,10 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@nsis/language-data@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@nsis/language-data/-/language-data-0.5.1.tgz#5dbf18aa17381bc2a16d5e4c52272b1aa052f2bb"
-  integrity sha512-rsbghvYNfVTmbTSHlMqF8kpG70mUlJTg6IiUf9IBAqidCyC19vlsYQXShrzPUeRqPP2GiXnIQPjDJ+Z7H0TTyw==
+"@nsis/language-data@^0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@nsis/language-data/-/language-data-0.7.1.tgz#5641317ac100a38e4290be6d4c1e4166acae47c5"
+  integrity sha512-KqRRvwOXnNsSEpTufe53ws4cSf5BgCh7rJLAAgrBeatefBT4SDpyjfGw8J/YisI4XYAKO9c4IZXSpCkRIQbn1Q==
 
 "@nsis/logo@*":
   version "0.0.0"
@@ -1075,7 +1075,7 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cosmiconfig@^5.2.0:
+cosmiconfig@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.2.1.tgz#040f726809c591e77a17c0a3626ca45b4f168b1a"
   integrity sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==
@@ -2255,17 +2255,17 @@ https-proxy-agent@^2.2.1:
     agent-base "^4.1.0"
     debug "^3.1.0"
 
-husky@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-2.4.1.tgz#dd00f9646f8693b93f7b3a12ba4be00be0eff7ab"
-  integrity sha512-ZRwMWHr7QruR22dQ5l3rEGXQ7rAQYsJYqaeCd+NyOsIFczAtqaApZQP3P4HwLZjCtFbm3SUNYoKuoBXX3AYYfw==
+husky@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-3.0.0.tgz#de63821a7049dc412b1afd753c259e2f6e227562"
+  integrity sha512-lKMEn7bRK+7f5eWPNGclDVciYNQt0GIkAQmhKl+uHP1qFzoN0h92kmH9HZ8PCwyVA2EQPD8KHf0FYWqnTxau+Q==
   dependencies:
-    cosmiconfig "^5.2.0"
+    cosmiconfig "^5.2.1"
     execa "^1.0.0"
-    find-up "^3.0.0"
     get-stdin "^7.0.0"
     is-ci "^2.0.0"
-    pkg-dir "^4.1.0"
+    opencollective-postinstall "^2.0.2"
+    pkg-dir "^4.2.0"
     please-upgrade-node "^3.1.1"
     read-pkg "^5.1.1"
     run-node "^1.0.0"
@@ -3005,12 +3005,12 @@ make-iterator@^1.0.0:
   dependencies:
     kind-of "^6.0.2"
 
-makensis@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/makensis/-/makensis-0.17.0.tgz#7231b0b490dc800e06974246aa4692210dd79bfb"
-  integrity sha512-tzNcjuYvhE+MWD3X0S5to7ufyRmzcCV70/h65mT7voeIINnQEJuzVOUh9pjBBX+WfhoiLmb3xAJS98EbDHgoUQ==
+makensis@^0.18.1:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/makensis/-/makensis-0.18.1.tgz#0a64b65c0e07beb0d63cf24e60d350871d212c7f"
+  integrity sha512-fu5pdGUR4Dj6dWgXu2joDKoK0wgiDa9NHV/cZLwv2uIa+SzUq0wLvQwophNiIX5VvfOYv1YoogTZHZl4AbZL1A==
   dependencies:
-    "@nsis/language-data" "^0.5.1"
+    "@nsis/language-data" "^0.7.1"
 
 mamacro@^0.0.3:
   version "0.0.3"
@@ -3559,6 +3559,11 @@ open@^6.3.0:
   dependencies:
     is-wsl "^1.1.0"
 
+opencollective-postinstall@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
+  integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
+
 ordered-read-streams@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ordered-read-streams/-/ordered-read-streams-1.0.1.tgz#77c0cb37c41525d64166d990ffad7ec6a0e1363e"
@@ -3831,7 +3836,7 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
-pkg-dir@^4.1.0:
+pkg-dir@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-4.2.0.tgz#f099133df7ede422e81d1d8448270eeb3e4261f3"
   integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==

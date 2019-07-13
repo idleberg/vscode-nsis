@@ -34,7 +34,7 @@
     "main": "./lib/extension",
     "dependencies": {
         "@nsis/nlf": "^0.6.1",
-        "makensis": "^0.17.0",
+        "makensis": "^0.18.1",
         "open": "^6.3.0"
     },
     "devDependencies": {
@@ -43,7 +43,7 @@
         "gulp": "^4.0.2",
         "gulp-raster": "^0.2.0",
         "gulp-rename": "^1.4.0",
-        "husky": "^2.4.1",
+        "husky": "^3.0.0",
         "ts-loader": "^6.0.2",
         "tslint": "^5.17.0",
         "vscode": "^1.1.34",
