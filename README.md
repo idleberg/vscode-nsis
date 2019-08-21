@@ -138,8 +138,10 @@ Before you can build, make sure `makensis` is in your PATH [environmental variab
 **Example:**
 
 ```json
-"nsis.compilerArguments": "/WX /V3",
-"nsis.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe
+{
+  "nsis.compilerArguments": "/WX /V3",
+  "nsis.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe
+}
 ```
 
 To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings as errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
@@ -151,8 +153,10 @@ As of version 2.0 of this package, you can transpile [nsL Assembler](https://git
 **Example:**
 
 ```json
-"nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
-"nsis.nsl.customArguments": "/nomake /nopause",
+{
+  "nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
+  "nsis.nsl.customArguments": "/nomake /nopause"
+}
 ```
 #### BridleNSIS Transpiler
 
@@ -161,8 +165,10 @@ As of version 2.6 of this package, you can transpile [BridleNSIS](https://github
 **Example:**
 
 ```json
-"nsis.bridlensis.pathToJar": "/full/path/to/BridleNSIS.jar",
-"nsis.bridlensis.customArguments": "-n /usr/local/bin/",
+{
+  "nsis.bridlensis.pathToJar": "/full/path/to/BridleNSIS.jar",
+  "nsis.bridlensis.customArguments": "-n /usr/local/bin/"
+}
 ```
 
 #### Options
