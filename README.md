@@ -122,12 +122,12 @@ Fuzzy syntax completions are available through “Drunken NSIS”, which tries t
 
 Interchangable word order of NSIS language and library functions
 
-* `FileRead` equals `ReadFile`
-* `ReadINIStr` equals `INIStrRead`
-* `SectionSetText` equals `SetSectionText`
-* `LogSet` equals `SetLog`
-* `FindFirst` equals `FirstFind`
-* `${FindLine}` equals `${LineFind}`
+* `ReadFile` completes to `FileRead`
+* `INIStrRead` completes to `ReadINIStr`
+* `SetSectionText` completes to `SectionSetText`
+* `SetLog` completes to `LogSet`
+* `FirstFind` completes to `FindFirst`
+* `${LineFind}` completes to `${FindLine}`
 
 ### Building
 
