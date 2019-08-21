@@ -87,8 +87,11 @@
                     "description": "Specify the full path to `makensis`"
                 },
                 "nsis.compilerArguments": {
-                    "type": "string",
-                    "default": null,
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
                     "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
                 },
                 "nsis.showNotifications": {
@@ -127,8 +130,11 @@
                     "description": "Specify the full path to `nsL.jar`"
                 },
                 "nsis.nsl.customArguments": {
-                    "type": "string",
-                    "default": "/nomake /nopause",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["/nomake", "/nopause"],
                     "description": "Specify the default arguments for nsL Assembler"
                 },
                 "nsis.bridlensis.pathToJar": {
@@ -137,8 +143,11 @@
                     "description": "Specify the full path to `BridleNSIS.jar`"
                 },
                 "nsis.bridlensis.customArguments": {
-                    "type": "string",
-                    "default": "",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
                     "description": "Specify the default arguments for BridleNSIS"
                 },
                 "nsis.bridlensis.nsisHome": {
