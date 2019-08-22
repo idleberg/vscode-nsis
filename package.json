@@ -84,7 +84,7 @@
                 "nsis.pathToMakensis": {
                     "type": "string",
                     "default": null,
-                    "description": "Specify the full path to `makensis`"
+                    "markdownDescription": "%nsisPathToMakensis%"
                 },
                 "nsis.compilerArguments": {
                     "type": "array",
@@ -92,7 +92,7 @@
                         "type": "string"
                     },
                     "default": [],
-                    "description": "Specify the default arguments for `makensis` - http://nsis.sourceforge.net/Docs/Chapter3.html#usage"
+                    "markdownDescription": "%nsisCompilerArguments%"
                 },
                 "nsis.showNotifications": {
                     "type": "boolean",

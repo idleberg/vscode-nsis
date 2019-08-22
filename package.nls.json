@@ -1,7 +1,9 @@
 {
-  "nsisPathToBridleNSIS": "Specify the full path to `BridleNSIS.jar`",
-  "nsisPathToNsl": "Specify the full path to `nsL.jar`",
-  "nsisUseWineToRun": "Specify whether to run compiled installers using [Wine](https://www.winehq.org/)",
+  "nsisCompilerArguments": "Specify the [default arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for `makensis`",
   "nsisDefaultArgsBridleNSIS": "Specify the default arguments for [BridleNSIS](https://github.com/henrikor2/bridlensis)",
-  "nsisDefaultArgsNsl": "Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)"
+  "nsisDefaultArgsNsl": "Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)",
+  "nsisPathToBridleNSIS": "Specify the full path to `BridleNSIS.jar`",
+  "nsisPathToMakensis": "Specify the full path to `makensis`",
+  "nsisPathToNsl": "Specify the full path to `nsL.jar`",
+  "nsisUseWineToRun": "Specify whether to run compiled installers using [Wine](https://www.winehq.org/)"
 }
