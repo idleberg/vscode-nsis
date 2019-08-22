@@ -1,6 +1,6 @@
 # v3.19.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.19.0)
 
-- add support for Tasks 2.0.0
+- add support for Tasks v2.0.0
 - improve argument detection
 
 # v3.18.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.18.0)
