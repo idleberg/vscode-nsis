@@ -48,7 +48,7 @@ const compile = (strictMode: boolean): void => {
       }
 
       // only add WX flag if not already specified
-      if (strictMode === true && !compilerArguments.includes(`${prefix}WX}`)) {
+      if (strictMode === true && !compilerArguments.includes(`-WX`) && !compilerArguments.includes(`/WX`)) {
         compilerArguments.push(`${prefix}WX`);
       }
       compilerArguments.push(doc.fileName);

@@ -17,44 +17,43 @@ const createTask = () => {
   let config: WorkspaceConfiguration = getConfig();
   let command = config.pathToMakensis || 'makensis';
 
-  if (typeof config.compilerArguments !== 'undefined' && config.compilerArguments !== null) {
-    args = config.compilerArguments.trim().split(' ');
-    argsStrict = config.compilerArguments.trim().split(' ');
+  if (config.compilerArguments.length) {
+    args = config.compilerArguments;
+    argsStrict = config.compilerArguments;
   } else {
     // no default value, since prefixes are OS dependent
     args = [ `${prefix}V4` ];
     argsStrict = [ `${prefix}V4` ];
   }
 
+  args.push('${file}');
+
   // only add WX flag if not already specified
-  if (!args.includes(`${prefix}WX`)) {
+  if (!argsStrict.includes('-WX') && !argsStrict.includes('/WX')) {
     argsStrict.push(`${prefix}WX`);
     argsStrict.push('${file}');
   }
-  args.push('${file}');
 
   const { version } = require('../package.json');
 
-  let taskFile = {
-      'command': command,
-      'version': version,
-      'args': [],
-      'isShellCommand': false,
-      'showOutput': 'always',
-      'suppressTaskName': true,
-      'echoCommand': false,
-      'tasks': [
-        {
-          'taskName': 'Build',
-          'args': args,
-          'isBuildCommand': true
-        },
-        {
-          'taskName': 'Build (strict)',
-          'args': argsStrict,
-          'isBuildCommand': true
-        }
-      ]
+  const taskFile = {
+    'version': '2.0.0',
+    'tasks': [
+      {
+        'label': 'Build',
+        'type': 'shell',
+        'command': 'makensis',
+        'args': args,
+        'group': 'build'
+      },
+      {
+        'label': 'Build (strict)',
+        'type': 'shell',
+        'command': 'makensis',
+        'args': argsStrict,
+        'group': 'build'
+      }
+    ]
   };
 
   let jsonString = JSON.stringify(taskFile, null, 2);
