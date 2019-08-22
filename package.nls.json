@@ -1,0 +1,3 @@
+{
+  "nsisUseWineToRun": "Specify whether to run compiled installers using [Wine](https://www.winehq.org/)"
+}

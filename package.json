@@ -122,7 +122,7 @@
                 "nsis.useWineToRun": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Specify whether to run compiled installers using Wine - https://www.winehq.org/"
+                    "markdownDescription": "%nsisUseWineToRun%"
                 },
                 "nsis.nsl.pathToJar": {
                     "type": "string",
