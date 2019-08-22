@@ -127,7 +127,7 @@
                 "nsis.nsl.pathToJar": {
                     "type": "string",
                     "default": null,
-                    "description": "Specify the full path to `nsL.jar`"
+                    "markdownDescription": "%nsisPathToNsl%"
                 },
                 "nsis.nsl.customArguments": {
                     "type": "array",
@@ -135,12 +135,12 @@
                         "type": "string"
                     },
                     "default": ["/nomake", "/nopause"],
-                    "description": "Specify the default arguments for nsL Assembler"
+                    "markdownDescription": "%nsisDefaultArgsNsl%"
                 },
                 "nsis.bridlensis.pathToJar": {
                     "type": "string",
                     "default": null,
-                    "description": "Specify the full path to `BridleNSIS.jar`"
+                    "markdownDescription": "%nsisPathToBridleNSIS%"
                 },
                 "nsis.bridlensis.customArguments": {
                     "type": "array",
@@ -148,7 +148,7 @@
                         "type": "string"
                     },
                     "default": [],
-                    "description": "Specify the default arguments for BridleNSIS"
+                    "markdownDescription": "%nsisDefaultArgsBridleNSIS%"
                 },
                 "nsis.bridlensis.nsisHome": {
                     "type": "string",
