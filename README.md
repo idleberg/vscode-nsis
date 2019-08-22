@@ -52,7 +52,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
 
-You can further extend NSIS support with snippets for [third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
+You can further extend NSIS support with IntelliSense for [third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
 
 ## Installation
 
@@ -140,7 +140,7 @@ Before you can build, make sure `makensis` is in your PATH [environmental variab
 ```json
 {
   "nsis.compilerArguments": "/WX /V3",
-  "nsis.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe
+  "nsis.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
 }
 ```
 
