@@ -178,7 +178,7 @@ You can tweak your default settings by editing your [user settings](https://code
 Setting                      | Description
 -----------------------------|-----------------------------------------------------------
 `pathToMakensis`             | Specify the full path to `makensis`
-`compilerArguments`          | Specify the default arguments for `makensis`
+`compilerArguments`          | Specify the [default arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for `makensis`
 `showNotifications`          | Show build notifications indicating success or failure
 `alwaysShowOutput`           | If `false` the output channel will only be shown on errors
 `alwaysOpenBuildTask`        | Specify whether to open the newly created build task
@@ -186,9 +186,9 @@ Setting                      | Description
 `showFlagsAsObject`          | Specify whether to format compiler flags as JSON
 `useWineToRun`               | Run compiled installers using [Wine](https://winehq.org)
 `nsl.pathToJar`              | Specify the full path to `nsL.jar`
-`nsl.customArguments`        | Specify the default arguments for nsL Assembler
+`nsl.customArguments`        | Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
 `bridlensis.pathToJar`       | Specify the full path to `BridleNSIS.jar`
-`bridlensis.customArguments` | Specify the default arguments for BridleNSIS
+`bridlensis.customArguments` | Specify the default arguments for [BridleNSIS](https://github.com/henrikor2/bridlensis)
 `bridlensis.nsisHome`        | Specify the NSIS home directory
 
 #### Commands
