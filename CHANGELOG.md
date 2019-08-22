@@ -2,7 +2,9 @@
 
 - **Breaking:** modify argument handling for `makensis`, nsL Assembler and BridleNSIS
 - use Markdown descriptions in settings
+- use production mode for Webpack
 - refactor code
+- update dependencies
 
 # v3.17.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.17.0)
 
