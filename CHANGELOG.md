@@ -1,3 +1,9 @@
+# v3.18.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.18.0)
+
+- **Breaking:** modify argument handling for `makensis`, nsL Assembler and BridleNSIS
+- use Markdown descriptions in settings
+- refactor code
+
 # v3.17.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.17.0)
 
 - compiled with Webpack
