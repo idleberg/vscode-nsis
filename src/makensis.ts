@@ -41,15 +41,14 @@ const compile = (strictMode: boolean): void => {
       let config: WorkspaceConfiguration = getConfig();
 
       let compilerArguments: Array<string>;
-      if (typeof config.compilerArguments !== 'undefined' && config.compilerArguments !== null) {
-        compilerArguments = config.compilerArguments.trim().split(' ');
+      if (config.compilerArguments.length) {
+        compilerArguments = [ ...config.compilerArguments ];
       } else {
-        // no default value, since prefixes are OS dependent
         compilerArguments = [ `${prefix}V4` ];
       }
 
       // only add WX flag if not already specified
-      if (strictMode === true && compilerArguments.indexOf(prefix + 'WX') === -1) {
+      if (strictMode === true && !compilerArguments.includes(`${prefix}WX}`)) {
         compilerArguments.push(`${prefix}WX`);
       }
       compilerArguments.push(doc.fileName);
@@ -63,7 +62,7 @@ const compile = (strictMode: boolean): void => {
 
       child.stdout.on('data', (line: Array<string> ) => {
         // Detect warnings
-        if (line.indexOf('warning: ') !== -1) {
+        if (line.includes('warning: ')) {
           hasWarning = true;
         }
         if (outFile === '') {

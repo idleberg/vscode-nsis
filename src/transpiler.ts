@@ -32,15 +32,9 @@ const nslAssembler = (): void => {
       return window.showErrorMessage('No valid `nsL.jar` was specified in your config');
     }
 
-    let customArguments: Array<string>;
     const defaultArguments: Array<string> = ['-jar', nslJar];
-    if (typeof config.nsl.customArguments !== 'undefined' && config.nsl.customArguments !== null) {
-      customArguments = config.nsl.customArguments.trim().split(' ');
-    } else {
-      customArguments = [ '/nomake', '/nopause' ];
-    }
-    customArguments.push(doc.fileName);
-    const compilerArguments = defaultArguments.concat(customArguments);
+    const customArguments = config.nsl.customArguments;
+    const compilerArguments = [ ...defaultArguments, ...customArguments, doc.fileName ];
 
     // Let's build
     const nslCmd = spawn('java', compilerArguments);
@@ -93,21 +87,15 @@ const bridleNsis = (): void => {
       return window.showErrorMessage('No valid `BridleNSIS.jar` was specified in your config');
     }
 
-    let customArguments: Array<string>;
     const defaultArguments: Array<string> = ['-jar', bridleJar];
-    if (typeof config.bridlensis.customArguments !== 'undefined' && config.bridlensis.customArguments !== null) {
-      customArguments = config.bridlensis.customArguments.trim().split(' ');
-    } else {
-      customArguments = [];
-    }
+    const customArguments = config.bridlensis.customArguments;
 
-    if (config.bridlensis.nsisHome.length > 0 && customArguments.indexOf('-n') === -1) {
+    if (config.bridlensis.nsisHome.length > 0 && !customArguments.includes('-n')) {
       customArguments.push('-n');
       customArguments.push(config.bridlensis.nsisHome);
     }
 
-    customArguments.push(doc.fileName);
-    const compilerArguments = defaultArguments.concat(customArguments);
+    const compilerArguments = [ ...defaultArguments, ...customArguments, doc.fileName ];
 
     // Let's build
     const bridleCmd = spawn('java', compilerArguments);
@@ -116,7 +104,7 @@ const bridleNsis = (): void => {
     let hasError: boolean = false;
 
     bridleCmd.stdout.on('data', (line: Array<any>) => {
-      if (line.indexOf('Exit Code:') !== -1) {
+      if (line.includes('Exit Code:')) {
         hasError = true;
       }
       bridleChannel.appendLine(line.toString());

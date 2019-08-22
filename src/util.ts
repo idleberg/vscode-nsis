@@ -18,7 +18,7 @@ const clearOutput = (channel): void => {
 };
 
 const detectOutfile = (line): string => {
-  if (line.indexOf('Output: "') !== -1) {
+  if (line.includes('Output: "')) {
     let regex = /Output: \"(.*\.exe)\"\r?\n/g;
     let result = regex.exec(line.toString());
     if (typeof result === 'object') {

@@ -27,7 +27,7 @@ const createTask = () => {
   }
 
   // only add WX flag if not already specified
-  if (args.indexOf(`${prefix}WX`) === -1) {
+  if (!args.includes(`${prefix}WX`)) {
     argsStrict.push(`${prefix}WX`);
     argsStrict.push('${file}');
   }
