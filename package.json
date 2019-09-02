@@ -83,7 +83,7 @@
             "properties": {
                 "nsis.pathToMakensis": {
                     "type": "string",
-                    "default": null,
+                    "default": "",
                     "markdownDescription": "%nsisPathToMakensis%"
                 },
                 "nsis.compilerArguments": {
@@ -126,7 +126,7 @@
                 },
                 "nsis.nsl.pathToJar": {
                     "type": "string",
-                    "default": null,
+                    "default": "",
                     "markdownDescription": "%nsisPathToNsl%"
                 },
                 "nsis.nsl.customArguments": {
@@ -142,7 +142,7 @@
                 },
                 "nsis.bridlensis.pathToJar": {
                     "type": "string",
-                    "default": null,
+                    "default": "",
                     "markdownDescription": "%nsisPathToBridleNSIS%"
                 },
                 "nsis.bridlensis.customArguments": {
