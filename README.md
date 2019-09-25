@@ -167,7 +167,7 @@ As of version 2.6 of this package, you can transpile [BridleNSIS](https://github
 ```json
 {
   "nsis.bridlensis.pathToJar": "/full/path/to/BridleNSIS.jar",
-  "nsis.bridlensis.customArguments": "-n /usr/local/bin/"
+  "nsis.bridlensis.customArguments": ["-n", "/usr/local/bin/"]
 }
 ```
 
@@ -193,17 +193,17 @@ Setting                      | Description
 
 #### Commands
 
-Action                   |  Syntax             | Shortcut
--------------------------|---------------------|----------
-Compile NSIS             | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Compile NSIS (strict)    | `source.nsis`       | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Create Build Task        |`source.nsis`        | –
-Command Reference        |`source.nsis`        | –
-Show Version             |`source.nsis`        | –
-Show Compiler Flags      |`source.nsis`        | –
-Transpile nsL Assembler  |`source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Transpile BridleNSIS     |`source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Convert Language File    |`source.nlf`         | -
+Action                   |  Syntax              | Shortcut
+-------------------------|----------------------|----------
+Compile NSIS             | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Compile NSIS (strict)    | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Create Build Task        | `source.nsis`        | –
+Command Reference        | `source.nsis`        | –
+Show Version             | `source.nsis`        | –
+Show Compiler Flags      | `source.nsis`        | –
+Transpile nsL Assembler  | `source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Transpile BridleNSIS     | `source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
+Convert Language File    | `source.nlf`         | -
 
 ### Task Runner
 
