@@ -18,7 +18,8 @@ import {
   revealInstaller,
   runInstaller,
   sanitize,
-  successNsis
+  successNsis,
+  validateConfig
 } from './util';
 
 const nsisChannel = window.createOutputChannel('NSIS');
@@ -40,6 +41,8 @@ const compile = (strictMode: boolean): void => {
       let prefix: string = getPrefix();
       let config: WorkspaceConfiguration = getConfig();
       let compilerArguments: Array<string>;
+
+      validateConfig(config.compilerArguments);
 
       if (config.compilerArguments.length) {
         compilerArguments = [ ...config.compilerArguments ];

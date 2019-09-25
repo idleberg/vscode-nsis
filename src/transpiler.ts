@@ -2,7 +2,7 @@
 
 import { window, WorkspaceConfiguration } from 'vscode';
 
-import { clearOutput, getConfig, successBridleNsis, successNslAssembler } from './util';
+import { clearOutput, getConfig, successBridleNsis, successNslAssembler, validateConfig } from './util';
 import { spawn } from 'child_process';
 
 
@@ -24,6 +24,8 @@ const nslAssembler = (): void => {
 
   let config: WorkspaceConfiguration = getConfig();
   let doc = window.activeTextEditor.document;
+
+  validateConfig(config.nsl.customArguments);
 
   doc.save().then( () => {
     let nslJar = config.nsl.pathToJar;
@@ -80,7 +82,10 @@ const bridleNsis = (): void => {
   let config: WorkspaceConfiguration = getConfig();
   let doc = window.activeTextEditor.document;
 
+  validateConfig(config.bridlensis.customArguments);
+
   doc.save().then( () => {
+
     let bridleJar = config.bridlensis.pathToJar;
 
     if (typeof bridleJar === 'undefined' || bridleJar === null) {
@@ -89,6 +94,7 @@ const bridleNsis = (): void => {
 
     const defaultArguments: Array<string> = ['-jar', bridleJar];
     const customArguments = config.bridlensis.customArguments;
+
 
     if (config.bridlensis.nsisHome.length > 0 && !customArguments.includes('-n')) {
       customArguments.push('-n');

@@ -1,6 +1,6 @@
 'use strict';
 
-import { window, workspace, WorkspaceConfiguration } from 'vscode';
+import { commands, window, workspace, WorkspaceConfiguration } from 'vscode';
 
 import * as open from 'open';
 import { basename, dirname, extname, join } from 'path';
@@ -192,6 +192,18 @@ const successNslAssembler = (choice): void => {
   }
 };
 
+const validateConfig = (setting: string): void => {
+  if (typeof setting === 'string') {
+    window.showErrorMessage('The argument handling has been changed in a recent version of this extension. Please adjust your settings before trying again.', 'Open Settings')
+    .then(choice => {
+      if (choice === 'Open Settings') {
+        commands.executeCommand('workbench.action.openSettings');
+        process.exit();
+      }
+    });
+  }
+};
+
 const which = (): string => {
   if (platform() === 'win32') {
     return 'where';
@@ -214,5 +226,6 @@ export {
   successBridleNsis,
   successNslAssembler,
   successNsis,
+  validateConfig,
   which
 };

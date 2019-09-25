@@ -3,7 +3,7 @@
 import { window, workspace, WorkspaceConfiguration } from 'vscode';
 
 import { mkdir, writeFile } from 'fs';
-import { getConfig, getPrefix } from './util';
+import { getConfig, getPrefix, validateConfig } from './util';
 import { join } from 'path';
 
 const createTask = () => {
@@ -17,6 +17,8 @@ const createTask = () => {
   let config: WorkspaceConfiguration = getConfig();
   let command = config.pathToMakensis || 'makensis';
 
+  validateConfig(config.compilerArguments);
+
   if (config.compilerArguments.length) {
     args = config.compilerArguments;
     argsStrict = config.compilerArguments;
@@ -26,13 +28,12 @@ const createTask = () => {
     argsStrict = [ `${prefix}V4` ];
   }
 
-  args.push('${file}');
-
   // only add WX flag if not already specified
   if (!argsStrict.includes('-WX') && !argsStrict.includes('/WX')) {
     argsStrict.push(`${prefix}WX`);
-    argsStrict.push('${file}');
   }
+
+  args.push('${file}');
 
   const { version } = require('../package.json');
 

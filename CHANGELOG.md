@@ -1,3 +1,9 @@
+# v3.20.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.0)
+
+- add error message for invalid arguments format
+- fix argument handling in task
+- update dependencies
+
 # v3.19.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.19.0)
 
 - add support for Tasks v2.0.0
