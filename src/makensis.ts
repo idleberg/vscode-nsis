@@ -42,9 +42,9 @@ const compile = (strictMode: boolean): void => {
       let config: WorkspaceConfiguration = getConfig();
       let compilerArguments: Array<string>;
 
-      validateConfig(config.compilerArguments);
 
       if (config.compilerArguments.length) {
+        validateConfig(config.compilerArguments);
         compilerArguments = [ ...config.compilerArguments ];
       } else {
         compilerArguments = [ `${prefix}V4` ];
@@ -108,7 +108,10 @@ const compile = (strictMode: boolean): void => {
         }
       });
     })
-    .catch(pathWarning);
+    .catch(error => {
+      console.error(error);
+      pathWarning();
+    });
   });
 };
 
@@ -139,7 +142,10 @@ const showVersion = (): void => {
       console.error(error);
     });
   })
-  .catch(pathWarning);
+  .catch(error => {
+    console.error(error);
+    pathWarning();
+  });
 };
 
 const showCompilerFlags = (): void => {
@@ -158,7 +164,10 @@ const showCompilerFlags = (): void => {
       printFlags(output.stdout, config.showFlagsAsObject);
     });
   })
-  .catch(pathWarning);
+  .catch(error => {
+    console.error(error);
+    pathWarning();
+  });
 };
 
 const showHelp = (): void => {
@@ -183,7 +192,10 @@ const showHelp = (): void => {
       printFlags(output.stdout, config.showFlagsAsObject);
     });
   })
-  .catch(pathWarning);
+  .catch(error => {
+    console.error(error);
+    pathWarning();
+  });
 };
 
 export { compile, showVersion, showCompilerFlags, showHelp };

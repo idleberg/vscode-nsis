@@ -17,9 +17,9 @@ const createTask = () => {
   let config: WorkspaceConfiguration = getConfig();
   let command = config.pathToMakensis || 'makensis';
 
-  validateConfig(config.compilerArguments);
 
   if (config.compilerArguments.length) {
+    validateConfig(config.compilerArguments);
     args = config.compilerArguments;
     argsStrict = config.compilerArguments;
   } else {

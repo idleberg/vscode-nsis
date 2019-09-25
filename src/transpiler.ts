@@ -25,7 +25,9 @@ const nslAssembler = (): void => {
   let config: WorkspaceConfiguration = getConfig();
   let doc = window.activeTextEditor.document;
 
-  validateConfig(config.nsl.customArguments);
+  if (config.nsl.customArguments.length) {
+    validateConfig(config.nsl.customArguments);
+  }
 
   doc.save().then( () => {
     let nslJar = config.nsl.pathToJar;
@@ -82,10 +84,11 @@ const bridleNsis = (): void => {
   let config: WorkspaceConfiguration = getConfig();
   let doc = window.activeTextEditor.document;
 
-  validateConfig(config.bridlensis.customArguments);
+  if (config.bridlensis.customArguments.length) {
+    validateConfig(config.bridlensis.customArguments);
+  }
 
   doc.save().then( () => {
-
     let bridleJar = config.bridlensis.pathToJar;
 
     if (typeof bridleJar === 'undefined' || bridleJar === null) {

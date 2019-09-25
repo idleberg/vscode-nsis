@@ -59,7 +59,7 @@ const getMakensisPath = (): Promise<any> => {
   return new Promise((resolve, reject) => {
     let pathToMakensis: string = getConfig().pathToMakensis;
 
-    if (typeof pathToMakensis !== 'undefined' && pathToMakensis !== null) {
+    if (pathToMakensis && pathToMakensis.length) {
       console.log('Using makensis path found in user settings: ' + pathToMakensis);
       return resolve(pathToMakensis);
     }
@@ -198,9 +198,10 @@ const validateConfig = (setting: string): void => {
     .then(choice => {
       if (choice === 'Open Settings') {
         commands.executeCommand('workbench.action.openSettings');
-        process.exit();
       }
     });
+
+    process.exit();
   }
 };
 
