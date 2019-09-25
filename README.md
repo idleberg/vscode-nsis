@@ -139,7 +139,7 @@ Before you can build, make sure `makensis` is in your PATH [environmental variab
 
 ```json
 {
-  "nsis.compilerArguments": "/WX /V3",
+  "nsis.compilerArguments": ["/WX", "/V3"],
   "nsis.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
 }
 ```
@@ -155,7 +155,7 @@ As of version 2.0 of this package, you can transpile [nsL Assembler](https://git
 ```json
 {
   "nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
-  "nsis.nsl.customArguments": "/nomake /nopause"
+  "nsis.nsl.customArguments": ["/nomake", "/nopause"]
 }
 ```
 #### BridleNSIS Transpiler
