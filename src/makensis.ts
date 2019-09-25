@@ -39,8 +39,8 @@ const compile = (strictMode: boolean): void => {
     .then( (pathToMakensis: string) => {
       let prefix: string = getPrefix();
       let config: WorkspaceConfiguration = getConfig();
-
       let compilerArguments: Array<string>;
+
       if (config.compilerArguments.length) {
         compilerArguments = [ ...config.compilerArguments ];
       } else {
