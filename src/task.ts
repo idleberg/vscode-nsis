@@ -17,7 +17,6 @@ const createTask = () => {
   let config: WorkspaceConfiguration = getConfig();
   let command = config.pathToMakensis || 'makensis';
 
-
   if (config.compilerArguments.length) {
     validateConfig(config.compilerArguments);
     args = config.compilerArguments;
@@ -34,6 +33,7 @@ const createTask = () => {
   }
 
   args.push('${file}');
+  argsStrict.push('${file}');
 
   const { version } = require('../package.json');
 
