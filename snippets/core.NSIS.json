@@ -1207,119 +1207,119 @@
     "body": "Function .onInit\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onInit"
   },
   "Function .onInstFailed": {
     "body": "Function .onInstFailed\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onInstFailed"
   },
   "Function .onInstSuccess": {
     "body": "Function .onInstSuccess\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onInstSuccess"
   },
   "Function .onMouseOverSection": {
     "body": "Function .onMouseOverSection\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onMouseOverSection"
   },
   "Function .onRebootFailed": {
     "body": "Function .onRebootFailed\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onRebootFailed"
   },
   "Function .onSelChange": {
     "body": "Function .onSelChange\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onSelChange"
   },
   "Function .onUserAbort": {
     "body": "Function .onUserAbort\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onUserAbort"
   },
   "Function .onVerifyInstDir": {
     "body": "Function .onVerifyInstDir\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "onVerifyInstDir"
   },
   "Function un.*": {
     "body": "Function \"un.${1:function_name}\"\n  ${2:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.Function"
   },
   "Function un.onGUIEnd": {
     "body": "Function un.onGUIEnd\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onGUIEnd"
   },
   "Function un.onGUIInit": {
     "body": "Function un.onGUIInit\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onGUIInit"
   },
   "Function un.onInit": {
     "body": "Function un.onInit\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onInit"
   },
   "Function un.onRebootFailed": {
     "body": "Function un.onRebootFailed\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onRebootFailed"
   },
   "Function un.onSelChange": {
     "body": "Function un.onSelChange\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onSelChange"
   },
   "Function un.onUninstFailed": {
     "body": "Function un.onUninstFailed\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onUninstFailed"
   },
   "Function un.onUninstSuccess": {
     "body": "Function un.onUninstSuccess\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onUninstSuccess"
   },
   "Function un.onUserAbort": {
     "body": "Function un.onUserAbort\n  ${1:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=atom&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
     "prefix": "un.onUserAbort"
   },
   "FunctionEnd": {
