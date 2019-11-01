@@ -1,3 +1,9 @@
+# v3.20.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.3)
+
+- fix class name and symbol for function snippets
+- fix indentation character in snippets
+- update dependencies
+
 # v3.20.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.2)
 
 - fix strict build task
