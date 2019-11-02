@@ -1,3 +1,7 @@
+# v3.20.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.4)
+
+- fix running installers with UAC
+
 # v3.20.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.3)
 
 - fix class name and symbol for function snippets
