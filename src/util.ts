@@ -6,7 +6,7 @@ import * as open from 'open';
 import { basename, dirname, extname, join } from 'path';
 import { access } from 'fs';
 import { platform } from 'os';
-import { spawn } from 'child_process';
+import { exec, spawn } from 'child_process';
 
 const clearOutput = (channel): void => {
   let config: WorkspaceConfiguration = getConfig();
@@ -125,7 +125,7 @@ const runInstaller = (outFile): void => {
   let config: WorkspaceConfiguration = getConfig();
 
   if (platform() === 'win32') {
-    spawn(outFile);
+    exec(`cmd /c "${outFile}"`);
   } else if (config.useWineToRun === true) {
     spawn('wine', [ outFile ]);
   }
