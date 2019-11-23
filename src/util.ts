@@ -17,14 +17,18 @@ const clearOutput = (channel): void => {
   }
 };
 
-const detectOutfile = (line): string => {
-  if (line.includes('Output: "')) {
+const detectOutfile = (str): string => {
+  if (str.includes('Output: "')) {
     const regex = /Output: \"(.*\.exe)\"\r?\n/g;
-    const result = regex.exec(line.toString());
+    const result = regex.exec(str.toString());
 
-      if (typeof result === 'object' && result['1']) {
+    if (typeof result === 'object') {
+      try {
         return result['1'];
+      } catch (e) {
+        return '';
       }
+    }
   }
 
   return '';

@@ -81,10 +81,10 @@ const compile = (strictMode: boolean): void => {
       });
 
       child.on('close', (code) => {
-        const openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
-        const revealButton = (platform() === 'win32' || platform() === 'darwin' || platform() === 'linux') ? 'Reveal' : null;
-
         if (code === 0) {
+          const openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
+          const revealButton = (platform() === 'win32' || platform() === 'darwin' || platform() === 'linux') ? 'Reveal' : null;
+
           if (hasWarning === true) {
             if (config.showNotifications) {
               window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton, revealButton)
