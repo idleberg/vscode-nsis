@@ -13,7 +13,7 @@ const svgFiles = [
 gulp.task('default', (done) => {
   gulp.src(svgFiles)
     .pipe(raster())
-    .pipe(rename("logo.png"))
+    .pipe(rename('logo.png'))
     .pipe(gulp.dest('./images'));
   done();
 });
