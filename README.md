@@ -131,7 +131,7 @@ Interchangable word order of NSIS language and library functions
 
 ### Building
 
-Before you can build, make sure `makensis` is in your PATH [environmental variable](http://superuser.com/a/284351/195953). Alternatively, you can specify the path to `makensis` in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+Before you can build, make sure `makensis` is in your PATH [environment variable](http://superuser.com/a/284351/195953). Alternatively, you can specify the path to `makensis` in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 #### makensis
 
