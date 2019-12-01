@@ -1,3 +1,7 @@
+# v3.20.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.5)
+
+- update dependencies
+
 # v3.20.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.4)
 
 - fix running installers with UAC
