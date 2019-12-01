@@ -593,6 +593,11 @@
 
 - add scaffolding-snippet for `task.json`
 
+# v0.6.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/0.6.2)
+
+- rename settings
+- improve success message
+
 # v0.6.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/0.6.1)
 
 - some house-keeping
@@ -600,11 +605,6 @@
 # v0.6.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/0.6.0)
 
 - add settings for build system
-
-# v0.6.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/0.6.2)
-
-- rename settings
-- improve success message
 
 # v0.5.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/0.5.1)
 
