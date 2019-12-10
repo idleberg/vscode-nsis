@@ -56,7 +56,10 @@
         "hooks": {
             "pre-commit": "npm run test"
         }
-    },
+    },  
+    "extensionDependencies": [
+        "IBM.output-colorizer"
+    ],
     "icon": "images/logo.png",
     "galleryBanner": {
         "color": "#9e90aa",
