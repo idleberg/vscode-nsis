@@ -40,10 +40,10 @@
     },
     "devDependencies": {
         "@nsis/logo": "*",
-        "@types/node": "^12.12.14",
+        "@types/node": "^12.12.17",
         "gulp": "^4.0.2",
         "gulp-raster": "^0.2.0",
-        "gulp-rename": "^1.4.0",
+        "gulp-rename": "^2.0.0",
         "husky": "^3.1.0",
         "ts-loader": "^6.2.1",
         "tslint": "^5.20.1",
@@ -56,9 +56,10 @@
         "hooks": {
             "pre-commit": "npm run test"
         }
-    },  
+    },
     "extensionDependencies": [
-        "IBM.output-colorizer"
+        "IBM.output-colorizer",
+        "idleberg.nsis-plugins"
     ],
     "icon": "images/logo.png",
     "galleryBanner": {
