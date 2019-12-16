@@ -1847,6 +1847,13 @@
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "LicenseText"
   },
+  "LoadAndSetImage": {
+    "body": "LoadAndSetImage \"${1:options} ${2:ctrl} ${3:imagetype} ${4:lrflags} ${5:image}\"$0",
+    "description": "Usage: LoadAndSetImage [/EXERESOURCE] [/STRINGID] [/RESIZETOFIT[WIDTH|HEIGHT]] ctrl imagetype lrflags image",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/LoadAndSetImage.html?utm_source=atom&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "LoadAndSetImage"
+  },
   "LoadLanguageFile": {
     "body": "LoadLanguageFile \"${1:language_file}.nlf\"$0",
     "description": "Usage: LoadLanguageFile language.nlf",
