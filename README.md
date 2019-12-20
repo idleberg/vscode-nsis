@@ -154,7 +154,7 @@ As of version 2.0 of this package, you can transpile [nsL Assembler](https://git
 
 ```json
 {
-  "nsis.nsl.pathToJar": "/full/path/to/nsL.jar",
+  "nsis.nsl.pathToJar": "\\full\\path\\to\\nsL.jar",
   "nsis.nsl.customArguments": ["/nomake", "/nopause"]
 }
 ```
@@ -166,7 +166,7 @@ As of version 2.6 of this package, you can transpile [BridleNSIS](https://github
 
 ```json
 {
-  "nsis.bridlensis.pathToJar": "/full/path/to/BridleNSIS.jar",
+  "nsis.bridlensis.pathToJar": "\\full\\path\\to\\BridleNSIS.jar",
   "nsis.bridlensis.customArguments": ["-n", "/usr/local/bin/"]
 }
 ```
