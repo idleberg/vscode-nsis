@@ -166,7 +166,7 @@ As of version 2.6 of this package, you can transpile [BridleNSIS](https://github
 
 ```json
 {
-  "nsis.bridlensis.pathToJar": path\\to\\BridleNSIS.jar",
+  "nsis.bridlensis.pathToJar": "path\\to\\BridleNSIS.jar",
   "nsis.bridlensis.customArguments": ["-n", "/usr/local/bin/"]
 }
 ```
