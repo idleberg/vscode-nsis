@@ -23,13 +23,13 @@ const nslAssembler = (): void => {
   }
 
   let config: WorkspaceConfiguration = getConfig();
-  let doc = window.activeTextEditor.document;
+  let document = window.activeTextEditor.document;
 
   if (config.nsl.customArguments.length) {
     validateConfig(config.nsl.customArguments);
   }
 
-  doc.save().then( () => {
+  document.save().then( () => {
     let nslJar = config.nsl.pathToJar;
 
     if (typeof nslJar === 'undefined' || nslJar === null) {
@@ -38,7 +38,7 @@ const nslAssembler = (): void => {
 
     const defaultArguments: Array<string> = ['-jar', nslJar];
     const customArguments = config.nsl.customArguments;
-    const compilerArguments = [ ...defaultArguments, ...customArguments, doc.fileName ];
+    const compilerArguments = [ ...defaultArguments, ...customArguments, document.fileName ];
 
     // Let's build
     const nslCmd = spawn('java', compilerArguments);
@@ -57,7 +57,7 @@ const nslAssembler = (): void => {
     nslCmd.on('close', (code) => {
       if (stdErr.length === 0) {
         if (config.showNotifications) {
-          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`, 'Open')
+          window.showInformationMessage(`Transpiled successfully -- ${document.fileName}`, 'Open')
           .then(successNslAssembler);
         }
       } else {
@@ -82,13 +82,13 @@ const bridleNsis = (): void => {
   }
 
   let config: WorkspaceConfiguration = getConfig();
-  let doc = window.activeTextEditor.document;
+  let document = window.activeTextEditor.document;
 
   if (config.bridlensis.customArguments.length) {
     validateConfig(config.bridlensis.customArguments);
   }
 
-  doc.save().then( () => {
+  document.save().then( () => {
     let bridleJar = config.bridlensis.pathToJar;
 
     if (typeof bridleJar === 'undefined' || bridleJar === null) {
@@ -104,7 +104,7 @@ const bridleNsis = (): void => {
       customArguments.push(config.bridlensis.nsisHome);
     }
 
-    const compilerArguments = [ ...defaultArguments, ...customArguments, doc.fileName ];
+    const compilerArguments = [ ...defaultArguments, ...customArguments, document.fileName ];
 
     // Let's build
     const bridleCmd = spawn('java', compilerArguments);
@@ -127,7 +127,7 @@ const bridleNsis = (): void => {
     bridleCmd.on('close', (code) => {
       if (code === 0 && stdErr.length === 0 && hasError === false) {
         if (config.showNotifications) {
-          window.showInformationMessage(`Transpiled successfully -- ${doc.fileName}`, 'Open')
+          window.showInformationMessage(`Transpiled successfully -- ${document.fileName}`, 'Open')
           .then(successBridleNsis);
         }
       } else {

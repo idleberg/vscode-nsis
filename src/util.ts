@@ -137,12 +137,12 @@ const sanitize = (response: Object): string => {
 };
 
 const successBridleNsis = (choice): void => {
-  let doc = window.activeTextEditor.document;
+  let document = window.activeTextEditor.document;
 
   if (choice === 'Open') {
-    let dirName = dirname(doc.fileName);
-    let extName = extname(doc.fileName);
-    let baseName = basename(doc.fileName, extName);
+    let dirName = dirname(document.fileName);
+    let extName = extname(document.fileName);
+    let baseName = basename(document.fileName, extName);
 
     // because BridleNSIS is kinda buggy
     let outExt = 'b' + extName.substr(1);
@@ -177,12 +177,12 @@ const successNsis = (choice, outFile) => {
 };
 
 const successNslAssembler = (choice): void => {
-  let doc = window.activeTextEditor.document;
+  let document = window.activeTextEditor.document;
 
   if (choice === 'Open') {
-    let dirName = dirname(doc.fileName);
-    let extName = extname(doc.fileName);
-    let baseName = basename(doc.fileName, extName);
+    let dirName = dirname(document.fileName);
+    let extName = extname(document.fileName);
+    let baseName = basename(document.fileName, extName);
     let outName = baseName + '.nsi';
     let nsisFile = join(dirName, outName);
 

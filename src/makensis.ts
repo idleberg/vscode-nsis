@@ -32,9 +32,9 @@ const compile = (strictMode: boolean): void => {
     return;
   }
 
-  let doc = window.activeTextEditor.document;
+  let document = window.activeTextEditor.document;
 
-  doc.save().then( () => {
+  document.save().then( () => {
     getMakensisPath()
     .then(sanitize)
     .then( (pathToMakensis: string) => {
@@ -54,7 +54,7 @@ const compile = (strictMode: boolean): void => {
       if (strictMode === true && !compilerArguments.includes(`-WX`) && !compilerArguments.includes(`/WX`)) {
         compilerArguments.push(`${prefix}WX`);
       }
-      compilerArguments.push(doc.fileName);
+      compilerArguments.push(document.fileName);
 
       // Let's build
       const child = spawn(pathToMakensis, compilerArguments);
@@ -87,7 +87,7 @@ const compile = (strictMode: boolean): void => {
 
           if (hasWarning === true) {
             if (config.showNotifications) {
-              window.showWarningMessage(`Compiled with warnings -- ${doc.fileName}`, openButton, revealButton)
+              window.showWarningMessage(`Compiled with warnings -- ${document.fileName}`, openButton, revealButton)
               .then((choice) => {
                 successNsis(choice, outFile);
               });
@@ -95,7 +95,7 @@ const compile = (strictMode: boolean): void => {
             if (stdErr.length > 0) console.warn(stdErr);
           } else {
             if (config.showNotifications) {
-              window.showInformationMessage(`Compiled successfully -- ${doc.fileName}`, openButton, revealButton)
+              window.showInformationMessage(`Compiled successfully -- ${document.fileName}`, openButton, revealButton)
               .then((choice) => {
                 successNsis(choice, outFile);
               });

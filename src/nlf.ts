@@ -7,43 +7,43 @@ import * as NLF from '@nsis/nlf';
 
 const convert = () => {
   const editor = window.activeTextEditor;
-  const doc = editor.document;
+  const document = editor.document;
 
-  if (doc.languageId === 'nlf') {
-    convertNLF(doc);
-  } else if (doc.languageId === 'json') {
-    convertJSON(doc);
+  if (document.languageId === 'nlf') {
+    convertNLF(document);
+  } else if (document.languageId === 'json') {
+    convertJSON(document);
   }
 };
 
-const convertNLF = (doc) => {
+const convertNLF = document => {
   let input, output;
 
   try {
-    input = doc.getText();
+    input = document.getText();
     output = NLF.parse(input, { stringify: true });
   } catch (err) {
     console.error(err);
     return window.showErrorMessage('Conversion failed, see output for details');
   }
 
-  openNewFile(doc, output, 'json');
+  openNewFile(document, output, 'json');
 };
 
-const convertJSON = (doc) => {
+const convertJSON = document => {
   let input, output;
 
   try {
-    input = doc.getText();
+    input = document.getText();
     output = NLF.stringify(input);
   } catch (err) {
   }
 
-  openNewFile(doc, output, 'nlf');
+  openNewFile(document, output, 'nlf');
 };
 
-const openNewFile = (doc, input, targetExt) => {
-  const newFileName = basename(doc.fileName, extname(doc.fileName));
+const openNewFile = (document, input, targetExt) => {
+  const newFileName = basename(document.fileName, extname(document.fileName));
 
   workspace.openTextDocument(null).then( newDocument => {
     window.showTextDocument(newDocument, 1, false).then( editor => {
