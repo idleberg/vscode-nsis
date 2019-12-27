@@ -1,6 +1,6 @@
 'use strict';
 
-import { commands } from 'vscode';
+import { commands, ExtensionContext } from 'vscode';
 
 // Load package components
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
@@ -8,7 +8,7 @@ import { createTask } from './task';
 import { convert } from './nlf';
 import { bridleNsis, nslAssembler} from './transpiler';
 
-const activate = (context) => {
+const activate = (context: ExtensionContext) => {
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.compile', (editor) => {
         return compile(false);
