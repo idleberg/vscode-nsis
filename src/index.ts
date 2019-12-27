@@ -14,31 +14,37 @@ const activate = (context) => {
         return compile(false);
       })
     );
+
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.compile-strict', (editor) => {
         return compile(true);
       })
     );
+
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.show-version', (editor) => {
         return showVersion();
       })
     );
+
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', (editor) => {
         return showCompilerFlags();
       })
     );
+
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.command-reference', (editor) => {
         return showHelp();
       })
     );
+
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.transpile-bridlensis', (editor) => {
         return bridleNsis();
       })
     );
+
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.transpile-nsl', (editor) => {
         return nslAssembler();
@@ -49,6 +55,7 @@ const activate = (context) => {
         return createTask();
       })
     );
+
     context.subscriptions.push(
       commands.registerTextEditorCommand('extension.nsis.convert-language-file', (editor) => {
         return convert();
