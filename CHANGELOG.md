@@ -311,7 +311,7 @@
 
 # v3.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.0.0)
 
-- move to TypeScript
+- convert to TypeScript
 - add `NSIS: Show Version` command
 - add `NSIS: Show Compiler Flags` command
 - fix unescaped constants in some snippets
