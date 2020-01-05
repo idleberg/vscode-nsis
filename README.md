@@ -60,7 +60,7 @@ You can further extend NSIS support with IntelliSense for [third-party plug-ins]
 
 Launch Quick Open, paste the following command, and press <kbd>Enter</kbd>
 
-`ext install nsis`
+`ext install idleberg.nsis`
 
 ### Packaged Extension
 
