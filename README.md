@@ -62,6 +62,12 @@ Launch Quick Open, paste the following command, and press <kbd>Enter</kbd>
 
 `ext install idleberg.nsis`
 
+### CLI
+
+With [shell commands](https://code.visualstudio.com/docs/editor/command-line) installed, you can use the following command to install the extension:
+
+`$ code --install-extension idleberg.nsis`
+
 ### Packaged Extension
 
 Download the package extension from the the [release page](https://github.com/idleberg/vscode-nsis/releases) and install it from the command-line:
