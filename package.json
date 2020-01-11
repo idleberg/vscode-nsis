@@ -12,8 +12,9 @@
     "scripts": {
         "build": "webpack --mode production",
         "dev": "webpack --mode none --watch",
+        "lint": "vscode-linter",
         "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "vscode-linter",
+        "test": "npm run lint",
         "vscode:prepublish": "webpack --mode production && gulp"
     },
     "keywords": [
@@ -35,21 +36,21 @@
     "dependencies": {
         "@nsis/nlf": "^0.6.1",
         "@types/vscode": "^1.41.0",
-        "makensis": "^0.19.0",
+        "makensis": "^0.20.3",
         "open": "^7.0.0"
     },
     "devDependencies": {
         "@nsis/logo": "*",
-        "@types/node": "^13.1.1",
+        "@types/node": "^13.1.6",
         "gulp": "^4.0.2",
         "gulp-raster": "^0.2.0",
         "gulp-rename": "^2.0.0",
-        "husky": "^3.1.0",
+        "husky": "^4.0.6",
         "ts-loader": "^6.2.1",
         "tslint": "^5.20.1",
         "vscode": "^1.1.36",
-        "vscode-linter": "^0.3.0",
-        "webpack": "^4.41.4",
+        "vscode-linter": "^0.3.1",
+        "webpack": "^4.41.5",
         "webpack-cli": "^3.3.10"
     },
     "husky": {
