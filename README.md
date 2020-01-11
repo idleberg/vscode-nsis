@@ -46,6 +46,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * WinVer
     * WordFunc
     * x64
+* NSIS Diagnostics
 * IntelliSense for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
 * IntelliSense for [BridleNSIS](https://github.com/henrikor2/bridlensis)
 * IntelliSense for [Haskell NSIS](https://hackage.haskell.org/package/nsis)
