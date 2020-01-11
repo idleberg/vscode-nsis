@@ -1,6 +1,14 @@
 'use strict';
 
-import { commands, window, workspace, WorkspaceConfiguration } from 'vscode';
+import {
+  commands,
+  DiagnosticSeverity,
+  Position,
+  Range,
+  window,
+  workspace,
+  WorkspaceConfiguration
+} from 'vscode';
 
 import * as open from 'open';
 import { basename, dirname, extname, join } from 'path';
@@ -213,12 +221,63 @@ const which = (): string => {
   return 'which';
 };
 
+const isStrictMode = (): boolean => {
+  const { compilerArguments } = getConfig();
+
+  return (compilerArguments.includes('/WX') || compilerArguments.includes('-WX'));
+};
+
+const findWarnings = (input: string) => {
+  const warningLines = input.split('\n');
+  const output = [];
+
+  if (warningLines.length) {
+    warningLines.forEach(warningLine => {
+      const result = /^warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
+
+      if (result !== null) {
+          const warningLine = parseInt(result.groups.line) - 1;
+
+          output.push({
+            code: '',
+            message: result.groups.message,
+            range: new Range(new Position(warningLine, 0), new Position(warningLine, 0)),
+            severity: isStrictMode() ? DiagnosticSeverity.Error : DiagnosticSeverity.Warning
+          });
+        }
+    });
+
+  }
+
+  return output;
+};
+
+const findErrors = (input: string) => {
+  const result = /(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(input);
+
+  if (result !== null) {
+    const errorLine = parseInt(result.groups.line) - 1;
+
+    return {
+      code: '',
+      message: result.groups.message,
+      range: new Range(new Position(errorLine, 0), new Position(errorLine, 0)),
+      severity: DiagnosticSeverity.Error
+    };
+  }
+
+  return {};
+};
+
 export {
   clearOutput,
   detectOutfile,
+  findErrors,
+  findWarnings,
   getConfig,
   getMakensisPath,
   getPrefix,
+  isStrictMode,
   isWindowsCompatible,
   openURL,
   pathWarning,
