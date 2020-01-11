@@ -1,3 +1,9 @@
+# v3.23.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.23.0)
+
+- add diagnostics
+- fix URLs in snippets
+- update dependencies
+
 # v3.22.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.22.1)
 
 - scaffolding snippets default to Unicode
