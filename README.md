@@ -60,7 +60,13 @@ You can further extend NSIS support with IntelliSense for [third-party plug-ins]
 
 Launch Quick Open, paste the following command, and press <kbd>Enter</kbd>
 
-`ext install nsis`
+`ext install idleberg.nsis`
+
+### CLI
+
+With [shell commands](https://code.visualstudio.com/docs/editor/command-line) installed, you can use the following command to install the extension:
+
+`$ code --install-extension idleberg.nsis`
 
 ### Packaged Extension
 
