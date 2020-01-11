@@ -1,16 +1,26 @@
 import * as vscode from 'vscode';
-import * as makensis from 'makensis';
+import { compile, compileSync } from 'makensis';
+import { findErrors, findWarnings, isStrictMode } from './util';
 
-const updateDiagnostics = (document: vscode.TextDocument, collection: vscode.DiagnosticCollection): void => {
-  if (document && document.languageId === 'nsis') {
-    console.log( makensis.compileSync(document.fileName, {verbose: 2}));
+const updateDiagnostics = async (document: vscode.TextDocument, collection: vscode.DiagnosticCollection): Promise<void> => {
+  if (document) {
+    let output;
 
-    collection.set(document.uri, [{
-      code: '',
-      message: 'cannot assign twice to immutable variable `x`',
-      range: new vscode.Range(new vscode.Position(3, 4), new vscode.Position(3, 10)),
-      severity: vscode.DiagnosticSeverity.Error
-    }]);
+    try {
+      output = await compile(document.fileName, {verbose: 2, strict: isStrictMode() });
+    } catch (error) {
+      console.error(error);
+    }
+
+    const diagnostics = [];
+
+    const warnings = findWarnings(output.stdout);
+    if (warnings) diagnostics.push(...warnings);
+
+    const error = findErrors(output.stderr);
+    if (error) diagnostics.push(error);
+
+    collection.set(document.uri, diagnostics);
   } else {
     collection.clear();
   }
