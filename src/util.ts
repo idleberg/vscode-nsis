@@ -240,13 +240,13 @@ const getLineLength = (line: number): number => {
 };
 
 const showANSIDeprecationWarning = () => {
-  window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Open Settings', 'Use Unicode')
+  window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Unicode Installer', 'Open Settings')
   .then(choice => {
     switch (choice) {
       case 'Open Settings':
         commands.executeCommand('workbench.action.openSettings');
         break;
-      case 'Use Unicode':
+      case 'Unicode Installer':
         open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode&utm_content=snippet');
         break;
       default:
