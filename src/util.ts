@@ -247,7 +247,7 @@ const showANSIDeprecationWarning = () => {
         commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
         break;
       case 'Unicode Installer':
-        open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode&utm_content=snippet');
+        open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode');
         break;
       default:
         break;
