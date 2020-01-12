@@ -192,6 +192,7 @@ Setting                      | Description
 `showVersionAsInfoMessage`   | Specify whether to show version as message
 `showFlagsAsObject`          | Specify whether to format compiler flags as JSON
 `useWineToRun`               | Run compiled installers using [Wine](https://winehq.org)
+`muteANSIDeprecationWarning` | Toggle ANSI deprecation warning
 `nsl.pathToJar`              | Specify the full path to `nsL.jar`
 `nsl.customArguments`        | Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
 `bridlensis.pathToJar`       | Specify the full path to `BridleNSIS.jar`

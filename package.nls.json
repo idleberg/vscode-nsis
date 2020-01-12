@@ -6,5 +6,5 @@
   "nsisPathToMakensis": "Specify the full path to `makensis`",
   "nsisPathToNsl": "Specify the full path to `nsL.jar`",
   "nsisUseWineToRun": "Specify whether to run compiled installers using [Wine](https://www.winehq.org/)",
-  "nsisMuteANSIDeprecationWarning": "ANSI targets are deprecated as of NSIS v3.05, consider moving to [Unicode](https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode&utm_content=snippet)"
+  "nsisMuteANSIDeprecationWarning": "Toggle ANSI deprecation warning"
 }
