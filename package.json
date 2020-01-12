@@ -131,7 +131,7 @@
                 "nsis.muteANSIDeprecationWarning": {
                     "type": "boolean",
                     "default": false,
-                    "markdownDescription": "%nsisMuteANSIDeprecationWarning%"
+                    "description": "Toggle ANSI deprecation warning"
                 },
                 "nsis.nsl.pathToJar": {
                     "type": "string",
