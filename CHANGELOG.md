@@ -2,6 +2,7 @@
 
 - add ANSI deprecation warning
 - add `muteANSIDeprecationWarning` option
+- modify `Open Settings` button action
 
 # v3.23.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.23.0)
 
