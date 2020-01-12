@@ -94,7 +94,7 @@ const openURL = (cmd: string): void => {
 
 const pathWarning = (): any => {
   window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
-  .then((choice) => {
+  .then(choice => {
     switch (choice) {
       case 'Download':
         open('https://sourceforge.net/projects/nsis/');
@@ -258,7 +258,6 @@ const findWarnings = (input: string) => {
           });
         }
     });
-
   }
 
   return output;

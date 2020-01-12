@@ -88,7 +88,7 @@ const compile = (strictMode: boolean): void => {
           if (hasWarning === true) {
             if (config.showNotifications) {
               window.showWarningMessage(`Compiled with warnings -- ${document.fileName}`, openButton, revealButton)
-              .then((choice) => {
+              .then(choice => {
                 successNsis(choice, outFile);
               });
             }
@@ -96,7 +96,7 @@ const compile = (strictMode: boolean): void => {
           } else {
             if (config.showNotifications) {
               window.showInformationMessage(`Compiled successfully -- ${document.fileName}`, openButton, revealButton)
-              .then((choice) => {
+              .then(choice => {
                 successNsis(choice, outFile);
               });
             }
