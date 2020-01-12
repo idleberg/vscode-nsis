@@ -206,7 +206,7 @@ const validateConfig = (setting: string): void => {
     window.showErrorMessage('The argument handling has been changed in a recent version of this extension. Please adjust your settings before trying again.', 'Open Settings')
     .then(choice => {
       if (choice === 'Open Settings') {
-        commands.executeCommand('workbench.action.openSettings');
+        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
       }
     });
 
@@ -244,7 +244,7 @@ const showANSIDeprecationWarning = () => {
   .then(choice => {
     switch (choice) {
       case 'Open Settings':
-        commands.executeCommand('workbench.action.openSettings');
+        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
         break;
       case 'Unicode Installer':
         open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode&utm_content=snippet');
