@@ -69,22 +69,32 @@ const activate = (context: vscode.ExtensionContext) => {
   const collection = vscode.languages.createDiagnosticCollection('nsis');
 
   if (vscode.window.activeTextEditor) {
-    const document = vscode.window.activeTextEditor.document || null;
-    if (document && document.languageId === 'nsis') {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) return;
+
+    if (editor) {
+      const document = editor.document || null;
+
       updateDiagnostics(document, collection);
     }
   }
 
   context.subscriptions.push(vscode.workspace.onDidSaveTextDocument(() => {
-    const document = vscode.window.activeTextEditor.document || null;
-    if (document && document.languageId === 'nsis') {
+    const editor = vscode.window.activeTextEditor;
+
+    if (editor) {
+      const document = editor.document || null;
+
       updateDiagnostics(document, collection);
     }
   }));
 
   context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(editor => {
-    const document = editor.document || null;
-    if (document && document.languageId === 'nsis') {
+    if (!editor) return;
+
+    if (editor) {
+      const document = editor.document || null;
+
       updateDiagnostics(document, collection);
     }
   }));
