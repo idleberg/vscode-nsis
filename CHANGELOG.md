@@ -1,3 +1,8 @@
+# v3.24.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.24.0)
+
+- add ANSI deprecation warning
+- add `muteANSIDeprecationWarning` option
+
 # v3.23.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.23.0)
 
 - add diagnostics support
