@@ -3,6 +3,7 @@ import { compile, compileSync } from 'makensis';
 import { findErrors, findWarnings, isStrictMode } from './util';
 
 const updateDiagnostics = async (document: vscode.TextDocument, collection: vscode.DiagnosticCollection): Promise<void> => {
+  console.log('Call');
   if (document) {
     let output;
 

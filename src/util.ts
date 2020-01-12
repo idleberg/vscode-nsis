@@ -227,6 +227,18 @@ const isStrictMode = (): boolean => {
   return (compilerArguments.includes('/WX') || compilerArguments.includes('-WX'));
 };
 
+const getLineLength = (line: number): number => {
+  const editorText = window.activeTextEditor.document.getText();
+
+  if (editorText && editorText.length) {
+    const lines: string[] = editorText.split('\n');
+
+    return lines[line].length;
+  }
+
+  return 0;
+};
+
 const findWarnings = (input: string) => {
   const warningLines = input.split('\n');
   const output = [];
@@ -241,7 +253,7 @@ const findWarnings = (input: string) => {
           output.push({
             code: '',
             message: result.groups.message,
-            range: new Range(new Position(warningLine, 0), new Position(warningLine, 0)),
+            range: new Range(new Position(warningLine, 0), new Position(warningLine, getLineLength(warningLine))),
             severity: isStrictMode() ? DiagnosticSeverity.Error : DiagnosticSeverity.Warning
           });
         }
@@ -261,7 +273,7 @@ const findErrors = (input: string) => {
     return {
       code: '',
       message: result.groups.message,
-      range: new Range(new Position(errorLine, 0), new Position(errorLine, 0)),
+      range: new Range(new Position(errorLine, 0), new Position(errorLine, getLineLength(errorLine))),
       severity: DiagnosticSeverity.Error
     };
   }
