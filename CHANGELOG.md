@@ -1,6 +1,6 @@
 # v3.23.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.23.0)
 
-- add diagnostics
+- add diagnostics support
 - fix URLs in snippets
 - update dependencies
 
