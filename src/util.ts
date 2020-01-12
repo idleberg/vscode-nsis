@@ -239,13 +239,32 @@ const getLineLength = (line: number): number => {
   return 0;
 };
 
+const showANSIDeprecationWarning = () => {
+  window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Open Settings', 'Use Unicode')
+  .then(choice => {
+    switch (choice) {
+      case 'Open Settings':
+        commands.executeCommand('workbench.action.openSettings');
+        break;
+      case 'Use Unicode':
+        open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode&utm_content=snippet');
+        break;
+      default:
+        break;
+    }
+  });
+
+  process.exit();
+};
+
+
 const findWarnings = (input: string) => {
-  const warningLines = input.split('\n');
   const output = [];
+  const warningLines = input.split('\n');
 
   if (warningLines.length) {
     warningLines.forEach(warningLine => {
-      const result = /^warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
+      const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
       if (result !== null) {
           const warningLine = parseInt(result.groups.line) - 1;
@@ -258,6 +277,12 @@ const findWarnings = (input: string) => {
           });
         }
     });
+
+    const { muteANSIDeprecationWarning } = getConfig();
+
+    if (!muteANSIDeprecationWarning && input.includes('7998: ANSI targets are deprecated')) {
+      showANSIDeprecationWarning();
+    }
   }
 
   return output;

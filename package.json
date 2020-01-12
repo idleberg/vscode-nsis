@@ -128,6 +128,11 @@
                     "default": false,
                     "markdownDescription": "%nsisUseWineToRun%"
                 },
+                "nsis.muteANSIDeprecationWarning": {
+                    "type": "boolean",
+                    "default": false,
+                    "markdownDescription": "%nsisMuteANSIDeprecationWarning%"
+                },
                 "nsis.nsl.pathToJar": {
                     "type": "string",
                     "default": "",
