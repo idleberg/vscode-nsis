@@ -1,13 +1,20 @@
 import * as vscode from 'vscode';
 import { compile, compileSync } from 'makensis';
-import { findErrors, findWarnings, isStrictMode } from './util';
+import { findErrors, findWarnings, getPreprocessMode, isStrictMode } from './util';
 
 const updateDiagnostics = async (document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> => {
   if (document && document.languageId === 'nsis') {
+    const defaultOptions = {
+      verbose: 2,
+      strict: isStrictMode()
+    };
+
+    const preprocessMode = getPreprocessMode();
+    const options = {...defaultOptions, ...preprocessMode};
     let output;
 
     try {
-      output = await compile(document.fileName, {verbose: 2, strict: isStrictMode() });
+      output = await compile(document.fileName, options);
     } catch (error) {
       console.error(error);
     }

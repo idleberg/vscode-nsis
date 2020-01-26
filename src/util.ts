@@ -222,9 +222,9 @@ const which = (): string => {
 };
 
 const getPreprocessMode = (): Object => {
-  const { preProcessMode } = getConfig();
+  const { preprocessMode } = getConfig();
 
-  switch (preProcessMode) {
+  switch (preprocessMode) {
     case 'PPO':
       return { ppo: true };
     case 'Safe PPO':
