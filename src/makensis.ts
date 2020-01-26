@@ -80,7 +80,7 @@ const compile = (strictMode: boolean): void => {
         nsisChannel.appendLine(line.toString());
       });
 
-      child.on('close', (code) => {
+      child.on('exit', (code) => {
         if (code === 0) {
           const openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
           const revealButton = (platform() === 'win32' || platform() === 'darwin' || platform() === 'linux') ? 'Reveal' : null;

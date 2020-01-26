@@ -54,7 +54,7 @@ const nslAssembler = (): void => {
       nslChannel.appendLine(line.toString());
     });
 
-    nslCmd.on('close', (code) => {
+    nslCmd.on('exit', (code) => {
       if (stdErr.length === 0) {
         if (config.showNotifications) {
           window.showInformationMessage(`Transpiled successfully -- ${document.fileName}`, 'Open')
@@ -124,7 +124,7 @@ const bridleNsis = (): void => {
       bridleChannel.appendLine(line.toString());
     });
 
-    bridleCmd.on('close', (code) => {
+    bridleCmd.on('exit', (code) => {
       if (code === 0 && stdErr.length === 0 && hasError === false) {
         if (config.showNotifications) {
           window.showInformationMessage(`Transpiled successfully -- ${document.fileName}`, 'Open')
