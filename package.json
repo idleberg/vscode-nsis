@@ -98,6 +98,16 @@
                     "default": [],
                     "markdownDescription": "%nsisCompilerArguments%"
                 },
+                "nsis.preprocessMode": {
+                    "type": "string",
+                    "enum": [
+                      "(none)",
+                      "PPO",
+                      "Safe PPO"
+                    ],
+                    "default": [],
+                    "markdownDescription": "%nsisPreprocessMode%"
+                },
                 "nsis.showNotifications": {
                     "type": "boolean",
                     "default": true,
