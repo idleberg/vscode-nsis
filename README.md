@@ -186,12 +186,13 @@ Setting                      | Description
 -----------------------------|-----------------------------------------------------------
 `pathToMakensis`             | Specify the full path to `makensis`
 `compilerArguments`          | Specify the [default arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for `makensis`
+`preprocessMode`             | Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warnings
 `showNotifications`          | Show build notifications indicating success or failure
-`alwaysShowOutput`           | If `false` the output channel will only be shown on errors
+`alwaysShowOutput`           | Output channel will only be shown on errors
 `alwaysOpenBuildTask`        | Specify whether to open the newly created build task
 `showVersionAsInfoMessage`   | Specify whether to show version as message
 `showFlagsAsObject`          | Specify whether to format compiler flags as JSON
-`useWineToRun`               | Run compiled installers using [Wine](https://winehq.org)
+`useWineToRun`               | Runs compiled installers using [Wine](https://winehq.org)
 `muteANSIDeprecationWarning` | Toggle ANSI deprecation warning
 `nsl.pathToJar`              | Specify the full path to `nsL.jar`
 `nsl.customArguments`        | Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)

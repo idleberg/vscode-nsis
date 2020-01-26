@@ -6,6 +6,6 @@
   "nsisPathToBridleNSIS": "Specify the full path to `BridleNSIS.jar`",
   "nsisPathToMakensis": "Specify the full path to `makensis`",
   "nsisPathToNsl": "Specify the full path to `nsL.jar`",
-  "nsisPreprocessMode": "Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warning (unless in strict mode)",
+  "nsisPreprocessMode": "Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warnings (unless in strict mode)",
   "nsisUseWineToRun": "Runs compiled installers using [Wine](https://www.winehq.org/)"
 }
