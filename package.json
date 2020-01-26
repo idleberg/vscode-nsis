@@ -106,7 +106,7 @@
                 "nsis.alwaysShowOutput": {
                     "type": "boolean",
                     "default": true,
-                    "description": "If `false` the output channel will only be shown on errors"
+                    "markdownDescription": "%nsisAlwaysShowOutput%"
                 },
                 "nsis.alwaysOpenBuildTask": {
                     "type": "boolean",

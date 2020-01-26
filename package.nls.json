@@ -1,4 +1,5 @@
 {
+  "nsisAlwaysShowOutput": "If `false` the output channel will only be shown on errors",
   "nsisCompilerArguments": "Specify the [default arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for `makensis`",
   "nsisDefaultArgsBridleNSIS": "Specify the default arguments for [BridleNSIS](https://github.com/henrikor2/bridlensis)",
   "nsisDefaultArgsNsl": "Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)",
