@@ -80,7 +80,7 @@ const getMakensisPath = (): Promise<any> => {
       return resolve(data);
     });
 
-    which.on('close', (code) => {
+    which.on('exit', (code) => {
       if (code !== 0) {
         return reject(code);
       }
@@ -221,6 +221,19 @@ const which = (): string => {
   return 'which';
 };
 
+const getPreprocessMode = (): Object => {
+  const { preProcessMode } = getConfig();
+
+  switch (preProcessMode) {
+    case 'PPO':
+      return { ppo: true };
+    case 'Safe PPO':
+      return { safePPO: true };
+    default:
+      return {};
+  }
+};
+
 const isStrictMode = (): boolean => {
   const { compilerArguments } = getConfig();
 
@@ -313,6 +326,7 @@ export {
   getConfig,
   getMakensisPath,
   getPrefix,
+  getPreprocessMode,
   isStrictMode,
   isWindowsCompatible,
   openURL,
