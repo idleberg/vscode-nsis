@@ -1,6 +1,11 @@
+# v3.25.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.25.1)
+
+- change default pre-processor mode
+- update dependencies
+
 # v3.25.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.25.0)
 
-- add preprocessor mode in diagnostics
+- add pre-processor mode in diagnostics
 - modify settings description
 
 # v3.24.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.24.1)
