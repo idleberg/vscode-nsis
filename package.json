@@ -35,23 +35,23 @@
     "main": "./lib/extension",
     "dependencies": {
         "@nsis/nlf": "^0.6.1",
-        "@types/vscode": "^1.41.0",
+        "@types/vscode": "^1.42.0",
         "makensis": "^0.20.3",
-        "open": "^7.0.0"
+        "open": "^7.0.2"
     },
     "devDependencies": {
         "@nsis/logo": "*",
-        "@types/node": "^13.5.0",
+        "@types/node": "^13.7.7",
         "gulp": "^4.0.2",
         "gulp-raster": "^0.2.0",
         "gulp-rename": "^2.0.0",
-        "husky": "^4.2.1",
+        "husky": "^4.2.3",
         "ts-loader": "^6.2.1",
         "tslint": "^6.0.0",
         "vscode": "^1.1.36",
         "vscode-linter": "^0.3.1",
-        "webpack": "^4.41.5",
-        "webpack-cli": "^3.3.10"
+        "webpack": "^4.41.6",
+        "webpack-cli": "^3.3.11"
     },
     "husky": {
         "hooks": {
