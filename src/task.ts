@@ -13,9 +13,9 @@ const createTask = () => {
 
   let args, argsStrict;
 
-  let prefix: string = getPrefix();
-  let config: WorkspaceConfiguration = getConfig();
-  let command = config.pathToMakensis || 'makensis';
+  const prefix: string = getPrefix();
+  const config: WorkspaceConfiguration = getConfig();
+  const command = config.pathToMakensis || 'makensis';
 
   if (config.compilerArguments.length) {
     validateConfig(config.compilerArguments);
@@ -57,9 +57,9 @@ const createTask = () => {
     ]
   };
 
-  let jsonString = JSON.stringify(taskFile, null, 2);
-  let dotFolder = join(workspace.rootPath, '/.vscode');
-  let buildFile = join(dotFolder, 'tasks.json');
+  const jsonString = JSON.stringify(taskFile, null, 2);
+  const dotFolder = join(workspace.rootPath, '/.vscode');
+  const buildFile = join(dotFolder, 'tasks.json');
 
   mkdir(dotFolder, (error) => {
     // ignore errors for now

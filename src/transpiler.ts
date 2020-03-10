@@ -22,15 +22,15 @@ const nslAssembler = (): void => {
     return;
   }
 
-  let config: WorkspaceConfiguration = getConfig();
-  let document = window.activeTextEditor.document;
+  const config: WorkspaceConfiguration = getConfig();
+  const document = window.activeTextEditor.document;
 
   if (config.nsl.customArguments.length) {
     validateConfig(config.nsl.customArguments);
   }
 
   document.save().then( () => {
-    let nslJar = config.nsl.pathToJar;
+    const nslJar = config.nsl.pathToJar;
 
     if (typeof nslJar === 'undefined' || nslJar === null) {
       return window.showErrorMessage('No valid `nsL.jar` was specified in your config');
@@ -81,15 +81,15 @@ const bridleNsis = (): void => {
     return;
   }
 
-  let config: WorkspaceConfiguration = getConfig();
-  let document = window.activeTextEditor.document;
+  const config: WorkspaceConfiguration = getConfig();
+  const document = window.activeTextEditor.document;
 
   if (config.bridlensis.customArguments.length) {
     validateConfig(config.bridlensis.customArguments);
   }
 
   document.save().then( () => {
-    let bridleJar = config.bridlensis.pathToJar;
+    const bridleJar = config.bridlensis.pathToJar;
 
     if (typeof bridleJar === 'undefined' || bridleJar === null) {
       return window.showErrorMessage('No valid `BridleNSIS.jar` was specified in your config');

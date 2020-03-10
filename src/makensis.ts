@@ -32,14 +32,14 @@ const compile = (strictMode: boolean): void => {
     return;
   }
 
-  let document = window.activeTextEditor.document;
+  const document = window.activeTextEditor.document;
 
   document.save().then( () => {
     getMakensisPath()
     .then(sanitize)
     .then( (pathToMakensis: string) => {
-      let prefix: string = getPrefix();
-      let config: WorkspaceConfiguration = getConfig();
+      const prefix: string = getPrefix();
+      const config: WorkspaceConfiguration = getConfig();
       let compilerArguments: Array<string>;
 
 
@@ -124,7 +124,7 @@ const printFlags = (output: string, showFlagsAsObject: boolean = true): void => 
 };
 
 const showVersion = (): void => {
-  let config: WorkspaceConfiguration = getConfig();
+  const config: WorkspaceConfiguration = getConfig();
 
   clearOutput(nsisChannel);
 
@@ -149,7 +149,7 @@ const showVersion = (): void => {
 };
 
 const showCompilerFlags = (): void => {
-  let config: WorkspaceConfiguration = getConfig();
+  const config: WorkspaceConfiguration = getConfig();
 
   clearOutput(nsisChannel);
 
@@ -171,7 +171,7 @@ const showCompilerFlags = (): void => {
 };
 
 const showHelp = (): void => {
-  let config: WorkspaceConfiguration = getConfig();
+  const config: WorkspaceConfiguration = getConfig();
 
   clearOutput(nsisChannel);
 

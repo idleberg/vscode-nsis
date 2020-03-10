@@ -17,7 +17,7 @@ import { platform } from 'os';
 import { exec, spawn } from 'child_process';
 
 const clearOutput = (channel): void => {
-  let config: WorkspaceConfiguration = getConfig();
+  const config: WorkspaceConfiguration = getConfig();
 
   channel.clear();
   if (config.alwaysShowOutput === true) {
@@ -55,7 +55,7 @@ const getPrefix = (): string => {
 };
 
 const isWindowsCompatible = (): boolean => {
-  let config: WorkspaceConfiguration = getConfig();
+  const config: WorkspaceConfiguration = getConfig();
 
   if (platform() === 'win32' || config.useWineToRun === true) {
     return true;
@@ -66,14 +66,14 @@ const isWindowsCompatible = (): boolean => {
 
 const getMakensisPath = (): Promise<any> => {
   return new Promise((resolve, reject) => {
-    let pathToMakensis: string = getConfig().pathToMakensis;
+    const pathToMakensis: string = getConfig().pathToMakensis;
 
     if (pathToMakensis && pathToMakensis.length) {
       console.log('Using makensis path found in user settings: ' + pathToMakensis);
       return resolve(pathToMakensis);
     }
 
-    let which = spawn(this.which(), ['makensis']);
+    const which = spawn(this.which(), ['makensis']);
 
     which.stdout.on('data', (data) => {
       console.log('Using makensis path detected on file system: ' + data);
