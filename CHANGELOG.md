@@ -1,3 +1,8 @@
+# v3.25.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.25.2)
+
+- remove `node_modules` from tarball
+- update dependencies
+
 # v3.25.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.25.1)
 
 - change default pre-processor mode
