@@ -16,7 +16,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 
 ## Features
 
-* Language syntax for NSIS, NSIS Language Files, [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler), and [BridleNSIS](https://github.com/henrikor2/bridlensis)
+* Language syntax for NSIS, NSIS Language Files, and [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
 * IntelliSense for core NSIS commands, variables and predefines
 * IntelliSense for core plug-ins:
     * AdvSplash
@@ -48,7 +48,6 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * x64
 * NSIS Diagnostics
 * IntelliSense for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
-* IntelliSense for [BridleNSIS](https://github.com/henrikor2/bridlensis)
 * IntelliSense for [Haskell NSIS](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
@@ -165,18 +164,6 @@ As of version 2.0 of this package, you can transpile [nsL Assembler](https://git
   "nsis.nsl.customArguments": ["/nomake", "/nopause"]
 }
 ```
-#### BridleNSIS Transpiler
-
-As of version 2.6 of this package, you can transpile [BridleNSIS](https://github.com/henrikor2/bridlensis) using the *NSIS: Transpile BridleNSIS code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `BridleNSIS.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
-
-**Example:**
-
-```json
-{
-  "nsis.bridlensis.pathToJar": "path\\to\\BridleNSIS.jar",
-  "nsis.bridlensis.customArguments": ["-n", "/usr/local/bin/"]
-}
-```
 
 #### Options
 
@@ -196,9 +183,6 @@ Setting                      | Description
 `muteANSIDeprecationWarning` | Toggle ANSI deprecation warning
 `nsl.pathToJar`              | Specify the full path to `nsL.jar`
 `nsl.customArguments`        | Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
-`bridlensis.pathToJar`       | Specify the full path to `BridleNSIS.jar`
-`bridlensis.customArguments` | Specify the default arguments for [BridleNSIS](https://github.com/henrikor2/bridlensis)
-`bridlensis.nsisHome`        | Specify the NSIS home directory
 
 #### Commands
 
@@ -211,7 +195,6 @@ Command Reference        | `source.nsis`        | –
 Show Version             | `source.nsis`        | –
 Show Compiler Flags      | `source.nsis`        | –
 Transpile nsL Assembler  | `source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Transpile BridleNSIS     | `source.nsis.bridle` | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
 Convert Language File    | `source.nlf`         | -
 
 ### Task Runner

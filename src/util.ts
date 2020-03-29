@@ -144,35 +144,6 @@ const sanitize = (response: Object): string => {
   return response.toString().trim();
 };
 
-const successBridleNsis = (choice): void => {
-  let document = window.activeTextEditor.document;
-
-  if (choice === 'Open') {
-    let dirName = dirname(document.fileName);
-    let extName = extname(document.fileName);
-    let baseName = basename(document.fileName, extName);
-
-    // because BridleNSIS is kinda buggy
-    let outExt = 'b' + extName.substr(1);
-
-    // if BridleNSIS wasn't buggy
-    // let outExt;
-    // if (extName == '.nsh') {
-    //   outExt = '.bnsh';
-    // } else {
-    //   outExt = '.bnsi';
-    // }
-
-    let outName = baseName + outExt;
-    let nsisFile = join(dirName, outName);
-
-    workspace.openTextDocument(nsisFile)
-    .then( (doc) => {
-      window.showTextDocument(doc);
-    });
-  }
-};
-
 const successNsis = (choice, outFile) => {
   switch (choice) {
     case 'Run':
@@ -334,7 +305,6 @@ export {
   revealInstaller,
   runInstaller,
   sanitize,
-  successBridleNsis,
   successNslAssembler,
   successNsis,
   validateConfig,

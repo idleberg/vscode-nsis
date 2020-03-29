@@ -20,7 +20,6 @@
     "keywords": [
         "nsis",
         "nsl assembler",
-        "bridlensis",
         "wine",
         "haskell"
     ],
@@ -75,7 +74,6 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:bridlensis",
         "onLanguage:nlf",
         "onLanguage:nsis",
         "onLanguage:nsl"
@@ -158,24 +156,6 @@
                         "/nopause"
                     ],
                     "markdownDescription": "%nsisDefaultArgsNsl%"
-                },
-                "nsis.bridlensis.pathToJar": {
-                    "type": "string",
-                    "default": "",
-                    "markdownDescription": "%nsisPathToBridleNSIS%"
-                },
-                "nsis.bridlensis.customArguments": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "default": [],
-                    "markdownDescription": "%nsisDefaultArgsBridleNSIS%"
-                },
-                "nsis.bridlensis.nsisHome": {
-                    "type": "string",
-                    "default": "",
-                    "description": "Specify the NSIS home directory (tried to detect automatically if not specified)"
                 }
             }
         },
@@ -215,18 +195,6 @@
                     ".nsl"
                 ],
                 "configuration": "./config/nsl.json"
-            },
-            {
-                "id": "bridlensis",
-                "aliases": [
-                    "BridleNSIS"
-                ],
-                "extensions": [
-                    ".bridle-nsi",
-                    ".bridle-nsis",
-                    ".bridle-nsh"
-                ],
-                "configuration": "./config/bridlensis.json"
             }
         ],
         "grammars": [
@@ -244,11 +212,6 @@
                 "language": "nsl",
                 "scopeName": "source.nsl",
                 "path": "./syntaxes/nsl.tmLanguage"
-            },
-            {
-                "language": "bridlensis",
-                "scopeName": "source.nsis.bridle",
-                "path": "./syntaxes/bridlensis.tmLanguage"
             }
         ],
         "commands": [
@@ -271,14 +234,6 @@
             {
                 "command": "extension.nsis.transpile-nsl",
                 "title": "NSIS: Transpile nsL code",
-                "icon": {
-                    "dark": "./images/icon--build-dark.svg",
-                    "light": "./images/icon--build-light.svg"
-                }
-            },
-            {
-                "command": "extension.nsis.transpile-bridlensis",
-                "title": "NSIS: Transpile BridleNSIS code",
                 "icon": {
                     "dark": "./images/icon--build-dark.svg",
                     "light": "./images/icon--build-light.svg"
@@ -339,12 +294,6 @@
                 "mac": "cmd+alt+b",
                 "when": "editorFocus && editorLangId == nsl",
                 "command": "extension.nsis.transpile-nsl"
-            },
-            {
-                "key": "ctrl+shift+b",
-                "mac": "cmd+alt+b",
-                "when": "editorFocus && editorLangId == bridlensis",
-                "command": "extension.nsis.transpile-bridlensis"
             }
         ],
         "menus": {
@@ -383,19 +332,10 @@
                     "when": "resourceLangId == nsl",
                     "command": "extension.nsis.transpile-nsl",
                     "group": "navigation@1"
-                },
-                {
-                    "when": "resourceLangId == bridlensis",
-                    "command": "extension.nsis.transpile-bridlensis",
-                    "group": "navigation@1"
                 }
             ]
         },
         "snippets": [
-            {
-                "language": "bridlensis",
-                "path": "./snippets/core.BridleNSIS.json"
-            },
             {
                 "language": "haskell",
                 "path": "./snippets/core.Haskell.json"

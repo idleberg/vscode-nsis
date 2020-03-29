@@ -7,7 +7,7 @@ import { updateDiagnostics } from './diagnostics';
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { createTask } from './task';
 import { convert } from './nlf';
-import { bridleNsis, nslAssembler} from './transpiler';
+import { nslAssembler} from './transpiler';
 
 const activate = (context: vscode.ExtensionContext) => {
   // Commands
@@ -38,12 +38,6 @@ const activate = (context: vscode.ExtensionContext) => {
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.nsis.command-reference', (editor) => {
       return showHelp();
-    })
-  );
-
-  context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.transpile-bridlensis', (editor) => {
-      return bridleNsis();
     })
   );
 
