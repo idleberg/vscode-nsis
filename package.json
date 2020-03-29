@@ -58,7 +58,8 @@
         }
     },
     "extensionDependencies": [
-        "IBM.output-colorizer"
+        "IBM.output-colorizer",
+        "idleberg.bridlensis"
     ],
     "icon": "images/logo.png",
     "galleryBanner": {
