@@ -1,3 +1,7 @@
+# v3.26.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.26.0)
+
+- prepare BridleNSIS support deprecation
+
 # v3.25.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.25.2)
 
 - remove `node_modules` from tarball
