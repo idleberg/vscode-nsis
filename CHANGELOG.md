@@ -73,6 +73,12 @@
 - improve path detection
 - improve error messages
 
+# v3.20.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.1)
+
+- minor refactoring
+- remove `yarn.lock`
+- update dependencies
+
 # v3.20.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.20.0)
 
 - add error message for invalid arguments format
