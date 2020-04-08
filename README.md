@@ -70,10 +70,16 @@ With [shell commands](https://code.visualstudio.com/docs/editor/command-line) in
 
 ### Packaged Extension
 
-Download the package extension from the the [release page](https://github.com/idleberg/vscode-nsis/releases) and install it from the command-line:
+Download the packaged extension from the the [release page](https://github.com/idleberg/vscode-nsis/releases) and install it from the command-line:
 
 ```bash
-$ code --install-extension nsis-*.vsix
+$ code --install-extension path/to/nsis-*.vsix
+```
+
+Alternatively, you can download the packaged extension from the [Open VSX Registry](https://open-vsx.org/) or using the [`ovsx`](https://www.npmjs.com/package/ovsx) command-line tool:
+
+```bash
+$ ovsx get idleberg.subway
 ```
 
 ### Clone Repository
