@@ -68,4 +68,4 @@ const nslAssembler = (): void => {
   });
 };
 
-export {nslAssembler };
+export { nslAssembler };

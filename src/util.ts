@@ -47,21 +47,13 @@ const getConfig = (): WorkspaceConfiguration => {
 };
 
 const getPrefix = (): string => {
-  if (platform() === 'win32') {
-    return '/';
-  }
-
-  return '-';
+  return (platform() === 'win32') ? '/' : '-';
 };
 
 const isWindowsCompatible = (): boolean => {
   const config: WorkspaceConfiguration = getConfig();
 
-  if (platform() === 'win32' || config.useWineToRun === true) {
-    return true;
-  }
-
-  return false;
+  return (platform() === 'win32' || config.useWineToRun === true) ? true : false;
 };
 
 const getMakensisPath = (): Promise<any> => {
@@ -186,10 +178,7 @@ const validateConfig = (setting: string): void => {
 };
 
 const which = (): string => {
-  if (platform() === 'win32') {
-    return 'where';
-  }
-  return 'which';
+  return (platform() === 'win32') ? 'where' : 'which';
 };
 
 const getPreprocessMode = (): Object => {
