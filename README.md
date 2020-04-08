@@ -79,7 +79,7 @@ $ code --install-extension path/to/nsis-*.vsix
 Alternatively, you can download the packaged extension from the [Open VSX Registry](https://open-vsx.org/) or using the [`ovsx`](https://www.npmjs.com/package/ovsx) command-line tool:
 
 ```bash
-$ ovsx get idleberg.subway
+$ ovsx get idleberg.nsis
 ```
 
 ### Clone Repository
