@@ -47,7 +47,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * WordFunc
     * x64
 * NSIS Diagnostics
-* IntelliSense for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
+* IntelliSense for [nsL Assembler][nsl]
 * IntelliSense for [Haskell NSIS](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
@@ -154,7 +154,7 @@ To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](
 
 #### nsL Transpiler
 
-As of version 2.0 of this package, you can transpile [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler) using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+As of version 2.0 of this package, you can transpile [nsL Assembler][nsl] using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 **Example:**
 
@@ -169,33 +169,33 @@ As of version 2.0 of this package, you can transpile [nsL Assembler](https://git
 
 You can tweak your default settings by editing your [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
 
-Setting                      | Description
------------------------------|-----------------------------------------------------------
-`pathToMakensis`             | Specify the full path to `makensis`
-`compilerArguments`          | Specify the [default arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for `makensis`
-`preprocessMode`             | Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warnings
-`showNotifications`          | Show build notifications indicating success or failure
-`alwaysShowOutput`           | Output channel will only be shown on errors
-`alwaysOpenBuildTask`        | Specify whether to open the newly created build task
-`showVersionAsInfoMessage`   | Specify whether to show version as message
-`showFlagsAsObject`          | Specify whether to format compiler flags as JSON
-`useWineToRun`               | Runs compiled installers using [Wine](https://winehq.org)
-`muteANSIDeprecationWarning` | Toggle ANSI deprecation warning
-`nsl.pathToJar`              | Specify the full path to `nsL.jar`
-`nsl.customArguments`        | Specify the default arguments for [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
+| Setting                      | Description                                                                  |
+|------------------------------|------------------------------------------------------------------------------|
+| `pathToMakensis`             | Specify the full path to `makensis`                                          |
+| `compilerArguments`          | Specify the [default arguments][makensis] for `makensis`                     |
+| `preprocessMode`             | Linter runs in the much faster [pre-process mode][ppo], but ignores warnings |
+| `showNotifications`          | Show build notifications indicating success or failure                       |
+| `alwaysShowOutput`           | Output channel will only be shown on errors                                  |
+| `alwaysOpenBuildTask`        | Specify whether to open the newly created build task                         |
+| `showVersionAsInfoMessage`   | Specify whether to show version as message                                   |
+| `showFlagsAsObject`          | Specify whether to format compiler flags as JSON                             |
+| `useWineToRun`               | Runs compiled installers using [Wine][wine]                                  |
+| `muteANSIDeprecationWarning` | Toggle ANSI deprecation warning                                              |
+| `nsl.pathToJar`              | Specify the full path to `nsL.jar`                                           |
+| `nsl.customArguments`        | Specify the default arguments for [nsL Assembler][nsl]                       |
 
 #### Commands
 
-Action                   |  Syntax              | Shortcut
--------------------------|----------------------|----------
-Compile NSIS             | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Compile NSIS (strict)    | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Create Build Task        | `source.nsis`        | –
-Command Reference        | `source.nsis`        | –
-Show Version             | `source.nsis`        | –
-Show Compiler Flags      | `source.nsis`        | –
-Transpile nsL Assembler  | `source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>
-Convert Language File    | `source.nlf`         | -
+| Action                   |  Syntax              | Shortcut                                                     |
+|--------------------------|----------------------|--------------------------------------------------------------|
+| Compile NSIS             | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>                |
+| Compile NSIS (strict)    | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> |
+| Create Build Task        | `source.nsis`        | –                                                            |
+| Command Reference        | `source.nsis`        | –                                                            |
+| Show Version             | `source.nsis`        | –                                                            |
+| Show Compiler Flags      | `source.nsis`        | –                                                            |
+| Transpile nsL Assembler  | `source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>                |
+| Convert Language File    | `source.nlf`         | -                                                            |
 
 ### Task Runner
 
@@ -217,3 +217,8 @@ An exception is made for files in readable text which contain their own license 
 ## Donate
 
 You are welcome to support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/vscode-nsis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
+
+[nsl]: https://github.com/NSIS-Dev/nsl-assembler
+[wine]: https://winehq.org
+[makensis]: http://nsis.sourceforge.net/Docs/Chapter3.html#usage
+[ppo]: https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference
