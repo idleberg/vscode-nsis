@@ -40,16 +40,16 @@
     },
     "devDependencies": {
         "@nsis/logo": "*",
-        "@types/node": "^13.11.0",
+        "@types/node": "^14.0.4",
         "gulp": "^4.0.2",
         "gulp-raster": "^0.2.0",
         "gulp-rename": "^2.0.0",
-        "husky": "^4.2.3",
-        "ts-loader": "^6.2.2",
-        "tslint": "^6.1.1",
-        "vscode": "^1.1.36",
+        "husky": "^4.2.5",
+        "ts-loader": "^7.0.4",
+        "tslint": "^6.1.2",
+        "vscode": "^1.1.37",
         "vscode-linter": "^0.3.1",
-        "webpack": "^4.42.1",
+        "webpack": "^4.43.0",
         "webpack-cli": "^3.3.11"
     },
     "husky": {
