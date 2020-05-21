@@ -1,3 +1,15 @@
+# v3.27.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.27.0)
+
+- remove highlighting for URLs
+- remove dependency on `IBM.output-colorizer`
+- update dependencies
+
+# v3.26.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.26.1)
+
+- minor refactoring
+- remove `yarn.lock`
+- update dependencies
+
 # v3.26.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.26.0)
 
 - prepare deprecation of BridleNSIS support
