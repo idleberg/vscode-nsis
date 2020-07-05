@@ -1,3 +1,7 @@
+# v3.27.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.27.1)
+
+- update dependencies
+
 # v3.27.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.27.0)
 
 - remove highlighting for URLs
