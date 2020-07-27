@@ -1413,6 +1413,13 @@
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetInstDirError"
   },
+  "GetKnownFolderPath": {
+    "body": "GetKnownFolderPath \\$${1:output} ${2:knownfolderid}$0",
+    "description": "Usage: GetKnownFolderPath $(user_var: error output)",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/GetKnownFolderPath.html?utm_source=atom&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "GetKnownFolderPath"
+  },
   "GetLabelAddress": {
     "body": "GetLabelAddress \\$${1:user_var} ${2:label}$0",
     "description": "Usage: GetLabelAddress output label",
@@ -1587,6 +1594,20 @@
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/IfRebootFlag.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "IfRebootFlag"
+  },
+  "IfRtlLanguage": {
+    "body": "IfRtlLanguage ${1:jump_if_set} ${2:[jump_if_not_set]}$0",
+    "description": "Usage: IfRtlLanguage jump_if_set [jump_if_not_set]",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/IfRtlLanguage.html?utm_source=atom&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IfRtlLanguage"
+  },
+  "IfShellVarContextAll": {
+    "body": "IfShellVarContextAll ${1:jump_if_true} ${2:[jump_if_false]}$0",
+    "description": "Usage: IfShellVarContextAll jump_if_silent [jump_if_not_silent]",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/IfShellVarContextAll.html?utm_source=atom&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "IfSilent"
   },
   "IfSilent": {
     "body": "IfSilent ${1:jump_if_silent} ${2:[jump_if_not]}$0",
