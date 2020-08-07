@@ -1,3 +1,7 @@
+# v3.28.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.28.1)
+
+- fix NSIS 3.06 snippets
+
 # v3.28.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.28.0)
 
 - add NSIS v3.06 syntax
