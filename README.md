@@ -220,10 +220,6 @@ If not otherwise specified (see below), files in this repository fall under [The
 
 An exception is made for files in readable text which contain their own license information, or files where an accompanying file exists (in the same directory) with a “-license” suffix added to the base-name name of the original file, and an extension of txt, html, or similar. For example “tidy” is accompanied by “tidy-license.txt”.
 
-## Donate
-
-You are welcome to support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/vscode-nsis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
-
 [nsl]: https://github.com/NSIS-Dev/nsl-assembler
 [wine]: https://winehq.org
 [makensis]: http://nsis.sourceforge.net/Docs/Chapter3.html#usage
