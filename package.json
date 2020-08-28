@@ -57,9 +57,7 @@
             "pre-commit": "npm run test"
         }
     },
-    "extensionDependencies": [
-        "idleberg.bridlensis"
-    ],
+    "extensionDependencies": [],
     "icon": "images/logo.png",
     "galleryBanner": {
         "color": "#9e90aa",
