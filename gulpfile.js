@@ -2,7 +2,7 @@
 
 // Dependencies
 const gulp = require('gulp');
-const raster = require('gulp-raster');
+const raster = require('gulp-raster-update');
 const rename = require('gulp-rename');
 
 const svgFiles = [

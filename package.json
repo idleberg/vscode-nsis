@@ -42,7 +42,7 @@
         "@nsis/logo": "*",
         "@types/node": "^14.6.2",
         "gulp": "^4.0.2",
-        "gulp-raster": "^0.2.0",
+        "gulp-raster-update": "^0.2.0",
         "gulp-rename": "^2.0.0",
         "husky": "^4.2.5",
         "ts-loader": "^8.0.3",
