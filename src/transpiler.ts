@@ -13,7 +13,7 @@ const nslChannel = window.createOutputChannel('nsL Assembler');
  *  https://sourceforge.net/projects/nslassembler/
  *  https://github.com/NSIS-Dev/nsl-assembler
  */
-const nslAssembler = (): void => {
+function nslAssembler(): void {
   clearOutput(nslChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsl') {
@@ -66,6 +66,6 @@ const nslAssembler = (): void => {
       }
     });
   });
-};
+}
 
 export { nslAssembler };

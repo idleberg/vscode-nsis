@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import { compile, compileSync } from 'makensis';
+import { compile } from 'makensis';
 import { findErrors, findWarnings, getPreprocessMode, isStrictMode } from './util';
 
-const updateDiagnostics = async (document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> => {
+async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
   if (document && document.languageId === 'nsis') {
     const defaultOptions = {
       verbose: 2,
@@ -31,7 +31,7 @@ const updateDiagnostics = async (document: vscode.TextDocument | null, collectio
   } else {
     collection.clear();
   }
-};
+}
 
 export {
   updateDiagnostics

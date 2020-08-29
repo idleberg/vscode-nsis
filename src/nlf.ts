@@ -1,11 +1,11 @@
 'use strict';
 
 import { basename, extname } from 'path';
-import { window, workspace, Position, Range, WorkspaceConfiguration } from 'vscode';
+import { window, workspace, Position, Range } from 'vscode';
 
 import * as NLF from '@nsis/nlf';
 
-const convert = () => {
+function convert(): void {
   const editor = window.activeTextEditor;
   const document = editor.document;
 
@@ -14,9 +14,9 @@ const convert = () => {
   } else if (document.languageId === 'json') {
     convertJSON(document);
   }
-};
+}
 
-const convertNLF = document => {
+function convertNLF(document): void {
   let input, output;
 
   try {
@@ -24,13 +24,13 @@ const convertNLF = document => {
     output = NLF.parse(input, { stringify: true });
   } catch (err) {
     console.error(err);
-    return window.showErrorMessage('Conversion failed, see output for details');
+    window.showErrorMessage('Conversion failed, see output for details');
   }
 
   openNewFile(document, output, 'json');
-};
+}
 
-const convertJSON = document => {
+function convertJSON(document): void {
   let input, output;
 
   try {
@@ -40,9 +40,9 @@ const convertJSON = document => {
   }
 
   openNewFile(document, output, 'nlf');
-};
+}
 
-const openNewFile = (document, input, targetExt) => {
+function openNewFile(document, input, targetExt): void {
   const newFileName = basename(document.fileName, extname(document.fileName));
 
   workspace.openTextDocument(null).then( newDocument => {
@@ -50,10 +50,11 @@ const openNewFile = (document, input, targetExt) => {
       editor.edit( builder => {
         const position = new Position(0, 0);
         const range = new Range(position, position);
+
         builder.replace(range, input);
       });
     });
   });
-};
+}
 
 export { convert };

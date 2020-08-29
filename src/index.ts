@@ -9,7 +9,7 @@ import { createTask } from './task';
 import { convert } from './nlf';
 import { nslAssembler} from './transpiler';
 
-const activate = (context: vscode.ExtensionContext) => {
+function activate(context: vscode.ExtensionContext): void {
   // Commands
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.nsis.compile', (editor) => {
@@ -92,6 +92,6 @@ const activate = (context: vscode.ExtensionContext) => {
       updateDiagnostics(document, collection);
     }
   }));
-};
+}
 
 export { activate };

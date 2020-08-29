@@ -15,8 +15,6 @@ import {
   isWindowsCompatible,
   openURL,
   pathWarning,
-  revealInstaller,
-  runInstaller,
   sanitize,
   successNsis,
   validateConfig
@@ -24,7 +22,7 @@ import {
 
 const nsisChannel = window.createOutputChannel('NSIS');
 
-const compile = (strictMode: boolean): void => {
+function compile(strictMode: boolean): void {
   clearOutput(nsisChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsis') {
@@ -113,17 +111,17 @@ const compile = (strictMode: boolean): void => {
       pathWarning();
     });
   });
-};
+}
 
-const printFlags = (output: string, showFlagsAsObject: boolean = true): void => {
+function printFlags(output: string, showFlagsAsObject: boolean = true): void {
   if (showFlagsAsObject === true) {
     nsisChannel.append(JSON.stringify(output, null, 2));
   } else {
     nsisChannel.append(output);
   }
-};
+}
 
-const showVersion = (): void => {
+function showVersion(): void {
   const config: WorkspaceConfiguration = getConfig();
 
   clearOutput(nsisChannel);
@@ -146,9 +144,9 @@ const showVersion = (): void => {
     console.error(error);
     pathWarning();
   });
-};
+}
 
-const showCompilerFlags = (): void => {
+function showCompilerFlags(): void {
   const config: WorkspaceConfiguration = getConfig();
 
   clearOutput(nsisChannel);
@@ -168,9 +166,9 @@ const showCompilerFlags = (): void => {
     console.error(error);
     pathWarning();
   });
-};
+}
 
-const showHelp = (): void => {
+function showHelp(): void {
   const config: WorkspaceConfiguration = getConfig();
 
   clearOutput(nsisChannel);
@@ -196,6 +194,6 @@ const showHelp = (): void => {
     console.error(error);
     pathWarning();
   });
-};
+}
 
 export { compile, showVersion, showCompilerFlags, showHelp };

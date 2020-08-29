@@ -16,16 +16,16 @@ import { access } from 'fs';
 import { platform } from 'os';
 import { exec, spawn } from 'child_process';
 
-const clearOutput = (channel): void => {
+function clearOutput(channel): void {
   const config: WorkspaceConfiguration = getConfig();
 
   channel.clear();
   if (config.alwaysShowOutput === true) {
     channel.show(true);
   }
-};
+}
 
-const detectOutfile = (str): string => {
+function detectOutfile(str): string {
   if (str.includes('Output: "')) {
     const regex = /Output: \"(.*\.exe)\"\r?\n/g;
     const result = regex.exec(str.toString());
@@ -40,23 +40,23 @@ const detectOutfile = (str): string => {
   }
 
   return '';
-};
+}
 
-const getConfig = (): WorkspaceConfiguration => {
+function getConfig(): WorkspaceConfiguration {
   return workspace.getConfiguration('nsis');
-};
+}
 
-const getPrefix = (): string => {
+function getPrefix(): string {
   return (platform() === 'win32') ? '/' : '-';
-};
+}
 
-const isWindowsCompatible = (): boolean => {
+function isWindowsCompatible(): boolean {
   const config: WorkspaceConfiguration = getConfig();
 
   return (platform() === 'win32' || config.useWineToRun === true) ? true : false;
-};
+}
 
-const getMakensisPath = (): Promise<any> => {
+function getMakensisPath(): Promise<any> {
   return new Promise((resolve, reject) => {
     const pathToMakensis: string = getConfig().pathToMakensis;
 
@@ -78,13 +78,13 @@ const getMakensisPath = (): Promise<any> => {
       }
     });
   });
-};
+}
 
-const openURL = (cmd: string): void => {
+function openURL(cmd: string): void {
   open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
-};
+}
 
-const pathWarning = (): any => {
+function pathWarning(): any {
   window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
   .then(choice => {
     switch (choice) {
@@ -96,33 +96,33 @@ const pathWarning = (): any => {
         break;
     }
   });
-};
+}
 
-const revealInstaller = (outFile) => {
-    return access(outFile, 0, (error) => {
-      if (error || outFile === '') {
-        return console.error(error);
-      }
+function revealInstaller(outFile) {
+  return access(outFile, 0, (error) => {
+    if (error || outFile === '') {
+      return console.error(error);
+    }
 
-      switch (platform()) {
-        case 'win32':
-          spawn('explorer', [`/select,${outFile}`]);
-          break;
-        case 'darwin':
-          spawn('open', ['-R', outFile]);
-          break;
-        case 'linux':
-          try {
-            spawn('nautilus', [outFile]);
-          } catch (error) {
-            console.error(error);
-          }
-          break;
-      }
-    });
-  };
+    switch (platform()) {
+      case 'win32':
+        spawn('explorer', [`/select,${outFile}`]);
+        break;
+      case 'darwin':
+        spawn('open', ['-R', outFile]);
+        break;
+      case 'linux':
+        try {
+          spawn('nautilus', [outFile]);
+        } catch (error) {
+          console.error(error);
+        }
+        break;
+    }
+  });
+}
 
-const runInstaller = (outFile): void => {
+function runInstaller(outFile): void {
   let config: WorkspaceConfiguration = getConfig();
 
   if (platform() === 'win32') {
@@ -130,13 +130,13 @@ const runInstaller = (outFile): void => {
   } else if (config.useWineToRun === true) {
     spawn('wine', [ outFile ]);
   }
-};
+}
 
-const sanitize = (response: Object): string => {
+function sanitize(response: Object): string {
   return response.toString().trim();
-};
+}
 
-const successNsis = (choice, outFile) => {
+function successNsis(choice, outFile): void {
   switch (choice) {
     case 'Run':
       runInstaller(outFile);
@@ -145,9 +145,9 @@ const successNsis = (choice, outFile) => {
       revealInstaller(outFile);
       break;
   }
-};
+}
 
-const successNslAssembler = (choice): void => {
+function successNslAssembler(choice): void {
   let document = window.activeTextEditor.document;
 
   if (choice === 'Open') {
@@ -162,9 +162,9 @@ const successNslAssembler = (choice): void => {
       window.showTextDocument(doc);
     });
   }
-};
+}
 
-const validateConfig = (setting: string): void => {
+function validateConfig(setting: string): void {
   if (typeof setting === 'string') {
     window.showErrorMessage('The argument handling has been changed in a recent version of this extension. Please adjust your settings before trying again.', 'Open Settings')
     .then(choice => {
@@ -175,13 +175,13 @@ const validateConfig = (setting: string): void => {
 
     process.exit();
   }
-};
+}
 
-const which = (): string => {
+function which(): string {
   return (platform() === 'win32') ? 'where' : 'which';
-};
+}
 
-const getPreprocessMode = (): Object => {
+function getPreprocessMode(): Object {
   const { preprocessMode } = getConfig();
 
   switch (preprocessMode) {
@@ -192,15 +192,15 @@ const getPreprocessMode = (): Object => {
     default:
       return {};
   }
-};
+}
 
-const isStrictMode = (): boolean => {
+function isStrictMode(): boolean {
   const { compilerArguments } = getConfig();
 
   return (compilerArguments.includes('/WX') || compilerArguments.includes('-WX'));
-};
+}
 
-const getLineLength = (line: number): number => {
+function getLineLength(line: number): number {
   const editorText = window.activeTextEditor.document.getText();
 
   if (editorText && editorText.length) {
@@ -210,9 +210,9 @@ const getLineLength = (line: number): number => {
   }
 
   return 0;
-};
+}
 
-const showANSIDeprecationWarning = () => {
+function showANSIDeprecationWarning() {
   window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Unicode Installer', 'Open Settings')
   .then(choice => {
     switch (choice) {
@@ -228,10 +228,9 @@ const showANSIDeprecationWarning = () => {
   });
 
   process.exit();
-};
+}
 
-
-const findWarnings = (input: string) => {
+function findWarnings(input: string) {
   const output = [];
   const warningLines = input.split('\n');
 
@@ -259,9 +258,9 @@ const findWarnings = (input: string) => {
   }
 
   return output;
-};
+}
 
-const findErrors = (input: string) => {
+function findErrors(input: string) {
   const result = /(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(input);
 
   if (result !== null) {
@@ -276,7 +275,7 @@ const findErrors = (input: string) => {
   }
 
   return {};
-};
+}
 
 export {
   clearOutput,

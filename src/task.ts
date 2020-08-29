@@ -6,7 +6,7 @@ import { mkdir, writeFile } from 'fs';
 import { getConfig, getPrefix, validateConfig } from './util';
 import { join } from 'path';
 
-const createTask = () => {
+function createTask() {
   if (typeof workspace.rootPath === 'undefined' || workspace.rootPath === null) {
     return window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
@@ -34,8 +34,6 @@ const createTask = () => {
 
   args.push('${file}');
   argsStrict.push('${file}');
-
-  const { version } = require('../package.json');
 
   const taskFile = {
     'version': '2.0.0',
@@ -75,6 +73,6 @@ const createTask = () => {
       });
     });
   });
-};
+}
 
 export { createTask };
