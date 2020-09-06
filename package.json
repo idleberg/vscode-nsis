@@ -20,7 +20,6 @@
     },
     "keywords": [
         "nsis",
-        "nsl assembler",
         "wine",
         "haskell"
     ],
@@ -58,7 +57,9 @@
             "pre-commit": "npm run test"
         }
     },
-    "extensionDependencies": [],
+    "extensionDependencies": [
+      "idleberg.nsl-assembler"
+    ],
     "icon": "images/logo.png",
     "galleryBanner": {
         "color": "#9e90aa",
@@ -74,8 +75,7 @@
     ],
     "activationEvents": [
         "onLanguage:nlf",
-        "onLanguage:nsis",
-        "onLanguage:nsl"
+        "onLanguage:nsis"
     ],
     "contributes": {
         "configuration": {
@@ -139,22 +139,6 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Toggle ANSI deprecation warning"
-                },
-                "nsis.nsl.pathToJar": {
-                    "type": "string",
-                    "default": "",
-                    "markdownDescription": "%nsisPathToNsl%"
-                },
-                "nsis.nsl.customArguments": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "default": [
-                        "/nomake",
-                        "/nopause"
-                    ],
-                    "markdownDescription": "%nsisDefaultArgsNsl%"
                 }
             }
         },
@@ -183,17 +167,6 @@
                     ".nlf"
                 ],
                 "configuration": "./config/nlf.json"
-            },
-            {
-                "id": "nsl",
-                "aliases": [
-                    "nsL Assembler",
-                    "nsl"
-                ],
-                "extensions": [
-                    ".nsl"
-                ],
-                "configuration": "./config/nsl.json"
             }
         ],
         "grammars": [
@@ -206,11 +179,6 @@
                 "language": "nlf",
                 "scopeName": "source.nlf",
                 "path": "./syntaxes/nlf.tmLanguage"
-            },
-            {
-                "language": "nsl",
-                "scopeName": "source.nsl",
-                "path": "./syntaxes/nsl.tmLanguage"
             }
         ],
         "commands": [
@@ -228,14 +196,6 @@
                 "icon": {
                     "dark": "./images/icon--build-strict-dark.svg",
                     "light": "./images/icon--build-strict-light.svg"
-                }
-            },
-            {
-                "command": "extension.nsis.transpile-nsl",
-                "title": "NSIS: Transpile nsL code",
-                "icon": {
-                    "dark": "./images/icon--build-dark.svg",
-                    "light": "./images/icon--build-light.svg"
                 }
             },
             {
@@ -287,12 +247,6 @@
                 "mac": "cmd+alt+shift+b",
                 "when": "editorFocus && editorLangId == nsis",
                 "command": "extension.nsis.compile-strict"
-            },
-            {
-                "key": "ctrl+shift+b",
-                "mac": "cmd+alt+b",
-                "when": "editorFocus && editorLangId == nsl",
-                "command": "extension.nsis.transpile-nsl"
             }
         ],
         "menus": {
@@ -326,11 +280,6 @@
                     "when": "resourceLangId == nsis",
                     "command": "extension.nsis.show-compiler-flags",
                     "group": "navigation@6"
-                },
-                {
-                    "when": "resourceLangId == nsl",
-                    "command": "extension.nsis.transpile-nsl",
-                    "group": "navigation@1"
                 }
             ]
         },
@@ -490,10 +439,6 @@
             {
                 "language": "nsis",
                 "path": "./snippets/scaffold.ModernUI.json"
-            },
-            {
-                "language": "nsl",
-                "path": "./snippets/core.nsL.json"
             }
         ]
     },

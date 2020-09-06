@@ -16,7 +16,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 
 ## Features
 
-* Language syntax for NSIS, NSIS Language Files, and [nsL Assembler](https://github.com/NSIS-Dev/nsl-assembler)
+* Language syntax for NSIS and NSIS Language Files
 * IntelliSense for core NSIS commands, variables and predefines
 * IntelliSense for core plug-ins:
     * AdvSplash
@@ -47,7 +47,6 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * WordFunc
     * x64
 * NSIS Diagnostics
-* IntelliSense for [nsL Assembler][nsl]
 * IntelliSense for [Haskell NSIS](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
@@ -158,19 +157,6 @@ Before you can build, make sure `makensis` is in your PATH [environment variable
 
 To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings as errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
-#### nsL Transpiler
-
-As of version 2.0 of this package, you can transpile [nsL Assembler][nsl] using the *NSIS: Transpile nsL code* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette). The path to `nsL.jar` is specified in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
-
-**Example:**
-
-```json
-{
-  "nsis.nsl.pathToJar": "path\\to\\nsL.jar",
-  "nsis.nsl.customArguments": ["/nomake", "/nopause"]
-}
-```
-
 #### Options
 
 You can tweak your default settings by editing your [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
@@ -187,8 +173,6 @@ You can tweak your default settings by editing your [user settings](https://code
 | `showFlagsAsObject`          | Specify whether to format compiler flags as JSON                             |
 | `useWineToRun`               | Runs compiled installers using [Wine][wine]                                  |
 | `muteANSIDeprecationWarning` | Toggle ANSI deprecation warning                                              |
-| `nsl.pathToJar`              | Specify the full path to `nsL.jar`                                           |
-| `nsl.customArguments`        | Specify the default arguments for [nsL Assembler][nsl]                       |
 
 #### Commands
 
@@ -200,7 +184,6 @@ You can tweak your default settings by editing your [user settings](https://code
 | Command Reference        | `source.nsis`        | –                                                            |
 | Show Version             | `source.nsis`        | –                                                            |
 | Show Compiler Flags      | `source.nsis`        | –                                                            |
-| Transpile nsL Assembler  | `source.nsl`         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>                |
 | Convert Language File    | `source.nlf`         | -                                                            |
 
 ### Task Runner
@@ -220,7 +203,6 @@ If not otherwise specified (see below), files in this repository fall under [The
 
 An exception is made for files in readable text which contain their own license information, or files where an accompanying file exists (in the same directory) with a “-license” suffix added to the base-name name of the original file, and an extension of txt, html, or similar. For example “tidy” is accompanied by “tidy-license.txt”.
 
-[nsl]: https://github.com/NSIS-Dev/nsl-assembler
 [wine]: https://winehq.org
 [makensis]: http://nsis.sourceforge.net/Docs/Chapter3.html#usage
 [ppo]: https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference

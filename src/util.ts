@@ -147,23 +147,6 @@ function successNsis(choice, outFile): void {
   }
 }
 
-function successNslAssembler(choice): void {
-  let document = window.activeTextEditor.document;
-
-  if (choice === 'Open') {
-    let dirName = dirname(document.fileName);
-    let extName = extname(document.fileName);
-    let baseName = basename(document.fileName, extName);
-    let outName = baseName + '.nsi';
-    let nsisFile = join(dirName, outName);
-
-    workspace.openTextDocument(nsisFile)
-    .then( (doc) => {
-      window.showTextDocument(doc);
-    });
-  }
-}
-
 function validateConfig(setting: string): void {
   if (typeof setting === 'string') {
     window.showErrorMessage('The argument handling has been changed in a recent version of this extension. Please adjust your settings before trying again.', 'Open Settings')
@@ -293,7 +276,6 @@ export {
   revealInstaller,
   runInstaller,
   sanitize,
-  successNslAssembler,
   successNsis,
   validateConfig,
   which

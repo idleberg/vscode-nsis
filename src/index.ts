@@ -7,7 +7,6 @@ import { updateDiagnostics } from './diagnostics';
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { createTask } from './task';
 import { convert } from './nlf';
-import { nslAssembler} from './transpiler';
 
 function activate(context: vscode.ExtensionContext): void {
   // Commands
@@ -38,12 +37,6 @@ function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.nsis.command-reference', (editor) => {
       return showHelp();
-    })
-  );
-
-  context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.transpile-nsl', (editor) => {
-      return nslAssembler();
     })
   );
 
