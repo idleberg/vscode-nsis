@@ -1,7 +1,7 @@
 # v3.29.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.29.0)
 
-- prepare deprecation of nsL Assembler support
 - remove BridleNSIS dependency
+- prepare deprecation of nsL Assembler support
 - update dependencies
 
 # v3.28.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.28.1)
