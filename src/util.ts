@@ -11,7 +11,6 @@ import {
 } from 'vscode';
 
 import * as open from 'open';
-import { basename, dirname, extname, join } from 'path';
 import { access } from 'fs';
 import { platform } from 'os';
 import { exec, spawn } from 'child_process';
@@ -78,6 +77,21 @@ function getMakensisPath(): Promise<any> {
       }
     });
   });
+}
+
+function mapPlatform(): string {
+  const pf = platform();
+
+  switch (pf) {
+    case 'darwin':
+      return 'osx';
+
+    case 'win32':
+      return 'osx';
+
+    default:
+      return pf;
+  }
 }
 
 function openURL(cmd: string): void {
@@ -260,6 +274,18 @@ function findErrors(input: string) {
   return {};
 }
 
+function getSpawnEnv() {
+  const { integrated } = workspace.getConfiguration('terminal');
+  const mappedPlatform = mapPlatform();
+
+  return {
+    env: {
+      NSISDIR: integrated.env[mappedPlatform].NSISDIR || process.env.NSISDIR || undefined,
+      NSISCONFDIR: integrated.env[mappedPlatform].NSISCONFDIR || process.env.NSISCONFDIR || undefined,
+    }
+  };
+}
+
 export {
   clearOutput,
   detectOutfile,
@@ -269,8 +295,10 @@ export {
   getMakensisPath,
   getPrefix,
   getPreprocessMode,
+  getSpawnEnv,
   isStrictMode,
   isWindowsCompatible,
+  mapPlatform,
   openURL,
   pathWarning,
   revealInstaller,

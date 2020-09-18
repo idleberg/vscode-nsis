@@ -1,6 +1,6 @@
 'use strict';
 
-import { window, WorkspaceConfiguration } from 'vscode';
+import { window, workspace, WorkspaceConfiguration } from 'vscode';
 
 import * as makensis from 'makensis';
 import { platform } from 'os';
@@ -12,6 +12,7 @@ import {
   getConfig,
   getMakensisPath,
   getPrefix,
+  getSpawnEnv,
   isWindowsCompatible,
   openURL,
   pathWarning,
@@ -55,7 +56,7 @@ function compile(strictMode: boolean): void {
       compilerArguments.push(document.fileName);
 
       // Let's build
-      const child = spawn(pathToMakensis, compilerArguments);
+      const child = spawn(pathToMakensis, compilerArguments, {...getSpawnEnv()});
 
       let stdErr: string = '';
       let outFile: string = '';
@@ -129,7 +130,7 @@ function showVersion(): void {
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    makensis.version({pathToMakensis: pathToMakensis})
+    makensis.version({pathToMakensis: pathToMakensis, ...getSpawnEnv()})
     .then(output => {
       if (config.showVersionAsInfoMessage === true) {
         window.showInformationMessage(`makensis ${output.stdout} (${pathToMakensis})`);
@@ -154,7 +155,7 @@ function showCompilerFlags(): void {
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: config.showFlagsAsObject})
+    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: config.showFlagsAsObject, ...getSpawnEnv()})
     .then(output => {
       printFlags(output.stdout, config.showFlagsAsObject);
     }).catch(output => {
