@@ -62,14 +62,14 @@ function getMakensisPath(): Promise<any> {
     const pathToMakensis: string = getConfig().pathToMakensis;
 
     if (pathToMakensis && pathToMakensis.length) {
-      console.log('Using makensis path found in user settings: ' + pathToMakensis);
+      console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
       return resolve(pathToMakensis);
     }
 
     const which = spawn(this.which(), ['makensis']);
 
     which.stdout.on('data', (data) => {
-      console.log('Using makensis path detected on file system: ' + data);
+      console.log(`Using makensis path detected on file system: ${data}`);
       return resolve(data);
     });
 
@@ -323,7 +323,7 @@ async function findEnvFile() {
       break;
   }
 
-  if (envFile) console.log('Found DotEnv file: ' + envFile);
+  if (envFile) console.log(`Found DotEnv file ${envFile}`);
 
   return envFile;
 }
