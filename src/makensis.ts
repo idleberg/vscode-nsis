@@ -177,7 +177,7 @@ function showHelp(): void {
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    makensis.cmdHelp('', {pathToMakensis: pathToMakensis, json: config.showFlagsAsObject})
+    makensis.cmdHelp('', {pathToMakensis: pathToMakensis, json: config.showFlagsAsObject, ...getSpawnEnv()})
     .then(output => {
       window.showQuickPick(Object.keys(output.stdout)).then(cmd => {
         if (typeof cmd === 'undefined') {
