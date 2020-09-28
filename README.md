@@ -50,6 +50,7 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 * IntelliSense for [Haskell NSIS](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
+* [Environment Variables](https://github.com/idleberg/vscode-nsis#environment-variables)
 
 You can further extend NSIS support with IntelliSense for [third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
 
@@ -191,6 +192,16 @@ You can tweak your default settings by editing your [user settings](https://code
 If you prefer Visual Studio Code's built-in Task Runner to build scripts, you can create `tasks.json` in the project root using the *NSIS: Create Build Task* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
 
 **Note:** The created Task Runner will adapt to the [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
+
+### Environment Variables
+
+This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`, using the following priority:
+
+1. `terminal.integrated.shell.*` setting
+2. `.env` files
+3. system-wide environment variables
+
+**Note:** Some operating systems require Visual Studio Code to be launched from terminal in order to access system-wide environment variables.
 
 ## Related
 
