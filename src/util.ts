@@ -11,9 +11,11 @@ import {
 } from 'vscode';
 
 import * as open from 'open';
-import { access } from 'fs';
+import { access, constants, promises as fs } from 'fs';
 import { platform } from 'os';
 import { exec, spawn } from 'child_process';
+import { resolve } from 'path';
+import { config as dotenvConfig } from 'dotenv';
 
 function clearOutput(channel): void {
   const config: WorkspaceConfiguration = getConfig();
@@ -227,6 +229,16 @@ function showANSIDeprecationWarning() {
   process.exit();
 }
 
+async function fileExists(filePath: string): Promise<boolean> {
+  try {
+    await fs.access(filePath, constants.F_OK);
+  } catch (err) {
+    return false;
+  }
+
+  return true;
+}
+
 function findWarnings(input: string) {
   const output = [];
   const warningLines = input.split('\n');
@@ -274,7 +286,57 @@ function findErrors(input: string) {
   return {};
 }
 
-function getSpawnEnv() {
+async function getProjectPath(): Promise<null | string> {
+  let editor;
+
+  try {
+    editor = window.activeTextEditor;
+  } catch (err) {
+    return null;
+  }
+
+  const resource = editor.document.uri;
+  const { uri } = workspace.getWorkspaceFolder(resource);
+
+  return uri.fsPath || null;
+}
+
+async function findEnvFile() {
+  let envFile = undefined;
+  const projectPath = await getProjectPath();
+
+  switch (true) {
+    case (await fileExists(resolve(projectPath, '.env.local'))):
+      envFile = resolve(projectPath, '.env.local');
+      break;
+
+    case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.[${process.env.NODE_ENV}]`))):
+      envFile = resolve(projectPath, `.env.[${process.env.NODE_ENV}]`);
+      break;
+
+    case (await fileExists(resolve(projectPath, '.env'))):
+      envFile = resolve(projectPath, '.env');
+      break;
+
+    default:
+      envFile = undefined;
+      break;
+  }
+
+  if (envFile) console.log('Found DotEnv file: ' + envFile);
+
+  return envFile;
+}
+
+async function initDotEnv(): Promise<void> {
+  dotenvConfig({
+    path: await findEnvFile()
+  });
+}
+
+async function getSpawnEnv() {
+  await initDotEnv();
+
   const { integrated } = workspace.getConfiguration('terminal');
   const mappedPlatform = mapPlatform();
 

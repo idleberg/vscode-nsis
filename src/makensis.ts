@@ -36,7 +36,7 @@ function compile(strictMode: boolean): void {
   document.save().then( () => {
     getMakensisPath()
     .then(sanitize)
-    .then( (pathToMakensis: string) => {
+    .then( async (pathToMakensis: string) => {
       const prefix: string = getPrefix();
       const config: WorkspaceConfiguration = getConfig();
       let compilerArguments: Array<string>;
@@ -56,7 +56,7 @@ function compile(strictMode: boolean): void {
       compilerArguments.push(document.fileName);
 
       // Let's build
-      const child = spawn(pathToMakensis, compilerArguments, {...getSpawnEnv()});
+      const child = spawn(pathToMakensis, compilerArguments, {...await getSpawnEnv()});
 
       let stdErr: string = '';
       let outFile: string = '';

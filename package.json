@@ -35,6 +35,7 @@
     "dependencies": {
         "@nsis/nlf": "^0.7.1",
         "@types/vscode": "^1.49.0",
+        "dotenv": "^8.2.0",
         "makensis": "^0.21.2",
         "open": "^7.2.1"
     },
