@@ -18,7 +18,7 @@
       "postinstall": "node ./node_modules/vscode/bin/install",
       "start": "NODE_ENV=development rollup --watch --config",
       "test": "npm run lint",
-      "vscode:prepublish": "webpack --mode production && gulp"
+      "vscode:prepublish": "npm run build && gulp"
    },
    "keywords": [
       "nsis",
