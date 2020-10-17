@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { compile } from 'makensis';
-import { findErrors, findWarnings, getPreprocessMode, isStrictMode } from './util';
+import { findErrors, findWarnings, getPreprocessMode, getSpawnEnv, isStrictMode } from './util';
 
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
   if (document && document.languageId === 'nsis') {
@@ -10,11 +10,11 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     };
 
     const preprocessMode = getPreprocessMode();
-    const options = {...defaultOptions, ...preprocessMode};
+    const options = {...defaultOptions, preprocessMode};
     let output;
 
     try {
-      output = await compile(document.fileName, options);
+      output = await compile(document.fileName, options, await getSpawnEnv());
     } catch (error) {
       console.error(error);
     }

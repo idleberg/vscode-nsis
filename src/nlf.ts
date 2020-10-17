@@ -1,7 +1,6 @@
 'use strict';
 
-import { basename, extname } from 'path';
-import { window, workspace, Position, Range } from 'vscode';
+import { window, workspace } from 'vscode';
 
 import * as NLF from '@nsis/nlf';
 
@@ -27,7 +26,10 @@ function convertNLF(document): void {
     window.showErrorMessage('Conversion failed, see output for details');
   }
 
-  openNewFile(document, output, 'json');
+  openNewFile({
+    content: output,
+    language: 'json'
+  });
 }
 
 function convertJSON(document): void {
@@ -37,24 +39,17 @@ function convertJSON(document): void {
     input = document.getText();
     output = NLF.stringify(input);
   } catch (err) {
+    undefined
   }
 
-  openNewFile(document, output, 'nlf');
+  openNewFile({
+    content: output,
+    language: 'nlf'
+  });
 }
 
-function openNewFile(document, input, targetExt): void {
-  const newFileName = basename(document.fileName, extname(document.fileName));
-
-  workspace.openTextDocument(null).then( newDocument => {
-    window.showTextDocument(newDocument, 1, false).then( editor => {
-      editor.edit( builder => {
-        const position = new Position(0, 0);
-        const range = new Range(position, position);
-
-        builder.replace(range, input);
-      });
-    });
-  });
+function openNewFile(newDocument): void {
+  workspace.openTextDocument(newDocument).then( document => window.showTextDocument(document));
 }
 
 export { convert };

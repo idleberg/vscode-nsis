@@ -6,7 +6,7 @@ import { mkdir, writeFile } from 'fs';
 import { getConfig, getPrefix, validateConfig } from './util';
 import { join } from 'path';
 
-function createTask() {
+function createTask(): unknown {
   if (typeof workspace.rootPath === 'undefined' || workspace.rootPath === null) {
     return window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
@@ -15,7 +15,6 @@ function createTask() {
 
   const prefix: string = getPrefix();
   const config: WorkspaceConfiguration = getConfig();
-  const command = config.pathToMakensis || 'makensis';
 
   if (config.compilerArguments.length) {
     validateConfig(config.compilerArguments);
@@ -59,7 +58,7 @@ function createTask() {
   const dotFolder = join(workspace.rootPath, '/.vscode');
   const buildFile = join(dotFolder, 'tasks.json');
 
-  mkdir(dotFolder, (error) => {
+  mkdir(dotFolder, () => {
     // ignore errors for now
     writeFile(buildFile, jsonString, (error) => {
       if (error) {

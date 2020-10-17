@@ -11,43 +11,43 @@ import { convert } from './nlf';
 function activate(context: vscode.ExtensionContext): void {
   // Commands
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.compile', (editor) => {
+    vscode.commands.registerTextEditorCommand('extension.nsis.compile', () => {
       return compile(false);
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.compile-strict', (editor) => {
+    vscode.commands.registerTextEditorCommand('extension.nsis.compile-strict', () => {
       return compile(true);
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.show-version', (editor) => {
+    vscode.commands.registerTextEditorCommand('extension.nsis.show-version', () => {
       return showVersion();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', (editor) => {
+    vscode.commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', () => {
       return showCompilerFlags();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.command-reference', (editor) => {
+    vscode.commands.registerTextEditorCommand('extension.nsis.command-reference', () => {
       return showHelp();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.create-build-task', (editor) => {
+    vscode.commands.registerTextEditorCommand('extension.nsis.create-build-task', () => {
       return createTask();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.convert-language-file', (editor) => {
+    vscode.commands.registerTextEditorCommand('extension.nsis.convert-language-file', () => {
       return convert();
     })
   );

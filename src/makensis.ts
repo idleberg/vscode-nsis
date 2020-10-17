@@ -1,6 +1,6 @@
 'use strict';
 
-import { window, workspace, WorkspaceConfiguration } from 'vscode';
+import { window, WorkspaceConfiguration } from 'vscode';
 
 import * as makensis from 'makensis';
 import { platform } from 'os';
@@ -56,13 +56,13 @@ function compile(strictMode: boolean): void {
       compilerArguments.push(document.fileName);
 
       // Let's build
-      const child = spawn(pathToMakensis, compilerArguments, {...await getSpawnEnv()});
+      const child = spawn(pathToMakensis, compilerArguments, await getSpawnEnv());
 
-      let stdErr: string = '';
-      let outFile: string = '';
-      let hasWarning: boolean = false;
+      let stdErr = '';
+      let outFile = '';
+      let hasWarning = false;
 
-      child.stdout.on('data', (line: Array<string> ) => {
+      child.stdout.on('data', (line: string ) => {
         // Detect warnings
         if (line.includes('warning: ')) {
           hasWarning = true;
@@ -74,7 +74,7 @@ function compile(strictMode: boolean): void {
         nsisChannel.appendLine(line.toString());
       });
 
-      child.stderr.on('data', (line: Array<any>) => {
+      child.stderr.on('data', (line: string) => {
         stdErr += '\n' + line;
         nsisChannel.appendLine(line.toString());
       });
@@ -114,7 +114,7 @@ function compile(strictMode: boolean): void {
   });
 }
 
-function printFlags(output: string, showFlagsAsObject: boolean = true): void {
+function printFlags(output: string, showFlagsAsObject = true): void {
   if (showFlagsAsObject === true) {
     nsisChannel.append(JSON.stringify(output, null, 2));
   } else {
@@ -130,7 +130,7 @@ function showVersion(): void {
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    makensis.version({pathToMakensis: pathToMakensis, ...getSpawnEnv()})
+    makensis.version({pathToMakensis: pathToMakensis}, getSpawnEnv())
     .then(output => {
       if (config.showVersionAsInfoMessage === true) {
         window.showInformationMessage(`makensis ${output.stdout} (${pathToMakensis})`);
@@ -155,7 +155,7 @@ function showCompilerFlags(): void {
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: config.showFlagsAsObject, ...getSpawnEnv()})
+    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: config.showFlagsAsObject}, getSpawnEnv())
     .then(output => {
       printFlags(output.stdout, config.showFlagsAsObject);
     }).catch(output => {
@@ -177,7 +177,7 @@ function showHelp(): void {
   getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
-    makensis.cmdHelp('', {pathToMakensis: pathToMakensis, json: config.showFlagsAsObject, ...getSpawnEnv()})
+    makensis.cmdHelp('', {pathToMakensis: pathToMakensis, json: config.showFlagsAsObject}, getSpawnEnv())
     .then(output => {
       window.showQuickPick(Object.keys(output.stdout)).then(cmd => {
         if (typeof cmd === 'undefined') {

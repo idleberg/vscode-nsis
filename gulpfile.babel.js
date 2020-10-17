@@ -1,9 +1,9 @@
 'use strict';
 
 // Dependencies
-const gulp = require('gulp');
-const raster = require('gulp-raster-update');
-const rename = require('gulp-rename');
+import gulp from 'gulp';
+import raster from 'gulp-raster-update';
+import rename from 'gulp-rename';
 
 const svgFiles = [
   'node_modules/@nsis/logo/src/Logo/outlines-light.svg'

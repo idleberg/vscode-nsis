@@ -10,14 +10,15 @@ import {
   WorkspaceConfiguration
 } from 'vscode';
 
-import * as open from 'open';
+import open from 'open';
 import { access, constants, promises as fs } from 'fs';
 import { platform } from 'os';
 import { exec, spawn } from 'child_process';
 import { resolve } from 'path';
 import { config as dotenvConfig } from 'dotenv';
 
-function clearOutput(channel): void {
+// eslint-disable-next-line
+function clearOutput(channel: any): void {
   const config: WorkspaceConfiguration = getConfig();
 
   channel.clear();
@@ -26,9 +27,9 @@ function clearOutput(channel): void {
   }
 }
 
-function detectOutfile(str): string {
+function detectOutfile(str: string): string {
   if (str.includes('Output: "')) {
-    const regex = /Output: \"(.*\.exe)\"\r?\n/g;
+    const regex = /Output: "(.*\.exe)"\r?\n/g;
     const result = regex.exec(str.toString());
 
     if (typeof result === 'object') {
@@ -57,7 +58,7 @@ function isWindowsCompatible(): boolean {
   return (platform() === 'win32' || config.useWineToRun === true) ? true : false;
 }
 
-function getMakensisPath(): Promise<any> {
+function getMakensisPath(): Promise<unknown> {
   return new Promise((resolve, reject) => {
     const pathToMakensis: string = getConfig().pathToMakensis;
 
@@ -100,7 +101,7 @@ function openURL(cmd: string): void {
   open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
 }
 
-function pathWarning(): any {
+function pathWarning(): void {
   window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
   .then(choice => {
     switch (choice) {
@@ -114,7 +115,7 @@ function pathWarning(): any {
   });
 }
 
-function revealInstaller(outFile) {
+function revealInstaller(outFile: string): void {
   return access(outFile, 0, (error) => {
     if (error || outFile === '') {
       return console.error(error);
@@ -138,8 +139,8 @@ function revealInstaller(outFile) {
   });
 }
 
-function runInstaller(outFile): void {
-  let config: WorkspaceConfiguration = getConfig();
+function runInstaller(outFile: string): void {
+  const config: WorkspaceConfiguration = getConfig();
 
   if (platform() === 'win32') {
     exec(`cmd /c "${outFile}"`);
@@ -148,11 +149,11 @@ function runInstaller(outFile): void {
   }
 }
 
-function sanitize(response: Object): string {
+function sanitize(response: unknown): string {
   return response.toString().trim();
 }
 
-function successNsis(choice, outFile): void {
+function successNsis(choice: string, outFile: string): void {
   switch (choice) {
     case 'Run':
       runInstaller(outFile);
@@ -180,7 +181,7 @@ function which(): string {
   return (platform() === 'win32') ? 'where' : 'which';
 }
 
-function getPreprocessMode(): Object {
+function getPreprocessMode(): unknown {
   const { preprocessMode } = getConfig();
 
   switch (preprocessMode) {
@@ -189,7 +190,7 @@ function getPreprocessMode(): Object {
     case 'Safe PPO':
       return { safePPO: true };
     default:
-      return {};
+      return undefined;
   }
 }
 
@@ -239,7 +240,7 @@ async function fileExists(filePath: string): Promise<boolean> {
   return true;
 }
 
-function findWarnings(input: string) {
+function findWarnings(input: string): unknown[] {
   const output = [];
   const warningLines = input.split('\n');
 
@@ -269,7 +270,7 @@ function findWarnings(input: string) {
   return output;
 }
 
-function findErrors(input: string) {
+function findErrors(input: string): unknown {
   const result = /(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(input);
 
   if (result !== null) {
@@ -334,7 +335,7 @@ async function initDotEnv(): Promise<void> {
   });
 }
 
-async function getSpawnEnv() {
+async function getSpawnEnv(): Promise<unknown> {
   await initDotEnv();
 
   const { integrated } = workspace.getConfiguration('terminal');
