@@ -1,3 +1,12 @@
+# v3.31.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.31.0)
+
+- migrate to Rollup as bundler
+- migrate to ESLint as linter
+- replace development linter
+- use ES6 in `gulpfile.js`
+- refactor language file conversion
+- update dependencies
+
 # v3.30.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.30.0)
 
 - add support for environment variables
