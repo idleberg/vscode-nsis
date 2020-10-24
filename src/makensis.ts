@@ -1,18 +1,19 @@
 'use strict';
 
-import { window, WorkspaceConfiguration } from 'vscode';
+import { commands, window, WorkspaceConfiguration } from 'vscode';
 
-import * as makensis from 'makensis';
+import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { spawn } from 'child_process';
+import * as makensis from 'makensis';
 
 import {
   clearOutput,
   detectOutfile,
-  getConfig,
   getMakensisPath,
   getPrefix,
   getSpawnEnv,
+  isHeaderFile,
   isWindowsCompatible,
   openURL,
   pathWarning,
@@ -23,40 +24,50 @@ import {
 
 const nsisChannel = window.createOutputChannel('NSIS');
 
-function compile(strictMode: boolean): void {
-  clearOutput(nsisChannel);
+async function compile(strictMode: boolean): Promise<void> {
+  await clearOutput(nsisChannel);
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsis') {
     nsisChannel.appendLine('This command is only available for NSIS files');
     return;
   }
 
+
+  const { allowHeaderCompilation, compilerArguments, showNotifications } = await getConfig('nsis');
   const document = window.activeTextEditor.document;
 
-  document.save().then( () => {
-    getMakensisPath()
+  if (!allowHeaderCompilation && isHeaderFile(document.fileName)) {
+    const choice = await window.showWarningMessage('Compiling header files is blocked by default. You can allow it in the package settings.', 'Open Settings');
+    if (choice === 'Open Settings') {
+      commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis allowHeaderCompilation');
+      return;
+    }
+  }
+
+  document.save().then(async () => {
+    await getMakensisPath()
     .then(sanitize)
     .then( async (pathToMakensis: string) => {
       const prefix: string = getPrefix();
-      const config: WorkspaceConfiguration = getConfig();
-      let compilerArguments: Array<string>;
 
+      let makensisArguments: string[];
 
-      if (config.compilerArguments.length) {
-        validateConfig(config.compilerArguments);
-        compilerArguments = [ ...config.compilerArguments ];
+      if (compilerArguments.length) {
+        validateConfig(compilerArguments);
+        makensisArguments = [ ...compilerArguments ];
       } else {
-        compilerArguments = [ `${prefix}V4` ];
+        makensisArguments = [ `${prefix}V4` ];
       }
 
       // only add WX flag if not already specified
-      if (strictMode === true && !compilerArguments.includes(`-WX`) && !compilerArguments.includes(`/WX`)) {
-        compilerArguments.push(`${prefix}WX`);
+      if (strictMode === true && !makensisArguments.includes(`-WX`) && !makensisArguments.includes(`/WX`)) {
+        makensisArguments.push(`${prefix}WX`);
       }
-      compilerArguments.push(document.fileName);
+
+      makensisArguments.push(document.fileName);
 
       // Let's build
-      const child = spawn(pathToMakensis, compilerArguments, await getSpawnEnv());
+      const child = spawn(pathToMakensis, makensisArguments, await getSpawnEnv());
 
       let stdErr = '';
       let outFile = '';
@@ -79,30 +90,30 @@ function compile(strictMode: boolean): void {
         nsisChannel.appendLine(line.toString());
       });
 
-      child.on('exit', (code) => {
+      child.on('exit', async (code) => {
         if (code === 0) {
-          const openButton = (isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
+          const openButton = (await isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
           const revealButton = (platform() === 'win32' || platform() === 'darwin' || platform() === 'linux') ? 'Reveal' : null;
 
           if (hasWarning === true) {
-            if (config.showNotifications) {
+            if (showNotifications) {
               window.showWarningMessage(`Compiled with warnings -- ${document.fileName}`, openButton, revealButton)
-              .then(choice => {
-                successNsis(choice, outFile);
+              .then(async choice => {
+                await successNsis(choice, outFile);
               });
             }
             if (stdErr.length > 0) console.warn(stdErr);
           } else {
-            if (config.showNotifications) {
+            if (showNotifications) {
               window.showInformationMessage(`Compiled successfully -- ${document.fileName}`, openButton, revealButton)
-              .then(choice => {
-                successNsis(choice, outFile);
+              .then(async choice => {
+                await successNsis(choice, outFile);
               });
             }
           }
         } else {
           nsisChannel.show(true);
-          if (config.showNotifications) window.showErrorMessage('Compilation failed, see output for details');
+          if (showNotifications) window.showErrorMessage('Compilation failed, see output for details');
           if (stdErr.length > 0) console.error(stdErr);
         }
       });
@@ -122,12 +133,12 @@ function printFlags(output: string, showFlagsAsObject = true): void {
   }
 }
 
-function showVersion(): void {
+async function showVersion(): Promise<void> {
   const config: WorkspaceConfiguration = getConfig();
 
-  clearOutput(nsisChannel);
+  await clearOutput(nsisChannel);
 
-  getMakensisPath()
+  await getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
     makensis.version({pathToMakensis: pathToMakensis}, getSpawnEnv())
@@ -147,12 +158,12 @@ function showVersion(): void {
   });
 }
 
-function showCompilerFlags(): void {
+async function showCompilerFlags(): Promise<void> {
   const config: WorkspaceConfiguration = getConfig();
 
-  clearOutput(nsisChannel);
+  await clearOutput(nsisChannel);
 
-  getMakensisPath()
+  await getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
     makensis.hdrInfo({pathToMakensis: pathToMakensis, json: config.showFlagsAsObject}, getSpawnEnv())
@@ -169,12 +180,12 @@ function showCompilerFlags(): void {
   });
 }
 
-function showHelp(): void {
+async function showHelp(): Promise<void> {
   const config: WorkspaceConfiguration = getConfig();
 
-  clearOutput(nsisChannel);
+  await clearOutput(nsisChannel);
 
-  getMakensisPath()
+  await getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
     makensis.cmdHelp('', {pathToMakensis: pathToMakensis, json: config.showFlagsAsObject}, getSpawnEnv())

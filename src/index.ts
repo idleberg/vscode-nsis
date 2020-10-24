@@ -1,6 +1,6 @@
 'use strict';
 
-import * as vscode from 'vscode';
+import { commands, ExtensionContext, languages, window, workspace } from 'vscode';
 
 // Load package components
 import { updateDiagnostics } from './diagnostics';
@@ -8,55 +8,55 @@ import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { createTask } from './task';
 import { convert } from './nlf';
 
-function activate(context: vscode.ExtensionContext): void {
+async function activate(context: ExtensionContext): Promise<void> {
   // Commands
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.compile', () => {
-      return compile(false);
+    commands.registerTextEditorCommand('extension.nsis.compile', async () => {
+      return await compile(false);
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.compile-strict', () => {
-      return compile(true);
+    commands.registerTextEditorCommand('extension.nsis.compile-strict', async () => {
+      return await compile(true);
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.show-version', () => {
-      return showVersion();
+    commands.registerTextEditorCommand('extension.nsis.show-version', async () => {
+      return await showVersion();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', () => {
-      return showCompilerFlags();
+    commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', async () => {
+      return await showCompilerFlags();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.command-reference', () => {
-      return showHelp();
+    commands.registerTextEditorCommand('extension.nsis.command-reference', async () => {
+      return await showHelp();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.create-build-task', () => {
-      return createTask();
+    commands.registerTextEditorCommand('extension.nsis.create-build-task', async () => {
+      return await createTask();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.convert-language-file', () => {
+    commands.registerTextEditorCommand('extension.nsis.convert-language-file', () => {
       return convert();
     })
   );
 
   // Diagnostics
-  const collection = vscode.languages.createDiagnosticCollection('nsis');
+  const collection = languages.createDiagnosticCollection('nsis');
 
-  if (vscode.window.activeTextEditor) {
-    const editor = vscode.window.activeTextEditor;
+  if (window.activeTextEditor) {
+    const editor = window.activeTextEditor;
     if (!editor) return;
 
     if (editor) {
@@ -66,8 +66,8 @@ function activate(context: vscode.ExtensionContext): void {
     }
   }
 
-  context.subscriptions.push(vscode.workspace.onDidSaveTextDocument(() => {
-    const editor = vscode.window.activeTextEditor;
+  context.subscriptions.push(workspace.onDidSaveTextDocument(() => {
+    const editor = window.activeTextEditor;
 
     if (editor) {
       const document = editor.document || null;
@@ -76,7 +76,7 @@ function activate(context: vscode.ExtensionContext): void {
     }
   }));
 
-  context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(editor => {
+  context.subscriptions.push(window.onDidChangeActiveTextEditor(editor => {
     if (!editor) return;
 
     if (editor) {

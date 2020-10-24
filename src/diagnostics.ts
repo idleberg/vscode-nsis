@@ -6,10 +6,10 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
   if (document && document.languageId === 'nsis') {
     const defaultOptions = {
       verbose: 2,
-      strict: isStrictMode()
+      strict: await isStrictMode()
     };
 
-    const preprocessMode = getPreprocessMode();
+    const preprocessMode = await getPreprocessMode();
     const options = {...defaultOptions, preprocessMode};
     let output;
 
@@ -21,7 +21,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
 
     const diagnostics = [];
 
-    const warnings = findWarnings(output.stdout);
+    const warnings = await findWarnings(output.stdout);
     if (warnings) diagnostics.push(...warnings);
 
     const error = findErrors(output.stderr);

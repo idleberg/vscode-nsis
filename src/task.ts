@@ -1,12 +1,13 @@
 'use strict';
 
-import { window, workspace, WorkspaceConfiguration } from 'vscode';
+import { window, workspace } from 'vscode';
 
-import { mkdir, writeFile } from 'fs';
-import { getConfig, getPrefix, validateConfig } from './util';
+import { getConfig } from 'vscode-get-config';
+import { getPrefix, validateConfig } from './util';
 import { join } from 'path';
+import { mkdir, writeFile } from 'fs';
 
-function createTask(): unknown {
+async function createTask(): Promise<unknown> {
   if (typeof workspace.rootPath === 'undefined' || workspace.rootPath === null) {
     return window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
@@ -14,12 +15,12 @@ function createTask(): unknown {
   let args, argsStrict;
 
   const prefix: string = getPrefix();
-  const config: WorkspaceConfiguration = getConfig();
+  const { alwaysOpenBuildTask, compilerArguments } = await getConfig('nsis');
 
-  if (config.compilerArguments.length) {
-    validateConfig(config.compilerArguments);
-    args = config.compilerArguments;
-    argsStrict = config.compilerArguments;
+  if (compilerArguments.length) {
+    validateConfig(compilerArguments);
+    args = compilerArguments;
+    argsStrict = compilerArguments;
   } else {
     // no default value, since prefixes are OS dependent
     args = [ `${prefix}V4` ];
@@ -64,7 +65,7 @@ function createTask(): unknown {
       if (error) {
         window.showErrorMessage(error.toString());
       }
-      if (config.alwaysOpenBuildTask === false) return;
+      if (alwaysOpenBuildTask === false) return;
 
       // Open tasks.json
       workspace.openTextDocument(buildFile).then( (doc) => {

@@ -6,23 +6,24 @@ import {
   Position,
   Range,
   window,
-  workspace,
-  WorkspaceConfiguration
+  workspace
 } from 'vscode';
 
 import open from 'open';
 import { access, constants, promises as fs } from 'fs';
-import { platform } from 'os';
-import { exec, spawn } from 'child_process';
-import { resolve } from 'path';
 import { config as dotenvConfig } from 'dotenv';
+import { exec, spawn } from 'child_process';
+import { getConfig } from 'vscode-get-config';
+import { platform } from 'os';
+import { resolve } from 'path';
 
 // eslint-disable-next-line
-function clearOutput(channel: any): void {
-  const config: WorkspaceConfiguration = getConfig();
+async function clearOutput(channel: any): Promise<void> {
+  const { alwaysShowOutput } = await getConfig('nsis');
 
   channel.clear();
-  if (config.alwaysShowOutput === true) {
+
+  if (alwaysShowOutput === true) {
     channel.show(true);
   }
 }
@@ -44,24 +45,33 @@ function detectOutfile(str: string): string {
   return '';
 }
 
-function getConfig(): WorkspaceConfiguration {
-  return workspace.getConfiguration('nsis');
-}
-
 function getPrefix(): string {
-  return (platform() === 'win32') ? '/' : '-';
+  return platform() === 'win32'
+    ? '/'
+    : '-';
 }
 
-function isWindowsCompatible(): boolean {
-  const config: WorkspaceConfiguration = getConfig();
+function isHeaderFile(filePath: string): boolean {
+  const headerFiles = [
+    '.bnsh',
+    '.nsh'
+  ];
 
-  return (platform() === 'win32' || config.useWineToRun === true) ? true : false;
+  return Boolean(headerFiles.filter(fileExt => filePath?.endsWith(fileExt)).length);
 }
 
-function getMakensisPath(): Promise<unknown> {
+async function isWindowsCompatible(): Promise<boolean> {
+  const { useWineToRun } = await getConfig('nsis');
+
+  return platform() === 'win32' || useWineToRun === true
+    ? true
+    : false;
+}
+
+async function getMakensisPath(): Promise<unknown> {
+  const { pathToMakensis } = await getConfig('nsis');
+
   return new Promise((resolve, reject) => {
-    const pathToMakensis: string = getConfig().pathToMakensis;
-
     if (pathToMakensis && pathToMakensis.length) {
       console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
       return resolve(pathToMakensis);
@@ -139,12 +149,12 @@ function revealInstaller(outFile: string): void {
   });
 }
 
-function runInstaller(outFile: string): void {
-  const config: WorkspaceConfiguration = getConfig();
+async function runInstaller(outFile: string): Promise<void> {
+  const { useWineToRun } = await getConfig('nsis');
 
   if (platform() === 'win32') {
     exec(`cmd /c "${outFile}"`);
-  } else if (config.useWineToRun === true) {
+  } else if (useWineToRun === true) {
     spawn('wine', [ outFile ]);
   }
 }
@@ -153,13 +163,14 @@ function sanitize(response: unknown): string {
   return response.toString().trim();
 }
 
-function successNsis(choice: string, outFile: string): void {
+async function successNsis(choice: string, outFile: string): Promise<void> {
   switch (choice) {
     case 'Run':
-      runInstaller(outFile);
+      await runInstaller(outFile);
       break;
+
     case 'Reveal':
-      revealInstaller(outFile);
+      await revealInstaller(outFile);
       break;
   }
 }
@@ -169,7 +180,7 @@ function validateConfig(setting: string): void {
     window.showErrorMessage('The argument handling has been changed in a recent version of this extension. Please adjust your settings before trying again.', 'Open Settings')
     .then(choice => {
       if (choice === 'Open Settings') {
-        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
+        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis compilerArguments');
       }
     });
 
@@ -181,8 +192,8 @@ function which(): string {
   return (platform() === 'win32') ? 'where' : 'which';
 }
 
-function getPreprocessMode(): unknown {
-  const { preprocessMode } = getConfig();
+async function getPreprocessMode(): Promise<unknown> {
+  const { preprocessMode } = await getConfig('nsis');
 
   switch (preprocessMode) {
     case 'PPO':
@@ -194,8 +205,8 @@ function getPreprocessMode(): unknown {
   }
 }
 
-function isStrictMode(): boolean {
-  const { compilerArguments } = getConfig();
+async function isStrictMode(): Promise<boolean> {
+  const { compilerArguments } = await getConfig('nsis');
 
   return (compilerArguments.includes('/WX') || compilerArguments.includes('-WX'));
 }
@@ -217,7 +228,7 @@ function showANSIDeprecationWarning() {
   .then(choice => {
     switch (choice) {
       case 'Open Settings':
-        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
+        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis muteANSIDeprecationWarning');
         break;
       case 'Unicode Installer':
         open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode');
@@ -240,12 +251,12 @@ async function fileExists(filePath: string): Promise<boolean> {
   return true;
 }
 
-function findWarnings(input: string): unknown[] {
+async function findWarnings(input: string): Promise<unknown[]> {
   const output = [];
   const warningLines = input.split('\n');
 
   if (warningLines.length) {
-    warningLines.forEach(warningLine => {
+    warningLines.forEach(async warningLine => {
       const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
       if (result !== null) {
@@ -255,12 +266,14 @@ function findWarnings(input: string): unknown[] {
             code: '',
             message: result.groups.message,
             range: new Range(new Position(warningLine, 0), new Position(warningLine, getLineLength(warningLine))),
-            severity: isStrictMode() ? DiagnosticSeverity.Error : DiagnosticSeverity.Warning
+            severity: await isStrictMode()
+              ? DiagnosticSeverity.Error
+              : DiagnosticSeverity.Warning
           });
         }
     });
 
-    const { muteANSIDeprecationWarning } = getConfig();
+    const { muteANSIDeprecationWarning } = await getConfig('nsis');
 
     if (!muteANSIDeprecationWarning && input.includes('7998: ANSI targets are deprecated')) {
       showANSIDeprecationWarning();
@@ -338,7 +351,7 @@ async function initDotEnv(): Promise<void> {
 async function getSpawnEnv(): Promise<unknown> {
   await initDotEnv();
 
-  const { integrated } = workspace.getConfiguration('terminal');
+  const { integrated } = await getConfig('terminal');
   const mappedPlatform = mapPlatform();
 
   return {
@@ -354,11 +367,11 @@ export {
   detectOutfile,
   findErrors,
   findWarnings,
-  getConfig,
   getMakensisPath,
   getPrefix,
   getPreprocessMode,
   getSpawnEnv,
+  isHeaderFile,
   isStrictMode,
   isWindowsCompatible,
   mapPlatform,
