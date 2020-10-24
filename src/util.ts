@@ -1,5 +1,3 @@
-'use strict';
-
 import {
   commands,
   DiagnosticSeverity,
@@ -77,15 +75,15 @@ async function getMakensisPath(): Promise<string> {
       return resolve(pathToMakensis.trim());
     }
 
-    const which = spawn(this.which(), ['makensis']);
+    const cp = spawn(which(), ['makensis']);
 
-    which.stdout.on('data', data => {
+    cp.stdout.on('data', data => {
       const filePath = data.toString().trim();
       console.log(`Using makensis path detected on file system: ${filePath}`);
       return resolve(filePath);
     });
 
-    which.on('exit', (code) => {
+    cp.on('exit', (code) => {
       if (code !== 0) {
         return reject(code);
       }
@@ -119,6 +117,7 @@ function pathWarning(): void {
       case 'Download':
         open('https://sourceforge.net/projects/nsis/');
         break;
+
       case 'Help':
         open('http://superuser.com/a/284351/195953');
         break;
@@ -132,9 +131,11 @@ async function revealInstaller(outFile: string): Promise<void> {
       case 'win32':
         spawn('explorer', [`/select,${outFile}`], {});
         break;
+
       case 'darwin':
         spawn('open', ['-R', outFile], {});
         break;
+
       case 'linux':
         try {
           spawn('nautilus', [outFile], {});
@@ -156,10 +157,6 @@ async function runInstaller(outFile: string): Promise<void> {
       spawn('wine', [ outFile ], {});
     }
   }
-}
-
-function sanitize(response: unknown): string {
-  return response.toString().trim();
 }
 
 async function successNsis(choice: string, outFile: string): Promise<void> {
@@ -188,7 +185,9 @@ function validateConfig(setting: string): void {
 }
 
 function which(): string {
-  return (platform() === 'win32') ? 'where' : 'which';
+  return (platform() === 'win32')
+    ? 'where'
+    : 'which';
 }
 
 async function getPreprocessMode(): Promise<unknown> {
@@ -229,9 +228,11 @@ function showANSIDeprecationWarning() {
       case 'Open Settings':
         commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis muteANSIDeprecationWarning');
         break;
+
       case 'Unicode Installer':
         open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode');
         break;
+
       default:
         break;
     }
@@ -378,7 +379,6 @@ export {
   pathWarning,
   revealInstaller,
   runInstaller,
-  sanitize,
   successNsis,
   validateConfig,
   which

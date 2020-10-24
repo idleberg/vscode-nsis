@@ -1,5 +1,3 @@
-'use strict';
-
 import { commands, ExtensionContext, languages, window, workspace } from 'vscode';
 
 // Load package components

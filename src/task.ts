@@ -1,5 +1,3 @@
-'use strict';
-
 import { window, workspace } from 'vscode';
 
 import { getConfig } from 'vscode-get-config';

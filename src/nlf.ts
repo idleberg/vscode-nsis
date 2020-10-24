@@ -1,8 +1,6 @@
-'use strict';
-
 import { window, workspace } from 'vscode';
 
-import * as NLF from '@nsis/nlf';
+import NLF from '@nsis/nlf';
 
 function convert(): void {
   const editor = window.activeTextEditor;
