@@ -1,3 +1,10 @@
+# v3.32.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.32.0)
+
+- add support for variable substitution when reading config
+- add `allowHeaderCompilation` option to
+- add filter to *Open Settings* buttons
+- update dependencies
+
 # v3.31.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.31.0)
 
 - migrate to Rollup as bundler
