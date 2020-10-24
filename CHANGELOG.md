@@ -3,6 +3,8 @@
 - add support for variable substitution when reading config
 - add `allowHeaderCompilation` option to
 - add filter to *Open Settings* buttons
+- remove fallback blocks
+- refactor thenable code into async/await
 - update dependencies
 
 # v3.31.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.31.0)
