@@ -10,6 +10,7 @@ import * as makensis from 'makensis';
 import {
   clearOutput,
   detectOutfile,
+  fileExists,
   getMakensisPath,
   getPrefix,
   getSpawnEnv,
@@ -44,84 +45,94 @@ async function compile(strictMode: boolean): Promise<void> {
     }
   }
 
-  document.save().then(async () => {
-    await getMakensisPath()
-    .then(sanitize)
-    .then( async (pathToMakensis: string) => {
-      const prefix: string = getPrefix();
+  try {
+    await document.save();
+  } catch (error) {
+    console.error(error);
+    window.showErrorMessage('Error saving file, see console for details');
+    return;
+  }
 
-      let makensisArguments: string[];
+  let pathToMakensis: string;
 
-      if (compilerArguments.length) {
-        validateConfig(compilerArguments);
-        makensisArguments = [ ...compilerArguments ];
+  try {
+    pathToMakensis = await getMakensisPath();
+  } catch (error) {
+    console.error(error);
+    pathWarning();
+
+    return;
+  }
+
+  const prefix: string = getPrefix();
+
+  let makensisArguments: string[];
+
+  if (compilerArguments.length) {
+    validateConfig(compilerArguments);
+    makensisArguments = [ ...compilerArguments ];
+  } else {
+    makensisArguments = [ `${prefix}V4` ];
+  }
+
+  // only add WX flag if not already specified
+  if (strictMode === true && !makensisArguments.includes(`-WX`) && !makensisArguments.includes(`/WX`)) {
+    makensisArguments.push(`${prefix}WX`);
+  }
+
+  makensisArguments.push(document.fileName);
+
+  // Let's build
+  const child = spawn(pathToMakensis, makensisArguments, await getSpawnEnv());
+
+  let stdErr = '';
+  let outFile = '';
+  let hasWarning = false;
+
+  child.stdout.on('data', async (line: string ) => {
+    // Detect warnings
+    if (line.includes('warning: ')) {
+      hasWarning = true;
+    }
+    if (outFile === '') {
+      outFile = await detectOutfile(line);
+    }
+
+    nsisChannel.appendLine(line.toString());
+  });
+
+  child.stderr.on('data', (line: string) => {
+    stdErr += '\n' + line;
+    nsisChannel.appendLine(line.toString());
+  });
+
+  child.on('exit', async (code) => {
+    if (code === 0) {
+      const openButton = (await isWindowsCompatible() === true && outFile?.length && await fileExists(outFile)) ? 'Run' : undefined;
+      const revealButton = (await fileExists(outFile) && ['win32', 'darwin', 'linux'].includes(platform())) ? 'Reveal' : undefined;
+
+      if (hasWarning === true) {
+        if (showNotifications) {
+          const choice = await window.showWarningMessage(`Compiled with warnings -- ${document.fileName}`, openButton, revealButton)
+          successNsis(choice, outFile);
+
+          return;
+        }
+
+        if (stdErr.length > 0) console.warn(stdErr);
       } else {
-        makensisArguments = [ `${prefix}V4` ];
+        if (showNotifications) {
+          const choice = await window.showInformationMessage(`Compiled successfully -- ${document.fileName}`, openButton, revealButton)
+          successNsis(choice, outFile);
+
+          return;
+        }
       }
-
-      // only add WX flag if not already specified
-      if (strictMode === true && !makensisArguments.includes(`-WX`) && !makensisArguments.includes(`/WX`)) {
-        makensisArguments.push(`${prefix}WX`);
-      }
-
-      makensisArguments.push(document.fileName);
-
-      // Let's build
-      const child = spawn(pathToMakensis, makensisArguments, await getSpawnEnv());
-
-      let stdErr = '';
-      let outFile = '';
-      let hasWarning = false;
-
-      child.stdout.on('data', (line: string ) => {
-        // Detect warnings
-        if (line.includes('warning: ')) {
-          hasWarning = true;
-        }
-        if (outFile === '') {
-          outFile = detectOutfile(line);
-        }
-
-        nsisChannel.appendLine(line.toString());
-      });
-
-      child.stderr.on('data', (line: string) => {
-        stdErr += '\n' + line;
-        nsisChannel.appendLine(line.toString());
-      });
-
-      child.on('exit', async (code) => {
-        if (code === 0) {
-          const openButton = (await isWindowsCompatible() === true && outFile !== '') ? 'Run' : null;
-          const revealButton = (platform() === 'win32' || platform() === 'darwin' || platform() === 'linux') ? 'Reveal' : null;
-
-          if (hasWarning === true) {
-            if (showNotifications) {
-              window.showWarningMessage(`Compiled with warnings -- ${document.fileName}`, openButton, revealButton)
-              .then(async choice => {
-                await successNsis(choice, outFile);
-              });
-            }
-            if (stdErr.length > 0) console.warn(stdErr);
-          } else {
-            if (showNotifications) {
-              window.showInformationMessage(`Compiled successfully -- ${document.fileName}`, openButton, revealButton)
-              .then(async choice => {
-                await successNsis(choice, outFile);
-              });
-            }
-          }
-        } else {
-          nsisChannel.show(true);
-          if (showNotifications) window.showErrorMessage('Compilation failed, see output for details');
-          if (stdErr.length > 0) console.error(stdErr);
-        }
-      });
-    })
-    .catch(error => {
-      console.error(error);
-      pathWarning();
-    });
+    } else {
+      nsisChannel.show(true);
+      if (showNotifications) window.showErrorMessage('Compilation failed, see output for details');
+      if (stdErr.length > 0) console.error(stdErr);
+    }
   });
 }
 
@@ -138,7 +149,7 @@ async function showVersion(): Promise<void> {
 
   await clearOutput(nsisChannel);
 
-  await getMakensisPath()
+  getMakensisPath()
   .then(sanitize)
   .then( (pathToMakensis: string) => {
     makensis.version({pathToMakensis: pathToMakensis}, getSpawnEnv())
@@ -159,53 +170,56 @@ async function showVersion(): Promise<void> {
 }
 
 async function showCompilerFlags(): Promise<void> {
-  const config: WorkspaceConfiguration = getConfig();
+  const { showFlagsAsObject } = await getConfig('nsis');
 
   await clearOutput(nsisChannel);
 
-  await getMakensisPath()
-  .then(sanitize)
-  .then( (pathToMakensis: string) => {
-    makensis.hdrInfo({pathToMakensis: pathToMakensis, json: config.showFlagsAsObject}, getSpawnEnv())
-    .then(output => {
-      printFlags(output.stdout, config.showFlagsAsObject);
-    }).catch(output => {
-      // fallback for legacy NSIS
-      printFlags(output.stdout, config.showFlagsAsObject);
-    });
-  })
-  .catch(error => {
+  let pathToMakensis;
+
+  try {
+    pathToMakensis = await getMakensisPath();
+  } catch (error) {
     console.error(error);
     pathWarning();
-  });
+
+    return;
+  }
+
+  try {
+    const output = await makensis.hdrInfo({pathToMakensis: pathToMakensis, json: showFlagsAsObject}, getSpawnEnv());
+    printFlags(output.stdout, showFlagsAsObject);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 async function showHelp(): Promise<void> {
-  const config: WorkspaceConfiguration = getConfig();
-
   await clearOutput(nsisChannel);
 
-  await getMakensisPath()
-  .then(sanitize)
-  .then( (pathToMakensis: string) => {
-    makensis.cmdHelp('', {pathToMakensis: pathToMakensis, json: config.showFlagsAsObject}, getSpawnEnv())
-    .then(output => {
-      window.showQuickPick(Object.keys(output.stdout)).then(cmd => {
-        if (typeof cmd === 'undefined') {
-          return;
-        }
+  let pathToMakensis;
 
-        openURL(cmd);
-      });
-    }).catch(output => {
-      // fallback for legacy NSIS
-      printFlags(output.stdout, config.showFlagsAsObject);
-    });
-  })
-  .catch(error => {
+  try {
+    pathToMakensis = await getMakensisPath();
+  } catch (error) {
     console.error(error);
     pathWarning();
-  });
+
+    return;
+  }
+
+  try {
+    const output = await makensis.cmdHelp('', {pathToMakensis: pathToMakensis, json: true}, getSpawnEnv());
+
+    window.showQuickPick(Object.keys(output.stdout)).then(cmd => {
+      if (typeof cmd === 'undefined') {
+        return;
+      }
+
+      openURL(cmd);
+    });
+  } catch (output) {
+    console.error(output);
+  }
 }
 
 export { compile, showVersion, showCompilerFlags, showHelp };

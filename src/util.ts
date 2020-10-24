@@ -10,7 +10,7 @@ import {
 } from 'vscode';
 
 import open from 'open';
-import { access, constants, promises as fs } from 'fs';
+import { constants, promises as fs } from 'fs';
 import { config as dotenvConfig } from 'dotenv';
 import { exec, spawn } from 'child_process';
 import { getConfig } from 'vscode-get-config';
@@ -68,20 +68,21 @@ async function isWindowsCompatible(): Promise<boolean> {
     : false;
 }
 
-async function getMakensisPath(): Promise<unknown> {
+async function getMakensisPath(): Promise<string> {
   const { pathToMakensis } = await getConfig('nsis');
 
   return new Promise((resolve, reject) => {
     if (pathToMakensis && pathToMakensis.length) {
       console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
-      return resolve(pathToMakensis);
+      return resolve(pathToMakensis.trim());
     }
 
     const which = spawn(this.which(), ['makensis']);
 
-    which.stdout.on('data', (data) => {
-      console.log(`Using makensis path detected on file system: ${data}`);
-      return resolve(data);
+    which.stdout.on('data', data => {
+      const filePath = data.toString().trim();
+      console.log(`Using makensis path detected on file system: ${filePath}`);
+      return resolve(filePath);
     });
 
     which.on('exit', (code) => {
@@ -125,37 +126,35 @@ function pathWarning(): void {
   });
 }
 
-function revealInstaller(outFile: string): void {
-  return access(outFile, 0, (error) => {
-    if (error || outFile === '') {
-      return console.error(error);
-    }
-
+async function revealInstaller(outFile: string): Promise<void> {
+  if (outFile && await fileExists(outFile)) {
     switch (platform()) {
       case 'win32':
-        spawn('explorer', [`/select,${outFile}`]);
+        spawn('explorer', [`/select,${outFile}`], {});
         break;
       case 'darwin':
-        spawn('open', ['-R', outFile]);
+        spawn('open', ['-R', outFile], {});
         break;
       case 'linux':
         try {
-          spawn('nautilus', [outFile]);
+          spawn('nautilus', [outFile], {});
         } catch (error) {
           console.error(error);
         }
         break;
     }
-  });
+  }
 }
 
 async function runInstaller(outFile: string): Promise<void> {
-  const { useWineToRun } = await getConfig('nsis');
+  if (outFile && await fileExists(outFile)) {
+    const { useWineToRun } = await getConfig('nsis');
 
-  if (platform() === 'win32') {
-    exec(`cmd /c "${outFile}"`);
-  } else if (useWineToRun === true) {
-    spawn('wine', [ outFile ]);
+    if (platform() === 'win32') {
+      exec(`cmd /c "${outFile}"`);
+    } else if (useWineToRun === true) {
+      spawn('wine', [ outFile ], {});
+    }
   }
 }
 
@@ -252,24 +251,24 @@ async function fileExists(filePath: string): Promise<boolean> {
 }
 
 async function findWarnings(input: string): Promise<unknown[]> {
-  const output = [];
   const warningLines = input.split('\n');
+  let output = [];
 
   if (warningLines.length) {
-    warningLines.forEach(async warningLine => {
+    output = warningLines.map(async warningLine => {
       const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
       if (result !== null) {
           const warningLine = parseInt(result.groups.line) - 1;
 
-          output.push({
+          return {
             code: '',
             message: result.groups.message,
             range: new Range(new Position(warningLine, 0), new Position(warningLine, getLineLength(warningLine))),
             severity: await isStrictMode()
               ? DiagnosticSeverity.Error
               : DiagnosticSeverity.Warning
-          });
+          };
         }
     });
 
@@ -309,8 +308,7 @@ async function getProjectPath(): Promise<null | string> {
     return null;
   }
 
-  const resource = editor.document.uri;
-  const { uri } = workspace.getWorkspaceFolder(resource);
+  const { uri } = workspace.getWorkspaceFolder(editor.document.uri);
 
   return uri.fsPath || null;
 }
@@ -365,6 +363,7 @@ async function getSpawnEnv(): Promise<unknown> {
 export {
   clearOutput,
   detectOutfile,
+  fileExists,
   findErrors,
   findWarnings,
   getMakensisPath,

@@ -5,7 +5,7 @@ import { window, workspace } from 'vscode';
 import { getConfig } from 'vscode-get-config';
 import { getPrefix, validateConfig } from './util';
 import { join } from 'path';
-import { mkdir, writeFile } from 'fs';
+import { promises as fs } from 'fs';
 
 async function createTask(): Promise<unknown> {
   if (typeof workspace.rootPath === 'undefined' || workspace.rootPath === null) {
@@ -59,20 +59,22 @@ async function createTask(): Promise<unknown> {
   const dotFolder = join(workspace.rootPath, '/.vscode');
   const buildFile = join(dotFolder, 'tasks.json');
 
-  mkdir(dotFolder, () => {
-    // ignore errors for now
-    writeFile(buildFile, jsonString, (error) => {
-      if (error) {
-        window.showErrorMessage(error.toString());
-      }
-      if (alwaysOpenBuildTask === false) return;
+  await fs.mkdir(dotFolder);
 
-      // Open tasks.json
-      workspace.openTextDocument(buildFile).then( (doc) => {
-          window.showTextDocument(doc);
-      });
+    // ignore errors for now
+    try {
+      await fs.writeFile(buildFile, jsonString);
+
+    } catch(error) {
+      window.showErrorMessage(error.toString());
+    }
+
+    if (alwaysOpenBuildTask === false) return;
+
+    // Open tasks.json
+    workspace.openTextDocument(buildFile).then(doc => {
+        window.showTextDocument(doc);
     });
-  });
 }
 
 export { createTask };
