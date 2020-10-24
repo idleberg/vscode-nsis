@@ -1,4 +1,5 @@
 {
+  "nsisAllowHeaderCompilation": "By default, only `.nsi` files will be compiled. This setting enables compilation for `.nsh` files as well.",
   "nsisAlwaysShowOutput": "Output channel will only be shown on errors",
   "nsisCompilerArguments": "Specify the [default arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for `makensis`",
   "nsisPathToMakensis": "Specify the full path to `makensis`",

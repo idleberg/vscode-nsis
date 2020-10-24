@@ -39,7 +39,8 @@
       "@types/vscode": "^1.50.0",
       "dotenv": "^8.2.0",
       "makensis": "^0.21.2",
-      "open": "^7.3.0"
+      "open": "^7.3.0",
+      "vscode-get-config": "^0.1.2"
    },
    "devDependencies": {
       "@babel/core": "^7.12.3",
@@ -123,6 +124,11 @@
                "type": "boolean",
                "default": true,
                "description": "Show build notifications indicating success or failure"
+            },
+            "nsis.allowHeaderCompilation": {
+               "type": "boolean",
+               "default": false,
+               "markdownDescription": "%nsisAllowHeaderCompilation%"
             },
             "nsis.alwaysShowOutput": {
                "type": "boolean",
