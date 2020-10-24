@@ -10,6 +10,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:json/recommended'
   ],
   ignorePatterns: [
     'index.js'
