@@ -4,6 +4,7 @@
 - add `allowHeaderCompilation` option
 - add filter to *Open Settings* buttons
 - remove fallback blocks
+- fix: use `pathToMakensis` in diagnostics mode
 - refactor thenable code into async/await
 - update dependencies
 
