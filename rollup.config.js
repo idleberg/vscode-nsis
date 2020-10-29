@@ -31,7 +31,8 @@ export default [
     input: './src/index.ts',
     output: {
       file: './lib/extension.js',
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
     },
     plugins: plugins
   }
