@@ -348,8 +348,6 @@ async function initDotEnv(): Promise<void> {
 }
 
 async function getSpawnEnv(): Promise<unknown> {
-  await initDotEnv();
-
   const { integrated } = await getConfig('terminal');
   const mappedPlatform = mapPlatform();
 
@@ -371,6 +369,7 @@ export {
   getPrefix,
   getPreprocessMode,
   getSpawnEnv,
+  initDotEnv,
   isHeaderFile,
   isStrictMode,
   isWindowsCompatible,

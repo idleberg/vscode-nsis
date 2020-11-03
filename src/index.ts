@@ -2,11 +2,13 @@ import { commands, ExtensionContext, languages, window, workspace } from 'vscode
 
 // Load package components
 import { updateDiagnostics } from './diagnostics';
-import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
+import { compile, initDotEnv, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { createTask } from './task';
 import { convert } from './nlf';
 
 async function activate(context: ExtensionContext): Promise<void> {
+  await initDotEnv();
+
   // Commands
   context.subscriptions.push(
     commands.registerTextEditorCommand('extension.nsis.compile', async () => {
