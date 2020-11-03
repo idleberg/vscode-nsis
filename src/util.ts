@@ -359,6 +359,18 @@ async function getSpawnEnv(): Promise<unknown> {
   };
 }
 
+function mapDefinitions(): string[] {
+  return Object.keys(process.env).map(item => {
+    if (item.startsWith('NSIS_APP_')) {
+      const keyName = item.replace(/^NSIS_APP_/g, '')
+
+      if (keyName.length && /[a-z0-9]+/gi.test(keyName)) {
+        return `${getPrefix()}D${keyName}=${process.env[item]}`;
+      }
+    }
+  }).filter(item => item);
+}
+
 export {
   clearOutput,
   detectOutfile,
@@ -373,6 +385,7 @@ export {
   isHeaderFile,
   isStrictMode,
   isWindowsCompatible,
+  mapDefinitions,
   mapPlatform,
   openURL,
   pathWarning,

@@ -201,13 +201,15 @@ If you prefer Visual Studio Code's built-in Task Runner to build scripts, you ca
 
 ### Environment Variables
 
-This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`, using the following priority:
+This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`. The following precedence applies:
 
 1. `terminal.integrated.shell.*` setting
 2. `.env` files
 3. system-wide environment variables
 
 **Note:** Some operating systems require Visual Studio Code to be launched from terminal in order to access system-wide environment variables.
+
+Additionally, you can pass special environment variables prefixed with `NSIS_APP_` to your installer script. For example, the variable `NSIS_APP_CUSTOM_MESSAGE` can be accessed via `${CUSTOM_MESSAGE}` in your installer script.
 
 ## Related
 
