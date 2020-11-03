@@ -1,3 +1,7 @@
+# v3.33.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.33.1)
+
+- fix typo in variable name
+
 # v3.33.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.33.0)
 
 - add support for `NSIS_APP_*` environment variables
