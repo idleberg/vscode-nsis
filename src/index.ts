@@ -1,10 +1,11 @@
 import { commands, ExtensionContext, languages, window, workspace } from 'vscode';
 
 // Load package components
-import { updateDiagnostics } from './diagnostics';
-import { compile, initDotEnv, showCompilerFlags, showVersion, showHelp } from './makensis';
-import { createTask } from './task';
+import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { convert } from './nlf';
+import { createTask } from './task';
+import { initDotEnv } from './util';
+import { updateDiagnostics } from './diagnostics';
 
 async function activate(context: ExtensionContext): Promise<void> {
   await initDotEnv();
