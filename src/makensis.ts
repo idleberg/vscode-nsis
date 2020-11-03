@@ -76,7 +76,7 @@ async function compile(strictMode: boolean): Promise<void> {
     makensisArguments.push(`${prefix}WX`);
   }
 
-  compilerArguments.push(...mapDefinitions());
+  makensisArguments.push(...mapDefinitions());
   makensisArguments.push(document.fileName);
 
   // Let's build
