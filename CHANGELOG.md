@@ -1,3 +1,8 @@
+# v3.32.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.32.1)
+
+- update documentation
+- update dependencies
+
 # v3.32.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.32.0)
 
 - add support for variable substitution when reading config
