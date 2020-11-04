@@ -1,3 +1,7 @@
+# v3.33.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.33.2)
+
+- move environment detection to `rollup.config.js`
+
 # v3.33.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.33.1)
 
 - fix typo in variable name
