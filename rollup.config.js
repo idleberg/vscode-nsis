@@ -9,7 +9,7 @@ const plugins = [
   filesize(),
   nodeResolve(),
   (
-    process.env.NODE_ENV === 'development'
+    process.env.ROLLUP_WATCH
       ? undefined
       : terser()
   ),
