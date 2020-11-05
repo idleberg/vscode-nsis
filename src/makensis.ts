@@ -103,6 +103,14 @@ async function compile(strictMode: boolean): Promise<void> {
     nsisChannel.appendLine(line.toString());
   });
 
+  child.on('error', async errorMessage => {
+    console.log('[vscode-nsis]', errorMessage);
+
+    if(errorMessage?.toString().includes('ENOENT')){
+      pathWarning();
+    }
+  });
+
   child.on('exit', async (code) => {
     if (code === 0) {
       const openButton = (await isWindowsCompatible() === true && outFile?.length && await fileExists(outFile)) ? 'Run' : undefined;
