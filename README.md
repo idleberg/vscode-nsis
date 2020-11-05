@@ -201,9 +201,7 @@ If you prefer Visual Studio Code's built-in Task Runner to build scripts, you ca
 
 ### Environment Variables
 
-This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`.
-
-Environment Precedence:
+This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`. The following precedence applies:
 
 1. `terminal.integrated.shell.*` setting
 2. `.env` files
