@@ -13,7 +13,7 @@ import { config as dotenvConfig } from 'dotenv';
 import { exec, spawn } from 'child_process';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
 
 // eslint-disable-next-line
 async function clearOutput(channel: any): Promise<void> {
@@ -313,34 +313,42 @@ async function getProjectPath(): Promise<null | string> {
     return null;
   }
 
-  const { uri } = workspace.getWorkspaceFolder(editor.document.uri);
+  const workspaceFolder = (await fs.lstat(editor.document.uri.fsPath)).isFile()
+    ? dirname(editor.document.uri.fsPath)
+    : editor.document.uri.fsPath;
 
-  return uri.fsPath || null;
+  try {
+    const { uri } = workspace.getWorkspaceFolder(workspaceFolder);
+    return uri.fsPath || null;
+  } catch (error) {
+    return null;
+  }
 }
 
 async function findEnvFile() {
   let envFile = undefined;
   const projectPath = await getProjectPath();
 
-  switch (true) {
-    case (await fileExists(resolve(projectPath, '.env.local'))):
-      envFile = resolve(projectPath, '.env.local');
-      break;
+  if (projectPath) {
+    switch (true) {
+      case (await fileExists(resolve(projectPath, '.env.local'))):
+        envFile = resolve(projectPath, '.env.local');
+        break;
 
-    case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.[${process.env.NODE_ENV}]`))):
-      envFile = resolve(projectPath, `.env.[${process.env.NODE_ENV}]`);
-      break;
+      case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.[${process.env.NODE_ENV}]`))):
+        envFile = resolve(projectPath, `.env.[${process.env.NODE_ENV}]`);
+        break;
 
-    case (await fileExists(resolve(projectPath, '.env'))):
-      envFile = resolve(projectPath, '.env');
-      break;
+      case (await fileExists(resolve(projectPath, '.env'))):
+        envFile = resolve(projectPath, '.env');
+        break;
 
-    default:
-      envFile = undefined;
-      break;
+      default:
+        break;
+    }
+
+    if (envFile) console.log(`Found DotEnv file ${envFile}`);
   }
-
-  if (envFile) console.log(`Found DotEnv file ${envFile}`);
 
   return envFile;
 }
