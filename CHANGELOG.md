@@ -1,5 +1,6 @@
 # v3.33.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.33.3)
 
+- fix `getProjectPath()` for single files
 - update dependencies
 
 # v3.33.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.33.2)
