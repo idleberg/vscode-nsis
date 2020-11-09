@@ -209,7 +209,7 @@ This extension supports a variety of ways to provide environment variables such 
 
 **Note:** Some operating systems require Visual Studio Code to be launched from terminal in order to access system-wide environment variables.
 
-Additionally, you can pass special environment variables prefixed with `NSIS_APP_` to your installer script. For example, the variable `NSIS_APP_CUSTOM_MESSAGE` can be accessed via `${CUSTOM_MESSAGE}` in your installer script.
+Additionally, you can pass special environment variables prefixed with `NSIS_APP_` to your installer script. For example, the variable `NSIS_APP_CUSTOM_MESSAGE` can be accessed as the definition `${CUSTOM_MESSAGE}` in your installer script.
 
 ## Related
 
