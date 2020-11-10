@@ -1,3 +1,7 @@
+# v3.34.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.34.0)
+
+- modify default behaviour for `NSIS_APP_*` environment variables
+
 # v3.33.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.33.3)
 
 - fix `getProjectPath()` for single files
