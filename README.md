@@ -215,8 +215,17 @@ Additionally, you can pass special environment variables prefixed with `NSIS_APP
 <summary><strong>Example</strong></summary>
 
 ```env
+# .env
 NSIS_APP_ENVIRONMENT=development
 ```
+
+```nsis
+; installer.nsis
+!if ${NSIS_APP_ENVIRONMENT} == "development"
+  DetailPrint "Valuable Debug Information"
+!endif
+```
+</details>
 
 ## Related
 
