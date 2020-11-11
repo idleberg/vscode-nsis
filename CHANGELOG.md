@@ -1,3 +1,7 @@
+# v3.34.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.34.1)
+
+- fix workspace detection
+
 # v3.34.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.34.0)
 
 - modify default behaviour for `NSIS_APP_*` environment variables
