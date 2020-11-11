@@ -229,9 +229,9 @@ NSIS_APP_ENVIRONMENT=development
 
 ## Related
 
+- [node-makensis](https://www.npmjs.com/package/makensis)
 - [vscode-electron-builder](https://marketplace.visualstudio.com/items?itemName=idleberg.electron-builder)
 - [atom-language-nsis](https://atom.io/packages/language-nsis)
-- [node-makensis](https://www.npmjs.com/package/makensis)
 
 ## License
 

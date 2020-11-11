@@ -6,7 +6,7 @@ import raster from 'gulp-raster-update';
 import rename from 'gulp-rename';
 
 const svgFiles = [
-  'node_modules/@nsis/logo/src/Logo/outlines-light.svg'
+  'node_modules/@nsis/logo/src/Logo/below 48x48/outlines-light.svg'
 ];
 
 // Convert SVG
