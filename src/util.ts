@@ -13,7 +13,7 @@ import { config as dotenvConfig } from 'dotenv';
 import { exec, spawn } from 'child_process';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
-import { dirname, resolve } from 'path';
+import { resolve } from 'path';
 
 // eslint-disable-next-line
 async function clearOutput(channel: any): Promise<void> {
@@ -313,13 +313,9 @@ async function getProjectPath(): Promise<null | string> {
     return null;
   }
 
-  const workspaceFolder = (await fs.lstat(editor.document.uri.fsPath)).isFile()
-    ? dirname(editor.document.uri.fsPath)
-    : editor.document.uri.fsPath;
-
   try {
-    const { uri } = workspace.getWorkspaceFolder(workspaceFolder);
-    return uri.fsPath || null;
+    const { uri } = workspace.getWorkspaceFolder(editor.document.uri);
+    return uri.fsPath;
   } catch (error) {
     return null;
   }
