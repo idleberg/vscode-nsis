@@ -72,8 +72,7 @@
          "pre-commit": "npm run test"
       }
    },
-   "extensionDependencies": [
-   ],
+   "extensionDependencies": [],
    "icon": "images/logo.png",
    "galleryBanner": {
       "color": "#9e90aa",
