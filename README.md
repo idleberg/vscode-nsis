@@ -220,7 +220,7 @@ NSIS_APP_ENVIRONMENT=development
 ```
 
 ```nsis
-# installer.nsis
+# installer.nsi
 !if ${NSIS_APP_ENVIRONMENT} == "development"
   DetailPrint "Valuable Debug Information"
 !endif
