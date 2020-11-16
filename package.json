@@ -73,7 +73,6 @@
       }
    },
    "extensionDependencies": [
-      "idleberg.nsl-assembler"
    ],
    "icon": "images/logo.png",
    "galleryBanner": {
