@@ -1,3 +1,9 @@
+# v3.35.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.35.0)
+
+- remove nsL Assembler dependency
+- modify logo
+- update dependencies
+
 # v3.34.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.34.1)
 
 - fix workspace detection
