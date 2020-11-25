@@ -23,5 +23,10 @@
     "body": "System::Get \"${1:parameters}\"$0",
     "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
     "prefix": "System::Get"
+  },
+  "System::Int64Op": {
+    "body": "System::Int64Op \"${1:parameters}\"$0",
+    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
+    "prefix": "System::Int64Op"
   }
 }
