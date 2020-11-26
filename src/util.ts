@@ -43,6 +43,12 @@ function detectOutfile(str: string): string {
   return '';
 }
 
+function getNullDevice(): string {
+  return platform() === 'win32'
+    ? 'OutFile NUL'
+    : 'OutFile /dev/null/';
+}
+
 function getPrefix(): string {
   return platform() === 'win32'
     ? '/'
@@ -384,6 +390,7 @@ export {
   findErrors,
   findWarnings,
   getMakensisPath,
+  getNullDevice,
   getPrefix,
   getPreprocessMode,
   getSpawnEnv,

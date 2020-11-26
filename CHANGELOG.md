@@ -1,3 +1,8 @@
+# v3.36.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.36.0)
+
+- add `System::Int64Op` snippet
+- fix: prevent diagnostics mode from creating installers
+
 # v3.35.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.35.0)
 
 - remove nsL Assembler dependency

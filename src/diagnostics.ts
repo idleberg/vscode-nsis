@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { compile } from 'makensis';
-import { findErrors, findWarnings, getMakensisPath, getPreprocessMode, getSpawnEnv, isStrictMode } from './util';
+import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getSpawnEnv, isStrictMode } from './util';
 
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
   if (document && document.languageId === 'nsis') {
@@ -19,6 +19,9 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     const options = {
       verbose: 2,
       pathToMakensis,
+      postExecute: [
+        getNullDevice()
+      ],
       preprocessMode,
       strict: await isStrictMode()
     };
