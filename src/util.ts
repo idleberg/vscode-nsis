@@ -333,6 +333,10 @@ async function findEnvFile() {
 
   if (projectPath) {
     switch (true) {
+      case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.local.[${process.env.NODE_ENV}]`))):
+        envFile = resolve(projectPath, `.env.local.[${process.env.NODE_ENV}]`);
+        break;
+
       case (await fileExists(resolve(projectPath, '.env.local'))):
         envFile = resolve(projectPath, '.env.local');
         break;
