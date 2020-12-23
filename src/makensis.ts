@@ -6,7 +6,6 @@ import { spawn } from 'child_process';
 import * as makensis from 'makensis';
 
 import {
-  clearOutput,
   detectOutfile,
   fileExists,
   getMakensisPath,
@@ -20,11 +19,10 @@ import {
   successNsis,
   validateConfig
 } from './util';
-
-const nsisChannel = window.createOutputChannel('NSIS');
+import nsisChannel from './channel';
 
 async function compile(strictMode: boolean): Promise<void> {
-  await clearOutput(nsisChannel);
+  nsisChannel.clear(await getConfig('alwaysShowOutput'));
 
   if (window.activeTextEditor['_documentData']['_languageId'] !== 'nsis') {
     nsisChannel.appendLine('This command is only available for NSIS files');
@@ -152,7 +150,7 @@ function printFlags(output: string, showFlagsAsObject = true): void {
 async function showVersion(): Promise<void> {
   const config: WorkspaceConfiguration = getConfig();
 
-  await clearOutput(nsisChannel);
+  nsisChannel.clear(await getConfig('alwaysShowOutput'));
 
   let pathToMakensis: string;
 
@@ -181,7 +179,7 @@ async function showVersion(): Promise<void> {
 async function showCompilerFlags(): Promise<void> {
   const { showFlagsAsObject } = await getConfig('nsis');
 
-  await clearOutput(nsisChannel);
+  nsisChannel.clear(await getConfig('alwaysShowOutput'));
 
   let pathToMakensis;
 
@@ -203,7 +201,7 @@ async function showCompilerFlags(): Promise<void> {
 }
 
 async function showHelp(): Promise<void> {
-  await clearOutput(nsisChannel);
+  nsisChannel.clear(await getConfig('alwaysShowOutput'));
 
   let pathToMakensis;
 

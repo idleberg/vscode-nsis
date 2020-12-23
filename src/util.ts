@@ -15,17 +15,6 @@ import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { resolve } from 'path';
 
-// eslint-disable-next-line
-async function clearOutput(channel: any): Promise<void> {
-  const { alwaysShowOutput } = await getConfig('nsis');
-
-  channel.clear();
-
-  if (alwaysShowOutput === true) {
-    channel.show(true);
-  }
-}
-
 function detectOutfile(str: string): string {
   if (str.includes('Output: "')) {
     const regex = /Output: "(.*\.exe)"\r?\n/g;
@@ -388,7 +377,6 @@ function mapDefinitions(): string[] {
 }
 
 export {
-  clearOutput,
   detectOutfile,
   fileExists,
   findErrors,
