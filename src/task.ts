@@ -57,22 +57,26 @@ async function createTask(): Promise<unknown> {
   const dotFolder = join(workspace.rootPath, '/.vscode');
   const buildFile = join(dotFolder, 'tasks.json');
 
-  await fs.mkdir(dotFolder);
+  try {
+    await fs.mkdir(dotFolder);
+  } catch (error) {
+    console.warn(error);
+  }
 
-    // ignore errors for now
-    try {
-      await fs.writeFile(buildFile, jsonString);
+  // ignore errors for now
+  try {
+    await fs.writeFile(buildFile, jsonString);
 
-    } catch(error) {
-      window.showErrorMessage(error.toString());
-    }
+  } catch(error) {
+    window.showErrorMessage(error.toString());
+  }
 
-    if (alwaysOpenBuildTask === false) return;
+  if (alwaysOpenBuildTask === false) return;
 
-    // Open tasks.json
-    workspace.openTextDocument(buildFile).then(doc => {
-        window.showTextDocument(doc);
-    });
+  // Open tasks.json
+  workspace.openTextDocument(buildFile).then(doc => {
+      window.showTextDocument(doc);
+  });
 }
 
 export { createTask };
