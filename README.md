@@ -172,7 +172,7 @@ You can tweak your default settings by editing your [user settings](https://code
 | `pathToMakensis`             | Specify the full path to `makensis`                                          |
 | `compilerArguments`          | Specify the [default arguments][makensis] for `makensis`                     |
 | `preprocessMode`             | Linter runs in the much faster [pre-process mode][ppo], but ignores warnings |
-| `allowHeaderCompilation`     | Specifiy whether to compile `.nsh` files                                     |
+| `processHeaders`     | Specifiy whether to compile `.nsh` files                                     |
 | `showNotifications`          | Show build notifications indicating success or failure                       |
 | `alwaysShowOutput`           | Output channel will only be shown on errors                                  |
 | `alwaysOpenBuildTask`        | Specify whether to open the newly created build task                         |
@@ -191,6 +191,7 @@ You can tweak your default settings by editing your [user settings](https://code
 | Command Reference        | `source.nsis`        | –                                                            |
 | Show Version             | `source.nsis`        | –                                                            |
 | Show Compiler Flags      | `source.nsis`        | –                                                            |
+| Open Settings            | `source.nsis`        | –                                                            |
 | Convert Language File    | `source.nlf`         | -                                                            |
 
 ### Task Runner
