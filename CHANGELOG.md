@@ -1,3 +1,14 @@
+# v3.37.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.0)
+
+- add *Open Settings* command
+- add `overrideCompression` option
+- rename `allowHeaderCompilation` option to `processHeaders`
+- refactor output channel handling
+- catch error when creating `.vscode` folder
+- fix warning detection in diagnostics mode
+- modify linting scripts
+- update dependencies
+
 # v3.36.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.36.0)
 
 - add `System::Int64Op` snippet
@@ -43,7 +54,7 @@
 # v3.32.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.32.0)
 
 - add support for variable substitution when reading config
-- add `allowHeaderCompilation` option
+- add `processHeaders` option
 - add filter to *Open Settings* buttons
 - remove fallback blocks
 - fix: use `pathToMakensis` in diagnostics mode
