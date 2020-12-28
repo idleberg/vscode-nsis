@@ -1,9 +1,8 @@
-import { window, workspace } from 'vscode';
-
 import NLF from '@nsis/nlf';
+import vscode from 'vscode';
 
 function convert(): void {
-  const editor = window.activeTextEditor;
+  const editor = vscode.window.activeTextEditor;
   const document = editor.document;
 
   if (document.languageId === 'nlf') {
@@ -21,7 +20,7 @@ function convertNLF(document): void {
     output = NLF.parse(input, { stringify: true });
   } catch (err) {
     console.error(err);
-    window.showErrorMessage('Conversion failed, see output for details');
+    vscode.window.showErrorMessage('Conversion failed, see output for details');
   }
 
   openNewFile({
@@ -47,7 +46,7 @@ function convertJSON(document): void {
 }
 
 function openNewFile(newDocument): void {
-  workspace.openTextDocument(newDocument).then( document => window.showTextDocument(document));
+  vscode.workspace.openTextDocument(newDocument).then( document => vscode.window.showTextDocument(document));
 }
 
 export { convert };
