@@ -99,13 +99,24 @@
                "default": "makensis",
                "markdownDescription": "%nsisPathToMakensis%"
             },
-            "nsis.compilerArguments": {
-               "type": "array",
-               "items": {
-                  "type": "string"
-               },
-               "default": [],
-               "markdownDescription": "%nsisCompilerArguments%"
+            "nsis.compilerVerbosity": {
+               "type": "string",
+               "enum": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+              ],
+              "enumDescriptions": [
+                "none",
+                "no warnings",
+                "no info",
+                "no script",
+                "all"
+              ],
+              "default": "3",
+              "markdownDescription": "%nsisCompilerVerbosity%"
             },
             "nsis.preprocessMode": {
                "type": "string",
@@ -122,10 +133,10 @@
                "default": true,
                "description": "Show build notifications indicating success or failure"
             },
-            "nsis.allowHeaderCompilation": {
+            "nsis.processHeaders": {
                "type": "boolean",
                "default": false,
-               "markdownDescription": "%nsisAllowHeaderCompilation%"
+               "markdownDescription": "%nsisprocessHeaders%"
             },
             "nsis.alwaysShowOutput": {
                "type": "boolean",
@@ -248,6 +259,14 @@
             }
          },
          {
+            "command": "extension.nsis.open-settings",
+            "title": "NSIS: Open Settings",
+            "icon": {
+              "dark": "./images/icon--settings-dark.svg",
+              "light": "./images/icon--settings-light.svg"
+            }
+         },
+         {
             "command": "extension.nsis.convert-language-file",
             "title": "NSIS: Convert Language File"
          }
@@ -297,6 +316,11 @@
                "when": "resourceLangId == nsis",
                "command": "extension.nsis.show-compiler-flags",
                "group": "navigation@6"
+            },
+            {
+               "when": "resourceLangId == nsis",
+               "command": "extension.nsis.open-settings",
+               "group": "navigation@7"
             }
          ]
       },

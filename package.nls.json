@@ -1,7 +1,7 @@
 {
-  "nsisAllowHeaderCompilation": "By default, only `.nsi` files will be compiled. This setting enables compilation for `.nsh` files as well.",
+  "nsisprocessHeaders": "By default, only `.nsi` files will be compiled. This setting enables compilation for `.nsh` files as well.",
   "nsisAlwaysShowOutput": "Output channel will only be shown on errors",
-  "nsisCompilerArguments": "Specify the [default arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for `makensis`",
+  "nsisCompilerVerbosity": "Specify the default verbosity for `makensis`",
   "nsisPathToMakensis": "Specify the full path to `makensis`",
   "nsisPreprocessMode": "Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warnings (unless in strict mode)",
   "nsisUseWineToRun": "Runs compiled installers using [Wine](https://www.winehq.org/)"
