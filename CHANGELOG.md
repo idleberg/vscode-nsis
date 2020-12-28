@@ -2,6 +2,7 @@
 
 - add *Open Settings* command
 - add `overrideCompression` option
+- remove `customArguments` option
 - rename `allowHeaderCompilation` option to `processHeaders`
 - refactor output channel handling
 - catch error when creating `.vscode` folder
