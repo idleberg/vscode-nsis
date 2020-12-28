@@ -1,6 +1,7 @@
-import * as vscode from 'vscode';
+import vscode from 'vscode';
 import { compile } from 'makensis';
-import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getSpawnEnv, isStrictMode } from './util';
+import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getSpawnEnv } from './util';
+import { getConfig } from 'vscode-get-config';
 
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
   if (document && document.languageId === 'nsis') {
@@ -15,6 +16,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     }
 
     const preprocessMode = await getPreprocessMode();
+    const { overrideCompression } = await getConfig('nsis');
 
     const options = {
       verbose: 2,
@@ -22,9 +24,13 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       postExecute: [
         getNullDevice()
       ],
-      preprocessMode,
-      strict: await isStrictMode()
+      preprocessMode
     };
+
+    if (overrideCompression) {
+      options['preExecute'] = ['SetCompressor /FINAL zlib'];
+      options['postExecute'].push('SetCompress off');
+    }
 
     let output;
 
