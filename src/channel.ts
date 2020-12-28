@@ -1,12 +1,15 @@
 import vscode from 'vscode';
+import { getConfig } from 'vscode-get-config';
 
 export default {
   outputChannel: vscode.window.createOutputChannel('NSIS'),
 
-  clear(showChannel = false): void {
+  async clear(): Promise<void> {
     this.outputChannel.clear();
 
-    if (showChannel) {
+    const { alwaysShowOutput } = await getConfig('nsis');
+
+    if (alwaysShowOutput) {
       this.show();
     }
   },
@@ -15,18 +18,22 @@ export default {
     this.outputChannel.dispose();
   },
 
-  append(input: unknown, showChannel = false): void {
+  async append(input: unknown): Promise<void> {
     this.outputChannel.append(input);
 
-    if (showChannel) {
+    const { alwaysShowOutput } = await getConfig('nsis');
+
+    if (alwaysShowOutput) {
       this.show();
     }
   },
 
-  appendLine(input: string, showChannel = false): void {
+  async appendLine(input: string): Promise<void> {
     this.outputChannel.appendLine(input);
 
-    if (showChannel) {
+    const { alwaysShowOutput } = await getConfig('nsis');
+
+    if (alwaysShowOutput) {
       this.show();
     }
   },
@@ -35,7 +42,7 @@ export default {
     this.outputChannel.hide();
   },
 
-  show(preserveFocus = false): void {
+  show(preserveFocus = true): void {
     this.outputChannel.show(preserveFocus);
   }
 }
