@@ -1,36 +1,11 @@
-import {
-  commands,
-  DiagnosticSeverity,
-  Position,
-  Range,
-  window,
-  workspace
-} from 'vscode';
-
-import open from 'open';
-import { constants, promises as fs } from 'fs';
 import { config as dotenvConfig } from 'dotenv';
+import { constants, promises as fs } from 'fs';
 import { exec, spawn } from 'child_process';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { resolve } from 'path';
-
-function detectOutfile(str: string): string {
-  if (str.includes('Output: "')) {
-    const regex = /Output: "(.*\.exe)"\r?\n/g;
-    const result = regex.exec(str.toString());
-
-    if (typeof result === 'object') {
-      try {
-        return result['1'];
-      } catch (e) {
-        return '';
-      }
-    }
-  }
-
-  return '';
-}
+import open from 'open';
+import vscode from 'vscode';
 
 function getNullDevice(): string {
   return platform() === 'win32'
@@ -65,7 +40,7 @@ async function getMakensisPath(): Promise<string> {
   const { pathToMakensis } = await getConfig('nsis');
 
   return new Promise((resolve, reject) => {
-    if (pathToMakensis && pathToMakensis.length) {
+    if (pathToMakensis?.length) {
       console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
       return resolve(pathToMakensis.trim());
     }
@@ -109,19 +84,18 @@ function openURL(cmd: string): void {
   open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
 }
 
-function pathWarning(): void {
-  window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
-  .then(choice => {
-    switch (choice) {
-      case 'Download':
-        open('https://sourceforge.net/projects/nsis/');
-        break;
+async function pathWarning(): Promise<void> {
+  const choice = await vscode.window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
 
-      case 'Help':
-        open('http://superuser.com/a/284351/195953');
-        break;
-    }
-  });
+  switch (choice) {
+    case 'Download':
+      open('https://sourceforge.net/projects/nsis/');
+      break;
+
+    case 'Help':
+      open('http://superuser.com/a/284351/195953');
+      break;
+  }
 }
 
 async function revealInstaller(outFile: string): Promise<void> {
@@ -158,7 +132,7 @@ async function runInstaller(outFile: string): Promise<void> {
   }
 }
 
-async function successNsis(choice: string, outFile: string): Promise<void> {
+async function buttonHandler(choice: string, outFile: string): Promise<void> {
   switch (choice) {
     case 'Run':
       await runInstaller(outFile);
@@ -167,19 +141,6 @@ async function successNsis(choice: string, outFile: string): Promise<void> {
     case 'Reveal':
       await revealInstaller(outFile);
       break;
-  }
-}
-
-function validateConfig(setting: string): void {
-  if (typeof setting === 'string') {
-    window.showErrorMessage('The argument handling has been changed in a recent version of this extension. Please adjust your settings before trying again.', 'Open Settings')
-    .then(choice => {
-      if (choice === 'Open Settings') {
-        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis compilerArguments');
-      }
-    });
-
-    process.exit();
   }
 }
 
@@ -202,14 +163,8 @@ async function getPreprocessMode(): Promise<unknown> {
   }
 }
 
-async function isStrictMode(): Promise<boolean> {
-  const { compilerArguments } = await getConfig('nsis');
-
-  return (compilerArguments.includes('/WX') || compilerArguments.includes('-WX'));
-}
-
 function getLineLength(line: number): number {
-  const editorText = window.activeTextEditor.document.getText();
+  const editorText = vscode.window.activeTextEditor.document.getText();
 
   if (editorText && editorText.length) {
     const lines: string[] = editorText.split('\n');
@@ -220,22 +175,21 @@ function getLineLength(line: number): number {
   return 0;
 }
 
-function showANSIDeprecationWarning() {
-  window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Unicode Installer', 'Open Settings')
-  .then(choice => {
-    switch (choice) {
-      case 'Open Settings':
-        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis muteANSIDeprecationWarning');
-        break;
+async function showANSIDeprecationWarning(): Promise<void> {
+  const choice = await vscode.window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Unicode Installer', 'Open Settings')
 
-      case 'Unicode Installer':
-        open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode');
-        break;
+  switch (choice) {
+    case 'Open Settings':
+      vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis muteANSIDeprecationWarning');
+      break;
 
-      default:
-        break;
-    }
-  });
+    case 'Unicode Installer':
+      open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode');
+      break;
+
+    default:
+      break;
+  }
 
   process.exit();
 }
@@ -252,10 +206,10 @@ async function fileExists(filePath: string): Promise<boolean> {
 
 async function findWarnings(input: string): Promise<unknown[]> {
   const warningLines = input.split('\n');
-  let output = [];
+  if (!warningLines.length) return [];
 
   if (warningLines.length) {
-    output = warningLines.map(async warningLine => {
+    const output = warningLines.map(async warningLine => {
       const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
       if (result !== null) {
@@ -264,22 +218,20 @@ async function findWarnings(input: string): Promise<unknown[]> {
           return {
             code: '',
             message: result.groups.message,
-            range: new Range(new Position(warningLine, 0), new Position(warningLine, getLineLength(warningLine))),
-            severity: await isStrictMode()
-              ? DiagnosticSeverity.Error
-              : DiagnosticSeverity.Warning
+            range: new vscode.Range(new vscode.Position(warningLine, 0), new vscode.Position(warningLine, getLineLength(warningLine))),
+            severity: vscode.DiagnosticSeverity.Warning
           };
         }
-    });
+    }).filter(item => item);
 
     const { muteANSIDeprecationWarning } = await getConfig('nsis');
 
     if (!muteANSIDeprecationWarning && input.includes('7998: ANSI targets are deprecated')) {
       showANSIDeprecationWarning();
     }
-  }
 
-  return output;
+    return output;
+  }
 }
 
 function findErrors(input: string): unknown {
@@ -291,8 +243,8 @@ function findErrors(input: string): unknown {
     return {
       code: '',
       message: result.groups.message,
-      range: new Range(new Position(errorLine, 0), new Position(errorLine, getLineLength(errorLine))),
-      severity: DiagnosticSeverity.Error
+      range: new vscode.Range(new vscode.Position(errorLine, 0), new vscode.Position(errorLine, getLineLength(errorLine))),
+      severity: vscode.DiagnosticSeverity.Error
     };
   }
 
@@ -303,13 +255,13 @@ async function getProjectPath(): Promise<null | string> {
   let editor;
 
   try {
-    editor = window.activeTextEditor;
+    editor = vscode.window.activeTextEditor;
   } catch (err) {
     return null;
   }
 
   try {
-    const { uri } = workspace.getWorkspaceFolder(editor.document.uri);
+    const { uri } = vscode.workspace.getWorkspaceFolder(editor.document.uri);
     return uri.fsPath;
   } catch (error) {
     return null;
@@ -319,19 +271,20 @@ async function getProjectPath(): Promise<null | string> {
 async function findEnvFile() {
   let envFile = undefined;
   const projectPath = await getProjectPath();
+  const { NODE_ENV } = process.env;
 
   if (projectPath) {
     switch (true) {
-      case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.local.[${process.env.NODE_ENV}]`))):
-        envFile = resolve(projectPath, `.env.local.[${process.env.NODE_ENV}]`);
+      case (NODE_ENV && await fileExists(resolve(projectPath, `.env.local.[${NODE_ENV}]`))):
+        envFile = resolve(projectPath, `.env.local.[${NODE_ENV}]`);
         break;
 
       case (await fileExists(resolve(projectPath, '.env.local'))):
         envFile = resolve(projectPath, '.env.local');
         break;
 
-      case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.[${process.env.NODE_ENV}]`))):
-        envFile = resolve(projectPath, `.env.[${process.env.NODE_ENV}]`);
+      case (NODE_ENV && await fileExists(resolve(projectPath, `.env.[${NODE_ENV}]`))):
+        envFile = resolve(projectPath, `.env.[${NODE_ENV}]`);
         break;
 
       case (await fileExists(resolve(projectPath, '.env'))):
@@ -342,16 +295,21 @@ async function findEnvFile() {
         break;
     }
 
-    if (envFile) console.log(`Found DotEnv file ${envFile}`);
+    if (envFile) {
+      console.log(`Found DotEnv file ${envFile}`);
+    }
   }
 
   return envFile;
 }
 
 async function initDotEnv(): Promise<void> {
+  const envFile =  await findEnvFile();
   dotenvConfig({
-    path: await findEnvFile()
+    path: envFile
   });
+
+  if (envFile) console.log('Loading environment variables', Object.keys(process.env).filter(item => item.startsWith('NSIS_APP_')))
 }
 
 async function getSpawnEnv(): Promise<unknown> {
@@ -366,18 +324,22 @@ async function getSpawnEnv(): Promise<unknown> {
   };
 }
 
-function mapDefinitions(): string[] {
+function mapDefinitions(): unknown {
+  const definitions = {};
   const prefix = 'NSIS_APP_';
 
-  return Object.keys(process.env).map(item => {
+  Object.keys(process.env).map(item => {
     if (item.length && new RegExp(`${prefix}[a-z0-9]+`, 'gi').test(item)) {
-      return `${getPrefix()}D${item}=${process.env[item]}`;
+      definitions[item] = process.env[item];
     }
-  }).filter(item => item);
+  });
+
+  return Object.keys(definitions).length
+    ? definitions
+    : undefined;
 }
 
 export {
-  detectOutfile,
   fileExists,
   findErrors,
   findWarnings,
@@ -388,7 +350,6 @@ export {
   getSpawnEnv,
   initDotEnv,
   isHeaderFile,
-  isStrictMode,
   isWindowsCompatible,
   mapDefinitions,
   mapPlatform,
@@ -396,7 +357,6 @@ export {
   pathWarning,
   revealInstaller,
   runInstaller,
-  successNsis,
-  validateConfig,
+  buttonHandler,
   which
 };
