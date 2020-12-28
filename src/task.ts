@@ -1,37 +1,16 @@
-import { window, workspace } from 'vscode';
-
 import { getConfig } from 'vscode-get-config';
-import { getPrefix, validateConfig } from './util';
+import { getPrefix } from './util';
 import { join } from 'path';
 import { promises as fs } from 'fs';
+import vscode from 'vscode';
 
 async function createTask(): Promise<unknown> {
-  if (typeof workspace.rootPath === 'undefined' || workspace.rootPath === null) {
-    return window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
+  if (!vscode.workspace.workspaceFolders) {
+    return vscode.window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
 
-  let args, argsStrict;
-
-  const prefix: string = getPrefix();
-  const { alwaysOpenBuildTask, compilerArguments } = await getConfig('nsis');
-
-  if (compilerArguments.length) {
-    validateConfig(compilerArguments);
-    args = compilerArguments;
-    argsStrict = compilerArguments;
-  } else {
-    // no default value, since prefixes are OS dependent
-    args = [ `${prefix}V4` ];
-    argsStrict = [ `${prefix}V4` ];
-  }
-
-  // only add WX flag if not already specified
-  if (!argsStrict.includes('-WX') && !argsStrict.includes('/WX')) {
-    argsStrict.push(`${prefix}WX`);
-  }
-
-  args.push('${file}');
-  argsStrict.push('${file}');
+  const { alwaysOpenBuildTask, compilerVerbosity } = await getConfig('nsis');
+  const prefix = getPrefix();
 
   const taskFile = {
     'version': '2.0.0',
@@ -40,21 +19,28 @@ async function createTask(): Promise<unknown> {
         'label': 'Build',
         'type': 'shell',
         'command': 'makensis',
-        'args': args,
+        'args': [
+          '${file}',
+          `${prefix}V${compilerVerbosity}`,
+        ],
         'group': 'build'
       },
       {
         'label': 'Build (strict)',
         'type': 'shell',
         'command': 'makensis',
-        'args': argsStrict,
+        'args': [
+          '${file}',
+          `${prefix}V${compilerVerbosity}`,
+          `${prefix}WX`
+        ],
         'group': 'build'
       }
     ]
   };
 
   const jsonString = JSON.stringify(taskFile, null, 2);
-  const dotFolder = join(workspace.rootPath, '/.vscode');
+  const dotFolder = join(vscode.workspace.workspaceFolders[0].uri.fsPath, '/.vscode');
   const buildFile = join(dotFolder, 'tasks.json');
 
   try {
@@ -68,15 +54,14 @@ async function createTask(): Promise<unknown> {
     await fs.writeFile(buildFile, jsonString);
 
   } catch(error) {
-    window.showErrorMessage(error.toString());
+    vscode.window.showErrorMessage(error.toString());
   }
 
   if (alwaysOpenBuildTask === false) return;
 
   // Open tasks.json
-  workspace.openTextDocument(buildFile).then(doc => {
-      window.showTextDocument(doc);
-  });
+  const doc = await vscode.workspace.openTextDocument(buildFile)
+  vscode.window.showTextDocument(doc);
 }
 
 export { createTask };
