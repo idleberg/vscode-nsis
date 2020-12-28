@@ -15,19 +15,21 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       return;
     }
 
-    const preprocessMode = await getPreprocessMode();
-    const { overrideCompression } = await getConfig('nsis');
-
     const options = {
       verbose: 2,
       pathToMakensis,
       postExecute: [
         getNullDevice()
-      ],
-      preprocessMode
+      ]
     };
 
-    if (overrideCompression) {
+    const preprocessMode = await getPreprocessMode();
+
+    if (preprocessMode?.length) {
+      options[preprocessMode] = true;
+    }
+
+    if (await getConfig('nsis')) {
       options['preExecute'] = ['SetCompressor /FINAL zlib'];
       options['postExecute'].push('SetCompress off');
     }

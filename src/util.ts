@@ -150,16 +150,16 @@ function which(): string {
     : 'which';
 }
 
-async function getPreprocessMode(): Promise<unknown> {
+async function getPreprocessMode(): Promise<string> {
   const { preprocessMode } = await getConfig('nsis');
 
   switch (preprocessMode) {
     case 'PPO':
-      return { ppo: true };
+      return 'ppo';
     case 'Safe PPO':
-      return { safePPO: true };
+      return 'safePPO';
     default:
-      return undefined;
+      return '';
   }
 }
 
@@ -205,28 +205,29 @@ async function fileExists(filePath: string): Promise<boolean> {
 }
 
 async function findWarnings(input: string): Promise<unknown[]> {
+  const output = [];
+
   const warningLines = input.split('\n');
-  if (!warningLines.length) return [];
+  if (!warningLines.length) return ;
 
   if (warningLines.length) {
-    const output = warningLines.map(async warningLine => {
+    // Note to self: Don't use map()
+    warningLines.forEach(async warningLine => {
       const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
       if (result !== null) {
-          const warningLine = parseInt(result.groups.line) - 1;
+        const warningLine = parseInt(result.groups.line) - 1;
 
-          return {
-            code: '',
-            message: result.groups.message,
-            range: new vscode.Range(new vscode.Position(warningLine, 0), new vscode.Position(warningLine, getLineLength(warningLine))),
-            severity: vscode.DiagnosticSeverity.Warning
-          };
-        }
-    }).filter(item => item);
+        output.push({
+          code: '',
+          message: result.groups.message,
+          range: new vscode.Range(new vscode.Position(warningLine, 0), new vscode.Position(warningLine, getLineLength(warningLine))),
+          severity: vscode.DiagnosticSeverity.Warning
+        });
+      }
+    });
 
-    const { muteANSIDeprecationWarning } = await getConfig('nsis');
-
-    if (!muteANSIDeprecationWarning && input.includes('7998: ANSI targets are deprecated')) {
+    if (!await getConfig('nsis') && input.includes('7998: ANSI targets are deprecated')) {
       showANSIDeprecationWarning();
     }
 
