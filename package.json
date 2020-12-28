@@ -40,7 +40,7 @@
       "@nsis/nlf": "^0.8.1",
       "@types/vscode": "^1.52.0",
       "dotenv": "^8.2.0",
-      "makensis": "^0.23.1",
+      "makensis": "^0.23.2",
       "open": "^7.3.0",
       "vscode-get-config": "^0.4.0"
    },
@@ -107,16 +107,16 @@
                   "2",
                   "3",
                   "4"
-              ],
-              "enumDescriptions": [
-                "none",
-                "no warnings",
-                "no info",
-                "no script",
-                "all"
-              ],
-              "default": "3",
-              "markdownDescription": "%nsisCompilerVerbosity%"
+               ],
+               "enumDescriptions": [
+                  "none",
+                  "no warnings",
+                  "no info",
+                  "no script",
+                  "all"
+               ],
+               "default": "3",
+               "markdownDescription": "%nsisCompilerVerbosity%"
             },
             "nsis.preprocessMode": {
                "type": "string",
@@ -127,6 +127,11 @@
                ],
                "default": "Safe PPO",
                "markdownDescription": "%nsisPreprocessMode%"
+            },
+            "nsis.overrideCompression": {
+               "type": "boolean",
+               "default": true,
+               "description": "Overrides compression settings to speed up diagnostics"
             },
             "nsis.showNotifications": {
                "type": "boolean",
@@ -262,8 +267,8 @@
             "command": "extension.nsis.open-settings",
             "title": "NSIS: Open Settings",
             "icon": {
-              "dark": "./images/icon--settings-dark.svg",
-              "light": "./images/icon--settings-light.svg"
+               "dark": "./images/icon--settings-dark.svg",
+               "light": "./images/icon--settings-light.svg"
             }
          },
          {
