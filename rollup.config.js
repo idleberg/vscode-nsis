@@ -21,12 +21,22 @@ const plugins = [
 export default [
   {
     external: [
+      // Code
+      'vscode',
+
+      // Node
       'child_process',
       'fs',
       'path',
       'os',
       'util',
-      'vscode'
+
+      // dependencies
+      '@nsis/nlf',
+      'dotenv',
+      'makensis',
+      'open',
+      'vscode-get-config',
     ],
     input: './src/index.ts',
     output: {
