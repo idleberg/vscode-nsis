@@ -1,3 +1,7 @@
+# v3.37.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.1)
+
+- update rollup config
+
 # v3.37.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.0)
 
 - add *Open Settings* command
