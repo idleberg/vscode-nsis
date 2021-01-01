@@ -1,3 +1,8 @@
+# v3.37.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.2)
+
+- revert changes to rollup config
+- remove obsolete documentation
+
 # v3.37.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.1)
 
 - update rollup config
@@ -6,7 +11,7 @@
 
 - add *Open Settings* command
 - add `overrideCompression` option
-- remove `customArguments` option
+- remove `compilerArguments` option
 - rename `allowHeaderCompilation` option to `processHeaders`
 - refactor output channel handling
 - catch error when creating `.vscode` folder
