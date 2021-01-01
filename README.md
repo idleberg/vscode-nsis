@@ -156,7 +156,6 @@ Before you can build, make sure `makensis` is in your PATH [environment variable
 
 ```json
 {
-  "nsis.compilerArguments": ["/WX", "/V3"],
   "nsis.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
 }
 ```
@@ -170,7 +169,6 @@ You can tweak your default settings by editing your [user settings](https://code
 | Setting                      | Description                                                                  |
 |------------------------------|------------------------------------------------------------------------------|
 | `pathToMakensis`             | Specify the full path to `makensis`                                          |
-| `compilerArguments`          | Specify the [default arguments][makensis] for `makensis`                     |
 | `preprocessMode`             | Linter runs in the much faster [pre-process mode][ppo], but ignores warnings |
 | `processHeaders`             | Specifiy whether to compile `.nsh` files                                     |
 | `overrideCompression`        | Overrides compression settings to speed up diagnostics                       |
