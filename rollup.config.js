@@ -29,14 +29,7 @@ export default [
       'fs',
       'path',
       'os',
-      'util',
-
-      // dependencies
-      '@nsis/nlf',
-      'dotenv',
-      'makensis',
-      'open',
-      'vscode-get-config',
+      'util'
     ],
     input: './src/index.ts',
     output: {
