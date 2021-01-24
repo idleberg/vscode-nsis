@@ -135,7 +135,7 @@ There are several special cases for your convenience:
 
 Fuzzy syntax completions are available through “Drunken NSIS”, which tries to iron out some of the inconsistencies of the NSIS language, for instance word order.
 
-**Example:**
+**Examples:**
 
 Interchangable word order of NSIS language and library functions
 
@@ -156,7 +156,7 @@ Before you can build, make sure `makensis` is in your PATH [environment variable
 
 ```json
 {
-  "nsis.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
+  "nsis.compiler.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
 }
 ```
 
@@ -165,33 +165,6 @@ To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](
 #### Options
 
 You can tweak your default settings by editing your [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
-
-| Setting                      | Description                                                                  |
-|------------------------------|------------------------------------------------------------------------------|
-| `pathToMakensis`             | Specify the full path to `makensis`                                          |
-| `preprocessMode`             | Linter runs in the much faster [pre-process mode][ppo], but ignores warnings |
-| `processHeaders`             | Specifiy whether to compile `.nsh` files                                     |
-| `overrideCompression`        | Overrides compression settings to speed up diagnostics                       |
-| `showNotifications`          | Show build notifications indicating success or failure                       |
-| `alwaysShowOutput`           | Output channel will only be shown on errors                                  |
-| `alwaysOpenBuildTask`        | Specify whether to open the newly created build task                         |
-| `showVersionAsInfoMessage`   | Specify whether to show version as message                                   |
-| `showFlagsAsObject`          | Specify whether to format compiler flags as JSON                             |
-| `useWineToRun`               | Runs compiled installers using [Wine][wine]                                  |
-| `muteANSIDeprecationWarning` | Toggle ANSI deprecation warning                                              |
-
-#### Commands
-
-| Action                   |  Syntax              | Shortcut                                                     |
-|--------------------------|----------------------|--------------------------------------------------------------|
-| Compile NSIS             | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>                |
-| Compile NSIS (strict)    | `source.nsis`        | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> |
-| Create Build Task        | `source.nsis`        | –                                                            |
-| Command Reference        | `source.nsis`        | –                                                            |
-| Show Version             | `source.nsis`        | –                                                            |
-| Show Compiler Flags      | `source.nsis`        | –                                                            |
-| Open Settings            | `source.nsis`        | –                                                            |
-| Convert Language File    | `source.nlf`         | -                                                            |
 
 ### Task Runner
 
