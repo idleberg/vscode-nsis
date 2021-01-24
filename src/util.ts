@@ -6,6 +6,7 @@ import { platform } from 'os';
 import { resolve } from 'path';
 import open from 'open';
 import vscode from 'vscode';
+import which from 'which';
 
 function getNullDevice(): string {
   return platform() === 'win32'
@@ -37,32 +38,14 @@ async function isWindowsCompatible(): Promise<boolean> {
 }
 
 async function getMakensisPath(): Promise<string> {
-  const { pathToMakensis } = await getConfig('nsis');
+  const { compiler } = await getConfig('nsis');
 
-  return new Promise((resolve, reject) => {
-    if (pathToMakensis?.length) {
-      console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
-      return resolve(pathToMakensis.trim());
+    if (compiler.pathToMakensis?.length && pathToMakensis !== 'makensis') {
+      console.log(`Using makensis path found in user settings: ${compiler.pathToMakensis}`);
+      return resolve(compiler.pathToMakensis.trim());
     }
 
-    const cp = spawn(which(), ['makensis']);
-
-    cp.stdout.on('data', data => {
-      const filePath = data.toString().trim();
-      console.log(`Using makensis path detected on file system: ${filePath}`);
-      return resolve(filePath);
-    });
-
-    cp.on('error', errorMessage => {
-      console.error('[vscode-nsis]', errorMessage);
-    });
-
-    cp.on('exit', (code) => {
-      if (code !== 0) {
-        return reject(code);
-      }
-    });
-  });
+    return String(await which('makensis')) || 'makensis';
 }
 
 function mapPlatform(): string {
@@ -142,12 +125,6 @@ async function buttonHandler(choice: string, outFile: string): Promise<void> {
       await revealInstaller(outFile);
       break;
   }
-}
-
-function which(): string {
-  return (platform() === 'win32')
-    ? 'where'
-    : 'which';
 }
 
 async function getPreprocessMode(): Promise<string> {

@@ -42,7 +42,8 @@
       "dotenv": "^8.2.0",
       "makensis": "^0.23.2",
       "open": "^7.3.0",
-      "vscode-get-config": "^0.4.0"
+      "vscode-get-config": "^0.4.0",
+      "which": "^2.0.2"
    },
    "devDependencies": {
       "@babel/core": "^7.12.10",
