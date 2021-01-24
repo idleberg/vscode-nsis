@@ -40,7 +40,7 @@ async function isWindowsCompatible(): Promise<boolean> {
 async function getMakensisPath(): Promise<string> {
   const { compiler } = await getConfig('nsis');
 
-    if (compiler.pathToMakensis?.length && pathToMakensis !== 'makensis') {
+    if (compiler.pathToMakensis?.length && compiler.pathToMakensis !== 'makensis') {
       console.log(`Using makensis path found in user settings: ${compiler.pathToMakensis}`);
       return resolve(compiler.pathToMakensis.trim());
     }
