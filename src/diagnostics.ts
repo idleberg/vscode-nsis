@@ -1,6 +1,6 @@
 import vscode from 'vscode';
 import { compile } from 'makensis';
-import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getSpawnEnv } from './util';
+import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
 import { getConfig } from 'vscode-get-config';
 
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
@@ -29,7 +29,9 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       options[preprocessMode] = true;
     }
 
-    if (await getConfig('nsis')) {
+    const overrideCompression = await getOverrideCompression();
+
+    if (overrideCompression) {
       options['preExecute'] = ['SetCompressor /FINAL zlib'];
       options['postExecute'].push('SetCompress off');
     }

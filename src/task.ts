@@ -9,7 +9,7 @@ async function createTask(): Promise<unknown> {
     return vscode.window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
 
-  const { alwaysOpenBuildTask, compilerVerbosity } = await getConfig('nsis');
+  const { alwaysOpenBuildTask, compiler } = await getConfig('nsis');
   const prefix = getPrefix();
 
   const taskFile = {
@@ -21,7 +21,7 @@ async function createTask(): Promise<unknown> {
         'command': 'makensis',
         'args': [
           '${file}',
-          `${prefix}V${compilerVerbosity}`,
+          `${prefix}V${compiler.verbosity}`,
         ],
         'group': 'build'
       },
@@ -31,7 +31,7 @@ async function createTask(): Promise<unknown> {
         'command': 'makensis',
         'args': [
           '${file}',
-          `${prefix}V${compilerVerbosity}`,
+          `${prefix}V${compiler.verbosity}`,
           `${prefix}WX`
         ],
         'group': 'build'

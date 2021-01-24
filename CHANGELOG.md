@@ -1,3 +1,15 @@
+# v3.38.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.0)
+
+- **Breaking change:** group compiler settings
+  - `nsis.pathToMakensis` ➞ `nsis.compiler.pathToMakensis`
+  - `nsis.compilerVerbosity` ➞ `nsis.compiler.verbosity`
+  - `nsis.preprocessMode` ➞ `nsis.compiler.preprocessMode`
+  - `nsis.overrideCompression` ➞ `nsis.compiler.overrideCompression`
+- add `nsis.compiler.strictMode` setting
+- add `nsis.compiler.customArguments` setting
+- fix `overrideCompression` usage
+- use `which` module
+
 # v3.37.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.2)
 
 - revert changes to rollup config

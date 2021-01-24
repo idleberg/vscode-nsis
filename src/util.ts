@@ -128,9 +128,9 @@ async function buttonHandler(choice: string, outFile: string): Promise<void> {
 }
 
 async function getPreprocessMode(): Promise<string> {
-  const { preprocessMode } = await getConfig('nsis');
+  const { compiler } = await getConfig('nsis');
 
-  switch (preprocessMode) {
+  switch (compiler.preprocessMode) {
     case 'PPO':
       return 'ppo';
     case 'Safe PPO':
@@ -138,6 +138,12 @@ async function getPreprocessMode(): Promise<string> {
     default:
       return '';
   }
+}
+
+async function getOverrideCompression(): Promise<string> {
+  const { compiler } = await getConfig('nsis');
+
+  return compiler.overrideCompression || true;
 }
 
 function getLineLength(line: number): number {
@@ -325,6 +331,7 @@ export {
   getNullDevice,
   getPrefix,
   getPreprocessMode,
+  getOverrideCompression,
   getSpawnEnv,
   initDotEnv,
   isHeaderFile,

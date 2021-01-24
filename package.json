@@ -95,12 +95,12 @@
          "type": "object",
          "title": "NSIS",
          "properties": {
-            "nsis.pathToMakensis": {
+            "nsis.compiler.pathToMakensis": {
                "type": "string",
                "default": "makensis",
                "markdownDescription": "%nsisPathToMakensis%"
             },
-            "nsis.compilerVerbosity": {
+            "nsis.compiler.verbosity": {
                "type": "string",
                "enum": [
                   "0",
@@ -119,7 +119,20 @@
                "default": "3",
                "markdownDescription": "%nsisCompilerVerbosity%"
             },
-            "nsis.preprocessMode": {
+            "nsis.compiler.strictMode": {
+               "type": "boolean",
+               "default": false,
+               "description": "%nsisStrictMode%"
+            },
+            "nsis.compiler.customArguments": {
+              "type": "array",
+              "items": {
+                 "type": "string"
+              },
+              "default": [],
+               "description": "%nsisCustomArguments%"
+            },
+            "nsis.compiler.preprocessMode": {
                "type": "string",
                "enum": [
                   "(none)",
@@ -129,7 +142,7 @@
                "default": "Safe PPO",
                "markdownDescription": "%nsisPreprocessMode%"
             },
-            "nsis.overrideCompression": {
+            "nsis.compiler.overrideCompression": {
                "type": "boolean",
                "default": true,
                "description": "Overrides compression settings to speed up diagnostics"

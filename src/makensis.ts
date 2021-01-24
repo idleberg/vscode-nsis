@@ -19,7 +19,7 @@ async function compile(strictMode: boolean): Promise<void> {
     return;
   }
 
-  const { processHeaders, compilerVerbosity, showFlagsAsObject } = await getConfig('nsis');
+  const { compiler, processHeaders, showFlagsAsObject } = await getConfig('nsis');
   const document = vscode.window.activeTextEditor.document;
 
   if (!processHeaders && isHeaderFile(document.fileName)) {
@@ -50,8 +50,9 @@ async function compile(strictMode: boolean): Promise<void> {
       define: mapDefinitions(),
       json: showFlagsAsObject,
       pathToMakensis: await getMakensisPath(),
-      strict: strictMode,
-      verbose: compilerVerbosity
+      rawArguments: compiler.customArguments,
+      strict: strictMode || compiler.strictMode,
+      verbose: compiler.verbosity
     },
     await getSpawnEnv()
   );
