@@ -9,6 +9,7 @@
 - add `nsis.compiler.customArguments` setting
 - fix `overrideCompression` usage
 - use `which` module
+- update dependencies
 
 # v3.37.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.2)
 
