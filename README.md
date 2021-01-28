@@ -133,7 +133,7 @@ There are several special cases for your convenience:
 
 #### Drunken NSIS
 
-Fuzzy syntax completions are available through “Drunken NSIS”, which tries to iron out some of the inconsistencies of the NSIS language, for instance word order.
+Fuzzy syntax completions are available through “Drunken NSIS”, which tries to iron out some of the inconsistencies in the NSIS language, for instance word order.
 
 **Examples:**
 
