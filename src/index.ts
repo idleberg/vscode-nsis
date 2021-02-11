@@ -24,19 +24,19 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.show-version', async () => {
+    vscode.commands.registerCommand('extension.nsis.show-version', async () => {
       return await showVersion();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.show-compiler-flags', async () => {
+    vscode.commands.registerCommand('extension.nsis.show-compiler-flags', async () => {
       return await showCompilerFlags();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.command-reference', async () => {
+    vscode.commands.registerCommand('extension.nsis.command-reference', async () => {
       return await showHelp();
     })
   );
@@ -54,7 +54,7 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   );
 
   context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.open-settings', () => {
+    vscode.commands.registerCommand('extension.nsis.open-settings', () => {
       vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
     })
   );
