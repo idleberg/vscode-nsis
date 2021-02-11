@@ -1,5 +1,10 @@
 # v3.38.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.0)
 
+- differenciate between editor and global commands
+- update dependencies
+
+# v3.38.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.0)
+
 - **Breaking change:** group compiler settings
   - `nsis.pathToMakensis` ➞ `nsis.compiler.pathToMakensis`
   - `nsis.compilerVerbosity` ➞ `nsis.compiler.verbosity`
