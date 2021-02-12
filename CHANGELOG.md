@@ -1,10 +1,5 @@
 # v3.38.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.1)
 
-- differentiate scope of commands
-- update dependencies
-
-# v3.38.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.0)
-
 - differenciate between editor and global commands
 - update dependencies
 
