@@ -12,7 +12,7 @@
 
 - **Breaking change:** group compiler settings
   - `nsis.pathToMakensis` ➞ `nsis.compiler.pathToMakensis`
-  - `nsis.compilerVerbosity` ➞ `nsis.compiler.verbosity`
+  - `nsis.compilerVerbosity` ➞ `nsis.compiler.verbosity`s
   - `nsis.preprocessMode` ➞ `nsis.compiler.preprocessMode`
   - `nsis.overrideCompression` ➞ `nsis.compiler.overrideCompression`
 - add `nsis.compiler.strictMode` setting
