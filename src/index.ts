@@ -10,7 +10,7 @@ import { updateDiagnostics } from './diagnostics';
 async function activate(context: vscode.ExtensionContext): Promise<void> {
   await initDotEnv();
 
-  // Commands
+  // TextEditor Commands
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.nsis.compile', async () => {
       return await compile(false);
@@ -23,6 +23,19 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
     })
   );
 
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.nsis.create-build-task', async () => {
+      return await createTask();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.nsis.convert-language-file', () => {
+      return convert();
+    })
+  );
+
+  //Global Commands
   context.subscriptions.push(
     vscode.commands.registerCommand('extension.nsis.show-version', async () => {
       return await showVersion();
@@ -38,18 +51,6 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   context.subscriptions.push(
     vscode.commands.registerCommand('extension.nsis.command-reference', async () => {
       return await showHelp();
-    })
-  );
-
-  context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.create-build-task', async () => {
-      return await createTask();
-    })
-  );
-
-  context.subscriptions.push(
-    vscode.commands.registerTextEditorCommand('extension.nsis.convert-language-file', () => {
-      return convert();
     })
   );
 
