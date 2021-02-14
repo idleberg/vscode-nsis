@@ -1,7 +1,7 @@
 import vscode from 'vscode';
 import { getConfig } from 'vscode-get-config';
 import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './handlers';
-import NSIS from 'makensis';
+import * as NSIS from 'makensis';
 
 import {
   getMakensisPath,

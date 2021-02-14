@@ -1,7 +1,6 @@
 import vscode from 'vscode';
 import { compile } from 'makensis';
 import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
-import { getConfig } from 'vscode-get-config';
 
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
   if (document && document.languageId === 'nsis') {

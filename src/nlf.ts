@@ -1,4 +1,4 @@
-import NLF from '@nsis/nlf';
+import * as NLF from '@nsis/nlf';
 import vscode from 'vscode';
 
 function convert(): void {
