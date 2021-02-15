@@ -11,14 +11,14 @@
    },
    "scripts": {
       "compile": "npm run build",
-      "build": "node ./tools/esbuild.cjs",
+      "build": "node ./tools/build.cjs",
       "dev": "npm run start",
       "fix": "eslint --fix ./src",
       "lint:json": "jsonlint --quiet ./snippets/*.json",
       "lint:ts": "eslint ./src",
       "lint": "npm-run-all  --parallel lint:*",
       "postinstall": "node ./node_modules/vscode/bin/install",
-      "start": "NODE_ENV=development node ./tools/esbuild.cjs",
+      "start": "NODE_ENV=development node ./tools/build.cjs",
       "test": "npm run lint",
       "vscode:prepublish": "npm run build && gulp"
    },
