@@ -1,11 +1,13 @@
-# v3.38.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.2)
+# v3.39.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.39.0)
+
+- migrate to `esbuild` as bundler
 
 # v3.38.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.1)
 
 - differentiate between editor and global commands
 - update dependencies
 
-# v3.38.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.0)
+# v3.38.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.38.0)
 
 - **Breaking change:** group compiler settings
   - `nsis.pathToMakensis` ➞ `nsis.compiler.pathToMakensis`
