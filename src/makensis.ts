@@ -106,7 +106,7 @@ async function showHelp(): Promise<void> {
   }
 
   try {
-    const output = await NSIS.cmdHelp('', {
+    const output = await NSIS.commandHelp('', {
         pathToMakensis: pathToMakensis,
         json: true
       },
