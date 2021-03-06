@@ -15,7 +15,7 @@ import nsisChannel from './channel';
 
 async function compile(strictMode: boolean): Promise<void> {
   if (vscode.window?.activeTextEditor['_documentData']['_languageId'] !== 'nsis') {
-    nsisChannel.appendLine('This command is only available for NSIS files');
+    vscode.window.showErrorMessage('This command is only available for NSIS files');
     return;
   }
 
