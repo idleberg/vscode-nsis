@@ -73,7 +73,7 @@
     "theme": "dark"
   },
   "engines": {
-    "vscode": "^1.0.0",
+    "vscode": "^1.40",
     "node": ">=12"
   },
   "categories": [
