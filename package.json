@@ -50,7 +50,6 @@
     "@babel/register": "^7.12.10",
     "@nsis/logo": "*",
     "@types/node": "^14.14.22",
-    "@types/vscode": "^1.52.0",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "esbuild": "^0.8.46",
