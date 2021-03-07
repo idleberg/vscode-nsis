@@ -14,6 +14,7 @@ import {
 import nsisChannel from './channel';
 
 async function compile(strictMode: boolean): Promise<void> {
+  // TODO Breaking change in VSCode 1.54, remove in future
   const languageID = vscode.window.activeTextEditor['_documentData']
     ? vscode.window.activeTextEditor['_documentData']['_languageId']
     : vscode.window.activeTextEditor['document']['languageId'];
