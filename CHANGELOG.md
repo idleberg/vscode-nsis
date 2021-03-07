@@ -1,3 +1,9 @@
+# v3.40.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.40.0)
+
+- fix breaking change with VSCode v1.54
+- update `makensis` method to hide deprecation warning
+- update dependencies
+
 # v3.39.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.39.0)
 
 - migrate to `esbuild` as bundler
