@@ -1,3 +1,7 @@
+# v3.40.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.40.1)
+
+- update dependencies
+
 # v3.40.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.40.0)
 
 - fix breaking change with VSCode v1.54
