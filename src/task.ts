@@ -20,8 +20,8 @@ async function createTask(): Promise<unknown> {
         'type': 'shell',
         'command': 'makensis',
         'args': [
-          '${file}',
           `${prefix}V${compiler.verbosity}`,
+          '${file}'
         ],
         'group': 'build'
       },
@@ -30,9 +30,9 @@ async function createTask(): Promise<unknown> {
         'type': 'shell',
         'command': 'makensis',
         'args': [
-          '${file}',
           `${prefix}V${compiler.verbosity}`,
-          `${prefix}WX`
+          `${prefix}WX`,
+          '${file}'
         ],
         'group': 'build'
       }
