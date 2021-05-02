@@ -18,7 +18,7 @@
     "lint:ts": "eslint ./src --ignore-path .gitignore",
     "lint": "npm-run-all  --parallel lint:*",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "start": "NODE_ENV=development node ./tools/build.cjs",
+    "start": "cross-env NODE_ENV=development node ./tools/build.cjs",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build && gulp"
   },
@@ -52,6 +52,7 @@
     "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.11.2",
     "eslint": "^7.18.0",
     "eslint-plugin-json": "^2.1.2",
