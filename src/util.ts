@@ -297,7 +297,7 @@ async function initDotEnv(): Promise<void> {
 }
 
 async function getSpawnEnv(): Promise<unknown> {
-  const { integrated } = await getConfig('terminal');
+  const { integrated } = vscode.workspace.getConfiguration('terminal');
   const mappedPlatform = mapPlatform();
 
   return {
