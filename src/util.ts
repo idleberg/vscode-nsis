@@ -56,7 +56,7 @@ function mapPlatform(): string {
       return 'osx';
 
     case 'win32':
-      return 'osx';
+      return 'windows';
 
     default:
       return pf;
