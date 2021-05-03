@@ -3,6 +3,7 @@
 - fix `getSpawnEnv()` on Windows
 - fix platform mapping
 - fix watch mode
+- fix order of arguments in build task
 - update dependencies
 
 # v3.40.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.40.1)
