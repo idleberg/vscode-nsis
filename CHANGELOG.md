@@ -1,4 +1,4 @@
-# v3.41.0 [#](https://github.com/idleberg/vscode-applescript/releases/tag/v3.41.0)
+# v3.41.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.41.0)
 
 - add support to detect syntax from shebang
 - update dependencies
