@@ -201,6 +201,7 @@
           ".bnsi",
           ".bnsh"
         ],
+        "firstLine": "^#!/.*\\bmakensis\\b",
         "configuration": "./config/nsis.json"
       },
       {
