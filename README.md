@@ -104,10 +104,10 @@ $ cd %USERPROFILE%\.vscode\extensions
 $ cd ~/.vscode/extensions/
 ```
 
-Clone repository as `nsis`:
+Clone repository as `idleberg.nsis`:
 
 ```bash
-$ git clone https://github.com/idleberg/vscode-nsis nsis
+$ git clone https://github.com/idleberg/vscode-nsis idleberg.nsis
 ```
 
 Install dependencies:
