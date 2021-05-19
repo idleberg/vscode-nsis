@@ -87,10 +87,12 @@ $ ovsx get idleberg.nsis
 Change to your Visual Studio Code extensions directory:
 
 ```powershell
-# Windows Powershell
+# Powershell
 cd $Env:USERPROFILES\.vscode\extensions
+```
 
-# Windows Command Prompt
+```cmd
+:: Command Prompt
 $ cd %USERPROFILE%\.vscode\extensions
 ```
 
