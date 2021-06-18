@@ -39,6 +39,7 @@
   "dependencies": {
     "@nsis/nlf": "^0.9.0",
     "dotenv": "^8.6.0",
+    "globby": "^11.0.4",
     "makensis": "^0.23.4",
     "open": "^8.0.7",
     "vscode-get-config": "^0.4.0",
@@ -129,7 +130,12 @@
             "type": "string"
           },
           "default": [],
-          "description": "%nsisCustomArguments%"
+          "markdownDescription": "%nsisCustomArguments%"
+        },
+        "nsis.diagnostics.enableDiagnostics": {
+          "type": "boolean",
+          "default": true,
+          "description": "Toggle diagnostic mode to underline warnings and errors in your code"
         },
         "nsis.diagnostics.preprocessMode": {
           "type": "string",
@@ -146,10 +152,10 @@
           "default": true,
           "description": "Overrides compression settings to speed up diagnostics"
         },
-        "nsis.diagnostics.enableDiagnostics": {
+        "nsis.diagnostics.excludeFiles": {
           "type": "boolean",
           "default": true,
-          "description": "Toggle diagnostic mode to underline warnings and errors in your code"
+          "markdownDescription": "%nsisExcludeFiles%"
         },
         "nsis.showNotifications": {
           "type": "boolean",
