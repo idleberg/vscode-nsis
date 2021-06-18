@@ -3,6 +3,7 @@
 - add `diagnostics.enableDiagostics` option
 - add `diagnostics.excludedFiles` option
 - regroup existing diagnostics options
+- add support for DotEnv variable expansion
 - update build script
 - update dependencies
 
