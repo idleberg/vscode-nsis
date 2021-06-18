@@ -131,7 +131,7 @@
           "default": [],
           "description": "%nsisCustomArguments%"
         },
-        "nsis.compiler.preprocessMode": {
+        "nsis.diagnostics.preprocessMode": {
           "type": "string",
           "enum": [
             "(none)",
@@ -141,7 +141,7 @@
           "default": "Safe PPO",
           "markdownDescription": "%nsisPreprocessMode%"
         },
-        "nsis.compiler.overrideCompression": {
+        "nsis.diagnostics.overrideCompression": {
           "type": "boolean",
           "default": true,
           "description": "Overrides compression settings to speed up diagnostics"
