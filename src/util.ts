@@ -4,6 +4,7 @@ import { exec, spawn } from 'child_process';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { resolve } from 'path';
+import dotenvExpand from 'dotenv-expand';
 import open from 'open';
 import vscode from 'vscode';
 import which from 'which';
@@ -289,11 +290,11 @@ async function findEnvFile() {
 
 async function initDotEnv(): Promise<void> {
   const envFile =  await findEnvFile();
-  dotenvConfig({
+  dotenvExpand(dotenvConfig({
     path: envFile
-  });
+  }));
 
-  if (envFile) console.log('Loading environment variables', Object.keys(process.env).filter(item => item.startsWith('NSIS_APP_')))
+  if (envFile) console.log('Loading environment variables', Object.entries(process.env).filter(([key]) => key.startsWith('NSIS_APP_')))
 }
 
 async function getSpawnEnv(): Promise<unknown> {
