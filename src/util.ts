@@ -290,13 +290,14 @@ async function findEnvFile() {
 
 async function initDotEnv(): Promise<void> {
   const envFile =  await findEnvFile();
+
   dotenvExpand(
     dotenvConfig({
       path: envFile
     })
   );
 
-  if (envFile) console.log('Loading environment variables', Object.entries(process.env).filter(([key]) => key.startsWith('NSIS_APP_')))
+  if (envFile) console.log(`Loading environment variables from ${envFile}`, Object.entries(process.env).filter(([key]) => key.startsWith('NSIS_APP_')))
 }
 
 async function getSpawnEnv(): Promise<unknown> {
