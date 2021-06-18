@@ -146,6 +146,11 @@
           "default": true,
           "description": "Overrides compression settings to speed up diagnostics"
         },
+        "nsis.diagnostics.enableDiagnostics": {
+          "type": "boolean",
+          "default": true,
+          "description": "Toggle diagnostic mode to underline warnings and errors in your code"
+        },
         "nsis.showNotifications": {
           "type": "boolean",
           "default": true,
