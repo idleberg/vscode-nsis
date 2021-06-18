@@ -1,3 +1,9 @@
+# v3.42.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.42.0)
+
+- add `diagnostics.enableDiagostics` option
+- add `diagnostics.excludedFiles` option
+- regroup existing diagnostics options
+
 # v3.41.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.41.0)
 
 - add support to detect syntax from shebang
