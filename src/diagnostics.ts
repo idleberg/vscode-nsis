@@ -1,5 +1,4 @@
 import vscode from 'vscode';
-import { basename } from 'path';
 import { compile } from 'makensis';
 import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
 import { getConfig } from 'vscode-get-config';
@@ -11,8 +10,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
   if (diagnostics.enableDiagnostics !== true) return;
 
   if (diagnostics.excludedFiles?.length) {
-    const documentBasename = basename(document.fileName);
-    if (micromatch.isMatch(documentBasename, diagnostics.excludedFiles)) {
+    if (micromatch.isMatch(document.fileName, diagnostics.excludedFiles)) {
       console.log(`Skipping diagnostics for ${document.fileName}, found in exclude list`);
       collection.clear();
       return;
