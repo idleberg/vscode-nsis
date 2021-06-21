@@ -113,7 +113,7 @@ $ git clone https://github.com/idleberg/vscode-nsis idleberg.nsis
 Install dependencies:
 
 ```bash
-cd nsis && npm install
+cd nsis && npm install && npm run build
 ```
 
 ## Usage
