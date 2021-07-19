@@ -17,7 +17,6 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     }
   }
 
-
   if (document && document.languageId === 'nsis') {
     console.log(`Running diagnostics for ${document.fileName}`);
 
