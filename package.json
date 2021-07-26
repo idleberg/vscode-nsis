@@ -17,10 +17,10 @@
     "lint:json": "jsonlint --quiet ./snippets/*.json",
     "lint:ts": "eslint ./src --ignore-path .gitignore",
     "lint": "npm-run-all  --parallel lint:*",
-    "postinstall": "node ./node_modules/vscode/bin/install",
     "start": "cross-env ESBUILD_WATCH=true node ./tools/build.mjs",
     "test": "npm run lint",
-    "vscode:prepublish": "npm run build && gulp"
+    "vscode:prepublish": "npm run build && gulp",
+    "prepare": "husky install"
   },
   "keywords": [
     "nsis",
@@ -40,7 +40,7 @@
     "@nsis/nlf": "^0.9.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "makensis": "^0.23.4",
+    "makensis": "^0.25.0",
     "micromatch": "^4.0.4",
     "open": "^8.0.7",
     "vscode-get-config": "^0.4.0",
@@ -61,13 +61,12 @@
     "gulp": "^4.0.2",
     "gulp-raster-update": "^0.2.0",
     "gulp-rename": "^2.0.0",
-    "husky": ">=4.3 <5",
+    "husky": "^7.0.1",
     "jsonlint": "^1.6.3",
     "lint-staged": "^11.0.0",
     "log-symbols": "^5.0.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "^4.2.4",
-    "vscode": "^1.1.37"
+    "typescript": "^4.2.4"
   },
   "extensionDependencies": [],
   "icon": "images/logo.png",
@@ -522,11 +521,6 @@
     "presets": [
       "@babel/env"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
