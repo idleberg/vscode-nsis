@@ -37,7 +37,7 @@ function isWindows(): boolean {
 async function isWindowsCompatible(): Promise<boolean> {
   const { useWineToRun } = await getConfig('nsis');
 
-  isWindows() || useWineToRun === true
+  return isWindows() || useWineToRun === true
     ? true
     : false;
 }
@@ -112,7 +112,7 @@ async function runInstaller(outFile: string): Promise<void> {
   if (outFile && await fileExists(outFile)) {
     const { useWineToRun } = await getConfig('nsis');
 
-    if (platform() === 'win32') {
+    if (isWindows()) {
       exec(`cmd /c "${outFile}"`);
     } else if (useWineToRun === true) {
       spawn('wine', [ outFile ], {});
@@ -313,7 +313,7 @@ async function getSpawnEnv(): Promise<unknown> {
       NSISDIR: integrated.env[mappedPlatform].NSISDIR || process.env.NSISDIR || undefined,
       NSISCONFDIR: integrated.env[mappedPlatform].NSISCONFDIR || process.env.NSISCONFDIR || undefined,
       LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
-      LC_ALL: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
+      LC_ALL: !isWindows() && !process.env.LC_ALL ? 'en_US.UTF-8' : undefined,
     }
   };
 }
