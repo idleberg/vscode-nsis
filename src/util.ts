@@ -10,13 +10,13 @@ import vscode from 'vscode';
 import which from 'which';
 
 function getNullDevice(): string {
-  return platform() === 'win32'
+  isWindows()
     ? 'OutFile NUL'
     : 'OutFile /dev/null/';
 }
 
 function getPrefix(): string {
-  return platform() === 'win32'
+  isWindows()
     ? '/'
     : '-';
 }
@@ -30,10 +30,14 @@ function isHeaderFile(filePath: string): boolean {
   return Boolean(headerFiles.filter(fileExt => filePath?.endsWith(fileExt)).length);
 }
 
+function isWindows(): boolean {
+  return platform() === 'win32'
+}
+
 async function isWindowsCompatible(): Promise<boolean> {
   const { useWineToRun } = await getConfig('nsis');
 
-  return platform() === 'win32' || useWineToRun === true
+  isWindows() || useWineToRun === true
     ? true
     : false;
 }
@@ -308,6 +312,8 @@ async function getSpawnEnv(): Promise<unknown> {
     env: {
       NSISDIR: integrated.env[mappedPlatform].NSISDIR || process.env.NSISDIR || undefined,
       NSISCONFDIR: integrated.env[mappedPlatform].NSISCONFDIR || process.env.NSISCONFDIR || undefined,
+      LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
+      LC_ALL: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
     }
   };
 }
