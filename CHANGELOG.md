@@ -1,3 +1,7 @@
+# v3.42.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.42.3)
+
+- fix broken returns
+
 # v3.42.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.42.2)
 
 - fix environment variable name
