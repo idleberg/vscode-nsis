@@ -110,16 +110,16 @@ Clone repository as `idleberg.nsis`:
 $ git clone https://github.com/idleberg/vscode-nsis idleberg.nsis
 ```
 
-Install dependencies:
+Inside the cloned directory, install dependencies using your preferred Node package manager:
 
 ```bash
-cd nsis && npm install
+$ yarn || npm install
 ```
 
-Build extension:
+Build the source:
 
 ```bash
-npm run build
+yarn build || npm run build
 ```
 
 ## Usage
