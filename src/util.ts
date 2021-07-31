@@ -10,13 +10,13 @@ import vscode from 'vscode';
 import which from 'which';
 
 function getNullDevice(): string {
-  isWindows()
+  return isWindows()
     ? 'OutFile NUL'
     : 'OutFile /dev/null/';
 }
 
 function getPrefix(): string {
-  isWindows()
+  return isWindows()
     ? '/'
     : '-';
 }
