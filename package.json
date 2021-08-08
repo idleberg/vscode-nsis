@@ -57,7 +57,7 @@
     "cross-env": "^7.0.3",
     "esbuild": "^0.12.17",
     "eslint": "^7.32.0",
-    "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-json": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-raster-update": "^0.2.0",
     "gulp-rename": "^2.0.0",
