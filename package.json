@@ -17,7 +17,7 @@
     "lint:json": "eslint ./ --ext .json --ignore-path .gitignore",
     "lint:ts": "eslint ./src --ignore-path .gitignore",
     "lint:yaml": "eslint ./ --ext .yaml --ext .yml --ignore-path .gitignore",
-    "lint": "npm-run-all  --parallel lint:*",
+    "lint": "npm-run-all --parallel lint:*",
     "prepare": "lefthook install",
     "start": "cross-env ESBUILD_WATCH=true node ./tools/build.mjs",
     "test": "npm run lint",
