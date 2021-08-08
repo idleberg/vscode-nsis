@@ -2,4 +2,4 @@ pre-commit:
   commands:
     eslint:
       glob: "*.{ts,json}"
-      run: npx eslint {staged_files}
+      run: npx eslint --cache --fix {staged_files}

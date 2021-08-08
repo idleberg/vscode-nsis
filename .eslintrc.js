@@ -14,5 +14,15 @@ module.exports = {
   ],
   ignorePatterns: [
     'index.js'
-  ]
+  ],
+  overrides : [
+    {
+      files: [
+        '*.yaml',
+        '*.yml'
+      ],
+      plugins: ['yaml'],
+      extends: ['plugin:yaml/recommended']
+    }
+]
 };
