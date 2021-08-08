@@ -1,3 +1,9 @@
+# v3.42.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.42.4)
+
+- fix Haskell NSIS snippets
+- replace `husky` with `lefthook`
+- switch CI provider
+
 # v3.42.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.42.3)
 
 - fix broken returns
