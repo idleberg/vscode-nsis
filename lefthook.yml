@@ -1,5 +1,12 @@
 pre-commit:
+  parallel: true
   commands:
-    eslint:
-      glob: "*.{ts,json}"
+    eslint-code:
+      glob: "*.{js,ts}"
+      run: npx eslint --cache --fix {staged_files}
+    eslint-json:
+      glob: "*.{json}"
+      run: npx eslint --cache --fix {staged_files}
+    eslint-yaml:
+      glob: "*.{yaml,yml}"
       run: npx eslint --cache --fix {staged_files}
