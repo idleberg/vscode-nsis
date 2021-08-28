@@ -1,3 +1,7 @@
+# v3.42.6 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.42.6)
+
+- update dependencies
+
 # v3.42.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.42.5)
 
 - update dependencies
