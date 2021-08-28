@@ -53,7 +53,7 @@
     "@babel/preset-env": "^7.14.1",
     "@babel/register": "^7.15.3",
     "@nsis/logo": "*",
-    "@types/node": "^14.17.12",
+    "@types/node": "^16.7.4",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "cross-env": "^7.0.3",
