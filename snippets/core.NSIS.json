@@ -438,7 +438,7 @@
     "description": "Usage: !uninstfinalize command_with_%1 [<OP retval>]",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/!uninstfinalize.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--keyword'>!</span>",
-    "prefix": "finalize"
+    "prefix": "uninstfinalize"
   },
   "!verbose": {
     "body": "!verbose \"${1:level}\"$0",
