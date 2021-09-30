@@ -1441,6 +1441,13 @@
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "GetTempFileName"
   },
+  "GetWinVer": {
+    "body": "GetWinVer \\$${1:user_var} ${2:version}$0",
+    "description": "Usage: GetWinVer user_var(output) Major|Minor|Build|ServicePack",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/GetWinVer.html?utm_source=vscode&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+    "prefix": "GetWinVer"
+  },
   "Goto": {
     "body": "Goto ${1:label_to_jump_to}$0",
     "description": "Usage: Goto label",
