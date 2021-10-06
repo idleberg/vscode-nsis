@@ -40,7 +40,7 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>^\s*(?i)\!(addincludedir|addplugindir|appendfile|cd|define|delfile|echo|error|execute|finalize|getdllversion|gettlbversion|include|insertmacro|macro|macroend|makensis|packhdr|pragma|searchparse|searchreplace|system|tempfile|undef|verbose|warning)\b</string>
+            <string>^\s*(?i)\!(addincludedir|addplugindir|appendfile|cd|define|delfile|echo|error|execute|finalize|getdllversion|gettlbversion|include|insertmacro|macro|macroend|makensis|packhdr|pragma|searchparse|searchreplace|system|tempfile|undef|uninstfinalize|verbose|warning)\b</string>
             <key>name</key>
             <string>keyword.other.nsis</string>
         </dict>
