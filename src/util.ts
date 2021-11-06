@@ -1,10 +1,8 @@
-import { config as dotenvConfig } from 'dotenv';
 import { constants, promises as fs } from 'fs';
 import { exec, spawn } from 'child_process';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { resolve } from 'path';
-import dotenvExpand from 'dotenv-expand';
 import open from 'open';
 import vscode from 'vscode';
 import which from 'which';
@@ -257,53 +255,6 @@ async function getProjectPath(): Promise<null | string> {
   }
 }
 
-async function findEnvFile() {
-  let envFile = undefined;
-  const projectPath = await getProjectPath();
-  const { NODE_ENV } = process.env;
-
-  if (projectPath) {
-    switch (true) {
-      case (NODE_ENV && await fileExists(resolve(projectPath, `.env.local.[${NODE_ENV}]`))):
-        envFile = resolve(projectPath, `.env.local.[${NODE_ENV}]`);
-        break;
-
-      case (await fileExists(resolve(projectPath, '.env.local'))):
-        envFile = resolve(projectPath, '.env.local');
-        break;
-
-      case (NODE_ENV && await fileExists(resolve(projectPath, `.env.[${NODE_ENV}]`))):
-        envFile = resolve(projectPath, `.env.[${NODE_ENV}]`);
-        break;
-
-      case (await fileExists(resolve(projectPath, '.env'))):
-        envFile = resolve(projectPath, '.env');
-        break;
-
-      default:
-        break;
-    }
-
-    if (envFile) {
-      console.log(`Found DotEnv file ${envFile}`);
-    }
-  }
-
-  return envFile;
-}
-
-async function initDotEnv(): Promise<void> {
-  const envFile =  await findEnvFile();
-
-  dotenvExpand(
-    dotenvConfig({
-      path: envFile
-    })
-  );
-
-  if (envFile) console.log(`Loading environment variables from ${envFile}`, Object.entries(process.env).filter(([key]) => key.startsWith('NSIS_APP_')))
-}
-
 async function getSpawnEnv(): Promise<unknown> {
   const { integrated } = vscode.workspace.getConfiguration('terminal');
   const mappedPlatform = mapPlatform();
@@ -318,21 +269,6 @@ async function getSpawnEnv(): Promise<unknown> {
   };
 }
 
-function mapDefinitions(): unknown {
-  const definitions = {};
-  const prefix = 'NSIS_APP_';
-
-  Object.keys(process.env).map(item => {
-    if (item.length && new RegExp(`${prefix}[a-z0-9]+`, 'gi').test(item)) {
-      definitions[item] = process.env[item];
-    }
-  });
-
-  return Object.keys(definitions).length
-    ? definitions
-    : undefined;
-}
-
 export {
   fileExists,
   findErrors,
@@ -341,12 +277,11 @@ export {
   getNullDevice,
   getPrefix,
   getPreprocessMode,
+  getProjectPath,
   getOverrideCompression,
   getSpawnEnv,
-  initDotEnv,
   isHeaderFile,
   isWindowsCompatible,
-  mapDefinitions,
   mapPlatform,
   openURL,
   pathWarning,

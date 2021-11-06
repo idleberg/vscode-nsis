@@ -5,9 +5,9 @@ import * as NSIS from 'makensis';
 
 import {
   getMakensisPath,
+  getProjectPath,
   getSpawnEnv,
   isHeaderFile,
-  mapDefinitions,
   openURL,
   pathWarning,
 } from './util';
@@ -52,7 +52,7 @@ async function compile(strictMode: boolean): Promise<void> {
   await NSIS.compile(
     document.fileName,
     {
-      define: mapDefinitions(),
+      env: await getProjectPath() || false,
       json: showFlagsAsObject,
       pathToMakensis: await getMakensisPath(),
       rawArguments: compiler.customArguments,

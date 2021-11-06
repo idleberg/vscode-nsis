@@ -4,12 +4,9 @@ import vscode from 'vscode';
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { convert } from './nlf';
 import { createTask } from './task';
-import { initDotEnv } from './util';
 import { updateDiagnostics } from './diagnostics';
 
 async function activate(context: vscode.ExtensionContext): Promise<void> {
-  await initDotEnv();
-
   // TextEditor Commands
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.nsis.compile', async () => {
