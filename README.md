@@ -89,7 +89,7 @@ Change to your Visual Studio Code extensions directory:
 
 ```powershell
 # Powershell
-cd $Env:USERPROFILES\.vscode\extensions
+cd $Env:USERPROFILE\.vscode\extensions
 ```
 
 ```cmd
