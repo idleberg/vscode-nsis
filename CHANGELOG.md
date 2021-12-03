@@ -1,4 +1,4 @@
-# v3.44.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.1)
+# v3.44.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.2)
 
 - fix variables regex pattern
 
