@@ -148,7 +148,7 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>\$\([\w\.:\^-]+\)</string>
+            <string>\$\([\!\w\.:\^-]+\)</string>
             <key>name</key>
             <string>constant.other.nsis</string>
         </dict>
@@ -209,7 +209,7 @@
                 </dict>
                 <dict>
                     <key>match</key>
-                    <string>\$\([\w\.:\^-]+\)</string>
+                    <string>\$\([\!\w\.:\^-]+\)</string>
                     <key>name</key>
                     <string>constant.other.nsis</string>
                 </dict>
@@ -272,7 +272,7 @@
                 </dict>
                 <dict>
                     <key>match</key>
-                    <string>\$\([\w\.:\^-]+\)</string>
+                    <string>\$\([\!\w\.:\^-]+\)</string>
                     <key>name</key>
                     <string>constant.other.nsis</string>
                 </dict>
@@ -335,7 +335,7 @@
                 </dict>
                 <dict>
                     <key>match</key>
-                    <string>\$\([\w\.:\^-]+\)</string>
+                    <string>\$\([\!\w\.:\^-]+\)</string>
                     <key>name</key>
                     <string>constant.other.nsis</string>
                 </dict>
