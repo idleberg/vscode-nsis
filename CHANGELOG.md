@@ -1,3 +1,7 @@
+# v3.44.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.4)
+
+- fix lint script
+
 # v3.44.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.3)
 
 - fix bad escaping in `LangString` and `LicenseLangString` snippets
