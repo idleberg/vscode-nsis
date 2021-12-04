@@ -2,6 +2,7 @@
 
 - fix bad escaping in `LangString` and `LicenseLangString` snippets
 - fix variables regex pattern to support single-character names
+- replace `lefthook` with `husky`
 
 # v3.44.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.2)
 
