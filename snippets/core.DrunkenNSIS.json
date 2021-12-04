@@ -588,21 +588,21 @@
     "prefix": "IntFmt64"
   },
   "%LangStringLicense": {
-    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}\"$0",
+    "body": "LicenseLangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:license_path}\"$0",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/LicenseLangString.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--keyword'>%</span>",
     "prefix": "LangStringLicense"
   },
   "%LangStringLicense rtf": {
-    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.rtf\"$0",
+    "body": "LicenseLangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:license_path}.rtf\"$0",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/LicenseLangString.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--keyword'>%</span>",
     "prefix": "LangStringLicense rtf"
   },
   "%LangStringLicense txt": {
-    "body": "LicenseLangString ${1:name} $\\{LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$0",
+    "body": "LicenseLangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:license_path}.txt\"$0",
     "description": "Usage: LicenseLangString name lang_id|0 license_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/LicenseLangString.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--keyword'>%</span>",
