@@ -1,3 +1,8 @@
+# v3.45.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.45.0)
+
+- add option to specify `pathToWine`
+- rename `useWineToRun`to `wine.runWithWine`
+
 # v3.44.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.4)
 
 - fix lint script
