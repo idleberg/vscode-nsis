@@ -7,5 +7,6 @@
   "nsisPreprocessMode": "Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warnings (unless in strict mode)",
   "nsisStrictMode": "Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will override the setting",
   "nsisCustomArguments": "Specify any of the default [compiler arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage). Note that these will have precedence over the settings above",
-  "nsisUseWineToRun": "Runs compiled installers using [Wine](https://www.winehq.org/)"
+  "nsisRunWithWine": "Runs compiled installers using [Wine](https://www.winehq.org/)",
+  "nsisPathToWine": "Specifies a custom path to `wine`, useful when working with `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine)."
 }

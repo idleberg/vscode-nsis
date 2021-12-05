@@ -191,10 +191,15 @@
           "default": true,
           "description": "Specify whether to format compiler flags as JSON"
         },
-        "nsis.useWineToRun": {
+        "nsis.wine.runWithWine": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "%nsisUseWineToRun%"
+          "markdownDescription": "%nsisRunWithWine%"
+        },
+        "nsis.wine.pathToWine": {
+          "type": "string",
+          "default": "wine",
+          "markdownDescription": "%nsisPathToWine%"
         },
         "nsis.muteANSIDeprecationWarning": {
           "type": "boolean",

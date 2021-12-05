@@ -33,9 +33,9 @@ function isWindows(): boolean {
 }
 
 async function isWindowsCompatible(): Promise<boolean> {
-  const { useWineToRun } = await getConfig('nsis');
+  const { wine } = await getConfig('nsis');
 
-  return isWindows() || useWineToRun === true
+  return isWindows() || wine.runWithWine === true
     ? true
     : false;
 }
@@ -108,12 +108,12 @@ async function revealInstaller(outFile: string): Promise<void> {
 
 async function runInstaller(outFile: string): Promise<void> {
   if (outFile && await fileExists(outFile)) {
-    const { useWineToRun } = await getConfig('nsis');
+    const { wine } = await getConfig('nsis');
 
     if (isWindows()) {
       exec(`cmd /c "${outFile}"`);
-    } else if (useWineToRun === true) {
-      spawn('wine', [ outFile ], {});
+    } else if (wine.runWithWine === true) {
+      spawn(wine.pathToWine, [ outFile ], {});
     }
   }
 }
