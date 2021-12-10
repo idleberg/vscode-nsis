@@ -36,7 +36,7 @@
       }
     },
     {
-      "beforeText": "^\\s*(?:\\${(ForEachIn(Reverse)?|MementoSection)})\\s*$",
+      "beforeText": "^\\s*(?:\\${(ForEachIn(Reverse)?|Memento(Unselected)?Section|)})\\s*$",
       "action": {
         "indent": "indent"
       }
