@@ -34,6 +34,12 @@
       "action": {
         "indent": "indent"
       }
+    },
+    {
+      "beforeText": "^\\s*(?:\\${(ForEachIn(Reverse)?|MementoSection)})\\s*$",
+      "action": {
+        "indent": "indent"
+      }
     }
   ]
 }
