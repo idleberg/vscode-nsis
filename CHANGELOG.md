@@ -1,6 +1,7 @@
 # v3.46.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.46.0)
 
 - add `onEnterRules`
+- update dependencies
 
 # v3.45.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.45.0)
 
