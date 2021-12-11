@@ -106,7 +106,7 @@ $ cd ~/.vscode/extensions/
 Clone repository as `idleberg.nsis`:
 
 ```bash
-$ git clone https://github.com/idleberg/vscode-nsis idleberg.nsis
+$ git clone https://github.com/idleberg/vscode-nsis ~/.vscode/extensions/idleberg.nsis
 ```
 
 Inside the cloned directory, install dependencies using your preferred Node package manager:
