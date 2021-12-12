@@ -1,3 +1,7 @@
+# v3.46.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.46.1)
+
+- improve `onEnterRules` patterns
+
 # v3.46.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.46.0)
 
 - add `onEnterRules`
