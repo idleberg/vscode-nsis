@@ -167,8 +167,13 @@
           "description": "Show build notifications indicating success or failure"
         },
         "nsis.processHeaders": {
-          "type": "boolean",
-          "default": false,
+          "type": "string",
+          "enum": [
+            "Allow",
+            "Disallow",
+            "Disallow & Never Ask Me"
+          ],
+          "default": "Disallow",
           "markdownDescription": "%nsisprocessHeaders%"
         },
         "nsis.alwaysShowOutput": {

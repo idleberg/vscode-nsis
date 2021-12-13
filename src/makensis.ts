@@ -27,10 +27,15 @@ async function compile(strictMode: boolean): Promise<void> {
   const { compiler, processHeaders, showFlagsAsObject } = await getConfig('nsis');
   const document = vscode.window.activeTextEditor.document;
 
-  if (!processHeaders && isHeaderFile(document.fileName)) {
-    const choice = await vscode.window.showWarningMessage('Compiling header files is blocked by default. You can allow it in the package settings.', 'Open Settings');
-    if (choice === 'Open Settings') {
-      vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis processHeaders');
+  if (isHeaderFile(document.fileName)) {
+    if (processHeaders === "Disallow") {
+      const choice = await vscode.window.showWarningMessage('Compiling header files is blocked by default. You can allow it in the package settings, or mute this warning.', 'Open Settings');
+      if (choice === 'Open Settings') {
+        vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis processHeaders');
+        return;
+      }
+    } else if (processHeaders === "Disallow & Never Ask Me") {
+      vscode.window.setStatusBarMessage("makensis: Skipped header file", 5000);
       return;
     }
   }
