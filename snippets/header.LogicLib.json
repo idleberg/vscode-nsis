@@ -161,7 +161,7 @@
     "prefix": "IfNot\u2026Else"
   },
   "${IfNot\u2026FileExists}": {
-    "body": "\\${IfNot} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${IfNot} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${IfNot} ${FileExists} file_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfNot.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
@@ -196,7 +196,7 @@
     "prefix": "If\u2026Else"
   },
   "${If\u2026FileExists}": {
-    "body": "\\${If} ${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
+    "body": "\\${If} \\${FileExists} \"${1:file}\"\n\t${2:# your code here}\n\\${EndIf}$3",
     "description": "Usage: ${If} ${FileExists} file_path",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/If.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
