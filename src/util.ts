@@ -118,7 +118,7 @@ async function runInstaller(outFile: string): Promise<void> {
   }
 }
 
-async function buttonHandler(choice: string, outFile: string): Promise<void> {
+async function buttonHandler(choice: string, outFile?: string): Promise<void> {
   switch (choice) {
     case 'Run':
       await runInstaller(outFile);

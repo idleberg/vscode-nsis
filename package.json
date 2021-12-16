@@ -176,10 +176,16 @@
           "default": "Disallow",
           "markdownDescription": "%nsisprocessHeaders%"
         },
-        "nsis.alwaysShowOutput": {
-          "type": "boolean",
-          "default": true,
-          "markdownDescription": "%nsisAlwaysShowOutput%"
+        "nsis.showOutputView": {
+          "type": "string",
+          "enum": [
+            "Always",
+            "On Warnings & Errors",
+            "On Errors",
+            "Never"
+          ],
+          "default": "On Errors",
+          "markdownDescription": "%nsisShowOutputView%"
         },
         "nsis.alwaysOpenBuildTask": {
           "type": "boolean",

@@ -50,9 +50,9 @@ async function compile(strictMode: boolean): Promise<void> {
 
   nsisChannel.clear();
 
-  NSIS.events.on('stdout', compilerOutputHandler);
-  NSIS.events.on('stderr', compilerErrorHandler);
-  NSIS.events.once('exit', compilerExitHandler);
+  NSIS.events.on('stdout', async data => await compilerOutputHandler(data));
+  NSIS.events.on('stderr', async data => await compilerErrorHandler(data));
+  NSIS.events.once('exit', async data => await compilerExitHandler(data));
 
   await NSIS.compile(
     document.fileName,

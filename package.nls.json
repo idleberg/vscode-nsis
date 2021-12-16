@@ -1,6 +1,6 @@
 {
   "nsisprocessHeaders": "By default, only `.nsi` files will be compiled. This setting enables compilation for `.nsh` files as well.",
-  "nsisAlwaysShowOutput": "Output channel will only be shown on errors",
+  "nsisShowOutputView": "Specify when to show compiler output in the output view",
   "nsisCompilerVerbosity": "Specify the default verbosity for `makensis`",
   "nsisExcludeFiles": "Specify files that will be excluded from diagnostics. Supports [glob patterns](https://github.com/micromatch/micromatch#matching-features).",
   "nsisPathToMakensis": "Specify the full path to `makensis`",
