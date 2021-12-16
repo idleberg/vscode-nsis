@@ -79,6 +79,7 @@ async function flagsHandler(data: unknown): Promise<void> {
   );
 
   nsisChannel.append(message);
+  nsisChannel.show();
 }
 
 async function versionHandler(data: unknown): Promise<void> {
@@ -92,6 +93,7 @@ async function versionHandler(data: unknown): Promise<void> {
     vscode.window.showInformationMessage(message);
   } else {
     nsisChannel.append(message);
+    nsisChannel.show();
   }
 }
 
