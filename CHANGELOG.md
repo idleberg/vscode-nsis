@@ -3,6 +3,7 @@
 - add `showOutputView` option
 - add "Show Output" button when compilation fails
 - remove `alwaysShowOutput` option with `showOutputView`
+- update dependencies
 
 # v3.47.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.47.1)
 
