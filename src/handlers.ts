@@ -59,7 +59,8 @@ async function compilerExitHandler(data: unknown): Promise<void> {
     }
 
     if (showNotifications) {
-      await vscode.window.showErrorMessage('Compilation failed, see output for details');
+      const choice = await vscode.window.showErrorMessage('Compilation failed, see output for details', 'Show Output');
+      await buttonHandler(choice);
     }
 
     if (data['stderr']?.length) {

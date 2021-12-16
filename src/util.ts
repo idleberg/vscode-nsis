@@ -3,6 +3,7 @@ import { exec, spawn } from 'child_process';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { resolve } from 'path';
+import nsisChannel from './channel';
 import open from 'open';
 import vscode from 'vscode';
 import which from 'which';
@@ -126,6 +127,10 @@ async function buttonHandler(choice: string, outFile?: string): Promise<void> {
 
     case 'Reveal':
       await revealInstaller(outFile);
+      break;
+
+    case 'Show Output':
+      nsisChannel.show();
       break;
   }
 }
