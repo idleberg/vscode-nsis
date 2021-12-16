@@ -1190,7 +1190,7 @@
     "prefix": "FlushINI"
   },
   "Function": {
-    "body": "Function \"${1:function_name}\"\n\t${2:# your code here}\nFunctionEnd$0",
+    "body": "Function ${1:function_name}\n\t${2:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1267,7 +1267,7 @@
     "prefix": "onVerifyInstDir"
   },
   "Function un.*": {
-    "body": "Function \"un.${1:function_name}\"\n\t${2:# your code here}\nFunctionEnd$0",
+    "body": "Function un.${1:function_name}\n\t${2:# your code here}\nFunctionEnd$0",
     "description": "Usage: Function function_name",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Function.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--entity syntax--name syntax--function'>ƒ</span>",
