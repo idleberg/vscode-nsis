@@ -2,7 +2,7 @@
 
 - add `showOutputView` option
 - add "Show Output" button when compilation fails
-- remove `alwaysShowOutput` option with `showOutputView`
+- remove `alwaysShowOutput` option
 - remove quotes from `Function` snippet
 - update dependencies
 
