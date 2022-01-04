@@ -46,7 +46,6 @@
     "which": "^2.0.2"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.7",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "@babel/register": "^7.16.0",
