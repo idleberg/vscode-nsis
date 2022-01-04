@@ -1,3 +1,9 @@
+# v3.48.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.48.1)
+
+- remove unused dependencies
+- change wording
+- update dependencies
+
 # v3.48.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.48.0)
 
 - add `showOutputView` option
