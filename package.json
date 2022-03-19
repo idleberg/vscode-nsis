@@ -25,8 +25,7 @@
   },
   "keywords": [
     "nsis",
-    "wine",
-    "haskell"
+    "wine"
   ],
   "repository": {
     "type": "git",
@@ -67,7 +66,9 @@
     "npm-run-all": "^4.1.5",
     "typescript": "^4.4.4"
   },
-  "extensionDependencies": [],
+  "extensionDependencies": [
+    "idleberg.haskell-nsis"
+  ],
   "icon": "images/logo.png",
   "galleryBanner": {
     "color": "#9e90aa",
@@ -374,10 +375,6 @@
       ]
     },
     "snippets": [
-      {
-        "language": "haskell",
-        "path": "./snippets/core.Haskell.json"
-      },
       {
         "language": "ini",
         "path": "./snippets/core.InstallOptions.json"
