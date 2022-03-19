@@ -1,3 +1,7 @@
+# v3.49.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.49.0)
+
+- outsource Haskell snippets to separate package
+- update dependencies
 # v3.48.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.48.1)
 
 - remove unused dependencies
