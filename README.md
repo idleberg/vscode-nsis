@@ -46,7 +46,6 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
     * WordFunc
     * x64
 * NSIS Diagnostics
-* IntelliSense for [Haskell NSIS](https://hackage.haskell.org/package/nsis)
 * [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/vscode-nsis#building)
 * [Environment Variables](https://github.com/idleberg/vscode-nsis#environment-variables)
