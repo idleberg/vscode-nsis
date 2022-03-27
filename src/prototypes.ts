@@ -1,6 +1,6 @@
-String.prototype['inRange'] = inRange;
+Number.prototype['inRange'] = inRange;
 
-function inRange(min: string | number, max: string | number): boolean {
-  return this >= parseInt(String(min), 10) && this <= parseInt(String(max), 10);
+function inRange(min: number, max: number): boolean {
+  return this >= min && this <= max;
 }
 

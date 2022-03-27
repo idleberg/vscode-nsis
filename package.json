@@ -102,7 +102,7 @@
           "markdownDescription": "%nsisPathToMakensis%"
         },
         "nsis.compiler.verbosity": {
-          "type": "string",
+          "type": "number",
           "enum": [
             "-1",
             "0",
