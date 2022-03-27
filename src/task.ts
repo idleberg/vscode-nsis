@@ -1,3 +1,4 @@
+import './prototypes';
 import { getConfig } from 'vscode-get-config';
 import { getPrefix } from './util';
 import { join } from 'path';
@@ -11,6 +12,9 @@ async function createTask(): Promise<unknown> {
 
   const { alwaysOpenBuildTask, compiler } = await getConfig('nsis');
   const prefix = getPrefix();
+  const verbosity = compiler.verbosity.inRange(0, 4)
+    ? `${prefix}V${compiler.verbosity}`
+    : undefined;
 
   const taskFile = {
     'version': '2.0.0',
@@ -20,7 +24,7 @@ async function createTask(): Promise<unknown> {
         'type': 'shell',
         'command': 'makensis',
         'args': [
-          `${prefix}V${compiler.verbosity}`,
+          verbosity,
           '${file}'
         ],
         'group': 'build'
@@ -30,7 +34,7 @@ async function createTask(): Promise<unknown> {
         'type': 'shell',
         'command': 'makensis',
         'args': [
-          `${prefix}V${compiler.verbosity}`,
+          verbosity,
           `${prefix}WX`,
           '${file}'
         ],

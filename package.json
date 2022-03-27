@@ -104,6 +104,7 @@
         "nsis.compiler.verbosity": {
           "type": "string",
           "enum": [
+            "-1",
             "0",
             "1",
             "2",
@@ -111,6 +112,7 @@
             "4"
           ],
           "enumDescriptions": [
+            "(not set)",
             "none",
             "no warnings",
             "no info",
