@@ -66,9 +66,6 @@
     "npm-run-all": "^4.1.5",
     "typescript": "^4.6.2"
   },
-  "extensionDependencies": [
-    "idleberg.haskell-nsis"
-  ],
   "icon": "images/logo.png",
   "galleryBanner": {
     "color": "#9e90aa",
