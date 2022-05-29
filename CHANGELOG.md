@@ -1,3 +1,8 @@
+# v3.50.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.50.0)
+
+- add option to unset default verbosity
+- remove dependency on `idleberg.haskell-nsis`
+
 # v3.49.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.49.0)
 
 - outsource Haskell snippets to separate package
