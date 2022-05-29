@@ -2,6 +2,7 @@
 
 - add option to unset default verbosity
 - remove dependency on `idleberg.haskell-nsis`
+- update dependencies
 
 # v3.49.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.49.0)
 
