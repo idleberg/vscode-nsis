@@ -39,7 +39,7 @@
   "dependencies": {
     "@nsis/nlf": "^0.9.0",
     "makensis": "^1.1.2",
-    "micromatch": "^4.0.4",
+    "micromatch": "^4.0.5",
     "open": "^8.4.0",
     "vscode-get-config": "^0.4.0",
     "which": "^2.0.2"
