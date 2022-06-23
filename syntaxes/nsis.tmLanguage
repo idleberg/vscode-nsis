@@ -82,7 +82,7 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>\b(?i)((un\.)?components|(un\.)?custom|(un\.)?directory|(un\.)?instfiles|(un\.)?license|uninstConfirm|admin|all|(amd64|x86)-(ansi|unicode)|auto|both|bottom|bzip2|current|force|hide|highest|ifdiff|ifnewer|lastused|leave|left|listonly|lzma|nevershow|none|normal|notset|right|show|silent|silentlog|textonly|top|try|user|Win10|Win7|Win8|WinVista|zlib)\b</string>
+            <string>\b(?i)((un\.)?components|(un\.)?custom|(un\.)?directory|(un\.)?instfiles|(un\.)?license|uninstConfirm|admin|all|amd64-unicode||auto|both|bottom|bzip2|current|force|hide|highest|ifdiff|ifnewer|lastused|leave|left|listonly|lzma|nevershow|none|normal|notset|right|show|silent|silentlog|textonly|top|try|user|Win10|Win7|Win8|WinVista|x86-(ansi|unicode)|zlib)\b</string>
             <key>name</key>
             <string>entity.other.attribute-name.nsis</string>
         </dict>

@@ -3177,13 +3177,6 @@
     "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
     "prefix": "Target"
   },
-  "Target amd64-ansi": {
-    "body": "Target amd64-ansi$0",
-    "description": "Usage: Target amd64-ansi",
-    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Target.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-    "prefix": "Target amd64-ansi"
-  },
   "Target amd64-unicode": {
     "body": "Target amd64-unicode$0",
     "description": "Usage: Target amd64-unicode",
