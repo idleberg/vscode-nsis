@@ -1,3 +1,7 @@
+# v3.51.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.1)
+
+- remove unused `Target` attribute
+
 # v3.51.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.0)
 
 - add support for undocumented `Target` keyword
