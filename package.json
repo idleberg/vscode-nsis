@@ -37,7 +37,7 @@
   },
   "main": "./lib/extension",
   "dependencies": {
-    "@nsis/nlf": "^0.9.0",
+    "@nsis/nlf": "^0.10.2",
     "makensis": "^1.1.3",
     "micromatch": "^4.0.5",
     "open": "^8.4.0",

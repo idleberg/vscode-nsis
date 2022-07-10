@@ -1,3 +1,7 @@
+# v3.51.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.2)
+
+- update dependencies, fixes NLF conversion
+
 # v3.51.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.1)
 
 - remove unused `Target` attribute
