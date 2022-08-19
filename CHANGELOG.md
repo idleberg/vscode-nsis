@@ -1,3 +1,10 @@
+# v3.51.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.3)
+
+- fix regression in syntax highlighter
+- fix bug in verbosity config
+- update tooling
+- update dependencies
+  
 # v3.51.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.2)
 
 - update dependencies, fixes NLF conversion
