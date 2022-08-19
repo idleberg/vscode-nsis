@@ -274,6 +274,10 @@ async function getSpawnEnv(): Promise<unknown> {
   };
 }
 
+function inRange(value: number | string, min: number, max: number): boolean {
+  return Number(value) >= min && Number(value) <= max;
+}
+
 export {
   fileExists,
   findErrors,
@@ -285,6 +289,7 @@ export {
   getProjectPath,
   getOverrideCompression,
   getSpawnEnv,
+  inRange,
   isHeaderFile,
   isWindowsCompatible,
   mapPlatform,

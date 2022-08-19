@@ -1,6 +1,5 @@
-import './prototypes';
 import { getConfig } from 'vscode-get-config';
-import { getPrefix } from './util';
+import { getPrefix, inRange } from './util';
 import { join } from 'path';
 import { promises as fs } from 'fs';
 import vscode from 'vscode';
@@ -12,7 +11,7 @@ async function createTask(): Promise<unknown> {
 
   const { alwaysOpenBuildTask, compiler } = await getConfig('nsis');
   const prefix = getPrefix();
-  const verbosity = compiler.verbosity.inRange(0, 4)
+  const verbosity = inRange(compiler.verbosity, 0, 4)
     ? `${prefix}V${compiler.verbosity}`
     : undefined;
 

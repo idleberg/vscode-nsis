@@ -1,6 +1,6 @@
-import './prototypes';
 import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './handlers';
 import { getConfig } from 'vscode-get-config';
+import { inRange } from './util';
 import * as NSIS from 'makensis';
 import vscode from 'vscode';
 
@@ -63,7 +63,7 @@ async function compile(strictMode: boolean): Promise<void> {
       pathToMakensis: await getMakensisPath(),
       rawArguments: compiler.customArguments,
       strict: strictMode || compiler.strictMode,
-      verbose: compiler.verbosity.inRange(0, 4) ? compiler.verbosity : undefined
+      verbose: inRange(compiler.verbosity, 0, 4) ? Number(compiler.verbosity) : undefined
     },
     await getSpawnEnv()
   );

@@ -103,14 +103,14 @@
           "markdownDescription": "%nsisPathToMakensis%"
         },
         "nsis.compiler.verbosity": {
-          "type": "number",
+          "type": "string",
           "enum": [
-            -1,
-            0,
-            1,
-            2,
-            3,
-            4
+            "-1",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
           ],
           "enumDescriptions": [
             "(not set)",
@@ -120,7 +120,7 @@
             "no script",
             "all"
           ],
-          "default": 3,
+          "default": "3",
           "markdownDescription": "%nsisCompilerVerbosity%"
         },
         "nsis.compiler.strictMode": {
