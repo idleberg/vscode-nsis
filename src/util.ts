@@ -49,7 +49,15 @@ async function getMakensisPath(): Promise<string> {
       return resolve(compiler.pathToMakensis.trim());
     }
 
-    return String(await which('makensis')) || 'makensis';
+    try {
+      const result = String(await which('makensis'));
+      return result;
+    } catch (error) {
+      const choice = await vscode.window.showWarningMessage('Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.', 'Open Settings');
+      if (choice === 'Open Settings') {
+        vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
+      }
+    }
 }
 
 function mapPlatform(): string {
