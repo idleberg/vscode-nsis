@@ -22,7 +22,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "package": "vsce package --no-dependencies --githubBranch main",
     "prepare": "husky install",
-    "publish": "vsce publish --no-dependencies --githubBranch main",
+    "publish": "vsce publish --no-dependencies --githubBranch main && ovsx publish",
     "start": "cross-env ESBUILD_WATCH=true node ./tools/build.mjs",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build"
@@ -68,7 +68,9 @@
     "lint-staged": "^13.0.3",
     "log-symbols": "^5.1.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "^4.7.4"
+    "ovsx": "^0.5.1",
+    "typescript": "^4.7.4",
+    "vsce": "^2.10.2"
   },
   "icon": "images/logo.png",
   "galleryBanner": {
