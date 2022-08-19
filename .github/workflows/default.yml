@@ -1,44 +1,51 @@
 name: CI
 
-on: [push]
+on:
+- push
+- pull_request
 
 jobs:
   default:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: ['14', '16']
+        node-version: ['lts/*', '*']
         os: [ubuntu-latest]
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 1
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
 
-    - uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Cache node modules
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-node-modules
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
 
-    - name: Install Packages Dependencies
-      run: npm ci
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
 
-    - name: Lint Source
-      run: npm run lint --if-present
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-    - name: Build Source
-      run: npm run build --if-present
+      - name: Install dependencies
+        run: pnpm install
 
-    - name: Run Tests
-      run: npm run test --if-present
+      - name: Lint Source
+        run: pnpm run lint -- --if-present
+
+      - name: Build Source
+        run: pnpm run build -- --if-present
