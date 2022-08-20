@@ -41,7 +41,7 @@ async function isWindowsCompatible(): Promise<boolean> {
     : false;
 }
 
-async function getMakensisPath(): Promise<string> {
+async function getMakensisPath(): Promise<string | void> {
   const { compiler } = await getConfig('nsis');
 
     if (compiler.pathToMakensis?.length && compiler.pathToMakensis !== 'makensis') {
