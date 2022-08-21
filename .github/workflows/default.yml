@@ -42,10 +42,10 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
       - name: Lint Source
-        run: pnpm run lint -- --if-present
+        run: pnpm run --if-present lint
 
       - name: Build Source
-        run: pnpm run build -- --if-present
+        run: pnpm run --if-present build
