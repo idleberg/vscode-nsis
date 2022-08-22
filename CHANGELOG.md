@@ -1,3 +1,9 @@
+# v3.52.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.52.0)
+
+- improve handling of missing `makensis`
+- fix UTM parameters
+- update links to online documentation
+
 # v3.51.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.3)
 
 - fix regression in syntax highlighter
