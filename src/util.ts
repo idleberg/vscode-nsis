@@ -76,7 +76,7 @@ function mapPlatform(): string {
 }
 
 function openURL(cmd: string): void {
-  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${cmd}.html?utm_source=vscode&utm_content=reference`);
+  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/${cmd}.html?utm_source=vscode&utm_content=reference`);
 }
 
 async function pathWarning(): Promise<void> {
@@ -183,7 +183,7 @@ async function showANSIDeprecationWarning(): Promise<void> {
       break;
 
     case 'Unicode Installer':
-      open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Unicode.html?utm_source=vscode');
+      open('https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/Unicode.html?utm_source=vscode');
       break;
 
     default:
