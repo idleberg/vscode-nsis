@@ -1,3 +1,7 @@
+# v3.51.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.0)
+
+- add support for `${Case}` variants
+
 # v3.52.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.52.0)
 
 - improve handling of missing `makensis`
