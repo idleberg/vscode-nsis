@@ -19,11 +19,39 @@
     "prefix": "AndIf"
   },
   "${Case}": {
-    "body": "\\${Case} ${1:string}$0",
+    "body": "\\${Case$1} ${2:value}$0",
     "description": "Usage: ${Case[2|3|4|5]} value(s)",
     "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Case.html?utm_source=vscode&utm_content=snippet",
     "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
     "prefix": "Case"
+  },  
+  "${Case2}": {
+    "body": "\\${Case2} ${1:value} ${2:value2}$0",
+    "description": "Usage: ${Case2} value(s)",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Case.html?utm_source=vscode&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "Case2"
+  },  
+  "${Case3}": {
+    "body": "\\${Case3} ${1:value} ${2:value2} ${3:value3}$0",
+    "description": "Usage: ${Case3} value(s)",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Case.html?utm_source=vscode&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "Case3"
+  },  
+  "${Case4}": {
+    "body": "\\${Case4} ${1:value} ${2:value2} ${3:value3} ${4:value4}$0",
+    "description": "Usage: ${Case4} value(s)",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Case.html?utm_source=vscode&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "Case4"
+  },  
+  "${Case5}": {
+    "body": "\\${Case5} ${1:value} ${2:value2} ${3:value3} ${4:value4} ${5:value5}$0",
+    "description": "Usage: ${Case5} value(s)",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Case.html?utm_source=vscode&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+    "prefix": "Case5"
   },
   "${Cmd}": {
     "body": "\\${Cmd} `${1:statement}`$0",
