@@ -12,15 +12,15 @@
       "# Pages ------------------------------------",
       "$3",
       "",
+      "# Functions --------------------------------",
+      "$0",
+      "",
       "# Sections ---------------------------------",
       "Section \"${4:section_name}\"",
       "",
       "\t${5:# your code here}",
       "",
-      "SectionEnd",
-      "",
-      "# Functions --------------------------------",
-      "$0"
+      "SectionEnd"
       ],
     "description": "Creates a minimal installer template",
     "prefix": "scaffold:Minimal"

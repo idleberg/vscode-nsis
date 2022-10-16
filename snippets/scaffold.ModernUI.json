@@ -21,6 +21,9 @@
       "# Languages --------------------------------",
       "!insertmacro MUI_LANGUAGE \"${5:English}\"",
       "",
+      "# Functions -------------------------------",
+      "$0",
+      "",
       "# Sections ---------------------------------",
       "Section \"${6:section}\" ${7:${6:section}_INDEX}",
       "",
@@ -33,10 +36,7 @@
       "",
       "!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN",
       "\t!insertmacro MUI_DESCRIPTION_TEXT \\${${7}} \\$(DESC_${7})",
-      "!insertmacro MUI_FUNCTION_DESCRIPTION_END",
-      "",
-      "# Functions -------------------------------",
-      "$0"
+      "!insertmacro MUI_FUNCTION_DESCRIPTION_END"
     ],
     "description": "Creates a Modern UI installer template",
     "prefix": "scaffold:ModernUI"
