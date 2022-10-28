@@ -1,6 +1,26 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'src/**'
+    - 'index.html'
+    - 'package.json'
+    - 'package-lock-json'
+  pull_request:
+    branches:
+    - main
+    paths:
+    - 'config/**'
+    - 'images/**'
+    - 'snippets/**'
+    - 'src/**'
+    - 'syntaxes/**'
+    - 'tools/**'
+    - 'package.json'
+    - 'package-lock-json'
 
 jobs:
   default:
@@ -17,28 +37,36 @@ jobs:
 
     - uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ matrix.node-version }}-
 
-    - name: Cache node modules
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-node-modules
+    - uses: pnpm/action-setup@v2.0.1
+      name: Install pnpm
+      id: pnpm-install
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+        version: 7
+        run_install: false
 
-    - name: Install Packages Dependencies
-      run: npm ci
+    - name: Get pnpm store directory
+      id: pnpm-cache
+      run: |
+        echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+    - uses: actions/cache@v3
+      name: Setup pnpm cache
+      with:
+        path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
     - name: Lint Source
-      run: npm run lint --if-present
+      run: pnpm run --if-present lint
 
     - name: Build Source
-      run: npm run build --if-present
+      run: pnpm run --if-present build
 
     - name: Run Tests
-      run: npm run test --if-present
+      run: pnpm run --if-present test
