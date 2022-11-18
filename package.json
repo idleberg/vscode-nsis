@@ -4,7 +4,7 @@
   "description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
   "version": "3.52.0",
   "publisher": "idleberg",
-  "license": "MIT OR GPL-2.0",
+  "license": "MIT",
   "author": {
     "name": "Jan T. Sott",
     "url": "http://github.com/idleberg"
