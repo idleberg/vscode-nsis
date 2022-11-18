@@ -305,6 +305,5 @@ export {
   pathWarning,
   revealInstaller,
   runInstaller,
-  buttonHandler,
-  which
+  buttonHandler
 };
