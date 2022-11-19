@@ -109,13 +109,13 @@ $ git clone https://github.com/idleberg/vscode-nsis idleberg.nsis
 Inside the cloned directory, install dependencies using your preferred Node package manager:
 
 ```bash
-$ yarn || npm install
+$ npm install
 ```
 
 Build the source:
 
 ```bash
-yarn build || npm run build
+npm run build
 ```
 
 ## Usage
