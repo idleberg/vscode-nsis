@@ -12,7 +12,7 @@
   "scripts": {
     "compile": "npm run build",
     "build": "npm-run-all --parallel build:*",
-    "build:code": "node ./tools/build.mjs",
+    "build:code": "esbuild src/index.ts --bundle --platform=node --outfile=lib/extension.js --sourcemap --minify --external:vscode",
     "build:icon": "gulp",
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
@@ -23,7 +23,7 @@
     "package": "vsce package --no-dependencies --githubBranch main",
     "prepare": "husky install",
     "publish": "vsce publish --no-dependencies --githubBranch main && ovsx publish",
-    "start": "cross-env ESBUILD_WATCH=true node ./tools/build.mjs",
+    "start": "esbuild src/index.ts --watch --bundle --platform=node --outfile=lib/extension.js --sourcemap --minify --external:vscode",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build"
   },
