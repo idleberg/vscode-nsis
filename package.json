@@ -150,7 +150,7 @@
             "PPO",
             "Safe PPO"
           ],
-          "default": "Safe PPO",
+          "default": "PPO",
           "markdownDescription": "%nsisPreprocessMode%"
         },
         "nsis.diagnostics.overrideCompression": {
