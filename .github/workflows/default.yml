@@ -5,8 +5,12 @@ on:
     branches:
     - main
     paths:
+    - 'config/**'
+    - 'images/**'
+    - 'snippets/**'
     - 'src/**'
-    - 'index.html'
+    - 'syntaxes/**'
+    - 'tools/**'
     - 'package.json'
     - 'package-lock-json'
   pull_request:
