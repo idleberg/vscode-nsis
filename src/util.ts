@@ -43,26 +43,29 @@ async function isWindowsCompatible(): Promise<boolean> {
 
 async function getMakensisPath(): Promise<string | void> {
   const { compiler } = await getConfig('nsis');
-  const pathToMakensis = compiler.pathToMakensis.trim()
 
-    if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
-      console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
+  const pathToMakensis = isWindows() && compiler.pathToMakensis.startsWith('"') && compiler.pathToMakensis.startsWith('"')
+    ? compiler.pathToMakensis.replace(/^"/, '').replace(/"$/, '').trim()
+    : compiler.pathToMakensis.trim();
 
-      return resolve(pathToMakensis.trim());
+  if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
+    console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
+
+    return resolve(pathToMakensis.trim());
+  }
+
+  try {
+    const result = String(await which('makensis'));
+    return result;
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+    const choice = await vscode.window.showWarningMessage('Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.', 'Open Settings');
+    if (choice === 'Open Settings') {
+      vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
     }
 
-    try {
-      const result = String(await which('makensis'));
-      return result;
-    } catch (error) {
-      console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
-      const choice = await vscode.window.showWarningMessage('Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.', 'Open Settings');
-      if (choice === 'Open Settings') {
-        vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
-      }
-
-      console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
-    }
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+  }
 }
 
 function mapPlatform(): string {
