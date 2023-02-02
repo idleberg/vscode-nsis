@@ -43,20 +43,25 @@ async function isWindowsCompatible(): Promise<boolean> {
 
 async function getMakensisPath(): Promise<string | void> {
   const { compiler } = await getConfig('nsis');
+  const pathToMakensis = compiler.pathToMakensis.trim()
 
-    if (compiler.pathToMakensis?.length && compiler.pathToMakensis !== 'makensis') {
-      console.log(`Using makensis path found in user settings: ${compiler.pathToMakensis}`);
-      return resolve(compiler.pathToMakensis.trim());
+    if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
+      console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
+
+      return resolve(pathToMakensis.trim());
     }
 
     try {
       const result = String(await which('makensis'));
       return result;
     } catch (error) {
+      console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
       const choice = await vscode.window.showWarningMessage('Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.', 'Open Settings');
       if (choice === 'Open Settings') {
         vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
       }
+
+      console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     }
 }
 
@@ -108,7 +113,7 @@ async function revealInstaller(outFile: string): Promise<void> {
         try {
           spawn('nautilus', [outFile], {});
         } catch (error) {
-          console.error(error);
+          console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
         }
         break;
     }

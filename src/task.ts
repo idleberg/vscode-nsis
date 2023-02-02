@@ -49,7 +49,7 @@ async function createTask(): Promise<unknown> {
   try {
     await fs.mkdir(dotFolder);
   } catch (error) {
-    console.warn(error);
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
   }
 
   // ignore errors for now

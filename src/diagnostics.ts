@@ -25,7 +25,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     try {
       pathToMakensis = await getMakensisPath();
     } catch (error) {
-      console.error(error);
+      console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 
       return;
     }
@@ -56,7 +56,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     try {
       output = await compile(document.fileName, options, await getSpawnEnv());
     } catch (error) {
-      console.error(error);
+      console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     }
 
     const diagnostics = [];

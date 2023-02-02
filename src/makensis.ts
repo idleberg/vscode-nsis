@@ -44,7 +44,7 @@ async function compile(strictMode: boolean): Promise<void> {
   try {
     await document.save();
   } catch (error) {
-    console.error(error);
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     vscode.window.showErrorMessage('Error saving file, see console for details');
     return;
   }
@@ -110,7 +110,7 @@ async function showHelp(): Promise<void> {
   try {
     pathToMakensis = await getMakensisPath();
   } catch (error) {
-    console.error(error);
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     await pathWarning();
 
     return;
