@@ -5,7 +5,7 @@ import { getConfig } from 'vscode-get-config';
 import micromatch from 'micromatch';
 
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
-  const { diagnostics } = await getConfig('nsis');
+  const { compiler, diagnostics } = await getConfig('nsis');
 
   if (diagnostics.enableDiagnostics !== true) return;
 
@@ -35,7 +35,8 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       pathToMakensis,
       postExecute: [
         getNullDevice()
-      ]
+      ],
+      rawArguments: compiler.customArguments,
     };
 
     const preprocessMode = await getPreprocessMode();
