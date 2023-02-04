@@ -137,10 +137,10 @@
           "default": [],
           "markdownDescription": "%nsisCustomArguments%"
         },
-        "nsis.diagnostics.inheritCustomArguments": {
+        "nsis.diagnostics.useCustomArguments": {
           "type": "boolean",
           "default": false,
-          "description": "%nsisInheritCustomArguments%"
+          "description": "%nsisUseCustomArguments%"
         },
         "nsis.diagnostics.customArguments": {
           "type": "array",
