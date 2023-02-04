@@ -294,17 +294,29 @@ function inRange(value: number | string, min: number, max: number): boolean {
   return Number(value) >= min && Number(value) <= max;
 }
 
+function hasArgument(needle: string | string[], argument: string): boolean {
+  needle = typeof needle === 'string'
+    ? [needle]
+    : needle;
+
+  return needle.includes(`/${argument}`) || needle.includes(`-${argument}`)
+    ? true
+    : false;
+}
+
 export {
+  buttonHandler,
   fileExists,
   findErrors,
   findWarnings,
   getMakensisPath,
   getNullDevice,
+  getOverrideCompression,
   getPrefix,
   getPreprocessMode,
   getProjectPath,
-  getOverrideCompression,
   getSpawnEnv,
+  hasArgument,
   inRange,
   isHeaderFile,
   isWindowsCompatible,
@@ -312,6 +324,5 @@ export {
   openURL,
   pathWarning,
   revealInstaller,
-  runInstaller,
-  buttonHandler
+  runInstaller
 };
