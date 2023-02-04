@@ -7,7 +7,9 @@ import micromatch from 'micromatch';
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
   const { compiler, diagnostics } = await getConfig('nsis');
 
-  if (diagnostics.enableDiagnostics !== true) return;
+  if (diagnostics.enableDiagnostics !== true) {
+    return;
+  }
 
   if (diagnostics.excludedFiles?.length) {
     if (micromatch.isMatch(document.fileName, diagnostics.excludedFiles)) {
@@ -36,7 +38,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       postExecute: [
         getNullDevice()
       ],
-      rawArguments: compiler.customArguments,
+      rawArguments: diagnostics.inheritCustomArguments ? compiler.customArguments : diagnostics.customArguments,
     };
 
     const preprocessMode = await getPreprocessMode();

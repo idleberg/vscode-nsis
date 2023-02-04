@@ -137,6 +137,19 @@
           "default": [],
           "markdownDescription": "%nsisCustomArguments%"
         },
+        "nsis.diagnostics.inheritCustomArguments": {
+          "type": "boolean",
+          "default": false,
+          "description": "%nsisInheritCustomArguments%"
+        },
+        "nsis.diagnostics.customArguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "markdownDescription": "%nsisDiagnosticsCustomArguments%"
+        },
         "nsis.diagnostics.enableDiagnostics": {
           "type": "boolean",
           "default": true,

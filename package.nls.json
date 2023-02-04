@@ -1,12 +1,14 @@
 {
   "nsisprocessHeaders": "By default, only `.nsi` files will be compiled. This setting enables compilation for `.nsh` files as well.",
-  "nsisShowOutputView": "Specify when to show compiler output in the output view",
-  "nsisCompilerVerbosity": "Specify the default verbosity for `makensis`",
+  "nsisShowOutputView": "Specify when to show compiler output in the output view.",
+  "nsisCompilerVerbosity": "Specify the default verbosity for `makensis`.",
   "nsisExcludeFiles": "Specify files that will be excluded from diagnostics. Supports [glob patterns](https://github.com/micromatch/micromatch#matching-features).",
-  "nsisPathToMakensis": "Specify the full path to `makensis`",
-  "nsisPreprocessMode": "Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warnings (unless in strict mode)",
-  "nsisStrictMode": "Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will override the setting",
-  "nsisCustomArguments": "Specify any of the default [compiler arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage). Note that these will have precedence over other extension settings",
-  "nsisRunWithWine": "Runs compiled installers using [Wine](https://www.winehq.org/)",
+  "nsisPathToMakensis": "Specify the full path to `makensis`.",
+  "nsisPreprocessMode": "Linter runs in the much faster [pre-process mode](https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference), but ignores warnings (unless in strict mode).",
+  "nsisStrictMode": "Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will override the setting.",
+  "nsisCustomArguments": "Specify any of the default [compiler arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage). Note that these will have precedence over other extension settings.",
+  "nsisInheritCustomArguments": "Inherit custom compiler arguments when using diagnostics mode. Can be overridden by custom arguments for diagnostics mode.",
+  "nsisDiagnosticsCustomArguments": "Specify any of the default [compiler arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage) for diagnostics mode.",
+  "nsisRunWithWine": "Runs compiled installers using [Wine](https://www.winehq.org/).",
   "nsisPathToWine": "Specifies a custom path to `wine`, useful when relying on alternatives such as `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine)."
 }
