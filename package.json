@@ -85,14 +85,6 @@
     "Snippets",
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:extension.nsis.command-reference",
-    "onCommand:extension.nsis.open-settings",
-    "onCommand:extension.nsis.show-compiler-flags",
-    "onCommand:extension.nsis.show-version",
-    "onLanguage:nlf",
-    "onLanguage:nsis"
-  ],
   "contributes": {
     "configuration": {
       "type": "object",
@@ -101,7 +93,8 @@
         "nsis.compiler.pathToMakensis": {
           "type": "string",
           "default": "makensis",
-          "markdownDescription": "%nsisPathToMakensis%"
+          "markdownDescription": "%nsisPathToMakensis%",
+          "order": 1
         },
         "nsis.compiler.verbosity": {
           "type": "string",
@@ -122,12 +115,14 @@
             "all"
           ],
           "default": "3",
-          "markdownDescription": "%nsisCompilerVerbosity%"
+          "markdownDescription": "%nsisCompilerVerbosity%",
+          "order": 2
         },
         "nsis.compiler.strictMode": {
           "type": "boolean",
           "default": false,
-          "description": "%nsisStrictMode%"
+          "description": "%nsisStrictMode%",
+          "order": 3
         },
         "nsis.compiler.customArguments": {
           "type": "array",
@@ -135,25 +130,14 @@
             "type": "string"
           },
           "default": [],
-          "markdownDescription": "%nsisCustomArguments%"
-        },
-        "nsis.diagnostics.useCustomArguments": {
-          "type": "boolean",
-          "default": false,
-          "description": "%nsisUseCustomArguments%"
-        },
-        "nsis.diagnostics.customArguments": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [],
-          "markdownDescription": "%nsisDiagnosticsCustomArguments%"
+          "markdownDescription": "%nsisCustomArguments%",
+          "order": 4
         },
         "nsis.diagnostics.enableDiagnostics": {
           "type": "boolean",
           "default": true,
-          "description": "Toggle diagnostic mode to underline warnings and errors in your code"
+          "description": "Toggle diagnostic mode to underline warnings and errors in your code",
+          "order": 5
         },
         "nsis.diagnostics.preprocessMode": {
           "type": "string",
@@ -163,12 +147,14 @@
             "Safe PPO"
           ],
           "default": "PPO",
-          "markdownDescription": "%nsisPreprocessMode%"
+          "markdownDescription": "%nsisPreprocessMode%",
+          "order": 6
         },
         "nsis.diagnostics.overrideCompression": {
           "type": "boolean",
           "default": true,
-          "description": "Overrides compression settings to speed up diagnostics"
+          "description": "Overrides compression settings to speed up diagnostics",
+          "order": 7
         },
         "nsis.diagnostics.excludedFiles": {
           "type": "array",
@@ -176,12 +162,29 @@
             "type": "string"
           },
           "default": [],
-          "markdownDescription": "%nsisExcludeFiles%"
+          "markdownDescription": "%nsisExcludeFiles%",
+          "order": 8
+        },
+        "nsis.diagnostics.useCustomArguments": {
+          "type": "boolean",
+          "default": false,
+          "description": "%nsisUseCustomArguments%",
+          "order": 9
+        },
+        "nsis.diagnostics.customArguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "markdownDescription": "%nsisDiagnosticsCustomArguments%",
+          "order": 10
         },
         "nsis.showNotifications": {
           "type": "boolean",
           "default": true,
-          "description": "Show build notifications indicating success or failure"
+          "description": "Show build notifications indicating success or failure",
+          "order": 11
         },
         "nsis.processHeaders": {
           "type": "string",
@@ -190,8 +193,14 @@
             "Disallow",
             "Disallow & Never Ask Me"
           ],
+          "enumDescriptions": [
+            "Compilation is enabled for both, .nsi and .nsh files",
+            "Compilation is enabled for .nsi files only, displays a warning when trying to compile .nsh files",
+            "Compilation is enabled for .nsi files only, no additional warnings are displayed"
+          ],
           "default": "Disallow",
-          "markdownDescription": "%nsisprocessHeaders%"
+          "markdownDescription": "%nsisprocessHeaders%",
+          "order": 12
         },
         "nsis.showOutputView": {
           "type": "string",
@@ -201,38 +210,51 @@
             "On Errors",
             "Never"
           ],
+          "enumDescriptions": [
+            "The output panel is shown whenever a script is compiled",
+            "The output panel is only shown when the compiled script has warnings or errors",
+            "The output panel is only shown when the compiled script has errors",
+            "The output panel is never shown"
+          ],
           "default": "On Errors",
-          "markdownDescription": "%nsisShowOutputView%"
+          "markdownDescription": "%nsisShowOutputView%",
+          "order": 13
         },
         "nsis.alwaysOpenBuildTask": {
           "type": "boolean",
           "default": true,
-          "description": "Specify whether to open the newly created build task"
+          "description": "Specify whether to open the newly created build task",
+          "order": 14
         },
         "nsis.showVersionAsInfoMessage": {
           "type": "boolean",
           "default": false,
-          "description": "Specify whether to show version as message"
+          "description": "Specify whether to show version as message",
+          "order": 15
         },
         "nsis.showFlagsAsObject": {
           "type": "boolean",
           "default": true,
-          "description": "Specify whether to format compiler flags as JSON"
+          "description": "Specify whether to format compiler flags as JSON",
+          "order": 16
         },
         "nsis.wine.runWithWine": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "%nsisRunWithWine%"
+          "markdownDescription": "%nsisRunWithWine%",
+          "order": 17
         },
         "nsis.wine.pathToWine": {
           "type": "string",
           "default": "wine",
-          "markdownDescription": "%nsisPathToWine%"
+          "markdownDescription": "%nsisPathToWine%",
+          "order": 18
         },
         "nsis.muteANSIDeprecationWarning": {
           "type": "boolean",
           "default": false,
-          "description": "Toggle ANSI deprecation warning"
+          "description": "Toggle ANSI deprecation warning",
+          "order": 19
         }
       }
     },
