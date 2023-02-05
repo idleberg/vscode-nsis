@@ -85,6 +85,14 @@
     "Snippets",
     "Other"
   ],
+  "activationEvents": [
+    "onCommand:extension.nsis.command-reference",
+    "onCommand:extension.nsis.open-settings",
+    "onCommand:extension.nsis.show-compiler-flags",
+    "onCommand:extension.nsis.show-version",
+    "onLanguage:nlf",
+    "onLanguage:nsis"
+  ],
   "contributes": {
     "configuration": {
       "type": "object",
