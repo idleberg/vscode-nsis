@@ -38,7 +38,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       postExecute: [
         getNullDevice()
       ],
-      rawArguments: diagnostics.useCustomArguments ? compiler.customArguments : diagnostics.customArguments,
+      rawArguments: diagnostics?.useCustomArguments ? diagnostics.customArguments : compiler.customArguments,
     };
 
     const preprocessMode = await getPreprocessMode();
