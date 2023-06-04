@@ -59,6 +59,7 @@ async function compile(strictMode: boolean): Promise<void> {
     document.fileName,
     {
       env: await getProjectPath() || false,
+      events: true,
       json: showFlagsAsObject,
       pathToMakensis: await getMakensisPath(),
       rawArguments: compiler.customArguments,
@@ -79,6 +80,7 @@ async function showVersion(): Promise<void> {
 
   await NSIS.version(
     {
+      events: true,
       pathToMakensis: pathToMakensis || undefined
     },
     await getSpawnEnv()
@@ -95,6 +97,7 @@ async function showCompilerFlags(): Promise<void> {
 
   await NSIS.headerInfo(
     {
+      events: true,
       json: showFlagsAsObject || false,
       pathToMakensis: pathToMakensis || undefined
     },

@@ -62,15 +62,15 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     }
 
-    const diagnostics = [];
+    const diagnosticsResult = [];
 
     const warnings = await findWarnings(output.stdout);
-    if (warnings) diagnostics.push(...warnings);
+    if (warnings) diagnosticsResult.push(...warnings);
 
     const error = findErrors(output.stderr);
-    if (error) diagnostics.push(error);
+    if (error) diagnosticsResult.push(error);
 
-    collection.set(document.uri, diagnostics);
+    collection.set(document.uri, diagnosticsResult);
   } else {
     collection.clear();
   }
