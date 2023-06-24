@@ -49,17 +49,17 @@
     "which": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
-    "@babel/register": "^7.22.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/register": "^7.21.0",
     "@nsis/logo": "0.0.0",
     "@types/node": "^18.14.0",
-    "@typescript-eslint/eslint-plugin": "^5.60.0",
-    "@typescript-eslint/parser": "^5.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
     "@vscode/vsce": "^2.19.0",
     "cross-env": "^7.0.3",
     "esbuild": "^0.18.7",
-    "eslint": "^8.43.0",
+    "eslint": "^8.42.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-yaml": "^0.5.0",
     "gulp": "^4.0.2",
@@ -84,6 +84,14 @@
     "Programming Languages",
     "Snippets",
     "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.nsis.command-reference",
+    "onCommand:extension.nsis.open-settings",
+    "onCommand:extension.nsis.show-compiler-flags",
+    "onCommand:extension.nsis.show-version",
+    "onLanguage:nlf",
+    "onLanguage:nsis"
   ],
   "contributes": {
     "configuration": {

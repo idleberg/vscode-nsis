@@ -26,13 +26,13 @@ dependencies:
 
 devDependencies:
   '@babel/core':
-    specifier: ^7.22.5
+    specifier: ^7.22.1
     version: 7.22.5
   '@babel/preset-env':
-    specifier: ^7.22.5
+    specifier: ^7.22.4
     version: 7.22.5(@babel/core@7.22.5)
   '@babel/register':
-    specifier: ^7.22.5
+    specifier: ^7.21.0
     version: 7.22.5(@babel/core@7.22.5)
   '@nsis/logo':
     specifier: 0.0.0
@@ -41,10 +41,10 @@ devDependencies:
     specifier: ^18.14.0
     version: 18.14.0
   '@typescript-eslint/eslint-plugin':
-    specifier: ^5.60.0
+    specifier: ^5.59.8
     version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
   '@typescript-eslint/parser':
-    specifier: ^5.60.0
+    specifier: ^5.59.8
     version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
   '@vscode/vsce':
     specifier: ^2.19.0
@@ -56,7 +56,7 @@ devDependencies:
     specifier: ^0.18.7
     version: 0.18.7
   eslint:
-    specifier: ^8.43.0
+    specifier: ^8.42.0
     version: 8.43.0
   eslint-plugin-json:
     specifier: ^3.1.0

@@ -1,3 +1,8 @@
+# 4.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.0)
+
+- target Visual Studio Code v1.75 (or later)
+- update dependencies
+
 # v3.52.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.52.0)
 
 - add support for `${Case}` variants
