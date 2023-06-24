@@ -4,7 +4,7 @@
 
 [![Version](https://img.shields.io/github/v/release/idleberg/vscode-nsis?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/releases)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/idleberg.nsis?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
-[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/create-playdate-release/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/actions)
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/main/images/screenshot.png)
 
