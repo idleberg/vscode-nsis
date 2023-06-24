@@ -5,6 +5,7 @@ on:
     branches:
     - main
     paths:
+    - '.github/**'
     - 'config/**'
     - 'images/**'
     - 'snippets/**'
@@ -17,6 +18,7 @@ on:
     branches:
     - main
     paths:
+    - '.github/**'
     - 'config/**'
     - 'images/**'
     - 'snippets/**'
