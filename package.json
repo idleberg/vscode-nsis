@@ -23,7 +23,7 @@
     "package": "vsce package --no-dependencies --githubBranch main",
     "prepare": "husky install",
     "publish": "vsce publish --no-dependencies --githubBranch main && ovsx publish",
-    "start": "esbuild src/index.ts --watch --bundle --platform=node --outfile=lib/extension.js --sourcemap --minify --external:vscode",
+    "start": "npm run build:code -- --watch",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build"
   },
