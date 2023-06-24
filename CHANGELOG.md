@@ -1,5 +1,7 @@
 # 4.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.0)
 
+- change license to MIT-only
+- change default preprocess mode to `PPO`
 - target Visual Studio Code v1.75 (or later)
 - update dependencies
 
