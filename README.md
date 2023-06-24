@@ -2,10 +2,9 @@
 
 > Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS).
 
-[![License](https://img.shields.io/github/license/idleberg/create-playdate-release?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/idleberg/create-playdate-release?style=for-the-badge)]([https://github.com/idleberg/create-playdate-release/releases](https://github.com/idleberg/create-playdate-release/releases))
+[![Version](https://img.shields.io/github/v/release/idleberg/vscode-nsis?style=for-the-badge)]([https://github.com/idleberg/vscode-nsis/releases](https://github.com/idleberg/vscode-nsis/releases))
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/idleberg.nsis?style=for-the-badge)
-[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/create-playdate-release/default.yml?style=for-the-badge)]([https://github.com/idleberg/create-playdate-release/releases](https://github.com/idleberg/create-playdate-release/actions))
+[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-nsis/default.yml?style=for-the-badge)]([https://github.com/idleberg/vscode-nsis/releases](https://github.com/idleberg/vscode-nsis/actions))
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/main/images/screenshot.png)
 
