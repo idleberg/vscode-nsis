@@ -71,7 +71,7 @@
     "ovsx": "^0.8.1",
     "typescript": "^5.1.3"
   },
-  "icon": "images/logo.png",
+  "icon": "resources/logo.png",
   "galleryBanner": {
     "color": "#9e90aa",
     "theme": "dark"
@@ -325,56 +325,56 @@
         "command": "extension.nsis.compile",
         "title": "NSIS: Save & Compile Script",
         "icon": {
-          "dark": "./images/icon--build-dark.svg",
-          "light": "./images/icon--build-light.svg"
+          "dark": "./resources/dark/build.svg",
+          "light": "./resources/light/build.svg"
         }
       },
       {
         "command": "extension.nsis.compile-strict",
         "title": "NSIS: Save & Compile Script (strict)",
         "icon": {
-          "dark": "./images/icon--build-strict-dark.svg",
-          "light": "./images/icon--build-strict-light.svg"
+          "dark": "./resources/dark/build-strict.svg",
+          "light": "./resources/light/build-strict.svg"
         }
       },
       {
         "command": "extension.nsis.command-reference",
         "title": "NSIS: Command Reference",
         "icon": {
-          "dark": "./images/icon--command-dark.svg",
-          "light": "./images/icon--command-light.svg"
+          "dark": "./resources/dark/command.svg",
+          "light": "./resources/light/command.svg"
         }
       },
       {
         "command": "extension.nsis.show-version",
         "title": "NSIS: Show Version",
         "icon": {
-          "dark": "./images/icon--info-dark.svg",
-          "light": "./images/icon--info-light.svg"
+          "dark": "./resources/dark/info.svg",
+          "light": "./resources/light/info.svg"
         }
       },
       {
         "command": "extension.nsis.show-compiler-flags",
         "title": "NSIS: Show Compiler Flags",
         "icon": {
-          "dark": "./images/icon--flag-dark.svg",
-          "light": "./images/icon--flag-light.svg"
+          "dark": "./resources/dark/flag.svg",
+          "light": "./resources/light/flag.svg"
         }
       },
       {
         "command": "extension.nsis.create-build-task",
         "title": "NSIS: Create Build Task",
         "icon": {
-          "dark": "./images/icon--task-dark.svg",
-          "light": "./images/icon--task-light.svg"
+          "dark": "./resources/dark/task.svg",
+          "light": "./resources/light/task.svg"
         }
       },
       {
         "command": "extension.nsis.open-settings",
         "title": "NSIS: Open Settings",
         "icon": {
-          "dark": "./images/icon--settings-dark.svg",
-          "light": "./images/icon--settings-light.svg"
+          "dark": "./resources/dark/settings.svg",
+          "light": "./resources/light/settings.svg"
         }
       },
       {
