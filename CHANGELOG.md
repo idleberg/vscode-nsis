@@ -1,3 +1,7 @@
+# 4.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.1)
+
+- fix build config
+
 # 4.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.0)
 
 - change license to MIT-only
