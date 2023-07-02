@@ -1,3 +1,8 @@
+# 4.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.0)
+
+- add support for NSIS v3.09
+  - `!assert`
+
 # 4.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.1)
 
 - fix build config
