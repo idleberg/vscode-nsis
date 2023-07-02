@@ -12,7 +12,7 @@
   "scripts": {
     "compile": "npm run build",
     "build": "npm-run-all --parallel build:*",
-    "build:code": "esbuild src/index.ts --bundle --platform=node --outfile=lib/extension.js --sourcemap --minify --external:vscode",
+    "build:code": "esbuild ./src/index.ts --bundle --platform=node --outfile=./lib/extension.js --sourcemap --minify --external:vscode",
     "build:icon": "gulp",
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
