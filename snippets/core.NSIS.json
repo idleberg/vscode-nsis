@@ -41,6 +41,13 @@
     "leftLabelHTML": "<span class='syntax--keyword'>!</span>",
     "prefix": "appendfile"
   },
+  "!assert": {
+    "body": "!assert \"${1:value}\" \"${2:message}\"$0",
+    "description": "Usage: !assert value [op value2] message",
+    "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/!assert.html?utm_source=atom&utm_content=snippet",
+    "leftLabelHTML": "<span class='syntax--keyword'>!</span>",
+    "prefix": "assert"
+  },
   "!cd": {
     "body": "!cd \"${1:new_path}\"$0",
     "description": "Usage: !cd absolute_or_relative_new_directory",
