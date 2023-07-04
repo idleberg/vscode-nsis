@@ -1,6 +1,7 @@
 import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './handlers';
 import { getConfig } from 'vscode-get-config';
 import { inRange } from './util';
+import { trackEvent } from './telemetry';
 import * as NSIS from 'makensis';
 import vscode from 'vscode';
 
@@ -55,20 +56,31 @@ async function compile(strictMode: boolean): Promise<void> {
   NSIS.events.on('stderr', async data => await compilerErrorHandler(data));
   NSIS.events.once('exit', async data => await compilerExitHandler(data));
 
-  await NSIS.compile(
-    document.fileName,
-    {
-      env: await getProjectPath() || false,
-      events: true,
-      json: showFlagsAsObject,
-      pathToMakensis: await getMakensisPath(),
-      rawArguments: compiler.customArguments,
-      strict: strictMode || compiler.strictMode,
-      verbose: inRange(compiler.verbosity, 0, 4) ? Number(compiler.verbosity) : undefined
-    },
-    await getSpawnEnv()
-  );
+  let hasErrors = false;
 
+  try {
+    await NSIS.compile(
+      document.fileName,
+      {
+        env: await getProjectPath() || false,
+        events: true,
+        json: showFlagsAsObject,
+        pathToMakensis: await getMakensisPath(),
+        rawArguments: compiler.customArguments,
+        strict: strictMode || compiler.strictMode,
+        verbose: inRange(compiler.verbosity, 0, 4) ? Number(compiler.verbosity) : undefined
+      },
+      await getSpawnEnv()
+    );
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    trackEvent('compile', {
+      strictMode,
+      hasErrors
+  });
+  }
   NSIS.events.removeAllListeners();
 }
 
@@ -78,13 +90,26 @@ async function showVersion(): Promise<void> {
 
   NSIS.events.once('exit', versionHandler);
 
-  await NSIS.version(
-    {
-      events: true,
-      pathToMakensis: pathToMakensis || undefined
-    },
-    await getSpawnEnv()
-  );
+  let hasErrors = false;
+
+  try {
+    await NSIS.version(
+      {
+        events: true,
+        pathToMakensis: pathToMakensis || undefined
+      },
+      await getSpawnEnv()
+    );
+
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    trackEvent('showVersion', {
+      hasErrors
+    });
+  }
+
 }
 
 async function showCompilerFlags(): Promise<void> {
@@ -95,14 +120,26 @@ async function showCompilerFlags(): Promise<void> {
 
   NSIS.events.once('exit', flagsHandler);
 
-  await NSIS.headerInfo(
-    {
-      events: true,
-      json: showFlagsAsObject || false,
-      pathToMakensis: pathToMakensis || undefined
-    },
-    await getSpawnEnv()
-  );
+  let hasErrors = false;
+
+  try {
+    await NSIS.headerInfo(
+      {
+        events: true,
+        json: showFlagsAsObject || false,
+        pathToMakensis: pathToMakensis || undefined
+      },
+      await getSpawnEnv()
+    );
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    trackEvent('showCompilerFlags', {
+      hasErrors
+    });
+  }
+
 }
 
 async function showHelp(): Promise<void> {
@@ -119,6 +156,9 @@ async function showHelp(): Promise<void> {
     return;
   }
 
+  let hasErrors = false;
+  let command: string | undefined = undefined;
+
   try {
     const output = await NSIS.commandHelp('', {
         pathToMakensis: pathToMakensis,
@@ -126,14 +166,20 @@ async function showHelp(): Promise<void> {
       },
       await getSpawnEnv()
     );
-    const cmd = await vscode.window.showQuickPick(Object.keys(output.stdout));
+    command = await vscode.window.showQuickPick(Object.keys(output.stdout)) || undefined;
 
-    if (cmd) {
-      openURL(cmd);
+    if (command) {
+      openURL(command);
     }
 
-  } catch (output) {
-    console.error(output);
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    trackEvent('showHelp', {
+      command,
+      hasErrors
+    });
   }
 }
 

@@ -42,6 +42,7 @@
   "main": "./lib/extension",
   "dependencies": {
     "@nsis/nlf": "^0.10.2",
+    "@vscode/extension-telemetry": "^0.8.0",
     "makensis": "^2.0.5",
     "micromatch": "^4.0.5",
     "open": "^9.1.0",

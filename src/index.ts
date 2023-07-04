@@ -4,9 +4,12 @@ import { commands, type ExtensionContext, languages, window, workspace } from 'v
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { convert } from './nlf';
 import { createTask } from './task';
+import { reporter } from './telemetry';
 import { updateDiagnostics } from './diagnostics';
 
 async function activate(context: ExtensionContext): Promise<void> {
+  context.subscriptions.push(reporter);
+
   context.subscriptions.push(
     // TextEditor Commands
     commands.registerTextEditorCommand('extension.nsis.compile', async () => {

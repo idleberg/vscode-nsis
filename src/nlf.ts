@@ -1,3 +1,4 @@
+import { trackEvent } from './telemetry';
 import * as NLF from '@nsis/nlf';
 import vscode from 'vscode';
 
@@ -14,6 +15,7 @@ function convert(): void {
 
 function convertNLF(document): void {
   let input, output;
+  let hasErrors = false;
 
   try {
     input = document.getText();
@@ -21,6 +23,11 @@ function convertNLF(document): void {
   } catch (err) {
     console.error(err);
     vscode.window.showErrorMessage('Conversion failed, see output for details');
+    hasErrors = true;
+  } finally {
+    trackEvent('convertNLF', {
+      hasErrors
+    });
   }
 
   openNewFile({
