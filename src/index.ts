@@ -4,11 +4,16 @@ import { commands, type ExtensionContext, languages, window, workspace } from 'v
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { convert } from './nlf';
 import { createTask } from './task';
+import { getConfig } from 'vscode-get-config';
 import { reporter } from './telemetry';
 import { updateDiagnostics } from './diagnostics';
 
 async function activate(context: ExtensionContext): Promise<void> {
-  context.subscriptions.push(reporter);
+  const { disableTelemetry } = await getConfig('applescript');
+
+  if (disableTelemetry === false) {
+    context.subscriptions.push(reporter);
+  }
 
   context.subscriptions.push(
     // TextEditor Commands

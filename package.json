@@ -265,6 +265,12 @@
           "default": false,
           "description": "Toggle ANSI deprecation warning",
           "order": 19
+        },
+        "nsis.disableTelemetry": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable telemetry for this extension, even though the global preferences is enabled",
+          "order": 20
         }
       }
     },

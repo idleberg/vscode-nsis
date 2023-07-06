@@ -1,4 +1,4 @@
-import { trackEvent } from './telemetry';
+import { sendTelemetryEvent } from './telemetry';
 import * as NLF from '@nsis/nlf';
 import vscode from 'vscode';
 
@@ -25,7 +25,7 @@ function convertNLF(document): void {
     vscode.window.showErrorMessage('Conversion failed, see output for details');
     hasErrors = true;
   } finally {
-    trackEvent('convertNLF', {
+    sendTelemetryEvent('convertNLF', {
       hasErrors
     });
   }

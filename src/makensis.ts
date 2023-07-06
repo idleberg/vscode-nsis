@@ -1,7 +1,7 @@
 import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './handlers';
 import { getConfig } from 'vscode-get-config';
 import { inRange } from './util';
-import { trackEvent } from './telemetry';
+import { sendTelemetryEvent } from './telemetry';
 import * as NSIS from 'makensis';
 import vscode from 'vscode';
 
@@ -76,10 +76,10 @@ async function compile(strictMode: boolean): Promise<void> {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     hasErrors = true;
   } finally {
-    trackEvent('compile', {
+    sendTelemetryEvent('compile', {
       strictMode,
       hasErrors
-  });
+    });
   }
   NSIS.events.removeAllListeners();
 }
@@ -105,7 +105,7 @@ async function showVersion(): Promise<void> {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     hasErrors = true;
   } finally {
-    trackEvent('showVersion', {
+    sendTelemetryEvent('showVersion', {
       hasErrors
     });
   }
@@ -135,7 +135,7 @@ async function showCompilerFlags(): Promise<void> {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     hasErrors = true;
   } finally {
-    trackEvent('showCompilerFlags', {
+    sendTelemetryEvent('showCompilerFlags', {
       hasErrors
     });
   }
@@ -176,7 +176,7 @@ async function showHelp(): Promise<void> {
     console.error('[vscode-nsis]', error instanceof error ? error.message : error);
     hasErrors = true;
   } finally {
-    trackEvent('showHelp', {
+    sendTelemetryEvent('showHelp', {
       command,
       hasErrors
     });
