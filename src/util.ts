@@ -9,19 +9,28 @@ import open from 'open';
 import vscode from 'vscode';
 import which from 'which';
 
-function getNullDevice(): string {
+
+
+type DiagnosticCollection = {
+	code?: string;
+	message?: string;
+	range?: vscode.Range;
+	severity?: vscode.DiagnosticSeverity;
+}
+
+export function getNullDevice(): string {
   return isWindows()
     ? 'OutFile NUL'
     : 'OutFile /dev/null/';
 }
 
-function getPrefix(): string {
+export function getPrefix(): string {
   return isWindows()
     ? '/'
     : '-';
 }
 
-function isHeaderFile(filePath: string): boolean {
+export function isHeaderFile(filePath: string): boolean {
   const headerFiles = [
     '.bnsh',
     '.nsh'
@@ -30,11 +39,11 @@ function isHeaderFile(filePath: string): boolean {
   return Boolean(headerFiles.filter(fileExt => filePath?.endsWith(fileExt)).length);
 }
 
-function isWindows(): boolean {
+export function isWindows(): boolean {
   return platform() === 'win32'
 }
 
-async function isWindowsCompatible(): Promise<boolean> {
+export async function isWindowsCompatible(): Promise<boolean> {
   const { wine } = await getConfig('nsis');
 
   return isWindows() || wine.runWithWine === true
@@ -42,7 +51,7 @@ async function isWindowsCompatible(): Promise<boolean> {
     : false;
 }
 
-async function getMakensisPath(): Promise<string | undefined> {
+export async function getMakensisPath(): Promise<string> {
   const { compiler } = await getConfig('nsis');
 
   const pathToMakensis = isWindows() && compiler.pathToMakensis.startsWith('"') && compiler.pathToMakensis.startsWith('"')
@@ -67,9 +76,11 @@ async function getMakensisPath(): Promise<string | undefined> {
 
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
   }
+
+	return 'makensis';
 }
 
-function mapPlatform(): string {
+export function mapPlatform(): string {
   const pf = platform();
 
   switch (pf) {
@@ -84,11 +95,11 @@ function mapPlatform(): string {
   }
 }
 
-function openURL(cmd: string): void {
+export function openURL(cmd: string): void {
   open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/${cmd}.html?utm_source=vscode&utm_content=reference`);
 }
 
-async function pathWarning(): Promise<void> {
+export async function pathWarning(): Promise<void> {
   const choice = await vscode.window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
 
   switch (choice) {
@@ -102,7 +113,7 @@ async function pathWarning(): Promise<void> {
   }
 }
 
-async function revealInstaller(outFile: string): Promise<void> {
+export async function revealInstaller(outFile: string): Promise<void> {
   if (outFile && await fileExists(outFile)) {
     switch (platform()) {
       case 'win32':
@@ -124,7 +135,7 @@ async function revealInstaller(outFile: string): Promise<void> {
   }
 }
 
-async function runInstaller(outFile: string): Promise<void> {
+export async function runInstaller(outFile: string): Promise<void> {
   if (outFile && await fileExists(outFile)) {
     const { wine } = await getConfig('nsis');
 
@@ -136,7 +147,7 @@ async function runInstaller(outFile: string): Promise<void> {
   }
 }
 
-async function buttonHandler(choice: string, outFile?: string): Promise<void> {
+export async function buttonHandler(choice: string, outFile?: string): Promise<void> {
   switch (choice) {
     case 'Run':
       await runInstaller(outFile);
@@ -152,7 +163,7 @@ async function buttonHandler(choice: string, outFile?: string): Promise<void> {
   }
 }
 
-async function getPreprocessMode(): Promise<string> {
+export async function getPreprocessMode(): Promise<string> {
   const { diagnostics } = await getConfig('nsis');
 
   switch (diagnostics.preprocessMode) {
@@ -165,13 +176,13 @@ async function getPreprocessMode(): Promise<string> {
   }
 }
 
-async function getOverrideCompression(): Promise<string> {
+export async function getOverrideCompression(): Promise<string> {
   const { diagnostics } = await getConfig('nsis');
 
   return diagnostics.overrideCompression || true;
 }
 
-function getLineLength(line: number): number {
+export function getLineLength(line: number): number {
   const editorText = vscode.window.activeTextEditor.document.getText();
 
   if (editorText && editorText.length) {
@@ -183,7 +194,7 @@ function getLineLength(line: number): number {
   return 0;
 }
 
-async function showANSIDeprecationWarning(): Promise<void> {
+export async function showANSIDeprecationWarning(): Promise<void> {
   const choice = await vscode.window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Unicode Installer', 'Open Settings')
 
   switch (choice) {
@@ -202,7 +213,7 @@ async function showANSIDeprecationWarning(): Promise<void> {
   process.exit();
 }
 
-async function fileExists(filePath: string): Promise<boolean> {
+export async function fileExists(filePath: string): Promise<boolean> {
   try {
     await fs.access(filePath, constants.F_OK);
   } catch (err) {
@@ -212,11 +223,13 @@ async function fileExists(filePath: string): Promise<boolean> {
   return true;
 }
 
-async function findWarnings(input: string): Promise<unknown[]> {
-  const output = [];
+export async function findWarnings(input: string): Promise<unknown[]> {
+  const output: DiagnosticCollection[] = [];
 
   const warningLines = input.split('\n');
-  if (!warningLines.length) return ;
+  if (!warningLines.length) {
+		return [output];
+	}
 
   if (warningLines.length) {
     // Note to self: Don't use map()
@@ -224,11 +237,11 @@ async function findWarnings(input: string): Promise<unknown[]> {
       const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
       if (result !== null) {
-        const warningLine = parseInt(result.groups.line) - 1;
+        const warningLine = parseInt(String(result?.groups?.line)) - 1;
 
         output.push({
           code: '',
-          message: result.groups.message,
+          message: result.groups?.message,
           range: new vscode.Range(new vscode.Position(warningLine, 0), new vscode.Position(warningLine, getLineLength(warningLine))),
           severity: vscode.DiagnosticSeverity.Warning
         });
@@ -238,20 +251,20 @@ async function findWarnings(input: string): Promise<unknown[]> {
     if (!await getConfig('nsis') && input.includes('7998: ANSI targets are deprecated')) {
       showANSIDeprecationWarning();
     }
-
-    return output;
   }
+
+	return output;
 }
 
-function findErrors(input: string): unknown {
+export function findErrors(input: string): DiagnosticCollection {
   const result = /(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(input);
 
   if (result !== null) {
-    const errorLine = parseInt(result.groups.line) - 1;
+    const errorLine = parseInt(String(result?.groups?.line)) - 1;
 
     return {
       code: '',
-      message: result.groups.message,
+      message: result?.groups?.message,
       range: new vscode.Range(new vscode.Position(errorLine, 0), new vscode.Position(errorLine, getLineLength(errorLine))),
       severity: vscode.DiagnosticSeverity.Error
     };
@@ -260,7 +273,7 @@ function findErrors(input: string): unknown {
   return {};
 }
 
-async function getProjectPath(): Promise<null | string> {
+export async function getProjectPath(): Promise<null | string> {
   let editor;
 
   try {
@@ -270,14 +283,15 @@ async function getProjectPath(): Promise<null | string> {
   }
 
   try {
-    const { uri } = vscode.workspace.getWorkspaceFolder(editor.document.uri);
-    return uri.fsPath;
+    const workspaceFolder = vscode.workspace.getWorkspaceFolder(editor.document.uri);
+
+    return workspaceFolder ? workspaceFolder.uri.fsPath : '';
   } catch (error) {
     return null;
   }
 }
 
-async function getSpawnEnv(): Promise<SpawnOptions> {
+export async function getSpawnEnv(): Promise<SpawnOptions> {
   const { integrated } = vscode.workspace.getConfiguration('terminal');
   const mappedPlatform = mapPlatform();
 
@@ -291,11 +305,11 @@ async function getSpawnEnv(): Promise<SpawnOptions> {
   };
 }
 
-function inRange(value: number | string, min: number, max: number): boolean {
+export function inRange(value: number | string, min: number, max: number): boolean {
   return Number(value) >= min && Number(value) <= max;
 }
 
-function hasArgument(needle: string | string[], argument: string): boolean {
+export function hasArgument(needle: string | string[], argument: string): boolean {
   needle = typeof needle === 'string'
     ? [needle]
     : needle;
@@ -304,26 +318,3 @@ function hasArgument(needle: string | string[], argument: string): boolean {
     ? true
     : false;
 }
-
-export {
-  buttonHandler,
-  fileExists,
-  findErrors,
-  findWarnings,
-  getMakensisPath,
-  getNullDevice,
-  getOverrideCompression,
-  getPrefix,
-  getPreprocessMode,
-  getProjectPath,
-  getSpawnEnv,
-  hasArgument,
-  inRange,
-  isHeaderFile,
-  isWindowsCompatible,
-  mapPlatform,
-  openURL,
-  pathWarning,
-  revealInstaller,
-  runInstaller
-};

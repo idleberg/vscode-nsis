@@ -2,9 +2,14 @@ import vscode from 'vscode';
 import { compile } from 'makensis';
 import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
 import { getConfig } from 'vscode-get-config';
+import type { CompilerOptions } from 'makensis';
 import micromatch from 'micromatch';
 
 async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
+	if (!document) {
+		return;
+	}
+
   const { compiler, diagnostics } = await getConfig('nsis');
 
   if (diagnostics.enableDiagnostics !== true) {
@@ -32,7 +37,7 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       return;
     }
 
-    const options = {
+    const options: CompilerOptions = {
       verbose: 2,
       pathToMakensis,
       postExecute: [
@@ -50,8 +55,8 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     const overrideCompression = await getOverrideCompression();
 
     if (overrideCompression) {
-      options['preExecute'] = ['SetCompressor /FINAL zlib'];
-      options['postExecute'].push('SetCompress off');
+      options.preExecute = ['SetCompressor /FINAL zlib'];
+			(options.postExecute as string[]).push('SetCompress off');
     }
 
     let output;
@@ -62,13 +67,17 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
       console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     }
 
-    const diagnosticsResult = [];
+    const diagnosticsResult: string[] = [];
 
     const warnings = await findWarnings(output.stdout);
-    if (warnings) diagnosticsResult.push(...warnings);
+    if (warnings) {
+			diagnosticsResult.push(...warnings);
+		}
 
     const error = findErrors(output.stderr);
-    if (error) diagnosticsResult.push(error);
+    if (error) {
+			diagnosticsResult.push(error);
+		}
 
     collection.set(document.uri, diagnosticsResult);
   } else {
