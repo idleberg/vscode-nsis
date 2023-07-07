@@ -42,7 +42,7 @@
   "main": "./lib/extension",
   "dependencies": {
     "@nsis/nlf": "^0.10.2",
-    "makensis": "^2.0.6",
+    "makensis": "^2.0.7",
     "micromatch": "^4.0.5",
     "open": "^9.1.0",
     "vscode-get-config": "^0.4.0",

@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.10.2
     version: 0.10.2
   makensis:
-    specifier: ^2.0.6
-    version: 2.0.6
+    specifier: ^2.0.7
+    version: 2.0.7
   micromatch:
     specifier: ^4.0.5
     version: 4.0.5
@@ -4777,8 +4777,8 @@ packages:
       kind-of: 6.0.3
     dev: true
 
-  /makensis@2.0.6:
-    resolution: {integrity: sha512-Sfb3AU2yuLo3YviZA0xUNK4gXgp+XOM3RK2avuwEemLBfoMhlSZvbLyhIrOnhqAJP5q2tBxYl7PEdj2YUxmfvQ==}
+  /makensis@2.0.7:
+    resolution: {integrity: sha512-dX4PYSo7ScXNC1zAs2D38riTxjqQrBFF9SjLnDr20i7dO9yObghdnaHN7jKD4ZBqcy2u4N4ZLbWpZietQ0lo1Q==}
     engines: {node: ^14.8.0 || >=16.0.0}
     dependencies:
       '@nsis/language-data': 0.9.0
