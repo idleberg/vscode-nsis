@@ -1,6 +1,5 @@
 import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './handlers';
 import { getConfig } from 'vscode-get-config';
-import { inRange } from './util';
 import * as NSIS from 'makensis';
 import vscode from 'vscode';
 
@@ -15,18 +14,23 @@ import {
 import nsisChannel from './channel';
 
 async function compile(strictMode: boolean): Promise<void> {
-  // TODO Breaking change in VSCode 1.54, remove in future
-  const languageID = vscode.window.activeTextEditor['_documentData']
-    ? vscode.window.activeTextEditor['_documentData']['_languageId']
-    : vscode.window.activeTextEditor['document']['languageId'];
+	const activeTextEditor = vscode.window?.activeTextEditor;
 
-  if (!vscode.window.activeTextEditor || languageID !== 'nsis') {
+	if (!activeTextEditor) {
+		return;
+	}
+
+  const languageID = activeTextEditor['_documentData']
+    ? activeTextEditor['_documentData']['_languageId']
+    : activeTextEditor['document']['languageId'];
+
+  if (!activeTextEditor || languageID !== 'nsis') {
     nsisChannel.appendLine('This command is only available for NSIS files');
     return;
   }
 
   const { compiler, processHeaders, showFlagsAsObject } = await getConfig('nsis');
-  const document = vscode.window.activeTextEditor.document;
+  const document = activeTextEditor.document;
 
   if (isHeaderFile(document.fileName)) {
     if (processHeaders === "Disallow") {
@@ -64,7 +68,7 @@ async function compile(strictMode: boolean): Promise<void> {
       pathToMakensis: await getMakensisPath(),
       rawArguments: compiler.customArguments,
       strict: strictMode || compiler.strictMode,
-      verbose: inRange(compiler.verbosity, 0, 4) ? Number(compiler.verbosity) : undefined
+      verbose: compiler.verbosity
     },
     await getSpawnEnv()
   );
@@ -73,7 +77,6 @@ async function compile(strictMode: boolean): Promise<void> {
 }
 
 async function showVersion(): Promise<void> {
-  const pathToMakensis = await getMakensisPath();
   await nsisChannel.clear();
 
   NSIS.events.once('exit', versionHandler);
@@ -81,7 +84,7 @@ async function showVersion(): Promise<void> {
   await NSIS.version(
     {
       events: true,
-      pathToMakensis: pathToMakensis || undefined
+      pathToMakensis: await getMakensisPath()
     },
     await getSpawnEnv()
   );

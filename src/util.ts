@@ -1,5 +1,6 @@
 import { constants, promises as fs } from 'fs';
 import { exec, spawn } from 'child_process';
+import type { SpawnOptions } from 'node:child_process';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { resolve } from 'path';
@@ -41,7 +42,7 @@ async function isWindowsCompatible(): Promise<boolean> {
     : false;
 }
 
-async function getMakensisPath(): Promise<string | void> {
+async function getMakensisPath(): Promise<string | undefined> {
   const { compiler } = await getConfig('nsis');
 
   const pathToMakensis = isWindows() && compiler.pathToMakensis.startsWith('"') && compiler.pathToMakensis.startsWith('"')
@@ -276,7 +277,7 @@ async function getProjectPath(): Promise<null | string> {
   }
 }
 
-async function getSpawnEnv(): Promise<unknown> {
+async function getSpawnEnv(): Promise<SpawnOptions> {
   const { integrated } = vscode.workspace.getConfiguration('terminal');
   const mappedPlatform = mapPlatform();
 
