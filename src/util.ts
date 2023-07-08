@@ -9,13 +9,11 @@ import open from 'open';
 import vscode from 'vscode';
 import which from 'which';
 
-
-
 type DiagnosticCollection = {
-	code?: string;
-	message?: string;
-	range?: vscode.Range;
-	severity?: vscode.DiagnosticSeverity;
+  code?: string;
+  message?: string;
+  range?: vscode.Range;
+  severity?: vscode.DiagnosticSeverity;
 }
 
 export function getNullDevice(): string {
@@ -77,7 +75,7 @@ export async function getMakensisPath(): Promise<string> {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
   }
 
-	return 'makensis';
+  return 'makensis';
 }
 
 export function mapPlatform(): string {
@@ -183,7 +181,7 @@ export async function getOverrideCompression(): Promise<string> {
 }
 
 export function getLineLength(line: number): number {
-  const editorText = vscode.window.activeTextEditor.document.getText();
+  const editorText = vscode.window.activeTextEditor?.document.getText();
 
   if (editorText && editorText.length) {
     const lines: string[] = editorText.split('\n');
@@ -228,8 +226,8 @@ export async function findWarnings(input: string): Promise<unknown[]> {
 
   const warningLines = input.split('\n');
   if (!warningLines.length) {
-		return [output];
-	}
+    return [output];
+  }
 
   if (warningLines.length) {
     // Note to self: Don't use map()
@@ -253,7 +251,7 @@ export async function findWarnings(input: string): Promise<unknown[]> {
     }
   }
 
-	return output;
+  return output;
 }
 
 export function findErrors(input: string): DiagnosticCollection {
