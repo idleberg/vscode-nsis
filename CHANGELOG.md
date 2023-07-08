@@ -1,8 +1,11 @@
+# 4.1.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.2)
+
+- downgrade dependencies
+
 # 4.1.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.1)
 
 - minor improvements
 - update dependencies
-
 
 # 4.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.0)
 
