@@ -1,5 +1,6 @@
-# 4.1.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.2)
+# 4.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.0)
 
+- add telemetry
 - downgrade dependencies
 
 # 4.1.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.1)
