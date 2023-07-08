@@ -1,30 +1,31 @@
 import { fileExists, getMakensisPath, isWindowsCompatible, buttonHandler } from './util';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
+import { type CompilerOutput } from 'makensis';
 import nsisChannel from './channel';
 import vscode from 'vscode';
 
-export async function compilerOutputHandler(data: unknown): Promise<void> {
+export async function compilerOutputHandler(data: CompilerOutput): Promise<void> {
   const { showOutputView } = await getConfig('nsis');
 
-  nsisChannel.appendLine(data['line']);
+  nsisChannel.appendLine(data.line);
 
   if (showOutputView === 'Always') {
     nsisChannel.show();
   }
 }
 
-export async function compilerErrorHandler(data: unknown): Promise<void> {
+export async function compilerErrorHandler(data: CompilerOutput): Promise<void> {
   const { showOutputView } = await getConfig('nsis');
 
-  nsisChannel.appendLine(data['line']);
+  nsisChannel.appendLine(data.line);
 
   if (showOutputView === 'On Errors') {
     nsisChannel.show();
   }
 }
 
-export async function compilerExitHandler(data: unknown): Promise<void> {
+export async function compilerExitHandler(data: CompilerOutput): Promise<void> {
   const { showNotifications, showOutputView } = await getConfig('nsis');
 
   if (data['status'] === 0) {
@@ -32,9 +33,9 @@ export async function compilerExitHandler(data: unknown): Promise<void> {
       nsisChannel.show();
     }
 
-    const outfileExists = await fileExists(data['outFile']);
+    const outfileExists = await fileExists(String(data.outFile));
 
-    const openButton = (await isWindowsCompatible() === true && data['outFile']?.length && outfileExists)
+    const openButton = (await isWindowsCompatible() === true && data.outFile?.length && outfileExists)
       ? 'Run'
       : undefined;
 
@@ -48,10 +49,10 @@ export async function compilerExitHandler(data: unknown): Promise<void> {
       }
 
       const choice = await vscode.window.showWarningMessage(`Compiled with warnings`, openButton, revealButton);
-      await buttonHandler(choice, data['outFile']);
+      await buttonHandler(choice, data.outFile);
     } else if (showNotifications) {
       const choice = await vscode.window.showInformationMessage(`Compiled successfully`, openButton, revealButton);
-      await buttonHandler(choice, data['outFile']);
+      await buttonHandler(choice, data.outFile);
     }
   } else if (showNotifications) {
     if (showOutputView !== 'Never') {
@@ -86,7 +87,7 @@ export async function versionHandler(data: unknown): Promise<void> {
   const { showVersionAsInfoMessage } = await getConfig('nsis');
   const pathToMakensis = await getMakensisPath();
 
-  const output = data['stdout'] || data['stderr'];
+  const output = data.stdout || data.stderr;
   const message = `makensis ${output} (${pathToMakensis})`;
 
   if (showVersionAsInfoMessage === true) {
