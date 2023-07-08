@@ -1,10 +1,10 @@
+import { fileExists, getMakensisPath, isWindowsCompatible, buttonHandler } from './util';
 import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
-import { fileExists, getMakensisPath, isWindowsCompatible, buttonHandler } from './util';
 import nsisChannel from './channel';
 import vscode from 'vscode';
 
-async function compilerOutputHandler(data: unknown): Promise<void> {
+export async function compilerOutputHandler(data: unknown): Promise<void> {
   const { showOutputView } = await getConfig('nsis');
 
   nsisChannel.appendLine(data['line']);
@@ -14,7 +14,7 @@ async function compilerOutputHandler(data: unknown): Promise<void> {
   }
 }
 
-async function compilerErrorHandler(data: unknown): Promise<void> {
+export async function compilerErrorHandler(data: unknown): Promise<void> {
   const { showOutputView } = await getConfig('nsis');
 
   nsisChannel.appendLine(data['line']);
@@ -24,7 +24,7 @@ async function compilerErrorHandler(data: unknown): Promise<void> {
   }
 }
 
-async function compilerExitHandler(data: unknown): Promise<void> {
+export async function compilerExitHandler(data: unknown): Promise<void> {
   const { showNotifications, showOutputView } = await getConfig('nsis');
 
   if (data['status'] === 0) {
@@ -69,7 +69,7 @@ async function compilerExitHandler(data: unknown): Promise<void> {
   }
 }
 
-async function flagsHandler(data: unknown): Promise<void> {
+export async function flagsHandler(data: unknown): Promise<void> {
   const { showFlagsAsObject } = await getConfig('nsis');
 
   const output = data['stdout'] || data['stderr'];
@@ -82,7 +82,7 @@ async function flagsHandler(data: unknown): Promise<void> {
   nsisChannel.show();
 }
 
-async function versionHandler(data: unknown): Promise<void> {
+export async function versionHandler(data: unknown): Promise<void> {
   const { showVersionAsInfoMessage } = await getConfig('nsis');
   const pathToMakensis = await getMakensisPath();
 
@@ -96,11 +96,3 @@ async function versionHandler(data: unknown): Promise<void> {
     nsisChannel.show();
   }
 }
-
-export {
-  compilerOutputHandler,
-  compilerErrorHandler,
-  compilerExitHandler,
-  flagsHandler,
-  versionHandler
-};

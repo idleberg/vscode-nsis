@@ -1,11 +1,11 @@
-import vscode from 'vscode';
 import { compile } from 'makensis';
 import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
 import { getConfig } from 'vscode-get-config';
-import type { CompilerOptions } from 'makensis';
 import micromatch from 'micromatch';
+import type { CompilerOptions } from 'makensis';
+import vscode from 'vscode';
 
-async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
+export async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
 	if (!document) {
 		return;
 	}
@@ -84,7 +84,3 @@ async function updateDiagnostics(document: vscode.TextDocument | null, collectio
     collection.clear();
   }
 }
-
-export {
-  updateDiagnostics
-};

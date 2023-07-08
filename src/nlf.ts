@@ -1,8 +1,14 @@
+import { sendTelemetryEvent } from './telemetry';
 import * as NLF from '@nsis/nlf';
 import vscode from 'vscode';
 
-function convert(): void {
+export function convert(): void {
   const editor = vscode.window.activeTextEditor;
+
+  if (!editor) {
+    return;
+  }
+
   const document = editor.document;
 
   if (document.languageId === 'nlf') {
@@ -14,6 +20,7 @@ function convert(): void {
 
 function convertNLF(document): void {
   let input, output;
+  let hasErrors = false;
 
   try {
     input = document.getText();
@@ -21,6 +28,11 @@ function convertNLF(document): void {
   } catch (err) {
     console.error(err);
     vscode.window.showErrorMessage('Conversion failed, see output for details');
+    hasErrors = true;
+  } finally {
+    sendTelemetryEvent('convertNLF', {
+      hasErrors
+    });
   }
 
   openNewFile({
@@ -48,5 +60,3 @@ function convertJSON(document): void {
 function openNewFile(newDocument): void {
   vscode.workspace.openTextDocument(newDocument).then( document => vscode.window.showTextDocument(document));
 }
-
-export { convert };

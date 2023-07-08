@@ -1,5 +1,6 @@
 import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './handlers';
 import { getConfig } from 'vscode-get-config';
+import { sendTelemetryEvent } from './telemetry';
 import * as NSIS from 'makensis';
 import vscode from 'vscode';
 
@@ -9,11 +10,11 @@ import {
   getSpawnEnv,
   isHeaderFile,
   openURL,
-  pathWarning,
+  pathWarning
 } from './util';
 import nsisChannel from './channel';
 
-async function compile(strictMode: boolean): Promise<void> {
+export async function compile(strictMode: boolean): Promise<void> {
 	const activeTextEditor = vscode.window?.activeTextEditor;
 
 	if (!activeTextEditor) {
@@ -59,38 +60,62 @@ async function compile(strictMode: boolean): Promise<void> {
   NSIS.events.on('stderr', async data => await compilerErrorHandler(data));
   NSIS.events.once('exit', async data => await compilerExitHandler(data));
 
-  await NSIS.compile(
-    document.fileName,
-    {
-      env: await getProjectPath() || false,
-      events: true,
-      json: showFlagsAsObject,
-      pathToMakensis: await getMakensisPath(),
-      rawArguments: compiler.customArguments,
-      strict: strictMode || compiler.strictMode,
-      verbose: compiler.verbosity
-    },
-    await getSpawnEnv()
-  );
+  let hasErrors = false;
 
+  try {
+    await NSIS.compile(
+      document.fileName,
+      {
+        env: await getProjectPath() || false,
+        events: true,
+        json: showFlagsAsObject,
+        pathToMakensis: await getMakensisPath(),
+        rawArguments: compiler.customArguments,
+        strict: strictMode || compiler.strictMode,
+        verbose: compiler.verbosity
+      },
+      await getSpawnEnv()
+    );
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    sendTelemetryEvent('compile', {
+      strictMode,
+      hasErrors
+    });
+  }
   NSIS.events.removeAllListeners();
 }
 
-async function showVersion(): Promise<void> {
+export async function showVersion(): Promise<void> {
   await nsisChannel.clear();
 
   NSIS.events.once('exit', versionHandler);
 
-  await NSIS.version(
-    {
-      events: true,
-      pathToMakensis: await getMakensisPath()
-    },
-    await getSpawnEnv()
-  );
+  let hasErrors = false;
+
+  try {
+    await NSIS.version(
+      {
+        events: true,
+        pathToMakensis: await getMakensisPath()
+      },
+      await getSpawnEnv()
+    );
+
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    sendTelemetryEvent('showVersion', {
+      hasErrors
+    });
+  }
+
 }
 
-async function showCompilerFlags(): Promise<void> {
+export async function showCompilerFlags(): Promise<void> {
   const { showFlagsAsObject } = await getConfig('nsis');
   const pathToMakensis = await getMakensisPath();
 
@@ -98,17 +123,29 @@ async function showCompilerFlags(): Promise<void> {
 
   NSIS.events.once('exit', flagsHandler);
 
-  await NSIS.headerInfo(
-    {
-      events: true,
-      json: showFlagsAsObject || false,
-      pathToMakensis: pathToMakensis || undefined
-    },
-    await getSpawnEnv()
-  );
+  let hasErrors = false;
+
+  try {
+    await NSIS.headerInfo(
+      {
+        events: true,
+        json: showFlagsAsObject || false,
+        pathToMakensis: pathToMakensis || undefined
+      },
+      await getSpawnEnv()
+    );
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    sendTelemetryEvent('showCompilerFlags', {
+      hasErrors
+    });
+  }
+
 }
 
-async function showHelp(): Promise<void> {
+export async function showHelp(): Promise<void> {
   nsisChannel.clear();
 
   let pathToMakensis;
@@ -122,6 +159,9 @@ async function showHelp(): Promise<void> {
     return;
   }
 
+  let hasErrors = false;
+  let command: string | undefined = undefined;
+
   try {
     const output = await NSIS.commandHelp('', {
         pathToMakensis: pathToMakensis,
@@ -129,15 +169,19 @@ async function showHelp(): Promise<void> {
       },
       await getSpawnEnv()
     );
-    const cmd = await vscode.window.showQuickPick(Object.keys(output.stdout));
+    command = await vscode.window.showQuickPick(Object.keys(output.stdout)) || undefined;
 
-    if (cmd) {
-      openURL(cmd);
+    if (command) {
+      openURL(command);
     }
 
-  } catch (output) {
-    console.error(output);
+  } catch (error) {
+    console.error('[vscode-nsis]', error instanceof error ? error.message : error);
+    hasErrors = true;
+  } finally {
+    sendTelemetryEvent('showHelp', {
+      command,
+      hasErrors
+    });
   }
 }
-
-export { compile, showVersion, showCompilerFlags, showHelp };

@@ -4,8 +4,8 @@ import { join } from 'path';
 import { promises as fs } from 'fs';
 import vscode from 'vscode';
 
-async function createTask(): Promise<unknown> {
-  if (!vscode.workspace.workspaceFolders) {
+export async function createTask(): Promise<unknown> {
+  if (typeof vscode.workspace.workspaceFolders === 'undefined') {
     return vscode.window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
 
@@ -66,5 +66,3 @@ async function createTask(): Promise<unknown> {
   const doc = await vscode.workspace.openTextDocument(buildFile)
   vscode.window.showTextDocument(doc);
 }
-
-export { createTask };
