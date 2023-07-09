@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@nsis/nlf':
-    specifier: ^0.10.3
-    version: 0.10.3
+    specifier: ^0.10.4
+    version: 0.10.4
   '@vscode/extension-telemetry':
     specifier: ^0.8.1
     version: 0.8.1(tslib@2.6.0)(typescript@4.9.5)
@@ -1857,8 +1857,8 @@ packages:
     resolution: {integrity: sha512-nRHHeO4hvoVsFr3EkQjz6hxB3r+IrFVZ/mg4kPEqQ76mg159nUNN/6c1wdpBibhCprklIPqIqmHrKGjQuKUVyQ==}
     dev: true
 
-  /@nsis/nlf@0.10.3:
-    resolution: {integrity: sha512-6WjaBGbbeOJcAMf4fQ2ilSEKkip15TFheEN7EcYeLHiMd/rvzRq6iesx2Sxpk7kj66Y1iuLa6GWQqOPnS0Cg0w==}
+  /@nsis/nlf@0.10.4:
+    resolution: {integrity: sha512-g/iVJ5IgyoT+W4MJdERGzIYUtEgt3bd2algXvwK7p4Uzws50Y7TFgAsiqlom7nd7lOpfVEx0mz3OOwG90gSJng==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dependencies:
       json5: 2.2.3
