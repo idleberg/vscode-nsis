@@ -4,6 +4,7 @@ import { getConfig } from 'vscode-get-config';
 import micromatch from 'micromatch';
 import type { CompilerOptions } from 'makensis';
 import vscode from 'vscode';
+import type { DiagnosticCollection } from '../types';
 
 export async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
 	if (!document) {
@@ -67,14 +68,14 @@ export async function updateDiagnostics(document: vscode.TextDocument | null, co
       console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     }
 
-    const diagnosticsResult: string[] = [];
+    const diagnosticsResult: DiagnosticCollection[] = [];
 
-    const warnings = await findWarnings(output.stdout);
+    const warnings = await findWarnings(output?.stdout);
     if (warnings) {
 			diagnosticsResult.push(...warnings);
 		}
 
-    const error = findErrors(output.stderr);
+    const error = findErrors(output?.stderr);
     if (error) {
 			diagnosticsResult.push(error);
 		}

@@ -8,13 +8,7 @@ import nsisChannel from './channel';
 import open from 'open';
 import vscode from 'vscode';
 import which from 'which';
-
-type DiagnosticCollection = {
-  code?: string;
-  message?: string;
-  range?: vscode.Range;
-  severity?: vscode.DiagnosticSeverity;
-}
+import type { DiagnosticCollection } from '../types';
 
 export function getNullDevice(): string {
   return isWindows()
@@ -221,12 +215,12 @@ export async function fileExists(filePath: string): Promise<boolean> {
   return true;
 }
 
-export async function findWarnings(input: string): Promise<unknown[]> {
+export async function findWarnings(input: string): Promise<DiagnosticCollection[]> {
   const output: DiagnosticCollection[] = [];
 
   const warningLines = input.split('\n');
   if (!warningLines.length) {
-    return [output];
+    return output;
   }
 
   if (warningLines.length) {
