@@ -216,6 +216,10 @@ export async function fileExists(filePath: string): Promise<boolean> {
 }
 
 export async function findWarnings(input: string): Promise<DiagnosticCollection[]> {
+  if (!input?.length) {
+    return [];
+  }
+
   const output: DiagnosticCollection[] = [];
 
   const warningLines = input.split('\n');
@@ -249,6 +253,10 @@ export async function findWarnings(input: string): Promise<DiagnosticCollection[
 }
 
 export function findErrors(input: string): DiagnosticCollection {
+  if (!input?.length) {
+    return {};
+  }
+
   const result = /(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(input);
 
   if (result !== null) {
