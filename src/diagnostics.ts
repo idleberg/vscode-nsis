@@ -1,8 +1,7 @@
-import { compile } from 'makensis';
+import * as NSIS from 'makensis';
 import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
 import { getConfig } from 'vscode-get-config';
 import micromatch from 'micromatch';
-import type { CompilerOptions } from 'makensis';
 import vscode from 'vscode';
 import type { DiagnosticCollection } from '../types';
 
@@ -38,7 +37,7 @@ export async function updateDiagnostics(document: vscode.TextDocument | null, co
       return;
     }
 
-    const options: CompilerOptions = {
+    const options: NSIS.CompilerOptions = {
       verbose: 2,
       pathToMakensis,
       postExecute: [
@@ -63,7 +62,7 @@ export async function updateDiagnostics(document: vscode.TextDocument | null, co
     let output;
 
     try {
-      output = await compile(document.fileName, options, await getSpawnEnv());
+      output = await NSIS.compile(document.fileName, options, await getSpawnEnv());
     } catch (error) {
       console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
     }
@@ -84,4 +83,6 @@ export async function updateDiagnostics(document: vscode.TextDocument | null, co
   } else {
     collection.clear();
   }
+
+  NSIS.events.removeAllListeners();
 }

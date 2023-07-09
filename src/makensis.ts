@@ -85,6 +85,7 @@ export async function compile(strictMode: boolean): Promise<void> {
       hasErrors
     });
   }
+
   NSIS.events.removeAllListeners();
 }
 
@@ -113,6 +114,7 @@ export async function showVersion(): Promise<void> {
     });
   }
 
+  NSIS.events.removeAllListeners();
 }
 
 export async function showCompilerFlags(): Promise<void> {
@@ -143,6 +145,7 @@ export async function showCompilerFlags(): Promise<void> {
     });
   }
 
+  NSIS.events.removeAllListeners();
 }
 
 export async function showHelp(): Promise<void> {
@@ -184,4 +187,6 @@ export async function showHelp(): Promise<void> {
       hasErrors
     });
   }
+
+  NSIS.events.removeAllListeners();
 }
