@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.8.1
     version: 0.8.1(tslib@2.6.0)(typescript@4.9.5)
   makensis:
-    specifier: ^2.0.7
-    version: 2.0.7
+    specifier: ^2.0.8
+    version: 2.0.8
   micromatch:
     specifier: ^4.0.5
     version: 4.0.5
@@ -5116,8 +5116,8 @@ packages:
       kind-of: 6.0.3
     dev: true
 
-  /makensis@2.0.7:
-    resolution: {integrity: sha512-dX4PYSo7ScXNC1zAs2D38riTxjqQrBFF9SjLnDr20i7dO9yObghdnaHN7jKD4ZBqcy2u4N4ZLbWpZietQ0lo1Q==}
+  /makensis@2.0.8:
+    resolution: {integrity: sha512-DEwR7EHnRAQEx5cgvLzHiIjwH471wEfJasa2mTMLuW6byYgY6F+87TiSj8n8C5OYtBCQwA8Fd6S7N0I5ayTvKQ==}
     engines: {node: ^14.8.0 || >=16.0.0}
     dependencies:
       '@nsis/language-data': 0.9.0

@@ -43,7 +43,7 @@
   "dependencies": {
     "@nsis/nlf": "^0.10.2",
     "@vscode/extension-telemetry": "^0.8.1",
-    "makensis": "^2.0.7",
+    "makensis": "^2.0.8",
     "micromatch": "^4.0.5",
     "open": "^8.4.2",
     "vscode-get-config": "^0.4.0",
