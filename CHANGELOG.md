@@ -8,7 +8,7 @@
 
 # 4.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.0)
 
-- add telemetry
+- add [telemetry](https://github.com/idleberg/vscode-nsis#telemetry)
 - minor improvements
 - downgrade dependencies
 
