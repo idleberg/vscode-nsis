@@ -223,6 +223,10 @@ To verify this behaviour, you can always [search](https://github.com/search?q=re
 
 This extension follows Visual Studio Code's global telemetry setting. You can also disable telemetry independently from the global setting.
 
+### But why?
+
+I'm currently in the process of sketching out plan for a complete rewrite. To evaluate which features I'm going to keep, alter or remove, data from users other than myself is valuable input in this process. Also, it helps finding client errors that I did not stumble upon myself.
+
 ## Related
 
 - [node-makensis](https://www.npmjs.com/package/makensis)
