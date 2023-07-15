@@ -206,6 +206,23 @@ NSIS_APP_ENVIRONMENT=development
 ```
 </details>
 
+## Telemetry
+
+As of v4.2.0, this extension makes use of telemetry. In the following, I will detail which tracking events are fired.
+
+Event Name          | Properties
+--------------------|----------------------------------------------
+`compile`           | `{ hasErrors: boolean, strictMode: boolean }`
+`convertNLF`        | `{ hasErrors: boolean }`
+`openSettings`      | `undefined`
+`showVersion`       | `{ hasErrors: boolean }`
+`showCompilerFlags` | `{ hasErrors: boolean }`
+`showHelp`          | `{ command: string?, hasErrors: boolean }`
+
+To verify this behaviour, you can always [search](https://github.com/search?q=repo%3Aidleberg%2Fvscode-nsis+sendTelemetryEvent&type=code) the source-code.
+
+This extension follows Visual Studio Code's global telemetry setting. You can also disable telemetry independently from the global setting.
+
 ## Related
 
 - [node-makensis](https://www.npmjs.com/package/makensis)
