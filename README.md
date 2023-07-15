@@ -214,7 +214,7 @@ Event Name          | Properties
 --------------------|----------------------------------------------
 `compile`           | `{ hasErrors: boolean, strictMode: boolean }`
 `convertNLF`        | `{ hasErrors: boolean }`
-`openSettings`      | `undefined`
+`openSettings`      | -
 `showVersion`       | `{ hasErrors: boolean }`
 `showCompilerFlags` | `{ hasErrors: boolean }`
 `showHelp`          | `{ command: string?, hasErrors: boolean }`
