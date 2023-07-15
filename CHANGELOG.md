@@ -1,3 +1,7 @@
+# 4.2.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.2)
+
+- fix minor error
+
 # 4.2.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.1)
 
 - update `makensis` and `@nsis/nlf` dependencies
