@@ -3,7 +3,7 @@ import TelemetryReporter, { type TelemetryEventProperties, type TelemetryEventMe
 
 function stringifyProperties(properties: Record<string, unknown>): TelemetryEventProperties {
   const newProperties = {};
-  Object.entries(properties).map(([key, value]) => newProperties[key] = String(value));
+  Object.entries(properties).map(([key, value]) => newProperties[key] = typeof value !== 'undefined' ? String(value) : undefined);
 
   return newProperties;
 }
