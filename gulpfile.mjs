@@ -1,6 +1,3 @@
-'use strict';
-
-// Dependencies
 import gulp from 'gulp';
 import raster from 'gulp-raster-update';
 import rename from 'gulp-rename';
