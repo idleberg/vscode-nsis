@@ -1,3 +1,7 @@
+# 4.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.3)
+
+- minor telemetry adjustments
+
 # 4.2.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.2)
 
 - fix minor error
