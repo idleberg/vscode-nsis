@@ -180,7 +180,7 @@ export function getLineLength(line: number): number {
   if (editorText && editorText.length) {
     const lines: string[] = editorText.split('\n');
 
-    return lines[line].length;
+    return lines[line]?.length || 0;
   }
 
   return 0;
