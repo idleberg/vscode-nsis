@@ -1,3 +1,8 @@
+# 4.2.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.4)
+
+- fix minor bug in line detection
+- update dependencies
+
 # 4.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.3)
 
 - minor telemetry adjustments
