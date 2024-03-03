@@ -2,10 +2,9 @@ import * as NSIS from 'makensis';
 import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
 import { getConfig } from 'vscode-get-config';
 import micromatch from 'micromatch';
-import vscode from 'vscode';
-import type { DiagnosticCollection } from '../types';
+import { type DiagnosticCollection, type TextDocument } from 'vscode';
 
-export async function updateDiagnostics(document: vscode.TextDocument | null, collection: vscode.DiagnosticCollection): Promise<void> {
+export async function updateDiagnostics(document: TextDocument | null, collection: DiagnosticCollection): Promise<void> {
 	if (!document) {
 		return;
 	}

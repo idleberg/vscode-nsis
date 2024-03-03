@@ -2,7 +2,7 @@ import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flags
 import { getConfig } from 'vscode-get-config';
 import { sendTelemetryEvent } from './telemetry';
 import * as NSIS from 'makensis';
-import vscode from 'vscode';
+import { commands, window } from 'vscode';
 
 import {
   getMakensisPath,
@@ -15,7 +15,7 @@ import {
 import nsisChannel from './channel';
 
 export async function compile(strictMode: boolean): Promise<void> {
-	const activeTextEditor = vscode.window?.activeTextEditor;
+	const activeTextEditor = window?.activeTextEditor;
 
 	if (!activeTextEditor) {
 		return;
@@ -35,13 +35,13 @@ export async function compile(strictMode: boolean): Promise<void> {
 
   if (isHeaderFile(document.fileName)) {
     if (processHeaders === "Disallow") {
-      const choice = await vscode.window.showWarningMessage('Compiling header files is blocked by default. You can allow it in the package settings, or mute this warning.', 'Open Settings');
+      const choice = await window.showWarningMessage('Compiling header files is blocked by default. You can allow it in the package settings, or mute this warning.', 'Open Settings');
       if (choice === 'Open Settings') {
-        vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis processHeaders');
+        commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis processHeaders');
         return;
       }
     } else if (processHeaders === "Disallow & Never Ask Me") {
-      vscode.window.setStatusBarMessage("makensis: Skipped header file", 5000);
+      window.setStatusBarMessage("makensis: Skipped header file", 5000);
       return;
     }
   }
@@ -50,7 +50,7 @@ export async function compile(strictMode: boolean): Promise<void> {
     await document.save();
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
-    vscode.window.showErrorMessage('Error saving file, see console for details');
+    window.showErrorMessage('Error saving file, see console for details');
     return;
   }
 
@@ -172,7 +172,7 @@ export async function showHelp(): Promise<void> {
       },
       await getSpawnEnv()
     );
-    command = await vscode.window.showQuickPick(Object.keys(output.stdout)) || undefined;
+    command = await window.showQuickPick(Object.keys(output.stdout)) || undefined;
 
     if (command) {
       openURL(command);

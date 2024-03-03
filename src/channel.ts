@@ -1,3 +1,3 @@
-import vscode from 'vscode';
+import { window } from 'vscode';
 
-export default vscode.window.createOutputChannel('NSIS', 'makensis-log');
+export default window.createOutputChannel('NSIS', 'makensis');

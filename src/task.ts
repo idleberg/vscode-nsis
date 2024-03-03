@@ -2,11 +2,11 @@ import { getConfig } from 'vscode-get-config';
 import { getPrefix, inRange } from './util';
 import { join } from 'path';
 import { promises as fs } from 'fs';
-import vscode from 'vscode';
+import { workspace, window } from 'vscode';
 
 export async function createTask(): Promise<unknown> {
-  if (typeof vscode.workspace.workspaceFolders === 'undefined') {
-    return vscode.window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
+  if (typeof workspace.workspaceFolders === 'undefined') {
+    return window.showErrorMessage('Task support is only available when working on a workspace folder. It is not available when editing single files.');
   }
 
   const { alwaysOpenBuildTask, compiler } = await getConfig('nsis');
@@ -43,7 +43,7 @@ export async function createTask(): Promise<unknown> {
   };
 
   const jsonString = JSON.stringify(taskFile, null, 2);
-  const dotFolder = join(vscode.workspace.workspaceFolders[0].uri.fsPath, '/.vscode');
+  const dotFolder = join(workspace.workspaceFolders[0].uri.fsPath, '/.vscode');
   const buildFile = join(dotFolder, 'tasks.json');
 
   try {
@@ -57,12 +57,12 @@ export async function createTask(): Promise<unknown> {
     await fs.writeFile(buildFile, jsonString);
 
   } catch(error) {
-    vscode.window.showErrorMessage(error.toString());
+    window.showErrorMessage(error.toString());
   }
 
   if (alwaysOpenBuildTask === false) return;
 
   // Open tasks.json
-  const doc = await vscode.workspace.openTextDocument(buildFile)
-  vscode.window.showTextDocument(doc);
+  const doc = await workspace.openTextDocument(buildFile)
+  window.showTextDocument(doc);
 }

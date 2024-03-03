@@ -3,7 +3,7 @@ import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import { type CompilerOutput } from 'makensis';
 import nsisChannel from './channel';
-import vscode from 'vscode';
+import { window } from 'vscode';
 
 export async function compilerOutputHandler(data: CompilerOutput): Promise<void> {
   const { showOutputView } = await getConfig('nsis');
@@ -48,10 +48,10 @@ export async function compilerExitHandler(data: CompilerOutput): Promise<void> {
         nsisChannel.show();
       }
 
-      const choice = await vscode.window.showWarningMessage(`Compiled with warnings`, openButton, revealButton);
+      const choice = await window.showWarningMessage(`Compiled with warnings`, openButton, revealButton);
       await buttonHandler(choice, data.outFile);
     } else if (showNotifications) {
-      const choice = await vscode.window.showInformationMessage(`Compiled successfully`, openButton, revealButton);
+      const choice = await window.showInformationMessage(`Compiled successfully`, openButton, revealButton);
       await buttonHandler(choice, data.outFile);
     }
   } else if (showNotifications) {
@@ -60,7 +60,7 @@ export async function compilerExitHandler(data: CompilerOutput): Promise<void> {
     }
 
     if (showNotifications) {
-      const choice = await vscode.window.showErrorMessage('Compilation failed, see output for details', 'Show Output');
+      const choice = await window.showErrorMessage('Compilation failed, see output for details', 'Show Output');
       await buttonHandler(choice);
     }
 
@@ -91,7 +91,7 @@ export async function versionHandler(data: unknown): Promise<void> {
   const message = `makensis ${output} (${pathToMakensis})`;
 
   if (showVersionAsInfoMessage === true) {
-    vscode.window.showInformationMessage(message);
+    window.showInformationMessage(message);
   } else {
     nsisChannel.append(message);
     nsisChannel.show();

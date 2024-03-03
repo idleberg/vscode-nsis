@@ -1,9 +1,9 @@
 import { sendTelemetryEvent } from './telemetry';
 import * as NLF from '@nsis/nlf';
-import vscode from 'vscode';
+import { workspace, window } from 'vscode';
 
 export function convert(): void {
-  const editor = vscode.window.activeTextEditor;
+  const editor = window.activeTextEditor;
 
   if (!editor) {
     return;
@@ -27,7 +27,7 @@ function convertNLF(document): void {
     output = NLF.parse(input, { stringify: true });
   } catch (err) {
     console.error(err);
-    vscode.window.showErrorMessage('Conversion failed, see output for details');
+    window.showErrorMessage('Conversion failed, see output for details');
     hasErrors = true;
   } finally {
     sendTelemetryEvent('convertNLF', {
@@ -58,5 +58,5 @@ function convertJSON(document): void {
 }
 
 function openNewFile(newDocument): void {
-  vscode.workspace.openTextDocument(newDocument).then( document => vscode.window.showTextDocument(document));
+  workspace.openTextDocument(newDocument).then( document => window.showTextDocument(document));
 }

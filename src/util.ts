@@ -6,7 +6,7 @@ import { platform } from 'os';
 import { resolve } from 'path';
 import nsisChannel from './channel';
 import open from 'open';
-import vscode from 'vscode';
+import { commands, DiagnosticSeverity, Position, Range, window, workspace } from 'vscode';
 import which from 'which';
 import type { DiagnosticCollection } from '../types';
 
@@ -61,9 +61,9 @@ export async function getMakensisPath(): Promise<string> {
     return result;
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
-    const choice = await vscode.window.showWarningMessage('Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.', 'Open Settings');
+    const choice = await window.showWarningMessage('Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.', 'Open Settings');
     if (choice === 'Open Settings') {
-      vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
+      commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
     }
 
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
@@ -92,7 +92,7 @@ export function openURL(cmd: string): void {
 }
 
 export async function pathWarning(): Promise<void> {
-  const choice = await vscode.window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
+  const choice = await window.showWarningMessage('makensis is not installed or missing in your PATH environmental variable', 'Download', 'Help')
 
   switch (choice) {
     case 'Download':
@@ -142,11 +142,11 @@ export async function runInstaller(outFile: string): Promise<void> {
 export async function buttonHandler(choice: string, outFile?: string): Promise<void> {
   switch (choice) {
     case 'Run':
-      await runInstaller(outFile);
+      await runInstaller(outFile!);
       break;
 
     case 'Reveal':
-      await revealInstaller(outFile);
+      await revealInstaller(outFile!);
       break;
 
     case 'Show Output':
@@ -175,7 +175,7 @@ export async function getOverrideCompression(): Promise<string> {
 }
 
 export function getLineLength(line: number): number {
-  const editorText = vscode.window.activeTextEditor?.document.getText();
+  const editorText = window.activeTextEditor?.document.getText();
 
   if (editorText && editorText.length) {
     const lines: string[] = editorText.split('\n');
@@ -187,11 +187,11 @@ export function getLineLength(line: number): number {
 }
 
 export async function showANSIDeprecationWarning(): Promise<void> {
-  const choice = await vscode.window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Unicode Installer', 'Open Settings')
+  const choice = await window.showWarningMessage('ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.', 'Unicode Installer', 'Open Settings')
 
   switch (choice) {
     case 'Open Settings':
-      vscode.commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis muteANSIDeprecationWarning');
+      commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis muteANSIDeprecationWarning');
       break;
 
     case 'Unicode Installer':
@@ -238,8 +238,8 @@ export async function findWarnings(input: string): Promise<DiagnosticCollection[
         output.push({
           code: '',
           message: result.groups?.message,
-          range: new vscode.Range(new vscode.Position(warningLine, 0), new vscode.Position(warningLine, getLineLength(warningLine))),
-          severity: vscode.DiagnosticSeverity.Warning
+          range: new Range(new Position(warningLine, 0), new Position(warningLine, getLineLength(warningLine))),
+          severity: DiagnosticSeverity.Warning
         });
       }
     });
@@ -265,8 +265,8 @@ export function findErrors(input: string): DiagnosticCollection {
     return {
       code: '',
       message: result?.groups?.message,
-      range: new vscode.Range(new vscode.Position(errorLine, 0), new vscode.Position(errorLine, getLineLength(errorLine))),
-      severity: vscode.DiagnosticSeverity.Error
+      range: new Range(new Position(errorLine, 0), new Position(errorLine, getLineLength(errorLine))),
+      severity: DiagnosticSeverity.Error
     };
   }
 
@@ -277,13 +277,13 @@ export async function getProjectPath(): Promise<null | string> {
   let editor;
 
   try {
-    editor = vscode.window.activeTextEditor;
+    editor = window.activeTextEditor;
   } catch (err) {
     return null;
   }
 
   try {
-    const workspaceFolder = vscode.workspace.getWorkspaceFolder(editor.document.uri);
+    const workspaceFolder = workspace.getWorkspaceFolder(editor.document.uri);
 
     return workspaceFolder ? workspaceFolder.uri.fsPath : '';
   } catch (error) {
@@ -292,7 +292,7 @@ export async function getProjectPath(): Promise<null | string> {
 }
 
 export async function getSpawnEnv(): Promise<SpawnOptions> {
-  const { integrated } = vscode.workspace.getConfiguration('terminal');
+  const { integrated } = workspace.getConfiguration('terminal');
   const mappedPlatform = mapPlatform();
 
   return {
