@@ -263,7 +263,7 @@
     },
     "languages": [
       {
-        "id": "makensis-log",
+        "id": "makensis",
         "aliases": [
           "MakeNSIS Log"
         ]
@@ -300,9 +300,9 @@
     ],
     "grammars": [
       {
-        "language": "makensis-log",
+        "language": "makensis",
         "scopeName": "source.makensis",
-        "path": "./syntaxes/makensis-log.tmLanguage"
+        "path": "./syntaxes/makensis.tmLanguage"
       },
       {
         "language": "nsis",
