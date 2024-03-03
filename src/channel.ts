@@ -1,7 +1,7 @@
 import vscode from 'vscode';
 
 export default {
-  outputChannel: vscode.window.createOutputChannel('NSIS'),
+  outputChannel: vscode.window.createOutputChannel('NSIS', 'makensis-log'),
 
   async clear(): Promise<void> {
     this.outputChannel.clear();

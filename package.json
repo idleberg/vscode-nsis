@@ -73,6 +73,9 @@
     "ovsx": "^0.8.2",
     "typescript": "^5.1.6"
   },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "icon": "resources/logo.png",
   "galleryBanner": {
     "color": "#9e90aa",
@@ -268,6 +271,12 @@
     },
     "languages": [
       {
+        "id": "makensis-log",
+        "aliases": [
+          "MakeNSIS Log"
+        ]
+      },
+      {
         "id": "nsis",
         "aliases": [
           "NSIS",
@@ -298,6 +307,11 @@
       }
     ],
     "grammars": [
+      {
+        "language": "makensis-log",
+        "scopeName": "source.makensis",
+        "path": "./syntaxes/makensis-log.tmLanguage"
+      },
       {
         "language": "nsis",
         "scopeName": "source.nsis",
