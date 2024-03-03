@@ -1,6 +1,5 @@
 import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './handlers';
 import { getConfig } from 'vscode-get-config';
-import { sendTelemetryEvent } from './telemetry';
 import * as NSIS from 'makensis';
 import { commands, window } from 'vscode';
 
@@ -60,8 +59,6 @@ export async function compile(strictMode: boolean): Promise<void> {
   NSIS.events.on('stderr', async data => await compilerErrorHandler(data));
   NSIS.events.once('exit', async data => await compilerExitHandler(data));
 
-  let hasErrors = false;
-
   try {
     await NSIS.compile(
       document.fileName,
@@ -78,12 +75,6 @@ export async function compile(strictMode: boolean): Promise<void> {
     );
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
-    hasErrors = true;
-  } finally {
-    sendTelemetryEvent('compile', {
-      strictMode,
-      hasErrors
-    });
   }
 
   NSIS.events.removeAllListeners();
@@ -93,8 +84,6 @@ export async function showVersion(): Promise<void> {
   await nsisChannel.clear();
 
   NSIS.events.once('exit', versionHandler);
-
-  let hasErrors = false;
 
   try {
     await NSIS.version(
@@ -107,11 +96,6 @@ export async function showVersion(): Promise<void> {
 
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
-    hasErrors = true;
-  } finally {
-    sendTelemetryEvent('showVersion', {
-      hasErrors
-    });
   }
 
   NSIS.events.removeAllListeners();
@@ -125,8 +109,6 @@ export async function showCompilerFlags(): Promise<void> {
 
   NSIS.events.once('exit', flagsHandler);
 
-  let hasErrors = false;
-
   try {
     await NSIS.headerInfo(
       {
@@ -138,11 +120,6 @@ export async function showCompilerFlags(): Promise<void> {
     );
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
-    hasErrors = true;
-  } finally {
-    sendTelemetryEvent('showCompilerFlags', {
-      hasErrors
-    });
   }
 
   NSIS.events.removeAllListeners();
@@ -162,7 +139,6 @@ export async function showHelp(): Promise<void> {
     return;
   }
 
-  let hasErrors = false;
   let command: string | undefined = undefined;
 
   try {
@@ -180,12 +156,6 @@ export async function showHelp(): Promise<void> {
 
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof error ? error.message : error);
-    hasErrors = true;
-  } finally {
-    sendTelemetryEvent('showHelp', {
-      command,
-      hasErrors
-    });
   }
 
   NSIS.events.removeAllListeners();

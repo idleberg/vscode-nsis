@@ -36,7 +36,6 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@nsis/nlf": "^0.10.4",
-    "@vscode/extension-telemetry": "^0.8.2",
     "makensis": "^2.0.8",
     "micromatch": "^4.0.5",
     "open": "^8.4.2",

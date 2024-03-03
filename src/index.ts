@@ -5,7 +5,6 @@ import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { convert } from './nlf';
 import { createTask } from './task';
 import { getConfig } from 'vscode-get-config';
-import { reporter, sendTelemetryEvent } from './telemetry';
 import { updateDiagnostics } from './diagnostics';
 
 async function activate(context: ExtensionContext): Promise<void> {
@@ -62,7 +61,6 @@ async function activate(context: ExtensionContext): Promise<void> {
   context.subscriptions.push(
     commands.registerCommand('extension.nsis.open-settings', async () => {
       commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
-      await sendTelemetryEvent('openSettings');
     })
   );
 
