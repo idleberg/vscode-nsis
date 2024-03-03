@@ -1,3 +1,8 @@
+# 4.3.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.3.4)
+
+- add basic custom highlighter for makensis output
+- update tooling
+
 # 4.2.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.4)
 
 - fix minor bug in line detection
