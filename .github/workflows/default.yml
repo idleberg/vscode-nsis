@@ -11,7 +11,6 @@ on:
     - 'snippets/**'
     - 'src/**'
     - 'syntaxes/**'
-    - 'tools/**'
     - 'package.json'
     - 'pnpm-lock.yaml'
   pull_request:
@@ -24,7 +23,6 @@ on:
     - 'snippets/**'
     - 'src/**'
     - 'syntaxes/**'
-    - 'tools/**'
     - 'package.json'
     - 'pnpm-lock.yaml'
   workflow_dispatch:
@@ -38,42 +36,39 @@ jobs:
         os: [ubuntu-latest]
 
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 1
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 1
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4.0.1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - uses: pnpm/action-setup@v2.0.1
-      name: Install pnpm
-      id: pnpm-install
-      with:
-        version: 8
-        run_install: false
+      - name: Enable Corepack
+        run: corepack enable
 
-    - name: Get pnpm store directory
-      id: pnpm-cache
-      run: |
-        echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - uses: actions/cache@v3
-      name: Setup pnpm cache
-      with:
-        path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-pnpm-store-
+      - uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4.0.0
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile --strict-peer-dependencies
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
-    - name: Lint Source
-      run: pnpm run --if-present lint
+      - name: Lint Source
+        run: pnpm run --if-present lint
 
-    - name: Build Source
-      run: pnpm run --if-present build
+      - name: Build Source
+        run: pnpm run --if-present build
 
-    - name: Run Tests
-      run: pnpm run --if-present test
+      - name: Run Tests
+        run: pnpm run --if-present test
+

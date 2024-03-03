@@ -10,22 +10,16 @@
     "url": "http://github.com/idleberg"
   },
   "scripts": {
-    "compile": "npm run build",
-    "build": "npm-run-all --parallel build:*",
-    "build:code": "esbuild ./src/index.ts --bundle --platform=node --outfile=./lib/extension.js --sourcemap --minify --external:vscode",
-    "build:icon": "gulp",
-    "dev": "npm run start",
-    "fix": "eslint --fix ./src",
-    "lint:json": "eslint --ext .json --ignore-path .gitignore",
-    "lint:ts": "eslint ./src --ignore-path .gitignore",
-    "lint:yaml": "eslint --ext .yaml --ext .yml --ignore-path .gitignore",
-    "lint": "npm-run-all --parallel lint:*",
-    "package": "vsce package --no-dependencies --githubBranch main",
-    "prepare": "husky install",
-    "publish": "vsce publish --no-dependencies --githubBranch main && ovsx publish",
-    "start": "npm run build:code -- --watch",
-    "test": "npm run lint",
-    "vscode:prepublish": "npm run build"
+		"compile": "npm run build",
+		"build": "tsup",
+		"dev": "npm run start",
+		"fix": "eslint --fix ./src",
+		"lint:ts": "eslint ./src",
+		"lint": "npm-run-all --parallel lint:*",
+		"prepare": "husky",
+		"start": "npm run build -- --watch",
+		"test": "npm run lint",
+		"vscode:prepublish": "npm run build"
   },
   "keywords": [
     "nsis",
@@ -39,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/idleberg/vscode-nsis/issues"
   },
-  "main": "./lib/extension",
+  "main": "./lib/index.js",
   "dependencies": {
     "@nsis/nlf": "^0.10.4",
     "@vscode/extension-telemetry": "^0.8.2",
@@ -50,28 +44,26 @@
     "which": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.9",
-    "@babel/preset-env": "^7.22.9",
-    "@babel/register": "^7.22.5",
+    "@eslint/js": "^8.56.0",
+    "@types/node": "^20.11.19",
+    "@types/vscode": "^1.52.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint-plugin-jsonc": "^2.13.0",
+    "eslint": "9.0.0-beta.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "npm-run-all2": "^6.1.2",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "typescript-eslint": "^7.0.2",
+    "typescript": "^5.3.3",
     "@nsis/logo": "0.0.0",
-    "@types/node": "^18.16.19",
-    "@types/vscode": "^1.75.0",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
-    "@vscode/vsce": "^2.19.0",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.17.19",
-    "eslint": "^8.45.0",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-yaml": "^0.5.0",
-    "gulp": "^4.0.2",
     "gulp-raster-update": "^0.2.0",
     "gulp-rename": "^2.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
-    "npm-run-all2": "^6.0.6",
-    "ovsx": "^0.8.2",
-    "typescript": "^5.1.6"
+    "gulp": "^4.0.2",
+    "ovsx": "^0.8.3"
   },
   "activationEvents": [
     "onStartupFinished"
@@ -611,5 +603,6 @@
   },
   "lint-staged": {
     "*.(ts|json|yml)": "eslint --cache --fix"
-  }
+  },
+  "packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
 }
