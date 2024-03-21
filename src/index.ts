@@ -1,19 +1,12 @@
-import { commands, env, type ExtensionContext, languages, window, workspace } from 'vscode';
+import { commands,  type ExtensionContext, languages, window, workspace } from 'vscode';
 
 // Load package components
 import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
 import { convert } from './nlf';
 import { createTask } from './task';
-import { getConfig } from 'vscode-get-config';
 import { updateDiagnostics } from './diagnostics';
 
 async function activate(context: ExtensionContext): Promise<void> {
-  const { disableTelemetry } = await getConfig('nsis');
-
-  if (env.appName !== 'VSCodium' && disableTelemetry === false) {
-    context.subscriptions.push(reporter);
-  }
-
   context.subscriptions.push(
     // TextEditor Commands
     commands.registerTextEditorCommand('extension.nsis.compile', async () => {
