@@ -55,10 +55,6 @@ export async function compile(strictMode: boolean): Promise<void> {
 
   nsisChannel.clear();
 
-  NSIS.events.on('stdout', async data => await compilerOutputHandler(data));
-  NSIS.events.on('stderr', async data => await compilerErrorHandler(data));
-  NSIS.events.once('exit', async data => await compilerExitHandler(data));
-
   try {
     await NSIS.compile(
       document.fileName,
@@ -66,6 +62,9 @@ export async function compile(strictMode: boolean): Promise<void> {
         env: await getProjectPath() || false,
         events: true,
         json: showFlagsAsObject,
+				onData: async data => await compilerOutputHandler(data),
+				onError: async data => await compilerErrorHandler(data),
+				onClose: async data => await compilerExitHandler(data),
         pathToMakensis: await getMakensisPath(),
         rawArguments: compiler.customArguments,
         strict: strictMode || compiler.strictMode,
@@ -76,19 +75,16 @@ export async function compile(strictMode: boolean): Promise<void> {
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
   }
-
-  NSIS.events.removeAllListeners();
 }
 
 export async function showVersion(): Promise<void> {
   await nsisChannel.clear();
 
-  NSIS.events.once('exit', versionHandler);
-
   try {
     await NSIS.version(
       {
         events: true,
+				onClose: async data => await versionHandler(data),
         pathToMakensis: await getMakensisPath()
       },
       await getSpawnEnv()
@@ -97,8 +93,6 @@ export async function showVersion(): Promise<void> {
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
   }
-
-  NSIS.events.removeAllListeners();
 }
 
 export async function showCompilerFlags(): Promise<void> {
@@ -107,13 +101,12 @@ export async function showCompilerFlags(): Promise<void> {
 
   await nsisChannel.clear();
 
-  NSIS.events.once('exit', flagsHandler);
-
   try {
     await NSIS.headerInfo(
       {
         events: true,
         json: showFlagsAsObject || false,
+				onClose: flagsHandler,
         pathToMakensis: pathToMakensis || undefined
       },
       await getSpawnEnv()
@@ -121,8 +114,6 @@ export async function showCompilerFlags(): Promise<void> {
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
   }
-
-  NSIS.events.removeAllListeners();
 }
 
 export async function showHelp(): Promise<void> {
@@ -157,6 +148,4 @@ export async function showHelp(): Promise<void> {
   } catch (error) {
     console.error('[vscode-nsis]', error instanceof error ? error.message : error);
   }
-
-  NSIS.events.removeAllListeners();
 }

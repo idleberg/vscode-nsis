@@ -150,7 +150,7 @@ export async function buttonHandler(choice: string, outFile?: string): Promise<v
       break;
 
     case 'Show Output':
-      nsisChannel.show();
+      nsisChannel.show(true);
       break;
   }
 }

@@ -11,7 +11,7 @@ export async function compilerOutputHandler(data: CompilerOutput): Promise<void>
   nsisChannel.appendLine(data.line);
 
   if (showOutputView === 'Always') {
-    nsisChannel.show();
+    nsisChannel.show(true);
   }
 }
 
@@ -21,7 +21,7 @@ export async function compilerErrorHandler(data: CompilerOutput): Promise<void> 
   nsisChannel.appendLine(data.line);
 
   if (showOutputView === 'On Errors') {
-    nsisChannel.show();
+    nsisChannel.show(true);
   }
 }
 
@@ -30,7 +30,7 @@ export async function compilerExitHandler(data: CompilerOutput): Promise<void> {
 
   if (data['status'] === 0) {
     if (showOutputView === 'Always') {
-      nsisChannel.show();
+      nsisChannel.show(true);
     }
 
     const outfileExists = await fileExists(String(data.outFile));
@@ -45,7 +45,7 @@ export async function compilerExitHandler(data: CompilerOutput): Promise<void> {
 
     if (data['warnings'] && showNotifications) {
       if (showOutputView === 'On Warnings & Errors') {
-        nsisChannel.show();
+        nsisChannel.show(true);
       }
 
       const choice = await window.showWarningMessage(`Compiled with warnings`, openButton, revealButton);
@@ -56,7 +56,7 @@ export async function compilerExitHandler(data: CompilerOutput): Promise<void> {
     }
   } else if (showNotifications) {
     if (showOutputView !== 'Never') {
-      nsisChannel.show();
+      nsisChannel.show(true);
     }
 
     if (showNotifications) {
@@ -80,7 +80,7 @@ export async function flagsHandler(data: unknown): Promise<void> {
   );
 
   nsisChannel.append(message);
-  nsisChannel.show();
+  nsisChannel.show(true);
 }
 
 export async function versionHandler(data: unknown): Promise<void> {
@@ -94,6 +94,6 @@ export async function versionHandler(data: unknown): Promise<void> {
     window.showInformationMessage(message);
   } else {
     nsisChannel.append(message);
-    nsisChannel.show();
+    nsisChannel.show(true);
   }
 }
