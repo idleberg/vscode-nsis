@@ -10,16 +10,16 @@
     "url": "http://github.com/idleberg"
   },
   "scripts": {
-		"compile": "npm run build",
-		"build": "tsup",
-		"dev": "npm run start",
-		"fix": "eslint --fix ./src",
-		"lint:ts": "eslint ./src",
-		"lint": "npm-run-all --parallel lint:*",
-		"prepare": "husky",
-		"start": "npm run build -- --watch",
-		"test": "npm run lint",
-		"vscode:prepublish": "npm run build"
+    "compile": "npm run build",
+    "build": "tsup",
+    "dev": "npm run start",
+    "fix": "eslint --fix ./src",
+    "lint:ts": "eslint ./src",
+    "lint": "npm-run-all --parallel lint:*",
+    "prepare": "husky",
+    "start": "npm run build -- --watch",
+    "test": "npm run lint",
+    "vscode:prepublish": "npm run build"
   },
   "keywords": [
     "nsis",
@@ -36,7 +36,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@nsis/nlf": "^0.10.4",
-    "makensis": "^2.0.8",
+    "makensis": "^3.0.0-alpha.1",
     "micromatch": "^4.0.5",
     "open": "^8.4.2",
     "vscode-get-config": "^0.4.0",
@@ -44,25 +44,25 @@
   },
   "devDependencies": {
     "@eslint/js": "^8.56.0",
+    "@nsis/logo": "0.0.0",
     "@types/node": "^20.11.19",
     "@types/vscode": "^1.52.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
-    "eslint-plugin-jsonc": "^2.13.0",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "cross-env": "^7.0.3",
     "eslint": "9.0.0-beta.0",
+    "eslint-plugin-jsonc": "^2.14.1",
+    "gulp": "^4.0.2",
+    "gulp-raster-update": "^0.2.0",
+    "gulp-rename": "^2.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
+    "ovsx": "^0.8.4",
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
-    "typescript-eslint": "^7.0.2",
-    "typescript": "^5.3.3",
-    "@nsis/logo": "0.0.0",
-    "cross-env": "^7.0.3",
-    "gulp-raster-update": "^0.2.0",
-    "gulp-rename": "^2.0.0",
-    "gulp": "^4.0.2",
-    "ovsx": "^0.8.3"
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^7.3.1"
   },
   "activationEvents": [
     "onStartupFinished"
