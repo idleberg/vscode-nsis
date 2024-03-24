@@ -6,7 +6,7 @@ import { convert } from './nlf';
 import { createTask } from './task';
 import { updateDiagnostics } from './diagnostics';
 
-async function activate(context: ExtensionContext): Promise<void> {
+export async function activate(context: ExtensionContext): Promise<void> {
 	context.subscriptions.push(
 		// TextEditor Commands
 		commands.registerTextEditorCommand('extension.nsis.compile', async () => {
@@ -32,7 +32,7 @@ async function activate(context: ExtensionContext): Promise<void> {
 		})
 	);
 
-	//Global Commands
+	// Global Commands
 	context.subscriptions.push(
 		commands.registerCommand('extension.nsis.show-version', async () => {
 			return await showVersion();
@@ -88,5 +88,3 @@ async function activate(context: ExtensionContext): Promise<void> {
 		}
 	}));
 }
-
-export { activate };
