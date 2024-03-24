@@ -35,7 +35,7 @@ export async function compilerError(data: string): Promise<void> {
 	}
 }
 
-export async function compilerExit(data: Makensis.CompilerData): Promise<void> {
+export async function compilerExit(data: Makensis.CompilerOutput): Promise<void> {
 	const { showNotifications, showOutputView } = await getConfig('nsis');
 
 	if (data['status'] === 0) {

@@ -273,24 +273,6 @@ export function findErrors(input: string): DiagnosticCollection {
 	return {};
 }
 
-export async function getProjectPath(): Promise<null | string> {
-	let editor;
-
-	try {
-		editor = window.activeTextEditor;
-	} catch (err) {
-		return null;
-	}
-
-	try {
-		const workspaceFolder = workspace.getWorkspaceFolder(editor.document.uri);
-
-		return workspaceFolder ? workspaceFolder.uri.fsPath : '';
-	} catch (error) {
-		return null;
-	}
-}
-
 export async function getSpawnEnv(): Promise<SpawnOptions> {
 	const { integrated } = workspace.getConfiguration('terminal');
 	const mappedPlatform = mapPlatform();

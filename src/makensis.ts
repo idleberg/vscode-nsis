@@ -5,7 +5,6 @@ import { commands, window } from 'vscode';
 
 import {
 	getMakensisPath,
-	getProjectPath,
 	getSpawnEnv,
 	isHeaderFile,
 	openURL,
@@ -59,7 +58,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 		await NSIS.compile(
 			document.fileName,
 			{
-				env: await getProjectPath() || false,
+				env: false,
 				events: true,
 				json: showFlagsAsObject,
 				onData: async data => await compilerOutput(data),
@@ -139,7 +138,7 @@ export async function showHelp(): Promise<void> {
 			},
 			await getSpawnEnv()
 		);
-		command = await window.showQuickPick(Object.keys(output.stdout)) || undefined;
+		command = await window.showQuickPick(Object.keys(output.stdout as string)) || undefined;
 
 		if (command) {
 			openURL(command);
