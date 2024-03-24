@@ -139,7 +139,7 @@ export async function runInstaller(outFile: string): Promise<void> {
 	}
 }
 
-export async function buttonHandler(choice: string, outFile?: string): Promise<void> {
+export async function buttonHandler(choice: string, outFile?: string | null): Promise<void> {
 	switch (choice) {
 		case 'Run':
 			await runInstaller(outFile!);

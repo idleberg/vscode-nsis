@@ -3,7 +3,7 @@ import { getConfig } from 'vscode-get-config';
 import { platform } from 'os';
 import type Makensis from 'makensis/types';
 import nsisChannel from './channel';
-import { window } from 'vscode';
+import { type MessageOptions, window } from 'vscode';
 
 const infoChannel = window.createOutputChannel('NSIS Info', 'json');
 
@@ -44,25 +44,32 @@ export async function compilerExit(data: Makensis.CompilerData): Promise<void> {
 		}
 
 		const outfileExists = await fileExists(String(data.outFile));
+		const buttons: string[] = [];
 
-		const openButton = (await isWindowsCompatible() === true && data.outFile?.length && outfileExists)
-			? 'Run'
-			: undefined;
+		if (await isWindowsCompatible() === true && data.outFile?.length && outfileExists) {
+			buttons.push('Run');
+		}
 
-		const revealButton = (outfileExists && ['win32', 'darwin', 'linux'].includes(platform()))
-			? 'Reveal'
-			: undefined;
+		if (outfileExists && ['win32', 'darwin', 'linux'].includes(platform())) {
+			buttons.push('Reveal');
+		}
 
 		if (data['warnings'] && showNotifications) {
 			if (showOutputView === 'On Warnings & Errors') {
 				nsisChannel.show(true);
 			}
 
-			const choice = await window.showWarningMessage(`Compiled with warnings`, openButton, revealButton);
-			await buttonHandler(choice, data.outFile);
+			const choice = await window.showWarningMessage(`Compiled with warnings`, buttons as MessageOptions);
+
+			if (choice) {
+				await buttonHandler(choice, data.outFile);
+			}
 		} else if (showNotifications) {
-			const choice = await window.showInformationMessage(`Compiled successfully`, openButton, revealButton);
-			await buttonHandler(choice, data.outFile);
+			const choice = await window.showInformationMessage(`Compiled successfully`, buttons as MessageOptions);
+
+			if (choice) {
+				await buttonHandler(choice, data.outFile);
+			}
 		}
 	} else if (showNotifications) {
 		if (showOutputView !== 'Never') {
@@ -71,7 +78,10 @@ export async function compilerExit(data: Makensis.CompilerData): Promise<void> {
 
 		if (showNotifications) {
 			const choice = await window.showErrorMessage('Compilation failed, see output for details', 'Show Output');
-			await buttonHandler(choice);
+
+			if (choice) {
+				await buttonHandler(choice, data.outFile);
+			}
 		}
 
 		if (data['stderr']?.length) {
@@ -80,7 +90,9 @@ export async function compilerExit(data: Makensis.CompilerData): Promise<void> {
 	}
 }
 
-export async function flagsCallback(data: unknown): Promise<void> {
+export async function flagsCallback(data: Makensis.CompilerOutput): Promise<void> {
+	infoChannel.clear();
+
 	const { showFlagsAsObject } = await getConfig('nsis');
 
 	const output = data['stdout'] || data['stderr'];
@@ -89,11 +101,17 @@ export async function flagsCallback(data: unknown): Promise<void> {
 		: output
 	);
 
+	if (typeof message !== 'string') {
+		return;
+	}
+
 	infoChannel.append(message);
 	infoChannel.show(true);
 }
 
-export async function versionCallback(data: unknown): Promise<void> {
+export async function versionCallback(data: Makensis.CompilerOutput): Promise<void> {
+	infoChannel.clear();
+
 	const { showVersionAsInfoMessage } = await getConfig('nsis');
 	const pathToMakensis = await getMakensisPath();
 
