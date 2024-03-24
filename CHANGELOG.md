@@ -2,6 +2,8 @@
 
 - split output channels
 - minor refactoring
+- improve type definitions
+- update dependencies
 
 # 4.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.3.1)
 
@@ -13,6 +15,7 @@
 - defer activation
 - use `makensis@3.0.0-alpha.2`
 - update tooling
+- update dependencies
 
 # 4.2.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.4)
 
