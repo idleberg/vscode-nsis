@@ -6,7 +6,6 @@ import nsisChannel from './channel';
 import { window } from 'vscode';
 
 export async function compilerOutputHandler(data: Makensis.CompilerData): Promise<void> {
-	console.log('compilerOutputHandler', data);
 	if (!data?.line) {
 		return;
 	}
@@ -20,15 +19,14 @@ export async function compilerOutputHandler(data: Makensis.CompilerData): Promis
 	}
 }
 
-export async function compilerErrorHandler(data: Makensis.CompilerData): Promise<void> {
-	console.log('compilerErrorHandler', data);
-	if (!data?.line) {
+export async function compilerErrorHandler(data: string): Promise<void> {
+	if (!data) {
 		return;
 	}
 
 	const { showOutputView } = await getConfig('nsis');
 
-	nsisChannel.appendLine(data.line);
+	nsisChannel.appendLine(data);
 
 	if (showOutputView === 'On Errors') {
 		nsisChannel.show(true);
@@ -36,7 +34,6 @@ export async function compilerErrorHandler(data: Makensis.CompilerData): Promise
 }
 
 export async function compilerExitHandler(data: Makensis.CompilerData): Promise<void> {
-	console.log('compilerExitHandler', data);
 	const { showNotifications, showOutputView } = await getConfig('nsis');
 
 	if (data['status'] === 0) {
