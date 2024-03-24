@@ -2,7 +2,7 @@
 
 - add basic custom highlighter for makensis output
 - defer activation
-- using `makensis@3.0.0-alpha`
+- use `makensis@3.0.0-alpha.2`
 - update tooling
 
 # 4.2.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.4)
