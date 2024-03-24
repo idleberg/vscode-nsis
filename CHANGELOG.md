@@ -14,6 +14,7 @@
 - add basic custom highlighter for makensis output
 - defer activation
 - use `makensis@3.0.0-alpha.2`
+- remove telemetry
 - update tooling
 - update dependencies
 
