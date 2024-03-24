@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>^\s*(!error:|Error in script).*$</string>
+			<string>^\s*(!error:|Error in script|Error: warning treated as error).*$</string>
 			<key>name</key>
 			<string>invalid.illegal</string>
 		</dict>
