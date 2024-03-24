@@ -1,4 +1,4 @@
-import { compilerOutputHandler, compilerErrorHandler, compilerExitHandler, flagsHandler, versionHandler } from './callbacks';
+import { compilerOutput, compilerError, compilerExit, flagsCallback, versionCallback } from './callbacks';
 import { getConfig } from 'vscode-get-config';
 import * as NSIS from 'makensis';
 import { commands, window } from 'vscode';
@@ -62,9 +62,9 @@ export async function compile(strictMode: boolean): Promise<void> {
 				env: await getProjectPath() || false,
 				events: true,
 				json: showFlagsAsObject,
-				onData: async data => await compilerOutputHandler(data),
-				onError: async data => await compilerErrorHandler(data),
-				onClose: async data => await compilerExitHandler(data),
+				onData: async data => await compilerOutput(data),
+				onError: async data => await compilerError(data),
+				onClose: async data => await compilerExit(data),
 				pathToMakensis: await getMakensisPath(),
 				rawArguments: compiler.customArguments,
 				strict: strictMode || compiler.strictMode,
@@ -84,7 +84,7 @@ export async function showVersion(): Promise<void> {
 		await NSIS.version(
 			{
 				events: true,
-				onClose: async data => await versionHandler(data),
+				onClose: async data => await versionCallback(data),
 				pathToMakensis: await getMakensisPath()
 			},
 			await getSpawnEnv()
@@ -106,7 +106,7 @@ export async function showCompilerFlags(): Promise<void> {
 			{
 				events: true,
 				json: showFlagsAsObject || false,
-				onClose: flagsHandler,
+				onClose: flagsCallback,
 				pathToMakensis: pathToMakensis || undefined
 			},
 			await getSpawnEnv()
