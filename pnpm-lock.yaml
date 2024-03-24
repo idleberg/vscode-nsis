@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@nsis/nlf':
-    specifier: ^0.10.4
-    version: 0.10.4
+    specifier: ^0.12.0
+    version: 0.12.0
   makensis:
     specifier: ^3.0.0-alpha.2
     version: 3.0.0-alpha.2
@@ -437,9 +437,9 @@ packages:
     resolution: {integrity: sha512-nRHHeO4hvoVsFr3EkQjz6hxB3r+IrFVZ/mg4kPEqQ76mg159nUNN/6c1wdpBibhCprklIPqIqmHrKGjQuKUVyQ==}
     dev: true
 
-  /@nsis/nlf@0.10.4:
-    resolution: {integrity: sha512-g/iVJ5IgyoT+W4MJdERGzIYUtEgt3bd2algXvwK7p4Uzws50Y7TFgAsiqlom7nd7lOpfVEx0mz3OOwG90gSJng==}
-    engines: {node: ^14.13.1 || >=16.0.0}
+  /@nsis/nlf@0.12.0:
+    resolution: {integrity: sha512-Lx8vw99qG/yBhmzG0B0ASsKBEheOrO8AqsBV/0Gwh1keFOeYcQXk3iWu1iHFIMzFQtnpVUNTAyYefj3IfZxBBA==}
+    engines: {node: '>=18.0.0'}
     dependencies:
       json5: 2.2.3
     dev: false

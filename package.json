@@ -35,7 +35,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "@nsis/nlf": "^0.10.4",
+    "@nsis/nlf": "^0.12.0",
     "makensis": "^3.0.0-alpha.2",
     "micromatch": "^4.0.5",
     "open": "^8.4.2",

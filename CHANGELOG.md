@@ -1,6 +1,7 @@
 # 4.x.x [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.x.x)
 
 - split output channels
+- minor refactoring
 
 # 4.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.3.1)
 
