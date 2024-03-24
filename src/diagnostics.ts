@@ -2,6 +2,7 @@ import { compile } from 'makensis';
 import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
 import { getConfig } from 'vscode-get-config';
 import micromatch from 'micromatch';
+
 import { type DiagnosticCollection, type TextDocument } from 'vscode';
 
 export async function updateDiagnostics(document: TextDocument | null, collection: DiagnosticCollection): Promise<void> {

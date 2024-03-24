@@ -1,11 +1,10 @@
 import { fileExists, getMakensisPath, isWindowsCompatible, buttonHandler } from './util';
 import { getConfig } from 'vscode-get-config';
-import { platform } from 'os';
-import type Makensis from 'makensis/types';
-import nsisChannel from './channel';
-import { type MessageOptions, window } from 'vscode';
+import { infoChannel, makensisChannel } from './channel';
+import { platform } from 'node:os';
 
-const infoChannel = window.createOutputChannel('NSIS Info', 'json');
+import { type MessageOptions, window } from 'vscode';
+import type Makensis from 'makensis/types';
 
 export async function compilerOutput(data: Makensis.CompilerData): Promise<void> {
 	if (!data?.line) {
@@ -14,10 +13,10 @@ export async function compilerOutput(data: Makensis.CompilerData): Promise<void>
 
 	const { showOutputView } = await getConfig('nsis');
 
-	nsisChannel.appendLine(data.line);
+	makensisChannel.appendLine(data.line);
 
 	if (showOutputView === 'Always') {
-		nsisChannel.show(true);
+		makensisChannel.show(true);
 	}
 }
 
@@ -28,10 +27,10 @@ export async function compilerError(data: string): Promise<void> {
 
 	const { showOutputView } = await getConfig('nsis');
 
-	nsisChannel.appendLine(data);
+	makensisChannel.appendLine(data);
 
 	if (showOutputView === 'On Errors') {
-		nsisChannel.show(true);
+		makensisChannel.show(true);
 	}
 }
 
@@ -40,7 +39,7 @@ export async function compilerExit(data: Makensis.CompilerOutput): Promise<void>
 
 	if (data['status'] === 0) {
 		if (showOutputView === 'Always') {
-			nsisChannel.show(true);
+			makensisChannel.show(true);
 		}
 
 		const outfileExists = await fileExists(String(data.outFile));
@@ -56,7 +55,7 @@ export async function compilerExit(data: Makensis.CompilerOutput): Promise<void>
 
 		if (data['warnings'] && showNotifications) {
 			if (showOutputView === 'On Warnings & Errors') {
-				nsisChannel.show(true);
+				makensisChannel.show(true);
 			}
 
 			const choice = await window.showWarningMessage(`Compiled with warnings`, buttons as MessageOptions);
@@ -73,7 +72,7 @@ export async function compilerExit(data: Makensis.CompilerOutput): Promise<void>
 		}
 	} else if (showNotifications) {
 		if (showOutputView !== 'Never') {
-			nsisChannel.show(true);
+			makensisChannel.show(true);
 		}
 
 		if (showNotifications) {

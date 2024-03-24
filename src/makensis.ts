@@ -1,8 +1,6 @@
+import { commands, window } from 'vscode';
 import { compilerOutput, compilerError, compilerExit, flagsCallback, versionCallback } from './callbacks';
 import { getConfig } from 'vscode-get-config';
-import * as NSIS from 'makensis';
-import { commands, window } from 'vscode';
-
 import {
 	getMakensisPath,
 	getSpawnEnv,
@@ -10,7 +8,8 @@ import {
 	openURL,
 	pathWarning
 } from './util';
-import nsisChannel from './channel';
+import { makensisChannel } from './channel';
+import * as NSIS from 'makensis';
 
 export async function compile(strictMode: boolean): Promise<void> {
 	const activeTextEditor = window?.activeTextEditor;
@@ -24,7 +23,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 		: activeTextEditor['document']['languageId'];
 
 	if (!activeTextEditor || languageID !== 'nsis') {
-		nsisChannel.appendLine('This command is only available for NSIS files');
+		makensisChannel.appendLine('This command is only available for NSIS files');
 		return;
 	}
 
@@ -52,7 +51,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 		return;
 	}
 
-	nsisChannel.clear();
+	makensisChannel.clear();
 
 	try {
 		await NSIS.compile(
@@ -77,7 +76,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 }
 
 export async function showVersion(): Promise<void> {
-	await nsisChannel.clear();
+	await makensisChannel.clear();
 
 	try {
 		await NSIS.version(
@@ -98,7 +97,7 @@ export async function showCompilerFlags(): Promise<void> {
 	const { showFlagsAsObject } = await getConfig('nsis');
 	const pathToMakensis = await getMakensisPath();
 
-	await nsisChannel.clear();
+	await makensisChannel.clear();
 
 	try {
 		await NSIS.headerInfo(
@@ -116,7 +115,7 @@ export async function showCompilerFlags(): Promise<void> {
 }
 
 export async function showHelp(): Promise<void> {
-	nsisChannel.clear();
+	makensisChannel.clear();
 
 	let pathToMakensis;
 

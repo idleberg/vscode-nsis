@@ -1,7 +1,7 @@
 import { getConfig } from 'vscode-get-config';
 import { getPrefix, inRange } from './util';
-import { join } from 'path';
-import { promises as fs } from 'fs';
+import { join } from 'node:path';
+import { promises as fs } from 'node:fs';
 import { workspace, window } from 'vscode';
 
 export async function createTask(): Promise<unknown> {

@@ -1,13 +1,14 @@
-import { constants, promises as fs } from 'fs';
-import { exec, spawn } from 'child_process';
-import type { SpawnOptions } from 'node:child_process';
-import { getConfig } from 'vscode-get-config';
-import { platform } from 'os';
-import { resolve } from 'path';
-import nsisChannel from './channel';
-import open from 'open';
 import { commands, DiagnosticSeverity, Position, Range, window, workspace } from 'vscode';
+import { constants, promises as fs } from 'node:fs';
+import { exec, spawn } from 'node:child_process';
+import { getConfig } from 'vscode-get-config';
+import { makensisChannel } from './channel';
+import { platform } from 'node:os';
+import { resolve } from 'node:path';
+import open from 'open';
 import which from 'which';
+
+import type { SpawnOptions } from 'node:child_process';
 import type { DiagnosticCollection } from '../types';
 
 export function getNullDevice(): string {
@@ -150,7 +151,7 @@ export async function buttonHandler(choice: string, outFile?: string | null): Pr
 			break;
 
 		case 'Show Output':
-			nsisChannel.show(true);
+			makensisChannel.show(true);
 			break;
 	}
 }
