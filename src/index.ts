@@ -1,12 +1,10 @@
 import { commands, type ExtensionContext, languages, window, workspace } from 'vscode';
 
-// Load package components
-import { compile, showCompilerFlags, showVersion, showHelp } from './makensis';
-import { convert } from './nlf';
-import { createTask } from './task';
-import { updateDiagnostics } from './diagnostics';
-
 export async function activate(context: ExtensionContext): Promise<void> {
+	const { compile, showCompilerFlags, showVersion, showHelp } = await import('./makensis');
+	const { convert } = await import('./nlf');
+	const { createTask } = await import ('./task');
+
 	context.subscriptions.push(
 		// TextEditor Commands
 		commands.registerTextEditorCommand('extension.nsis.compile', async () => {
@@ -44,6 +42,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 	);
 
 	// Diagnostics
+	const { updateDiagnostics } = await import('./diagnostics');
 	const collection = languages.createDiagnosticCollection('nsis');
 
 	if (window.activeTextEditor) {

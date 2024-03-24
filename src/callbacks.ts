@@ -5,6 +5,8 @@ import type Makensis from 'makensis/types';
 import nsisChannel from './channel';
 import { window } from 'vscode';
 
+const infoChannel = window.createOutputChannel('NSIS Info', 'json');
+
 export async function compilerOutput(data: Makensis.CompilerData): Promise<void> {
 	if (!data?.line) {
 		return;
@@ -87,8 +89,8 @@ export async function flagsCallback(data: unknown): Promise<void> {
 		: output
 	);
 
-	nsisChannel.append(message);
-	nsisChannel.show(true);
+	infoChannel.append(message);
+	infoChannel.show(true);
 }
 
 export async function versionCallback(data: unknown): Promise<void> {
@@ -101,7 +103,9 @@ export async function versionCallback(data: unknown): Promise<void> {
 	if (showVersionAsInfoMessage === true) {
 		window.showInformationMessage(message);
 	} else {
-		nsisChannel.append(message);
-		nsisChannel.show(true);
+		infoChannel.append(JSON.stringify({
+			version: message
+		}, null, 2));
+		infoChannel.show(true);
 	}
 }
