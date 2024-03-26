@@ -1,7 +1,7 @@
 # 4.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.4.0)
 
 - split output channels
-- minor refactoring
+- fix button handler
 - improve type definitions
 - update dependencies
 
