@@ -3,7 +3,7 @@ import { getConfig } from 'vscode-get-config';
 import { infoChannel, makensisChannel } from './channel';
 import { platform } from 'node:os';
 
-import { type MessageOptions, window } from 'vscode';
+import { window } from 'vscode';
 import type Makensis from 'makensis/types';
 
 export async function compilerOutput(data: Makensis.CompilerData): Promise<void> {
@@ -43,28 +43,26 @@ export async function compilerExit(data: Makensis.CompilerOutput): Promise<void>
 		}
 
 		const outfileExists = await fileExists(String(data.outFile));
-		const buttons: string[] = [];
 
-		if (await isWindowsCompatible() === true && data.outFile?.length && outfileExists) {
-			buttons.push('Run');
-		}
-
-		if (outfileExists && ['win32', 'darwin', 'linux'].includes(platform())) {
-			buttons.push('Reveal');
-		}
+		const openButton = (await isWindowsCompatible() === true && data.outFile?.length && outfileExists)
+			? 'Run'
+			: '';
+		const revealButton = (outfileExists && ['win32', 'darwin', 'linux'].includes(platform()))
+			? 'Reveal'
+			: '';
 
 		if (data['warnings'] && showNotifications) {
 			if (showOutputView === 'On Warnings & Errors') {
 				makensisChannel.show(true);
 			}
 
-			const choice = await window.showWarningMessage(`Compiled with warnings`, buttons as MessageOptions);
+			const choice = await window.showWarningMessage(`Compiled with warnings`, openButton, revealButton);
 
 			if (choice) {
 				await buttonHandler(choice, data.outFile);
 			}
 		} else if (showNotifications) {
-			const choice = await window.showInformationMessage(`Compiled successfully`, buttons as MessageOptions);
+			const choice = await window.showInformationMessage(`Compiled successfully`, openButton, revealButton);
 
 			if (choice) {
 				await buttonHandler(choice, data.outFile);
