@@ -280,6 +280,8 @@ export async function getSpawnEnv(): Promise<SpawnOptions> {
 
 	return {
 		env: {
+			// start with calling process env (this provides e.g. %PATH% on Windows)
+			...process.env,
 			NSISDIR: integrated.env[mappedPlatform].NSISDIR || process.env.NSISDIR || undefined,
 			NSISCONFDIR: integrated.env[mappedPlatform].NSISCONFDIR || process.env.NSISCONFDIR || undefined,
 			LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
