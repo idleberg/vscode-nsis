@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^22.10.1
     version: 22.10.1
   '@types/vscode':
-    specifier: ^1.95.0
-    version: 1.95.0
+    specifier: 1.75.0
+    version: 1.75.0
   concurrently:
     specifier: ^9.1.0
     version: 9.1.0
@@ -760,8 +760,8 @@ packages:
       undici-types: 6.20.0
     dev: true
 
-  /@types/vscode@1.95.0:
-    resolution: {integrity: sha512-0LBD8TEiNbet3NvWsmn59zLzOFu/txSlGxnv5yAFHCrhG9WvAnR3IvfHzMOs2aeWqgvNjq9pO99IUw8d3n+unw==}
+  /@types/vscode@1.75.0:
+    resolution: {integrity: sha512-SAr0PoOhJS6FUq5LjNr8C/StBKALZwDVm3+U4pjF/3iYkt3GioJOPV/oB1Sf1l7lROe4TgrMyL5N1yaEgTWycw==}
     dev: true
 
   /@typescript-eslint/eslint-plugin@8.17.0(@typescript-eslint/parser@8.17.0)(eslint@9.16.0)(typescript@5.7.2):
