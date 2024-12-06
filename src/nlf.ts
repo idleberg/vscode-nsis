@@ -40,8 +40,8 @@ function convertJSON(document): void {
 	try {
 		input = document.getText();
 		output = NLF.stringify(input);
-	} catch (err) {
-		undefined
+	} catch (error) {
+		console.error(`[vscode-nsis] ${error.message}`);
 	}
 
 	openNewFile({
