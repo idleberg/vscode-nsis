@@ -1,6 +1,6 @@
 # 4.4.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.4.1)
 
-- pass calling `process-env` when launching makensis
+- pass calling `process-env` when launching MakeNSIS
 - update dependencies
 
 # 4.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.4.0)
