@@ -17,8 +17,8 @@
     "lint:ts": "eslint ./src",
     "lint": "npm-run-all --parallel lint:*",
     "prepare": "husky",
-		"publish:ovsx": "ovsx publish --no-dependencies",
-		"publish:vsce": "vsce publish --githubBranch main --no-dependencies",
+    "publish:ovsx": "ovsx publish --no-dependencies",
+    "publish:vsce": "vsce publish --githubBranch main --no-dependencies",
     "start": "npm run build -- --watch",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build"
@@ -38,33 +38,31 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@nsis/nlf": "^0.12.0",
-    "makensis": "^3.0.0-alpha.3",
-    "micromatch": "^4.0.5",
+    "makensis": "3.0.0-alpha.3",
+    "micromatch": "^4.0.8",
     "open": "^10.1.0",
     "vscode-get-config": "^0.4.0",
-    "which": "^4.0.0"
+    "which": "^5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^8.56.0",
+    "@eslint/js": "^9.16.0",
     "@nsis/logo": "0.0.0",
-    "@types/node": "^20.11.30",
-    "@types/vscode": "^1.52.0",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
+    "@types/node": "^20.17.9",
+    "@types/vscode": "^1.95.0",
     "cross-env": "^7.0.3",
-    "eslint": "9.0.0-beta.0",
-    "eslint-plugin-jsonc": "^2.14.1",
+    "eslint": "9.12.0",
+    "eslint-plugin-jsonc": "^2.18.2",
     "gulp": "^4.0.2",
     "gulp-raster-update": "^0.2.0",
     "gulp-rename": "^2.0.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "npm-run-all2": "^6.1.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "npm-run-all2": "^6.2.6",
     "ovsx": "^0.8.4",
-    "prettier": "^3.2.5",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.3",
-    "typescript-eslint": "^7.4.0"
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.17.0"
   },
   "activationEvents": [
     "onStartupFinished"
@@ -275,7 +273,7 @@
           ".bnsi",
           ".bnsh"
         ],
-        "firstLine": "^#!\/.*\\bmakensis\\b",
+        "firstLine": "^#!/.*\\bmakensis\\b",
         "configuration": "./config/nsis.json"
       },
       {
