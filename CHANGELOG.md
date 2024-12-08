@@ -1,20 +1,20 @@
-# 4.4.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.4.1)
+# v4.4.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.4.1)
 
 - pass calling `process-env` when launching MakeNSIS
 - update dependencies
 
-# 4.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.4.0)
+# v4.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.4.0)
 
 - split output channels
 - fix button handler
 - improve type definitions
 - update dependencies
 
-# 4.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.3.1)
+# v4.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.3.1)
 
 - fix tsup config
 
-# 4.3.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.3.0)
+# v4.3.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.3.0)
 
 - add basic custom highlighter for makensis output
 - defer activation
@@ -23,44 +23,44 @@
 - update tooling
 - update dependencies
 
-# 4.2.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.4)
+# v4.2.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.4)
 
 - fix minor bug in line detection
 - update dependencies
 
-# 4.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.3)
+# v4.2.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.3)
 
 - minor telemetry adjustments
 
-# 4.2.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.2)
+# v4.2.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.2)
 
 - fix minor error
 
-# 4.2.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.1)
+# v4.2.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.1)
 
 - update `makensis` and `@nsis/nlf` dependencies
 
-# 4.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.0)
+# v4.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.2.0)
 
 - add [telemetry](https://github.com/idleberg/vscode-nsis#telemetry)
 - minor improvements
 - downgrade dependencies
 
-# 4.1.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.1)
+# v4.1.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.1)
 
 - minor improvements
 - update dependencies
 
-# 4.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.0)
+# v4.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.1.0)
 
 - add support for NSIS v3.09
   - `!assert`
 
-# 4.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.1)
+# v4.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.1)
 
 - fix build config
 
-# 4.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.0)
+# v4.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.0.0)
 
 - change license to MIT-only
 - change default preprocess mode to `PPO`
