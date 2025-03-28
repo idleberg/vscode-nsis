@@ -285,6 +285,7 @@ export async function getSpawnEnv(): Promise<SpawnOptions> {
 			...process.env,
 			NSISDIR: integrated.env[mappedPlatform].NSISDIR || process.env.NSISDIR || undefined,
 			NSISCONFDIR: integrated.env[mappedPlatform].NSISCONFDIR || process.env.NSISCONFDIR || undefined,
+			LANG: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
 			LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
 			LC_ALL: !isWindows() && !process.env.LC_ALL ? 'en_US.UTF-8' : undefined,
 		}
