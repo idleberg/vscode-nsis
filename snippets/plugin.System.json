@@ -1,32 +1,32 @@
 {
-  "System::Alloc": {
-    "body": "System::Alloc ${1:size}$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
-    "prefix": "System::Alloc"
-  },
-  "System::Call": {
-    "body": "System::Call \"${1:parameters}\"$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
-    "prefix": "System::Call"
-  },
-  "System::Copy": {
-    "body": "System::Copy ${1:destination} ${2:source}$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
-    "prefix": "System::Copy"
-  },
-  "System::Free": {
-    "body": "System::Free $${1:address}$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
-    "prefix": "System::Free"
-  },
-  "System::Get": {
-    "body": "System::Get \"${1:parameters}\"$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
-    "prefix": "System::Get"
-  },
-  "System::Int64Op": {
-    "body": "System::Int64Op \"${1:parameters}\"$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
-    "prefix": "System::Int64Op"
-  }
+	"System::Alloc": {
+		"body": "System::Alloc ${1:size}$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
+		"prefix": "System::Alloc"
+	},
+	"System::Call": {
+		"body": "System::Call \"${1:parameters}\"$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
+		"prefix": "System::Call"
+	},
+	"System::Copy": {
+		"body": "System::Copy ${1:destination} ${2:source}$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
+		"prefix": "System::Copy"
+	},
+	"System::Free": {
+		"body": "System::Free $${1:address}$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
+		"prefix": "System::Free"
+	},
+	"System::Get": {
+		"body": "System::Get \"${1:parameters}\"$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
+		"prefix": "System::Get"
+	},
+	"System::Int64Op": {
+		"body": "System::Int64Op \"${1:parameters}\"$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>System.dll</span>",
+		"prefix": "System::Int64Op"
+	}
 }

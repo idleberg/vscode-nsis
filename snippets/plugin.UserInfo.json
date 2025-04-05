@@ -1,17 +1,17 @@
 {
-  "UserInfo::GetAccountType": {
-    "body": "UserInfo::GetAccountType$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>UserInfo.dll</span>",
-    "prefix": "UserInfo::GetAccountType"
-  },
-  "UserInfo::GetName": {
-    "body": "UserInfo::GetName$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>UserInfo.dll</span>",
-    "prefix": "UserInfo::GetName"
-  },
-  "UserInfo::GetOriginalAccountType": {
-    "body": "UserInfo::GetOriginalAccountType$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>UserInfo.dll</span>",
-    "prefix": "UserInfo::GetOriginalAccountType"
-  }
+	"UserInfo::GetAccountType": {
+		"body": "UserInfo::GetAccountType$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>UserInfo.dll</span>",
+		"prefix": "UserInfo::GetAccountType"
+	},
+	"UserInfo::GetName": {
+		"body": "UserInfo::GetName$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>UserInfo.dll</span>",
+		"prefix": "UserInfo::GetName"
+	},
+	"UserInfo::GetOriginalAccountType": {
+		"body": "UserInfo::GetOriginalAccountType$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>UserInfo.dll</span>",
+		"prefix": "UserInfo::GetOriginalAccountType"
+	}
 }

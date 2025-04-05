@@ -81,7 +81,7 @@
 - fix bug in verbosity config
 - update tooling
 - update dependencies
-  
+
 # v3.51.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.51.2)
 
 - update dependencies, fixes NLF conversion
@@ -127,7 +127,7 @@
 # v3.47.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.47.1)
 
 - fix unescaped snippets
- 
+
 # v3.47.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.47.0)
 
 - add option to disable `processHeaders` warning
@@ -164,7 +164,7 @@
 # v3.44.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.1)
 
 - update regex pattern for variables and defines
- 
+
 # v3.44.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.44.0)
 
 - consume magic environmental feature from `makensis`
@@ -266,7 +266,7 @@
 
 # v3.37.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.37.0)
 
-- add *Open Settings* command
+- add _Open Settings_ command
 - add `overrideCompression` option
 - remove `compilerArguments` option
 - rename `allowHeaderCompilation` option to `processHeaders`
@@ -322,7 +322,7 @@
 
 - add support for variable substitution when reading config
 - add `processHeaders` option
-- add filter to *Open Settings* buttons
+- add filter to _Open Settings_ buttons
 - remove fallback blocks
 - fix: use `pathToMakensis` in diagnostics mode
 - refactor thenable code into async/await
@@ -518,7 +518,7 @@
 # v3.14.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.14.0)
 
 - add `IsNative*` macros (from NSIS v3.04)
-- add *NSIS: Convert Language File* command
+- add _NSIS: Convert Language File_ command
 - update dependencies
 
 # v3.13.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.13.2)
@@ -948,6 +948,7 @@
 # v1.3.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/1.3.0)
 
 (this really should have been `v1.2.1`, sorry!)
+
 - add `$PROGRAMFILES32` and `$PROGRAMFILES64`
 - fix scope for language variables
 

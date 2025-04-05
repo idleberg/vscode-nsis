@@ -1,7 +1,7 @@
 {
-  "LangDLL::LangDialog": {
-    "body": "LangDLL::LangDialog \"${1:title}\" \"${2:text}\"$0",
-    "leftLabelHTML": "<span class='syntax--support syntax--class'>LangDLL.dll</span>",
-    "prefix": "LangDLL::LangDialog"
-  }
+	"LangDLL::LangDialog": {
+		"body": "LangDLL::LangDialog \"${1:title}\" \"${2:text}\"$0",
+		"leftLabelHTML": "<span class='syntax--support syntax--class'>LangDLL.dll</span>",
+		"prefix": "LangDLL::LangDialog"
+	}
 }

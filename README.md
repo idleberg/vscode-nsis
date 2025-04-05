@@ -9,44 +9,44 @@ Language syntax, IntelliSense and build system for Nullsoft Scriptable Install S
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/main/resources/screenshot.png)
 
-*Screenshot of NSIS in Visual Studio Code with [Hopscotch](https://marketplace.visualstudio.com/items?itemName=idleberg.hopscotch) theme*
+_Screenshot of NSIS in Visual Studio Code with [Hopscotch](https://marketplace.visualstudio.com/items?itemName=idleberg.hopscotch) theme_
 
 ## Features
 
-* Language syntax for NSIS and NSIS Language Files
-* IntelliSense for core NSIS commands, variables and predefines
-* IntelliSense for core plug-ins:
-    * AdvSplash
-    * Banner
-    * BgImage
-    * Dialer
-    * InstallOptions
-    * LangDLL
-    * Math
-    * nsDialogs
-    * nsExec
-    * NSISdl
-    * Splash
-    * StartMenu
-    * System
-    * UserInfo
-    * VPatch
-* IntelliSense for core libraries (“Useful Headers”):
-    * FileFunc
-    * LogicLib
-    * Memento
-    * Modern UI
-    * MultiUser
-    * Sections
-    * StrFunc
-    * WinMessages
-    * WinVer
-    * WordFunc
-    * x64
-* NSIS Diagnostics
-* [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
-* [Build Tools](https://github.com/idleberg/vscode-nsis#building)
-* [Environment Variables](https://github.com/idleberg/vscode-nsis#environment-variables)
+- Language syntax for NSIS and NSIS Language Files
+- IntelliSense for core NSIS commands, variables and predefines
+- IntelliSense for core plug-ins:
+  - AdvSplash
+  - Banner
+  - BgImage
+  - Dialer
+  - InstallOptions
+  - LangDLL
+  - Math
+  - nsDialogs
+  - nsExec
+  - NSISdl
+  - Splash
+  - StartMenu
+  - System
+  - UserInfo
+  - VPatch
+- IntelliSense for core libraries (“Useful Headers”):
+  - FileFunc
+  - LogicLib
+  - Memento
+  - Modern UI
+  - MultiUser
+  - Sections
+  - StrFunc
+  - WinMessages
+  - WinVer
+  - WordFunc
+  - x64
+- NSIS Diagnostics
+- [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
+- [Build Tools](https://github.com/idleberg/vscode-nsis#building)
+- [Environment Variables](https://github.com/idleberg/vscode-nsis#environment-variables)
 
 You can further extend NSIS support with IntelliSense for [third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
 
@@ -124,19 +124,19 @@ npm run build
 
 With most commands, you can specify available options before completion. For instance, rather than completing `RequestExecutionLevel` and then specifying an option, you can directly choose `RequestExecutionLevel user` from the completion menu.
 
-To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), make sure to *omit special characters* like `!`, `$` and brackets:
+To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), make sure to _omit special characters_ like `!`, `$` and brackets:
 
-* `include` completes to `!include`
-* `INSTDIR` completes to `$INSTDIR`
-* `NSIS_VERSION` completes to `${NSIS_VERSION}`
+- `include` completes to `!include`
+- `INSTDIR` completes to `$INSTDIR`
+- `NSIS_VERSION` completes to `${NSIS_VERSION}`
 
 However, you have to type `__LINE__` to complete to `${__LINE__}`.
 
 There are several special cases for your convenience:
 
-* `MB_OK` completes to `MessageBox MB_OK "messagebox_text"`
-* `onInit` completes to a `Function .onInit` block
-* `LogicLib` completes to `!include "LogicLib.nsh"`
+- `MB_OK` completes to `MessageBox MB_OK "messagebox_text"`
+- `onInit` completes to a `Function .onInit` block
+- `LogicLib` completes to `!include "LogicLib.nsh"`
 
 #### Drunken NSIS
 
@@ -146,12 +146,12 @@ Fuzzy syntax completions are available through “Drunken NSIS”, which tries t
 
 Interchangable word order of NSIS language and library functions
 
-* `ReadFile` completes to `FileRead`
-* `INIStrRead` completes to `ReadINIStr`
-* `SetSectionText` completes to `SectionSetText`
-* `SetLog` completes to `LogSet`
-* `FirstFind` completes to `FindFirst`
-* `${LineFind}` completes to `${FindLine}`
+- `ReadFile` completes to `FileRead`
+- `INIStrRead` completes to `ReadINIStr`
+- `SetSectionText` completes to `SectionSetText`
+- `SetLog` completes to `LogSet`
+- `FirstFind` completes to `FindFirst`
+- `${LineFind}` completes to `${FindLine}`
 
 ### Building
 
@@ -163,11 +163,11 @@ Before you can build, make sure `makensis` is in your PATH [environment variable
 
 ```json
 {
-  "nsis.compiler.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
+	"nsis.compiler.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
 }
 ```
 
-To trigger a build, select *NSIS: Save & Compile”* from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings as errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+To trigger a build, select _NSIS: Save & Compile”_ from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings as errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 #### Options
 
@@ -175,7 +175,7 @@ You can tweak your default settings by editing your [user settings](https://code
 
 ### Task Runner
 
-If you prefer Visual Studio Code's built-in Task Runner to build scripts, you can create `tasks.json` in the project root using the *NSIS: Create Build Task* command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
+If you prefer Visual Studio Code's built-in Task Runner to build scripts, you can create `tasks.json` in the project root using the _NSIS: Create Build Task_ command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
 
 **Note:** The created Task Runner will adapt to the [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
 
@@ -205,6 +205,7 @@ NSIS_APP_ENVIRONMENT=development
   DetailPrint "Valuable Debug Information"
 !endif
 ```
+
 </details>
 
 ## Related

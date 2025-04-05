@@ -1,16 +1,27 @@
-import { compile } from 'makensis';
-import { findErrors, findWarnings, getMakensisPath, getNullDevice, getPreprocessMode, getOverrideCompression, getSpawnEnv } from './util';
-import { getConfig } from 'vscode-get-config';
-import micromatch from 'micromatch';
+import { compile } from "makensis";
+import {
+	findErrors,
+	findWarnings,
+	getMakensisPath,
+	getNullDevice,
+	getPreprocessMode,
+	getOverrideCompression,
+	getSpawnEnv,
+} from "./util";
+import { getConfig } from "vscode-get-config";
+import micromatch from "micromatch";
 
-import { type DiagnosticCollection, type TextDocument } from 'vscode';
+import { type DiagnosticCollection, type TextDocument } from "vscode";
 
-export async function updateDiagnostics(document: TextDocument | null, collection: DiagnosticCollection): Promise<void> {
+export async function updateDiagnostics(
+	document: TextDocument | null,
+	collection: DiagnosticCollection,
+): Promise<void> {
 	if (!document) {
 		return;
 	}
 
-	const { compiler, diagnostics } = await getConfig('nsis');
+	const { compiler, diagnostics } = await getConfig("nsis");
 
 	if (diagnostics.enableDiagnostics !== true) {
 		return;
@@ -18,13 +29,15 @@ export async function updateDiagnostics(document: TextDocument | null, collectio
 
 	if (diagnostics.excludedFiles?.length) {
 		if (micromatch.isMatch(document.fileName, diagnostics.excludedFiles)) {
-			console.log(`Skipping diagnostics for ${document.fileName}, found in exclude list`);
+			console.log(
+				`Skipping diagnostics for ${document.fileName}, found in exclude list`,
+			);
 			collection.clear();
 			return;
 		}
 	}
 
-	if (document && document.languageId === 'nsis') {
+	if (document && document.languageId === "nsis") {
 		console.log(`Running diagnostics for ${document.fileName}`);
 
 		let pathToMakensis: string;
@@ -32,7 +45,10 @@ export async function updateDiagnostics(document: TextDocument | null, collectio
 		try {
 			pathToMakensis = await getMakensisPath();
 		} catch (error) {
-			console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+			console.error(
+				"[vscode-nsis]",
+				error instanceof Error ? error.message : error,
+			);
 
 			return;
 		}
@@ -40,10 +56,10 @@ export async function updateDiagnostics(document: TextDocument | null, collectio
 		const options: Makensis.CompilerOptions = {
 			verbose: 2,
 			pathToMakensis,
-			postExecute: [
-				getNullDevice()
-			],
-			rawArguments: diagnostics?.useCustomArguments ? diagnostics.customArguments : compiler.customArguments,
+			postExecute: [getNullDevice()],
+			rawArguments: diagnostics?.useCustomArguments
+				? diagnostics.customArguments
+				: compiler.customArguments,
 		};
 
 		const preprocessMode = await getPreprocessMode();
@@ -55,8 +71,8 @@ export async function updateDiagnostics(document: TextDocument | null, collectio
 		const overrideCompression = await getOverrideCompression();
 
 		if (overrideCompression) {
-			options.preExecute = ['SetCompressor /FINAL zlib'];
-			(options.postExecute as string[]).push('SetCompress off');
+			options.preExecute = ["SetCompressor /FINAL zlib"];
+			(options.postExecute as string[]).push("SetCompress off");
 		}
 
 		let output;
@@ -64,7 +80,10 @@ export async function updateDiagnostics(document: TextDocument | null, collectio
 		try {
 			output = await compile(document.fileName, options, await getSpawnEnv());
 		} catch (error) {
-			console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+			console.error(
+				"[vscode-nsis]",
+				error instanceof Error ? error.message : error,
+			);
 		}
 
 		const diagnosticsResult: DiagnosticCollection[] = [];

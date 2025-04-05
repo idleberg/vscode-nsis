@@ -1,332 +1,332 @@
 {
-  "${NSD_AddExStyle}": {
-    "body": "\\${NSD_AddExStyle} $${1:dialog} \"${2:style}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_AddExStyle"
-  },
-  "${NSD_AddStyle}": {
-    "body": "\\${NSD_AddStyle} $${1:dialog} \"${2:style}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_AddStyle"
-  },
-  "${NSD_CB_AddString}": {
-    "body": "\\${NSD_CB_AddString} $${1:dialog} \"${2:string}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CB_AddString"
-  },
-  "${NSD_CB_SelectString}": {
-    "body": "\\${NSD_CB_SelectString} $${1:dialog} \"${2:string}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CB_SelectString"
-  },
-  "${NSD_Check}": {
-    "body": "\\${NSD_Check} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_Check"
-  },
-  "${NSD_ClearIcon}": {
-    "body": "\\${NSD_ClearIcon} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_ClearIcon"
-  },
-  "${NSD_ClearImage}": {
-    "body": "\\${NSD_ClearImage} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_ClearImage"
-  },
-  "${NSD_CreateBitmap}": {
-    "body": "\\${NSD_CreateBitmap} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateBitmap"
-  },
-  "${NSD_CreateBrowseButton}": {
-    "body": "\\${NSD_CreateBrowseButton} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateBrowseButton"
-  },
-  "${NSD_CreateButton}": {
-    "body": "\\${NSD_CreateButton} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateButton"
-  },
-  "${NSD_CreateCheckBox}": {
-    "body": "\\${NSD_CreateCheckBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateCheckBox"
-  },
-  "${NSD_CreateComboBox}": {
-    "body": "\\${NSD_CreateComboBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateComboBox"
-  },
-  "${NSD_CreateDirRequest}": {
-    "body": "\\${NSD_CreateDirRequest} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateDirRequest"
-  },
-  "${NSD_CreateDropList}": {
-    "body": "\\${NSD_CreateDropList} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateDropList"
-  },
-  "${NSD_CreateFileRequest}": {
-    "body": "\\${NSD_CreateFileRequest} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateFileRequest"
-  },
-  "${NSD_CreateGroupBox}": {
-    "body": "\\${NSD_CreateGroupBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateGroupBox"
-  },
-  "${NSD_CreateHLine}": {
-    "body": "\\${NSD_CreateHLine} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateHLine"
-  },
-  "${NSD_CreateIcon}": {
-    "body": "\\${NSD_CreateIcon} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateIcon"
-  },
-  "${NSD_CreateLabel}": {
-    "body": "\\${NSD_CreateLabel} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateLabel"
-  },
-  "${NSD_CreateLink}": {
-    "body": "\\${NSD_CreateLink} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateLink"
-  },
-  "${NSD_CreateListBox}": {
-    "body": "\\${NSD_CreateListBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateListBox"
-  },
-  "${NSD_CreateNumber}": {
-    "body": "\\${NSD_CreateNumber} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateNumber"
-  },
-  "${NSD_CreatePassword}": {
-    "body": "\\${NSD_CreatePassword} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreatePassword"
-  },
-  "${NSD_CreateProgressBar}": {
-    "body": "\\${NSD_CreateProgressBar} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateProgressBar"
-  },
-  "${NSD_CreateRadioButton}": {
-    "body": "\\${NSD_CreateRadioButton} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateRadioButton"
-  },
-  "${NSD_CreateText}": {
-    "body": "\\${NSD_CreateText} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateText"
-  },
-  "${NSD_CreateTimer}": {
-    "body": "\\${NSD_CreateTimer} \"${1:function}\" ${2:interval}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateTimer"
-  },
-  "${NSD_CreateVLine}": {
-    "body": "\\${NSD_CreateVLine} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_CreateVLine"
-  },
-  "${NSD_FreeIcon}": {
-    "body": "\\${NSD_FreeIcon} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_FreeIcon"
-  },
-  "${NSD_FreeImage}": {
-    "body": "\\${NSD_FreeImage} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_FreeImage"
-  },
-  "${NSD_GetState}": {
-    "body": "\\${NSD_GetState} $${1:dialog} $${2:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_GetState"
-  },
-  "${NSD_GetText}": {
-    "body": "\\${NSD_GetText} $${1:dialog} $${2:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_GetText"
-  },
-  "${NSD_KillTimer}": {
-    "body": "\\${NSD_KillTimer} \"${1:function}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_KillTimer"
-  },
-  "${NSD_LB_AddString}": {
-    "body": "\\${NSD_LB_AddString} $${1:dialog} \"${2:string}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_LB_AddString"
-  },
-  "${NSD_LB_Clear}": {
-    "body": "\\${NSD_LB_Clear} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_LB_Clear"
-  },
-  "${NSD_LB_DelString}": {
-    "body": "\\${NSD_LB_DelString} $${1:dialog} \"${2:string}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_LB_DelString"
-  },
-  "${NSD_LB_GetCount}": {
-    "body": "\\${NSD_LB_GetCount} $${1:dialog} $${2:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_LB_GetCount"
-  },
-  "${NSD_LB_GetSelection}": {
-    "body": "\\${NSD_LB_GetSelection} $${1:dialog} $${2:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_LB_GetSelection"
-  },
-  "${NSD_LB_InsertString}": {
-    "body": "\\${NSD_LB_InsertString} $${1:dialog} \"${2:string}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_LB_InsertString"
-  },
-  "${NSD_LB_SelectString}": {
-    "body": "\\${NSD_LB_SelectString} $${1:dialog} \"${2:string}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_LB_SelectString"
-  },
-  "${NSD_OnBack}": {
-    "body": "\\${NSD_OnBack} \"${1:function}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_OnBack"
-  },
-  "${NSD_OnChange}": {
-    "body": "\\${NSD_OnChange} $${1:dialog} \"${2:function}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_OnChange"
-  },
-  "${NSD_OnClick}": {
-    "body": "\\${NSD_OnClick} $${1:dialog} \"${2:function}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_OnClick"
-  },
-  "${NSD_OnNotify}": {
-    "body": "\\${NSD_OnNotify} $${1:dialog} \"${2:function}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_OnNotify"
-  },
-  "${NSD_SetFocus}": {
-    "body": "\\${NSD_SetFocus} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetFocus"
-  },
-  "${NSD_SetIconFromInstaller}": {
-    "body": "\\${NSD_SetIconFromInstaller} $${1:dialog} $${2:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetIconFromInstaller"
-  },
-  "${NSD_SetIcon}": {
-    "body": "\\${NSD_SetIcon} $${1:dialog} \"${2:icon_path}\" $${3:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetIcon"
-  },
-  "${NSD_SetImage}": {
-    "body": "\\${NSD_SetImage} $${1:dialog} \"${2:image_path}\" $${3:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetImage"
-  },
-  "${NSD_SetState}": {
-    "body": "\\${NSD_SetState} $${1:dialog} \"${2:state}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetState"
-  },
-  "${NSD_SetStretchedImage}": {
-    "body": "\\${NSD_SetStretchedImage} $${1:dialog} \"${2:image_path}\" $${3:output}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetStretchedImage"
-  },
-  "${NSD_SetTextLimit}": {
-    "body": "\\${NSD_SetTextLimit} $${1:dialog} ${2:text}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetTextLimit"
-  },
-  "${NSD_SetText}": {
-    "body": "\\${NSD_SetText} $${1:dialog} \"${2:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_SetText"
-  },
-  "${NSD_Uncheck}": {
-    "body": "\\${NSD_Uncheck} $${1:dialog}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "NSD_Uncheck"
-  },
-  "nsDialogs::Create": {
-    "body": "nsDialogs::Create ${1:1018}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::Create"
-  },
-  "nsDialogs::CreateControl": {
-    "body": "nsDialogs::CreateControl ${1:class} ${2:style} ${3:extended_style} ${4:x} ${5:y} ${6:width} ${7:height} \"${8:text}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::CreateControl"
-  },
-  "nsDialogs::GetUserData": {
-    "body": "nsDialogs::GetUserData $${1:control_HWND}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::GetUserData"
-  },
-  "nsDialogs::KillTimer": {
-    "body": "nsDialogs::KillTimer \"${1:function_address}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::KillTimer"
-  },
-  "nsDialogs::OnBack": {
-    "body": "nsDialogs::OnBack \"${1:function_address}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::OnBack"
-  },
-  "nsDialogs::OnChange": {
-    "body": "nsDialogs::OnChange $${1:control_HWND} \"${2:function_address}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::OnChange"
-  },
-  "nsDialogs::OnClick": {
-    "body": "nsDialogs::OnClick $${1:control_HWND} \"${2:function_address}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::OnClick"
-  },
-  "nsDialogs::OnNotify": {
-    "body": "nsDialogs::OnNotify $${1:control_HWND} \"${2:function_address}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::OnNotify"
-  },
-  "nsDialogs::SelectFileDialog": {
-    "body": "nsDialogs::SelectFileDialog ${1:mode} \"${2:initial_selection}\" \"${3:filter}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::SelectFileDialog"
-  },
-  "nsDialogs::SelectFolderDialog": {
-    "body": "nsDialogs::SelectFolderDialog \"${1:title}\" \"${2:initial_selection}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::SelectFolderDialog"
-  },
-  "nsDialogs::SetRTL": {
-    "body": "nsDialogs::SetRTL ${1:rtl_setting}$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::SetRTL"
-  },
-  "nsDialogs::SetUserData": {
-    "body": "nsDialogs::SetUserData $${1:control_HWND} \"${2:data}\"$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::SetUserData"
-  },
-  "nsDialogs::Show": {
-    "body": "nsDialogs::Show$0",
-    "description": "nsDialogs.dll",
-    "prefix": "nsDialogs::Show"
-  }
+	"${NSD_AddExStyle}": {
+		"body": "\\${NSD_AddExStyle} $${1:dialog} \"${2:style}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_AddExStyle"
+	},
+	"${NSD_AddStyle}": {
+		"body": "\\${NSD_AddStyle} $${1:dialog} \"${2:style}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_AddStyle"
+	},
+	"${NSD_CB_AddString}": {
+		"body": "\\${NSD_CB_AddString} $${1:dialog} \"${2:string}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CB_AddString"
+	},
+	"${NSD_CB_SelectString}": {
+		"body": "\\${NSD_CB_SelectString} $${1:dialog} \"${2:string}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CB_SelectString"
+	},
+	"${NSD_Check}": {
+		"body": "\\${NSD_Check} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_Check"
+	},
+	"${NSD_ClearIcon}": {
+		"body": "\\${NSD_ClearIcon} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_ClearIcon"
+	},
+	"${NSD_ClearImage}": {
+		"body": "\\${NSD_ClearImage} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_ClearImage"
+	},
+	"${NSD_CreateBitmap}": {
+		"body": "\\${NSD_CreateBitmap} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateBitmap"
+	},
+	"${NSD_CreateBrowseButton}": {
+		"body": "\\${NSD_CreateBrowseButton} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateBrowseButton"
+	},
+	"${NSD_CreateButton}": {
+		"body": "\\${NSD_CreateButton} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateButton"
+	},
+	"${NSD_CreateCheckBox}": {
+		"body": "\\${NSD_CreateCheckBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateCheckBox"
+	},
+	"${NSD_CreateComboBox}": {
+		"body": "\\${NSD_CreateComboBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateComboBox"
+	},
+	"${NSD_CreateDirRequest}": {
+		"body": "\\${NSD_CreateDirRequest} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateDirRequest"
+	},
+	"${NSD_CreateDropList}": {
+		"body": "\\${NSD_CreateDropList} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateDropList"
+	},
+	"${NSD_CreateFileRequest}": {
+		"body": "\\${NSD_CreateFileRequest} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateFileRequest"
+	},
+	"${NSD_CreateGroupBox}": {
+		"body": "\\${NSD_CreateGroupBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateGroupBox"
+	},
+	"${NSD_CreateHLine}": {
+		"body": "\\${NSD_CreateHLine} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateHLine"
+	},
+	"${NSD_CreateIcon}": {
+		"body": "\\${NSD_CreateIcon} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateIcon"
+	},
+	"${NSD_CreateLabel}": {
+		"body": "\\${NSD_CreateLabel} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateLabel"
+	},
+	"${NSD_CreateLink}": {
+		"body": "\\${NSD_CreateLink} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateLink"
+	},
+	"${NSD_CreateListBox}": {
+		"body": "\\${NSD_CreateListBox} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateListBox"
+	},
+	"${NSD_CreateNumber}": {
+		"body": "\\${NSD_CreateNumber} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateNumber"
+	},
+	"${NSD_CreatePassword}": {
+		"body": "\\${NSD_CreatePassword} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreatePassword"
+	},
+	"${NSD_CreateProgressBar}": {
+		"body": "\\${NSD_CreateProgressBar} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateProgressBar"
+	},
+	"${NSD_CreateRadioButton}": {
+		"body": "\\${NSD_CreateRadioButton} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateRadioButton"
+	},
+	"${NSD_CreateText}": {
+		"body": "\\${NSD_CreateText} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateText"
+	},
+	"${NSD_CreateTimer}": {
+		"body": "\\${NSD_CreateTimer} \"${1:function}\" ${2:interval}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateTimer"
+	},
+	"${NSD_CreateVLine}": {
+		"body": "\\${NSD_CreateVLine} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_CreateVLine"
+	},
+	"${NSD_FreeIcon}": {
+		"body": "\\${NSD_FreeIcon} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_FreeIcon"
+	},
+	"${NSD_FreeImage}": {
+		"body": "\\${NSD_FreeImage} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_FreeImage"
+	},
+	"${NSD_GetState}": {
+		"body": "\\${NSD_GetState} $${1:dialog} $${2:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_GetState"
+	},
+	"${NSD_GetText}": {
+		"body": "\\${NSD_GetText} $${1:dialog} $${2:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_GetText"
+	},
+	"${NSD_KillTimer}": {
+		"body": "\\${NSD_KillTimer} \"${1:function}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_KillTimer"
+	},
+	"${NSD_LB_AddString}": {
+		"body": "\\${NSD_LB_AddString} $${1:dialog} \"${2:string}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_LB_AddString"
+	},
+	"${NSD_LB_Clear}": {
+		"body": "\\${NSD_LB_Clear} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_LB_Clear"
+	},
+	"${NSD_LB_DelString}": {
+		"body": "\\${NSD_LB_DelString} $${1:dialog} \"${2:string}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_LB_DelString"
+	},
+	"${NSD_LB_GetCount}": {
+		"body": "\\${NSD_LB_GetCount} $${1:dialog} $${2:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_LB_GetCount"
+	},
+	"${NSD_LB_GetSelection}": {
+		"body": "\\${NSD_LB_GetSelection} $${1:dialog} $${2:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_LB_GetSelection"
+	},
+	"${NSD_LB_InsertString}": {
+		"body": "\\${NSD_LB_InsertString} $${1:dialog} \"${2:string}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_LB_InsertString"
+	},
+	"${NSD_LB_SelectString}": {
+		"body": "\\${NSD_LB_SelectString} $${1:dialog} \"${2:string}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_LB_SelectString"
+	},
+	"${NSD_OnBack}": {
+		"body": "\\${NSD_OnBack} \"${1:function}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_OnBack"
+	},
+	"${NSD_OnChange}": {
+		"body": "\\${NSD_OnChange} $${1:dialog} \"${2:function}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_OnChange"
+	},
+	"${NSD_OnClick}": {
+		"body": "\\${NSD_OnClick} $${1:dialog} \"${2:function}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_OnClick"
+	},
+	"${NSD_OnNotify}": {
+		"body": "\\${NSD_OnNotify} $${1:dialog} \"${2:function}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_OnNotify"
+	},
+	"${NSD_SetFocus}": {
+		"body": "\\${NSD_SetFocus} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetFocus"
+	},
+	"${NSD_SetIconFromInstaller}": {
+		"body": "\\${NSD_SetIconFromInstaller} $${1:dialog} $${2:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetIconFromInstaller"
+	},
+	"${NSD_SetIcon}": {
+		"body": "\\${NSD_SetIcon} $${1:dialog} \"${2:icon_path}\" $${3:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetIcon"
+	},
+	"${NSD_SetImage}": {
+		"body": "\\${NSD_SetImage} $${1:dialog} \"${2:image_path}\" $${3:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetImage"
+	},
+	"${NSD_SetState}": {
+		"body": "\\${NSD_SetState} $${1:dialog} \"${2:state}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetState"
+	},
+	"${NSD_SetStretchedImage}": {
+		"body": "\\${NSD_SetStretchedImage} $${1:dialog} \"${2:image_path}\" $${3:output}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetStretchedImage"
+	},
+	"${NSD_SetTextLimit}": {
+		"body": "\\${NSD_SetTextLimit} $${1:dialog} ${2:text}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetTextLimit"
+	},
+	"${NSD_SetText}": {
+		"body": "\\${NSD_SetText} $${1:dialog} \"${2:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_SetText"
+	},
+	"${NSD_Uncheck}": {
+		"body": "\\${NSD_Uncheck} $${1:dialog}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "NSD_Uncheck"
+	},
+	"nsDialogs::Create": {
+		"body": "nsDialogs::Create ${1:1018}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::Create"
+	},
+	"nsDialogs::CreateControl": {
+		"body": "nsDialogs::CreateControl ${1:class} ${2:style} ${3:extended_style} ${4:x} ${5:y} ${6:width} ${7:height} \"${8:text}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::CreateControl"
+	},
+	"nsDialogs::GetUserData": {
+		"body": "nsDialogs::GetUserData $${1:control_HWND}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::GetUserData"
+	},
+	"nsDialogs::KillTimer": {
+		"body": "nsDialogs::KillTimer \"${1:function_address}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::KillTimer"
+	},
+	"nsDialogs::OnBack": {
+		"body": "nsDialogs::OnBack \"${1:function_address}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::OnBack"
+	},
+	"nsDialogs::OnChange": {
+		"body": "nsDialogs::OnChange $${1:control_HWND} \"${2:function_address}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::OnChange"
+	},
+	"nsDialogs::OnClick": {
+		"body": "nsDialogs::OnClick $${1:control_HWND} \"${2:function_address}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::OnClick"
+	},
+	"nsDialogs::OnNotify": {
+		"body": "nsDialogs::OnNotify $${1:control_HWND} \"${2:function_address}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::OnNotify"
+	},
+	"nsDialogs::SelectFileDialog": {
+		"body": "nsDialogs::SelectFileDialog ${1:mode} \"${2:initial_selection}\" \"${3:filter}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::SelectFileDialog"
+	},
+	"nsDialogs::SelectFolderDialog": {
+		"body": "nsDialogs::SelectFolderDialog \"${1:title}\" \"${2:initial_selection}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::SelectFolderDialog"
+	},
+	"nsDialogs::SetRTL": {
+		"body": "nsDialogs::SetRTL ${1:rtl_setting}$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::SetRTL"
+	},
+	"nsDialogs::SetUserData": {
+		"body": "nsDialogs::SetUserData $${1:control_HWND} \"${2:data}\"$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::SetUserData"
+	},
+	"nsDialogs::Show": {
+		"body": "nsDialogs::Show$0",
+		"description": "nsDialogs.dll",
+		"prefix": "nsDialogs::Show"
+	}
 }

@@ -1,51 +1,51 @@
 {
-  "${DisableX64FSRedirection}": {
-    "body": "\\${DisableX64FSRedirection}$0",
-    "description": "Usage: ${DisableX64FSRedirection}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/DisableX64FSRedirection.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "DisableX64FSRedirection"
-  },
-  "${EnableX64FSRedirection}": {
-    "body": "\\${EnableX64FSRedirection}$0",
-    "description": "Usage: ${EnableX64FSRedirection}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/EnableX64FSRedirection.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "EnableX64FSRedirection"
-  },
-  "${IsNativeAMD64}": {
-    "body": "\\${IsNativeAMD64}$0",
-    "description": "Usage: logic_lib_statement ${IsNativeAMD64}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeAMD64.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "IsNativeAMD64"
-  },
-  "${IsNativeARM64}": {
-    "body": "\\${IsNativeARM64}$0",
-    "description": "Usage: logic_lib_statement ${IsNativeARM64}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeARM64.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "IsNativeARM64"
-  },
-  "${IsNativeIA32}": {
-    "body": "\\${IsNativeIA32}$0",
-    "description": "Usage: logic_lib_statement ${IsNativeIA32}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeIA32.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "IsNativeIA32"
-  },
-  "${IsWow64}": {
-    "body": "\\${IsWow64}$0",
-    "description": "Usage: logic_lib_statement ${IsWow64}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsWow64.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "IsWow64"
-  },
-  "${RunningX64}": {
-    "body": "\\${RunningX64}$0",
-    "description": "Usage: logic_lib_statement ${RunningX64}",
-    "descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/RunningX64.html?utm_source=vscode&utm_content=snippet",
-    "leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
-    "prefix": "RunningX64"
-  }
+	"${DisableX64FSRedirection}": {
+		"body": "\\${DisableX64FSRedirection}$0",
+		"description": "Usage: ${DisableX64FSRedirection}",
+		"descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/DisableX64FSRedirection.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
+		"prefix": "DisableX64FSRedirection"
+	},
+	"${EnableX64FSRedirection}": {
+		"body": "\\${EnableX64FSRedirection}$0",
+		"description": "Usage: ${EnableX64FSRedirection}",
+		"descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/EnableX64FSRedirection.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
+		"prefix": "EnableX64FSRedirection"
+	},
+	"${IsNativeAMD64}": {
+		"body": "\\${IsNativeAMD64}$0",
+		"description": "Usage: logic_lib_statement ${IsNativeAMD64}",
+		"descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeAMD64.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
+		"prefix": "IsNativeAMD64"
+	},
+	"${IsNativeARM64}": {
+		"body": "\\${IsNativeARM64}$0",
+		"description": "Usage: logic_lib_statement ${IsNativeARM64}",
+		"descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeARM64.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
+		"prefix": "IsNativeARM64"
+	},
+	"${IsNativeIA32}": {
+		"body": "\\${IsNativeIA32}$0",
+		"description": "Usage: logic_lib_statement ${IsNativeIA32}",
+		"descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsNativeIA32.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
+		"prefix": "IsNativeIA32"
+	},
+	"${IsWow64}": {
+		"body": "\\${IsWow64}$0",
+		"description": "Usage: logic_lib_statement ${IsWow64}",
+		"descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/IsWow64.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
+		"prefix": "IsWow64"
+	},
+	"${RunningX64}": {
+		"body": "\\${RunningX64}$0",
+		"description": "Usage: logic_lib_statement ${RunningX64}",
+		"descriptionMoreURL": "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/x64/RunningX64.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--constant syntax--other'>x64.nsh</span>",
+		"prefix": "RunningX64"
+	}
 }

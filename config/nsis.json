@@ -1,45 +1,45 @@
 {
-  "comments": {
-      "lineComment": ";",
-      "blockComment": [ "/*", "*/" ]
-  },
-  "brackets": [
-      ["{", "}"],
-      ["[", "]"],
-      ["(", ")"]
-  ],
-  "autoClosingPairs": [
-      ["{", "}"],
-      ["[", "]"],
-      ["(", ")"],
-      ["\"", "\""],
-      ["'", "'"],
-      ["`", "`"]
-  ],
-  "onEnterRules": [
-    {
-      "beforeText": "^\\s*(?:!(else|if|ifdef|ifmacrondef|ifndef|macro))(\\s+[\\w\\${}.:\"'`]+)*\\s*$",
-      "action": {
-        "indent": "indent"
-      }
-    },
-    {
-      "beforeText": "^\\s*(?:Function|PageEx|Section|SectionGroup)(\\s+[\\w.\/]+)+$",
-      "action": {
-        "indent": "indent"
-      }
-    },
-    {
-      "beforeText": "^\\s*(?:\\${(And(If(Not)?|Unless)?|Do(Until|While)?|Else(If(Not)?|Unless)?|For(Each)?|If(Cmd|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)?|Switch|Unless|While)})(\\s+[\\w\\${}.:\"'`]+)*\\s*$",
-      "action": {
-        "indent": "indent"
-      }
-    },
-    {
-      "beforeText": "^\\s*(?:\\${(ForEachIn(Reverse)?|Memento(Unselected)?Section|)})(\\s+[\\w\\${}.:\"'`]+)*\\s*$",
-      "action": {
-        "indent": "indent"
-      }
-    }
-  ]
+	"comments": {
+		"lineComment": ";",
+		"blockComment": ["/*", "*/"]
+	},
+	"brackets": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"]
+	],
+	"autoClosingPairs": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"],
+		["\"", "\""],
+		["'", "'"],
+		["`", "`"]
+	],
+	"onEnterRules": [
+		{
+			"beforeText": "^\\s*(?:!(else|if|ifdef|ifmacrondef|ifndef|macro))(\\s+[\\w\\${}.:\"'`]+)*\\s*$",
+			"action": {
+				"indent": "indent"
+			}
+		},
+		{
+			"beforeText": "^\\s*(?:Function|PageEx|Section|SectionGroup)(\\s+[\\w.\/]+)+$",
+			"action": {
+				"indent": "indent"
+			}
+		},
+		{
+			"beforeText": "^\\s*(?:\\${(And(If(Not)?|Unless)?|Do(Until|While)?|Else(If(Not)?|Unless)?|For(Each)?|If(Cmd|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)?|Switch|Unless|While)})(\\s+[\\w\\${}.:\"'`]+)*\\s*$",
+			"action": {
+				"indent": "indent"
+			}
+		},
+		{
+			"beforeText": "^\\s*(?:\\${(ForEachIn(Reverse)?|Memento(Unselected)?Section|)})(\\s+[\\w\\${}.:\"'`]+)*\\s*$",
+			"action": {
+				"indent": "indent"
+			}
+		}
+	]
 }
