@@ -395,6 +395,15 @@
 				"mac": "cmd+alt+shift+b",
 				"when": "editorFocus && editorLangId == nsis",
 				"command": "extension.nsis.compile-strict"
+			},
+			{
+				"key": "alt+enter",
+				"when": "editorFocus && editorLangId == nsis",
+				"command": "editor.action.insertSnippet",
+				"args": {
+					"langid": "nsis",
+					"name": "continued line"
+				}
 			}
 		],
 		"menus": {
@@ -464,6 +473,10 @@
 			{
 				"language": "nsis",
 				"path": "./snippets/core.Variables.json"
+			},
+			{
+				"language": "nsis",
+				"path": "./snippets/editor.actions.json"
 			},
 			{
 				"language": "nsis",
