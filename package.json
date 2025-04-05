@@ -53,7 +53,7 @@
     "@types/vscode": "1.75.0",
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
-    "eslint": "9.16.0",
+    "eslint": "9.24.0",
     "eslint-plugin-jsonc": "^2.20.0",
     "gulp": "^5.0.0",
     "gulp-raster-update": "^0.2.0",
