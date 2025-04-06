@@ -40,6 +40,7 @@
 		"@nsis/nlf": "^0.12.0",
 		"makensis": "3.0.0-alpha.3",
 		"micromatch": "^4.0.8",
+		"nano-staged": "^0.8.0",
 		"open": "^10.1.0",
 		"vscode-get-config": "^0.4.0",
 		"which": "^5.0.0"
@@ -59,7 +60,6 @@
 		"gulp-raster-update": "^0.2.0",
 		"gulp-rename": "^2.0.0",
 		"husky": "^9.1.7",
-		"lint-staged": "^15.5.0",
 		"ovsx": "^0.10.1",
 		"prettier": "^3.5.3",
 		"tsup": "^8.4.0",
@@ -608,8 +608,12 @@
 			"@babel/env"
 		]
 	},
-	"lint-staged": {
-		"*.(ts|json|yml)": "eslint --cache --fix"
+	"nano-staged": {
+		"*.(ts|json|yml)": [
+			"eslint --cache --fix",
+			"prettier --write"
+		],
+		"*.md": "prettier --write"
 	},
 	"packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
 }
