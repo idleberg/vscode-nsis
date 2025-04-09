@@ -165,6 +165,12 @@
             <string>variable.language.nsis</string>
         </dict>
         <dict>
+            <key>match</key>
+            <string>\\(?=\n)</string>
+            <key>name</key>
+            <string>constant.character.escape.line-continuation.nsis</string>
+        </dict>
+        <dict>
             <key>begin</key>
             <string>"</string>
             <key>beginCaptures</key>
