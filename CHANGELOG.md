@@ -1,3 +1,8 @@
+# v4.6.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.6.0)
+
+- add highlighting for line-continuation character
+- update dependencies
+
 # v4.5.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.5.0)
 
 - add `Alt`+`Enter` keybinding for continued lines (#40 by @donaldguy)
