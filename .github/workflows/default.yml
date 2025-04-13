@@ -3,28 +3,28 @@ name: CI
 on:
   push:
     branches:
-    - main
+      - main
     paths:
-    - '.github/**'
-    - 'config/**'
-    - 'images/**'
-    - 'snippets/**'
-    - 'src/**'
-    - 'syntaxes/**'
-    - 'package.json'
-    - 'pnpm-lock.yaml'
+      - ".github/**"
+      - "config/**"
+      - "images/**"
+      - "snippets/**"
+      - "src/**"
+      - "syntaxes/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   pull_request:
     branches:
-    - main
+      - main
     paths:
-    - '.github/**'
-    - 'config/**'
-    - 'images/**'
-    - 'snippets/**'
-    - 'src/**'
-    - 'syntaxes/**'
-    - 'package.json'
-    - 'pnpm-lock.yaml'
+      - ".github/**"
+      - "config/**"
+      - "images/**"
+      - "snippets/**"
+      - "src/**"
+      - "syntaxes/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   workflow_dispatch:
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: ['lts/*', '*']
+        node-version: ["lts/*", "*"]
         os: [ubuntu-latest]
 
     steps:
@@ -66,11 +66,10 @@ jobs:
         run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
       - name: Lint Source
-        run: pnpm run --if-present lint
+        run: pnpx @biomejs/biome ci
 
       - name: Build Source
         run: pnpm run --if-present build
 
       - name: Run Tests
         run: pnpm run --if-present test
-
