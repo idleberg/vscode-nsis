@@ -22,10 +22,7 @@
 		"test": "echo \"no tests yet\" && exit 0",
 		"vscode:prepublish": "npm run build"
 	},
-	"keywords": [
-		"nsis",
-		"wine"
-	],
+	"keywords": ["nsis", "wine"],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/idleberg/vscode-nsis"
@@ -39,7 +36,6 @@
 		"@nsis/nlf": "^0.12.0",
 		"makensis": "3.0.0-alpha.3",
 		"micromatch": "^4.0.8",
-		"nano-staged": "^0.8.0",
 		"open": "^10.1.0",
 		"vscode-get-config": "^0.4.0",
 		"which": "^5.0.0"
@@ -61,9 +57,7 @@
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.29.1"
 	},
-	"activationEvents": [
-		"onStartupFinished"
-	],
+	"activationEvents": ["onStartupFinished"],
 	"icon": "resources/logo.png",
 	"galleryBanner": {
 		"color": "#9e90aa",
@@ -72,11 +66,7 @@
 	"engines": {
 		"vscode": "^1.85.0"
 	},
-	"categories": [
-		"Programming Languages",
-		"Snippets",
-		"Other"
-	],
+	"categories": ["Programming Languages", "Snippets", "Other"],
 	"contributes": {
 		"configuration": {
 			"type": "object",
@@ -90,14 +80,7 @@
 				},
 				"nsis.compiler.verbosity": {
 					"type": "string",
-					"enum": [
-						"-1",
-						"0",
-						"1",
-						"2",
-						"3",
-						"4"
-					],
+					"enum": ["-1", "0", "1", "2", "3", "4"],
 					"enumDescriptions": [
 						"(not set)",
 						"none",
@@ -133,11 +116,7 @@
 				},
 				"nsis.diagnostics.preprocessMode": {
 					"type": "string",
-					"enum": [
-						"(none)",
-						"PPO",
-						"Safe PPO"
-					],
+					"enum": ["(none)", "PPO", "Safe PPO"],
 					"default": "PPO",
 					"markdownDescription": "%nsisPreprocessMode%",
 					"order": 6
@@ -180,11 +159,7 @@
 				},
 				"nsis.processHeaders": {
 					"type": "string",
-					"enum": [
-						"Allow",
-						"Disallow",
-						"Disallow & Never Ask Me"
-					],
+					"enum": ["Allow", "Disallow", "Disallow & Never Ask Me"],
 					"enumDescriptions": [
 						"Compilation is enabled for both, .nsi and .nsh files",
 						"Compilation is enabled for .nsi files only, displays a warning when trying to compile .nsh files",
@@ -196,12 +171,7 @@
 				},
 				"nsis.showOutputView": {
 					"type": "string",
-					"enum": [
-						"Always",
-						"On Warnings & Errors",
-						"On Errors",
-						"Never"
-					],
+					"enum": ["Always", "On Warnings & Errors", "On Errors", "Never"],
 					"enumDescriptions": [
 						"The output panel is shown whenever a script is compiled",
 						"The output panel is only shown when the compiled script has warnings or errors",
@@ -253,34 +223,19 @@
 		"languages": [
 			{
 				"id": "makensis",
-				"aliases": [
-					"MakeNSIS Log"
-				]
+				"aliases": ["MakeNSIS Log"]
 			},
 			{
 				"id": "nsis",
-				"aliases": [
-					"NSIS",
-					"nsis"
-				],
-				"extensions": [
-					".nsi",
-					".nsh",
-					".bnsi",
-					".bnsh"
-				],
+				"aliases": ["NSIS", "nsis"],
+				"extensions": [".nsi", ".nsh", ".bnsi", ".bnsh"],
 				"firstLine": "^#!/.*\\bmakensis\\b",
 				"configuration": "./config/nsis.json"
 			},
 			{
 				"id": "nlf",
-				"aliases": [
-					"NSIS Language File",
-					"nlf"
-				],
-				"extensions": [
-					".nlf"
-				],
+				"aliases": ["NSIS Language File", "nlf"],
+				"extensions": [".nlf"],
 				"configuration": "./config/nlf.json"
 			},
 			{
@@ -307,9 +262,7 @@
 				"language": "nsis-injection",
 				"scopeName": "markdown.nsis.codeblock",
 				"path": "./syntaxes/codeblock.json",
-				"injectTo": [
-					"text.html.markdown"
-				],
+				"injectTo": ["text.html.markdown"],
 				"embeddedLanguages": {
 					"meta.embedded.block.nsis": "nsis"
 				}
@@ -597,18 +550,6 @@
 				"path": "./snippets/scaffold.ModernUI.json"
 			}
 		]
-	},
-	"babel": {
-		"presets": [
-			"@babel/env"
-		]
-	},
-	"nano-staged": {
-		"*.(ts|json|yml)": [
-			"eslint --cache --fix",
-			"prettier --write"
-		],
-		"*.md": "prettier --write"
 	},
 	"packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
 }
