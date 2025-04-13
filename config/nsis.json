@@ -3,11 +3,7 @@
 		"lineComment": ";",
 		"blockComment": ["/*", "*/"]
 	},
-	"brackets": [
-		["{", "}"],
-		["[", "]"],
-		["(", ")"]
-	],
+	"brackets": [["{", "}"], ["[", "]"], ["(", ")"]],
 	"autoClosingPairs": [
 		["{", "}"],
 		["[", "]"],
@@ -24,7 +20,7 @@
 			}
 		},
 		{
-			"beforeText": "^\\s*(?:Function|PageEx|Section|SectionGroup)(\\s+[\\w.\/]+)+$",
+			"beforeText": "^\\s*(?:Function|PageEx|Section|SectionGroup)(\\s+[\\w./]+)+$",
 			"action": {
 				"indent": "indent"
 			}

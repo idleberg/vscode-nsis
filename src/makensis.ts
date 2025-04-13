@@ -1,21 +1,9 @@
-import { commands, window } from "vscode";
-import {
-	compilerOutput,
-	compilerError,
-	compilerExit,
-	flagsCallback,
-	versionCallback,
-} from "./callbacks";
-import { getConfig } from "vscode-get-config";
-import {
-	getMakensisPath,
-	getSpawnEnv,
-	isHeaderFile,
-	openURL,
-	pathWarning,
-} from "./util";
-import { makensisChannel } from "./channel";
-import * as NSIS from "makensis";
+import * as NSIS from 'makensis';
+import { commands, window } from 'vscode';
+import { getConfig } from 'vscode-get-config';
+import { compilerError, compilerExit, compilerOutput, flagsCallback, versionCallback } from './callbacks';
+import { makensisChannel } from './channel';
+import { getMakensisPath, getSpawnEnv, isHeaderFile, openURL, pathWarning } from './util';
 
 export async function compile(strictMode: boolean): Promise<void> {
 	const activeTextEditor = window?.activeTextEditor;
@@ -24,34 +12,30 @@ export async function compile(strictMode: boolean): Promise<void> {
 		return;
 	}
 
-	const languageID = activeTextEditor["_documentData"]
-		? activeTextEditor["_documentData"]["_languageId"]
-		: activeTextEditor["document"]["languageId"];
+	const languageID = activeTextEditor._documentData
+		? activeTextEditor._documentData._languageId
+		: activeTextEditor.document.languageId;
 
-	if (!activeTextEditor || languageID !== "nsis") {
-		makensisChannel.appendLine("This command is only available for NSIS files");
+	if (!activeTextEditor || languageID !== 'nsis') {
+		makensisChannel.appendLine('This command is only available for NSIS files');
 		return;
 	}
 
-	const { compiler, processHeaders, showFlagsAsObject } =
-		await getConfig("nsis");
+	const { compiler, processHeaders, showFlagsAsObject } = await getConfig('nsis');
 	const document = activeTextEditor.document;
 
 	if (isHeaderFile(document.fileName)) {
-		if (processHeaders === "Disallow") {
+		if (processHeaders === 'Disallow') {
 			const choice = await window.showWarningMessage(
-				"Compiling header files is blocked by default. You can allow it in the package settings, or mute this warning.",
-				"Open Settings",
+				'Compiling header files is blocked by default. You can allow it in the package settings, or mute this warning.',
+				'Open Settings',
 			);
-			if (choice === "Open Settings") {
-				commands.executeCommand(
-					"workbench.action.openSettings",
-					"@ext:idleberg.nsis processHeaders",
-				);
+			if (choice === 'Open Settings') {
+				commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis processHeaders');
 				return;
 			}
-		} else if (processHeaders === "Disallow & Never Ask Me") {
-			window.setStatusBarMessage("makensis: Skipped header file", 5000);
+		} else if (processHeaders === 'Disallow & Never Ask Me') {
+			window.setStatusBarMessage('makensis: Skipped header file', 5000);
 			return;
 		}
 	}
@@ -59,11 +43,8 @@ export async function compile(strictMode: boolean): Promise<void> {
 	try {
 		await document.save();
 	} catch (error) {
-		console.error(
-			"[vscode-nsis]",
-			error instanceof Error ? error.message : error,
-		);
-		window.showErrorMessage("Error saving file, see console for details");
+		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		window.showErrorMessage('Error saving file, see console for details');
 		return;
 	}
 
@@ -87,10 +68,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 			await getSpawnEnv(),
 		);
 	} catch (error) {
-		console.error(
-			"[vscode-nsis]",
-			error instanceof Error ? error.message : error,
-		);
+		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 	}
 }
 
@@ -107,15 +85,12 @@ export async function showVersion(): Promise<void> {
 			await getSpawnEnv(),
 		);
 	} catch (error) {
-		console.error(
-			"[vscode-nsis]",
-			error instanceof Error ? error.message : error,
-		);
+		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 	}
 }
 
 export async function showCompilerFlags(): Promise<void> {
-	const { showFlagsAsObject } = await getConfig("nsis");
+	const { showFlagsAsObject } = await getConfig('nsis');
 	const pathToMakensis = await getMakensisPath();
 
 	await makensisChannel.clear();
@@ -131,25 +106,19 @@ export async function showCompilerFlags(): Promise<void> {
 			await getSpawnEnv(),
 		);
 	} catch (error) {
-		console.error(
-			"[vscode-nsis]",
-			error instanceof Error ? error.message : error,
-		);
+		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 	}
 }
 
 export async function showHelp(): Promise<void> {
 	makensisChannel.clear();
 
-	let pathToMakensis;
+	let pathToMakensis: string;
 
 	try {
 		pathToMakensis = await getMakensisPath();
 	} catch (error) {
-		console.error(
-			"[vscode-nsis]",
-			error instanceof Error ? error.message : error,
-		);
+		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 		await pathWarning();
 
 		return;
@@ -159,24 +128,19 @@ export async function showHelp(): Promise<void> {
 
 	try {
 		const output = await NSIS.commandHelp(
-			"",
+			'',
 			{
 				pathToMakensis: pathToMakensis,
 				json: true,
 			},
 			await getSpawnEnv(),
 		);
-		command =
-			(await window.showQuickPick(Object.keys(output.stdout as string))) ||
-			undefined;
+		command = (await window.showQuickPick(Object.keys(output.stdout as string))) || undefined;
 
 		if (command) {
 			openURL(command);
 		}
 	} catch (error) {
-		console.error(
-			"[vscode-nsis]",
-			error instanceof error ? error.message : error,
-		);
+		console.error('[vscode-nsis]', error instanceof error ? error.message : error);
 	}
 }

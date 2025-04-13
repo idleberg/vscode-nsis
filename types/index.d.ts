@@ -1,4 +1,4 @@
-import type { Range, DiagnosticSeverity } from "vscode";
+import type { DiagnosticSeverity, Range } from 'vscode';
 
 export type DiagnosticCollection = {
 	code?: string;

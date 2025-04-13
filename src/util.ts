@@ -1,104 +1,82 @@
-import {
-	commands,
-	DiagnosticSeverity,
-	Position,
-	Range,
-	window,
-	workspace,
-} from "vscode";
-import { constants, promises as fs } from "node:fs";
-import { exec, spawn } from "node:child_process";
-import { getConfig } from "vscode-get-config";
-import { makensisChannel } from "./channel";
-import { platform } from "node:os";
-import { resolve } from "node:path";
-import open from "open";
-import which from "which";
+import { exec, spawn } from 'node:child_process';
+import { constants, promises as fs } from 'node:fs';
+import { platform } from 'node:os';
+import { resolve } from 'node:path';
+import open from 'open';
+import { DiagnosticSeverity, Position, Range, commands, window, workspace } from 'vscode';
+import { getConfig } from 'vscode-get-config';
+import which from 'which';
+import { makensisChannel } from './channel';
 
-import type { SpawnOptions } from "node:child_process";
-import type { DiagnosticCollection } from "../types";
+import type { SpawnOptions } from 'node:child_process';
+import type { DiagnosticCollection } from '../types';
 
 export function getNullDevice(): string {
-	return isWindows() ? "OutFile NUL" : "OutFile /dev/null/";
+	return isWindows() ? 'OutFile NUL' : 'OutFile /dev/null/';
 }
 
 export function getPrefix(): string {
-	return isWindows() ? "/" : "-";
+	return isWindows() ? '/' : '-';
 }
 
 export function isHeaderFile(filePath: string): boolean {
-	const headerFiles = [".bnsh", ".nsh"];
+	const headerFiles = ['.bnsh', '.nsh'];
 
-	return Boolean(
-		headerFiles.filter((fileExt) => filePath?.endsWith(fileExt)).length,
-	);
+	return Boolean(headerFiles.filter((fileExt) => filePath?.endsWith(fileExt)).length);
 }
 
 export function isWindows(): boolean {
-	return platform() === "win32";
+	return platform() === 'win32';
 }
 
 export async function isWindowsCompatible(): Promise<boolean> {
-	const { wine } = await getConfig("nsis");
+	const { wine } = await getConfig('nsis');
 
-	return isWindows() || wine.runWithWine === true ? true : false;
+	return !!(isWindows() || wine.runWithWine === true);
 }
 
 export async function getMakensisPath(): Promise<string> {
-	const { compiler } = await getConfig("nsis");
+	const { compiler } = await getConfig('nsis');
 
 	const pathToMakensis =
-		isWindows() &&
-		compiler.pathToMakensis.startsWith('"') &&
-		compiler.pathToMakensis.startsWith('"')
-			? compiler.pathToMakensis.replace(/^"/, "").replace(/"$/, "").trim()
+		isWindows() && compiler.pathToMakensis.startsWith('"') && compiler.pathToMakensis.startsWith('"')
+			? compiler.pathToMakensis.replace(/^"/, '').replace(/"$/, '').trim()
 			: compiler.pathToMakensis.trim();
 
-	if (pathToMakensis?.length && pathToMakensis !== "makensis") {
-		console.log(
-			`Using makensis path found in user settings: ${pathToMakensis}`,
-		);
+	if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
+		console.log(`Using makensis path found in user settings: ${pathToMakensis}`);
 
 		return resolve(pathToMakensis.trim());
 	}
 
 	try {
-		const result = String(await which("makensis"));
+		const result = String(await which('makensis'));
 		return result;
 	} catch (error) {
-		console.error(
-			"[vscode-nsis]",
-			error instanceof Error ? error.message : error,
-		);
+		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 		const choice = await window.showWarningMessage(
-			"Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.",
-			"Open Settings",
+			'Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.',
+			'Open Settings',
 		);
-		if (choice === "Open Settings") {
-			commands.executeCommand(
-				"workbench.action.openSettings",
-				"@ext:idleberg.nsis pathToMakensis",
-			);
+		if (choice === 'Open Settings') {
+			commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
 		}
 
-		console.error(
-			"[vscode-nsis]",
-			error instanceof Error ? error.message : error,
-		);
+		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 	}
 
-	return "makensis";
+	return 'makensis';
 }
 
 export function mapPlatform(): string {
 	const pf = platform();
 
 	switch (pf) {
-		case "darwin":
-			return "osx";
+		case 'darwin':
+			return 'osx';
 
-		case "win32":
-			return "windows";
+		case 'win32':
+			return 'windows';
 
 		default:
 			return pf;
@@ -113,18 +91,18 @@ export function openURL(cmd: string): void {
 
 export async function pathWarning(): Promise<void> {
 	const choice = await window.showWarningMessage(
-		"makensis is not installed or missing in your PATH environmental variable",
-		"Download",
-		"Help",
+		'makensis is not installed or missing in your PATH environmental variable',
+		'Download',
+		'Help',
 	);
 
 	switch (choice) {
-		case "Download":
-			open("https://sourceforge.net/projects/nsis/");
+		case 'Download':
+			open('https://sourceforge.net/projects/nsis/');
 			break;
 
-		case "Help":
-			open("http://superuser.com/a/284351/195953");
+		case 'Help':
+			open('http://superuser.com/a/284351/195953');
 			break;
 	}
 }
@@ -132,22 +110,19 @@ export async function pathWarning(): Promise<void> {
 export async function revealInstaller(outFile: string): Promise<void> {
 	if (outFile && (await fileExists(outFile))) {
 		switch (platform()) {
-			case "win32":
-				spawn("explorer", [`/select,${outFile}`], {});
+			case 'win32':
+				spawn('explorer', [`/select,${outFile}`], {});
 				break;
 
-			case "darwin":
-				spawn("open", ["-R", outFile], {});
+			case 'darwin':
+				spawn('open', ['-R', outFile], {});
 				break;
 
-			case "linux":
+			case 'linux':
 				try {
-					spawn("nautilus", [outFile], {});
+					spawn('nautilus', [outFile], {});
 				} catch (error) {
-					console.error(
-						"[vscode-nsis]",
-						error instanceof Error ? error.message : error,
-					);
+					console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
 				}
 				break;
 		}
@@ -156,7 +131,7 @@ export async function revealInstaller(outFile: string): Promise<void> {
 
 export async function runInstaller(outFile: string): Promise<void> {
 	if (outFile && (await fileExists(outFile))) {
-		const { wine } = await getConfig("nsis");
+		const { wine } = await getConfig('nsis');
 
 		if (isWindows()) {
 			exec(`cmd /c "${outFile}"`);
@@ -166,40 +141,41 @@ export async function runInstaller(outFile: string): Promise<void> {
 	}
 }
 
-export async function buttonHandler(
-	choice: string,
-	outFile?: string | null,
-): Promise<void> {
+export async function buttonHandler(choice: string, outFile?: string | null): Promise<void> {
+	if (!outFile) {
+		return;
+	}
+
 	switch (choice) {
-		case "Run":
-			await runInstaller(outFile!);
+		case 'Run':
+			await runInstaller(outFile);
 			break;
 
-		case "Reveal":
-			await revealInstaller(outFile!);
+		case 'Reveal':
+			await revealInstaller(outFile);
 			break;
 
-		case "Show Output":
+		case 'Show Output':
 			makensisChannel.show(true);
 			break;
 	}
 }
 
 export async function getPreprocessMode(): Promise<string> {
-	const { diagnostics } = await getConfig("nsis");
+	const { diagnostics } = await getConfig('nsis');
 
 	switch (diagnostics.preprocessMode) {
-		case "PPO":
-			return "ppo";
-		case "Safe PPO":
-			return "safePPO";
+		case 'PPO':
+			return 'ppo';
+		case 'Safe PPO':
+			return 'safePPO';
 		default:
-			return "";
+			return '';
 	}
 }
 
 export async function getOverrideCompression(): Promise<string> {
-	const { diagnostics } = await getConfig("nsis");
+	const { diagnostics } = await getConfig('nsis');
 
 	return diagnostics.overrideCompression || true;
 }
@@ -207,8 +183,8 @@ export async function getOverrideCompression(): Promise<string> {
 export function getLineLength(line: number): number {
 	const editorText = window.activeTextEditor?.document.getText();
 
-	if (editorText && editorText.length) {
-		const lines: string[] = editorText.split("\n");
+	if (editorText?.length) {
+		const lines: string[] = editorText.split('\n');
 
 		return lines[line]?.length || 0;
 	}
@@ -218,22 +194,19 @@ export function getLineLength(line: number): number {
 
 export async function showANSIDeprecationWarning(): Promise<void> {
 	const choice = await window.showWarningMessage(
-		"ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.",
-		"Unicode Installer",
-		"Open Settings",
+		'ANSI targets are deprecated as of NSIS v3.05, consider moving to Unicode. You can mute this warning in the package settings.',
+		'Unicode Installer',
+		'Open Settings',
 	);
 
 	switch (choice) {
-		case "Open Settings":
-			commands.executeCommand(
-				"workbench.action.openSettings",
-				"@ext:idleberg.nsis muteANSIDeprecationWarning",
-			);
+		case 'Open Settings':
+			commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis muteANSIDeprecationWarning');
 			break;
 
-		case "Unicode Installer":
+		case 'Unicode Installer':
 			open(
-				"https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/Unicode.html?utm_source=vscode",
+				'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/Unicode.html?utm_source=vscode',
 			);
 			break;
 
@@ -255,47 +228,35 @@ export async function fileExists(filePath: string): Promise<boolean> {
 	return true;
 }
 
-export async function findWarnings(
-	input: string,
-): Promise<DiagnosticCollection[]> {
+export async function findWarnings(input: string): Promise<DiagnosticCollection[]> {
 	if (!input?.length) {
 		return [];
 	}
 
 	const output: DiagnosticCollection[] = [];
 
-	const warningLines = input.split("\n");
+	const warningLines = input.split('\n');
 	if (!warningLines.length) {
 		return output;
 	}
 
 	if (warningLines.length) {
-		// Note to self: Don't use map()
-		warningLines.forEach(async (warningLine) => {
-			const result =
-				/warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(
-					warningLine,
-				);
+		for (const warningLine of warningLines) {
+			const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
 			if (result !== null) {
-				const warningLine = parseInt(String(result?.groups?.line)) - 1;
+				const warningLine = Number.parseInt(String(result?.groups?.line)) - 1;
 
 				output.push({
-					code: "",
+					code: '',
 					message: result.groups?.message,
-					range: new Range(
-						new Position(warningLine, 0),
-						new Position(warningLine, getLineLength(warningLine)),
-					),
+					range: new Range(new Position(warningLine, 0), new Position(warningLine, getLineLength(warningLine))),
 					severity: DiagnosticSeverity.Warning,
 				});
 			}
-		});
+		}
 
-		if (
-			!(await getConfig("nsis")) &&
-			input.includes("7998: ANSI targets are deprecated")
-		) {
+		if (!(await getConfig('nsis')) && input.includes('7998: ANSI targets are deprecated')) {
 			showANSIDeprecationWarning();
 		}
 	}
@@ -308,21 +269,15 @@ export function findErrors(input: string): DiagnosticCollection {
 		return {};
 	}
 
-	const result =
-		/(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(
-			input,
-		);
+	const result = /(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(input);
 
 	if (result !== null) {
-		const errorLine = parseInt(String(result?.groups?.line)) - 1;
+		const errorLine = Number.parseInt(String(result?.groups?.line)) - 1;
 
 		return {
-			code: "",
+			code: '',
 			message: result?.groups?.message,
-			range: new Range(
-				new Position(errorLine, 0),
-				new Position(errorLine, getLineLength(errorLine)),
-			),
+			range: new Range(new Position(errorLine, 0), new Position(errorLine, getLineLength(errorLine))),
 			severity: DiagnosticSeverity.Error,
 		};
 	}
@@ -331,7 +286,7 @@ export function findErrors(input: string): DiagnosticCollection {
 }
 
 export async function getSpawnEnv(): Promise<SpawnOptions> {
-	const { integrated } = workspace.getConfiguration("terminal");
+	const { integrated } = workspace.getConfiguration('terminal');
 	const mappedPlatform = mapPlatform();
 
 	return {
@@ -340,39 +295,23 @@ export async function getSpawnEnv(): Promise<SpawnOptions> {
 			...process.env,
 
 			// NSIS related
-			NSISDIR:
-				integrated.env[mappedPlatform].NSISDIR ||
-				process.env.NSISDIR ||
-				undefined,
-			NSISCONFDIR:
-				integrated.env[mappedPlatform].NSISCONFDIR ||
-				process.env.NSISCONFDIR ||
-				undefined,
+			NSISDIR: integrated.env[mappedPlatform].NSISDIR || process.env.NSISDIR || undefined,
+			NSISCONFDIR: integrated.env[mappedPlatform].NSISCONFDIR || process.env.NSISCONFDIR || undefined,
 
 			// language settings, fixes occasional issues on macOS and Linux
-			LANG: !isWindows() && !process.env.LANGUAGE ? "en_US.UTF-8" : undefined,
-			LANGUAGE:
-				!isWindows() && !process.env.LANGUAGE ? "en_US.UTF-8" : undefined,
-			LC_ALL: !isWindows() && !process.env.LC_ALL ? "en_US.UTF-8" : undefined,
+			LANG: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
+			LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
+			LC_ALL: !isWindows() && !process.env.LC_ALL ? 'en_US.UTF-8' : undefined,
 		},
 	};
 }
 
-export function inRange(
-	value: number | string,
-	min: number,
-	max: number,
-): boolean {
+export function inRange(value: number | string, min: number, max: number): boolean {
 	return Number(value) >= min && Number(value) <= max;
 }
 
-export function hasArgument(
-	needle: string | string[],
-	argument: string,
-): boolean {
-	needle = typeof needle === "string" ? [needle] : needle;
+export function hasArgument(needle: string | string[], argument: string): boolean {
+	const needleArray = typeof needle === 'string' ? [needle] : needle;
 
-	return needle.includes(`/${argument}`) || needle.includes(`-${argument}`)
-		? true
-		: false;
+	return Boolean(needleArray.includes(`/${argument}`) || needleArray.includes(`-${argument}`));
 }
