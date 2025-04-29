@@ -271,10 +271,10 @@
 				"configuration": "./config/nsis.json"
 			},
 			{
-				"id": "nsis-case-sensitive",
+				"id": "nsis-strict",
 				"aliases": [
-					"NSIS (case-sensitive)",
-					"nsis.case-sensitive"
+					"NSIS (strict)",
+					"nsis.strict"
 				],
 				"extensions": [
 					".nsi",
@@ -312,9 +312,9 @@
 				"path": "./syntaxes/nsis.tmLanguage"
 			},
 			{
-				"language": "nsis-case-sensitive",
-				"scopeName": "source.nsis.case-sensitive",
-				"path": "./syntaxes/nsis.case-sensitive.tmLanguage"
+				"language": "nsis-strict",
+				"scopeName": "source.nsis.strict",
+				"path": "./syntaxes/nsis.strict.tmLanguage"
 			},
 			{
 				"language": "nlf",
