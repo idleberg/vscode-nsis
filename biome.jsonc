@@ -4,7 +4,12 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": ["lib/**", "node_modules/**", "pnpm-lockfile.yaml"]
+		"ignore": [
+			"lib/**",
+			"node_modules/**",
+			"package.json",
+			"pnpm-lockfile.yaml"
+		]
 	},
 	"linter": {
 		"enabled": true,
