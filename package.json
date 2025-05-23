@@ -271,21 +271,6 @@
 				"configuration": "./config/nsis.json"
 			},
 			{
-				"id": "nsis-strict",
-				"aliases": [
-					"NSIS (strict)",
-					"nsis.strict"
-				],
-				"extensions": [
-					".nsi",
-					".nsh",
-					".bnsi",
-					".bnsh"
-				],
-				"firstLine": "^#!/.*\\bmakensis\\b",
-				"configuration": "./config/nsis.json"
-			},
-			{
 				"id": "nlf",
 				"aliases": [
 					"NSIS Language File",
@@ -310,11 +295,6 @@
 				"language": "nsis",
 				"scopeName": "source.nsis",
 				"path": "./syntaxes/nsis.tmLanguage"
-			},
-			{
-				"language": "nsis-strict",
-				"scopeName": "source.nsis.strict",
-				"path": "./syntaxes/nsis.strict.tmLanguage"
 			},
 			{
 				"language": "nlf",
