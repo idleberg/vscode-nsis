@@ -12,11 +12,9 @@ export async function compile(strictMode: boolean): Promise<void> {
 		return;
 	}
 
-	const languageID = activeTextEditor._documentData
-		? activeTextEditor._documentData._languageId
-		: activeTextEditor.document.languageId;
+	const isNsis = activeTextEditor?.document?.languageId === 'nsis';
 
-	if (!activeTextEditor || languageID !== 'nsis') {
+	if (!isNsis) {
 		makensisChannel.appendLine('This command is only available for NSIS files');
 		return;
 	}
