@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.12.0
     version: 0.12.0
   makensis:
-    specifier: 3.0.0-alpha.4
-    version: 3.0.0-alpha.4
+    specifier: 3.0.0-alpha.5
+    version: 3.0.0-alpha.5
   micromatch:
     specifier: ^4.0.8
     version: 4.0.8
@@ -3865,8 +3865,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
 
-  /makensis@3.0.0-alpha.4:
-    resolution: {integrity: sha512-EqzqgHFqoZi7WPPOjhV0ypo9tld2QSi3Msalghg4Q2WqXwrabp0xyvShWX/Y3rs7cY2e4yUGFmTG02KdAASFQg==}
+  /makensis@3.0.0-alpha.5:
+    resolution: {integrity: sha512-uhtNUdWxDWf3/qQQEgJCV86TaXCL4Tp/kt+0Jphhdmcei7ybJtQDylTMRPnx8IMvxGw9rAWsvOWSfvqw+qhMQg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     dependencies:
       '@nsis/language-data': 0.9.3

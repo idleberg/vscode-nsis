@@ -37,7 +37,7 @@
 	"main": "./lib/index.js",
 	"dependencies": {
 		"@nsis/nlf": "^0.12.0",
-		"makensis": "3.0.0-alpha.4",
+		"makensis": "3.0.0-alpha.5",
 		"micromatch": "^4.0.8",
 		"open": "^10.1.2",
 		"vscode-get-config": "^0.4.0",
