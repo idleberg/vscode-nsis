@@ -3,10 +3,10 @@ import { getConfig } from 'vscode-get-config';
 import { infoChannel, makensisChannel } from './channel';
 import { buttonHandler, fileExists, getMakensisPath, isWindowsCompatible } from './util';
 
-import type Makensis from 'makensis/types';
+import type { CompilerData, CompilerOutput } from 'makensis';
 import { window } from 'vscode';
 
-export async function compilerOutput(data: Makensis.CompilerData): Promise<void> {
+export async function compilerOutput(data: CompilerData): Promise<void> {
 	if (!data?.line) {
 		return;
 	}
@@ -34,7 +34,7 @@ export async function compilerError(data: string): Promise<void> {
 	}
 }
 
-export async function compilerExit(data: Makensis.CompilerOutput): Promise<void> {
+export async function compilerExit(data: CompilerOutput): Promise<void> {
 	const { showNotifications, showOutputView } = await getConfig('nsis');
 
 	if (data.status === 0) {
@@ -83,7 +83,7 @@ export async function compilerExit(data: Makensis.CompilerOutput): Promise<void>
 	}
 }
 
-export async function flagsCallback(data: Makensis.CompilerOutput): Promise<void> {
+export async function flagsCallback(data: CompilerOutput): Promise<void> {
 	infoChannel.clear();
 
 	const { showFlagsAsObject } = await getConfig('nsis');
@@ -99,7 +99,7 @@ export async function flagsCallback(data: Makensis.CompilerOutput): Promise<void
 	infoChannel.show(true);
 }
 
-export async function versionCallback(data: Makensis.CompilerOutput): Promise<void> {
+export async function versionCallback(data: CompilerOutput): Promise<void> {
 	infoChannel.clear();
 
 	const { showVersionAsInfoMessage } = await getConfig('nsis');

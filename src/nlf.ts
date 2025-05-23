@@ -19,7 +19,7 @@ export function convert(): void {
 
 function convertNLF(document): void {
 	let input: string;
-	let output: string;
+	let output = '';
 
 	try {
 		input = document.getText();
@@ -37,7 +37,7 @@ function convertNLF(document): void {
 
 function convertJSON(document): void {
 	let input: string;
-	let output: string;
+	let output = '';
 
 	try {
 		input = document.getText();

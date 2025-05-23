@@ -1,4 +1,7 @@
+import type { CompilerOptions, CompilerOutput } from 'makensis';
 import { compile } from 'makensis';
+
+// import Makensis from 'makensis/types';
 import micromatch from 'micromatch';
 import { getConfig } from 'vscode-get-config';
 import {
@@ -48,7 +51,7 @@ export async function updateDiagnostics(
 			return;
 		}
 
-		const options: Makensis.CompilerOptions = {
+		const options: CompilerOptions = {
 			verbose: 2,
 			pathToMakensis,
 			postExecute: [getNullDevice()],
@@ -68,7 +71,7 @@ export async function updateDiagnostics(
 			(options.postExecute as string[]).push('SetCompress off');
 		}
 
-		let output: Makensis.CompilerOutput;
+		let output: CompilerOutput;
 
 		try {
 			output = await compile(document.fileName, options, await getSpawnEnv());
