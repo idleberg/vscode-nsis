@@ -11,7 +11,10 @@
 	},
 	"scripts": {
 		"compile": "npm run build",
-		"build": "tsup",
+
+		"build": "concurrently --prefix-colors 'blue,green' 'npm:build:*'",
+		"build:code": "tsup",
+		"build:image": "sharp resize 1024 1024 --input \"node_modules/@nsis/logo/src/Logo/below 48x48/outlines-light.svg\" --output resources/logo.png",
 		"dev": "npm run start",
 		"fix": "eslint --fix ./src",
 		"lint": "biome check --no-errors-on-unmatched --vcs-enabled=true --vcs-use-ignore-file=true",
@@ -50,12 +53,11 @@
 		"@nsis/logo": "0.0.0",
 		"@types/node": "^22.15.21",
 		"@types/vscode": "1.85.0",
+		"concurrently": "^9.1.2",
 		"cross-env": "^7.0.3",
-		"gulp": "^5.0.0",
-		"gulp-raster-update": "^0.2.0",
-		"gulp-rename": "^2.0.0",
 		"lefthook": "^1.11.13",
 		"ovsx": "^0.10.2",
+		"sharp-cli": "^5.1.0",
 		"tsup": "^8.5.0",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.32.1"
