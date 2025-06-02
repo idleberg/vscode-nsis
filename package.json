@@ -11,9 +11,8 @@
 	},
 	"scripts": {
 		"compile": "npm run build",
-
 		"build": "concurrently --prefix-colors 'blue,green' 'npm:build:*'",
-		"build:code": "tsup",
+		"build:code": "tsdown",
 		"build:image": "sharp resize 1024 1024 --input \"node_modules/@nsis/logo/src/Logo/below 48x48/outlines-light.svg\" --output resources/logo.png",
 		"dev": "npm run start",
 		"fix": "eslint --fix ./src",
@@ -58,7 +57,7 @@
 		"lefthook": "^1.11.13",
 		"ovsx": "^0.10.2",
 		"sharp-cli": "^5.1.0",
-		"tsup": "^8.5.0",
+		"tsdown": "^0.12.6",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.32.1"
 	},
