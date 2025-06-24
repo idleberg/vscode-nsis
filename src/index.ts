@@ -1,4 +1,4 @@
-import { type ExtensionContext, commands, languages, window, workspace } from 'vscode';
+import { commands, type ExtensionContext, languages, window, workspace } from 'vscode';
 
 export async function activate(context: ExtensionContext): Promise<void> {
 	const { compile, showCompilerFlags, showVersion, showHelp } = await import('./makensis');

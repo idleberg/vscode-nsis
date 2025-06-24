@@ -22,6 +22,7 @@ export async function createTask(): Promise<unknown> {
 				label: 'Build',
 				type: 'shell',
 				command: 'makensis',
+				// biome-ignore lint/suspicious/noTemplateCurlyInString: false positive
 				args: [verbosity, '${file}'],
 				group: 'build',
 			},
@@ -29,6 +30,7 @@ export async function createTask(): Promise<unknown> {
 				label: 'Build (strict)',
 				type: 'shell',
 				command: 'makensis',
+				// biome-ignore lint/suspicious/noTemplateCurlyInString: false positive
 				args: [verbosity, `${prefix}WX`, '${file}'],
 				group: 'build',
 			},

@@ -1,10 +1,9 @@
 import { platform } from 'node:os';
+import type { CompilerData, CompilerOutput } from 'makensis';
+import { window } from 'vscode';
 import { getConfig } from 'vscode-get-config';
 import { infoChannel, makensisChannel } from './channel';
 import { buttonHandler, fileExists, getMakensisPath, isWindowsCompatible } from './util';
-
-import type { CompilerData, CompilerOutput } from 'makensis';
-import { window } from 'vscode';
 
 export async function compilerOutput(data: CompilerData): Promise<void> {
 	if (!data?.line) {

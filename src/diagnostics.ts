@@ -3,6 +3,7 @@ import { compile } from 'makensis';
 
 // import Makensis from 'makensis/types';
 import micromatch from 'micromatch';
+import type { DiagnosticCollection, TextDocument } from 'vscode';
 import { getConfig } from 'vscode-get-config';
 import {
 	findErrors,
@@ -13,8 +14,6 @@ import {
 	getPreprocessMode,
 	getSpawnEnv,
 } from './util';
-
-import type { DiagnosticCollection, TextDocument } from 'vscode';
 
 export async function updateDiagnostics(
 	document: TextDocument | null,

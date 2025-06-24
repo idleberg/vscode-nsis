@@ -1,15 +1,14 @@
+import type { SpawnOptions } from 'node:child_process';
 import { exec, spawn } from 'node:child_process';
 import { constants, promises as fs } from 'node:fs';
 import { platform } from 'node:os';
 import { resolve } from 'node:path';
 import open from 'open';
-import { DiagnosticSeverity, Position, Range, commands, window, workspace } from 'vscode';
+import { commands, DiagnosticSeverity, Position, Range, window, workspace } from 'vscode';
 import { getConfig } from 'vscode-get-config';
 import which from 'which';
-import { makensisChannel } from './channel';
-
-import type { SpawnOptions } from 'node:child_process';
 import type { DiagnosticCollection } from '../types';
+import { makensisChannel } from './channel';
 
 export function getNullDevice(): string {
 	return isWindows() ? 'OutFile NUL' : 'OutFile /dev/null/';
@@ -221,7 +220,7 @@ export async function fileExists(filePath: string): Promise<boolean> {
 	try {
 		await fs.access(filePath, constants.F_OK);
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	} catch (error) {
+	} catch (_error) {
 		return false;
 	}
 

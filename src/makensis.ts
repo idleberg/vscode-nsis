@@ -122,7 +122,7 @@ export async function showHelp(): Promise<void> {
 		return;
 	}
 
-	let command: string | undefined = undefined;
+	let command: string | undefined;
 
 	try {
 		const output = await NSIS.commandHelp(
