@@ -39,9 +39,9 @@
 	"main": "./lib/index.js",
 	"dependencies": {
 		"@nsis/nlf": "^0.12.0",
-		"makensis": "3.0.0",
+		"makensis": "3.0.3",
 		"micromatch": "^4.0.8",
-		"open": "^10.1.2",
+		"open": "^10.2.0",
 		"vscode-get-config": "^0.4.0",
 		"which": "^5.0.0"
 	},
@@ -51,16 +51,15 @@
 		"@commitlint/config-conventional": "^19.8.1",
 		"@idleberg/configs": "^0.1.0",
 		"@nsis/logo": "0.0.0",
-		"@types/node": "^22.15.21",
+		"@types/node": "^24.4.0",
 		"@types/vscode": "1.85.0",
-		"concurrently": "^9.2.0",
-		"cross-env": "^7.0.3",
+		"concurrently": "^9.2.1",
 		"lefthook": "^1.13.0",
-		"ovsx": "^0.10.4",
-		"sharp-cli": "^5.1.0",
-		"tsdown": "^0.12.8",
-		"typescript": "^5.8.3",
-		"typescript-eslint": "^8.35.0"
+		"ovsx": "^0.10.5",
+		"sharp-cli": "^5.2.0",
+		"tsdown": "^0.15.1",
+		"typescript": "^5.9.2",
+		"typescript-eslint": "^8.43.0"
 	},
 	"activationEvents": [
 		"onStartupFinished"
