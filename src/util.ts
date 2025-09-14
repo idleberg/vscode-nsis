@@ -244,7 +244,7 @@ export async function findWarnings(input: string): Promise<DiagnosticCollection[
 			const result = /warning: (?<message>.*) \((?<file>.*?):(?<line>\d+)\)/.exec(warningLine);
 
 			if (result !== null) {
-				const warningLine = Number.parseInt(String(result?.groups?.line)) - 1;
+				const warningLine = Number.parseInt(String(result?.groups?.line), 10) - 1;
 
 				output.push({
 					code: '',
@@ -271,7 +271,7 @@ export function findErrors(input: string): DiagnosticCollection {
 	const result = /(?<message>.*)\r?\n.*rror in script:? "(?<file>.*)" on line (?<line>\d+)/.exec(input);
 
 	if (result !== null) {
-		const errorLine = Number.parseInt(String(result?.groups?.line)) - 1;
+		const errorLine = Number.parseInt(String(result?.groups?.line), 10) - 1;
 
 		return {
 			code: '',
