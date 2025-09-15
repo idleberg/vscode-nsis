@@ -1,7 +1,6 @@
 import type { CompilerOptions, CompilerOutput } from 'makensis';
 import { compile } from 'makensis';
 
-// import Makensis from 'makensis/types';
 import micromatch from 'micromatch';
 import type { DiagnosticCollection, TextDocument } from 'vscode';
 import { getConfig } from 'vscode-get-config';
