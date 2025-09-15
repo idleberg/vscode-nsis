@@ -49,17 +49,16 @@
 		"@biomejs/biome": "^2.2.4",
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
-		"@idleberg/configs": "^0.1.0",
+		"@idleberg/configs": "^0.2.0",
 		"@nsis/logo": "0.0.0",
-		"@types/node": "^24.4.0",
+		"@types/node": "^24.5.0",
 		"@types/vscode": "1.85.0",
 		"concurrently": "^9.2.1",
 		"lefthook": "^1.13.0",
 		"ovsx": "^0.10.5",
 		"sharp-cli": "^5.2.0",
 		"tsdown": "^0.15.1",
-		"typescript": "^5.9.2",
-		"typescript-eslint": "^8.43.0"
+		"typescript": "^5.9.2"
 	},
 	"activationEvents": [
 		"onStartupFinished"
