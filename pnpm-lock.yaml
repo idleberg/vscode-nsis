@@ -25,9 +25,6 @@ dependencies:
     version: 5.0.0
 
 devDependencies:
-  '@biomejs/biome':
-    specifier: ^2.2.4
-    version: 2.2.4
   '@commitlint/cli':
     specifier: ^19.8.1
     version: 19.8.1(@types/node@24.5.0)(typescript@5.9.2)
@@ -55,9 +52,6 @@ devDependencies:
   concurrently:
     specifier: ^9.2.1
     version: 9.2.1
-  lefthook:
-    specifier: ^1.13.0
-    version: 1.13.0
   ovsx:
     specifier: ^0.10.5
     version: 0.10.5
