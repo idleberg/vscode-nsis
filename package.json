@@ -48,16 +48,16 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
-		"@idleberg/configs": "^0.2.0",
+		"@idleberg/configs": "^0.3.1",
 		"@nsis/logo": "0.0.0",
 		"@types/micromatch": "^4.0.9",
-		"@types/node": "^24.5.0",
+		"@types/node": "^24.5.2",
 		"@types/vscode": "1.85.0",
 		"@types/which": "^3.0.4",
 		"concurrently": "^9.2.1",
 		"ovsx": "^0.10.5",
 		"sharp-cli": "^5.2.0",
-		"tsdown": "^0.15.1",
+		"tsdown": "^0.15.3",
 		"typescript": "^5.9.2"
 	},
 	"activationEvents": [
