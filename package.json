@@ -57,7 +57,7 @@
 		"concurrently": "^9.2.1",
 		"ovsx": "^0.10.5",
 		"sharp-cli": "^5.2.0",
-		"tsdown": "^0.15.3",
+		"tsdown": "^0.15.4",
 		"typescript": "^5.9.2"
 	},
 	"activationEvents": [
