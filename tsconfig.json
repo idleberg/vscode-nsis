@@ -1,0 +1,8 @@
+{
+	"extends": "@idleberg/configs/tsc",
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"target": "ESNext"
+	}
+}
