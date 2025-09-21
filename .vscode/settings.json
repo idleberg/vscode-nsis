@@ -1,4 +1,8 @@
 {
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit",
+		"source.fixAll.biome": "explicit"
+	},
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"[javascript]": {
