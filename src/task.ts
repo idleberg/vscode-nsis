@@ -66,6 +66,6 @@ export async function createTask(): Promise<unknown> {
 			window.showTextDocument(taskFile);
 		}
 	} catch (error) {
-		console.error('[idleberg.applescript]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 	}
 }
