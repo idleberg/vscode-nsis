@@ -43,7 +43,7 @@ function convertJSON(document): void {
 		input = document.getText();
 		output = NLF.stringify(input);
 	} catch (error) {
-		console.error(`[vscode-nsis] ${error.message}`);
+		console.error(`[idleberg.nsis] ${error.message}`);
 	}
 
 	openNewFile({

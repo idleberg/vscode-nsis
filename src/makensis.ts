@@ -41,7 +41,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 	try {
 		await document.save();
 	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 		window.showErrorMessage('Error saving file, see console for details');
 		return;
 	}
@@ -66,7 +66,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 			await getSpawnEnv(),
 		);
 	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 	}
 }
 
@@ -83,7 +83,7 @@ export async function showVersion(): Promise<void> {
 			await getSpawnEnv(),
 		);
 	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 	}
 }
 
@@ -104,7 +104,7 @@ export async function showCompilerFlags(): Promise<void> {
 			await getSpawnEnv(),
 		);
 	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 	}
 }
 
@@ -116,7 +116,7 @@ export async function showHelp(): Promise<void> {
 	try {
 		pathToMakensis = await getMakensisPath();
 	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 		await pathWarning();
 
 		return;
@@ -139,6 +139,6 @@ export async function showHelp(): Promise<void> {
 			openURL(command);
 		}
 	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof error ? error.message : error);
 	}
 }

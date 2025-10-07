@@ -52,7 +52,7 @@ export async function getMakensisPath(): Promise<string> {
 		const result = String(await which('makensis'));
 		return result;
 	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 		const choice = await window.showWarningMessage(
 			'Please make sure that makensis is installed and exposed in your PATH environment variable. Alternatively, you can specify its path in the settings.',
 			'Open Settings',
@@ -61,7 +61,7 @@ export async function getMakensisPath(): Promise<string> {
 			commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis pathToMakensis');
 		}
 
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 	}
 
 	return 'makensis';
@@ -121,7 +121,7 @@ export async function revealInstaller(outFile: string): Promise<void> {
 				try {
 					spawn('nautilus', [outFile], {});
 				} catch (error) {
-					console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+					console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 				}
 				break;
 		}

@@ -44,7 +44,7 @@ export async function updateDiagnostics(
 		try {
 			pathToMakensis = await getMakensisPath();
 		} catch (error) {
-			console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+			console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 
 			return;
 		}
@@ -74,7 +74,7 @@ export async function updateDiagnostics(
 		try {
 			output = await compile(document.fileName, options, await getSpawnEnv());
 		} catch (error) {
-			console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+			console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 		}
 
 		const diagnosticsResult: DiagnosticCollection[] = [];
