@@ -219,8 +219,7 @@ export async function showANSIDeprecationWarning(): Promise<void> {
 export async function fileExists(filePath: string): Promise<boolean> {
 	try {
 		await fs.access(filePath, constants.F_OK);
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	} catch (_error) {
+	} catch {
 		return false;
 	}
 
