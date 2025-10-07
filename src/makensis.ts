@@ -53,7 +53,6 @@ export async function compile(strictMode: boolean): Promise<void> {
 			document.fileName,
 			{
 				env: false,
-				events: true,
 				json: showFlagsAsObject,
 				onData: async (data) => await compilerOutput(data),
 				onError: async (data) => await compilerError(data),
@@ -76,7 +75,6 @@ export async function showVersion(): Promise<void> {
 	try {
 		await NSIS.version(
 			{
-				events: true,
 				onClose: async (data) => await versionCallback(data),
 				pathToMakensis: await getMakensisPath(),
 			},
@@ -96,7 +94,6 @@ export async function showCompilerFlags(): Promise<void> {
 	try {
 		await NSIS.headerInfo(
 			{
-				events: true,
 				json: showFlagsAsObject || false,
 				onClose: flagsCallback,
 				pathToMakensis: pathToMakensis || undefined,
@@ -139,6 +136,6 @@ export async function showHelp(): Promise<void> {
 			openURL(command);
 		}
 	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof error ? error.message : error);
+		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 	}
 }
