@@ -58,17 +58,14 @@ export async function createTask(): Promise<unknown> {
 		);
 		return;
 	}
-
-	// ignore errors for now
 	try {
 		await fs.writeFile(buildFile, jsonString);
+
+		if (alwaysOpenBuildTask) {
+			const taskFile = await workspace.openTextDocument(buildFile);
+			window.showTextDocument(taskFile);
+		}
 	} catch (error) {
-		window.showErrorMessage(error.toString());
+		console.error('[idleberg.applescript]', error instanceof Error ? error.message : error);
 	}
-
-	if (alwaysOpenBuildTask === false) return;
-
-	// Open tasks.json
-	const doc = await workspace.openTextDocument(buildFile);
-	window.showTextDocument(doc);
 }
