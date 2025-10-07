@@ -2,7 +2,7 @@ import { promises as fs } from 'node:fs';
 import { join } from 'node:path';
 import { window, workspace } from 'vscode';
 import { getConfig } from 'vscode-get-config';
-import { getPrefix, inRange } from './util';
+import { fileExists, getPrefix, inRange } from './util';
 
 export async function createTask(): Promise<unknown> {
 	if (typeof workspace.workspaceFolders === 'undefined') {
@@ -37,14 +37,26 @@ export async function createTask(): Promise<unknown> {
 		],
 	};
 
+	if (!workspace.workspaceFolders[0]?.uri.fsPath) {
+		window.showErrorMessage('Did not find workspace folder.');
+		return;
+	}
+
 	const jsonString = JSON.stringify(taskFile, null, 2);
 	const dotFolder = join(workspace.workspaceFolders[0].uri.fsPath, '/.vscode');
 	const buildFile = join(dotFolder, 'tasks.json');
 
 	try {
 		await fs.mkdir(dotFolder);
-	} catch (error) {
-		console.error('[vscode-nsis]', error instanceof Error ? error.message : error);
+	} catch {
+		console.warn('[idleberg.nsis] This workspace already contains a .vscode folder.');
+	}
+
+	if (await fileExists(buildFile)) {
+		window.showErrorMessage(
+			'This workspace already has a task file. If you want to overwrite it, delete it manually and try again.',
+		);
+		return;
 	}
 
 	// ignore errors for now
