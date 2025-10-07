@@ -1,3 +1,8 @@
+# v4.6.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.6.3)
+
+- improve error handling when creating build tasks
+- update dependencies
+
 # v4.6.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.6.1)
 
 - update dependencies
