@@ -1959,6 +1959,34 @@
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "LogText"
 	},
+	"ManifestAppendCustomString": {
+		"body": "ManifestAppendCustomString ${1:path} ${2:string}$0",
+		"description": "Usage: ManifestAppendCustomString path string",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestAppendCustomString.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ManifestAppendCustomString"
+	},
+	"ManifestDisableWindowFiltering": {
+		"body": "ManifestDisableWindowFiltering ${1:notset|true}$0",
+		"description": "Usage: ManifestDisableWindowFiltering notset|true",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestDisableWindowFiltering.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ManifestDisableWindowFiltering"
+	},
+	"ManifestDisableWindowFiltering notset": {
+		"body": "ManifestDisableWindowFiltering notset$0",
+		"description": "Usage: ManifestDisableWindowFiltering notset|true",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestDisableWindowFiltering.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ManifestDisableWindowFiltering notset"
+	},
+	"ManifestDisableWindowFiltering true": {
+		"body": "ManifestDisableWindowFiltering true$0",
+		"description": "Usage: ManifestDisableWindowFiltering notset|true",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestDisableWindowFiltering.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ManifestDisableWindowFiltering true"
+	},
 	"ManifestDPIAware": {
 		"body": "ManifestDPIAware ${1:notset|true|false}$0",
 		"description": "Usage: ManifestDPIAware notset|true|false",
@@ -1986,6 +2014,27 @@
 		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestDPIAware.html?utm_source=vscode&utm_content=snippet",
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "ManifestDPIAware true"
+	},
+	"ManifestGdiScaling": {
+		"body": "ManifestGdiScaling ${1:notset|true}$0",
+		"description": "Usage: ManifestGdiScaling notset|true",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestGdiScaling.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ManifestGdiScaling"
+	},
+	"ManifestGdiScaling notset": {
+		"body": "ManifestGdiScaling notset$0",
+		"description": "Usage: ManifestGdiScaling notset|true",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestGdiScaling.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ManifestGdiScaling notset"
+	},
+	"ManifestGdiScaling true": {
+		"body": "ManifestGdiScaling true$0",
+		"description": "Usage: ManifestGdiScaling notset|true",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ManifestGdiScaling.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ManifestGdiScaling true"
 	},
 	"ManifestLongPathAware": {
 		"body": "ManifestLongPathAware ${1:notset|true|false}$0",
