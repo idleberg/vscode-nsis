@@ -1,5 +1,5 @@
 import * as NLF from '@nsis/nlf';
-import { type TextDocument, Uri, window, workspace } from 'vscode';
+import { type TextDocument, window, workspace } from 'vscode';
 
 export function convert(): void {
 	const editor = window.activeTextEditor;
