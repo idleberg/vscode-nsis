@@ -30,12 +30,13 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/idleberg/vscode-nsis"
+		"url": "git+https://github.com/idleberg/vscode-nsis.git"
 	},
 	"homepage": "https://github.com/idleberg/vscode-nsis#readme",
 	"bugs": {
 		"url": "https://github.com/idleberg/vscode-nsis/issues"
 	},
+	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
 		"@nsis/nlf": "^0.13.0",
