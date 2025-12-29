@@ -2666,6 +2666,13 @@
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "SetCompress off"
 	},
+	"SetCompressionLevel": {
+		"body": "SetCompressionLevel ${1:level_0-9}$0",
+		"description": "Usage: SetCompressionLevel level_0-9",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/SetCompressionLevel.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "SetCompressionLevel"
+	},
 	"SetCompressor": {
 		"body": "SetCompressor ${1:zlib|bzip2|lzma}$0",
 		"description": "Usage: SetCompressor [/FINAL] [/SOLID] (zlib|bzip2|lzma)",
