@@ -1,3 +1,14 @@
+# v4.8.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.8.0)
+
+- add new commands and snippets:
+  - `GetRegView`
+  - `GetShellVarContext`
+  - `IfAltRegView`
+  - `ManifestAppendCustomString`
+  - `ManifestDisableWindowFiltering`
+  - `ManifestGdiScaling`
+  - `ReadMemory`
+
 # v4.7.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.7.0)
 
 - add support for `UnsafeStrCpy`
@@ -494,7 +505,8 @@
 
 # v3.18.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v3.18.0)
 
-- **Breaking:** modify argument handling for `makensis`, nsL Assembler and BridleNSIS
+- **Breaking:** modify argument handling for `makensis`, nsL Assembler and
+  BridleNSIS
 - use Markdown descriptions in settings
 - use production mode for Webpack
 - refactor code
@@ -725,7 +737,8 @@
 
 # v3.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/3.2.0)
 
-- add support for running compiled installer using [Wine](https://www.winehq.org/)
+- add support for running compiled installer using
+  [Wine](https://www.winehq.org/)
 - fix: add missing button to open scripts transpiled by BridleNSIS
 - fix: modify BrideNSIS file extensions
 
@@ -819,7 +832,8 @@
 
 # v2.5.11 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.5.11)
 
-- extend highlighting support to transpiled [BridleNSIS](https://github.com/henrikor2/bridlensis) scripts
+- extend highlighting support to transpiled
+  [BridleNSIS](https://github.com/henrikor2/bridlensis) scripts
 
 # v2.5.10 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.5.10)
 
@@ -891,7 +905,9 @@
 
 # v2.3.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/2.3.0)
 
-- add [Output Channel](https://code.visualstudio.com/Docs/extensionAPI/vscode-api#OutputChannel) support for build commands (closes #4)
+- add
+  [Output Channel](https://code.visualstudio.com/Docs/extensionAPI/vscode-api#OutputChannel)
+  support for build commands (closes #4)
 - add new options `showNotifications` and `alwaysShowOutput`
 - remove task-runner snippets (replacements soon?)
 - use `spawn` over `exec`
