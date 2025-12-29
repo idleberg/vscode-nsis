@@ -1,3 +1,9 @@
+# v4.7.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.7.0)
+
+- add support for `UnsafeStrCpy`
+- minor refactoring
+- update dependencies
+
 # v4.6.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.6.3)
 
 - improve error handling when creating build tasks
