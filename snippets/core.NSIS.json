@@ -2442,6 +2442,13 @@
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "ReadINIStr"
 	},
+	"ReadMemory": {
+		"body": "ReadMemory \\$${1:user_var} ${2:address} ${3:size$0",
+		"description": "Usage: ReadMemory $(user_var: result) address size",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/ReadMemory.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "ReadMemory"
+	},
 	"ReadRegDWORD": {
 		"body": "ReadRegDWORD \\$${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"$0",
 		"description": "Usage: ReadRegDWORD $(user_var: output) rootkey subkey entry",
