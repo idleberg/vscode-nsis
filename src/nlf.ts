@@ -1,5 +1,5 @@
 import * as NLF from '@nsis/nlf';
-import { window, workspace } from 'vscode';
+import { type TextDocument, Uri, window, workspace } from 'vscode';
 
 export function convert(): void {
 	const editor = window.activeTextEditor;
@@ -17,7 +17,7 @@ export function convert(): void {
 	}
 }
 
-function convertNLF(document): void {
+function convertNLF(document: TextDocument): void {
 	let input: string;
 	let output = '';
 
@@ -35,7 +35,7 @@ function convertNLF(document): void {
 	});
 }
 
-function convertJSON(document): void {
+function convertJSON(document: TextDocument): void {
 	let input: string;
 	let output = '';
 
@@ -43,7 +43,7 @@ function convertJSON(document): void {
 		input = document.getText();
 		output = NLF.stringify(input);
 	} catch (error) {
-		console.error(`[idleberg.nsis] ${error.message}`);
+		console.error(`[idleberg.nsis] ${(error as Error).message}`);
 	}
 
 	openNewFile({
@@ -52,6 +52,6 @@ function convertJSON(document): void {
 	});
 }
 
-function openNewFile(newDocument): void {
+function openNewFile(newDocument: { language: string; content: string }): void {
 	workspace.openTextDocument(newDocument).then((document) => window.showTextDocument(document));
 }
