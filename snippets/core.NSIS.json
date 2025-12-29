@@ -3443,6 +3443,13 @@
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "UninstallText"
 	},
+	"UnsafeStrCpy": {
+		"body": "UnsafeStrCpy \\$${1:user_var} \"${2:str}\" ${3:[maxlen]} ${4:[start_offset]}$0",
+		"description": "Usage: UnsafeStrCpy $(user_var: output) str [maxlen] [startoffset]",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/UnsafeStrCpy.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "UnsafeStrCpy"
+	},
 	"VIAddVersionKey": {
 		"body": "VIAddVersionKey \"${1:keyname}\" \"${2:value}\"$0",
 		"description": "Usage: VIAddVersionKey [/LANG=lang_id] keyname value",
