@@ -1595,6 +1595,13 @@
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "IfAbort"
 	},
+	"IfAltRegView": {
+		"body": "IfAltRegView ${1:goto_true} ${2:[goto_false]}$0",
+		"description": "Usage: IfAltRegView goto_true [goto_false]",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/IfAltRegView.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "IfAltRegView"
+	},
 	"IfErrors": {
 		"body": "IfErrors ${1:jump_to_if_error} ${2:[jump_to_if_no_error]}$0",
 		"description": "Usage: IfErrors label_to_goto_if_errors [label_to_goto_if_no_errors]",
