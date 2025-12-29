@@ -36,7 +36,7 @@
 	"bugs": {
 		"url": "https://github.com/idleberg/vscode-nsis/issues"
 	},
-	"main": "./lib/index.js",
+	"main": "./lib/index.cjs",
 	"dependencies": {
 		"@nsis/nlf": "^0.13.0",
 		"makensis": "3.0.3",
