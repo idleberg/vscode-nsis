@@ -23,7 +23,7 @@ function convertNLF(document): void {
 
 	try {
 		input = document.getText();
-		output = NLF.parse(input, { stringify: true });
+		output = JSON.stringify(NLF.parse(input));
 	} catch (err) {
 		console.error(err);
 		window.showErrorMessage('Conversion failed, see output for details');
