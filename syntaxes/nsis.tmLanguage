@@ -28,7 +28,7 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>^\s*(?i)(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|GetWinampInstPath|PackEXEHeader|SectionDivider|SetPluginUnload|SubSection(End)?|UninstallExeName)\b</string>
+            <string>^\s*(?i)(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|GetWinampInstPath|LangStringUP|PackEXEHeader|SectionDivider|SetPluginUnload|SubSection(End)?|UninstallExeName)\b</string>
             <key>name</key>
             <string>invalid.deprecated.nsis</string>
         </dict>
