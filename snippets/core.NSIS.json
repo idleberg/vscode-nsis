@@ -587,6 +587,27 @@
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "BringToFront"
 	},
+	"CPU": {
+		"body": "CPU ${1:x86|amd64}$0",
+		"description": "Usage: CPU (x86|amd64)",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/CPU.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "CPU"
+	},
+	"CPU x86": {
+		"body": "CPU x86$0",
+		"description": "Usage: CPU (x86|amd64)",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/CPU.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "CPU x86"
+	},
+	"CPU amd64": {
+		"body": "CPU amd64$0",
+		"description": "Usage: CPU (x86|amd64)",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/CPU.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "CPU amd64"
+	},
 	"CRCCheck": {
 		"body": "CRCCheck ${1:off|on}$0",
 		"description": "Usage: CRCCheck (on|force|off)",
