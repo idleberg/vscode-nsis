@@ -1,3 +1,9 @@
+# v4.9.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.9.0)
+
+- add new commands and snippets:
+  - `CPU`
+  - `LangStringUp`
+
 # v4.8.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.8.0)
 
 - add new commands and snippets:
