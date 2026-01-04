@@ -587,6 +587,13 @@
 		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 		"prefix": "IntFmt64"
 	},
+	"%LangStringUP": {
+		"body": "LangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:string}\"$0",
+		"description": "Usage: LangString [un.]name lang_id|0 string",
+		"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/LangString.html?utm_source=vscode&utm_content=snippet",
+		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+		"prefix": "LangStringUP"
+	},
 	"%LangStringLicense": {
 		"body": "LicenseLangString ${1:name} \\${LANG_${2:ENGLISH}} \"${3:license_path}\"$0",
 		"description": "Usage: LicenseLangString name lang_id|0 license_path",
