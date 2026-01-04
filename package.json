@@ -36,6 +36,9 @@
 	"bugs": {
 		"url": "https://github.com/idleberg/vscode-nsis/issues"
 	},
+	"sponsor": {
+		"url": "https://buymeacoffee.com/idleberg"
+	},
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
