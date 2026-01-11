@@ -5,11 +5,14 @@
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/idleberg/nsis?style=for-the-badge&label=Open%20VSX)](https://open-vsx.org/extension/idleberg/nsis)
 [![Build](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/actions)
 
-Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS).
+Language syntax, IntelliSense and build system for Nullsoft Scriptable Install
+System (NSIS).
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/main/resources/screenshot.png)
 
-_Screenshot of NSIS in Visual Studio Code with [Hopscotch](https://marketplace.visualstudio.com/items?itemName=idleberg.hopscotch) theme_
+_Screenshot of NSIS in Visual Studio Code with
+[Hopscotch](https://marketplace.visualstudio.com/items?itemName=idleberg.hopscotch)
+theme_
 
 ## Features
 
@@ -48,7 +51,8 @@ _Screenshot of NSIS in Visual Studio Code with [Hopscotch](https://marketplace.v
 - [Build Tools](https://github.com/idleberg/vscode-nsis#building)
 - [Environment Variables](https://github.com/idleberg/vscode-nsis#environment-variables)
 
-You can further extend NSIS support with IntelliSense for [third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
+You can further extend NSIS support with IntelliSense for
+[third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
 
 ## Installation
 
@@ -60,19 +64,24 @@ Launch Quick Open, paste the following command, and press <kbd>Enter</kbd>
 
 ### CLI
 
-With [shell commands](https://code.visualstudio.com/docs/editor/command-line) installed, you can use the following command to install the extension:
+With [shell commands](https://code.visualstudio.com/docs/editor/command-line)
+installed, you can use the following command to install the extension:
 
 `$ code --install-extension idleberg.nsis`
 
 ### Packaged Extension
 
-Download the packaged extension from the the [release page](https://github.com/idleberg/vscode-nsis/releases) and install it from the command-line:
+Download the packaged extension from the the
+[release page](https://github.com/idleberg/vscode-nsis/releases) and install it
+from the command-line:
 
 ```bash
 $ code --install-extension path/to/nsis-*.vsix
 ```
 
-Alternatively, you can download the packaged extension from the [Open VSX Registry](https://open-vsx.org/) or install it using the [`ovsx`](https://www.npmjs.com/package/ovsx) command-line tool:
+Alternatively, you can download the packaged extension from the
+[Open VSX Registry](https://open-vsx.org/) or install it using the
+[`ovsx`](https://www.npmjs.com/package/ovsx) command-line tool:
 
 ```bash
 $ ovsx get idleberg.nsis
@@ -106,7 +115,8 @@ Clone repository as `idleberg.nsis`:
 $ git clone https://github.com/idleberg/vscode-nsis idleberg.nsis
 ```
 
-Inside the cloned directory, install dependencies using your preferred Node package manager:
+Inside the cloned directory, install dependencies using your preferred Node
+package manager:
 
 ```bash
 $ npm install
@@ -122,9 +132,16 @@ npm run build
 
 ### IntelliSense
 
-With most commands, you can specify available options before completion. For instance, rather than completing `RequestExecutionLevel` and then specifying an option, you can directly choose `RequestExecutionLevel user` from the completion menu.
+With most commands, you can specify available options before completion. For
+instance, rather than completing `RequestExecutionLevel` and then specifying an
+option, you can directly choose `RequestExecutionLevel user` from the completion
+menu.
 
-To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), make sure to _omit special characters_ like `!`, `$` and brackets:
+To complete
+[compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#),
+[variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or
+[predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines),
+make sure to _omit special characters_ like `!`, `$` and brackets:
 
 - `include` completes to `!include`
 - `INSTDIR` completes to `$INSTDIR`
@@ -140,7 +157,9 @@ There are several special cases for your convenience:
 
 #### Drunken NSIS
 
-Fuzzy syntax completions are available through “Drunken NSIS”, which tries to iron out some of the inconsistencies in the NSIS language, for instance word order.
+Fuzzy syntax completions are available through “Drunken NSIS”, which tries to
+iron out some of the inconsistencies in the NSIS language, for instance word
+order.
 
 **Examples:**
 
@@ -155,7 +174,10 @@ Interchangable word order of NSIS language and library functions
 
 ### Building
 
-Before you can build, make sure `makensis` is in your PATH [environment variable](http://superuser.com/a/284351/195953). Alternatively, you can specify the path to `makensis` in your [user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
+Before you can build, make sure `makensis` is in your PATH
+[environment variable](http://superuser.com/a/284351/195953). Alternatively, you
+can specify the path to `makensis` in your
+[user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
 
 #### makensis
 
@@ -167,29 +189,45 @@ Before you can build, make sure `makensis` is in your PATH [environment variable
 }
 ```
 
-To trigger a build, select _NSIS: Save & Compile”_ from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) or use the default keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings as errors and can be triggered using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+To trigger a build, select _NSIS: Save & Compile”_ from the
+[command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette)
+or use the default keyboard shortcut
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings
+as errors and can be triggered using
+<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
 
 #### Options
 
-You can tweak your default settings by editing your [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
+You can tweak your default settings by editing your
+[user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
 
 ### Task Runner
 
-If you prefer Visual Studio Code's built-in Task Runner to build scripts, you can create `tasks.json` in the project root using the _NSIS: Create Build Task_ command from the [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
+If you prefer Visual Studio Code's built-in Task Runner to build scripts, you
+can create `tasks.json` in the project root using the _NSIS: Create Build Task_
+command from the
+[command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
 
-**Note:** The created Task Runner will adapt to the [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace) specified in `settings.json`.
+**Note:** The created Task Runner will adapt to the
+[user settings](https://code.visualstudio.com/Docs/customization/userandworkspace)
+specified in `settings.json`.
 
 ### Environment Variables
 
-This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`. The following precedence applies:
+This extension supports a variety of ways to provide environment variables such
+as `NSISDIR` or `NSISCONFDIR`. The following precedence applies:
 
 1. `terminal.integrated.shell.*` setting
 2. `.env` files
 3. system-wide environment variables
 
-**Note:** Some operating systems require Visual Studio Code to be launched from terminal in order to access system-wide environment variables.
+> [!NOTE]
+>
+> Some operating systems require Visual Studio Code to be launched from terminal
+> in order to access system-wide environment variables.
 
-Additionally, you can pass special environment variables prefixed with `NSIS_APP_` as definitions to your installer script.
+Additionally, you can pass special environment variables prefixed with
+`NSIS_APP_` as definitions to your installer script.
 
 <details>
 <summary><strong>Example</strong></summary>
@@ -216,9 +254,14 @@ NSIS_APP_ENVIRONMENT=development
 
 ## License
 
-If not otherwise specified (see below), files in this repository fall under [The MIT License](https://opensource.org/licenses/MIT).
+If not otherwise specified (see below), files in this repository fall under
+[The MIT License](https://opensource.org/licenses/MIT).
 
-An exception is made for files in readable text which contain their own license information, or files where an accompanying file exists (in the same directory) with a “-license” suffix added to the base-name name of the original file, and an extension of txt, html, or similar. For example “tidy” is accompanied by “tidy-license.txt”.
+An exception is made for files in readable text which contain their own license
+information, or files where an accompanying file exists (in the same directory)
+with a “-license” suffix added to the base-name name of the original file, and
+an extension of txt, html, or similar. For example “tidy” is accompanied by
+“tidy-license.txt”.
 
 [wine]: https://winehq.org
 [makensis]: http://nsis.sourceforge.net/Docs/Chapter3.html#usage
