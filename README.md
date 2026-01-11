@@ -208,9 +208,11 @@ can create `tasks.json` in the project root using the _NSIS: Create Build Task_
 command from the
 [command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
 
-**Note:** The created Task Runner will adapt to the
-[user settings](https://code.visualstudio.com/Docs/customization/userandworkspace)
-specified in `settings.json`.
+> [!NOTE]
+>
+> The created Task Runner will adapt to the
+> [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace)
+> specified in `settings.json`.
 
 ### Environment Variables
 
