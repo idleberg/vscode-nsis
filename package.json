@@ -15,7 +15,6 @@
 		"build:code": "tsdown",
 		"build:image": "sharp resize 1024 1024 --input \"node_modules/@nsis/logo/images/Logo/below 48x48/outlines-light.svg\" --output resources/logo.png",
 		"dev": "npm run start",
-		"fix": "eslint --fix ./src",
 		"lint": "biome check",
 		"prepare": "lefthook install",
 		"publish:ovsx": "ovsx publish --no-dependencies",
