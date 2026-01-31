@@ -228,8 +228,7 @@ as `NSISDIR` or `NSISCONFDIR`. The following precedence applies:
 > Some operating systems require Visual Studio Code to be launched from terminal
 > in order to access system-wide environment variables.
 
-Additionally, you can pass special environment variables prefixed with
-`NSIS_APP_` as definitions to your installer script.
+Additionally, you can pass special environment variables prefixed with `NSIS_APP_` to your installer script. They will be treated like normal definitions and will be stringified at compile-time.
 
 <details>
 <summary><strong>Example</strong></summary>
