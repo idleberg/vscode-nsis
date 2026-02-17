@@ -16,7 +16,6 @@
 		"build:image": "sharp resize 1024 1024 --input \"node_modules/@nsis/logo/images/Logo/below 48x48/outlines-light.svg\" --output resources/logo.png",
 		"dev": "npm run start",
 		"lint": "biome check",
-		"prepare": "lefthook install",
 		"publish:ovsx": "ovsx publish --no-dependencies",
 		"publish:vsce": "vsce publish --githubBranch main --no-dependencies",
 		"start": "npm run build -- --watch",
@@ -598,6 +597,11 @@
 				"language": "nsis",
 				"path": "./snippets/scaffold.ModernUI.json"
 			}
+		]
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"lefthook"
 		]
 	},
 	"packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
