@@ -53,11 +53,14 @@ export async function createTask(): Promise<unknown> {
 	}
 
 	if (await fileExists(buildFile)) {
-		window.showErrorMessage(
-			'This workspace already has a task file. If you want to overwrite it, delete it manually and try again.',
-		);
-		return;
+		const overwrite = 'Overwrite';
+		const result = await window.showWarningMessage('This workspace already has a task file.', overwrite, 'Cancel');
+
+		if (result !== overwrite) {
+			return;
+		}
 	}
+
 	try {
 		await fs.writeFile(buildFile, jsonString);
 

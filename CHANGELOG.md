@@ -1,3 +1,7 @@
+# v4.10.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.10.1)
+
+- allow overwriting task files
+
 # v4.10.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.10.0)
 
 - use native icons
