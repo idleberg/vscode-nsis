@@ -45,21 +45,21 @@
 		"micromatch": "^4.0.8",
 		"open": "^11.0.0",
 		"vscode-get-config": "^0.6.2",
-		"which": "^6.0.0"
+		"which": "^6.0.1"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^20.2.0",
-		"@commitlint/config-conventional": "^20.2.0",
-		"@idleberg/configs": "^0.4.1",
+		"@commitlint/cli": "^20.4.2",
+		"@commitlint/config-conventional": "^20.4.2",
+		"@idleberg/configs": "^0.4.2",
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
 		"@types/node": "^24.7.0",
 		"@types/vscode": "1.85.0",
 		"@types/which": "^3.0.4",
 		"concurrently": "^9.2.1",
-		"ovsx": "^0.10.7",
+		"ovsx": "^0.10.9",
 		"sharp-cli": "^5.2.0",
-		"tsdown": "^0.18.3",
+		"tsdown": "^0.20.3",
 		"typescript": "^5.9.3"
 	},
 	"activationEvents": [

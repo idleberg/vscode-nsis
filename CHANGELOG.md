@@ -1,3 +1,10 @@
+# v4.10.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.10.0)
+
+- use native icons
+- remove menu items
+	- show version info
+	- show compiler flags
+
 # v4.9.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.9.0)
 
 - add new commands and snippets:
