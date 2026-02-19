@@ -320,58 +320,35 @@
 			{
 				"command": "extension.nsis.compile",
 				"title": "NSIS: Save & Compile Script",
-				"icon": {
-					"dark": "./resources/dark/build.svg",
-					"light": "./resources/light/build.svg"
-				}
+				"icon": "$(run)"
 			},
 			{
 				"command": "extension.nsis.compile-strict",
 				"title": "NSIS: Save & Compile Script (strict)",
-				"icon": {
-					"dark": "./resources/dark/build-strict.svg",
-					"light": "./resources/light/build-strict.svg"
-				}
+				"icon": "$(run-all)"
 			},
 			{
 				"command": "extension.nsis.command-reference",
 				"title": "NSIS: Command Reference",
-				"icon": {
-					"dark": "./resources/dark/command.svg",
-					"light": "./resources/light/command.svg"
-				}
+				"icon": "$(book)"
 			},
 			{
 				"command": "extension.nsis.show-version",
-				"title": "NSIS: Show Version",
-				"icon": {
-					"dark": "./resources/dark/info.svg",
-					"light": "./resources/light/info.svg"
-				}
+				"title": "NSIS: Show Version"
 			},
 			{
 				"command": "extension.nsis.show-compiler-flags",
-				"title": "NSIS: Show Compiler Flags",
-				"icon": {
-					"dark": "./resources/dark/flag.svg",
-					"light": "./resources/light/flag.svg"
-				}
+				"title": "NSIS: Show Compiler Flags"
 			},
 			{
 				"command": "extension.nsis.create-build-task",
 				"title": "NSIS: Create Build Task",
-				"icon": {
-					"dark": "./resources/dark/task.svg",
-					"light": "./resources/light/task.svg"
-				}
+				"icon": "$(checklist)"
 			},
 			{
 				"command": "extension.nsis.open-settings",
 				"title": "NSIS: Open Settings",
-				"icon": {
-					"dark": "./resources/dark/settings.svg",
-					"light": "./resources/light/settings.svg"
-				}
+				"icon": "$(settings)"
 			},
 			{
 				"command": "extension.nsis.convert-language-file",
@@ -425,18 +402,8 @@
 				},
 				{
 					"when": "resourceLangId == nsis",
-					"command": "extension.nsis.show-version",
-					"group": "navigation@5"
-				},
-				{
-					"when": "resourceLangId == nsis",
-					"command": "extension.nsis.show-compiler-flags",
-					"group": "navigation@6"
-				},
-				{
-					"when": "resourceLangId == nsis",
 					"command": "extension.nsis.open-settings",
-					"group": "navigation@7"
+					"group": "navigation@5"
 				}
 			]
 		},
