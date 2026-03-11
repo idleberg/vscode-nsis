@@ -1,10 +1,8 @@
 import { commands, type ExtensionContext, languages, window, workspace } from 'vscode';
+import { makensisChannel } from './channel.ts';
+import { compile } from './makensis.ts';
 
 export async function activate(context: ExtensionContext): Promise<void> {
-	const { compile, showCompilerFlags, showVersion, showHelp } = await import('./makensis');
-	const { convert } = await import('./nlf.ts');
-	const { createTask } = await import('./task.ts');
-
 	context.subscriptions.push(
 		// TextEditor Commands
 		commands.registerTextEditorCommand('extension.nsis.compile', async () => {
@@ -15,71 +13,53 @@ export async function activate(context: ExtensionContext): Promise<void> {
 			return await compile(true);
 		}),
 
-		commands.registerTextEditorCommand('extension.nsis.create-build-task', async () => {
-			return await createTask();
-		}),
-
-		commands.registerTextEditorCommand('extension.nsis.convert-language-file', () => {
-			return convert();
-		}),
-
-		// Global Commands
-		commands.registerCommand('extension.nsis.show-version', async () => {
-			return await showVersion();
-		}),
-
-		commands.registerCommand('extension.nsis.show-compiler-flags', async () => {
-			return await showCompilerFlags();
-		}),
-
-		commands.registerCommand('extension.nsis.command-reference', async () => {
-			return await showHelp();
-		}),
-
 		commands.registerCommand('extension.nsis.open-settings', async () => {
 			commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
 		}),
 	);
 
 	// Formatter
-	const { registerFormatter } = await import('./formatter.ts');
-	const formatterDisposable = await registerFormatter();
+	// const formatterDisposable = await registerFormatter();
 
-	if (formatterDisposable) {
-		context.subscriptions.push(formatterDisposable);
-	}
+	// if (formatterDisposable) {
+	// 	context.subscriptions.push(formatterDisposable);
+	// }
 
 	// Diagnostics
-	const { updateDiagnostics } = await import('./diagnostics.ts');
-	const collection = languages.createDiagnosticCollection('nsis');
+	// const { updateDiagnostics } = await import('./diagnostics.ts');
+	// const collection = languages.createDiagnosticCollection('nsis');
 
-	if (window.activeTextEditor) {
-		const editor = window.activeTextEditor;
+	// if (window.activeTextEditor) {
+	// 	const editor = window.activeTextEditor;
 
-		if (editor) {
-			const document = editor.document || null;
+	// 	if (editor) {
+	// 		const document = editor.document || null;
 
-			updateDiagnostics(document, collection);
-		}
-	}
+	// 		updateDiagnostics(document, collection);
+	// 	}
+	// }
 
-	context.subscriptions.push(
-		workspace.onDidSaveTextDocument(() => {
-			const editor = window.activeTextEditor;
+	// context.subscriptions.push(
+	// 	workspace.onDidSaveTextDocument(() => {
+	// 		const editor = window.activeTextEditor;
 
-			if (editor) {
-				const document = editor.document || null;
+	// 		if (editor) {
+	// 			const document = editor.document || null;
 
-				updateDiagnostics(document, collection);
-			}
-		}),
+	// 			updateDiagnostics(document, collection);
+	// 		}
+	// 	}),
 
-		window.onDidChangeActiveTextEditor((editor) => {
-			if (editor) {
-				const document = editor.document || null;
+	// 	window.onDidChangeActiveTextEditor((editor) => {
+	// 		if (editor) {
+	// 			const document = editor.document || null;
 
-				updateDiagnostics(document, collection);
-			}
-		}),
-	);
+	// 			updateDiagnostics(document, collection);
+	// 		}
+	// 	}),
+	// );
+}
+
+export async function deactivate(context: ExtensionContext): Promise<void> {
+	makensisChannel.dispose();
 }

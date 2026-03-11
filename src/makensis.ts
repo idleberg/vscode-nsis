@@ -1,16 +1,18 @@
-import * as NSIS from 'makensis';
-import { commands, window } from 'vscode';
+import { window } from 'vscode';
 import { getConfig } from 'vscode-get-config';
-import { compilerError, compilerExit, compilerOutput, flagsCallback, versionCallback } from './callbacks';
 import { makensisChannel } from './channel';
-import { getMakensisPath, getSpawnEnv, isHeaderFile, openURL, pathWarning } from './util';
+import type { NsisConfig } from './nsis-bridge/src';
+import { compileScript, isHeaderFile } from './nsis-bridge/src';
+import { getSpawnEnv } from './utils';
 
-export async function compile(strictMode: boolean): Promise<void> {
+export async function compile(isStrict: boolean): Promise<void> {
 	const activeTextEditor = window?.activeTextEditor;
 
 	if (!activeTextEditor) {
 		return;
 	}
+
+	const document = activeTextEditor.document;
 
 	const isNsis = activeTextEditor?.document?.languageId === 'nsis';
 
@@ -19,23 +21,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 		return;
 	}
 
-	const { compiler, processHeaders, showFlagsAsObject } = await getConfig('nsis');
-	const document = activeTextEditor.document;
-
 	if (isHeaderFile(document.fileName)) {
-		if (processHeaders === 'Disallow') {
-			const choice = await window.showWarningMessage(
-				'Compiling header files is blocked by default. You can allow it in the package settings, or mute this warning.',
-				'Open Settings',
-			);
-			if (choice === 'Open Settings') {
-				commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis processHeaders');
-				return;
-			}
-		} else if (processHeaders === 'Disallow & Never Ask Me') {
-			window.setStatusBarMessage('makensis: Skipped header file', 5000);
-			return;
-		}
 	}
 
 	try {
@@ -46,95 +32,32 @@ export async function compile(strictMode: boolean): Promise<void> {
 		return;
 	}
 
+	const { compiler, processHeaders, showFlagsAsObject, wine, formatter } = await getConfig('nsis');
+
+	const config: NsisConfig = {
+		compiler,
+		processHeaders,
+		showFlagsAsObject,
+		wine: {
+			enabled: wine.runWithWine,
+			path: wine.pathToWine,
+		},
+		formatter,
+	};
+
 	makensisChannel.clear();
 
 	try {
-		await NSIS.compile(
-			document.fileName,
-			{
-				env: false,
-				json: showFlagsAsObject,
-				onData: async (data) => await compilerOutput(data),
-				onError: async (data) => await compilerError(data),
-				onClose: async (data) => await compilerExit(data),
-				pathToMakensis: await getMakensisPath(),
-				rawArguments: compiler.customArguments,
-				strict: strictMode || compiler.strictMode,
-				verbose: compiler.verbosity,
-			},
-			await getSpawnEnv(),
-		);
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-	}
-}
-
-export async function showVersion(): Promise<void> {
-	await makensisChannel.clear();
-
-	try {
-		await NSIS.version(
-			{
-				onClose: async (data) => await versionCallback(data),
-				pathToMakensis: await getMakensisPath(),
-			},
-			await getSpawnEnv(),
-		);
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-	}
-}
-
-export async function showCompilerFlags(): Promise<void> {
-	const { showFlagsAsObject } = await getConfig('nsis');
-	const pathToMakensis = await getMakensisPath();
-
-	await makensisChannel.clear();
-
-	try {
-		await NSIS.headerInfo(
-			{
-				json: showFlagsAsObject || false,
-				onClose: flagsCallback,
-				pathToMakensis: pathToMakensis || undefined,
-			},
-			await getSpawnEnv(),
-		);
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-	}
-}
-
-export async function showHelp(): Promise<void> {
-	makensisChannel.clear();
-
-	let pathToMakensis: string;
-
-	try {
-		pathToMakensis = await getMakensisPath();
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-		await pathWarning();
-
-		return;
-	}
-
-	let command: string | undefined;
-
-	try {
-		const output = await NSIS.commandHelp(
-			'',
-			{
-				pathToMakensis: pathToMakensis,
-				json: true,
-			},
-			await getSpawnEnv(),
-		);
-		command = (await window.showQuickPick(Object.keys(output.stdout as string))) || undefined;
-
-		if (command) {
-			openURL(command);
-		}
+		await compileScript(document.fileName, {
+			config,
+			strict: isStrict,
+			onData: console.log,
+			onError: console.error,
+			// onData: async (data) => await compilerOutput(data),
+			// onError: async (data) => await compilerError(data),
+			// onClose: async (data) => await compilerExit(data),
+			spawnOptions: { env: await getSpawnEnv() },
+		});
 	} catch (error) {
 		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
 	}
