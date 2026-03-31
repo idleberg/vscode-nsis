@@ -37,8 +37,8 @@
 	"sponsor": {
 		"url": "https://buymeacoffee.com/idleberg"
 	},
-	"type": "commonjs",
-	"main": "./lib/index.cjs",
+	"type": "module",
+	"exports": "./lib/index.mjs",
 	"dependencies": {
 		"@nsis/dent": "^0.6.1",
 		"@nsis/nlf": "^0.13.0",
@@ -55,7 +55,7 @@
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
 		"@types/node": "^24.12.0",
-		"@types/vscode": "1.98.0",
+		"@types/vscode": "1.100.0",
 		"@types/which": "^3.0.4",
 		"concurrently": "^9.2.1",
 		"ovsx": "^0.10.9",
@@ -72,7 +72,7 @@
 		"theme": "dark"
 	},
 	"engines": {
-		"vscode": "^1.98.0"
+		"vscode": "^1.100.0"
 	},
 	"categories": [
 		"Formatters",
