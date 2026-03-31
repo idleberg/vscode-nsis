@@ -38,19 +38,19 @@
 		"url": "https://buymeacoffee.com/idleberg"
 	},
 	"type": "module",
-	"exports": "./lib/index.mjs",
+	"main": "./lib/index.mjs",
 	"dependencies": {
-		"@nsis/dent": "^0.6.1",
+		"@nsis/dent": "^0.6.2",
 		"@nsis/nlf": "^0.13.0",
-		"makensis": "3.0.3",
+		"makensis": "3.0.4",
 		"micromatch": "^4.0.8",
 		"open": "^11.0.0",
 		"vscode-get-config": "^0.6.3",
 		"which": "^6.0.1"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^20.4.3",
-		"@commitlint/config-conventional": "^20.4.3",
+		"@commitlint/cli": "^20.5.0",
+		"@commitlint/config-conventional": "^20.5.0",
 		"@idleberg/configs": "^0.4.2",
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
@@ -58,10 +58,10 @@
 		"@types/vscode": "1.100.0",
 		"@types/which": "^3.0.4",
 		"concurrently": "^9.2.1",
-		"ovsx": "^0.10.9",
+		"ovsx": "^0.10.10",
 		"sharp-cli": "^5.2.0",
-		"tsdown": "^0.21.0",
-		"typescript": "^5.9.3"
+		"tsdown": "^0.21.7",
+		"typescript": "^6.0.2"
 	},
 	"activationEvents": [
 		"onStartupFinished"
