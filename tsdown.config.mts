@@ -12,6 +12,6 @@ export default defineConfig({
 	minify: true,
 	outDir: 'lib',
 	platform: 'node',
-	target: 'es2020',
+	target: 'node20',
 	treeshake: true,
 });
