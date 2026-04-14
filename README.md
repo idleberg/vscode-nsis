@@ -1,6 +1,6 @@
 # vscode-nsis
 
-[![License](https://img.shields.io/github/license/idleberg/vscode-nsis?color=blue&style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge)](LICENSE)
 [![Version](https://img.shields.io/github/v/release/idleberg/vscode-nsis?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/releases)
 [![Build](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/actions)
 
