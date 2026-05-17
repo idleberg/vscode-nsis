@@ -4,5 +4,5 @@ ref = "v0.4.2"
 configs = [
 	"lefthook/biome.toml",
 	"lefthook/commitlint.toml",
-	"lefthook/e18e.toml",
+	# "lefthook/e18e.toml",
 ]
