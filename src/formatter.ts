@@ -4,7 +4,7 @@ import { languages, Range, TextEdit } from 'vscode';
 import { getConfig } from 'vscode-get-config';
 
 async function formatDocument(text: string, options: DentOptions): Promise<string> {
-	const format = createFormatter(options);
+	const { format } = createFormatter(options);
 
 	return format(text);
 }
