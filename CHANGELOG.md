@@ -1,3 +1,7 @@
+# v5.3.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.3)
+
+- fix formatter creation
+
 # v5.3.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.2)
 
 - update dependencies
