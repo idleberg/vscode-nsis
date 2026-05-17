@@ -40,28 +40,28 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.6.2",
+		"@nsis/dent": "^0.7.2",
 		"@nsis/nlf": "^0.13.0",
-		"makensis": "3.0.4",
+		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",
 		"open": "^11.0.0",
 		"vscode-get-config": "^0.6.3",
-		"which": "^6.0.1"
+		"which": "^7.0.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^20.5.0",
-		"@commitlint/config-conventional": "^20.5.0",
+		"@commitlint/cli": "^21.0.1",
+		"@commitlint/config-conventional": "^21.0.1",
 		"@idleberg/configs": "^0.4.2",
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
-		"@types/node": "^24.12.0",
+		"@types/node": "^24.12.4",
 		"@types/vscode": "1.98.0",
 		"@types/which": "^3.0.4",
 		"concurrently": "^9.2.1",
-		"ovsx": "^0.10.9",
+		"ovsx": "^0.10.12",
 		"sharp-cli": "^5.2.0",
-		"tsdown": "^0.21.4",
-		"typescript": "^5.9.3"
+		"tsdown": "^0.22.0",
+		"typescript": "^6.0.3"
 	},
 	"activationEvents": [
 		"onStartupFinished"
@@ -606,10 +606,5 @@
 			}
 		]
 	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"lefthook"
-		]
-	},
-	"packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
+	"packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
 }
