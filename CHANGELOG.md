@@ -1,3 +1,7 @@
+# v5.3.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.2)
+
+- update dependencies
+
 # v5.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.1)
 
 - revert accidental formatting suppression
@@ -34,8 +38,8 @@
 # v5.0.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.0.2)
 
 - improve syntax highlighting grammar
-	- adjust priorities for variables/defines
-	- update supported WinVer versions
+  - adjust priorities for variables/defines
+  - update supported WinVer versions
 - update WinVer snippets to support missing Windows versions
 
 # v5.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.0.1)
@@ -61,8 +65,8 @@
 
 - use native icons
 - remove menu items
-	- show version info
-	- show compiler flags
+  - show version info
+  - show compiler flags
 
 # v4.9.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.9.0)
 
