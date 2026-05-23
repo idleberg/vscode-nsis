@@ -1,3 +1,7 @@
+# v5.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.4.0)
+
+- support `printWidth` option for formatter
+
 # v5.3.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.5)
 
 - update formatting library
