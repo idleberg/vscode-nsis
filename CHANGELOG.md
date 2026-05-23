@@ -1,3 +1,7 @@
+# v5.3.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.5)
+
+- update formatting library
+
 # v5.3.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.4)
 
 - add missing `${Break}` and `${Default}` snippets
