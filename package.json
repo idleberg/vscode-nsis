@@ -40,7 +40,7 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.8.0",
+		"@nsis/dent": "^0.8.1",
 		"@nsis/nlf": "^0.13.0",
 		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",

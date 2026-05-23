@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@nsis/dent':
-        specifier: ^0.8.0
-        version: 0.8.0
+        specifier: ^0.8.1
+        version: 0.8.1
       '@nsis/nlf':
         specifier: ^0.13.0
         version: 0.13.0
@@ -823,8 +823,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@nsis/dent@0.8.0':
-    resolution: {integrity: sha512-y7DTpQZfst2h1tz5VM7qZzcLeZWxh1AC9WjLuiilYWXWe++Qce0YISytP/07q2pR8dcSEjq3mSbys+DVOe6Cig==}
+  '@nsis/dent@0.8.1':
+    resolution: {integrity: sha512-JmnGjKeRwuUZFxgVlpYVudmItxnDJqusvKnly/Va8rb7GIBtd00avIdB7VA6BbVUO2f3yVgxS8nQGPRzBNgt+Q==}
     engines: {node: '>=20.0.0'}
 
   '@nsis/language-data@0.11.0':
@@ -3655,7 +3655,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@nsis/dent@0.8.0':
+  '@nsis/dent@0.8.1':
     dependencies:
       detect-newline: 4.0.1
 
