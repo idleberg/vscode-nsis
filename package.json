@@ -40,7 +40,7 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.8.1",
+		"@nsis/dent": "^0.9.0",
 		"@nsis/nlf": "^0.13.0",
 		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",
@@ -272,22 +272,28 @@
 					"markdownDescription": "%nsisFormatterEndOfLines%",
 					"order": 20
 				},
+				"nsis.formatter.printWidth": {
+					"type": "number",
+					"default": 120,
+					"markdownDescription": "%nsisFormatterPrintWidth%",
+					"order": 21
+				},
 				"nsis.formatter.trimEmptyLines": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "%nsisFormatterTrimEmptyLines%",
-					"order": 21
+					"order": 22
 				},
 				"nsis.formatter.useTabs": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "%nsisFormatterUseTabs%",
-					"order": 22
+					"order": 23
 				},
 				"nsis.formatter.indentSize": {
 					"type": "number",
 					"markdownDescription": "%nsisFormatterIndentSize%",
-					"order": 23
+					"order": 24
 				}
 			}
 		},

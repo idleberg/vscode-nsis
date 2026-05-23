@@ -12,6 +12,7 @@
 	"nsisRunWithWine": "Runs compiled installers using [Wine](https://www.winehq.org/).",
 	"nsisPathToWine": "Specifies a custom path to `wine`, useful when relying on alternatives such as `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine).",
 	"nsisFormatterEndOfLines": "Specify the end of line sequence used by the formatter. Defaults to the operating system's standard EOL sequence.",
+	"nsisFormatterPrintWidth": "Specify the maximum line width for the formatter. Lines exceeding this width will be wrapped. Specify `0` to disable line wrapping.",
 	"nsisFormatterTrimEmptyLines": "Trim trailing whitespace from empty lines.",
 	"nsisFormatterUseTabs": "Use tabs for indentation instead of spaces.",
 	"nsisFormatterIndentSize": "Specify the number of spaces per indentation level. When not set, the editor's tab size is used."
