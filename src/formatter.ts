@@ -15,6 +15,7 @@ async function getFormatterOptions(editorTabSize: number): Promise<DentOptions> 
 	return {
 		endOfLines: formatter.endOfLines === '(auto)' ? undefined : formatter.endOfLines,
 		indentSize: formatter.indentSize ?? editorTabSize,
+		printWidth: formatter.printWidth ?? 120,
 		trimEmptyLines: formatter.trimEmptyLines ?? true,
 		useTabs: formatter.useTabs ?? true,
 	};
