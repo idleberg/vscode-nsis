@@ -13,7 +13,7 @@ async function getFormatterOptions(editorTabSize: number): Promise<DentOptions> 
 	const { formatter } = await getConfig('nsis');
 
 	return {
-		endOfLines: formatter.endOfLines === '(auto)' ? undefined : formatter.endOfLines,
+		endOfLine: formatter.endOfLine === '(auto)' ? undefined : formatter.endOfLine,
 		indentSize: formatter.indentSize ?? editorTabSize,
 		printWidth: formatter.printWidth ?? 120,
 		trimEmptyLines: formatter.trimEmptyLines ?? true,

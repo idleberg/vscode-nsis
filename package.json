@@ -40,7 +40,7 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.9.0",
+		"@nsis/dent": "^0.10.0",
 		"@nsis/nlf": "^0.13.0",
 		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",
@@ -256,7 +256,7 @@
 					"description": "Toggle ANSI deprecation warning",
 					"order": 19
 				},
-				"nsis.formatter.endOfLines": {
+				"nsis.formatter.endOfLine": {
 					"type": "string",
 					"enum": [
 						"(auto)",
@@ -269,7 +269,7 @@
 						"carriage return + line-feed (CRLF)"
 					],
 					"default": "Auto",
-					"markdownDescription": "%nsisFormatterEndOfLines%",
+					"markdownDescription": "%nsisFormatterendOfLine%",
 					"order": 20
 				},
 				"nsis.formatter.printWidth": {
