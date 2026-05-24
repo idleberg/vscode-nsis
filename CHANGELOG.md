@@ -1,3 +1,7 @@
+# v5.5.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.5.0)
+
+- rename eol option
+
 # v5.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.4.0)
 
 - support `printWidth` option for formatter
