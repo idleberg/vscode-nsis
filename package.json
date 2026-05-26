@@ -40,7 +40,7 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.10.0",
+		"@nsis/dent": "^0.11.1",
 		"@nsis/nlf": "^0.13.0",
 		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",
@@ -51,7 +51,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^21.0.1",
 		"@commitlint/config-conventional": "^21.0.1",
-		"@idleberg/configs": "^0.4.2",
+		"@idleberg/configs": "^0.4.4",
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
 		"@types/node": "^24.12.4",

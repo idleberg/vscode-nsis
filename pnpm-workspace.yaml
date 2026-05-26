@@ -10,5 +10,6 @@ publicHoistPattern:
   - "*@total-typescript/tsconfig*"
   - "*lefthook*"
 minimumReleaseAgeExclude:
+  - "@idleberg/configs"
   - "@nsis/*"
   - "makensis"
