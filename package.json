@@ -40,7 +40,7 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.11.1",
+		"@nsis/dent": "^0.11.2",
 		"@nsis/nlf": "^0.13.0",
 		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",
@@ -49,8 +49,8 @@
 		"which": "^7.0.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^21.0.1",
-		"@commitlint/config-conventional": "^21.0.1",
+		"@commitlint/cli": "^21.0.2",
+		"@commitlint/config-conventional": "^21.0.2",
 		"@idleberg/configs": "^0.4.4",
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
@@ -60,7 +60,7 @@
 		"concurrently": "^9.2.1",
 		"ovsx": "^0.10.12",
 		"sharp-cli": "^5.2.0",
-		"tsdown": "^0.22.0",
+		"tsdown": "^0.22.1",
 		"typescript": "^6.0.3"
 	},
 	"activationEvents": [
