@@ -15,5 +15,6 @@
 	"nsisFormatterPrintWidth": "Specify the maximum line width for the formatter. Lines exceeding this width will be wrapped. Specify `0` to disable line wrapping.",
 	"nsisFormatterTrimEmptyLines": "Trim trailing whitespace from empty lines.",
 	"nsisFormatterUseTabs": "Use tabs for indentation instead of spaces.",
-	"nsisFormatterIndentSize": "Specify the number of spaces per indentation level. When not set, the editor's tab size is used."
+	"nsisFormatterIndentSize": "Specify the number of spaces per indentation level. When not set, the editor's tab size is used.",
+	"nsisFormatterSingleQuote": "Prefer single quotes instead of double quotes."
 }

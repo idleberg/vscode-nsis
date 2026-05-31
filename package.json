@@ -40,7 +40,7 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.11.2",
+		"@nsis/dent": "^0.12.0",
 		"@nsis/nlf": "^0.13.0",
 		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",
@@ -57,8 +57,8 @@
 		"@types/node": "^24.12.4",
 		"@types/vscode": "1.98.0",
 		"@types/which": "^3.0.4",
-		"concurrently": "^9.2.1",
-		"ovsx": "^0.10.12",
+		"concurrently": "^10.0.0",
+		"ovsx": "^1.0.0",
 		"sharp-cli": "^5.2.0",
 		"tsdown": "^0.22.1",
 		"typescript": "^6.0.3"
@@ -272,28 +272,34 @@
 					"markdownDescription": "%nsisFormatterendOfLine%",
 					"order": 20
 				},
+				"nsis.formatter.indentSize": {
+					"type": "number",
+					"markdownDescription": "%nsisFormatterIndentSize%",
+					"order": 21
+				},
 				"nsis.formatter.printWidth": {
 					"type": "number",
 					"default": 120,
 					"markdownDescription": "%nsisFormatterPrintWidth%",
-					"order": 21
+					"order": 22
+				},
+				"nsis.formatter.singleQuote": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%nsisFormatterSingleQuote%",
+					"order": 23
 				},
 				"nsis.formatter.trimEmptyLines": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "%nsisFormatterTrimEmptyLines%",
-					"order": 22
+					"order": 24
 				},
 				"nsis.formatter.useTabs": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "%nsisFormatterUseTabs%",
-					"order": 23
-				},
-				"nsis.formatter.indentSize": {
-					"type": "number",
-					"markdownDescription": "%nsisFormatterIndentSize%",
-					"order": 24
+					"order": 25
 				}
 			}
 		},
