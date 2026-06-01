@@ -1,3 +1,7 @@
+# v5.6.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.1)
+
+- update formatting library
+
 # v5.6.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.0)
 
 - add `formatter.singleQuote` option
