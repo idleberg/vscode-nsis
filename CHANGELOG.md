@@ -1,3 +1,7 @@
+# v5.6.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.2)
+
+- update dependencies
+
 # v5.6.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.1)
 
 - update formatting library

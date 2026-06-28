@@ -2,7 +2,7 @@
 	"name": "nsis",
 	"displayName": "NSIS",
 	"description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
-	"version": "5.6.1",
+	"version": "5.6.2",
 	"publisher": "idleberg",
 	"license": "MIT",
 	"author": {
@@ -40,8 +40,8 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.12.1",
-		"@nsis/nlf": "^0.13.0",
+		"@nsis/dent": "^0.13.0",
+		"@nsis/nlf": "^0.14.0",
 		"makensis": "3.0.5",
 		"micromatch": "^4.0.8",
 		"open": "^11.0.0",
@@ -49,18 +49,18 @@
 		"which": "^7.0.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^21.0.2",
-		"@commitlint/config-conventional": "^21.0.2",
-		"@idleberg/configs": "^0.4.4",
+		"@commitlint/cli": "^21.1.0",
+		"@commitlint/config-conventional": "^21.1.0",
+		"@idleberg/configs": "^0.4.6",
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
-		"@types/node": "^24.12.4",
+		"@types/node": "^24.13.2",
 		"@types/vscode": "1.98.0",
 		"@types/which": "^3.0.4",
-		"concurrently": "^10.0.0",
-		"ovsx": "^1.0.0",
+		"concurrently": "^10.0.3",
+		"ovsx": "^1.0.2",
 		"sharp-cli": "^5.2.0",
-		"tsdown": "^0.22.1",
+		"tsdown": "^0.22.3",
 		"typescript": "^6.0.3"
 	},
 	"activationEvents": [

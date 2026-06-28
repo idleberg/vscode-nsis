@@ -1,6 +1,6 @@
 [[remotes]]
 git_url = "https://github.com/idleberg/configs"
-ref = "v0.4.2"
+ref = "v0.4.6"
 configs = [
 	"lefthook/biome.toml",
 	"lefthook/commitlint.toml",
