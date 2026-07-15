@@ -1,6 +1,7 @@
 # v5.6.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.3)
 
 - fix positional highlighting issue in definitions
+- update dependencies
 
 # v5.6.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.2)
 
