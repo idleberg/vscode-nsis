@@ -233,43 +233,43 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?=\s|$)</string>
+            <string>(?i)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Next|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?=\s|$)</string>
+            <string>(?i)\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Next|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?=\s|$)</string>
+            <string>(?i)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?=\s|$)</string>
+            <string>(?i)\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${((At(Least|Most)|Is)(ServicePack|Win(7|8\.1|8|10|11|95|98|20(00|03|08(R2)?|12(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server))}(?=\s|$)</string>
+            <string>(?i)\${((At(Least|Most)|Is)(ServicePack|Win(7|8\.1|8|10|11|95|98|20(00|03|08(R2)?|12(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server))}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?=\s|$)</string>
+            <string>(?i)\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${((Disable|Enable)X64FSRedirection|RunningX64)}(?=\s|$)</string>
+            <string>(?i)\${((Disable|Enable)X64FSRedirection|RunningX64)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
