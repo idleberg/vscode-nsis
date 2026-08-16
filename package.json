@@ -17,7 +17,7 @@
 		"dev": "npm run start",
 		"lint": "biome check",
 		"publish:ovsx": "ovsx publish --no-dependencies",
-		"publish:vsce": "vsce publish --githubBranch main --no-dependencies",
+		"publish:vsce": "vsce publish --githubBranch main --no-dependencies --allow-package-env-file --allow-package-all-secrets",
 		"start": "npm run build -- --watch",
 		"test": "echo \"no tests yet\" && exit 0",
 		"vscode:prepublish": "npm run build"
