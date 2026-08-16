@@ -1,4 +1,6 @@
-# v5.6.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.4)
+# v5.6.6 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.6)
+
+# v5.6.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.5)
 
 - update dependencies
 
