@@ -2,7 +2,7 @@
 	"name": "nsis",
 	"displayName": "NSIS",
 	"description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
-	"version": "5.6.7",
+	"version": "5.6.8",
 	"publisher": "idleberg",
 	"license": "MIT",
 	"author": {
@@ -40,7 +40,7 @@
 	"type": "commonjs",
 	"main": "./lib/index.cjs",
 	"dependencies": {
-		"@nsis/dent": "^0.15.0",
+		"@nsis/dent": "^0.16.0",
 		"@nsis/nlf": "^0.14.2",
 		"makensis": "3.0.6",
 		"micromatch": "^4.0.8",
@@ -54,7 +54,7 @@
 		"@idleberg/configs": "^0.4.6",
 		"@nsis/logo": "0.1.1",
 		"@types/micromatch": "^4.0.10",
-		"@types/node": "^26.2.0",
+		"@types/node": "^26.3.0",
 		"@types/vscode": "1.98.0",
 		"@types/which": "^3.0.4",
 		"concurrently": "^10.0.5",
