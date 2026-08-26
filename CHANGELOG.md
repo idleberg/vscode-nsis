@@ -1,3 +1,7 @@
+# v5.6.9 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.9)
+
+- add missing formatter config for `commentStyle`
+
 # v5.6.8 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.8)
 
 - update formatting library
