@@ -268,38 +268,54 @@
 						"line-feed (LF)",
 						"carriage return + line-feed (CRLF)"
 					],
-					"default": "Auto",
-					"markdownDescription": "%nsisFormatterendOfLine%",
+					"default": "(auto)",
+					"markdownDescription": "%nsisFormatterEndOfLine%",
 					"order": 20
+				},
+				"nsis.formatter.commentStyle": {
+					"type": "string",
+					"enum": [
+						"(preserve)",
+						"hash",
+						"semi"
+					],
+					"enumDescriptions": [
+						"Preserve existing comment style",
+						"Use hash (#) for comments",
+						"Use semi-colon (;) for comments"
+					],
+					"default": "(preserve)",
+					"markdownDescription": "%nsisFormatterCommentStyle%",
+					"order": 21
 				},
 				"nsis.formatter.indentSize": {
 					"type": "number",
 					"markdownDescription": "%nsisFormatterIndentSize%",
-					"order": 21
+					"order": 22
 				},
 				"nsis.formatter.printWidth": {
 					"type": "number",
 					"default": 120,
 					"markdownDescription": "%nsisFormatterPrintWidth%",
-					"order": 22
+					"order": 23
 				},
 				"nsis.formatter.singleQuote": {
 					"type": "boolean",
 					"default": false,
 					"markdownDescription": "%nsisFormatterSingleQuote%",
-					"order": 23
+					"order": 24
 				},
 				"nsis.formatter.trimEmptyLines": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "%nsisFormatterTrimEmptyLines%",
-					"order": 24
+					"order": 25
 				},
 				"nsis.formatter.useTabs": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "%nsisFormatterUseTabs%",
-					"order": 25
+					"order": 26
 				}
 			}
 		},

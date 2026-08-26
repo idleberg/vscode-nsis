@@ -14,6 +14,7 @@ async function getFormatterOptions(editorTabSize: number): Promise<DentOptions> 
 
 	return {
 		endOfLine: formatter.endOfLine === '(auto)' ? undefined : formatter.endOfLine,
+		commentStyle: formatter.commentStyle === '(preserve)' ? undefined : formatter.commentStyle,
 		indentSize: formatter.indentSize ?? editorTabSize,
 		printWidth: formatter.printWidth ?? 120,
 		singleQuote: formatter.singleQuote ?? false,
