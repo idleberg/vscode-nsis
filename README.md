@@ -264,17 +264,7 @@ Per file: Click the encoding label in the status bar and choose Save with Encodi
 
 ## License
 
-If not otherwise specified (see below), files in this repository fall under
-[The MIT License](https://opensource.org/licenses/MIT).
-
-An exception is made for files in readable text which contain their own license
-information, or files where an accompanying file exists (in the same directory)
-with a “-license” suffix added to the base-name name of the original file, and
-an extension of txt, html, or similar. For example “tidy” is accompanied by
-“tidy-license.txt”.
-
-The bundled language server is licensed under the Apache License, Version 2.0,
-or The MIT License.
+Files in this repository fall under the [Apache 2.0 License](LICENSE).
 
 [wine]: https://winehq.org
 [makensis]: http://nsis.sourceforge.net/Docs/Chapter3.html#usage
