@@ -1,3 +1,10 @@
+# v6.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v6.0.0)
+
+- **Breaking change**: require `vscode>=1.100`
+- integrate `nsis-lsp`
+- remove command reference lookup
+- update dependencies
+
 # v5.6.9 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.9)
 
 - add missing formatter config for `commentStyle`
