@@ -56,9 +56,10 @@ export async function compile(strict: boolean): Promise<void> {
 			{
 				...(await getCompilerOptions()),
 				...getVerbosityOptions(config),
-				// Forwarding NSIS_APP_* variables as `-D` defines is opt-in upstream,
-				// and was never opted into here.
-				env: false,
+				// Forwards `NSIS_APP_*` variables as `-D` defines. Reads the real
+				// process environment, not `getSpawnEnv()`, so `terminal.integrated.env`
+				// cannot contribute them.
+				env: true,
 				// The compiler writes whole chunks, not lines, so appending as-is is
 				// what keeps the output looking like a terminal.
 				onData: ({ line }) => channel.append(line),
