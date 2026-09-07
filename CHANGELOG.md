@@ -1,3 +1,94 @@
+# v5.6.9 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.9)
+
+- add missing formatter config for `commentStyle`
+
+# v5.6.8 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.8)
+
+- update formatting library
+
+# v5.6.7 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.7)
+
+- update formatting library
+
+# v5.6.6 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.6)
+
+- update formatting library
+
+# v5.6.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.5)
+
+- update dependencies
+
+# v5.6.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.3)
+
+- fix positional highlighting issue in definitions
+- update dependencies
+
+# v5.6.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.2)
+
+- update dependencies
+
+# v5.6.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.1)
+
+- update formatting library
+
+# v5.6.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.6.0)
+
+- add `formatter.singleQuote` option
+- update formatting library
+
+# v5.5.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.5.2)
+
+- update formatting library
+
+# v5.5.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.5.1)
+
+- update formatting library
+
+# v5.5.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.5.0)
+
+- rename eol option
+
+# v5.4.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.4.0)
+
+- support `printWidth` option for formatter
+
+# v5.3.5 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.5)
+
+- update formatting library
+
+# v5.3.4 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.4)
+
+- add missing `${Break}` and `${Default}` snippets
+- update formatting library
+
+# v5.3.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.3)
+
+- fix formatter creation
+
+# v5.3.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.2)
+
+- update dependencies
+
+# v5.3.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.1)
+
+- revert accidental formatting suppression
+
+# v5.3.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.3.0)
+
+- add document link provider
+- improve symbol match groups
+- update dependencies
+
+# v5.2.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.2.0)
+
+- add "Go to Symbol" support
+- add "Go to Definition" support
+- update dependencies
+
+# v5.1.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.1.3)
+
+- update formatter library
+
 # v5.1.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.1.2)
 
 - update formatter library
@@ -14,8 +105,8 @@
 # v5.0.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.0.2)
 
 - improve syntax highlighting grammar
-	- adjust priorities for variables/defines
-	- update supported WinVer versions
+  - adjust priorities for variables/defines
+  - update supported WinVer versions
 - update WinVer snippets to support missing Windows versions
 
 # v5.0.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v5.0.1)
@@ -41,8 +132,8 @@
 
 - use native icons
 - remove menu items
-	- show version info
-	- show compiler flags
+  - show version info
+  - show compiler flags
 
 # v4.9.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v4.9.0)
 

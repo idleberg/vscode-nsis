@@ -6,8 +6,12 @@
     <array>
         <string>nsi</string>
         <string>nsh</string>
+
+        <!--Third party: BridleNSIS -->
         <string>bnsi</string>
         <string>bnsh</string>
+
+        <!--Third party: NSISDialogDesigner -->
         <string>nsdinc</string>
     </array>
 
