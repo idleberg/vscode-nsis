@@ -107,19 +107,30 @@ jobs:
       - run: ls -al ./dist
 
       # The Marketplace times out often enough that a single attempt is a coin
-      # flip. `--skip-duplicate` makes a retry skip whatever already landed.
+      # flip. Handing vsce every package at once means one timeout aborts the
+      # whole batch, and since the glob sorts win32 last, Windows is what goes
+      # missing. Each package is published on its own so a flaky upload only
+      # costs that one, and `--skip-duplicate` makes every retry a no-op for
+      # whatever already landed.
       - name: Publish
         run: |
-          for attempt in 1 2 3; do
-            if pnpm exec vsce publish --packagePath ./dist/nsis-*.vsix --skip-duplicate; then
-              exit 0
-            fi
+          failed=0
 
-            echo "::warning::Attempt $attempt failed, retrying in $((attempt * 30))s"
-            sleep $((attempt * 30))
+          for vsix in ./dist/nsis-*.vsix; do
+            for attempt in 1 2 3; do
+              if pnpm exec vsce publish --packagePath "$vsix" --skip-duplicate; then
+                continue 2
+              fi
+
+              echo "::warning::$vsix failed on attempt $attempt"
+              sleep $((attempt * 30))
+            done
+
+            echo "::error::$vsix could not be published"
+            failed=1
           done
 
-          exit 1
+          exit $failed
         env:
           VSCE_PAT: ${{ secrets.VSCE_PERSONAL_ACCESS_TOKEN }}
 
