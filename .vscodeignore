@@ -1,6 +1,8 @@
 # Development
 *.map
 .claude/
+dist/
+docs/
 .editorconfig
 .gitignore
 .github/
@@ -8,8 +10,8 @@ biome.jsonc
 commitlint.config.ts
 lefthook.toml
 package-lock.json
+scripts/
 src/
-tools/
 tsconfig.json
 tsconfig.tsbuildinfo
 tsdown.config.mts
@@ -18,6 +20,8 @@ tsdown.config.mts
 node_modules/
 npm-debug.log*
 package-lock.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
 vendor/
 yarn-error.log
 yarn.lock
@@ -26,7 +30,3 @@ yarn.lock
 **/**.vsix
 .vscode-test/**
 .vscode/**
-
-# Project specific
-resources/logo.svg
-todo.md

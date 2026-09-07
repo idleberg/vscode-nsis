@@ -1,3 +1,5 @@
 If not otherwise specified, files in this repository fall under [The MIT License](https://opensource.org/licenses/MIT).
 
 An exception is made for files in readable text which contain their own license information, or files where an accompanying file exists (in the same directory) with a “-license” suffix added to the base-name name of the original file, and an extension of txt, html, or similar. For example “tidy” is accompanied by “tidy-license.txt”.
+
+The `nsis-lsp` language server binary bundled with released packages is distributed under The MIT License or the Apache License, Version 2.0, at your option. See https://github.com/idleberg/nsis-lsp for details.

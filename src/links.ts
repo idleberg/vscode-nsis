@@ -1,127 +1,173 @@
-import { platform } from 'node:os';
-import { dirname, isAbsolute, join, parse } from 'node:path';
-import { nsisDir } from 'makensis';
-import { type Disposable, DocumentLink, languages, Range, type TextDocument, Uri } from 'vscode';
-import { fileExists, getMakensisPath } from './util';
+import { dirname, extname, isAbsolute, join } from 'node:path';
+import {
+	type CancellationToken,
+	type Disposable,
+	DocumentLink,
+	languages,
+	Range,
+	type TextDocument,
+	Uri,
+} from 'vscode';
+import { getNsisDirectory } from './makensis.ts';
+import { fileExists, isWindows } from './util.ts';
 
-const INCLUDE_REGEX =
-	/(?:!include)\s+(?:\/\w+\s+)*(?:"([^"]+)"|'([^']+)'|(\S+))|(?:LoadLanguageFile)\s+(?:"([^"]+)"|'([^']+)'|(\S+))/i;
+/**
+ * `!include` takes an arbitrary number of switches (`/NONFATAL`, `/CHARSET=…`)
+ * before its argument, `LoadLanguageFile` takes none. Anchoring at the start of
+ * the line is what keeps commented-out directives from being linked.
+ *
+ * The `d` flag is what makes the capture group's own offsets available, so the
+ * link can be placed without searching the line for the filename a second time.
+ */
+const DIRECTIVE_REGEX =
+	/^[\t ]*(?:(?<include>!include)(?:[\t ]+\/\w+(?:=\S+)?)*|(?<language>LoadLanguageFile))[\t ]+(?:"(?<double>[^"]+)"|'(?<single>[^']+)'|`(?<backtick>[^`]+)`|(?<bare>[^\s;#]+))/di;
 
-// biome-ignore lint/suspicious/noTemplateCurlyInString: This is a literal NSIS variable, not a JS template placeholder
-const NSISDIR_VAR = '${NSISDIR}';
+const NSISDIR_REGEX = /\$\{NSISDIR\}/gi;
 
-let cachedNsisDir: string | null | undefined;
+type Directive = 'include' | 'language';
 
-async function getNsisDirectory(): Promise<string | null> {
-	if (cachedNsisDir !== undefined) {
-		return cachedNsisDir;
-	}
+type Candidate = {
+	directive: Directive;
+	end: number;
+	line: number;
+	start: number;
+	target: string;
+};
 
-	try {
-		const pathToMakensis = await getMakensisPath();
-		const options = pathToMakensis !== 'makensis' ? { pathToMakensis } : {};
-		const result = await nsisDir(options);
+export function registerDocumentLinkProvider(): Disposable {
+	return languages.registerDocumentLinkProvider(
+		{ language: 'nsis' },
+		{
+			async provideDocumentLinks(document: TextDocument, token: CancellationToken): Promise<DocumentLink[]> {
+				// Resolution is relative to the script on disk, so an untitled or
+				// virtual document has nothing to resolve against.
+				if (document.uri.scheme !== 'file') {
+					return [];
+				}
 
-		if (typeof result === 'string') {
-			cachedNsisDir = result;
-		} else if (result && typeof result === 'object' && 'nsisdir' in result) {
-			cachedNsisDir = result.nsisdir;
-		} else {
-			cachedNsisDir = null;
-		}
-	} catch {
-		cachedNsisDir = null;
-	}
+				const candidates = collectCandidates(document);
 
-	return cachedNsisDir;
+				if (!candidates.length) {
+					return [];
+				}
+
+				// One `stat` per candidate path, so resolving these in parallel is
+				// what keeps a header-heavy script from feeling sluggish.
+				const resolved = await Promise.all(
+					candidates.map((candidate) => resolveTarget(document.uri.fsPath, candidate)),
+				);
+
+				if (token.isCancellationRequested) {
+					return [];
+				}
+
+				return candidates.flatMap((candidate, index) => {
+					const target = resolved[index];
+
+					if (!target) {
+						return [];
+					}
+
+					const link = new DocumentLink(
+						new Range(candidate.line, candidate.start, candidate.line, candidate.end),
+						Uri.file(target),
+					);
+
+					link.tooltip = target;
+
+					return [link];
+				});
+			},
+		},
+	);
 }
 
-async function resolveIncludePath(currentFilePath: string, inputPath: string): Promise<string | null> {
-	const nsisDirectory = await getNsisDirectory();
-	let resolvedPath = inputPath;
+function collectCandidates(document: TextDocument): Candidate[] {
+	const candidates: Candidate[] = [];
 
-	if (resolvedPath.includes(NSISDIR_VAR)) {
+	for (let line = 0; line < document.lineCount; line++) {
+		const match = DIRECTIVE_REGEX.exec(document.lineAt(line).text);
+		const groups = match?.groups;
+		const indices = match?.indices?.groups;
+
+		if (!groups || !indices) {
+			continue;
+		}
+
+		const name = (['double', 'single', 'backtick', 'bare'] as const).find((key) => groups[key]);
+		const target = name && groups[name];
+		const range = name && indices[name];
+
+		if (!target || !range) {
+			continue;
+		}
+
+		candidates.push({
+			directive: groups.include ? 'include' : 'language',
+			end: range[1],
+			line,
+			start: range[0],
+			target,
+		});
+	}
+
+	return candidates;
+}
+
+/**
+ * Mirrors how `makensis` itself looks up a file: the script's own directory
+ * first, then the compiler's search directories. Getting that order wrong means
+ * a header sitting next to the script resolves to NSIS's bundled copy instead.
+ */
+async function resolveTarget(scriptPath: string, { directive, target }: Candidate): Promise<string | null> {
+	const nsisDirectory = await getNsisDirectory();
+	let input = normalizeSeparators(target);
+
+	// A plain `includes` rather than a `test`, because the global regex used for
+	// the replacement below would carry its `lastIndex` between calls.
+	// biome-ignore lint/suspicious/noTemplateCurlyInString: an NSIS define, not a JS template placeholder
+	if (input.toUpperCase().includes('${NSISDIR}')) {
 		if (!nsisDirectory) {
 			return null;
 		}
 
-		if (platform() !== 'win32') {
-			resolvedPath = resolvedPath.replace(/\\/g, '/');
-		}
-
-		resolvedPath = resolvedPath.replace(/\$\{NSISDIR\}/gi, nsisDirectory);
+		input = normalizeSeparators(input.replace(NSISDIR_REGEX, nsisDirectory));
 	}
 
-	const { dir: targetDir, ext: targetExt, name: targetName } = parse(resolvedPath);
-	const filename = targetName + targetExt;
-
-	if (isAbsolute(resolvedPath)) {
-		return (await fileExists(resolvedPath)) ? resolvedPath : null;
+	if (isAbsolute(input)) {
+		return (await fileExists(input)) ? input : null;
 	}
 
-	const candidates: string[] = [];
+	const searchPaths = [dirname(scriptPath)];
 
 	if (nsisDirectory) {
-		candidates.push(
-			join(nsisDirectory, 'Include', filename),
-			join(nsisDirectory, 'Include', `${targetName}.nsh`),
-			join(nsisDirectory, 'Contrib', 'Language files', filename),
-			join(nsisDirectory, 'Contrib', 'Language files', `${targetName}.nsh`),
+		searchPaths.push(
+			directive === 'language' ? join(nsisDirectory, 'Contrib', 'Language files') : join(nsisDirectory, 'Include'),
 		);
 	}
 
-	candidates.push(join(dirname(currentFilePath), targetDir, filename));
+	// An extensionless argument is not something makensis accepts, but it is a
+	// common enough shorthand in hand-written scripts to be worth following.
+	const names = extname(input) ? [input] : [input, `${input}${directive === 'language' ? '.nlf' : '.nsh'}`];
 
-	for (const candidate of candidates) {
-		if (await fileExists(candidate)) {
-			return candidate;
+	for (const searchPath of searchPaths) {
+		for (const name of names) {
+			const candidate = join(searchPath, name);
+
+			if (await fileExists(candidate)) {
+				return candidate;
+			}
 		}
 	}
 
 	return null;
 }
 
-export function registerDocumentLinkProvider(): Disposable {
-	return languages.registerDocumentLinkProvider('nsis', {
-		async provideDocumentLinks(document: TextDocument) {
-			const links: DocumentLink[] = [];
-			const currentFilePath = document.uri.fsPath;
-
-			if (!currentFilePath) {
-				return links;
-			}
-
-			for (let i = 0; i < document.lineCount; i++) {
-				const line = document.lineAt(i);
-				const match = INCLUDE_REGEX.exec(line.text);
-
-				if (!match) {
-					continue;
-				}
-
-				const targetFile = match[1] || match[2] || match[3] || match[4] || match[5] || match[6];
-
-				if (!targetFile) {
-					continue;
-				}
-
-				const matchIndex = line.text.indexOf(targetFile, match.index);
-
-				if (matchIndex === -1) {
-					continue;
-				}
-
-				const startPos = document.positionAt(document.offsetAt(line.range.start) + matchIndex);
-				const endPos = document.positionAt(document.offsetAt(line.range.start) + matchIndex + targetFile.length);
-
-				const resolved = await resolveIncludePath(currentFilePath, targetFile);
-
-				if (resolved) {
-					links.push(new DocumentLink(new Range(startPos, endPos), Uri.file(resolved)));
-				}
-			}
-
-			return links;
-		},
-	});
+/**
+ * Scripts are written with Windows separators even when they are compiled
+ * elsewhere, and `node:path` on POSIX treats a backslash as an ordinary
+ * character rather than a separator.
+ */
+function normalizeSeparators(input: string): string {
+	return isWindows() ? input : input.replace(/\\/g, '/');
 }

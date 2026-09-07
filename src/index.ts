@@ -1,98 +1,79 @@
-import { commands, type ExtensionContext, languages, window, workspace } from 'vscode';
+import { commands, type ExtensionContext, window, workspace } from 'vscode';
+import { registerBuildCommands } from './build/index.ts';
+import {
+	disposeOutputChannel,
+	getOutputChannel,
+	getServerBinary,
+	notifyConfigurationChange,
+	restartClient,
+	startClient,
+	stopClient,
+} from './client.ts';
+import { registerDocumentLinkProvider } from './links.ts';
+import { resetCompilerState } from './makensis.ts';
+import { convertLanguageFile } from './nlf.ts';
+
+/**
+ * Settings that only reach the server through `initializationOptions`, and so
+ * need a restart rather than a `didChangeConfiguration` notification.
+ */
+const RESTART_ON_CHANGE = ['nsis.serverPath'];
+
+/**
+ * Settings the build system caches something for, and so has to be told about.
+ */
+const RESET_COMPILER_ON_CHANGE = ['nsis.makensis.path', 'nsis.wine'];
 
 export async function activate(context: ExtensionContext): Promise<void> {
-	const { compile, showCompilerFlags, showVersion, showHelp } = await import('./makensis');
-	const { convert } = await import('./nlf.ts');
-	const { createTask } = await import('./task.ts');
-
 	context.subscriptions.push(
-		// TextEditor Commands
-		commands.registerTextEditorCommand('extension.nsis.compile', async () => {
-			return await compile(false);
-		}),
-
-		commands.registerTextEditorCommand('extension.nsis.compile-strict', async () => {
-			return await compile(true);
-		}),
-
-		commands.registerTextEditorCommand('extension.nsis.create-build-task', async () => {
-			return await createTask();
-		}),
-
-		commands.registerTextEditorCommand('extension.nsis.convert-language-file', () => {
-			return convert();
-		}),
-
-		// Global Commands
-		commands.registerCommand('extension.nsis.show-version', async () => {
-			return await showVersion();
-		}),
-
-		commands.registerCommand('extension.nsis.show-compiler-flags', async () => {
-			return await showCompilerFlags();
-		}),
-
-		commands.registerCommand('extension.nsis.command-reference', async () => {
-			return await showHelp();
-		}),
-
-		commands.registerCommand('extension.nsis.open-settings', async () => {
-			commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis');
-		}),
-	);
-
-	// Formatter
-	const { registerFormatter } = await import('./formatter.ts');
-	const formatterDisposable = await registerFormatter();
-
-	if (formatterDisposable) {
-		context.subscriptions.push(formatterDisposable);
-	}
-
-	// Symbol Navigation
-	const { registerDefinitionProvider } = await import('./definitions.ts');
-	const { registerDocumentLinkProvider } = await import('./links.ts');
-	const { registerReferenceProvider } = await import('./references.ts');
-	const { registerSymbolProvider } = await import('./symbols.ts');
-
-	context.subscriptions.push(
-		registerDefinitionProvider(),
+		...registerBuildCommands(),
 		registerDocumentLinkProvider(),
-		registerReferenceProvider(),
-		registerSymbolProvider(),
-	);
+		commands.registerCommand('nsis.convertLanguageFile', async () => {
+			await convertLanguageFile();
+		}),
 
-	// Diagnostics
-	const { updateDiagnostics } = await import('./diagnostics.ts');
-	const collection = languages.createDiagnosticCollection('nsis');
+		commands.registerCommand('nsis.restartServer', async () => {
+			await restartClient(context);
+		}),
 
-	if (window.activeTextEditor) {
-		const editor = window.activeTextEditor;
+		commands.registerCommand('nsis.showOutput', () => {
+			getOutputChannel().show();
+		}),
 
-		if (editor) {
-			const document = editor.document || null;
+		commands.registerCommand('nsis.showServerVersion', async () => {
+			const binary = getServerBinary();
 
-			updateDiagnostics(document, collection);
-		}
-	}
-
-	context.subscriptions.push(
-		workspace.onDidSaveTextDocument(() => {
-			const editor = window.activeTextEditor;
-
-			if (editor) {
-				const document = editor.document || null;
-
-				updateDiagnostics(document, collection);
+			if (binary) {
+				window.showInformationMessage(`${binary.version} (${binary.source}: ${binary.path})`);
+			} else {
+				window.showWarningMessage('The nsis-lsp language server is not running.');
 			}
 		}),
 
-		window.onDidChangeActiveTextEditor((editor) => {
-			if (editor) {
-				const document = editor.document || null;
+		workspace.onDidChangeConfiguration(async (event) => {
+			if (!event.affectsConfiguration('nsis')) {
+				return;
+			}
 
-				updateDiagnostics(document, collection);
+			if (RESET_COMPILER_ON_CHANGE.some((section) => event.affectsConfiguration(section))) {
+				resetCompilerState();
+			}
+
+			if (RESTART_ON_CHANGE.some((section) => event.affectsConfiguration(section))) {
+				await restartClient(context);
+			} else {
+				await notifyConfigurationChange();
 			}
 		}),
+
+		// Disposed after `deactivate` has stopped the client, so the server's
+		// shutdown still has somewhere to log.
+		{ dispose: disposeOutputChannel },
 	);
+
+	await startClient(context);
+}
+
+export async function deactivate(): Promise<void> {
+	await stopClient();
 }

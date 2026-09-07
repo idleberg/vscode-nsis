@@ -1,141 +1,151 @@
-import * as NSIS from 'makensis';
-import { commands, window } from 'vscode';
-import { getConfig } from 'vscode-get-config';
-import { compilerError, compilerExit, compilerOutput, flagsCallback, versionCallback } from './callbacks';
-import { makensisChannel } from './channel';
-import { getMakensisPath, getSpawnEnv, isHeaderFile, openURL, pathWarning } from './util';
+import type { SpawnOptions } from 'node:child_process';
+import type { CompilerOptions } from 'makensis';
+import { nsisDir } from 'makensis';
+import { commands, env, Uri, type WorkspaceConfiguration, window, workspace } from 'vscode';
+import { findOnPath, isWindows, locate, mapPlatform } from './util.ts';
 
-export async function compile(strictMode: boolean): Promise<void> {
-	const activeTextEditor = window?.activeTextEditor;
+const BINARY_NAME = isWindows() ? 'makensis.exe' : 'makensis';
 
-	if (!activeTextEditor) {
-		return;
-	}
+let nsisDirectory: Promise<string | null> | undefined;
+let warnedAboutPath = false;
 
-	const isNsis = activeTextEditor?.document?.languageId === 'nsis';
-
-	if (!isNsis) {
-		makensisChannel.appendLine('This command is only available for NSIS files');
-		return;
-	}
-
-	const { compiler, processHeaders, showFlagsAsObject } = await getConfig('nsis');
-	const document = activeTextEditor.document;
-
-	if (isHeaderFile(document.fileName)) {
-		if (processHeaders === 'Disallow') {
-			const choice = await window.showWarningMessage(
-				'Compiling header files is blocked by default. You can allow it in the package settings, or mute this warning.',
-				'Open Settings',
-			);
-			if (choice === 'Open Settings') {
-				commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis processHeaders');
-				return;
-			}
-		} else if (processHeaders === 'Disallow & Never Ask Me') {
-			window.setStatusBarMessage('makensis: Skipped header file', 5000);
-			return;
-		}
-	}
-
-	try {
-		await document.save();
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-		window.showErrorMessage('Error saving file, see console for details');
-		return;
-	}
-
-	makensisChannel.clear();
-
-	try {
-		await NSIS.compile(
-			document.fileName,
-			{
-				env: false,
-				json: showFlagsAsObject,
-				onData: async (data) => await compilerOutput(data),
-				onError: async (data) => await compilerError(data),
-				onClose: async (data) => await compilerExit(data),
-				pathToMakensis: await getMakensisPath(),
-				rawArguments: compiler.customArguments,
-				strict: strictMode || compiler.strictMode,
-				verbose: compiler.verbosity,
-			},
-			await getSpawnEnv(),
-		);
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-	}
+export function getConfiguration(): WorkspaceConfiguration {
+	return workspace.getConfiguration('nsis');
 }
 
-export async function showVersion(): Promise<void> {
-	await makensisChannel.clear();
-
-	try {
-		await NSIS.version(
-			{
-				onClose: async (data) => await versionCallback(data),
-				pathToMakensis: await getMakensisPath(),
-			},
-			await getSpawnEnv(),
-		);
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-	}
+/**
+ * Wine is how NSIS is compiled on macOS and Linux when only a Windows build of
+ * `makensis` is available. It is never used on Windows itself, whatever the
+ * setting says.
+ */
+export function useWine(): boolean {
+	return !isWindows() && getConfiguration().get<boolean>('wine.runWithWine', false);
 }
 
-export async function showCompilerFlags(): Promise<void> {
-	const { showFlagsAsObject } = await getConfig('nsis');
+/**
+ * Resolves the `makensis` binary from the `nsis.makensis.path` setting,
+ * falling back to the `PATH`. The configured path is returned unresolved when it
+ * cannot be located, so that Wine prefix paths — which mean nothing to this
+ * process — still reach the compiler.
+ */
+export async function getMakensisPath(): Promise<string> {
+	const configured = stripQuotes(getConfiguration().get<string>('makensis.path', '').trim());
+
+	if (configured && configured !== 'makensis') {
+		return locate(configured) ?? configured;
+	}
+
+	const found = findOnPath(BINARY_NAME);
+
+	if (found) {
+		return found;
+	}
+
+	// Under Wine the compiler lives inside a prefix and is never on the `PATH`,
+	// so let it through and let the spawn fail with something more useful.
+	if (!useWine()) {
+		await warnAboutMissingBinary();
+	}
+
+	return 'makensis';
+}
+
+/**
+ * The options every `makensis` invocation shares: which binary to run, and
+ * whether to run it through Wine.
+ */
+export async function getCompilerOptions(): Promise<CompilerOptions> {
 	const pathToMakensis = await getMakensisPath();
 
-	await makensisChannel.clear();
-
-	try {
-		await NSIS.headerInfo(
-			{
-				json: showFlagsAsObject || false,
-				onClose: flagsCallback,
-				pathToMakensis: pathToMakensis || undefined,
-			},
-			await getSpawnEnv(),
-		);
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-	}
+	return useWine()
+		? { pathToMakensis, wine: true, pathToWine: getConfiguration().get<string>('wine.pathToWine', 'wine') }
+		: { pathToMakensis };
 }
 
-export async function showHelp(): Promise<void> {
-	makensisChannel.clear();
+/**
+ * `makensis` reads `NSISDIR` and `NSISCONFDIR` from the environment. Honouring
+ * `terminal.integrated.env` means a workspace that already sets them for its
+ * terminal does not have to set them a second time.
+ */
+export function getSpawnEnv(): SpawnOptions {
+	const overrides =
+		workspace.getConfiguration('terminal.integrated.env').get<Record<string, string>>(mapPlatform()) ?? {};
 
-	let pathToMakensis: string;
+	const env: NodeJS.ProcessEnv = { ...process.env };
 
-	try {
-		pathToMakensis = await getMakensisPath();
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
-		await pathWarning();
+	if (overrides.NSISDIR) {
+		env.NSISDIR = overrides.NSISDIR;
+	}
 
+	if (overrides.NSISCONFDIR) {
+		env.NSISCONFDIR = overrides.NSISCONFDIR;
+	}
+
+	if (!isWindows()) {
+		// Fixes occasional mangling of non-ASCII compiler output.
+		env.LANG ||= 'en_US.UTF-8';
+		env.LANGUAGE ||= 'en_US.UTF-8';
+		env.LC_ALL ||= 'en_US.UTF-8';
+	}
+
+	return { env };
+}
+
+/**
+ * The NSIS installation directory, as reported by the compiler itself. Spawning
+ * `makensis` is expensive enough to cache, and cheap enough to redo whenever the
+ * compiler settings change.
+ *
+ * Resolving `!include` document links needs this, so it lives here rather than
+ * alongside the commands that currently use it.
+ */
+export async function getNsisDirectory(): Promise<string | null> {
+	nsisDirectory ??= (async () => {
+		try {
+			return await nsisDir(await getCompilerOptions(), getSpawnEnv());
+		} catch (error) {
+			console.error('[idleberg.nsis]', 'Failed to determine NSISDIR', error);
+
+			return null;
+		}
+	})();
+
+	return nsisDirectory;
+}
+
+/**
+ * Drops everything derived from the compiler settings. Called when those
+ * settings change, so a corrected path takes effect without a reload.
+ */
+export function resetCompilerState(): void {
+	nsisDirectory = undefined;
+	warnedAboutPath = false;
+}
+
+/**
+ * Windows paths are routinely pasted into settings with their surrounding
+ * quotes still attached.
+ */
+function stripQuotes(input: string): string {
+	return input.startsWith('"') && input.endsWith('"') ? input.slice(1, -1).trim() : input;
+}
+
+async function warnAboutMissingBinary(): Promise<void> {
+	if (warnedAboutPath) {
 		return;
 	}
 
-	let command: string | undefined;
+	warnedAboutPath = true;
 
-	try {
-		const output = await NSIS.commandHelp(
-			'',
-			{
-				pathToMakensis: pathToMakensis,
-				json: true,
-			},
-			await getSpawnEnv(),
-		);
-		command = (await window.showQuickPick(Object.keys(output.stdout as string))) || undefined;
+	const choice = await window.showWarningMessage(
+		'makensis was not found in your PATH. Install NSIS, or point the extension at an existing compiler.',
+		'Open Settings',
+		'Download NSIS',
+	);
 
-		if (command) {
-			openURL(command);
-		}
-	} catch (error) {
-		console.error('[idleberg.nsis]', error instanceof Error ? error.message : error);
+	if (choice === 'Open Settings') {
+		await commands.executeCommand('workbench.action.openSettings', '@ext:idleberg.nsis makensis.path');
+	} else if (choice === 'Download NSIS') {
+		await env.openExternal(Uri.parse('https://nsis.sourceforge.io/Download'));
 	}
 }

@@ -2,14 +2,10 @@ allowBuilds:
   "@vscode/vsce-sign": true
   keytar: true
   lefthook: true
-  sharp: true
 autoInstallPeers: true
 publicHoistPattern:
   - "*@biomejs/biome*"
-  - "*@e18e/cli*"
-  - "*@total-typescript/tsconfig*"
   - "*lefthook*"
 minimumReleaseAgeExclude:
   - "@idleberg/configs"
   - "@nsis/*"
-  - "makensis"

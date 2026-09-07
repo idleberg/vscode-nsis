@@ -1,21 +1,22 @@
 {
 	"name": "nsis",
 	"displayName": "NSIS",
-	"description": "Language syntax, IntelliSense and build system for Nullsoft Scriptable Install System (NSIS)",
-	"version": "5.6.9",
+	"description": "Language intelligence for Nullsoft Scriptable Install System (NSIS), powered by nsis-lsp",
+	"version": "6.0.0-pre.0",
 	"publisher": "idleberg",
 	"license": "MIT",
 	"author": {
 		"name": "Jan T. Sott",
 		"url": "http://github.com/idleberg"
 	},
+	"nsisLspVersion": "0.5.5",
 	"scripts": {
+		"build": "tsdown && node scripts/check-bundle.mts",
 		"compile": "npm run build",
-		"build": "concurrently --prefix-colors 'blue,green' 'npm:build:*'",
-		"build:code": "tsdown",
-		"build:image": "sharp resize 1024 1024 --input \"node_modules/@nsis/logo/images/Logo/below 48x48/outlines-light.svg\" --output resources/logo.png",
 		"dev": "npm run start",
+		"fetch:server": "node scripts/fetch-server.mts",
 		"lint": "biome check",
+		"package": "vsce package --no-dependencies",
 		"publish:ovsx": "ovsx publish --no-dependencies",
 		"publish:vsce": "vsce publish --githubBranch main --no-dependencies --allow-package-env-file --allow-package-all-secrets",
 		"start": "npm run build -- --watch",
@@ -24,7 +25,8 @@
 	},
 	"keywords": [
 		"nsis",
-		"wine"
+		"lsp",
+		"language-server"
 	],
 	"repository": {
 		"type": "git",
@@ -37,286 +39,43 @@
 	"sponsor": {
 		"url": "https://buymeacoffee.com/idleberg"
 	},
-	"type": "commonjs",
-	"main": "./lib/index.cjs",
-	"dependencies": {
-		"@nsis/dent": "^0.16.0",
-		"@nsis/nlf": "^0.14.2",
-		"makensis": "3.0.6",
-		"micromatch": "^4.0.8",
-		"open": "^11.0.1",
-		"vscode-get-config": "^0.6.3",
-		"which": "^7.0.0"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^21.2.2",
-		"@commitlint/config-conventional": "^21.2.2",
-		"@idleberg/configs": "^0.4.6",
-		"@nsis/logo": "0.1.1",
-		"@types/micromatch": "^4.0.10",
-		"@types/node": "^26.3.0",
-		"@types/vscode": "1.98.0",
-		"@types/which": "^3.0.4",
-		"concurrently": "^10.0.5",
-		"ovsx": "^1.1.1",
-		"sharp-cli": "^6.0.0",
-		"tsdown": "^0.22.14",
-		"typescript": "^6.0.3"
-	},
-	"activationEvents": [
-		"onStartupFinished"
-	],
+	"type": "module",
+	"main": "./lib/index.mjs",
 	"icon": "resources/logo.png",
 	"galleryBanner": {
 		"color": "#9e90aa",
 		"theme": "dark"
 	},
+	"dependencies": {
+		"@nsis/nlf": "^0.14.2",
+		"makensis": "3.0.6",
+		"vscode-languageclient": "^10.1.1"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^21.2.2",
+		"@commitlint/config-conventional": "^21.2.2",
+		"@idleberg/configs": "^0.4.6",
+		"@types/node": "^26.4.1",
+		"@types/vscode": "1.100.0",
+		"@vscode/vsce": "^3.6.0",
+		"ovsx": "^1.1.1",
+		"tsdown": "^0.23.0",
+		"typescript": "^6.0.3"
+	},
+	"activationEvents": [],
 	"engines": {
-		"vscode": "^1.98.0"
+		"vscode": "^1.100.0"
 	},
 	"categories": [
-		"Formatters",
 		"Programming Languages",
-		"Snippets",
-		"Other"
+		"Formatters",
+		"Linters",
+		"Snippets"
 	],
 	"contributes": {
 		"configurationDefaults": {
 			"[nsis]": {
 				"files.encoding": "utf8bom"
-			}
-		},
-		"configuration": {
-			"type": "object",
-			"title": "NSIS",
-			"properties": {
-				"nsis.compiler.pathToMakensis": {
-					"type": "string",
-					"default": "makensis",
-					"markdownDescription": "%nsisPathToMakensis%",
-					"order": 1
-				},
-				"nsis.compiler.verbosity": {
-					"type": "string",
-					"enum": [
-						"-1",
-						"0",
-						"1",
-						"2",
-						"3",
-						"4"
-					],
-					"enumDescriptions": [
-						"(not set)",
-						"none",
-						"no warnings",
-						"no info",
-						"no script",
-						"all"
-					],
-					"default": "3",
-					"markdownDescription": "%nsisCompilerVerbosity%",
-					"order": 2
-				},
-				"nsis.compiler.strictMode": {
-					"type": "boolean",
-					"default": false,
-					"description": "%nsisStrictMode%",
-					"order": 3
-				},
-				"nsis.compiler.customArguments": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"default": [],
-					"markdownDescription": "%nsisCustomArguments%",
-					"order": 4
-				},
-				"nsis.diagnostics.enableDiagnostics": {
-					"type": "boolean",
-					"default": true,
-					"description": "Toggle diagnostic mode to underline warnings and errors in your code",
-					"order": 5
-				},
-				"nsis.diagnostics.preprocessMode": {
-					"type": "string",
-					"enum": [
-						"(none)",
-						"PPO",
-						"Safe PPO"
-					],
-					"default": "PPO",
-					"markdownDescription": "%nsisPreprocessMode%",
-					"order": 6
-				},
-				"nsis.diagnostics.overrideCompression": {
-					"type": "boolean",
-					"default": true,
-					"description": "Overrides compression settings to speed up diagnostics",
-					"order": 7
-				},
-				"nsis.diagnostics.excludedFiles": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"default": [],
-					"markdownDescription": "%nsisExcludeFiles%",
-					"order": 8
-				},
-				"nsis.diagnostics.useCustomArguments": {
-					"type": "boolean",
-					"default": false,
-					"description": "%nsisUseCustomArguments%",
-					"order": 9
-				},
-				"nsis.diagnostics.customArguments": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"default": [],
-					"markdownDescription": "%nsisDiagnosticsCustomArguments%",
-					"order": 10
-				},
-				"nsis.showNotifications": {
-					"type": "boolean",
-					"default": true,
-					"description": "Show build notifications indicating success or failure",
-					"order": 11
-				},
-				"nsis.processHeaders": {
-					"type": "string",
-					"enum": [
-						"Allow",
-						"Disallow",
-						"Disallow & Never Ask Me"
-					],
-					"enumDescriptions": [
-						"Compilation is enabled for both, .nsi and .nsh files",
-						"Compilation is enabled for .nsi files only, displays a warning when trying to compile .nsh files",
-						"Compilation is enabled for .nsi files only, no additional warnings are displayed"
-					],
-					"default": "Disallow",
-					"markdownDescription": "%nsisprocessHeaders%",
-					"order": 12
-				},
-				"nsis.showOutputView": {
-					"type": "string",
-					"enum": [
-						"Always",
-						"On Warnings & Errors",
-						"On Errors",
-						"Never"
-					],
-					"enumDescriptions": [
-						"The output panel is shown whenever a script is compiled",
-						"The output panel is only shown when the compiled script has warnings or errors",
-						"The output panel is only shown when the compiled script has errors",
-						"The output panel is never shown"
-					],
-					"default": "On Errors",
-					"markdownDescription": "%nsisShowOutputView%",
-					"order": 13
-				},
-				"nsis.alwaysOpenBuildTask": {
-					"type": "boolean",
-					"default": true,
-					"description": "Specify whether to open the newly created build task",
-					"order": 14
-				},
-				"nsis.showVersionAsInfoMessage": {
-					"type": "boolean",
-					"default": false,
-					"description": "Specify whether to show version as message",
-					"order": 15
-				},
-				"nsis.showFlagsAsObject": {
-					"type": "boolean",
-					"default": true,
-					"description": "Specify whether to format compiler flags as JSON",
-					"order": 16
-				},
-				"nsis.wine.runWithWine": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "%nsisRunWithWine%",
-					"order": 17
-				},
-				"nsis.wine.pathToWine": {
-					"type": "string",
-					"default": "wine",
-					"markdownDescription": "%nsisPathToWine%",
-					"order": 18
-				},
-				"nsis.muteANSIDeprecationWarning": {
-					"type": "boolean",
-					"default": false,
-					"description": "Toggle ANSI deprecation warning",
-					"order": 19
-				},
-				"nsis.formatter.endOfLine": {
-					"type": "string",
-					"enum": [
-						"(auto)",
-						"lf",
-						"crlf"
-					],
-					"enumDescriptions": [
-						"Uses the operating system's default end of line sequence",
-						"line-feed (LF)",
-						"carriage return + line-feed (CRLF)"
-					],
-					"default": "(auto)",
-					"markdownDescription": "%nsisFormatterEndOfLine%",
-					"order": 20
-				},
-				"nsis.formatter.commentStyle": {
-					"type": "string",
-					"enum": [
-						"(preserve)",
-						"hash",
-						"semi"
-					],
-					"enumDescriptions": [
-						"Preserve existing comment style",
-						"Use hash (#) for comments",
-						"Use semi-colon (;) for comments"
-					],
-					"default": "(preserve)",
-					"markdownDescription": "%nsisFormatterCommentStyle%",
-					"order": 21
-				},
-				"nsis.formatter.indentSize": {
-					"type": "number",
-					"markdownDescription": "%nsisFormatterIndentSize%",
-					"order": 22
-				},
-				"nsis.formatter.printWidth": {
-					"type": "number",
-					"default": 120,
-					"markdownDescription": "%nsisFormatterPrintWidth%",
-					"order": 23
-				},
-				"nsis.formatter.singleQuote": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "%nsisFormatterSingleQuote%",
-					"order": 24
-				},
-				"nsis.formatter.trimEmptyLines": {
-					"type": "boolean",
-					"default": true,
-					"markdownDescription": "%nsisFormatterTrimEmptyLines%",
-					"order": 25
-				},
-				"nsis.formatter.useTabs": {
-					"type": "boolean",
-					"default": true,
-					"markdownDescription": "%nsisFormatterUseTabs%",
-					"order": 26
-				}
 			}
 		},
 		"languages": [
@@ -384,97 +143,6 @@
 				}
 			}
 		],
-		"commands": [
-			{
-				"command": "extension.nsis.compile",
-				"title": "NSIS: Save & Compile Script",
-				"icon": "$(run)"
-			},
-			{
-				"command": "extension.nsis.compile-strict",
-				"title": "NSIS: Save & Compile Script (strict)",
-				"icon": "$(run-all)"
-			},
-			{
-				"command": "extension.nsis.command-reference",
-				"title": "NSIS: Command Reference",
-				"icon": "$(book)"
-			},
-			{
-				"command": "extension.nsis.show-version",
-				"title": "NSIS: Show Version"
-			},
-			{
-				"command": "extension.nsis.show-compiler-flags",
-				"title": "NSIS: Show Compiler Flags"
-			},
-			{
-				"command": "extension.nsis.create-build-task",
-				"title": "NSIS: Create Build Task",
-				"icon": "$(checklist)"
-			},
-			{
-				"command": "extension.nsis.open-settings",
-				"title": "NSIS: Open Settings",
-				"icon": "$(settings)"
-			},
-			{
-				"command": "extension.nsis.convert-language-file",
-				"title": "NSIS: Convert Language File"
-			}
-		],
-		"keybindings": [
-			{
-				"key": "ctrl+shift+b",
-				"mac": "cmd+alt+b",
-				"when": "editorFocus && editorLangId == nsis",
-				"command": "extension.nsis.compile"
-			},
-			{
-				"key": "ctrl+alt+shift+b",
-				"mac": "cmd+alt+shift+b",
-				"when": "editorFocus && editorLangId == nsis",
-				"command": "extension.nsis.compile-strict"
-			},
-			{
-				"key": "alt+enter",
-				"when": "editorFocus && editorLangId == nsis",
-				"command": "editor.action.insertSnippet",
-				"args": {
-					"langid": "nsis",
-					"name": "continued line"
-				}
-			}
-		],
-		"menus": {
-			"editor/title": [
-				{
-					"when": "resourceLangId == nsis",
-					"command": "extension.nsis.compile",
-					"group": "navigation@1"
-				},
-				{
-					"when": "resourceLangId == nsis",
-					"command": "extension.nsis.compile-strict",
-					"group": "navigation@2"
-				},
-				{
-					"when": "resourceLangId == nsis",
-					"command": "extension.nsis.create-build-task",
-					"group": "navigation@3"
-				},
-				{
-					"when": "resourceLangId == nsis",
-					"command": "extension.nsis.command-reference",
-					"group": "navigation@4"
-				},
-				{
-					"when": "resourceLangId == nsis",
-					"command": "extension.nsis.open-settings",
-					"group": "navigation@5"
-				}
-			]
-		},
 		"snippets": [
 			{
 				"language": "ini",
@@ -507,6 +175,10 @@
 			{
 				"language": "nsis",
 				"path": "./snippets/editor.actions.json"
+			},
+			{
+				"language": "nsis",
+				"path": "./snippets/header.DrunkenNSIS.json"
 			},
 			{
 				"language": "nsis",
@@ -632,7 +304,324 @@
 				"language": "nsis",
 				"path": "./snippets/scaffold.ModernUI.json"
 			}
-		]
+		],
+		"commands": [
+			{
+				"command": "nsis.compile",
+				"category": "NSIS",
+				"title": "Save & Compile Script",
+				"icon": "$(run)"
+			},
+			{
+				"command": "nsis.compileStrict",
+				"category": "NSIS",
+				"title": "Save & Compile Script (strict)",
+				"icon": "$(run-all)"
+			},
+			{
+				"command": "nsis.createBuildTask",
+				"category": "NSIS",
+				"title": "Create Build Task",
+				"icon": "$(checklist)"
+			},
+			{
+				"command": "nsis.openSettings",
+				"category": "NSIS",
+				"title": "Open Settings",
+				"icon": "$(settings)"
+			},
+			{
+				"command": "nsis.convertLanguageFile",
+				"category": "NSIS",
+				"title": "Convert Language File"
+			},
+			{
+				"command": "nsis.showCompilerVersion",
+				"category": "NSIS",
+				"title": "Show Compiler Version"
+			},
+			{
+				"command": "nsis.showCompilerFlags",
+				"category": "NSIS",
+				"title": "Show Compiler Flags"
+			},
+			{
+				"command": "nsis.restartServer",
+				"category": "NSIS",
+				"title": "Restart Language Server"
+			},
+			{
+				"command": "nsis.showOutput",
+				"category": "NSIS",
+				"title": "Show Language Server Output"
+			},
+			{
+				"command": "nsis.showServerVersion",
+				"category": "NSIS",
+				"title": "Show Language Server Version"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"when": "resourceLangId == nlf || resourceLangId == json || resourceLangId == jsonc || resourceLangId == json5",
+					"command": "nsis.convertLanguageFile"
+				}
+			],
+			"editor/title": [
+				{
+					"when": "resourceLangId == nsis",
+					"command": "nsis.compile",
+					"group": "navigation@1"
+				},
+				{
+					"when": "resourceLangId == nsis",
+					"command": "nsis.compileStrict",
+					"group": "navigation@2"
+				},
+				{
+					"when": "resourceLangId == nsis",
+					"command": "nsis.createBuildTask",
+					"group": "navigation@3"
+				},
+				{
+					"when": "resourceLangId == nsis",
+					"command": "nsis.openSettings",
+					"group": "navigation@4"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"key": "ctrl+shift+b",
+				"mac": "cmd+alt+b",
+				"when": "editorFocus && editorLangId == nsis",
+				"command": "nsis.compile"
+			},
+			{
+				"key": "ctrl+alt+shift+b",
+				"mac": "cmd+alt+shift+b",
+				"when": "editorFocus && editorLangId == nsis",
+				"command": "nsis.compileStrict"
+			},
+			{
+				"key": "alt+enter",
+				"when": "editorFocus && editorLangId == nsis",
+				"command": "editor.action.insertSnippet",
+				"args": {
+					"langid": "nsis",
+					"name": "continued line"
+				}
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "NSIS LSP",
+			"properties": {
+				"nsis.serverPath": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Path to the `nsis-lsp` binary. When empty, the bundled binary is used, falling back to a binary found in your `PATH`.",
+					"order": 1
+				},
+				"nsis.makensis.path": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Path to the `makensis` binary used for compilation and diagnostics. When empty, your `PATH` is searched. When compiling through Wine, set this to the path of `makensis.exe` inside your prefix.",
+					"order": 2
+				},
+				"nsis.compiler.verbosity": {
+					"type": "string",
+					"enum": [
+						"(default)",
+						"0",
+						"1",
+						"2",
+						"3",
+						"4"
+					],
+					"enumDescriptions": [
+						"Leaves the choice to makensis",
+						"none",
+						"no warnings",
+						"no info",
+						"no script",
+						"all"
+					],
+					"default": "3",
+					"markdownDescription": "How much the compiler reports while building.",
+					"order": 3
+				},
+				"nsis.compiler.strictMode": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Treat compiler warnings as errors, as though every build used **Save & Compile Script (strict)**.",
+					"order": 4
+				},
+				"nsis.compiler.customArguments": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [],
+					"markdownDescription": "Additional arguments passed to `makensis`, for example `-DVERSION=1.0.0`.",
+					"order": 5
+				},
+				"nsis.compiler.processHeaders": {
+					"type": "string",
+					"enum": [
+						"Allow",
+						"Disallow",
+						"Disallow & Never Ask Me"
+					],
+					"enumDescriptions": [
+						"Compilation is enabled for both, .nsi and .nsh files",
+						"Compilation is enabled for .nsi files only, asks before compiling a header file",
+						"Compilation is enabled for .nsi files only, no additional prompts are displayed"
+					],
+					"default": "Disallow",
+					"markdownDescription": "Whether header files can be compiled directly.",
+					"order": 6
+				},
+				"nsis.compiler.showNotifications": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Show a notification indicating whether a build succeeded or failed.",
+					"order": 7
+				},
+				"nsis.compiler.showOutputView": {
+					"type": "string",
+					"enum": [
+						"Always",
+						"On Warnings & Errors",
+						"On Errors",
+						"Never"
+					],
+					"enumDescriptions": [
+						"The output panel is shown whenever a script is compiled",
+						"The output panel is only shown when the compiled script has warnings or errors",
+						"The output panel is only shown when the compiled script has errors",
+						"The output panel is never shown"
+					],
+					"default": "On Errors",
+					"markdownDescription": "When to reveal the **NSIS Compiler** output panel.",
+					"order": 8
+				},
+				"nsis.compiler.showFlagsAsObject": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Format the output of **Show Compiler Flags** as JSON rather than as the compiler's raw output.",
+					"order": 9
+				},
+				"nsis.compiler.showVersionAsInfoMessage": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Report **Show Compiler Version** as a notification rather than in the **NSIS Info** output panel.",
+					"order": 10
+				},
+				"nsis.buildTask.openAfterCreation": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Open `tasks.json` after **Create Build Task** has written it.",
+					"order": 11
+				},
+				"nsis.wine.runWithWine": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Run `makensis` through [Wine](https://www.winehq.org/). Ignored on Windows.",
+					"order": 12
+				},
+				"nsis.wine.pathToWine": {
+					"type": "string",
+					"default": "wine",
+					"markdownDescription": "Path to the `wine` binary. When empty, your `PATH` is searched.",
+					"order": 13
+				},
+				"nsis.diagnostics.enabledOnSave": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Run `makensis` diagnostics when a script is saved.",
+					"order": 14
+				},
+				"nsis.diagnostics.preprocessMode": {
+					"type": "string",
+					"enum": [
+						"ppo",
+						"safe_ppo",
+						"none"
+					],
+					"enumDescriptions": [
+						"Preprocess only, skips code generation",
+						"Preprocess only, skips code generation and macro expansion",
+						"Runs a full compilation"
+					],
+					"default": "ppo",
+					"markdownDescription": "Preprocessor mode used for compiler diagnostics.",
+					"order": 15
+				},
+				"nsis.formatter.endOfLine": {
+					"type": "string",
+					"enum": [
+						"(auto)",
+						"lf",
+						"crlf"
+					],
+					"enumDescriptions": [
+						"Uses the operating system's default end of line sequence",
+						"line-feed (LF)",
+						"carriage return + line-feed (CRLF)"
+					],
+					"default": "(auto)",
+					"markdownDescription": "End of line sequence used by the formatter.",
+					"order": 16
+				},
+				"nsis.formatter.commentStyle": {
+					"type": "string",
+					"enum": [
+						"(preserve)",
+						"hash",
+						"semi"
+					],
+					"enumDescriptions": [
+						"Leaves line comments as they are",
+						"Rewrites `; comment` as `# comment`",
+						"Rewrites `# comment` as `; comment`"
+					],
+					"default": "(preserve)",
+					"markdownDescription": "Line comment style the formatter normalises to. Block comments are never rewritten.",
+					"order": 17
+				},
+				"nsis.formatter.printWidth": {
+					"type": "number",
+					"default": 0,
+					"markdownDescription": "Maximum line width before breaking lines with `\\` continuations. Set to `0` to disable wrapping.",
+					"order": 18
+				},
+				"nsis.formatter.singleQuote": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Prefer single quotes over double quotes.",
+					"order": 19
+				},
+				"nsis.formatter.trimEmptyLines": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Collapse consecutive empty lines.",
+					"order": 20
+				},
+				"nsis.trace.server": {
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"markdownDescription": "Traces the communication between VS Code and the language server.",
+					"order": 21
+				}
+			}
+		}
 	},
-	"packageManager": "pnpm@11.11.0+sha512.4463f65fd80ed80d69bc1d4bf163ee94f605c7380fc318bb5b2ebe15f8cd12d49c51a4d59e951b401e764d3b6ca751cbf51bc50ed7001a6bcb4935e684c34882"
+	"packageManager": "pnpm@12.3.4+sha512.961aa41fb077da3a04a441d9f8e15ebc0c96da8ef710b2eb67bf9ee7cb0610eabd48f1fd85f51cffe73846785fa0f87c56a3a872a1d893f8446741b5cce45457"
 }

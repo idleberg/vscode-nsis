@@ -1,14 +1,16 @@
 import { defineConfig } from 'tsdown';
+import pkg from './package.json' with { type: 'json' };
 
 export default defineConfig({
 	clean: true,
 	deps: {
-		alwaysBundle: ['@nsis/dent', '@nsis/nlf', 'makensis', 'micromatch', 'open', 'vscode-get-config', 'which'],
+		// The subpath needs spelling out, the bare name alone leaves it external.
+		alwaysBundle: [...Object.keys(pkg.dependencies), 'vscode-languageclient/node'],
 		neverBundle: ['vscode'],
 		onlyBundle: false,
 	},
 	entry: ['src/index.ts'],
-	format: 'cjs',
+	format: 'esm',
 	minify: true,
 	outDir: 'lib',
 	platform: 'node',
