@@ -13,9 +13,12 @@ tsconfig.tsbuildinfo
 
 # Build
 lib/
-resources/logo.png
+out/
+dist/
+
+# Language server binary, fetched by scripts/fetch-server.mts
+server/
 
 # Project specific
 *.vsix
-resources/logo.png
 todo.md

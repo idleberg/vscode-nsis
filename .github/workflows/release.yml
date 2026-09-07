@@ -1,0 +1,160 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Package (${{ matrix.code-target }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        code-target:
+          - win32-x64
+          - win32-arm64
+          - darwin-x64
+          - darwin-arm64
+          - linux-x64
+          - linux-arm64
+          - alpine-x64
+          - alpine-arm64
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Pulls the binary out of the matching @nsis/lsp-* npm package, pinned to
+      # the "nsisLspVersion" field in package.json.
+      - name: Fetch language server
+        run: node scripts/fetch-server.mts --target ${{ matrix.code-target }}
+
+      - name: Package extension
+        run: mkdir -p dist && pnpm exec vsce package -o "./dist/nsis-${{ matrix.code-target }}.vsix" --target ${{ matrix.code-target }} --no-dependencies
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist-${{ matrix.code-target }}
+          path: ./dist
+
+  # A server-less build for platforms without a prebuilt binary. It falls back to
+  # `nsis.serverPath` or a `nsis-lsp` found on the PATH.
+  build-no-server:
+    name: Package (no server)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Package extension
+        run: mkdir -p dist && pnpm exec vsce package -o "./dist/nsis-no-server.vsix" --no-dependencies
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist-no-server
+          path: ./dist
+
+  publish-marketplace:
+    name: Publish (VS Code Marketplace)
+    needs: [build, build-no-server]
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: dist-*
+          merge-multiple: true
+          path: dist
+
+      - run: ls -al ./dist
+
+      - name: Publish
+        run: pnpm exec vsce publish --packagePath ./dist/nsis-*.vsix --skip-duplicate
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+  publish-openvsx:
+    name: Publish (Open VSX)
+    needs: [build, build-no-server]
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: dist-*
+          merge-multiple: true
+          path: dist
+
+      - name: Publish
+        run: pnpm exec ovsx publish --packagePath ./dist/nsis-*.vsix --skip-duplicate
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+
+  release:
+    name: GitHub Release
+    needs: [build, build-no-server]
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: dist-*
+          merge-multiple: true
+          path: dist
+
+      - uses: softprops/action-gh-release@v3
+        with:
+          files: dist/*.vsix

@@ -1,302 +1,108 @@
-# vscode-nsis
+# NSIS LSP
 
-[![License](https://img.shields.io/github/license/idleberg/vscode-applescript?color=blue&style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/idleberg/vscode-nsis?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/releases)
-[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-nsis/actions)
+> Language intelligence for [Nullsoft Scriptable Install System](https://nsis.sourceforge.io/) scripts, powered by [nsis-lsp](https://github.com/idleberg/nsis-lsp).
 
-Language syntax, snippets, formatter and build system for Nullsoft Scriptable Install
-System (NSIS).
-
-![Screenshot](https://raw.githubusercontent.com/idleberg/vscode-nsis/main/resources/screenshot.png)
-
-_Screenshot of NSIS in Visual Studio Code with
-[Hopscotch](https://marketplace.visualstudio.com/items?itemName=idleberg.hopscotch)
-theme_
+This extension is a thin client for `nsis-lsp`, an opinionated language server for NSIS written in Rust. The server is maintained once and shared with the Nova, Sublime Text and Zed editor integrations.
 
 ## Features
 
-- Language syntax for NSIS and NSIS Language Files
-- Snippets for core NSIS commands, variables and predefines
-- Snippets for core plug-ins:
-  - AdvSplash
-  - Banner
-  - BgImage
-  - Dialer
-  - InstallOptions
-  - LangDLL
-  - Math
-  - nsDialogs
-  - nsExec
-  - NSISdl
-  - Splash
-  - StartMenu
-  - System
-  - UserInfo
-  - VPatch
-- Snippets for core libraries (“Useful Headers”):
-  - FileFunc
-  - LogicLib
-  - Memento
-  - Modern UI
-  - MultiUser
-  - Sections
-  - StrFunc
-  - WinMessages
-  - WinVer
-  - WordFunc
-  - x64
-- NSIS Diagnostics
-- [Drunken NSIS](https://github.com/idleberg/vscode-nsis#drunken-nsis)
-- [Formatting](https://github.com/idleberg/vscode-nsis#formatting)
-- [Build Tools](https://github.com/idleberg/vscode-nsis#building)
-- [Environment Variables](https://github.com/idleberg/vscode-nsis#environment-variables)
+Language intelligence, provided by the server:
 
-You can further extend NSIS support with snippets for
-[third-party plug-ins](https://github.com/idleberg/vscode-nsis-plugins).
+- code actions
+- code formatting
+- compiler diagnostics
+- completions
+- document symbols
+- find references
+- go-to-definition
+- on-hover information
+- rename symbol
+- signature help
+- syntax highlighting for NSIS scripts, NSIS language files and MakeNSIS logs, including NSIS code blocks in Markdown
+- snippets for the NSIS core, its standard headers and the bundled plugins
+
+Build system, provided by the extension:
+
+- save & compile the current script, with the compiler's output in its own panel and **Run** and **Reveal** actions for the installer it produced
+- scaffold a `tasks.json` with plain and strict build tasks
+- ctrl-click `!include` and `LoadLanguageFile` paths to open them, including `${NSISDIR}` and the compiler's own search directories
+- report the compiler's version and the flags it was built with
+- optionally run the compiler through [Wine](https://www.winehq.org/) on macOS and Linux
+
+Converting NSIS language files is the one feature still exclusive to the older [NSIS](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) extension. The two overlap everywhere else, so installing both registers the same languages, grammars, snippets and compile keybinding twice — pick one.
 
 ## Installation
 
-### Extension Marketplace
+Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) or [Open VSX](https://open-vsx.org/extension/idleberg/nsis).
 
-Launch Quick Open, paste the following command, and press <kbd>Enter</kbd>
+Released packages bundle the language server for your platform, so there is nothing else to install. On platforms without a prebuilt binary, install the server yourself and the extension will find it on your `PATH`:
 
-`ext install idleberg.nsis`
-
-### CLI
-
-With [shell commands](https://code.visualstudio.com/docs/editor/command-line)
-installed, you can use the following command to install the extension:
-
-`$ code --install-extension idleberg.nsis`
-
-### Packaged Extension
-
-Download the packaged extension from the the
-[release page](https://github.com/idleberg/vscode-nsis/releases) and install it
-from the command-line:
-
-```bash
-$ code --install-extension path/to/nsis-*.vsix
+```sh
+cargo install nsis-lsp
+# or
+brew install idleberg/asahi/nsis-lsp
+# or
+scoop bucket add nsis https://github.com/NSIS-Dev/scoop-nsis && scoop install nsis/lsp
 ```
 
-Alternatively, you can download the packaged extension from the
-[Open VSX Registry](https://open-vsx.org/) or install it using the
-[`ovsx`](https://www.npmjs.com/package/ovsx) command-line tool:
+Compiling scripts and compiler diagnostics additionally require [`makensis`](https://nsis.sourceforge.io/Download) on your `PATH`, or a path set in `nsis.makensis.path`.
 
-```bash
-$ ovsx get idleberg.nsis
+## Settings
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| `nsis.serverPath` | `""` | Path to the `nsis-lsp` binary. Empty uses the bundled binary, then your `PATH`. |
+| `nsis.makensis.path` | `""` | Path to `makensis`. Empty searches your `PATH`. |
+| `nsis.compiler.verbosity` | `3` | How much the compiler reports, from `0` (none) to `4` (all). |
+| `nsis.compiler.strictMode` | `false` | Treat compiler warnings as errors on every build. |
+| `nsis.compiler.customArguments` | `[]` | Additional arguments passed to `makensis`. |
+| `nsis.compiler.processHeaders` | `Disallow` | Whether `.nsh` files can be compiled directly. |
+| `nsis.compiler.showNotifications` | `true` | Notify whether a build succeeded or failed. |
+| `nsis.compiler.showOutputView` | `On Errors` | When to reveal the **NSIS Compiler** panel. |
+| `nsis.compiler.showFlagsAsObject` | `true` | Format the compiler flags as JSON. |
+| `nsis.compiler.showVersionAsInfoMessage` | `false` | Report the compiler version as a notification. |
+| `nsis.buildTask.openAfterCreation` | `true` | Open `tasks.json` once it has been written. |
+| `nsis.wine.runWithWine` | `false` | Run `makensis` through Wine. Ignored on Windows. |
+| `nsis.wine.pathToWine` | `wine` | Path to the `wine` binary. |
+| `nsis.diagnostics.enabledOnSave` | `true` | Run compiler diagnostics on save. |
+| `nsis.diagnostics.preprocessMode` | `ppo` | `ppo`, `safe_ppo`, or `none` for a full compilation. |
+| `nsis.formatter.commentStyle` | `(preserve)` | Normalise line comments to `#` (`hash`) or `;` (`semi`). |
+| `nsis.formatter.endOfLine` | `(auto)` | End of line sequence for formatted output. |
+| `nsis.formatter.printWidth` | `0` | Line width before breaking with `\` continuations. `0` disables wrapping. |
+| `nsis.formatter.singleQuote` | `false` | Prefer single quotes over double quotes. |
+| `nsis.formatter.trimEmptyLines` | `true` | Collapse runs of blank lines. |
+| `nsis.trace.server` | `off` | Trace the communication with the language server. |
+
+Indentation is not configurable here — the formatter uses the editor's `tabSize` and `insertSpaces`.
+
+Wine only applies to compiling. The server runs `makensis` directly, so diagnostics are unavailable on a Wine-only setup.
+
+## Commands
+
+| Command | Keybinding |
+| --- | --- |
+| **NSIS: Save & Compile Script** | <kbd>ctrl+shift+b</kbd> / <kbd>cmd+alt+b</kbd> |
+| **NSIS: Save & Compile Script (strict)** | <kbd>ctrl+alt+shift+b</kbd> / <kbd>cmd+alt+shift+b</kbd> |
+| **NSIS: Create Build Task** | |
+| **NSIS: Show Compiler Version** | |
+| **NSIS: Show Compiler Flags** | |
+| **NSIS: Open Settings** | |
+| **NSIS: Restart Language Server** | |
+| **NSIS: Show Language Server Output** | |
+| **NSIS: Show Language Server Version** | |
+
+## Development
+
+```sh
+pnpm install
+pnpm run build
+pnpm run fetch:server   # downloads the server for your platform into server/
 ```
 
-### Clone Repository
+Press <kbd>F5</kbd> to launch an Extension Development Host. Set `NSIS_LSP_BINARY` to point at a locally built server, for example `target/release/nsis-lsp`, to test server changes without repackaging.
 
-Change to your Visual Studio Code extensions directory:
-
-**Windows**
-
-```powershell
-# Powershell
-cd $Env:USERPROFILE\.vscode\extensions
-```
-
-```cmd
-:: Command Prompt
-$ cd %USERPROFILE%\.vscode\extensions
-```
-
-**Linux & macOS**
-
-```bash
-$ cd ~/.vscode/extensions/
-```
-
-Clone repository as `idleberg.nsis`:
-
-```bash
-$ git clone https://github.com/idleberg/vscode-nsis idleberg.nsis
-```
-
-Inside the cloned directory, install dependencies using your preferred Node
-package manager:
-
-```bash
-$ npm install
-```
-
-Build the source:
-
-```bash
-npm run build
-```
-
-## Usage
-
-### Snippets
-
-With most commands, you can specify available options before completion. For
-instance, rather than completing `RequestExecutionLevel` and then specifying an
-option, you can directly choose `RequestExecutionLevel user` from the completion
-menu.
-
-To complete
-[compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#),
-[variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or
-[predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines),
-make sure to _omit special characters_ like `!`, `$` and brackets:
-
-- `include` completes to `!include`
-- `INSTDIR` completes to `$INSTDIR`
-- `NSIS_VERSION` completes to `${NSIS_VERSION}`
-
-However, you have to type `__LINE__` to complete to `${__LINE__}`.
-
-There are several special cases for your convenience:
-
-- `MB_OK` completes to `MessageBox MB_OK "messagebox_text"`
-- `onInit` completes to a `Function .onInit` block
-- `LogicLib` completes to `!include "LogicLib.nsh"`
-
-#### Drunken NSIS
-
-Fuzzy syntax completions are available through “Drunken NSIS”, which tries to
-iron out some of the inconsistencies in the NSIS language, for instance word
-order.
-
-**Examples:**
-
-Interchangable word order of NSIS language and library functions
-
-- `ReadFile` completes to `FileRead`
-- `INIStrRead` completes to `ReadINIStr`
-- `SetSectionText` completes to `SectionSetText`
-- `SetLog` completes to `LogSet`
-- `FirstFind` completes to `FindFirst`
-- `${LineFind}` completes to `${FindLine}`
-
-### Formatting
-
-Scripts can be formatted using the experimental [`@nsis/dent`](https://www.npmjs.com/package/@nsis/dent) package. To do so, run *Format Document* or adjust your settings for auto-formatting.
-
-**Example**
-
-```json
-{
-	"editor.formatOnSave": true,
-	"[nsis]": {
-			"editor.defaultFormatter": "idleberg.nsis"
-	},
-}
-```
-
-### Building
-
-Before you can build, make sure `makensis` is in your PATH
-[environment variable](http://superuser.com/a/284351/195953). Alternatively, you
-can specify the path to `makensis` in your
-[user settings](https://code.visualstudio.com/docs/customization/userandworkspace).
-
-#### makensis
-
-**Example:**
-
-```json
-{
-	"nsis.compiler.pathToMakensis": "C:\\Program Files (x86)\\NSIS\\makensis.exe"
-}
-```
-
-To trigger a build, select _NSIS: Save & Compile”_ from the
-[command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette)
-or use the default keyboard shortcut
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. The strict option treats warnings
-as errors and can be triggered using
-<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
-
-#### Options
-
-You can tweak your default settings by editing your
-[user settings](https://code.visualstudio.com/Docs/customization/userandworkspace).
-
-### Task Runner
-
-If you prefer Visual Studio Code's built-in Task Runner to build scripts, you
-can create `tasks.json` in the project root using the _NSIS: Create Build Task_
-command from the
-[command-palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette).
-
-> [!NOTE]
->
-> The created Task Runner will adapt to the
-> [user settings](https://code.visualstudio.com/Docs/customization/userandworkspace)
-> specified in `settings.json`.
-
-### Environment Variables
-
-This extension supports a variety of ways to provide environment variables such
-as `NSISDIR` or `NSISCONFDIR`. The following precedence applies:
-
-1. `terminal.integrated.shell.*` setting
-2. `.env` files
-3. system-wide environment variables
-
-> [!NOTE]
->
-> Some operating systems require Visual Studio Code to be launched from terminal
-> in order to access system-wide environment variables.
-
-Additionally, you can pass special environment variables prefixed with `NSIS_APP_` to your installer script. They will be treated like normal definitions and will be stringified at compile-time.
-
-<details>
-<summary><strong>Example</strong></summary>
-
-```env
-# .env
-NSIS_APP_ENVIRONMENT=development
-```
-
-```nsis
-# installer.nsi
-!if ${NSIS_APP_ENVIRONMENT} == "development"
-  DetailPrint "Valuable Debug Information"
-!endif
-```
-
-</details>
-
-### File Encoding
-
-This extension defaults to UTF-8 with BOM (`utf8bom`) for NSIS files. If you are working with older scripts, you can override the encoding in your workspace settings:
-
-
-**Example**
-
-```jsonc
-{
-	"[nsis]": {
-		"files.encoding": "windows1252"
-	}
-}
-```
-
-Per workspace: Add "files.encoding": "windows1252" to the [nsis] section in your .vscode/settings.json
-Per file: Click the encoding label in the status bar and choose Save with Encoding
-
-## Related
-
-- [node-makensis](https://www.npmjs.com/package/makensis)
-- [vscode-electron-builder](https://marketplace.visualstudio.com/items?itemName=idleberg.electron-builder)
-- [atom-language-nsis](https://atom.io/packages/language-nsis)
+Releases are built per platform. The pinned server version lives in the `nsisLspVersion` field of `package.json`, and `scripts/fetch-server.mts` pulls the matching binary out of the `@nsis/lsp-*` npm packages before `vsce package --target <target>`.
 
 ## License
 
-If not otherwise specified (see below), files in this repository fall under
-[The MIT License](https://opensource.org/licenses/MIT).
-
-An exception is made for files in readable text which contain their own license
-information, or files where an accompanying file exists (in the same directory)
-with a “-license” suffix added to the base-name name of the original file, and
-an extension of txt, html, or similar. For example “tidy” is accompanied by
-“tidy-license.txt”.
-
-[wine]: https://winehq.org
-[makensis]: http://nsis.sourceforge.net/Docs/Chapter3.html#usage
-[ppo]: https://nsis.sourceforge.io/Docs/Chapter3.html#usagereference
+This work is licensed under [The MIT License](LICENSE). The bundled language server is licensed under the Apache License, Version 2.0, or The MIT License.

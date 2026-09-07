@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Build
+        run: pnpm run build
+
+      # Proves the pinned server version resolves and packages before a tag does.
+      - name: Fetch language server
+        run: node scripts/fetch-server.mts --target linux-x64
+
+      - name: Package extension
+        run: mkdir -p dist && pnpm exec vsce package -o ./dist/nsis-linux-x64.vsix --target linux-x64 --no-dependencies

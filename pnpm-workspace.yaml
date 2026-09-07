@@ -1,0 +1,11 @@
+allowBuilds:
+  "@vscode/vsce-sign": true
+  keytar: true
+  lefthook: true
+autoInstallPeers: true
+publicHoistPattern:
+  - "*@biomejs/biome*"
+  - "*lefthook*"
+minimumReleaseAgeExclude:
+  - "@idleberg/configs"
+  - "@nsis/*"

@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>comment</key>
-    <string>
-    todo: - highlight functions
-    </string>
-
     <key>fileTypes</key>
     <array>
         <string>nsi</string>
@@ -20,6 +15,150 @@
     <string>NSIS</string>
     <key>patterns</key>
     <array>
+        <dict>
+            <key>comment</key>
+            <string>Function definition</string>
+            <key>match</key>
+            <string>^\s*(?i)(Function)\s+(\.?\w+)</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.nsis</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.function.nsis</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>comment</key>
+            <string>Macro definition</string>
+            <key>match</key>
+            <string>^\s*(?i)(\!macro)\s+(\w+)</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.other.nsis</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.function.macro.nsis</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>comment</key>
+            <string>Define definition</string>
+            <key>match</key>
+            <string>^\s*(?i)(\!define)\s+(?:/\w+\s+)*(\w+)</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.other.nsis</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.constant.define.nsis</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>comment</key>
+            <string>Variable declaration</string>
+            <key>match</key>
+            <string>^\s*(?i)(Var)\s+(?:/GLOBAL\s+)?"?(\w+)"?</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.nsis</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.variable.nsis</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>comment</key>
+            <string>Section/SectionGroup with explicit ID</string>
+            <key>match</key>
+            <string>^\s*(?i)(Section(?:Group)?)\s+(?:/[oe]\s+)?(?:("[^"]*")|('[^']*')|(`[^`]*`))\s+(\w+)</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.nsis</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>string.quoted.double.nsis</string>
+                </dict>
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>string.quoted.single.nsis</string>
+                </dict>
+                <key>4</key>
+                <dict>
+                    <key>name</key>
+                    <string>string.quoted.back.nsis</string>
+                </dict>
+                <key>5</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.section.nsis</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>comment</key>
+            <string>Section/SectionGroup with name only</string>
+            <key>match</key>
+            <string>^\s*(?i)(Section(?:Group)?)\s+(?:/[oe]\s+)?(?:"([^"]+)"|'([^']+)'|`([^`]+)`|([\w.-]+))\s*$</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.nsis</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.section.nsis string.quoted.double.nsis</string>
+                </dict>
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.section.nsis string.quoted.single.nsis</string>
+                </dict>
+                <key>4</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.section.nsis string.quoted.back.nsis</string>
+                </dict>
+                <key>5</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.section.nsis</string>
+                </dict>
+            </dict>
+        </dict>
         <dict>
             <key>match</key>
             <string>^\s*(?i)(Abort|AddBrandingImage|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|Call|CallInstDLL|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CPU|CRCCheck|CreateDirectory|CreateFont|CreateShortCut|Delete|DeleteINISec|DeleteINIStr|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecShellWait|ExecWait|ExpandEnvStrings|File|FileBufSize|FileClose|FileErrorText|FileOpen|FileRead|FileReadByte|FileReadUTF16LE|FileReadWord|FileWriteUTF16LE|FileSeek|FileWrite|FileWriteByte|FileWriteWord|FindClose|FindFirst|FindNext|FindWindow|FlushINI|Function(End)?|GetCurInstType|GetCurrentAddress|GetDlgItem|GetDLLVersion|GetDLLVersionLocal|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFullPathName|GetFunctionAddress|GetInstDirError|GetKnownFolderPath|GetLabelAddress|GetRegView|GetShellVarContext|GetTempFileName|GetWinVer|Goto|HideWindow|Icon|IfAbort|IfAltRegView|IfErrors|IfFileExists|IfRebootFlag|IfRtlLanguage|IfShellVarContextAll|IfSilent|InitPluginsDir|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|InstProgressFlags|InstType|InstTypeGetText|InstTypeSetText|Int64Cmp|Int64CmpU|Int64Fmt|IntCmp|IntCmpU|IntFmt|IntOp|IntPtrCmp|IntPtrCmpU|IntPtrOp|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadAndSetImage|LoadLanguageFile|LockWindow|LogSet|LogText|ManifestAppendCustomString|ManifestDisableWindowFiltering|ManifestDPIAware|ManifestGdiScaling|ManifestLongPathAware|ManifestMaxVersionTested|ManifestSupportedOS|MessageBox|MiscButtonText|Name|Nop|OutFile|Page|PageCallbacks|PageEx(End)?|PEAddResource|PEDllCharacteristics|PERemoveResource|PESubsysVer|Pop|Push|Quit|ReadEnvStr|ReadINIStr|ReadMemory|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|Return|RMDir|SearchPath|Section(End)?|SectionGroup(End)?|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressionLevel|SetCompressor|SetCompressorDictSize|SetCtlColors|SetCurInstType|SetDatablockOptimize|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetRebootFlag|SetRegView|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|SilentUnInstall|Sleep|SpaceTexts|StrCmp|StrCmpS|StrCpy|StrLen|SubCaption|Target|Unicode|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|UninstPage|UnRegDLL|UnsafeStrCpy|Var|VIAddVersionKey|VIFileVersion|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegMultiStr|WriteRegNone|WriteRegStr|WriteUninstaller|XPStyle)\b</string>
@@ -94,43 +233,43 @@
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?=\s|$)</string>
+            <string>(?i)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Next|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?=\s|$)</string>
+            <string>(?i)\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Next|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?=\s|$)</string>
+            <string>(?i)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?=\s|$)</string>
+            <string>(?i)\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${((At(Least|Most)|Is)(ServicePack|Win(7|8\.1|8|10|11|95|98|20(00|03|08(R2)?|12(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server))}(?=\s|$)</string>
+            <string>(?i)\${((At(Least|Most)|Is)(ServicePack|Win(7|8\.1|8|10|11|95|98|20(00|03|08(R2)?|12(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server))}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?=\s|$)</string>
+            <string>(?i)\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
         <dict>
             <key>match</key>
-            <string>(?:^\s*)(?i)\${((Disable|Enable)X64FSRedirection|RunningX64)}(?=\s|$)</string>
+            <string>(?i)\${((Disable|Enable)X64FSRedirection|RunningX64)}(?=\s|$)</string>
             <key>name</key>
             <string>constant.language.nsis</string>
         </dict>
