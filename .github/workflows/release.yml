@@ -106,8 +106,20 @@ jobs:
 
       - run: ls -al ./dist
 
+      # The Marketplace times out often enough that a single attempt is a coin
+      # flip. `--skip-duplicate` makes a retry skip whatever already landed.
       - name: Publish
-        run: pnpm exec vsce publish --packagePath ./dist/nsis-*.vsix --skip-duplicate
+        run: |
+          for attempt in 1 2 3; do
+            if pnpm exec vsce publish --packagePath ./dist/nsis-*.vsix --skip-duplicate; then
+              exit 0
+            fi
+
+            echo "::warning::Attempt $attempt failed, retrying in $((attempt * 30))s"
+            sleep $((attempt * 30))
+          done
+
+          exit 1
         env:
           VSCE_PAT: ${{ secrets.VSCE_PERSONAL_ACCESS_TOKEN }}
 
