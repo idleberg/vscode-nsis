@@ -1,7 +1,12 @@
+# v6.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v6.1.0)
+
+- add config migration
+
 # v6.0.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v6.0.0)
 
 - **Breaking change**: require `vscode>=1.100`
 - **Breaking change**: simplify licensing
+- **Breaking change**: move settings 
 - integrate `nsis-lsp`
 - remove command reference lookup
 - update dependencies

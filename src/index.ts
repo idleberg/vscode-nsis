@@ -11,6 +11,7 @@ import {
 } from './client.ts';
 import { registerDocumentLinkProvider } from './links.ts';
 import { resetCompilerState } from './makensis.ts';
+import { migrateSettings } from './migrate.ts';
 import { convertLanguageFile } from './nlf.ts';
 
 /**
@@ -25,6 +26,10 @@ const RESTART_ON_CHANGE = ['nsis.serverPath'];
 const RESET_COMPILER_ON_CHANGE = ['nsis.makensis.path', 'nsis.wine'];
 
 export async function activate(context: ExtensionContext): Promise<void> {
+	// Runs before the client starts, so the server is initialised with the
+	// migrated values rather than the defaults the old keys fell back to.
+	await migrateSettings();
+
 	context.subscriptions.push(
 		...registerBuildCommands(),
 		registerDocumentLinkProvider(),

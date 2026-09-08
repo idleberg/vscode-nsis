@@ -2,7 +2,7 @@
 	"name": "nsis",
 	"displayName": "NSIS",
 	"description": "Language intelligence for Nullsoft Scriptable Install System (NSIS), powered by nsis-lsp",
-	"version": "6.0.0",
+	"version": "6.1.0",
 	"publisher": "idleberg",
 	"license": "Apache-2.0",
 	"author": {
@@ -20,7 +20,7 @@
 		"publish:ovsx": "ovsx publish --no-dependencies",
 		"publish:vsce": "vsce publish --githubBranch main --no-dependencies --allow-package-env-file --allow-package-all-secrets",
 		"start": "npm run build -- --watch",
-		"test": "echo \"no tests yet\" && exit 0",
+		"test": "node scripts/check-migrations.mts",
 		"vscode:prepublish": "npm run build"
 	},
 	"keywords": [
