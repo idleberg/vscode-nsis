@@ -130,14 +130,18 @@ jobs:
           # Times one real request to the gallery, unauthenticated. Splits a
           # network-layer stall (dns/connect/tls climb) from a server-side one
           # (connect fast, ttfb climbs) - `timeout` alone cannot tell them apart.
+          # $1 is an optional curl family flag (-4/-6). The host publishes both A
+          # and AAAA records; if IPv6 egress is broken on the runner but Node's
+          # happy-eyeballs picks it anyway, that is the hang - and only an
+          # explicit -6 probe shows it, since curl's own default masks it.
           probe() {
-            curl -sS -o /dev/null --max-time 30 \
+            curl -sS -o /dev/null --max-time 30 ${1:+"$1"} \
               -X POST "https://$host/_apis/public/gallery/extensionquery" \
               -H 'Content-Type: application/json' \
               -H 'Accept: application/json;api-version=3.0-preview.1' \
               -d '{"filters":[{"criteria":[{"filterType":7,"value":"idleberg.nsis"}]}],"flags":914}' \
-              -w "    probe ip=%{remote_ip} http=%{http_code} dns=%{time_namelookup} connect=%{time_connect} tls=%{time_appconnect} ttfb=%{time_starttransfer} total=%{time_total}\n" \
-              || echo "    probe itself failed (exit $?)"
+              -w "    probe${1:+$1} ip=%{remote_ip} http=%{http_code} dns=%{time_namelookup} connect=%{time_connect} tls=%{time_appconnect} ttfb=%{time_starttransfer} total=%{time_total}\n" \
+              || echo "    probe${1:+$1} failed (exit $?)"
           }
 
           # Which targets the Marketplace actually has for this version. Settles
@@ -145,15 +149,18 @@ jobs:
           landed() {
             timeout 60 pnpm exec vsce show idleberg.nsis --json 2>/dev/null \
               | jq -r --arg v "$version" \
-                  '[.versions[] | select(.version == $v) | .targetPlatform // "universal"] | sort | join(" ")' \
+                  '[.versions[] | select(.version == $v) | .targetPlatform // "universal"]
+                   | if length == 0 then "(none)" else sort | join(" ") end' \
               || echo "(lookup failed)"
           }
 
           echo "::group::Pre-flight"
           echo "publishing version $version"
-          getent ahosts "$host" || true
-          probe
-          echo "already on Marketplace: $(landed)"
+          # One line per address; getent repeats each across STREAM/DGRAM/RAW.
+          echo "    $host resolves to: $(getent ahosts "$host" | awk '{print $1}' | sort -u | tr '\n' ' ')"
+          probe -4
+          probe -6
+          echo "    already on Marketplace: $(landed)"
           echo "::endgroup::"
 
           failed=0
