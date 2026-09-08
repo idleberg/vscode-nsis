@@ -164,6 +164,7 @@ jobs:
           echo "::endgroup::"
 
           failed=0
+          missing=
 
           for vsix in ./dist/nsis-*.vsix; do
             for attempt in 1 2 3; do
@@ -181,7 +182,21 @@ jobs:
                   pnpm exec vsce publish --packagePath "$vsix" --skip-duplicate || status=$?
               fi
 
+              # Time successes too, not just failures. For v6.0.0 every package
+              # returned in ~1.5s, so anything materially above that is the
+              # symptom worth chasing - and it is invisible unless printed.
               if [ $status -eq 0 ]; then
+                elapsed=$((SECONDS - start))
+                echo "    published $(basename "$vsix") in ${elapsed}s (attempt $attempt)"
+
+                # A slow success is the same symptom as a hang, caught earlier.
+                # Probe while it is still happening rather than after the run.
+                if [ $elapsed -gt 30 ]; then
+                  echo "::warning::$vsix took ${elapsed}s to publish"
+                  probe -4
+                  probe -6
+                fi
+
                 continue 2
               fi
 
@@ -203,7 +218,25 @@ jobs:
 
             echo "::error::$vsix could not be published"
             failed=1
+            missing="$missing $(basename "$vsix")"
           done
+
+          # A partial publish leaves the version live but short a platform, and
+          # the Marketplace serves those users the universal build instead - so
+          # nothing looks broken and the gap can sit unnoticed. Say it plainly.
+          # `--skip-duplicate` matches on version AND target, so re-running this
+          # job retries only what is missing.
+          {
+            echo "### Marketplace publish (v$version)"
+            echo
+            echo "Targets live: \`$(landed)\`"
+            if [ -n "$missing" ]; then
+              echo
+              echo "**Failed:**\`$missing\`"
+              echo
+              echo "Re-run this job to retry only the missing targets."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
           exit $failed
         env:
