@@ -106,24 +106,92 @@ jobs:
 
       - run: ls -al ./dist
 
-      # The Marketplace times out often enough that a single attempt is a coin
-      # flip. Handing vsce every package at once means one timeout aborts the
-      # whole batch, and since the glob sorts win32 last, Windows is what goes
-      # missing. Each package is published on its own so a flaky upload only
-      # costs that one, and `--skip-duplicate` makes every retry a no-op for
-      # whatever already landed.
+      # Handing vsce every package at once means one failure aborts the whole
+      # batch, and since the glob sorts win32 last, Windows is what goes
+      # missing. So each package gets published on its own.
+      #
+      # Uploads intermittently hang. vsce's only bound is a hardcoded 180s idle
+      # timer (typed-rest-client, no flag exposes it), and it arms only once a
+      # socket exists - a stall during connection setup is unbounded, which is
+      # how v6.1.0 wedged this step for 15h. So each attempt gets an external
+      # `timeout`, which holds no matter where it hangs.
+      #
+      # Why an upload hangs, and why a retry sometimes clears it, is NOT
+      # understood. A timed-out upload does not land server-side (checked: the
+      # version's Marketplace timestamp follows the successful attempt, not the
+      # timed-out ones), so the retry is blind, not a wait-for-the-server.
+      # Tune with evidence, not vibes.
       - name: Publish
+        timeout-minutes: 30
         run: |
+          host=marketplace.visualstudio.com
+          version=$(node -p 'require("./package.json").version')
+
+          # Times one real request to the gallery, unauthenticated. Splits a
+          # network-layer stall (dns/connect/tls climb) from a server-side one
+          # (connect fast, ttfb climbs) - `timeout` alone cannot tell them apart.
+          probe() {
+            curl -sS -o /dev/null --max-time 30 \
+              -X POST "https://$host/_apis/public/gallery/extensionquery" \
+              -H 'Content-Type: application/json' \
+              -H 'Accept: application/json;api-version=3.0-preview.1' \
+              -d '{"filters":[{"criteria":[{"filterType":7,"value":"idleberg.nsis"}]}],"flags":914}' \
+              -w "    probe ip=%{remote_ip} http=%{http_code} dns=%{time_namelookup} connect=%{time_connect} tls=%{time_appconnect} ttfb=%{time_starttransfer} total=%{time_total}\n" \
+              || echo "    probe itself failed (exit $?)"
+          }
+
+          # Which targets the Marketplace actually has for this version. Settles
+          # whether a timed-out upload landed anyway, instead of inferring it.
+          landed() {
+            timeout 60 pnpm exec vsce show idleberg.nsis --json 2>/dev/null \
+              | jq -r --arg v "$version" \
+                  '[.versions[] | select(.version == $v) | .targetPlatform // "universal"] | sort | join(" ")' \
+              || echo "(lookup failed)"
+          }
+
+          echo "::group::Pre-flight"
+          echo "publishing version $version"
+          getent ahosts "$host" || true
+          probe
+          echo "already on Marketplace: $(landed)"
+          echo "::endgroup::"
+
           failed=0
 
           for vsix in ./dist/nsis-*.vsix; do
             for attempt in 1 2 3; do
-              if pnpm exec vsce publish --packagePath "$vsix" --skip-duplicate; then
+              start=$SECONDS
+              status=0
+
+              # Last attempt gets a socket-level trace, so a hang leaves evidence
+              # of where it stopped. Too noisy to run on every attempt.
+              if [ $attempt -eq 3 ]; then
+                NODE_DEBUG=net,http,tls timeout --foreground 300 \
+                  pnpm exec vsce publish --packagePath "$vsix" --skip-duplicate \
+                  >/tmp/trace.log 2>&1 || status=$?
+              else
+                timeout --foreground 300 \
+                  pnpm exec vsce publish --packagePath "$vsix" --skip-duplicate || status=$?
+              fi
+
+              if [ $status -eq 0 ]; then
                 continue 2
               fi
 
-              echo "::warning::$vsix failed on attempt $attempt"
-              sleep $((attempt * 30))
+              # 124 = killed by `timeout`, i.e. the hang, not a rejection.
+              echo "::warning::$vsix attempt $attempt exited $status after $((SECONDS - start))s"
+
+              echo "::group::Diagnostics for $vsix attempt $attempt"
+              probe
+              echo "    on Marketplace now: $(landed)"
+              if [ -f /tmp/trace.log ]; then
+                echo "    --- last 100 lines of socket trace ---"
+                tail -100 /tmp/trace.log
+                rm -f /tmp/trace.log
+              fi
+              echo "::endgroup::"
+
+              sleep 30
             done
 
             echo "::error::$vsix could not be published"
