@@ -1,3 +1,7 @@
+# v6.1.1 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v6.1.1)
+
+- update `nsis-lsp` to v0.5.6
+
 # v6.1.0 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v6.1.0)
 
 - add config migration
