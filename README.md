@@ -98,9 +98,8 @@ There are several special cases for your convenience:
 
 #### Drunken NSIS
 
-Fuzzy syntax completions are available through “Drunken NSIS”, which tries to
-iron out some of the inconsistencies in the NSIS language, for instance word
-order.
+Fuzzy syntax completions that try to iron out some of the inconsistencies in the NSIS language, for instance word
+order. The name is taken from the Sublime Text package of the same name.
 
 **Examples:**
 
