@@ -9,7 +9,7 @@
 		"name": "Jan T. Sott",
 		"url": "http://github.com/idleberg"
 	},
-	"nsisLspVersion": "0.5.6",
+	"nsisLspVersion": "0.5.7",
 	"scripts": {
 		"build": "tsdown && node scripts/check-bundle.mts",
 		"compile": "npm run build",
