@@ -185,6 +185,9 @@ importers:
       '@idleberg/configs':
         specifier: ^0.4.6
         version: 0.4.6(picomatch@4.0.5)
+      '@nsis/textmate':
+        specifier: ^0.1.4
+        version: 0.1.4
       '@types/node':
         specifier: ^26.4.1
         version: 26.4.1
@@ -884,6 +887,10 @@ packages:
   '@nsis/nlf@0.14.2':
     resolution: {integrity: sha512-CpN2xy3h6+PFvyP+amyhGV7OI61u3/aGfahfVH+9z5wV2UF5oUxwASzNhdHoM2SeGsIBUhShb+HbIZhyLWnLPg==}
     engines: {node: '>=22.0.0'}
+
+  '@nsis/textmate@0.1.4':
+    resolution: {integrity: sha512-l4o9AUdQ95XsnyzCesNZDYILFWz+4t1bXGWh1wBwSxy9aIemOl6I2M89lbJI7jxbhKOmiowPmjUYI2gJj61iWw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
 
   '@oxc-project/types@0.148.0':
     resolution: {integrity: sha512-Nm4s/jB+4FpFsPhWGEC4h7rzksesmtnMXomo6rCMcg/b8zLQuOziRgkCS1fxDCXOlJB/6Q8oABOZ/OP6RIPj9A==}
@@ -3332,6 +3339,8 @@ snapshots:
   '@nsis/nlf@0.14.2':
     dependencies:
       json5: 2.2.3
+
+  '@nsis/textmate@0.1.4': {}
 
   '@oxc-project/types@0.148.0': {}
 

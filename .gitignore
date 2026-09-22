@@ -19,6 +19,9 @@ dist/
 # Language server binary, fetched by scripts/fetch-server.mts
 server/
 
+# Grammar, copied by scripts/copy-grammar.mts
+syntaxes/nsis.json
+
 # Project specific
 *.vsix
 todo.md
