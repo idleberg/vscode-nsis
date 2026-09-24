@@ -1,3 +1,7 @@
+# v6.1.3 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v6.1.3)
+
+- update `nsis-lsp` to v0.5.8
+
 # v6.1.2 [#](https://github.com/idleberg/vscode-nsis/releases/tag/v6.1.2)
 
 - install grammar from `@nsis/textmate`
